@@ -1,0 +1,15 @@
+{
+  "dataset_id": "lsl-water-deaths-ledger",
+  "version": "0.1.0",
+  "released": "2026-10-13",
+  "counts": {
+    "observations": 38,
+    "sources": 34,
+    "non_additive": 16,
+    "excluded": 1
+  },
+  "sha256": {
+    "export.json": "9743796c52b3ed33586d3d038fb8c85cad056915d6292fe4f8a05ca868237d59",
+    "export.csv": "10e8fba85802f234c345d514dca67366d72bd74ece239f0955d976bead6b23e1"
+  }
+}

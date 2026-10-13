@@ -1,0 +1,17 @@
+# Separate Worker from the live site. No routes, no custom domain: deploying this cannot affect thelifesavinglab.org.
+name = "lsl-open-data"
+main = "src/worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+# Staging store for contributions. Create with: wrangler d1 create lsl-open-data-staging
+# then paste the id below. Without a binding the API serves reads and returns 503 for writes.
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "lsl-open-data-staging"
+# database_id = "<set-me>"
+# migrations_dir = "migrations"
+
+[vars]
+MAX_PENDING = "500"
+# REVIEW_TOKEN is a secret: wrangler secret put REVIEW_TOKEN (>= 32 chars). Never commit it.

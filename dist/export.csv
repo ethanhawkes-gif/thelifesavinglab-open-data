@@ -1,0 +1,39 @@
+id,label,year,place,toll,cause,confidence,tier,source_id,source_citation
+boccaccio,al-Salam Boccaccio 98,2006,Red Sea,"1,031",ferry,counted,T1,egyptian-official-toll,Egyptian official toll
+cape-town,The Cape Town Agreement,2027,Fishing vessels of 24 metres and over,Not a death toll,fishing,counted,T1,imo-24-february-2026,"IMO, 24 February 2026"
+cdc-child-2022,"U.S. drowning, ages 1 to 4",2022,United States,461,drowning,counted,T1,cdc-vital-signs-18-june-2024,"CDC Vital Signs, 18 June 2024"
+cdc-drown-2018,"U.S. unintentional drowning, every setting",2018–2021,United States,"4,345 a year",drowning,counted,T1,cdc-drowning-data-reviewed-27-january-2026,"CDC, Drowning data, reviewed 27 January 2026"
+cdc-drown-2020,"U.S. unintentional drowning, the higher recent window",2020–2022,United States,"over 4,500 a year",drowning,counted,T1,cdc-vital-signs-18-june-2024-mmwr-14-may-2024,"CDC Vital Signs, 18 June 2024; MMWR 14 May 2024"
+cdc-setting,"Where the drowning was, by age",through 2023,United States,Not one number,drowning,estimated,T2,cdc-risk-factors-for-drowning-reviewed-27-january-2026,"CDC, Risk factors for drowning, reviewed 27 January 2026"
+concordia,Costa Concordia,2012,Off Giglio,32,passage,counted,T1,italian-inquiry,Italian inquiry
+cpsc-home,Inside the home,ongoing,United States,nearly 90 children a year,bath,estimated,T2,cpsc-in-home-drowning,"CPSC, In-home drowning"
+cpsc-pool-2026,"Pool and spa, children under 15",2021–2023,United States,376 a year,pool,counted,T1,cpsc-pool-or-spa-submersion-report-may-2026,"CPSC, Pool or Spa Submersion report, May 2026"
+dona-paz,Doña Paz,1987,Philippines,"1,500 official; ~4,386 estimated",ferry,estimated,T3,philippine-authorities-later-casualty-reconstructions,Philippine authorities; later casualty reconstructions
+empress,Empress of Ireland,1914,St. Lawrence,"1,012",passage,counted,T1,canadian-commission-of-inquiry,Canadian commission of inquiry
+estonia,Estonia,1994,Baltic,852,ferry,counted,T1,joint-accident-investigation-commission,Joint Accident Investigation Commission
+fish-safety,"Global fishing, the higher estimate",2022–,World,"~100,000 a year",fishing,estimated,T2,fish-safety-foundation-willis-holliday-et-al-marine-policy,"FISH Safety Foundation; Willis, Holliday et al., Marine Policy, 2023"
+gustloff,Wilhelm Gustloff,1945,Baltic,"~9,000",war,estimated,T3,historical-estimates-of-operation-hannibal,Historical estimates of Operation Hannibal
+herald,Herald of Free Enterprise,1987,Zeebrugge,193,ferry,counted,T1,sheen-inquiry,Sheen inquiry
+ilo-2024,Reported seafarer deaths,2024,66 flag and port states,449,occupational,counted,T1,ilo-global-register-of-fatalities-at-sea-in-2024,"ILO, Global register of fatalities at sea in 2024"
+ilo-fishing,"Global fishing, the long-cited estimate",1999,World,"24,000 a year",fishing,estimated,T2,ilo-fishing-as-a-most-dangerous-occupation-1999,"ILO, fishing as a most dangerous occupation, 1999"
+iom-all,Dead and missing on all migration routes,2014–,World,"86,170 recorded",migration,estimated,T2,iom-missing-migrants-project-figures-through-5-october-2026,"IOM Missing Migrants Project, figures through 5 October 2026"
+joola,Le Joola,2002,Off Senegal,"1,863",ferry,counted,T1,senegalese-government-toll,Senegalese government toll
+lancastria,HMT Lancastria,1940,Off St. Nazaire,"~4,000",war,estimated,T3,wartime-estimates-later-historical-research,Wartime estimates; later historical research
+lusitania,Lusitania,1915,Off Ireland,"1,198",war,counted,T1,british-inquiry,British inquiry
+mediterranean,Dead and missing in the Mediterranean,2014–,Mediterranean,"35,642 recorded",migration,estimated,T2,iom-missing-migrants-project-figures-through-5-october-2026,"IOM Missing Migrants Project, figures through 5 October 2026"
+middle-passage,The Middle Passage,1500–1866,Atlantic,~1.8 million,passage,estimated,T3,slave-voyages-trans-atlantic-slave-trade-database,Slave Voyages / Trans-Atlantic Slave Trade Database
+peterson-2022,"U.S. drowning deaths, one year",2022,United States,"4,509",drowning,counted,T1,peterson-et-al-injury-prevention-2025-doi101136ip-2024,"Peterson et al., Injury Prevention, 2025, doi:10.1136/ip-2024-045597"
+peterson-craft,"Watercraft, on the death certificate",2022,United States,341,drowning,counted,T1,peterson-et-al-injury-prevention-2025,"Peterson et al., Injury Prevention, 2025"
+peterson-pool,"Swimming pools, death certificates",2022,United States,840,pool,counted,T1,peterson-et-al-injury-prevention-2025,"Peterson et al., Injury Prevention, 2025"
+portland,The Portland Gale,1898,New England,"192 on Portland, more ashore of her",weather,counted,T3,contemporary-accounts-new-england-historical-record,Contemporary accounts; New England historical record
+sewol,Sewol,2014,South Korea,304,ferry,counted,T1,korean-official-toll-and-investigations,Korean official toll and investigations
+titanic,Titanic,1912,North Atlantic,"1,496–1,517",passage,counted,T1,british-wreck-commission-us-senate-inquiry,British Wreck Commission; U.S. Senate inquiry
+unrecorded-sail,Coastal wrecks with no register,1500–1900,Every shore,No global figure,unrecorded,unrecorded,T4,no-census-exists,No census exists
+us-fishing,U.S. fishing vessels,1992–2010,United States coasts,"1,055 deaths",fishing,counted,T1,us-coast-guard-lost-fishing-vessels-and-crew-fatalities,"U.S. Coast Guard, lost fishing vessels and crew fatalities, 1992–2010"
+us-rec-2024,U.S. recreational boating,2024,United States,556 deaths,passage,counted,T1,us-coast-guard-recreational-boating-statistics-2024,"U.S. Coast Guard, Recreational Boating Statistics 2024"
+usla-guarded,Drownings in guarded water,2024,Beaches that reported to the USLA,32,lifeguard,counted,T1,usla-national-lifesaving-statistics-report-2024,"USLA, National Lifesaving Statistics Report 2024"
+usla-rescues,"Rescues, not deaths",2024,Beaches that reported to the USLA,"85,258 rescues",lifeguard,counted,T1,usla-national-lifesaving-statistics-report-2024,"USLA, National Lifesaving Statistics Report 2024"
+usla-unguarded,"Drownings outside guarded water, same reports",2024,Beaches that reported to the USLA,118,lifeguard,counted,T1,usla-national-lifesaving-statistics-report-2024,"USLA, National Lifesaving Statistics Report 2024"
+who-2021,"All drowning, the later WHO estimate",2021,World,"300,000 in 2021",drowning,estimated,T2,who-global-status-report-on-drowning-prevention-13-december,"WHO, Global status report on drowning prevention, 13 December 2024; fact sheet, 1 May 2026"
+who-drowning,"All drowning, not only the sea",2019,World,"~236,000 a year",unrecorded,estimated,T2,who-drowning-estimates-circa-2019-revision,"WHO drowning estimates, circa 2019 revision"
+wisqars-1-4-2024,"U.S. drowning, ages 1 to 4, a later year",2024,United States,492,drowning,counted,T1,cdc-wisqars-10-leading-causes-of-injury-deaths-2024,"CDC WISQARS, 10 leading causes of injury deaths, 2024"

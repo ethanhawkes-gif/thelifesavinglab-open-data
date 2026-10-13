@@ -1,0 +1,3 @@
+<!-- agy-gemini-run: label=lsl-pass2-security model_requested=gemini-3.8-flash-high conversation_id=3f16861c-1feb-41c2-b134-fc9dc599127c at=2026-10-13T13:04:54.075Z tokens={"input_tokens":16881,"output_tokens":589,"thinking_tokens":589,"cache_read_tokens":0,"total_tokens":17470} — ADVISORY MODEL OUTPUT, not verified fact -->
+
+This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries. Please try rephrasing your prompt. You can [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting#file-bug) or read more about [our policies here](https://policies.google.com/terms/generative-ai/use-policy).

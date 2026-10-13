@@ -1,0 +1,9 @@
+{
+  "dataset_id": "lsl-water-deaths-ledger",
+  "title": "Life-Saving Lab ledger: cited figures on deaths at sea and drowning",
+  "version": "0.1.0",
+  "released": "2026-10-13",
+  "data_license": "CC0-1.0 (compilation and metadata); underlying figures are facts attributed to their sources",
+  "provenance": "Imported from the Life-Saving Lab canon export of 2026-10-12 (citation metadata only; no narrative text)",
+  "caveat": "Not a rescue service. Not a measure of lives saved. Figures are not additive unless a pair check passes."
+}
