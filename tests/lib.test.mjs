@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { canonicalJSON, sha256Hex, tokenEquals } from '../src/lib/hash.js';
 import { deriveTier, parseToll } from '../src/lib/tiers.js';
-import { detectPII } from '../src/lib/pii.js';
+import { detectPII, detectDistress } from '../src/lib/pii.js';
 import { findViolations } from '../src/lib/nonadditive.js';
 import { csvEscape, toCSV, CSV_COLUMNS } from '../src/lib/export.js';
 import { validateCitation, classifyContribution } from '../src/lib/validate.js';
@@ -36,6 +36,14 @@ test('PII detector stays fast on 8KB adversarial input (no catastrophic backtrac
 });
 test('PII detector catches obfuscated email', () => {
   assert.ok(detectPII('reach me: jane [at] example [dot] com').includes('email_obfuscated'));
+  assert.ok(detectPII('john(at)example(dot)org').includes('email_obfuscated'));
+  assert.ok(detectPII('alice AT domain DOT com').includes('email_obfuscated'));
+});
+test('detectDistress catches danger phrases; ordinary corrections pass', () => {
+  assert.equal(detectDistress('MAYDAY MAYDAY taking on water'), true);
+  assert.equal(detectDistress({ proposed: 'I want to die' }), true);
+  assert.equal(detectDistress({ title: 'Recreational Boating Statistics 2024' }), false);
+  assert.equal(detectDistress(null), false);
 });
 test('deriveTier: official count T1, contemporary accounts T3, agency estimate T2, absence T4', () => {
   assert.equal(deriveTier('counted', 'Canadian commission of inquiry'), 'T1');
@@ -127,6 +135,7 @@ test('classifyContribution quarantines PII and unknown targets; rejects malforme
   assert.equal(classifyContribution({ kind: 'source_metadata', target_id: 'nope-id', citation: cite }, new Set()).status, 'quarantined');
   assert.equal(classifyContribution({ kind: 'delete_everything' }).status, 'rejected');
   assert.equal(classifyContribution([]).status, 'rejected');
+  assert.equal(classifyContribution({ kind: 'source_metadata', target_id: 12345, citation: cite }, new Set()).status, 'rejected', 'non-string id rejected, not quarantined');
   assert.equal(classifyContribution({ kind: 'new_observation', label: 'x', year: '1', place: 'p', toll: '1', cause: 'c', confidence: 'guess', citation: cite }).status, 'rejected');
   assert.equal(classifyContribution({ kind: 'non_additive_pair', a_id: 'aa', b_id: 'aa', reason: 'r', citation: cite }, new Set(['aa'])).status, 'rejected');
   assert.equal(classifyContribution(JSON.parse('{"kind":"source_metadata","target_id":"titanic","citation":{"title":"t","publisher":"p"},"__proto__":{"x":1}}'), new Set(['titanic'])).status, 'rejected');

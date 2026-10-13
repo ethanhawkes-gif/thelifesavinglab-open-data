@@ -1,6 +1,6 @@
 // Validation for staged contributions. Nothing here writes canonical data.
 import { CONFIDENCE } from './tiers.js';
-import { detectPII } from './pii.js';
+import { detectPII, detectDistress } from './pii.js';
 
 export const KINDS = Object.freeze(['correction', 'new_observation', 'source_metadata', 'non_additive_pair']);
 export const MAX_BODY_BYTES = 8192;
@@ -31,10 +31,12 @@ export function validateCitation(c) {
 
 /**
  * Classify a contribution payload.
- * @returns {{status:'staged'|'quarantined'|'rejected', errors:string[], pii:string[]}}
+ * @returns {{status:'staged'|'quarantined'|'rejected', errors:string[], pii:string[], distress?:boolean}}
+ * Distress is checked first, before any structural rejection, so a person in danger always gets the redirect.
  * rejected = structurally unusable; quarantined = well-formed but needs a human (PII, unknown target).
  */
 export function classifyContribution(payload, knownIds = new Set()) {
+  if (detectDistress(payload)) return { status: 'quarantined', errors: ['possible distress message: this API is not monitored'], pii: ['distress'], distress: true };
   if (!payload || typeof payload !== 'object' || Array.isArray(payload)) return { status: 'rejected', errors: ['body: JSON object required'], pii: [] };
   const errors = [];
   if (!KINDS.includes(payload.kind)) return { status: 'rejected', errors: [`kind: one of ${KINDS.join(', ')}`], pii: [] };
@@ -42,7 +44,7 @@ export function classifyContribution(payload, knownIds = new Set()) {
   errors.push(...validateCitation(payload.citation));
   const needsQuarantine = [];
   const checkTarget = (k) => {
-    if (!ID.test(String(payload[k] ?? ''))) errors.push(`${k}: invalid id`);
+    if (typeof payload[k] !== 'string' || !ID.test(payload[k])) errors.push(`${k}: invalid id`);
     else if (!knownIds.has(payload[k])) needsQuarantine.push(`${k}: unknown id ${payload[k]}`);
   };
   switch (payload.kind) {

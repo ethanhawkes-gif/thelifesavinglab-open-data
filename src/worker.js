@@ -4,6 +4,7 @@ import { canonicalJSON, sha256Hex, tokenEquals } from './lib/hash.js';
 import { toCSV } from './lib/export.js';
 import { findViolations } from './lib/nonadditive.js';
 import { classifyContribution, MAX_BODY_BYTES } from './lib/validate.js';
+import { detectDistress } from './lib/pii.js';
 import { OPENAPI } from './openapi.js';
 
 const BASE_HEADERS = {
@@ -14,6 +15,8 @@ const BASE_HEADERS = {
   'x-not-a-rescue-service': 'Distress: VHF 16 or the coast guard. Crisis: 988.',
 };
 const ID = /^[a-z0-9][a-z0-9-]{1,62}$/;
+// Shown instead of storing anything when a submission looks like someone in danger. Nobody reads this API in real time.
+export const DISTRESS_NOTICE = 'Nobody monitors this service. If someone is in danger on the water, call the coast guard now or use VHF channel 16; in the U.S. you can also call 911. If you are thinking about suicide or are in crisis, call or text 988 (U.S.).';
 
 export function respond(body, status = 200, extra = {}) {
   const isText = typeof body === 'string';
@@ -34,6 +37,7 @@ async function stage(request, env) {
   if (declared > MAX_BODY_BYTES) return fail(413, 'body too large');
   const raw = await request.text();
   if (new TextEncoder().encode(raw).length > MAX_BODY_BYTES) return fail(413, 'body too large');
+  if (detectDistress(raw)) return respond({ status: 'not-received', emergency: DISTRESS_NOTICE }, 200, { 'cache-control': 'no-store' });
   let payload;
   try { payload = JSON.parse(raw); } catch { return fail(400, 'invalid JSON'); }
   const cap = Number(env.MAX_PENDING || 500);
@@ -61,7 +65,7 @@ async function review(request, env, id) {
   if (!(await reviewerOk(request, env))) return fail(401, 'unauthorized');
   if (!env.DB) return fail(503, 'staging store not configured');
   if (id === 'queue') {
-    const { results } = await env.DB.prepare("SELECT id,kind,status,payload_sha256,pii,notes,submitted_at FROM contributions WHERE status IN ('staged','quarantined') ORDER BY submitted_at LIMIT 100").all();
+    const { results } = await env.DB.prepare("SELECT id,kind,status,payload,payload_sha256,pii,notes,submitted_at FROM contributions WHERE status IN ('staged','quarantined') ORDER BY submitted_at LIMIT 100").all();
     return respond({ data: results ?? [] }, 200, { 'cache-control': 'no-store' });
   }
   if (!/^c-[0-9a-f]{24}$/.test(id)) return fail(404, 'not found');
@@ -81,7 +85,8 @@ export async function handle(request, env = {}) {
   const m = request.method;
   if (m === 'OPTIONS') return new Response(null, { status: 204, headers: { ...BASE_HEADERS, 'access-control-allow-methods': 'GET, POST, OPTIONS', 'access-control-allow-headers': 'content-type, authorization', 'access-control-max-age': '600' } });
   if (path === '/v1/contributions') return m === 'POST' ? stage(request, env) : fail(405, 'method not allowed');
-  if (path.startsWith('/v1/review/')) return m === 'GET' && path === '/v1/review/queue' ? review(request, env, 'queue') : m === 'POST' ? review(request, env, path.slice(11)) : fail(405, 'method not allowed');
+  if (path === '/v1/review/queue') return m === 'GET' ? review(request, env, 'queue') : fail(405, 'method not allowed');
+  if (path.startsWith('/v1/review/')) return m === 'POST' ? review(request, env, path.slice(11)) : fail(405, 'method not allowed');
   if (m !== 'GET' && m !== 'HEAD') return fail(405, 'method not allowed');
   const ex = exportsFor(release);
   switch (path) {

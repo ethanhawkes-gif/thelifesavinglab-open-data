@@ -1,6 +1,6 @@
 # Data policy
 
-1. **Citation metadata only.** We store a figure as printed, its year, place, cause, confidence word, tier, and a citation string (title, publisher, date, optional https URL, access terms). We never store article, report or book text. Validation rejects any citation key other than `title, publisher, url, published, access_terms`, and caps every field.
+1. **Citation metadata only.** We store a figure as printed, its year, place, cause, confidence word, tier, and a citation (title, publisher, published date, optional https URL, access terms). We never store article, report or book text. Validation rejects any citation key other than `title, publisher, url, published, access_terms`, and caps every field.
 2. **No personal data.** No names of people who died or survived, no next of kin, no contact details, no addresses, no coordinates of individuals, no IP addresses, no contributor identity. Audit events record a role (`public`, `reviewer`, `release-bot`), never a person.
 3. **Aggregates, not cases.** A row is a published total or estimate. Single-incident rows (named ships) carry the inquiry's toll, not a passenger list.
 4. **Sensitive topics are held for a human.** Self-harm–adjacent entries (e.g. the Piscataqua River Bridge) are excluded from public releases until a person applies safe-messaging review. `release.excluded` lists what was held and why.

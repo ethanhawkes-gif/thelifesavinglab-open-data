@@ -2,7 +2,7 @@
 /** @type {Array<[string, RegExp]>} */
 const PATTERNS = [
   ['email', /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i],
-  ['email_obfuscated', /\b[\w.+-]+\s*[[(]\s*at\s*[\])]\s*[\w-]+\s*[[(]\s*dot\s*[\])]\s*[a-z]{2,}/i],
+  ['email_obfuscated', /\b[\w.+-]+\s*(?:[[(]\s*at\s*[\])]|\s+at\s+)\s*[\w-]+\s*(?:[[(]\s*dot\s*[\])]|\s+dot\s+)\s*[a-z]{2,}\b/i],
   ['phone', /(?:\+?\d{1,3}[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\b/],
   ['us_ssn', /\b\d{3}-\d{2}-\d{4}\b/],
   ['street_address', /\b\d{1,5}\s+\w+(?:\s\w+)?\s(?:St|Street|Ave|Avenue|Rd|Road|Ln|Lane|Dr|Drive|Ct|Court|Blvd)\b/i],
@@ -24,4 +24,12 @@ export function detectPII(value) {
   };
   walk(value, 0);
   return [...found].sort();
+}
+
+const DISTRESS = /\b(?:mayday|pan[- ]pan|man overboard|person overboard|sinking|taking on water|in the water now|capsized|want to die|kill myself|end my life|suicid\w*|goodbye note|need help now|send help)\b/i;
+
+/** True when free text looks like someone in danger. The API is unmonitored, so the response must redirect them at once. */
+export function detectDistress(value) {
+  const text = typeof value === 'string' ? value : JSON.stringify(value ?? '');
+  return DISTRESS.test(text);
 }

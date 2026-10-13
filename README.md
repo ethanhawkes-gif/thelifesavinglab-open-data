@@ -40,7 +40,8 @@ OpenAPI 3.1 at `/v1/openapi.json`. Reads come from the bundled release; the only
 | GET | `/v1/sources` | citation metadata |
 | GET | `/v1/releases/latest`, `/v1/export.json`, `/v1/export.csv` | manifest with SHA-256; exports whose hash matches |
 | POST | `/v1/contributions` | stage a correction or addition (validated; PII -> quarantine) |
-| GET/POST | `/v1/review/queue`, `/v1/review/{id}` | reviewer decisions (bearer token) |
+| GET | `/v1/review/queue` | pending contributions with payloads (bearer token) |
+| POST | `/v1/review/{id}` | reviewer decision: `accepted` or `declined` (bearer token) |
 
 Verify an export: `curl -s $API/v1/export.csv | shasum -a 256` must equal `sha256["export.csv"]` in `/v1/releases/latest`.
 

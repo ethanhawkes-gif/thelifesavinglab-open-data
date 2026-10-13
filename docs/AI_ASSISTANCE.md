@@ -11,6 +11,8 @@ by Google Gemini (model `gemini-3.8-flash-high` via Antigravity). Gemini output 
    whitespace and `|` (fixed), obfuscated emails (fixed), and others recorded in `docs/THREAT_MODEL.md`.
 3. Source/licensing review — found truncated source ids (fixed: word-boundary slugs). Its per-source reuse-terms table
    is in `docs/SOURCE_REVIEW.md`, marked unverified.
-4. Final review of docs and code — see `receipts/gemini/pass4-final.md`.
+4. Final review of docs and code — review queue now returns payloads; `/v1/review/queue` is GET-only; non-string ids
+   are rejected; doc field names fixed (`published`). Not applied: its claim that `source_citation` does not exist
+   (it is an export column). Full text in `receipts/gemini/pass4-final.md`.
 
 A person must review this record before a release is called human-reviewed.

@@ -86,6 +86,9 @@ test('review workflow: token required, decision recorded once, canonical data ne
   const auth = { authorization: 'Bearer ' + TOKEN };
   const queue = await (await handle(new Request('https://api.test/v1/review/queue', { headers: auth }), env)).json();
   assert.equal(queue.data.length, 1);
+  assert.ok(queue.data[0].payload.includes('titanic'), 'reviewer sees the payload');
+  assert.equal((await post('/v1/review/queue', {}, env, auth)).status, 405);
+  assert.equal((await handle(new Request('https://api.test/v1/review/' + id, { headers: auth }), env)).status, 405);
   assert.equal((await post('/v1/review/' + id, { decision: 'accepted' }, env, { authorization: 'Bearer wrong' })).status, 401);
   assert.equal((await post('/v1/review/' + id, { decision: 'merge-now' }, env, auth)).status, 400);
   assert.equal((await post('/v1/review/' + id, { decision: 'accepted' }, env, auth)).status, 200);
@@ -99,6 +102,18 @@ test('pending-queue cap returns 429 instead of growing storage', async () => {
   const env = { DB: d1, MAX_PENDING: 1 };
   assert.equal((await post('/v1/contributions', { kind: 'source_metadata', target_id: 'titanic', citation: cite }, env)).status, 202);
   assert.equal((await post('/v1/contributions', { kind: 'source_metadata', target_id: 'empress', citation: cite }, env)).status, 429);
+});
+test('distress submission stores nothing and returns emergency numbers', async () => {
+  const { db, d1 } = freshDB({ seed: true });
+  const r = await post('/v1/contributions', { kind: 'correction', proposed: 'mayday we are sinking' }, { DB: d1 });
+  assert.equal(r.status, 200);
+  const j = await r.json();
+  assert.equal(j.status, 'not-received');
+  assert.match(j.emergency, /VHF channel 16/);
+  assert.match(j.emergency, /988/);
+  assert.equal(db.prepare('SELECT count(*) n FROM contributions').get().n, 0);
+  const bad = await (await post('/v1/contributions', 'help, man overboard', { DB: d1 })).json();
+  assert.equal(bad.status, 'not-received', 'even non-JSON distress gets the redirect');
 });
 test('security smoke: headers, unknown routes, methods, CORS preflight, 500 hides detail', async () => {
   const r = await get('/v1/health');

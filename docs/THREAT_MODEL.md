@@ -14,6 +14,6 @@ site's reputation (a separate system this repo must never touch).
 | CSV formula injection | spreadsheet export | leading `= + - @ |` tab, CR (after whitespace) prefixed with `'` | Non-Excel tools may still evaluate |
 | ReDoS | crafted input | linear regexes; test caps 8 KB adversarial runtime at 100 ms | — |
 | Info leak | stack traces | generic 500, no echo of internals | — |
-| Misuse as emergency service | user confusion | header + README + OpenAPI notice: VHF 16 / coast guard / 988 | — |
+| Misuse as emergency service | someone in danger submits a message | distress phrases -> nothing stored, immediate coast guard / VHF 16 / 911 / 988 reply; notice in header, README, OpenAPI | Phrasing the detector misses is stored as an ordinary contribution and read late |
 | Harm via sensitive topics | bridge/self-harm entries | held out of releases pending safe-messaging review | — |
 | Supply chain | npm | Worker has zero runtime dependencies; devDeps only; `npm audit` in CI | Dev tooling |
