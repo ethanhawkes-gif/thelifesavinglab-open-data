@@ -4,6 +4,7 @@
 //   node site/build.mjs            # writes site/dist
 //   npx serve site/dist            # or: python3 -m http.server -d site/dist 8080
 import { cp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -29,6 +30,15 @@ const FOOT = `
 </body></html>
 `;
 
+/** The data's own history: every commit that touched the estimates, the board or the receipts, newest first. Empty when git is absent. */
+function changelog() {
+  try {
+    const raw = execFileSync('git', ['log', '--date=short', '--format=%ad%x1f%h%x1f%s', '-n', '60', '--', 'estimates', 'tasks/tasks.json', 'receipts/lend.json', 'watch/sources.json'], { cwd: ROOT, encoding: 'utf8' });
+    const entries = raw.trim().split('\n').filter(Boolean).map((l) => { const [date, sha, subject] = l.split('\x1f'); return { date, sha, subject }; });
+    return { schema: 'lifesavinglab.changelog.v1', generated: new Date().toISOString(), entries };
+  } catch { return { schema: 'lifesavinglab.changelog.v1', generated: new Date().toISOString(), entries: [] }; }
+}
+
 async function main() {
   await rm(OUT, { recursive: true, force: true });
   await mkdir(path.join(OUT, 'data'), { recursive: true });
@@ -37,8 +47,9 @@ async function main() {
   for (const f of ['site.css', 'charts.js', 'extra.js', 'register.js', 'lend.js', 'pilots.js', 'app.js']) await cp(path.join(SRC, f), path.join(OUT, f));
   await cp(path.join(SRC, 'img'), path.join(OUT, 'img'), { recursive: true });
   for (const [from, to] of DATA) await cp(path.join(ROOT, from), path.join(OUT, to));
+  await writeFile(path.join(OUT, 'data', 'changelog.json'), JSON.stringify(changelog(), null, 1));
   await writeFile(path.join(OUT, '.nojekyll'), '');
   await writeFile(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');
-  console.log(`built ${OUT}: index.html, 6 assets, ${DATA.length} data files`);
+  console.log(`built ${OUT}: index.html, 7 assets, ${DATA.length + 1} data files`);
 }
 main().catch((e) => { console.error(e); process.exit(1); });

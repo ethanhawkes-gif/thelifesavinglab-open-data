@@ -14,6 +14,21 @@
   const save = (rows) => { try { localStorage.setItem(KEY, JSON.stringify(rows)); return true; } catch { return false; } };
   const csvq = (v) => { const s = v == null ? '' : String(v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
   const toCSV = (rows) => COLS.join(',') + '\n' + rows.map((r) => COLS.map((c) => csvq(r[c])).join(',')).join('\n') + '\n';
+  /* A small CSV reader: quoted fields, doubled quotes, CR/LF. Returns an array of objects keyed by the header row. */
+  function fromCSV(text) {
+    const rows = []; let row = [], field = '', q = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (q) { if (c === '"') { if (text[i + 1] === '"') { field += '"'; i++; } else q = false; } else field += c; }
+      else if (c === '"') q = true;
+      else if (c === ',') { row.push(field); field = ''; }
+      else if (c === '\n' || c === '\r') { if (c === '\r' && text[i + 1] === '\n') i++; row.push(field); rows.push(row); row = []; field = ''; }
+      else field += c;
+    }
+    if (field || row.length) { row.push(field); rows.push(row); }
+    const header = (rows.shift() || []).map((h) => h.trim());
+    return rows.filter((r) => r.some((v) => v !== '')).map((r) => Object.fromEntries(header.map((h, i) => [h, (r[i] || '').trim()])));
+  }
   /* The repository's conservative detector, mirrored: a hit refuses the row. Names are not detected; the form says so. */
   const PII = [/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i, /(?<!\d)(?:\+?\d{1,3}[\s.-])?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}(?!\d)/, /(?<!\d)\+\d{1,3}(?:[\s.-]?\d{2,4}){2,4}(?!\d)/, /\b\d{3}-\d{2}-\d{4}\b/, /\b\d{1,5}\s+\w+(?:\s\w+)?\s(?:St|Street|Ave|Avenue|Rd|Road|Ln|Lane|Dr|Drive|Ct|Court|Blvd)\b/i, /\b(?:victim|deceased|survivor|patient|next of kin)\s*(?:name)?\s*[:=]/i];
   const looksPersonal = (row) => Object.values(row).some((v) => PII.some((re) => re.test(String(v || ''))));
@@ -53,7 +68,8 @@
   ${sectionHead('Your rows', '<span id="rows-title">In this browser only, until you export them.</span>', '')}
   <div id="r-summary"></div>
   <div id="r-table"></div>
-  <div class="row"><button class="btn" id="r-export">Export CSV</button><button class="btn btn--ghost" id="r-copy">Copy CSV</button><button class="btn btn--ghost" id="r-wipe">Delete all rows</button></div>
+  <div class="row"><button class="btn" id="r-export">Export CSV</button><button class="btn btn--ghost" id="r-copy">Copy CSV</button><label class="btn btn--ghost" for="r-import" style="cursor:pointer">Import CSV<input id="r-import" type="file" accept=".csv,text/csv" style="position:absolute;width:1px;height:1px;opacity:0"></label><button class="btn btn--ghost" id="r-wipe">Delete all rows</button></div>
+  <p class="small muted" id="r-import-msg" style="font-size:14px"></p>
   <div id="fallback-box" hidden></div>
 </div></section>`;
   }
@@ -89,6 +105,29 @@
       form.reset(); render(); window.scrollTo({ top: document.getElementById('rows-title').getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
     });
     document.getElementById('r-clear').addEventListener('click', () => { form.reset(); msg.textContent = ''; });
+    document.getElementById('r-import').addEventListener('change', (e) => {
+      const file = e.target.files && e.target.files[0]; const out = document.getElementById('r-import-msg'); if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        let parsed; try { parsed = fromCSV(String(reader.result || '')); } catch { out.textContent = 'That file could not be read as CSV.'; return; }
+        const known = new Set(COLS); const unknown = parsed.length ? Object.keys(parsed[0]).filter((k) => !known.has(k)) : [];
+        if (!parsed.length || !('date' in parsed[0]) || !('outcome' in parsed[0])) { out.textContent = 'No rows found, or the header does not match the register columns (export one row first to see them).'; return; }
+        const rows = load(); const ids = new Set(rows.map((r) => r.event_id)); let added = 0, dup = 0, refused = 0;
+        for (const p of parsed) {
+          const row = {}; COLS.forEach((c) => { row[c] = String(p[c] || '').trim(); });
+          row.lat = ''; row.lon = '';
+          if (!row.event_id) row.event_id = 'r-' + Math.random().toString(36).slice(2, 10);
+          if (ids.has(row.event_id)) { dup++; continue; }
+          if (looksPersonal(row)) { refused++; continue; }
+          rows.push(row); ids.add(row.event_id); added++;
+        }
+        rows.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+        save(rows); render();
+        out.textContent = `Imported ${added} row${added === 1 ? '' : 's'}${dup ? `, skipped ${dup} already here` : ''}${refused ? `, refused ${refused} that looked like they carried personal data` : ''}${unknown.length ? `. Ignored columns: ${unknown.join(', ')}` : ''}.`;
+        e.target.value = '';
+      };
+      reader.readAsText(file);
+    });
     document.getElementById('r-export').addEventListener('click', () => { const rows = load(); if (!rows.length) { toast('No rows yet'); return; } saveFile(`register-${new Date().toISOString().slice(0, 10)}.csv`, toCSV(rows)); });
     document.getElementById('r-copy').addEventListener('click', () => { const rows = load(); if (!rows.length) { toast('No rows yet'); return; } copyText(toCSV(rows)); });
     document.getElementById('r-wipe').addEventListener('click', () => { const btn = document.getElementById('r-wipe'); if (btn.dataset.armed) { save([]); render(); btn.textContent = 'Delete all rows'; delete btn.dataset.armed; toast('Rows deleted'); } else { btn.dataset.armed = '1'; btn.textContent = 'Press again to delete all'; setTimeout(() => { btn.textContent = 'Delete all rows'; delete btn.dataset.armed; }, 4000); } });

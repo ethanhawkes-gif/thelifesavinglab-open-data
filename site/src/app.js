@@ -2,7 +2,7 @@
 (function () {
   const { fmt, esc, roundK } = window.Charts;
   const app = document.getElementById('app');
-  const DATA = { ledger: null, toll: null, tree: null, byId: {}, parent: {} };
+  const DATA = { ledger: null, toll: null, tree: null, byId: {}, parent: {}, tasks: null, watch: null, changelog: null };
   const MAIL = 'hello@thelifesavinglab.org';
   const SITE = 'https://thelifesavinglab.org';
   const REPO = 'github.com/ethanhawkes-gif/thelifesavinglab-open-data';
@@ -64,8 +64,9 @@
   /* ---------- data ---------- */
   async function load() {
     const get = (p) => fetch(p).then((r) => { if (!r.ok) throw new Error(p); return r.json(); });
-    const [ledger, toll, tree] = await Promise.all([get('data/ledger.json'), get('data/toll.json'), get('data/tree.json')]);
-    DATA.ledger = ledger; DATA.toll = toll; DATA.tree = tree;
+    const soft = (p) => get(p).catch(() => null);
+    const [ledger, toll, tree, tasks, watch, changelog] = await Promise.all([get('data/ledger.json'), get('data/toll.json'), get('data/tree.json'), soft('data/tasks.json'), soft('data/watch-feed.json'), soft('data/changelog.json')]);
+    DATA.ledger = ledger; DATA.toll = toll; DATA.tree = tree; DATA.tasks = tasks; DATA.watch = watch; DATA.changelog = changelog;
     ledger.rows.forEach((r) => { DATA.byId[r.id] = r; });
     Object.entries(tree.nodes).forEach(([id, n]) => (n.options || []).forEach((o) => { DATA.parent[o.to] = id; }));
   }
@@ -160,6 +161,8 @@
     <div><span class="n">0</span><b>Pilots written</b><span class="small muted">One page each, with a test for failure</span></div>
     <div><span class="n">0</span><b>Taken up by an adopter</b><span class="small muted">A real harbor, crew or co-op runs it</span></div>
     <div><span class="n">0</span><b>Failed, and published</b><span class="small muted">Failures stay on the record</span></div>
+    <div><span class="n">${DATA.tasks ? DATA.tasks.tasks.filter((t) => t.status !== 'done' && !(t.claimed_until && Date.parse(t.claimed_until) > Date.now())).length : '—'}</span><b>Tasks open on the board</b><span class="small muted">Each sized for one lent hour</span></div>
+    <div><span class="n">${DATA.watch && DATA.watch.counts ? fmt(DATA.watch.counts.reported || 0) : '—'}</span><b>Reports waiting to be read</b><span class="small muted">In the watch, hourly, since 15 Oct 2026</span></div>
     <div><span class="n" style="color:var(--rust)">${rows}</span><b>Ledger rows</b><span class="small muted">Each with a source, a year and a rule for what it must not be added to</span></div>
   </div>
   <p class="mono muted">Counting starts June 2027. Last checked 15 Oct 2026. <a href="#pilots">What a pilot is, and how one is scored →</a></p>
@@ -301,6 +304,12 @@
   </div>
   <div id="ledger-table"></div>
 </div></section>
+
+${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--tight" aria-labelledby="hist-title"><div class="wrap stack" style="gap:18px">
+  <div class="stack"><p class="eyebrow">What changed</p><h2 class="h3" id="hist-title">Every change to the data, newest first.</h2></div>
+  <div class="stack" style="gap:0">${DATA.changelog.entries.slice(0, 12).map((e) => `<div class="rec" style="padding:10px 0;flex-direction:row;gap:16px;align-items:baseline;flex-wrap:wrap"><span class="mono" style="font-size:13px;color:var(--rust);flex:0 0 auto">${esc(e.date)}</span><span class="small" style="font-size:15px;min-width:0">${esc(e.subject)}</span><a class="mono" style="font-size:12px;margin-left:auto" href="https://${REPO}/commit/${esc(e.sha)}">${esc(e.sha)}</a></div>`).join('')}</div>
+  <p class="small muted">The full history is in the repository. Nothing is deleted; a retired row keeps its id and a date.</p>
+</div></section>` : ''}
 
 <section class="section" aria-labelledby="reg-title"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:36px 64px">
   <div class="stack" style="flex:1 1 420px;min-width:0">
