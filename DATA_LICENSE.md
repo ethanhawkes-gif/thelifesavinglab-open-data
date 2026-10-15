@@ -11,3 +11,17 @@ What that covers, and what it does not:
   (currently `unreviewed` for every source — see `docs/SOURCE_REVIEW.md`).
 - The `reason` text on non-additive pairs is the Life-Saving Lab's own wording and is dedicated under CC0 with the rest.
 - If you republish a figure, cite the original source named in `source_citation`, not this repository.
+
+## The rest of the repository's data
+
+- `estimates/` (the figures ledger, the toll layers, the decision tree, the register template), `tasks/` (the board,
+  the prompt pack, returned bundles in `contributions/`), `receipts/lend.json` and `docs/briefs/` are released under
+  **CC BY 4.0** — https://creativecommons.org/licenses/by/4.0/ — as the site states in its footer. Attribution:
+  "The Life-Saving Lab, thelifesavinglab.org". Figures remain facts attributed to their sources; cite the source named
+  in each row, not this repository.
+- `watch/queue.json` and `watch/feed.json` hold links, dates and derived kinds only, under CC0 with the compiled data
+  above; the linked reports keep their publishers' terms.
+- Photographs under `site/src/img/` are © Ethan Hawkes and are not covered by either licence; ask before reuse.
+
+Two licences in one repository is a choice still open to the maintainer: unifying on CC0 would make reuse simplest;
+unifying on CC BY 4.0 would keep attribution. Until that is decided, the split above is the rule.
