@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build:data": "node scripts/build-release.mjs && node scripts/release-to-sql.mjs",
-    "test": "node --test tests/",
+    "test": "node --test 'tests/*.test.mjs'",
     "check:bundles": "node scripts/tasks.mjs check-all",
     "typecheck": "tsc -p jsconfig.json",
     "lint": "eslint .",

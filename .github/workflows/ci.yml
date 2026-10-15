@@ -16,5 +16,14 @@ jobs:
         with:
           node-version: 24
       - run: npm ci
-      - run: npm run check
+      - name: build data and check it is committed
+        run: npm run build:data && git diff --exit-code -- src/data seeds dist
+      - name: tests
+        run: npm test
+      - name: returned bundles
+        run: npm run check:bundles
+      - name: typecheck
+        run: npm run typecheck
+      - name: lint
+        run: npm run lint
       - run: npm audit --audit-level=moderate
