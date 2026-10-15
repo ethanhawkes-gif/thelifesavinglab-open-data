@@ -146,12 +146,11 @@
    "title": "Europe: 9,155 (1.0 per 100,000) or 15,000 (1.7)? Find where the smaller figure comes from",
    "kind": "verify",
    "size": "M",
-   "status": "open",
-   "ask": "The WHO 2024 report prints 15 000 drowning deaths and 1.7 per 100 000 for the WHO European Region in 2021 (Fig. 2 and p. 14). A secondary summary gave 9,155 and 1.0 per 100,000, which the ledger carried until 15 Oct 2026. Find the primary source of 9,155: possibly a WHO Regional Office for Europe release, a different year, a subset of countries (EU/EEA), or a different cause definition. Report what the two figures count, with pages or table names, and whether both can stand as separate rows.",
+   "status": "done",
+   "ask": "The WHO 2024 report prints 15 000 drowning deaths and 1.7 per 100 000 for the WHO European Region in 2021 (Fig. 2 and p. 14). A secondary summary gave 9,155 and 1.0 per 100,000, which the ledger carried until 15 Oct 2026. Find the primary source of 9,155 and report what the two figures count.",
    "inputs": [
     "https://www.who.int/publications/i/item/9789240103962",
-    "https://www.who.int/europe/",
-    "Row: who-region-eur"
+    "Rows: who-region-eur, esanum-europe-9155 (retired), eurostat-eu27-drowning-2021-2022, who-europe-20000-statement"
    ],
    "accept": [
     "The primary source of the 9,155 figure, or status not-found with what was tried",
@@ -163,6 +162,62 @@
    ],
    "unlocks": "Resolves a discrepancy that a careful reader will spot.",
    "parent": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": "Done by an independent agent on 15 Oct 2026 (contributions/merged/who-europe-9155-reconcile-agent-three.json): the 9,155 figure exists only in a press article whose numbers mix the GBD 2017 global estimate with the WHO 2024 report; no primary source. The row now carries the report's definition (W65–W74, Box 3 exclusions, 53 countries), and three related rows were added: the press figure (retired), Eurostat's EU-27 count, and WHO Europe's 20,000 statement."
+  },
+  {
+   "id": "gbd-2017-franklin-s1-europe",
+   "title": "Is 9,155 the GBD 2017 estimate for Europe? Read supplementary table S1 of Franklin et al. 2020",
+   "kind": "verify",
+   "size": "S",
+   "status": "open",
+   "ask": "A retired press figure (9,155 drowning deaths in \"Europe\", 1.0 per 100,000) has no known primary source, but the same article's global figure, 295,210, is exactly the GBD 2017 estimate for 2017 (Franklin et al., Injury Prevention 2020;26:i83–i95). The paper's regional values are in its online supplementary table S1, which the lab could not open. Find table S1 (PubMed Central PMC7571364, the journal's supplementary files, or an author repository), and report the 2017 drowning deaths and rate it gives for Europe or the WHO European Region, as printed, with the table's row labels.",
+   "inputs": [
+    "https://injuryprevention.bmj.com/content/26/Suppl_2/i83",
+    "Rows: esanum-europe-9155, gbd-2017-franklin, who-region-eur"
+   ],
+   "accept": [
+    "The S1 value for Europe (or the nearest regional grouping) with its exact label, year and interval",
+    "A quote of 25 words or fewer from the table caption",
+    "A one-line verdict: does 9,155 appear, and under what label"
+   ],
+   "rows": [
+    "esanum-europe-9155",
+    "gbd-2017-franklin"
+   ],
+   "unlocks": "Closes the trace on a figure that readers will keep meeting.",
+   "parent": "who-europe-9155-reconcile",
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": null
+  },
+  {
+   "id": "who-ghe-regional-unrounded",
+   "title": "WHO GHE by region: the unrounded drowning deaths behind the printed 15,000, 66,000 and the rest, for 2019, 2021 and 2023",
+   "kind": "row",
+   "size": "S",
+   "status": "open",
+   "ask": "WHO's Global Health Estimates page lists a regional file (deaths by WHO region, 2000–2023; the file name seen on 15 Oct 2026 was deaths_whoregion_2026-09-30.xlsx on cdn.who.int). The lab could not download it. Open the file, find the unintentional drowning rows (W65–W74), and return one row per WHO region per year for 2019, 2021 and 2023 with the unrounded death count and the rate, naming the sheet and the row label used.",
+   "inputs": [
+    "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death",
+    "Rows: who-region-wpr, who-region-sear, who-region-afr, who-region-emr, who-region-amr, who-region-eur, who-ghe-2021"
+   ],
+   "accept": [
+    "One row per region per year with the unrounded count, the rate and the file, sheet and row label",
+    "A note on whether the 2021 values match the report's rounded figures",
+    "Nothing summed across regions by the agent"
+   ],
+   "rows": [
+    "who-ghe-2021",
+    "who-region-eur"
+   ],
+   "unlocks": "Exact figures behind the rounded ones, and a first look at 2023.",
+   "parent": "who-europe-9155-reconcile",
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
