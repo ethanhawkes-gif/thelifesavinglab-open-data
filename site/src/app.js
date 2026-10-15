@@ -246,7 +246,17 @@
       <div style="width:10%;background:var(--brass);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Pools</div>
       <div style="width:13%;background:#D8D1BF;color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Other</div>
     </div>
-    <p class="small" style="font-size:15px">Coastal 154 · inland rivers, creeks, lakes and dams 122 (rivers and creeks alone 99) · swimming pools 35, two-thirds of them backyard pools. The UK's 2024 register puts 61% of accidental deaths on inland water. Neither split exists for the world. ${ledgerLink('australia-location-2024-25')}, ${ledgerLink('uk-waid-2024')}</p>
+    <p class="small" style="font-size:15px">Coastal 154 · inland rivers, creeks, lakes and dams 122 (rivers and creeks alone 99) · swimming pools 35, two-thirds of them backyard pools. The UK's 2024 register puts 61% of accidental deaths on inland water. ${ledgerLink('australia-location-2024-25')}, ${ledgerLink('uk-waid-2024')}</p>
+    <p class="eyebrow" style="margin-top:10px">Canada 2018–2022, five years pooled</p>
+    <div role="img" aria-label="Canada 2018 to 2022 unintentional drowning deaths by setting: lakes 36%, rivers 27%, bathtubs 15%, pools 9%, other 7%, ocean 6%." style="display:flex;height:40px;border-radius:2px;overflow:hidden">
+      <div style="width:36%;background:var(--teal);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Lakes 36%</div>
+      <div style="width:27%;background:#4A8FA8;color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Rivers 27%</div>
+      <div style="width:15%;background:var(--buoy);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Baths</div>
+      <div style="width:9%;background:var(--brass);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Pools</div>
+      <div style="width:7%;background:#D8D1BF;color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px">Other</div>
+      <div style="width:6%;background:var(--navy);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px">Sea</div>
+    </div>
+    <p class="small" style="font-size:15px">Inland water again: lakes and rivers hold 63% of Canada's deaths and the ocean 6%; bathtubs, 15%, are a setting the sea-and-coast picture never shows. Under 1% happened where a lifeguard was on duty. Percentages only; the counts are in a report that could not be opened yet. Neither split exists for the world. ${ledgerLink('canada-location-lakes-2018-22')}, ${ledgerLink('canada-location-lifeguard-supervised-2018-22')}</p>
     <p class="small muted">In a country that counts, the age profile also inverts: in Australia, people 65 and older were a third of deaths and under-fives were 15. ${ledgerLink('australia-age-2024-25')}</p>
   </div>
 </div></section>

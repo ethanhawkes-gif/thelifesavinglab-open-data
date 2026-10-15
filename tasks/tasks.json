@@ -317,24 +317,52 @@
    "title": "Canada: drowning deaths by water setting, latest year",
    "kind": "row",
    "size": "S",
-   "status": "open",
-   "ask": "WHO publishes no split of drowning deaths by water setting (sea, river, lake, pool, home). Some countries do. For Canada, find the latest annual drowning report or dataset that breaks deaths down by location or setting (Lifesaving Society Canada drowning report), and return one row per setting for the latest year, each citing the report page or dataset query.",
+   "status": "done",
+   "ask": "WHO publishes no split of drowning deaths by water setting. Some countries do. For Canada, find the latest annual drowning report or dataset that breaks deaths down by location or setting and return one row per setting for the latest year.",
    "inputs": [
     "Suggested source: Lifesaving Society Canada drowning report",
-    "Rows for comparison: australia-location-2024-25, uk-waid-2024"
+    "Rows now in the ledger: canada-location-lakes-2018-22 and the other canada-location-* rows, canada-total-2022"
    ],
    "accept": [
     "One row per setting with the count and the report's own setting names",
     "The total for the year, as the report prints it, in a separate row",
-    "A note on the report's definition of drowning (accidental only? all intents? water transport included?)"
+    "A note on the report's definition of drowning"
    ],
    "rows": [
-    "australia-location-2024-25",
-    "uk-waid-2024",
+    "canada-total-2022",
     "who-data-gaps"
    ],
    "unlocks": "Extends the \"which water\" split to another country that counts.",
    "parent": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": "Done by an independent agent on 15 Oct 2026 (contributions/merged/setting-split-canada-agent-four.json): seven setting shares for 2018–2022 and the 2022 total (560) from the 2026 National Drowning Data Snapshot, percentages only. The full report, with counts, is a follow-up task."
+  },
+  {
+   "id": "canada-full-report-counts",
+   "title": "Canada: counts per setting from the full 2026 Canadian Drowning Report, and the bathtubs-or-other check",
+   "kind": "row",
+   "size": "S",
+   "status": "open",
+   "ask": "The ledger carries Canada's 2018–2022 setting split as percentages from a one-page snapshot. The full 2026 Canadian Drowning Report (Lifesaving Society Canada, lifesaving.org, file 361108) should hold the counts, and the printed page can settle a pairing the text extraction left ambiguous: whether 15% belongs to bathtubs and 7% to \"other\", or the reverse. Open the report, return one row per setting with the count for the latest period it prints, say whether 2022 is flagged as partial or missing British Columbia, and record the activity split (boating and the rest).",
+   "inputs": [
+    "https://www.lifesaving.org/public-education/drowning-reports",
+    "Rows: canada-location-bathtubs-2018-22, canada-location-other-2018-22, canada-total-2022"
+   ],
+   "accept": [
+    "Counts per setting with the page",
+    "A one-line verdict on the bathtubs-or-other pairing",
+    "The activity split as printed, as separate rows"
+   ],
+   "rows": [
+    "canada-location-bathtubs-2018-22",
+    "canada-location-other-2018-22",
+    "canada-total-2022"
+   ],
+   "unlocks": "Counts instead of shares, and a check on the one inferred pairing.",
+   "parent": "setting-split-canada",
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",

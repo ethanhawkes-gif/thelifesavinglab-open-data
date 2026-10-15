@@ -55,7 +55,20 @@ task('fishing-overlap-method', 'How much of the fishing toll is already inside W
      ['Counts with their ICD codes or the source\'s own categories, for a named year and country', 'The share inside W65–W74 stated as a fraction with its numerator and denominator', 'Status partial is fine if only categories, not codes, are available'],
      rows=['fishing-ilo-1999', 'fishing-fsf-100000', 'icd-definition'], unlocks='Turns the 0–100,000 band into an estimate with a method.')
 
-for country, hint in [('Canada', 'Lifesaving Society Canada drowning report'), ('New Zealand', 'Water Safety New Zealand drowning statistics'), ('United States', 'CDC WONDER or WISQARS with place-of-occurrence codes'), ('Ireland', 'Water Safety Ireland drowning statistics')]:
+task('setting-split-canada', 'Canada: drowning deaths by water setting, latest year', 'row', 'S',
+     'WHO publishes no split of drowning deaths by water setting. Some countries do. For Canada, find the latest annual drowning report or dataset that breaks deaths down by location or setting and return one row per setting for the latest year.',
+     ['Suggested source: Lifesaving Society Canada drowning report', 'Rows now in the ledger: canada-location-lakes-2018-22 and the other canada-location-* rows, canada-total-2022'],
+     ['One row per setting with the count and the report\'s own setting names', 'The total for the year, as the report prints it, in a separate row', 'A note on the report\'s definition of drowning'],
+     rows=['canada-total-2022', 'who-data-gaps'], unlocks='Extends the "which water" split to another country that counts.', status='done',
+     done_note='Done by an independent agent on 15 Oct 2026 (contributions/merged/setting-split-canada-agent-four.json): seven setting shares for 2018–2022 and the 2022 total (560) from the 2026 National Drowning Data Snapshot, percentages only. The full report, with counts, is a follow-up task.')
+
+task('canada-full-report-counts', 'Canada: counts per setting from the full 2026 Canadian Drowning Report, and the bathtubs-or-other check', 'row', 'S',
+     'The ledger carries Canada\'s 2018–2022 setting split as percentages from a one-page snapshot. The full 2026 Canadian Drowning Report (Lifesaving Society Canada, lifesaving.org, file 361108) should hold the counts, and the printed page can settle a pairing the text extraction left ambiguous: whether 15% belongs to bathtubs and 7% to "other", or the reverse. Open the report, return one row per setting with the count for the latest period it prints, say whether 2022 is flagged as partial or missing British Columbia, and record the activity split (boating and the rest).',
+     ['https://www.lifesaving.org/public-education/drowning-reports', 'Rows: canada-location-bathtubs-2018-22, canada-location-other-2018-22, canada-total-2022'],
+     ['Counts per setting with the page', 'A one-line verdict on the bathtubs-or-other pairing', 'The activity split as printed, as separate rows'],
+     rows=['canada-location-bathtubs-2018-22', 'canada-location-other-2018-22', 'canada-total-2022'], unlocks='Counts instead of shares, and a check on the one inferred pairing.', parent='setting-split-canada')
+
+for country, hint in [('New Zealand', 'Water Safety New Zealand drowning statistics'), ('United States', 'CDC WONDER or WISQARS with place-of-occurrence codes'), ('Ireland', 'Water Safety Ireland drowning statistics')]:
     slug = country.lower().replace(' ', '-')
     task(f'setting-split-{slug}', f'{country}: drowning deaths by water setting, latest year', 'row', 'S',
          f'WHO publishes no split of drowning deaths by water setting (sea, river, lake, pool, home). Some countries do. For {country}, find the latest annual drowning report or dataset that breaks deaths down by location or setting ({hint}), and return one row per setting for the latest year, each citing the report page or dataset query.',
