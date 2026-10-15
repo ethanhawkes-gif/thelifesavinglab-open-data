@@ -18,7 +18,11 @@ export function detectPII(value) {
   const found = new Set();
   const walk = (v, depth) => {
     if (depth > 8) { found.add('too_deep'); return; }
-    if (typeof v === 'string') { for (const [k, re] of PATTERNS) if (re.test(v)) found.add(k); }
+    if (typeof v === 'string') {
+      // A phone number has at most 15 digits, so a longer unbroken run is shortened first: the phone pattern is quadratic on long digit runs.
+      const t = v.length > 64 ? v.replace(/\d{16,}/g, (m) => m.slice(0, 15)) : v;
+      for (const [k, re] of PATTERNS) if (re.test(t)) found.add(k);
+    }
     else if (Array.isArray(v)) v.forEach((x) => walk(x, depth + 1));
     else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) { walk(k, depth + 1); walk(x, depth + 1); }
   };
