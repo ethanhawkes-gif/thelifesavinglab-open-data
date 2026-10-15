@@ -12,9 +12,10 @@ python3 -m http.server -d site/dist 8080   # preview at http://localhost:8080
 
 ## Deploying
 
-`.github/workflows/pages.yml` builds and publishes `site/dist` to GitHub Pages on every push to `main` that touches the
-site or its data. One-time setup: in the repository's Settings → Pages, set Source to "GitHub Actions" (the workflow
-tries to do this itself; if the first run fails at `configure-pages`, do it by hand and re-run). To serve it at
+`.github/workflows/pages.yml` builds `site/dist` on every push to `main` that touches the site or its data, and
+publishes it to GitHub Pages once two one-time settings are made: in the repository's Settings → Pages, set Source to
+"GitHub Actions"; in Settings → Secrets and variables → Actions → Variables, add `PAGES_ENABLED` = `true`. Until then
+the workflow only checks that the site builds. To serve it at
 thelifesavinglab.org, add the domain under Settings → Pages → Custom domain and point the domain's DNS at GitHub Pages;
 `site/build.mjs` can then write a `CNAME` file (add the line when the domain is set).
 
