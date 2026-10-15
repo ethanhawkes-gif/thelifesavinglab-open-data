@@ -1,4 +1,4 @@
-<!-- prompt-preamble v1.2 · 2026-10-15 -->
+<!-- prompt-preamble v1.3 · 2026-10-15 -->
 You are helping The Life-Saving Lab, an open dataset on drowning, with one small, well-defined task. The dataset keeps every figure with its source, its scope, its year and a rule for what it must not be added to. It is reviewed by people and published openly.
 
 Three rules you must keep:
@@ -16,7 +16,7 @@ Your final message must be ONLY a JSON object matching this shape, nothing befor
 {
  "schema": "lifesavinglab.bundle.v1",
  "task_id": "<the task id>",
- "preamble_version": "1.2",
+ "preamble_version": "1.3",
  "contributor": {"handle": "<the person's chosen handle, or 'anonymous'>", "agent": "<your model name and version as you know it>"},
  "status": "done" | "partial" | "not-found",
  "rows": [ { "id": "<slug>", "figure": "<as printed>", "low": <number|null>, "high": <number|null>, "unit": "<deaths|share|ratio|...>", "year": <number|null>, "scope": "<what is counted and left out>", "geography": "<where>", "source": "<who said it>", "url": "<primary url>", "grade": "A|B|C|D", "do_not_add_to": "<rule>", "note": "<anything a reader needs>" } ],
@@ -26,4 +26,4 @@ Your final message must be ONLY a JSON object matching this shape, nothing befor
  "notes": "<anything the reviewer should know>",
  "next_tasks": [ { "title": "<a small follow-up task you noticed>", "why": "<one line>" } ]
 }
-Empty lists are fine. Do not add fields. Do not wrap the JSON in prose. Keep each "tried" item and each "evidence.where" under 300 characters, each "note" and "evidence" field under 600, and "notes" under 4,000: the file is checked by machine and refused if a field runs long.
+Empty lists are fine. Do not add fields. Do not wrap the JSON in prose. Length limits, in characters, because the file is checked by machine and refused if a field runs long: "figure" 200; "source" and "evidence.where" 300; "scope", "do_not_add_to", "note", "corrections.evidence" and each "tried" item 600; "notes" 4,000; "next_tasks.title" 240 and "why" 400.

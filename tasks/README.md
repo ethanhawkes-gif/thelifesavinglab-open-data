@@ -77,3 +77,21 @@ read by a person's session, merged, and received a receipt (`receipts/lend.json`
 What the runs taught the pack: assistants that cannot browse must say so (v1.1); field limits were too tight for a
 thorough agent (v1.2); and the personal-data detector was reading WHO's 13-digit ISBN as a phone number, which would
 have refused every WHO task. All fixed before an outsider met them.
+
+## The next five (15 Oct 2026)
+
+Same method: an independent agent, the prompt pack, web access only. Three came back partial and were merged; two came
+back not-found with precise reasons, were given receipts, and left their tasks open with a `needs a person with a browser`
+mark.
+
+| Task | What came back |
+| --- | --- |
+| `setting-split-united-states` | The US setting split lives in CDC WONDER, which answers only an interactive session. The agent returned what primary reports print instead: CPSC's pool-and-spa count for children (379 in 2023), the Coast Guard's 365 boating drownings for 2024, the MMWR's exact 2022 total (4,509) and CDC's location-by-age statements (regraded C by the reviewer). The WONDER query is now a browser task. |
+| `setting-split-new-zealand` | The 2025 WSNZ report's text gives tidal 14, rivers 17, offshore 3, inland still 9; Pools, Home and the all-sex Coast count sit in charts and a Dropbox PDF that refuse automated readers. Both printings of the total (78 in February, 79 by October) recorded. Nine rows; the PDF is a browser task. |
+| `gbd-2017-franklin-s1-europe` | 9,155 is not in the Franklin 2020 main text, which prints no European figure; S1 is behind browser checks at PMC, BMJ and Europe PMC. The global figure was re-verified against the full text, the row now cites the DOI, and a companion rate row was added. |
+| `uscg-rss-feed-address` | Not found: the feed handler refuses automated readers and the page's links are stripped in conversion, so the site id could not be read. The agent found a live District 7 GovDelivery feed; the watch now trials it and both ContentType values. |
+| `leeway-values-piw-raft` | Not found: automated readers get the first 88,000 characters of the 1999 report, and Table 8-1 starts on p. 8-5. The agent mapped the report (section 8.3, Appendix B) and found the archive.org full text; both are now in the task's inputs. |
+
+What these taught the pack and the tools: two more field limits were tripped (`do_not_add_to`, `source`), so every
+limit is now printed in the pack (v1.3); an accepted not-found no longer closes its task; the board rebuild carries
+receipt ids; and tasks that need a real browser are marked so an assistant that cannot browse picks another.

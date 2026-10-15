@@ -3,6 +3,184 @@
  "note": "One receipt per reviewed bundle. The hash is the SHA-256 of the bundle with its keys sorted; anyone holding the bundle can recompute it.",
  "receipts": [
   {
+   "id": "rcpt-076c533928",
+   "task_id": "gbd-2017-franklin-s1-europe",
+   "handle": "agent-seven",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "partial",
+   "preamble_version": "1.2",
+   "bundle_sha256": "076c533928e6113505ea933729d67947b77a3d15584e692edea653a03562762b",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T12:29:38.563Z",
+   "changed": {
+    "rows": 1,
+    "corrections": 3,
+    "evidence": 9,
+    "next_tasks": 3
+   },
+   "release": "0.8.0",
+   "note": "Merged by the lab's session on 15 Oct 2026: one companion rate row and three corrections (DOI as the row's url, two notes). S1 itself is now board task gbd-2017-s1-europe-by-hand; two more follow-ups were filed from the next_tasks.",
+   "next_tasks": [
+    {
+     "title": "Open supplementary table S1 of Franklin 2020 by hand (PMC7571364 supplementary data) and record the 2017 rows for the European GBD regions with exact labels, deaths, intervals and rates",
+     "why": "PMC, BMJ and Europe PMC refuse automated fetches; a person can pass the browser check and read the table in minutes."
+    },
+    {
+     "title": "Check whether the esanum pair 9,155 and 1.0 per 100,000 matches any WHO Global Health Estimates release for the European Region (2019 or 2021 editions)",
+     "why": "The article's other regional figures are WHO-region figures from the 2024 report; the Europe pair may come from an earlier GHE table or a draft."
+    },
+    {
+     "title": "Resolve the two global rate intervals printed in Franklin 2020 (3.8 to 4.1 in the abstract vs 3.6 to 4.1 in the Discussion)",
+     "why": "The lab should cite one interval; the fetch of the full text reported both, and a human should confirm which is the typo."
+    }
+   ]
+  },
+  {
+   "id": "rcpt-2647cd333e",
+   "task_id": "setting-split-new-zealand",
+   "handle": "agent-six",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "partial",
+   "preamble_version": "1.2",
+   "bundle_sha256": "2647cd333ef129ec97eb2198c5597ec39bb79ae2a861b5ee00b1c8fbb6a5be89",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T12:29:38.497Z",
+   "changed": {
+    "rows": 9,
+    "corrections": 1,
+    "evidence": 20,
+    "next_tasks": 3
+   },
+   "release": "0.8.0",
+   "note": "Merged by the lab's session on 15 Oct 2026. Nine rows and one correction accepted; the coast row was renamed new-zealand-location-coast-men-2025 so 27 is not read as the coastal total; the two placeholder rows follow the ledger's gap-row convention. Reading the PDF is board task setting-split-new-zealand-pdf.",
+   "next_tasks": [
+    {
+     "title": "Open the 2025 Drowning Prevention Report PDF in a browser and fill in the Pools, Home and all-sex Coast counts for 2025, plus any 'Other' environment and the PDF's definition of preventable drowning",
+     "why": "Three of the seven settings are missing from the web text; the PDF is on Dropbox, which refuses automated fetches."
+    },
+    {
+     "title": "Record the 2025 New Zealand activity split from the same report (Swimming 15, Craft 17, Fishing from land 10, Slips and falls 24, Underwater, Other recreation)",
+     "why": "Printed on the same page and answers the water-transport question directly, but outside this task's one-row-per-setting brief."
+    },
+    {
+     "title": "When the 2026 WSNZ report appears (about Feb 2027), re-check the final 2025 total (78 vs 79) and the 2024 total (72 vs 74) and retire whichever provisional row is superseded",
+     "why": "WSNZ totals move for months as coronial findings arrive, and the ledger now holds two printings of the 2025 count."
+    }
+   ]
+  },
+  {
+   "id": "rcpt-9c8fc2b1a7",
+   "task_id": "setting-split-united-states",
+   "handle": "agent-five",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "partial",
+   "preamble_version": "1.2",
+   "bundle_sha256": "9c8fc2b1a7c89e6b9a1f74be24ec09531ef586f54b27fb17648c475026ce89b6",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T12:29:38.422Z",
+   "changed": {
+    "rows": 4,
+    "corrections": 0,
+    "evidence": 17,
+    "next_tasks": 3
+   },
+   "release": "0.8.0",
+   "note": "Merged into estimates by the lab's session on 15 Oct 2026 after reading the bundle and its tried list. Four rows added; us-location-shares-by-age regraded C by the reviewer (an organisation's statement with no year printed). The WONDER query is now board task cdc-wonder-setting-split-2024 for a person with a browser. Ethan Hawkes can reverse any of it with a commit.",
+   "next_tasks": [
+    {
+     "title": "Run the CDC WONDER query for 2024: deaths by ICD-10 code W65, W66, W67, W68, W69, W70, W73, W74 (plus V90, V92), United States, and file one row per code with the W65-W74 total",
+     "why": "The primary setting split exists but needs a POST or interactive session; this bundle could only reach GET-accessible reports."
+    },
+    {
+     "title": "Record the 2025 U.S. Coast Guard Recreational Boating Statistics when published (listed as Pending in Oct 2026) and update us-location-boating-2024",
+     "why": "The boating drowning count is the one US setting figure that refreshes on a fixed annual cycle."
+    },
+    {
+     "title": "Decide whether 4,509 (2022, MMWR Table 1) is folded into us-cdc-4500 and whether uscg-boating-2024 should say '76% where cause was known'",
+     "why": "Both existing rows print rounded figures whose exact printed values and denominators were read in this task."
+    }
+   ]
+  },
+  {
+   "id": "rcpt-ed38c49c5c",
+   "task_id": "leeway-values-piw-raft",
+   "handle": "agent-nine",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "not-found",
+   "preamble_version": "1.2",
+   "bundle_sha256": "ed38c49c5cbb50a13fb0e7702b71a8a7b69c5152046ffb4028ba4e5c0034bce4",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T12:29:26.039Z",
+   "changed": {
+    "rows": 0,
+    "corrections": 0,
+    "evidence": 8,
+    "next_tasks": 4
+   },
+   "release": null,
+   "note": "A not-found with the exact page map of the report (Table 8-1 at p. 8-5, section 8.3, Appendix B) and the archive.org full text as the route. The task's inputs now carry both; the SAR Addendum's Table H-7 became a sibling task.",
+   "next_tasks": [
+    {
+     "title": "Read Table 8-1 (pp. 8-4 to 8-13) and Appendix B from the archive.org OCR text of DTIC ADA366414",
+     "why": "The full text exists (568.8K) but the fetch needed a permission that was not answered; a person can approve it or paste the pages."
+    },
+    {
+     "title": "Obtain Allen (2005) Leeway Divergence, CG-D-05-05 (ADA435435), via the NTRL download",
+     "why": "It is the 2005 equivalent named in the task and no DTIC path served it; NTRL lists it with a download button."
+    },
+    {
+     "title": "Record Table H-7 and H-7a (pp. H-28 to H-30) of the USCG SAR Addendum COMDTINST M16130.2F",
+     "why": "It is the Coast Guard's current leeway table (2013); values should be compared with Table 8-1, not merged with it."
+    },
+    {
+     "title": "Identify DTIC ADA363933 and ADA338829 and read their own leeway tables for PIW, skiff, kayak, surfboard and 4-6 person rafts",
+     "why": "Both are USCG R&D Center field reports behind the Table 8-1 classes; their pages failed to open here but are primary."
+    }
+   ]
+  },
+  {
+   "id": "rcpt-2401efd0b4",
+   "task_id": "uscg-rss-feed-address",
+   "handle": "agent-eight",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "not-found",
+   "preamble_version": "1.2",
+   "bundle_sha256": "2401efd0b41535e6a9b075033ee41ac7022055160f0287652ea0173cec93bc5f",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T12:29:25.945Z",
+   "changed": {
+    "rows": 0,
+    "corrections": 0,
+    "evidence": 7,
+    "next_tasks": 4
+   },
+   "release": null,
+   "note": "A not-found with a precise reason is a good result. The watch now trials both ContentType values and the District 7 GovDelivery feed the agent found; the task stays open, marked as needing a browser.",
+   "next_tasks": [
+    {
+     "title": "Read the RSS icon href on news.uscg.mil in a browser",
+     "why": "View source, search 'RSS.ashx', read Site= and ContentType=; the fetch tool strips links and is blocked on the feed handler, a person is not."
+    },
+    {
+     "title": "Test ContentType=2 as well as 1 for the news.uscg.mil feed",
+     "why": "On AFPIMS sites ContentType=1 is News and 2 is Press Releases (MARFORRES RSS page); news.uscg.mil labels its items 'Press Release'."
+    },
+    {
+     "title": "Find the national Coast Guard GovDelivery topic and its feed.rss",
+     "why": "District 7's USDHSCG_164 feed is live (newest item about 19 hours old on 2026-10-15); a national topic would cover every district in one feed."
+    },
+    {
+     "title": "Check whether the watch job can fetch AFPIMS RSS.ashx at all",
+     "why": "Four different AFPIMS feeds returned errors to this fetcher; the GitHub Actions runner may be blocked the same way, which would also explain a 'failed' source."
+    }
+   ]
+  },
+  {
    "id": "rcpt-f1e1dad60f",
    "task_id": "setting-split-canada",
    "handle": "agent-four",

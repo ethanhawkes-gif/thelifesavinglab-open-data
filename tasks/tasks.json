@@ -2,8 +2,8 @@
  "schema": "lifesavinglab.tasks.v1",
  "version": "0.1.0",
  "generated": "2026-10-15",
- "preamble_version": "1.2",
- "preamble": "You are helping The Life-Saving Lab, an open dataset on drowning, with one small, well-defined task. The dataset keeps every figure with its source, its scope, its year and a rule for what it must not be added to. It is reviewed by people and published openly.\n\nThree rules you must keep:\n1. Never invent. No figure, source, page, table or quote that you did not actually find. If you cannot find a primary source, say so: return status \"not-found\" and list what you tried. That is a good result.\n2. Never sum or average figures from different sources or waters. Where sources disagree, record both.\n3. Never record a person's name, contact details or precise position. Places at town level or coarser.\n\nIf you cannot open web pages or documents, do not work from memory: return status \"not-found\", say so in \"tried\", and stop. A figure you remember is not a figure you found.\n\nEvidence standard: a primary source is the organisation that produced the figure (WHO, IHME, a national statistics office, a coast guard, a lifesaving society, a peer-reviewed paper). A news article about a figure is secondary. Quote at most 25 words from any source, with where the words appear (page, table, section).\n\nGrades describe provenance, not truth: A = primary official data or model output · B = peer-reviewed analysis · C = press, secondary summary or an organisation's own statement · D = a judgment, stated as such.\n\nYour final message must be ONLY a JSON object matching this shape, nothing before or after it:\n{\n \"schema\": \"lifesavinglab.bundle.v1\",\n \"task_id\": \"<the task id>\",\n \"preamble_version\": \"1.2\",\n \"contributor\": {\"handle\": \"<the person's chosen handle, or 'anonymous'>\", \"agent\": \"<your model name and version as you know it>\"},\n \"status\": \"done\" | \"partial\" | \"not-found\",\n \"rows\": [ { \"id\": \"<slug>\", \"figure\": \"<as printed>\", \"low\": <number|null>, \"high\": <number|null>, \"unit\": \"<deaths|share|ratio|...>\", \"year\": <number|null>, \"scope\": \"<what is counted and left out>\", \"geography\": \"<where>\", \"source\": \"<who said it>\", \"url\": \"<primary url>\", \"grade\": \"A|B|C|D\", \"do_not_add_to\": \"<rule>\", \"note\": \"<anything a reader needs>\" } ],\n \"corrections\": [ { \"row_id\": \"<existing row id>\", \"field\": \"<field>\", \"old\": \"<current value>\", \"new\": \"<corrected value>\", \"evidence\": \"<where you saw it>\" } ],\n \"evidence\": [ { \"url\": \"<url you opened>\", \"quote\": \"<25 words or fewer>\", \"where\": \"<page, table or section>\" } ],\n \"tried\": [ \"<what you searched or opened that did not pan out>\" ],\n \"notes\": \"<anything the reviewer should know>\",\n \"next_tasks\": [ { \"title\": \"<a small follow-up task you noticed>\", \"why\": \"<one line>\" } ]\n}\nEmpty lists are fine. Do not add fields. Do not wrap the JSON in prose. Keep each \"tried\" item and each \"evidence.where\" under 300 characters, each \"note\" and \"evidence\" field under 600, and \"notes\" under 4,000: the file is checked by machine and refused if a field runs long.\n",
+ "preamble_version": "1.3",
+ "preamble": "You are helping The Life-Saving Lab, an open dataset on drowning, with one small, well-defined task. The dataset keeps every figure with its source, its scope, its year and a rule for what it must not be added to. It is reviewed by people and published openly.\n\nThree rules you must keep:\n1. Never invent. No figure, source, page, table or quote that you did not actually find. If you cannot find a primary source, say so: return status \"not-found\" and list what you tried. That is a good result.\n2. Never sum or average figures from different sources or waters. Where sources disagree, record both.\n3. Never record a person's name, contact details or precise position. Places at town level or coarser.\n\nIf you cannot open web pages or documents, do not work from memory: return status \"not-found\", say so in \"tried\", and stop. A figure you remember is not a figure you found.\n\nEvidence standard: a primary source is the organisation that produced the figure (WHO, IHME, a national statistics office, a coast guard, a lifesaving society, a peer-reviewed paper). A news article about a figure is secondary. Quote at most 25 words from any source, with where the words appear (page, table, section).\n\nGrades describe provenance, not truth: A = primary official data or model output · B = peer-reviewed analysis · C = press, secondary summary or an organisation's own statement · D = a judgment, stated as such.\n\nYour final message must be ONLY a JSON object matching this shape, nothing before or after it:\n{\n \"schema\": \"lifesavinglab.bundle.v1\",\n \"task_id\": \"<the task id>\",\n \"preamble_version\": \"1.3\",\n \"contributor\": {\"handle\": \"<the person's chosen handle, or 'anonymous'>\", \"agent\": \"<your model name and version as you know it>\"},\n \"status\": \"done\" | \"partial\" | \"not-found\",\n \"rows\": [ { \"id\": \"<slug>\", \"figure\": \"<as printed>\", \"low\": <number|null>, \"high\": <number|null>, \"unit\": \"<deaths|share|ratio|...>\", \"year\": <number|null>, \"scope\": \"<what is counted and left out>\", \"geography\": \"<where>\", \"source\": \"<who said it>\", \"url\": \"<primary url>\", \"grade\": \"A|B|C|D\", \"do_not_add_to\": \"<rule>\", \"note\": \"<anything a reader needs>\" } ],\n \"corrections\": [ { \"row_id\": \"<existing row id>\", \"field\": \"<field>\", \"old\": \"<current value>\", \"new\": \"<corrected value>\", \"evidence\": \"<where you saw it>\" } ],\n \"evidence\": [ { \"url\": \"<url you opened>\", \"quote\": \"<25 words or fewer>\", \"where\": \"<page, table or section>\" } ],\n \"tried\": [ \"<what you searched or opened that did not pan out>\" ],\n \"notes\": \"<anything the reviewer should know>\",\n \"next_tasks\": [ { \"title\": \"<a small follow-up task you noticed>\", \"why\": \"<one line>\" } ]\n}\nEmpty lists are fine. Do not add fields. Do not wrap the JSON in prose. Length limits, in characters, because the file is checked by machine and refused if a field runs long: \"figure\" 200; \"source\" and \"evidence.where\" 300; \"scope\", \"do_not_add_to\", \"note\", \"corrections.evidence\" and each \"tried\" item 600; \"notes\" 4,000; \"next_tasks.title\" 240 and \"why\" 400.\n",
  "note": "Small tasks an agent can finish in one session. Claims lapse after seven days. Every accepted bundle earns a receipt.",
  "tasks": [
   {
@@ -27,6 +27,7 @@
    ],
    "unlocks": "Upgrades the row from C to A; the region chart becomes citable.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -54,6 +55,7 @@
    ],
    "unlocks": "Upgrades the row from C to A; the region chart becomes citable.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -81,6 +83,7 @@
    ],
    "unlocks": "Upgrades the row from C to A; the region chart becomes citable.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -108,6 +111,7 @@
    ],
    "unlocks": "Upgrades the row from C to A; the region chart becomes citable.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -135,6 +139,7 @@
    ],
    "unlocks": "Upgrades the row from C to A; the region chart becomes citable.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -162,6 +167,7 @@
    ],
    "unlocks": "Resolves a discrepancy that a careful reader will spot.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -173,7 +179,7 @@
    "title": "Is 9,155 the GBD 2017 estimate for Europe? Read supplementary table S1 of Franklin et al. 2020",
    "kind": "verify",
    "size": "S",
-   "status": "open",
+   "status": "done",
    "ask": "A retired press figure (9,155 drowning deaths in \"Europe\", 1.0 per 100,000) has no known primary source, but the same article's global figure, 295,210, is exactly the GBD 2017 estimate for 2017 (Franklin et al., Injury Prevention 2020;26:i83–i95). The paper's regional values are in its online supplementary table S1, which the lab could not open. Find table S1 (PubMed Central PMC7571364, the journal's supplementary files, or an author repository), and report the 2017 drowning deaths and rate it gives for Europe or the WHO European Region, as printed, with the table's row labels.",
    "inputs": [
     "https://injuryprevention.bmj.com/content/26/Suppl_2/i83",
@@ -190,6 +196,92 @@
    ],
    "unlocks": "Closes the trace on a figure that readers will keep meeting.",
    "parent": "who-europe-9155-reconcile",
+   "needs": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": "rcpt-076c533928",
+   "done_note": "Partial, by an independent agent on 15 Oct 2026 (contributions/merged/gbd-2017-franklin-s1-europe-agent-seven.json): the main text prints no European figure and 9,155 is not in it; S1 sits behind browser checks at PMC, BMJ and Europe PMC. The global figure was re-verified against the full text, the row now cites the DOI, and a companion rate row was added. Reading S1 is now a task for a person with a browser."
+  },
+  {
+   "id": "gbd-2017-s1-europe-by-hand",
+   "title": "Open supplementary table S1 of Franklin 2020 in a browser and record the 2017 European rows",
+   "kind": "verify",
+   "size": "S",
+   "status": "open",
+   "ask": "The regional values of the GBD 2017 drowning paper live in online supplementary table S1 (file injuryprev-2019-043484supp001.pdf at PubMed Central PMC7571364 or on the BMJ article page). Automated readers are refused by all three hosts. In a browser, open S1 and record, as printed, the 2017 drowning deaths, interval and age-standardised rate for every European row (Western, Central and Eastern Europe and any 'Europe' or 'high-income' grouping) with the exact row labels, then say whether 9,155 appears anywhere in the table.",
+   "inputs": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571364/",
+    "https://injuryprevention.bmj.com/content/26/Suppl_2/i83",
+    "Rows: gbd-2017-franklin, gbd-2017-franklin-rate, esanum-europe-9155 (retired)"
+   ],
+   "accept": [
+    "One row per European grouping with the exact label, deaths, interval, rate, year and page",
+    "A quote of 25 words or fewer from the table caption",
+    "A one-line verdict on 9,155"
+   ],
+   "rows": [
+    "gbd-2017-franklin",
+    "esanum-europe-9155"
+   ],
+   "unlocks": "Closes the trace on a figure that readers will keep meeting.",
+   "parent": "gbd-2017-franklin-s1-europe",
+   "needs": "browser",
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": null
+  },
+  {
+   "id": "franklin-2020-rate-interval",
+   "title": "Franklin 2020: is the global age-standardised rate interval 3.8–4.1 or 3.6–4.1?",
+   "kind": "verify",
+   "size": "S",
+   "status": "open",
+   "ask": "An agent reading the full text of Franklin et al. 2020 (GBD 2017) reported the global age-standardised drowning rate for 2017 as 4.0 with the interval printed as 3.8 to 4.1 in the abstract and 3.6 to 4.1 in the Discussion. Open the full text (the Brunel repository copy is readable by automated tools), find both passages, quote each (25 words or fewer) with its section, and say which the lab should cite.",
+   "inputs": [
+    "https://bura.brunel.ac.uk/bitstream/2438/23369/1/FullText.pdf",
+    "Row: gbd-2017-franklin-rate"
+   ],
+   "accept": [
+    "Both passages quoted with their section",
+    "A proposed correction to row gbd-2017-franklin-rate if the abstract is not the figure to cite"
+   ],
+   "rows": [
+    "gbd-2017-franklin-rate"
+   ],
+   "unlocks": "One interval, not two, behind a rate the lab cites.",
+   "parent": "gbd-2017-franklin-s1-europe",
+   "needs": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": null
+  },
+  {
+   "id": "who-ghe-europe-9155-check",
+   "title": "Does 9,155 · 1.0 per 100,000 match any WHO Global Health Estimates release for the European Region?",
+   "kind": "verify",
+   "size": "S",
+   "status": "open",
+   "ask": "The retired press figure for Europe (9,155 drowning deaths, 1.0 per 100,000) sits beside WHO-region figures in the same article, so it may come from an earlier Global Health Estimates edition (2019 or 2021 releases) rather than from GBD. Open WHO's GHE regional death files or tables, find unintentional drowning (W65–W74) for the European Region in the 2019 and 2021 editions, and report whether any printed value is 9,155 or rounds to it, with the file, sheet and row label.",
+   "inputs": [
+    "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death",
+    "Rows: who-region-eur, esanum-europe-9155 (retired), who-ghe-2021"
+   ],
+   "accept": [
+    "The European Region drowning value in each GHE edition opened, as printed, with file and row label",
+    "A one-line verdict: does 9,155 appear, and in which edition"
+   ],
+   "rows": [
+    "who-region-eur",
+    "esanum-europe-9155"
+   ],
+   "unlocks": "Either sources the stray figure or shows it has no WHO origin either.",
+   "parent": "gbd-2017-franklin-s1-europe",
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -218,6 +310,7 @@
    ],
    "unlocks": "Exact figures behind the rounded ones, and a first look at 2023.",
    "parent": "who-europe-9155-reconcile",
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -248,6 +341,7 @@
    ],
    "unlocks": "Retires a lab judgment (grade D) with a sourced series.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -277,6 +371,7 @@
    ],
    "unlocks": "A documented floor for ferries instead of a decade-old quote.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -306,6 +401,7 @@
    ],
    "unlocks": "Turns the 0–100,000 band into an estimate with a method.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -334,6 +430,7 @@
    ],
    "unlocks": "Extends the \"which water\" split to another country that counts.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -363,6 +460,7 @@
    ],
    "unlocks": "Counts instead of shares, and a check on the one inferred pairing.",
    "parent": "setting-split-canada",
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -374,7 +472,7 @@
    "title": "New Zealand: drowning deaths by water setting, latest year",
    "kind": "row",
    "size": "S",
-   "status": "open",
+   "status": "done",
    "ask": "WHO publishes no split of drowning deaths by water setting (sea, river, lake, pool, home). Some countries do. For New Zealand, find the latest annual drowning report or dataset that breaks deaths down by location or setting (Water Safety New Zealand drowning statistics), and return one row per setting for the latest year, each citing the report page or dataset query.",
    "inputs": [
     "Suggested source: Water Safety New Zealand drowning statistics",
@@ -392,18 +490,19 @@
    ],
    "unlocks": "Extends the \"which water\" split to another country that counts.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null,
-   "done_note": null
+   "done_receipt": "rcpt-2647cd333e",
+   "done_note": "Partial, by an independent agent on 15 Oct 2026 (contributions/merged/setting-split-new-zealand-agent-six.json): the 2025 WSNZ report's text gives tidal 14, rivers 17, offshore 3, inland still 9 and the male coastal count; the Pools, Home and all-sex Coast counts sit in charts and a PDF that refuse automated readers. Total 78 (Feb 2026 printing) and 79 (Oct 2026 printing) both recorded. Nine rows added; reading the PDF is a follow-up task."
   },
   {
    "id": "setting-split-united-states",
    "title": "United States: drowning deaths by water setting, latest year",
    "kind": "row",
    "size": "S",
-   "status": "open",
+   "status": "done",
    "ask": "WHO publishes no split of drowning deaths by water setting (sea, river, lake, pool, home). Some countries do. For United States, find the latest annual drowning report or dataset that breaks deaths down by location or setting (CDC WONDER or WISQARS with place-of-occurrence codes), and return one row per setting for the latest year, each citing the report page or dataset query.",
    "inputs": [
     "Suggested source: CDC WONDER or WISQARS with place-of-occurrence codes",
@@ -421,11 +520,12 @@
    ],
    "unlocks": "Extends the \"which water\" split to another country that counts.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null,
-   "done_note": null
+   "done_receipt": "rcpt-9c8fc2b1a7",
+   "done_note": "Partial, by an independent agent on 15 Oct 2026 (contributions/merged/setting-split-united-states-agent-five.json): the setting split lives in CDC WONDER (ICD-10 W65–W74), which answers only an interactive session, so the agent returned what primary reports print: CPSC's pool-and-spa count for children (379 in 2023), the Coast Guard's 365 boating drownings for 2024, the MMWR's exact 2022 total (4,509) and CDC's location-by-age statements. Four rows added; the WONDER query is a follow-up task for a person with a browser."
   },
   {
    "id": "setting-split-ireland",
@@ -450,6 +550,121 @@
    ],
    "unlocks": "Extends the \"which water\" split to another country that counts.",
    "parent": null,
+   "needs": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": null
+  },
+  {
+   "id": "cdc-wonder-setting-split-2024",
+   "title": "United States: run the CDC WONDER query for 2024 deaths by ICD-10 code W65–W74, V90 and V92",
+   "kind": "row",
+   "size": "S",
+   "status": "open",
+   "ask": "The United States counts where people drown, but the count lives in CDC WONDER (Underlying Cause of Death, 2018–2024, dataset D176) as ICD-10 codes: bathtub W65–W66, swimming pool W67–W68, natural water W69–W70, other specified W73, unspecified W74; watercraft drownings are V90 and V92. WONDER answers only an interactive session with its data-use agreement, so this needs a browser. Group results by ICD-10 code, select those codes, year 2024, and file one row per code with WONDER's own code titles, plus the W65–W74 total row. The 2024 total should sit near the MMWR's 2019–2022 totals (4,067 / 4,589 / 4,677 / 4,509).",
+   "inputs": [
+    "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+    "Rows for comparison: us-total-2022, us-location-shares-by-age, australia-location-2024-25, uk-waid-2024"
+   ],
+   "accept": [
+    "One row per ICD-10 code with the count and WONDER's code title, year 2024, with the query settings used",
+    "The W65–W74 total as a separate row",
+    "A note on suppressed cells, if any"
+   ],
+   "rows": [
+    "us-total-2022",
+    "who-data-gaps"
+   ],
+   "unlocks": "The first US setting split in the ledger, and the row that lets the US join the gaps card.",
+   "parent": "setting-split-united-states",
+   "needs": "browser",
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": null
+  },
+  {
+   "id": "setting-split-new-zealand-pdf",
+   "title": "New Zealand: the Pools, Home and all-sex Coast counts for 2025 from the report PDF",
+   "kind": "row",
+   "size": "S",
+   "status": "open",
+   "ask": "The web edition of Water Safety New Zealand's 2025 Drowning Prevention Report prints counts for four of its seven environments; the Pools, Home and all-sex Coast counts sit in embedded charts and in the PDF, which Dropbox refuses to serve to automated readers. In a browser, open the PDF from the report page, and record the 2025 count for Pools, Home and Coast (all sexes), any 'Other' environment, and the report's own definition of a preventable drowning, each with the page.",
+   "inputs": [
+    "https://www.watersafetynz.org/drowning-insights/latest-drowning-report",
+    "Rows: new-zealand-location-pools-2025, new-zealand-location-home-2025, new-zealand-location-coast-men-2025, new-zealand-total-2025"
+   ],
+   "accept": [
+    "Corrections replacing the two placeholder rows with printed counts and pages",
+    "The all-sex Coast count as a new row",
+    "The definition of preventable drowning, quoted (25 words or fewer) with the page"
+   ],
+   "rows": [
+    "new-zealand-location-pools-2025",
+    "new-zealand-location-home-2025",
+    "new-zealand-location-coast-men-2025"
+   ],
+   "unlocks": "Completes a seven-environment split for one country that counts.",
+   "parent": "setting-split-new-zealand",
+   "needs": "browser",
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": null
+  },
+  {
+   "id": "new-zealand-activity-split-2025",
+   "title": "New Zealand: drowning deaths by activity for 2025, from the same report",
+   "kind": "row",
+   "size": "S",
+   "status": "open",
+   "ask": "The 2025 WSNZ report's web edition prints deaths by activity (the agent saw Swimming 15, Craft 17, Fishing from land 10, Slips and falls 24, and Underwater and Other recreation sections). Open the report page, read each activity section, and return one row per activity with the printed count and any 2024 comparison, as printed.",
+   "inputs": [
+    "https://www.watersafetynz.org/drowning-insights/latest-drowning-report",
+    "Rows: new-zealand-total-2025, new-zealand-location-rivers-2025"
+   ],
+   "accept": [
+    "One row per activity with the count as printed and the section name",
+    "Nothing summed by the agent; the rows need not reach the total"
+   ],
+   "rows": [
+    "new-zealand-total-2025"
+   ],
+   "unlocks": "Activity is the second axis the register needs, and few countries print it.",
+   "parent": "setting-split-new-zealand",
+   "needs": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": null
+  },
+  {
+   "id": "uscg-boating-2025-update",
+   "title": "Record the 2025 U.S. Coast Guard Recreational Boating Statistics when published",
+   "kind": "row",
+   "size": "S",
+   "status": "open",
+   "ask": "The Coast Guard's 2025 edition was listed as pending on 15 Oct 2026 (the 2024 edition came out on 24 June 2025). When it appears, record the total deaths, the drowning count and the life-jacket figures as printed, with table and page, and propose corrections to uscg-boating-2024 and us-location-boating-2024 only if the 2024 figures were revised.",
+   "inputs": [
+    "https://uscgboating.org/statistics/accident_statistics.php",
+    "Rows: uscg-boating-2024, us-location-boating-2024"
+   ],
+   "accept": [
+    "Status not-found if the edition is still pending, with the date checked",
+    "Otherwise one row for the year with the printed figures, table and page"
+   ],
+   "rows": [
+    "uscg-boating-2024",
+    "us-location-boating-2024"
+   ],
+   "unlocks": "The one US setting figure that refreshes on a fixed annual cycle.",
+   "parent": "setting-split-united-states",
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -478,6 +693,7 @@
    ],
    "unlocks": "Turns the migrants layer of the toll from a press summary into the source itself.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -506,6 +722,7 @@
    ],
    "unlocks": "An honest partial row instead of a blank.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -536,6 +753,7 @@
    ],
    "unlocks": "The first pieces of a transport sub-ledger.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -565,6 +783,7 @@
    ],
    "unlocks": "Either sources a number the whole field repeats, or retires it.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -593,6 +812,7 @@
    ],
    "unlocks": "The primary behind a figure that a dozen secondary sources repeat.",
    "parent": "nonfatal-ratio-primary",
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -622,6 +842,7 @@
    ],
    "unlocks": "Shows how much the ratio depends on which door is counted, which is the argument against any single global ratio.",
    "parent": "nonfatal-ratio-primary",
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -650,6 +871,7 @@
    ],
    "unlocks": "The first denominator for a real risk figure.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -679,6 +901,7 @@
    ],
    "unlocks": "The first local denominator: how many a year, and in which water, in New Hampshire.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -708,6 +931,7 @@
    ],
    "unlocks": "The first local denominator: how many a year, and in which water, in Maine.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -734,6 +958,7 @@
    "rows": [],
    "unlocks": "Turns on the most complete official source of rescues in the UK and Ireland.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -748,8 +973,9 @@
    "status": "open",
    "ask": "For the June exercise the lab wants a drift worksheet whose numbers come from a primary source. The U.S. Coast Guard R&D Center report \"Review of Leeway: Field Experiments and Implementation\" (Allen & Plourde, April 1999, CG-D-08-99, DTIC ADA366414) has Table 8-1 \"Recommended Leeway Speed and Direction Values\"; a later report by Allen (2005, \"Leeway Divergence\", CG-D-05-05) refines them. The lab could read only the first 88,000 characters of the 1999 PDF and Table 8-1 was not in them. Find Table 8-1 (or the 2005 equivalent) and return one row per object class for: person in water (vertical, sitting, horizontal/deceased), life raft 4–6 person (with and without drogue or ballast), skiff or small open boat, sea kayak, surfboard. Each row: leeway speed as a percentage of the 10 m wind speed (with any offset), the divergence angle, and the table and page.",
    "inputs": [
-    "https://apps.dtic.mil/sti/pdfs/ADA366414.pdf",
-    "Allen, A.A. (2005) Leeway Divergence, USCG R&D Center CG-D-05-05",
+    "https://apps.dtic.mil/sti/pdfs/ADA366414.pdf (automated readers get only the first 88,000 characters; Table 8-1 starts on p. 8-5, inside section 8.3, pp. 8-4 to 8-13, and the coefficients are in Appendix B)",
+    "Full OCR text, 568 KB: https://archive.org/download/DTIC_ADA366414/DTIC_ADA366414_djvu.txt",
+    "Allen, A.A. (2005) Leeway Divergence, USCG R&D Center CG-D-05-05, DTIC ADA435435 (not served by DTIC on 15 Oct 2026; NTRL lists it)",
     "Rows for context: hf-radar-search-area, giesbrecht-1-10-1"
    ],
    "accept": [
@@ -762,6 +988,35 @@
    ],
    "unlocks": "A drift worksheet for day two with every coefficient traceable to the Coast Guard's own tables.",
    "parent": null,
+   "needs": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": "rcpt-ed38c49c5c",
+   "done_note": null
+  },
+  {
+   "id": "leeway-sar-addendum-h7",
+   "title": "Leeway: Table H-7 and H-7a of the Coast Guard SAR Addendum, the current operational values",
+   "kind": "row",
+   "size": "M",
+   "status": "open",
+   "ask": "The Coast Guard's current leeway table is Table H-7, \"Leeway Speed and Direction Values for Drift Objects\" (p. H-28), with sub-table H-7a for maritime life rafts (p. H-30), in the SAR Addendum COMDTINST M16130.2F (2013). Automated readers get only the first 120,000 characters of the PDF. Open the Addendum far enough to read H-28 to H-30 and return one row per object class for: person in water (vertical, sitting, horizontal), life raft 4–6 person (with and without drogue or ballast), skiff or small open boat, sea kayak, surfboard: leeway speed as a percentage of wind speed with any offset, divergence angle, table and page. Record which edition the values come from; they are compared with Table 8-1 of the 1999 report, never merged with it.",
+   "inputs": [
+    "https://www.dco.uscg.mil/Portals/9/CG-5R/manuals/COMDTINST%20M16130.2F.pdf",
+    "Rows for context: hf-radar-search-area, leeway-definition"
+   ],
+   "accept": [
+    "One row per object class with the printed value, table and page, and the edition named",
+    "A quote of 25 words or fewer from the table caption",
+    "No value from a secondary summary"
+   ],
+   "rows": [
+    "hf-radar-search-area"
+   ],
+   "unlocks": "The operational numbers for the day-two drift worksheet.",
+   "parent": "leeway-values-piw-raft",
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -788,6 +1043,7 @@
    "rows": [],
    "unlocks": "Official sources for the watch beyond the English-language press.",
    "parent": null,
+   "needs": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
@@ -800,10 +1056,11 @@
    "kind": "verify",
    "size": "S",
    "status": "open",
-   "ask": "The watch (watch/sources.json) has the U.S. Coast Guard news feed disabled because its RSS address is unconfirmed. Find the working RSS or Atom feed URL for news releases at news.uscg.mil (the site is built on AFPIMS/DNN; feeds usually look like /DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=<id>&max=30). Confirm it returns XML with recent items and return the exact URL.",
+   "ask": "The watch (watch/sources.json) carries two trial addresses for Coast Guard news releases at news.uscg.mil, neither confirmed. The site is built on AFPIMS/DNN, where feeds look like /DesktopModules/ArticleCS/RSS.ashx?ContentType=<1 for News, 2 for Press Releases>&Site=<id>&max=30; sibling sites print theirs (MARFORRES Site=537, navy.mil Site=1067). Automated readers are refused by the RSS.ashx handler and get the page's links stripped, so this needs a browser: open https://www.news.uscg.mil/, view the page source, search for RSS.ashx, read the Site and ContentType values, paste the address into a feed reader and confirm it returns items. Also look for a national GovDelivery topic (District 7 publishes https://public.govdelivery.com/topics/USDHSCG_164/feed.rss; a national topic would cover every district).",
    "inputs": [
     "https://www.news.uscg.mil/",
-    "watch/sources.json"
+    "watch/sources.json",
+    "contributions/merged/uscg-rss-feed-address-agent-eight.json: what an assistant without a browser could and could not establish"
    ],
    "accept": [
     "The exact feed URL, confirmed to return items",
@@ -812,10 +1069,11 @@
    "rows": [],
    "unlocks": "Turns on the most useful official source for the watch.",
    "parent": null,
+   "needs": "browser",
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null,
+   "done_receipt": "rcpt-2401efd0b4",
    "done_note": null
   }
  ]

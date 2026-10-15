@@ -1,0 +1,190 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "setting-split-united-states",
+ "preamble_version": "1.2",
+ "contributor": {
+  "handle": "agent-five",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "us-location-pool-spa-under15-2023",
+   "figure": "379",
+   "low": 379,
+   "high": 379,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Reported fatal drownings of children younger than 15 associated with pools or spas (report label 'Drowning Deaths Reported to CPSC Staff Associated with Pools or Spas, Children Younger than 15 Years of Age'), United States, calendar 2023: under 5 = 297, 5-9 = 60, 10-14 = 22. Ages 15 and over and all other water settings are not covered.",
+   "geography": "United States",
+   "source": "U.S. Consumer Product Safety Commission, Pool or Spa Submersion: Estimated Nonfatal Drowning Injuries and Reported Drownings, 2026 Report (May 2026), Table 6, p. 11",
+   "url": "https://www.cpsc.gov/s3fs-public/Pool-or-Spa-Submersion-Estimated-Nonfatal-Drowning-Injuries-and-Reported-Drownings-2026-Report.pdf?VersionId=Tcl6zCJAGVwECg29hDgaEvkQQZBjiRBK",
+   "grade": "A",
+   "do_not_add_to": "A setting-specific minimum count for one age band from CPSC's incident database, not vital statistics: do not add to CDC WONDER W65-W74 counts, to us-cdc-4500 or us-cdc-4345, to uscg-boating-2024 / us-location-boating-2024, or to WHO/IHME; do not combine with australia-location-2024-25, uk-waid-2024 or canada-location-pools-2018-22 (different case-finding, ages and definitions); the report says 2021-2023 counts may change in later editions as reports arrive.",
+   "note": "Case-finding is CPSC's incident database CPSRMS (death certificates, news clippings, medical examiners, state/local authorities) plus NEISS deaths, and the report calls the figures 'minimum counts only'. Earlier years as printed: 2022 = 359, 2021 = 390; 2021-2023 total 1,128 (Table 6), average 376 a year (p. 4). Of the 2021-2023 fatalities: pool 95%, spa 5% (Table 8, p. 13); residential 71% (home 51%, family/friend 15%, neighbor 5%), public/community/business 15%, undisclosed 14% (Table 10, p. 16). Fatality years lag the injury years (2023-2025) 'due to a lag in fatality reporting' (p. 4)."
+  },
+  {
+   "id": "us-location-boating-2024",
+   "figure": "365",
+   "low": 365,
+   "high": 365,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Deaths by drowning in recreational boating incidents reported to the U.S. Coast Guard (report label 'Drowning' in Table 1, 'Personal flotation device wear by top five known causes of death'), all ages, United States, calendar 2024; 48 wore a flotation device, 310 did not, 7 unknown. Out of 556 boating deaths from all causes. Only incidents meeting federal reporting criteria on waters of joint federal and state jurisdiction; recreational vessels.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, 2024 Recreational Boating Statistics (24 June 2025), Table 1, p. 7",
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "A subset of uscg-boating-2024 (556 deaths, all causes) and, in ICD-10 terms, water-transport drowning (V90/V92) outside W65-W74: do not add to CDC WONDER W65-W74 setting counts, to us-cdc-4500 / us-cdc-4345 / us-total-2022, or to WHO/IHME; do not add to us-location-pool-spa-under15-2023; do not combine with australia-location-2024-25 or uk-waid-2024.",
+   "note": "The report's '76%' drowning share is 'where cause of death was known' (p. 6); Table 15, p. 33, prints 365 drownings and 191 deaths from other causes, so 365 of all 556 deaths is 66% (own arithmetic within one source). The ledger row uscg-boating-2024 ('3 in 4 drowned') carries the known-cause share. The 2025 edition is listed as 'Pending' on uscgboating.org (checked 15 Oct 2026)."
+  },
+  {
+   "id": "us-total-2022",
+   "figure": "4,509 (1.3)",
+   "low": 4509,
+   "high": 4509,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Unintentional drowning deaths, United States, 2022, National Vital Statistics System mortality files, underlying cause ICD-10 W65-W74, V90 and V92 (accidental drowning and submersion plus watercraft-related drowning), all ages; suicide, homicide and undetermined-intent drownings excluded. Age-adjusted rate 1.3 per 100,000 in brackets.",
+   "geography": "United States",
+   "source": "CDC, MMWR Vital Signs: Drowning Death Rates, Self-Reported Swimming Skill, Swimming Lesson Participation, and Recreational Water Exposure, United States, 2019-2023 (early release 14 May 2024), Table 1, Total row",
+   "url": "https://www.cdc.gov/mmwr/volumes/73/wr/mm7320e1.htm",
+   "grade": "A",
+   "do_not_add_to": "Overlaps us-cdc-4500 (same Vital Signs, printed there as 'over 4,500' a year for 2020-2022) and us-cdc-4345: never averaged or added. Not the latest data year: CDC WONDER holds final 2023 and 2024 but could not be queried here. Do not add to WHO/IHME, nor to the CPSC and USCG rows, which are subsets with different case-finding.",
+   "note": "Printed annual totals in Table 1, no. (age-adjusted rate): 2019 = 4,067 (1.2), 2020 = 4,589 (1.4), 2021 = 4,677 (1.4), 2022 = 4,509 (1.3). The MMWR has no breakdown by water setting. Recorded as the latest official printed national total found; it fills the 'total for the year' slot only loosely, since the setting rows above are for 2023 (CPSC) and 2024 (USCG). A reviewer may prefer to fold the 4,509 into us-cdc-4500 instead."
+  },
+  {
+   "id": "us-location-shares-by-age",
+   "figure": "Infants under 1: three quarters in bathtubs; ages 1-4: most in home swimming pools; ages 5-14: over 40% natural water, over 35% pools; 15 and older: almost half in natural waters",
+   "low": null,
+   "high": null,
+   "unit": "share",
+   "year": null,
+   "scope": "CDC's published statements on where fatal drownings occur, by age group, attributed to CDC WONDER (NCHS mortality data, accessed 27 Nov 2023). No data years, counts, query or ICD codes are printed, and no all-ages split is given.",
+   "geography": "United States",
+   "source": "CDC, Risk Factors for Drowning (page last reviewed 27 Jan 2026), citing CDC WONDER",
+   "url": "https://www.cdc.gov/drowning/risk-factors/index.html",
+   "grade": "A",
+   "do_not_add_to": "Shares within age groups with no stated period: do not convert to counts with any total in this ledger, do not add across age groups, and do not combine with australia-location-2024-25, uk-waid-2024 or the canada-location-* shares (different taxonomies). Not a substitute for the CDC WONDER W65-W74 query this task asked for.",
+   "note": "The only official US statement of drowning location found that covers more than one age band. Graded A because CDC is the producer of the data it summarises; a reviewer may downgrade to C since the page prints no year or query. The underlying codes are the ICD-10 settings NCHS itself uses: bathtub W65-W66, swimming pool W67-W68, natural water W69-W70, other/unspecified W73-W74 (NCHS Data Brief 413, Methods)."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://www.cpsc.gov/s3fs-public/Pool-or-Spa-Submersion-Estimated-Nonfatal-Drowning-Injuries-and-Reported-Drownings-2026-Report.pdf?VersionId=Tcl6zCJAGVwECg29hDgaEvkQQZBjiRBK",
+   "quote": "376 pool- or spa-related fatal drownings reported per year for 2021 through 2023",
+   "where": "Executive summary, p. 4"
+  },
+  {
+   "url": "https://www.cpsc.gov/s3fs-public/Pool-or-Spa-Submersion-Estimated-Nonfatal-Drowning-Injuries-and-Reported-Drownings-2026-Report.pdf?VersionId=Tcl6zCJAGVwECg29hDgaEvkQQZBjiRBK",
+   "quote": "The total number of fatal drownings in 2023 (379 fatalities)",
+   "where": "Executive summary, p. 4; the same paragraph gives 2022 as 359 fatalities"
+  },
+  {
+   "url": "https://www.cpsc.gov/s3fs-public/Pool-or-Spa-Submersion-Estimated-Nonfatal-Drowning-Injuries-and-Reported-Drownings-2026-Report.pdf?VersionId=Tcl6zCJAGVwECg29hDgaEvkQQZBjiRBK",
+   "quote": "2023 297 60 22 379",
+   "where": "Table 6, 'Drowning Deaths Reported to CPSC Staff Associated with Pools or Spas, Children Younger than 15 Years of Age, 2021-2023', p. 11; columns: under 5, 5-9, 10-14, under 15"
+  },
+  {
+   "url": "https://www.cpsc.gov/s3fs-public/Pool-or-Spa-Submersion-Estimated-Nonfatal-Drowning-Injuries-and-Reported-Drownings-2026-Report.pdf?VersionId=Tcl6zCJAGVwECg29hDgaEvkQQZBjiRBK",
+   "quote": "These numbers are considered minimum counts only, derived from anecdotal data",
+   "where": "Footnote 7 to Table 6, p. 11"
+  },
+  {
+   "url": "https://www.cpsc.gov/s3fs-public/Pool-or-Spa-Submersion-Estimated-Nonfatal-Drowning-Injuries-and-Reported-Drownings-2026-Report.pdf?VersionId=Tcl6zCJAGVwECg29hDgaEvkQQZBjiRBK",
+   "quote": "reports from consumers through the public-facing component SaferProducts.gov, newspaper clippings, state/local authorities, medical examiners, advocacy groups, and national death certificates",
+   "where": "Appendix A, p. 20, sources held in CPSRMS; p. 19 says data were extracted on 24 March 2026"
+  },
+  {
+   "url": "https://www.cpsc.gov/content/Pool-or-Spa-Submersion-Estimated-Nonfatal-Drowning-Injuries-and-Reported-Drownings-2026-Report",
+   "quote": "Pool or Spa Submersion Estimated Nonfatal Drowning Injuries and Reported Drownings, 2026 Report",
+   "where": "CPSC report landing page, dated 22 June 2026, linking the PDF"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2024.pdf",
+   "quote": "the Coast Guard verified 3,887 incidents that involved 556 deaths, 2,170 injuries",
+   "where": "Executive summary, p. 6"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2024.pdf",
+   "quote": "Drowning 365 48 310 7",
+   "where": "Table 1 - 2024 Executive Summary, subtable 'Personal flotation device wear by top five known causes of death', p. 7; columns: number of deaths, worn, not worn, unknown if worn"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2024.pdf",
+   "quote": "Where cause of death was known, 76% of fatal boating incident victims drowned.",
+   "where": "Executive summary, p. 6; Table 15, p. 33, prints 365 drownings and 191 deaths by other causes"
+  },
+  {
+   "url": "https://www.cdc.gov/mmwr/volumes/73/wr/mm7320e1.htm",
+   "quote": "underlying cause of death codes W65–W74, V90, and V92.",
+   "where": "Methods; footnotes define W65–W74 as accidental drowning and submersion, V90 accident to watercraft causing drowning, V92 drowning on board watercraft without accident to watercraft"
+  },
+  {
+   "url": "https://www.cdc.gov/mmwr/volumes/73/wr/mm7320e1.htm",
+   "quote": "4,067 (1.2), 4,589 (1.4), 4,677 (1.4), 4,509 (1.3)",
+   "where": "Table 1, Total row, 2019 to 2022, number of deaths (age-adjusted rate per 100,000); no 2023 mortality counts appear"
+  },
+  {
+   "url": "https://www.cdc.gov/drowning/risk-factors/index.html",
+   "quote": "Almost half of fatal drownings among people 15 years and older occur in natural waters like lakes, rivers, or oceans.",
+   "where": "Natural water section; reference given as CDC NCHS WONDER, accessed 27 Nov 2023, no year stated"
+  },
+  {
+   "url": "https://www.cdc.gov/drowning/risk-factors/index.html",
+   "quote": "three quarters of all drownings occur in bathtubs",
+   "where": "Infants under 1 year, bathtub section; same WONDER reference. Children 5-14: over 40% natural water, over 35% pools; ages 1-4: most in home swimming pools"
+  },
+  {
+   "url": "https://www.cdc.gov/nchs/products/databriefs/db413.htm",
+   "quote": "bathtub (W65–W66), swimming pool (W67–W68), natural water (W69–W70)",
+   "where": "NCHS Data Brief 413 (July 2021), Methods / definitions; other specified and unspecified drowning W73–W74. Place breakdown there is children 0-17, 2018-2019, percentages only"
+  },
+  {
+   "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-w65-w74.htm",
+   "quote": "Drowning and submersion while in natural water",
+   "where": "ICD-10 W69 title; block W65-W74 'Accidental drowning and submersion' excludes water-transport drowning V90, V92 and cataclysm X34-X39"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "Underlying Cause of Death, 2018-2024, Single Race",
+   "where": "Dataset request page title; final data through 2024, query by '4-digit ICD-10 code or group of codes', data-use agreement required"
+  },
+  {
+   "url": "https://wonder.cdc.gov/wonder/help/WONDER-API.html",
+   "quote": "Send a POST request to the WONDER.cdc.gov web server.",
+   "where": "CDC WONDER API help page; the request_xml parameter must be sent by POST, GET is not documented"
+  }
+ ],
+ "tried": [
+  "CDC WONDER D176 (Underlying Cause of Death 2018-2024) live query, W65-W74 by code, year 2024: a GET with request_xml was refused by the fetch proxy (URL length) and the controller gives a server error to GET; a shell POST to the API was blocked by the sandbox proxy (HTTP 403). No figures obtained.",
+  "CDC WONDER saved-query links surfaced by search (controller/saved/D176/D400F785, D464F040, D355F556, D306F974, D403F335; D8/D121F349): each returns 'Saved Request Problem' (expired after dataset updates).",
+  "WISQARS (wisqars.cdc.gov/fatal-injury-trends, /frequently-asked-questions): pages are JavaScript shells ('Loading data...'); the FAQ lists no place-of-occurrence field for fatal data, so WISQARS cannot give a setting split.",
+  "PMC13072863 'Trends in Unintentional Drowning Mortality Among U.S. Adults Aged 25 Years and over, 1999-2024' (may hold a W-code split to 2024): pmc.ncbi.nlm.nih.gov returns a browser-verification page; Europe PMC REST (ebi.ac.uk) permission not answered; NCBI BioC endpoint server error. Not read.",
+  "PMC9418042 / PubMed 36868671 'Recent trends in fatal unintentional drowning rates in the United States, 1999-2020' (location rates for 2020, per a Statista chart citing it): blocked by the same NCBI browser check; also not the latest year.",
+  "NCHS blog posts 'Deaths from Drowning in Swimming Pools or Natural Water, 1999-2017' (blogs.cdc.gov/nchs/2019/07/09/4537) and the WP JSON endpoint: both redirect to cdc.gov/nchs/blog/index.html; the posts and their WONDER links are retired.",
+  "NCHS 'Deaths: Final Data for 2024' (stacks.cdc.gov/view/cdc/252479, NVSR 76-1) and 'Final Data for 2023' (cdc/252471, NVSR 75-8): PDFs not fetchable (stacks lists them as not yet public); cdc.gov/nchs/data/nvsr/nvsr76/nvsr76-01.pdf errors. Those tables only print W65-W74 as one line anyway.",
+  "CDC Drowning Data (cdc.gov/drowning/data/index.html and data-research/index.html) and MMWR Vital Signs mm7320e1: national totals only, no split by setting.",
+  "NCHS Data Brief 413 (children 0-17, 1999-2019): has a place-of-drowning figure (Figure 5) but only percentages for 2018-2019 by age group; too old and children only, so not returned as rows.",
+  "National Safety Council Injury Facts drowning page (injuryfacts.nsc.org): fetch failed twice. Secondary anyway.",
+  "uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf: not published; the statistics page lists 2025 as 'Pending' and uscg.mil says 2025 statistics 'will be available by August 2026'.",
+  "github.com/alipphardt/cdc-wonder-api (request template for the WONDER API): permission not answered. Not needed once the network paths failed.",
+  "waterwisekids.com and statista.com chart 34873: secondary pages with no counts by setting; Statista's chart is for 2020 and cites the blocked PMC9418042 paper."
+ ],
+ "notes": "Status partial. The United States does count where people drown, but the count lives in CDC WONDER (NCHS Underlying Cause of Death, final 2018-2024, dataset D176) as ICD-10 codes W65-W74, which are the setting: bathtub (W65 while in, W66 following fall into), swimming pool (W67, W68), natural water (W69, W70), other specified (W73), unspecified (W74); watercraft drownings are V90 and V92, outside the block. NCHS uses exactly this mapping in Data Brief 413 and CDC's risk-factor page cites WONDER for its location shares. WONDER only answers POST requests (API) or an interactive session with the data-use agreement, and neither was reachable from this sandbox (fetch proxy limits GET URL length; shell egress returns 403), so no live figures were obtained and nothing was taken from memory. Query to run (CDC WONDER, 'Underlying Cause of Death, 2018-2024, Single Race'): group results by ICD-10 codes; select codes W65, W66, W67, W68, W69, W70, W73, W74 (and, in a second run, V90 and V92; X71, X92, Y21 if other intents are wanted); year 2024; show totals; measure deaths. One row per code with WONDER's own code titles, and the W65-W74 total row, would complete this task; the 2024 W65-W74 total should sit close to the 2019-2022 totals printed in the Vital Signs MMWR (4,067 / 4,589 / 4,677 / 4,509). The four rows returned are what could be read from primary sources with GET access: (1) CPSC's 2026 pool-or-spa report, children under 15, 2023 = 379 reported drownings (minimum counts from CPSC's incident database, not vital statistics; 71% residential for 2021-2023); (2) the Coast Guard's 2024 statistics, 365 drownings among 556 recreational boating deaths; (3) the NVSS national total as printed in the Vital Signs MMWR, 2022 = 4,509 (W65-W74 + V90 + V92; unintentional only); (4) CDC's own location-by-age statements, which have no year. Definitions, for the reviewer's third check: the NVSS/WONDER figure is accidental (unintentional) drowning only; W65-W74 excludes water transport, which the Vital Signs MMWR adds back as V90 and V92; the CPSC count is pools and spas only, under 15, any location (residential and public), fatality case-finding from death certificates, news clippings and medical examiners; the USCG count is drownings in reportable recreational boating incidents, all ages. None of the three sources can be added to another. Ledger observations (no corrections filed): uscg-boating-2024 says '3 in 4 drowned', which is the report's known-cause share (76%); 365 of all 556 deaths is 66%. us-cdc-4500 ('over 4,500') comes from the same MMWR whose Table 1 prints 4,509 for 2022. The who-data-gaps note lists Australia, the UK and Canada as the countries with a setting split in the ledger; the US does not join that list on this bundle, since no per-setting NVSS counts were obtained.",
+ "next_tasks": [
+  {
+   "title": "Run the CDC WONDER query for 2024: deaths by ICD-10 code W65, W66, W67, W68, W69, W70, W73, W74 (plus V90, V92), United States, and file one row per code with the W65-W74 total",
+   "why": "The primary setting split exists but needs a POST or interactive session; this bundle could only reach GET-accessible reports."
+  },
+  {
+   "title": "Record the 2025 U.S. Coast Guard Recreational Boating Statistics when published (listed as Pending in Oct 2026) and update us-location-boating-2024",
+   "why": "The boating drowning count is the one US setting figure that refreshes on a fixed annual cycle."
+  },
+  {
+   "title": "Decide whether 4,509 (2022, MMWR Table 1) is folded into us-cdc-4500 and whether uscg-boating-2024 should say '76% where cause was known'",
+   "why": "Both existing rows print rounded figures whose exact printed values and denominators were read in this task."
+  }
+ ]
+}

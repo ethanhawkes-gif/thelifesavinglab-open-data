@@ -12,12 +12,30 @@
     },
     {
       "id": "uscg-news",
-      "name": "U.S. Coast Guard · news releases",
+      "name": "U.S. Coast Guard · news (trial: ContentType=1)",
       "kind": "official",
       "region": "United States",
       "url": "https://www.news.uscg.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1041&max=30",
-      "enabled": false,
-      "note": "The site id in this URL is unconfirmed. Confirm the feed address at news.uscg.mil, set enabled to true, and the next run picks it up."
+      "enabled": true,
+      "note": "Trial address, unconfirmed: the site id and content type are guesses from the AFPIMS pattern. The run's status for this source, in watch/feed.json, says whether it answers. An assistant without a browser could not confirm it on 15 Oct 2026 (board task uscg-rss-feed-address)."
+    },
+    {
+      "id": "uscg-press",
+      "name": "U.S. Coast Guard · press releases (trial: ContentType=2)",
+      "kind": "official",
+      "region": "United States",
+      "url": "https://www.news.uscg.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=2&Site=1041&max=30",
+      "enabled": true,
+      "note": "Trial address, unconfirmed. On AFPIMS sites ContentType=1 is News and 2 is Press Releases; news.uscg.mil labels its items Press Release. Whichever of the two trial addresses answers is kept."
+    },
+    {
+      "id": "uscg-d7-govdelivery",
+      "name": "U.S. Coast Guard · Seventh District news (GovDelivery)",
+      "kind": "official",
+      "region": "United States (Southeast)",
+      "url": "https://public.govdelivery.com/topics/USDHSCG_164/feed.rss",
+      "enabled": true,
+      "note": "A confirmed-live regional feed found by an independent agent on 15 Oct 2026 (newest item under a day old). Regional only; a national GovDelivery topic is being looked for."
     },
     {
       "id": "gnews-us",

@@ -1,0 +1,75 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "gbd-2017-franklin-s1-europe",
+ "preamble_version": "1.2",
+ "contributor": {"handle": "agent-seven", "agent": "Claude Fable 5.1 (claude-fable-5-1)"},
+ "status": "partial",
+ "rows": [
+  {
+   "id": "gbd-2017-franklin-rate",
+   "figure": "4.0 (3.8 to 4.1) per 100,000",
+   "low": 3.8,
+   "high": 4.1,
+   "unit": "age-standardised deaths per 100,000",
+   "year": 2017,
+   "scope": "Unintentional drowning (GBD 2017 cause 'drowning'), global, both sexes, all ages, age-standardised mortality rate for 2017 with 95% uncertainty interval, as printed in the abstract; 57.4% below the 1990 rate of 9.3 (8.5 to 10.0). The fetch of the full text reported the Discussion printing the interval as 3.6 to 4.1; a human should check which is the typo.",
+   "geography": "Global",
+   "source": "Franklin RC et al., The burden of unintentional drowning, Injury Prevention 2020;26:i83-i95 (GBD 2017)",
+   "url": "https://doi.org/10.1136/injuryprev-2019-043484",
+   "grade": "B",
+   "do_not_add_to": "A rate, not a count: never multiplied back into deaths or combined with the 295,210 count. Different GBD round from GBD 2021 rows; do not chain into a cross-round trend.",
+   "note": "Companion to row gbd-2017-franklin (the count). Verified in the Brunel repository copy of the full text and on IHME's library page for the paper."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "gbd-2017-franklin",
+   "field": "note",
+   "old": "Reports a 44.5% fall since 1990.",
+   "new": "Reports a 44.5% fall since 1990. Global figure re-verified 15 Oct 2026 against the full text: 295 210 (284 493 to 306 187). Regional values are only in online supplementary table S1 (not yet opened). Correction injuryprev-2019-043484corr1 changes authorship only.",
+   "evidence": "https://bura.brunel.ac.uk/bitstream/2438/23369/1/FullText.pdf, Abstract and Results ('295 210 (284 493 to 306 187) deaths'); https://injuryprevention.bmj.com/content/early/2020/09/28/injuryprev-2019-043484corr1, correction notice ('was previously published with errors in authorship and affiliations'), no figures changed."
+  },
+  {
+   "row_id": "gbd-2017-franklin",
+   "field": "url",
+   "old": "https://www.healthdata.org/research-analysis/library/burden-unintentional-drowning-global-regional-and-national-estimates",
+   "new": "https://doi.org/10.1136/injuryprev-2019-043484",
+   "evidence": "Optional. The current url is IHME's library landing page (abstract only). The DOI 10.1136/injuryprev-2019-043484 is printed on the Brunel, KCL Pure and JCU repository records and on the IHME page; the journal citation Injury Prevention 2020;26:i83-i95 is on https://injuryprevention.bmj.com/content/26/Suppl_2/i83.info."
+  },
+  {
+   "row_id": "esanum-europe-9155",
+   "field": "note",
+   "old": "retired: 2026-10-15. Kept so a reader who has seen the smaller figure can trace it. The ledger carried it until 15 Oct 2026.",
+   "new": "retired: 2026-10-15. Kept so a reader who has seen the smaller figure can trace it. The ledger carried it until 15 Oct 2026. Not in the Franklin 2020 main text (GBD 2017), which prints no European figure; its S1 not yet opened. The article's other regions are WHO regions.",
+   "evidence": "https://bura.brunel.ac.uk/bitstream/2438/23369/1/FullText.pdf (full text searched for 9155, 9 155 and 9,155: no hit; no mention of Europe anywhere); https://www.esanum.com/today/posts/drowning-an-underestimated-global-emergency (regional section: 'Europe, with 9.155 deaths in 2021, accounts for only 3% of the global total'; other labels Western Pacific, South-East Asia, Africa, Eastern Mediterranean, Americas)."
+  }
+ ],
+ "evidence": [
+  {"url": "https://bura.brunel.ac.uk/bitstream/2438/23369/1/FullText.pdf", "quote": "295 210 (284 493 to 306 187) deaths", "where": "Abstract, Results paragraph: global unintentional drowning deaths in 2017; the same figure opens the Results section ('Globally')."},
+  {"url": "https://bura.brunel.ac.uk/bitstream/2438/23369/1/FullText.pdf", "quote": "Online supplementary table S1 provides all-age drowning-specific deaths and age-standardised cause-specific mortality rates", "where": "Results, opening 'Globally' paragraph; the sentence continues: for 1990 and 2017 with percentage change for every country, region and super-region in the GBD 2017 location hierarchy. Table S2 gives the same for YLLs."},
+  {"url": "https://bura.brunel.ac.uk/bitstream/2438/23369/1/FullText.pdf", "quote": "Select input data and all outcome results are available at ghdx.healthdata.org.", "where": "Data availability statement, end of the article."},
+  {"url": "https://injuryprevention.bmj.com/content/26/Suppl_2/i83.long", "quote": "Online supplementary table S1 provides all-age drowning-specific deaths and age-standardised cause-specific mortality rates", "where": "Results section of the journal full-text page. Its 'Supplementary materials' block names only a web-only file supplied by the authors; the converted page carried no file name or link."},
+  {"url": "https://injuryprevention.bmj.com/content/26/Suppl_2/i83.info", "quote": "Franklin RC, Peden AE, Hamilton EB, et al. Injury Prevention 2020;26:i83-i95.", "where": "Article info page: citation line. Publication history: received 19 Sep 2019, revised 4 Dec 2019, accepted 6 Dec 2019, first published 20 Feb 2020."},
+  {"url": "https://injuryprevention.bmj.com/content/early/2020/09/28/injuryprev-2019-043484corr1", "quote": "was previously published with errors in authorship and affiliations", "where": "Correction notice, opening sentence. It adds three authors and updates one author's affiliations; it mentions no change to any number or supplementary table."},
+  {"url": "https://www.healthdata.org/research-analysis/library/burden-unintentional-drowning-global-regional-and-national-estimates", "quote": "The burden of unintentional drowning: global, regional and national estimates of mortality from the Global Burden of Disease 2017 Study", "where": "Page title. The abstract on the page gives 295,210 (284,493 to 306,187) deaths in 2017, a 44.5% decrease from 1990, and an age-standardised rate of 4.0 (3.8 to 4.1) per 100,000; no European figure."},
+  {"url": "https://www.esanum.com/today/posts/drowning-an-underestimated-global-emergency", "quote": "Europe, with 9.155 deaths in 2021, accounts for only 3% of the global total.", "where": "Regional section of the article. Other regions printed there: Western Pacific 83.000, South-East Asia 83.000, Africa 77,000 (5.7 per 100,000), Eastern Mediterranean 36,000, Americas 16,500; all attributed to the WHO Global status report on drowning prevention 2024."},
+  {"url": "https://www.esanum.com/today/posts/drowning-an-underestimated-global-emergency", "quote": "there were 295,210 deaths from unintentional drowning worldwide", "where": "Opening section of the article, stated for 2021 and attributed to the WHO 2024 report; it is the GBD 2017 global figure for 2017."}
+ ],
+ "tried": [
+  "Journal page https://injuryprevention.bmj.com/content/26/Suppl_2/i83 (task input): fetch failed with a client error on two attempts. The .long and .info variants of the same article loaded, but the converted text carried no supplementary file link or file name, only the boilerplate that a web-only file was supplied by the authors.",
+  "BMJ supplementary paths: /content/26/Suppl_2/i83.supplementary-material (twice), /content/injuryprev/26/Suppl_2/i83/DC1/embed/inline-supplementary-material-1.pdf (twice), /content/injuryprev/early/2020/02/20/injuryprev-2019-043484/DC1/embed/inline-supplementary-material-1.pdf and /content/injuryprev/suppl/2020/02/20/injuryprev-2019-043484.DC1/injuryprev-2019-043484supp001.pdf: all client errors.",
+  "PubMed Central: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7571364/ redirects to https://pmc.ncbi.nlm.nih.gov/articles/PMC7571364, which returned a reCAPTCHA 'Checking your browser' page; the same for the supplement path /articles/instance/7571364/bin/injuryprev-2019-043484supp001.pdf and for PubMed 32989008 (the correction). NCBI OA service oa.fcgi?id=PMC7571364: client error.",
+  "Europe PMC: https://europepmc.org/abstract/MED/32332058, /api/fulltextRepo?pprId=PMC7571364&type=FILE&fileName=injuryprev-2019-043484supp001.pdf and /articles/PMC7571364/bin/injuryprev-2019-043484supp001.pdf: robots disallowed. REST API on ebi.ac.uk (search by DOI, and PMC7571364/supplementaryFiles): the proxy returned HTTP 429 rate limit; not retried as instructed.",
+  "https://doi.org/10.1136/injuryprev-2019-043484 and the Semantic Scholar API record for the DOI: the fetch needed a permission approval that was not answered in time; not retried. Wayback Machine copy of the BMJ supplementary page: site blocked.",
+  "Repository copies hold the main text only, no supplement: Brunel BURA 2438/23369 (FullText.pdf, 2.93 MB), JCU ResearchOnline 64973 (64973_1.pdf; the direct PDF fetch gave a server error), AKU eCommons 148, KCL Pure, ANU Open Research, Emory OpenEmory, Iowa IRO (DOI link only). Bielefeld PUB 2941715: bot-protection access denied.",
+  "IHME GBD results tool https://vizhub.healthdata.org/gbd-results/: client error (a JavaScript application in any case). IHME library page for the paper: abstract only, no supplement link.",
+  "Web searches for the supplement file name (injuryprev-2019-043484supp001, DC1), for S1 content phrases (Table S1, age-standardised, Western Europe, 1990, 2017) and for 9,155 / 9.155 with drowning and Europe: no indexed copy of S1 and no primary source printing 9,155.",
+  "A connected desktop with browser tools was available, but the task notes scope this work to WebSearch and WebFetch and no permission prompts were being answered, so the person's own browser was not used."
+ ],
+ "notes": "Verdict: 9,155 does not appear in the Franklin et al. 2020 main text, which prints no figure for Europe or any European region; supplementary table S1, where the regional values live, could not be opened by automated fetch (PMC, BMJ and Europe PMC all refuse), so whether 9,155 matches any S1 row remains unresolved. No S1 value or caption is reported here because none was seen. What was established from opened sources: (1) The ledger's global figure is exactly as printed in the full text: 295 210 (284 493 to 306 187) deaths in 2017, age-standardised 4.0 (3.8 to 4.1) per 100,000, 44.5% fewer deaths than 1990 (Brunel repository copy of the full text; IHME library page). (2) The main text says S1 provides all-age drowning-specific deaths and age-standardised cause-specific mortality rates for 1990 and 2017 with percentage change for every country, region and super-region in the GBD 2017 location hierarchy, and S2 the same for YLLs. WHO regions are not part of that hierarchy as the paper describes it, so a WHO European Region row is not expected in S1 (judgment, grade D); a GBD 2017 value for the WHO region, if wanted, would have to come from the GBD results tool rather than S1. (3) The esanum article's regional figures carry WHO-region labels (Western Pacific about 83,000; South-East Asia about 83,000; Africa 77,000 at 5.7; Eastern Mediterranean 36,000; Americas 16,500; Europe 9,155 at 1.0, 3% of global) and are attributed to the WHO Global status report on drowning prevention 2024; only the global 295,210 is GBD-shaped. The 9,155 pair is therefore WHO-region-shaped and is unlikely to be a GBD 2017 regional estimate (judgment, grade D), consistent with the ledger's existing finding that the WHO report prints 15,000 and 1.7. (4) A published correction (injuryprev-2019-043484corr1, BMJ URL path dated 2020/09/28) changes authorship and affiliations only. (5) Citation confirmed from the journal's article-info page: Injury Prevention 2020;26:i83-i95, received 19 Sep 2019, accepted 6 Dec 2019, first published 20 Feb 2020. Caveats: full-text verification used the Brunel repository PDF (labelled FullText.pdf) because the BMJ article page and PDF would not open; the BMJ .long and .info pages did load and match it. The fetch tool returns converted text, so BMJ's supplementary file link (file name not visible) could not be read off the page. The new row for the global rate is a by-product; the fetch of the full text reported two different intervals for it (3.8 to 4.1 in the abstract, 3.6 to 4.1 in the Discussion), flagged in its scope. The url correction for gbd-2017-franklin is optional. No figure in this bundle comes from memory.",
+ "next_tasks": [
+  {"title": "Open supplementary table S1 of Franklin 2020 by hand (PMC7571364 supplementary data) and record the 2017 rows for the European GBD regions with exact labels, deaths, intervals and rates", "why": "PMC, BMJ and Europe PMC refuse automated fetches; a person can pass the browser check and read the table in minutes."},
+  {"title": "Check whether the esanum pair 9,155 and 1.0 per 100,000 matches any WHO Global Health Estimates release for the European Region (2019 or 2021 editions)", "why": "The article's other regional figures are WHO-region figures from the 2024 report; the Europe pair may come from an earlier GHE table or a draft."},
+  {"title": "Resolve the two global rate intervals printed in Franklin 2020 (3.8 to 4.1 in the abstract vs 3.6 to 4.1 in the Discussion)", "why": "The lab should cite one interval; the fetch of the full text reported both, and a human should confirm which is the typo."}
+ ]
+}

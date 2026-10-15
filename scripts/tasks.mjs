@@ -8,7 +8,8 @@
 //   node scripts/tasks.mjs release <task-id>
 //   node scripts/tasks.mjs check <bundle.json> [--json]       # machine checks: schema, PII, quotes, domains, sums (--merged: rows already in the ledger are expected)
 //   node scripts/tasks.mjs check-all                          # every file in contributions/ (CI runs this)
-//   node scripts/tasks.mjs receipt <bundle.json> --reviewer <h> --decision accepted|rejected|needs-work [--release 0.4.0] [--note "..."]
+//   node scripts/tasks.mjs receipt <bundle.json> --reviewer <h> --decision accepted|rejected|needs-work [--release 0.4.0] [--note "..."] [--keep-open]
+//     (an accepted bundle closes its task unless its status is not-found or --keep-open is passed; the receipt is recorded on the task either way)
 //   node scripts/tasks.mjs promote <receipt-id> <n> [--kind row|verify|method] [--size S|M|L]
 //   node scripts/tasks.mjs agree <task-id>                   # two agents, one task: do the bundles in contributions/ agree?
 //   node scripts/tasks.mjs pull --api <url> --token <reviewer token>   # staged bundles from the API into contributions/
@@ -95,7 +96,10 @@ async function main() {
       console.log(res.ok ? `API: ${bid} marked ${decision}` : `API: could not mark ${bid} (${res.status}); the receipt is written locally`);
     }
     const t = board.tasks.find((x) => x.id === bundle.task_id);
-    if (t && decision === 'accepted') { t.status = 'done'; t.done_receipt = receipt.id; t.claimed_by = null; t.claimed_until = null; }
+    // An accepted bundle closes the task unless the bundle only reports that the work could not be reached (status not-found) or the
+    // reviewer passes --keep-open; the receipt is recorded on the task either way, so a second assistant sees what came before.
+    const closes = decision === 'accepted' && bundle.status !== 'not-found' && !opt('--keep-open');
+    if (t && decision === 'accepted') { t.done_receipt = receipt.id; t.claimed_by = null; t.claimed_until = null; if (closes) t.status = 'done'; else if (t.status === 'claimed') t.status = 'open'; }
     if (t && decision !== 'accepted') { t.claimed_by = null; t.claimed_until = null; if (t.status === 'claimed') t.status = 'open'; }
     await saveBoard(board);
     console.log(`${receipt.id}  ${decision}  ${receipt.task_id}  by ${receipt.handle} (${receipt.agent})  sha256 ${receipt.bundle_sha256}`);
