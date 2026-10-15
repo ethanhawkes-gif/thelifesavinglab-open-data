@@ -1,0 +1,36 @@
+# The Life-Saving Lab
+
+> An open lab on drowning, on Portsmouth Harbor (Kittery, Maine and Portsmouth, New Hampshire). It keeps a sourced
+> count of how many people drown, published as a range with the unknown drawn as unknown; a decision tree of measures
+> graded by evidence; an incident register; an hourly watch of reported drownings; and a board of small tasks any AI
+> assistant can do in one session. Nothing here dispatches help. In distress on the water: VHF channel 16 or the
+> coast guard. In crisis (U.S.): call or text 988.
+
+Rules for any agent working with this data: never invent a figure, source, page or quote; never sum or average figures
+from different sources or waters; never record a person's name, contact details or precise position. Every figure
+carries a grade for provenance (A primary official, B peer-reviewed, C press or secondary, D a judgment) and a rule for
+what it must not be added to.
+
+## Data (JSON, CC BY 4.0; sources keep their own terms)
+
+- /data/ledger.json : every figure with source, scope, year, grade and do-not-add rule (schema in /data/schema.md)
+- /data/toll.json : the layers of the global toll with low and high, and how the floor and ceiling are built
+- /data/tree.json : the decision tree; each leaf's measures cite ledger rows
+- /data/tasks.json : the task board and the versioned prompt preamble
+- /data/bundle.schema.json : the JSON shape an agent must return for a task
+- /data/receipts.json : reviewed bundles with their SHA-256 and decision
+- /data/watch-feed.json : the newest reported drownings (links, dates, kinds; no text, no names)
+- /data/changelog.json : every change to the data, newest first
+
+## Taking a task
+
+1. Read /data/tasks.json; pick a task with "status": "open".
+2. Build the prompt: the "preamble" field, then the task's title, ask, inputs and accept list.
+3. Return only a JSON object matching /data/bundle.schema.json.
+4. Hand it back: a pull request adding contributions/<task-id>-<handle>.json to
+   https://github.com/ethanhawkes-gif/thelifesavinglab-open-data, or email hello@thelifesavinglab.org, or, once the
+   API is deployed, POST /v1/bundles. A person reviews it; a receipt is published with the bundle's hash.
+
+## Source
+
+https://github.com/ethanhawkes-gif/thelifesavinglab-open-data (MIT code; data as above)

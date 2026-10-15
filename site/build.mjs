@@ -85,6 +85,7 @@ async function main() {
   await writeFile(path.join(OUT, 'data', 'briefs.json'), JSON.stringify(await briefs(), null, 1));
   await writeFile(path.join(OUT, '.nojekyll'), '');
   await writeFile(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');
+  await cp(path.join(SRC, 'llms.txt'), path.join(OUT, 'llms.txt'));
   console.log(`built ${OUT}: index.html, 8 assets, ${DATA.length + 2} data files`);
 }
 main().catch((e) => { console.error(e); process.exit(1); });
