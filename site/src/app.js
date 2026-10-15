@@ -429,7 +429,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
   }
 
   /* ---------- JUNE, WATCH, GLOSSARY: extra.js ---------- */
-  const ctx = () => ({ esc, fmt, sectionHead, photo, PHOTOS, SITE, pill, ledgerLink, ledgerIds: () => Object.keys(DATA.byId) });
+  const ctx = () => ({ esc, fmt, sectionHead, photo, PHOTOS, SITE, pill, ledgerLink, ledgerIds: () => Object.keys(DATA.byId), rowById: (id) => DATA.byId[id], tasks: () => (DATA.tasks ? DATA.tasks.tasks : []) });
 
   /* ---------- WISDOM ---------- */
   function wisdomPage() {
@@ -575,7 +575,8 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     glossary: { html: () => window.Extra.glossaryPage(ctx()), title: 'Glossary · The Life-Saving Lab' },
     gaps: { html: () => window.Extra.gapsPage(ctx()), title: 'The gaps · The Life-Saving Lab' },
     register: { html: () => window.Register.page(ctx()), mount: () => window.Register.mount({ toast, copyText, saveFile }), title: 'The register · The Life-Saving Lab' },
-    pilots: { html: () => window.Pilots.page(ctx()), mount: () => window.Pilots.mount(ctx(), { toast, copyText, saveFile }), title: 'Pilots · The Life-Saving Lab' },
+    pilots: { html: () => window.Pilots.page(ctx()), mount: (arg) => window.Pilots.mount(ctx(), { toast, copyText, saveFile }, arg), title: 'Pilots · The Life-Saving Lab' },
+    harbor: { html: () => window.Harbor.page(ctx()), title: 'This water · The Life-Saving Lab' },
     lend: { html: () => window.Lend.page(ctx()), mount: () => window.Lend.mount(ctx(), { toast, copyText, saveFile }), title: 'Lend your agent · The Life-Saving Lab' },
     wisdom: { html: wisdomPage, title: 'Applied Wisdom · The Life-Saving Lab' },
     contribute: { html: contributePage, mount: mountContribute, title: 'Contribute · The Life-Saving Lab' }
@@ -587,6 +588,13 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     return { route: 'home', arg: '' };
   }
   let lastRoute = null;
+  /* A new page starts at its top at once; the smooth scroll in the stylesheet is for links within a page. */
+  function jumpTop() {
+    const root = document.documentElement; const prev = root.style.scrollBehavior; root.style.scrollBehavior = 'auto';
+    void getComputedStyle(root).scrollBehavior;
+    const jump = () => { try { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); } catch { window.scrollTo(0, 0); } };
+    jump(); requestAnimationFrame(() => { jump(); root.style.scrollBehavior = prev; });
+  }
   function render() {
     const { route, arg } = parseHash();
     document.querySelectorAll('#navlinks a').forEach((a) => a.classList.toggle('on', a.dataset.route === route));
@@ -595,10 +603,14 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     if (routes[route].mount) routes[route].mount(arg);
     window.Extra.startCounter(DATA.toll);
     document.title = routes[route].title;
-    if (route !== lastRoute || route !== 'tree') { if (!(route === 'ledger' && arg) ) window.scrollTo(0, 0); }
+    if (route !== lastRoute || route !== 'tree') {
+      const keep = (route === 'ledger' || route === 'pilots') && arg;
+      if (!keep) jumpTop();
+    }
     if (route === 'tree' && lastRoute === 'tree') { const b = document.getElementById('tree-body'); if (b) { const top = b.getBoundingClientRect().top + window.scrollY - 140; if (window.scrollY > top) window.scrollTo({ top, behavior: 'smooth' }); } }
     lastRoute = route;
   }
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   window.addEventListener('hashchange', render);
   (async () => {
     try { await Promise.race([load(), new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), 6000))]); }

@@ -1,7 +1,7 @@
 # The site
 
-`site/src/` is the source of thelifesavinglab.org's prototype: one page, hash routes (`#toll`, `#ledger`, `#tree`,
-`#watch`, `#june`, `#wisdom`, `#gaps`, `#register`, `#lend`, `#contribute`, `#glossary`), no build step beyond copying
+`site/src/` is the source of thelifesavinglab.org's prototype: one page, hash routes (`#toll`, `#ledger`, `#tree`, `#pilots`,
+`#harbor`, `#watch`, `#june`, `#wisdom`, `#gaps`, `#register`, `#lend`, `#contribute`, `#glossary`), no build step beyond copying
 files, no framework, no tracking. The data it shows is not kept here: `site/build.mjs` copies it from `estimates/`,
 `tasks/`, `receipts/` and `watch/` at build time, so a merged change to any of those is live on the next deploy.
 
@@ -40,6 +40,7 @@ task and is not the site of record.
 | `src/register.js` | The incident register as a working tool (rows stay in the browser until exported). |
 | `src/lend.js` | The task board, one-click prompt links, the bundle checker and the receipts wall. |
 | `src/pilots.js` | The one-page pilot format, the forecast rule, three worked examples and the template. |
+| `src/harbor.js` | This water: what is known about Portsmouth Harbor with sources, who answers a call, the local gaps, the three pilots. |
 | `src/charts.js` | Inline SVG charts: the toll bar, layer strips, estimate dots, income, regions, ages. |
 | `src/img/` | Photographs by Ethan Hawkes, web-sized. |
 

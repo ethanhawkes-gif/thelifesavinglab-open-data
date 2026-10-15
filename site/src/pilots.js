@@ -97,9 +97,10 @@
   <p class="small" style="color:var(--mist)">The counts on the home page start at zero and are not estimated. Counting begins with the June 2027 lab.</p>
 </div></section>`;
   }
-  function mount(ctx, tools) {
+  function mount(ctx, tools, arg) {
     const b = document.getElementById('pilot-template'); if (!b) return;
     b.addEventListener('click', () => tools.saveFile('pilot-template.md', template()));
+    if (arg) { const el = document.getElementById('pilot-' + arg); if (el) setTimeout(() => el.scrollIntoView({ block: 'start' }), 0); }
   }
   window.Pilots = { page, mount };
 })();

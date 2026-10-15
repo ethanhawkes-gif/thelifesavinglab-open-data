@@ -44,7 +44,7 @@ async function main() {
   await mkdir(path.join(OUT, 'data'), { recursive: true });
   const body = await readFile(path.join(SRC, 'index.html'), 'utf8');
   await writeFile(path.join(OUT, 'index.html'), HEAD + body + FOOT);
-  for (const f of ['site.css', 'charts.js', 'extra.js', 'register.js', 'lend.js', 'pilots.js', 'app.js']) await cp(path.join(SRC, f), path.join(OUT, f));
+  for (const f of ['site.css', 'charts.js', 'extra.js', 'register.js', 'lend.js', 'pilots.js', 'harbor.js', 'app.js']) await cp(path.join(SRC, f), path.join(OUT, f));
   await cp(path.join(SRC, 'img'), path.join(OUT, 'img'), { recursive: true });
   for (const [from, to] of DATA) await cp(path.join(ROOT, from), path.join(OUT, to));
   await writeFile(path.join(OUT, 'data', 'changelog.json'), JSON.stringify(changelog(), null, 1));
