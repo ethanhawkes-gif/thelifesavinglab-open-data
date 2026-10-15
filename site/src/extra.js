@@ -235,6 +235,7 @@
       ['Bundle', 'The file an assistant hands back after a task: rows, corrections, quotes with page numbers, what it tried, and follow-ups it noticed. One fixed shape, checked by machine before a person reads it.'],
       ['Prompt pack', 'The text that opens in the assistant with one click: the lab’s three rules, the task, its inputs, the checks a reviewer will make, and the exact shape of the answer. Versioned, so a fix to it improves every later hour.'],
       ['Receipt', 'The public record of a reviewed bundle: who lent the hour (by handle), which assistant, the file’s fingerprint, the decision, and what changed in which release. Accepted or not, it is kept.'],
+      ['Leeway', 'The movement of a boat or a person through the water caused by the wind on whatever sticks up above it. It differs by object: a person in the water drifts less than a raft. Search planners add it to the current to guess where someone has gone.'],
       ['Pilot', 'A one-page change small enough to run this season, written for a named kind of adopter, with a test for how it fails.'],
       ['The hostile read', 'Teams swap pilot pages and try to break each other’s, in writing. The point is to find the failure before the water does.'],
       ['The forecast', 'A team’s written prediction of how its pilot will run on day two, minute by minute, handed in the night before.'],

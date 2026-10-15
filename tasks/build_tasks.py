@@ -94,6 +94,12 @@ task('rnli-rss-feed-access', 'Why does the RNLI news feed return HTTP 403 to the
      ['A feed address confirmed to return items, with the date of the newest item', 'The request headers that work, if any are needed', 'A note on the feed\'s terms of use if the site states them'],
      rows=[], unlocks='Turns on the most complete official source of rescues in the UK and Ireland.')
 
+task('leeway-values-piw-raft', 'Leeway: the recommended drift values for a person in the water and a small life raft, from the Coast Guard\'s own tables', 'row', 'M',
+     'For the June exercise the lab wants a drift worksheet whose numbers come from a primary source. The U.S. Coast Guard R&D Center report "Review of Leeway: Field Experiments and Implementation" (Allen & Plourde, April 1999, CG-D-08-99, DTIC ADA366414) has Table 8-1 "Recommended Leeway Speed and Direction Values"; a later report by Allen (2005, "Leeway Divergence", CG-D-05-05) refines them. The lab could read only the first 88,000 characters of the 1999 PDF and Table 8-1 was not in them. Find Table 8-1 (or the 2005 equivalent) and return one row per object class for: person in water (vertical, sitting, horizontal/deceased), life raft 4–6 person (with and without drogue or ballast), skiff or small open boat, sea kayak, surfboard. Each row: leeway speed as a percentage of the 10 m wind speed (with any offset), the divergence angle, and the table and page.',
+     ['https://apps.dtic.mil/sti/pdfs/ADA366414.pdf', 'Allen, A.A. (2005) Leeway Divergence, USCG R&D Center CG-D-05-05', 'Rows for context: hf-radar-search-area, giesbrecht-1-10-1'],
+     ['One row per object class with the printed value, the table number and the page', 'A quote of 25 words or fewer from the table caption or the text that introduces it', 'No value taken from a secondary summary; the report itself'],
+     rows=['hf-radar-search-area'], unlocks='A drift worksheet for day two with every coefficient traceable to the Coast Guard\'s own tables.')
+
 task('uscg-rss-feed-address', 'Confirm the RSS feed address for U.S. Coast Guard news releases', 'verify', 'S',
      'The watch (watch/sources.json) has the U.S. Coast Guard news feed disabled because its RSS address is unconfirmed. Find the working RSS or Atom feed URL for news releases at news.uscg.mil (the site is built on AFPIMS/DNN; feeds usually look like /DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=<id>&max=30). Confirm it returns XML with recent items and return the exact URL.',
      ['https://www.news.uscg.mil/', 'watch/sources.json'],

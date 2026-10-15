@@ -893,6 +893,24 @@
    "last_checked": "2026-10-15"
   },
   {
+   "id": "leeway-definition",
+   "figure": "Leeway: the movement of a craft through the water caused by the wind acting on its exposed surface",
+   "low": null,
+   "high": null,
+   "unit": "definition",
+   "year": 1999,
+   "scope": "The U.S. National SAR Manual's definition, as quoted by the Coast Guard R&D Center's review of leeway field experiments (Section 1.3, p. 1-2). The review's recommended values by object class (Table 8-1) are a task on the board.",
+   "geography": "United States",
+   "category": "rescue",
+   "source": "Allen A.A. & Plourde J.V., Review of Leeway: Field Experiments and Implementation, USCG R&D Center report CG-D-08-99 (April 1999)",
+   "url": "https://apps.dtic.mil/sti/pdfs/ADA366414.pdf",
+   "grade": "A",
+   "do_not_add_to": "A definition, not a figure.",
+   "note": "The quantity a drift worksheet needs, object by object, before a search area can be drawn. Recommended values not yet transcribed: see the board.",
+   "tags": "rescue,drift",
+   "last_checked": "2026-10-15"
+  },
+  {
    "id": "hf-radar-search-area",
    "figure": "Measured surface currents 6× more accurate than modelled; search area reduced by about two-thirds",
    "low": 6,
