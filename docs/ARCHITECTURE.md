@@ -17,7 +17,7 @@ Request ─> Worker (src/worker.js)
 
 estimates/build_data.py ─> estimates/ledger.json, ledger.csv, toll.json   (the sized toll: every figure with source, grade, do-not-add rule)
 estimates/build_tree.py ─> estimates/tree.json                             (the decision tree; measures cite ledger rows)
-tasks/build_tasks.py    ─> tasks/tasks.json                                (the board: tasks generated from the ledger's gaps, plus the prompt preamble)
+tasks/build_tasks.py    ─> tasks/tasks.json                                (the board: tasks generated from the ledger's gaps, plus the prompt preamble; carries each task's latest accepted receipt id from receipts/lend.json)
 watch.yml (hourly)      ─> scripts/watch.mjs ─> watch/queue.json, feed.json (reported drownings: links, kinds, no text, no names)
 site/build.mjs          ─> site/dist/ (the static site; copies data from estimates/, tasks/, receipts/, watch/; renders docs/briefs; git log -> changelog)
 ```

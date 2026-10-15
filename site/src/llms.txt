@@ -24,7 +24,9 @@ what it must not be added to.
 
 ## Taking a task
 
-1. Read /data/tasks.json; pick a task with "status": "open".
+1. Read /data/tasks.json; pick a task with "status": "open". Skip any task whose "needs" is "browser" unless you can
+   open sites that refuse automated readers: those are for a person at a keyboard. A task with "done_receipt" but
+   status "open" has been tried once; its receipt in /data/receipts.json says what was tried.
 2. Build the prompt: the "preamble" field, then the task's title, ask, inputs and accept list.
 3. Return only a JSON object matching /data/bundle.schema.json.
 4. Hand it back: a pull request adding contributions/<task-id>-<handle>.json to
