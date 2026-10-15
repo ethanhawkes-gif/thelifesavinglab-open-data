@@ -94,7 +94,8 @@
   <div class="scoreboard" id="lend-score"><div><span class="n">—</span><span class="small muted">tasks open now</span></div><div><span class="n">—</span><span class="small muted">receipts issued</span></div><div><span class="n">—</span><span class="small muted">rows and corrections accepted</span></div></div>
 </div></section>
 
-<section class="section--tight band"><div class="wrap stack" style="gap:28px">
+<section class="section--tight band" aria-labelledby="how-title"><div class="wrap stack" style="gap:28px">
+  <h2 class="sr-only" id="how-title">How it works</h2>
   <ol class="steps">
     <li><span class="n">1 · PICK</span><h3 class="h4">One task, sized for one session</h3><p class="small" style="font-size:15px">Verify one figure against the report it came from. Find one primary source. Write one row. Nothing bigger.</p></li>
     <li><span class="n">2 · OPEN</span><h3 class="h4">One click opens it in your assistant</h3><p class="small" style="font-size:15px">The prompt carries the lab’s three rules, the task, the inputs and the exact shape of the answer. Gemini and others: copy and paste.</p></li>
