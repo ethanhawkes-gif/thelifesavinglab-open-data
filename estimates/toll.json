@@ -1,6 +1,6 @@
 {
  "schema": "lifesavinglab.toll.v1",
- "last_checked": "2026-10-14",
+ "last_checked": "2026-10-15",
  "method": "Floor = the lowest documented value of every component that is outside the core by definition, plus the core's lowest published bound. Ceiling = the highest documented value of each, assuming the fishing figure sits entirely outside the core. Beyond the ceiling the toll is unknown, not zero.",
  "layers": [
   {

@@ -443,6 +443,62 @@
    "done_receipt": null
   },
   {
+   "id": "state-counts-new-hampshire",
+   "title": "New Hampshire: drowning deaths by year and by water, latest five years",
+   "kind": "row",
+   "size": "M",
+   "status": "open",
+   "ask": "The lab sits on Portsmouth Harbor, on the New Hampshire side of the Piscataqua, and the ledger has no yearly count of drowning deaths for New Hampshire. Find an official count for each of the latest five available years (the Office of the Chief Medical Examiner annual report, NH DHHS, or CDC WONDER (ICD-10 W65–W74, V90, V92) filtered to NH), and, if the source breaks deaths down by place or activity (sea, river, lake, pool, boating), return that split too. One row per year; one row per setting per year if available.",
+   "inputs": [
+    "Suggested source: the Office of the Chief Medical Examiner annual report, NH DHHS, or CDC WONDER (ICD-10 W65–W74, V90, V92) filtered to NH",
+    "Rows for comparison: us-cdc-4345, uscg-boating-2024",
+    "Local rows: piscataqua-current, ndbc-44007-water-temp"
+   ],
+   "accept": [
+    "One row per year with the count and the source's definition (accidental only? all intents? water transport included?)",
+    "A quote of 25 words or fewer from the report or the query page",
+    "Nothing summed across years or settings"
+   ],
+   "rows": [
+    "us-cdc-4345",
+    "uscg-boating-2024"
+   ],
+   "unlocks": "The first local denominator: how many a year, and in which water, in New Hampshire.",
+   "parent": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null
+  },
+  {
+   "id": "state-counts-maine",
+   "title": "Maine: drowning deaths by year and by water, latest five years",
+   "kind": "row",
+   "size": "M",
+   "status": "open",
+   "ask": "The lab sits on Portsmouth Harbor, on the Maine side of the Piscataqua, and the ledger has no yearly count of drowning deaths for Maine. Find an official count for each of the latest five available years (the Maine CDC, the Office of the Chief Medical Examiner, or CDC WONDER filtered to Maine), and, if the source breaks deaths down by place or activity (sea, river, lake, pool, boating), return that split too. One row per year; one row per setting per year if available.",
+   "inputs": [
+    "Suggested source: the Maine CDC, the Office of the Chief Medical Examiner, or CDC WONDER filtered to Maine",
+    "Rows for comparison: us-cdc-4345, uscg-boating-2024",
+    "Local rows: piscataqua-current, ndbc-44007-water-temp"
+   ],
+   "accept": [
+    "One row per year with the count and the source's definition (accidental only? all intents? water transport included?)",
+    "A quote of 25 words or fewer from the report or the query page",
+    "Nothing summed across years or settings"
+   ],
+   "rows": [
+    "us-cdc-4345",
+    "uscg-boating-2024"
+   ],
+   "unlocks": "The first local denominator: how many a year, and in which water, in Maine.",
+   "parent": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null
+  },
+  {
    "id": "uscg-rss-feed-address",
    "title": "Confirm the RSS feed address for U.S. Coast Guard news releases",
    "kind": "verify",

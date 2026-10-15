@@ -4,6 +4,8 @@ Everything here is free to reuse with attribution (CC BY 4.0 for data and text; 
 
 ## Files
 
+The JSON and CSV files are generated: edit `build_data.py` (rows and toll layers) or `build_tree.py` (the tree) and run them with Python 3; never edit the generated files by hand.
+
 | File | What it is |
 | --- | --- |
 | `ledger.json` / `ledger.csv` | Every figure the site uses, one row each, with its source, scope, year, grade and the rule for what it must not be added to. |

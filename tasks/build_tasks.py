@@ -67,6 +67,14 @@ task('exposure-any-published', 'Is there any published measure of boating or swi
      ['At least one row per exposure measure found, with unit (trips, hours, visits) and year', 'A note on whether deaths and exposure use compatible definitions', 'Status not-found with what was tried is acceptable'],
      rows=['exposure-denominators'], unlocks='The first denominator for a real risk figure.')
 
+for state, hint in [('New Hampshire', 'the Office of the Chief Medical Examiner annual report, NH DHHS, or CDC WONDER (ICD-10 W65–W74, V90, V92) filtered to NH'), ('Maine', 'the Maine CDC, the Office of the Chief Medical Examiner, or CDC WONDER filtered to Maine')]:
+    slug = state.lower().replace(' ', '-')
+    task(f'state-counts-{slug}', f'{state}: drowning deaths by year and by water, latest five years', 'row', 'M',
+         f'The lab sits on Portsmouth Harbor, on the {state} side of the Piscataqua, and the ledger has no yearly count of drowning deaths for {state}. Find an official count for each of the latest five available years ({hint}), and, if the source breaks deaths down by place or activity (sea, river, lake, pool, boating), return that split too. One row per year; one row per setting per year if available.',
+         [f'Suggested source: {hint}', 'Rows for comparison: us-cdc-4345, uscg-boating-2024', 'Local rows: piscataqua-current, ndbc-44007-water-temp'],
+         ['One row per year with the count and the source\'s definition (accidental only? all intents? water transport included?)', 'A quote of 25 words or fewer from the report or the query page', 'Nothing summed across years or settings'],
+         rows=['us-cdc-4345', 'uscg-boating-2024'], unlocks=f'The first local denominator: how many a year, and in which water, in {state}.')
+
 task('uscg-rss-feed-address', 'Confirm the RSS feed address for U.S. Coast Guard news releases', 'verify', 'S',
      'The watch (watch/sources.json) has the U.S. Coast Guard news feed disabled because its RSS address is unconfirmed. Find the working RSS or Atom feed URL for news releases at news.uscg.mil (the site is built on AFPIMS/DNN; feeds usually look like /DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=<id>&max=30). Confirm it returns XML with recent items and return the exact URL.',
      ['https://www.news.uscg.mil/', 'watch/sources.json'],

@@ -1,7 +1,7 @@
 {
  "schema": "lifesavinglab.ledger.v2",
- "version": "0.3.0",
- "last_checked": "2026-10-14",
+ "version": "0.4.0",
+ "last_checked": "2026-10-15",
  "rule": "No figure in this ledger is summed or averaged across rows unless a row states the overlap assumption and names the rows it combines.",
  "grades": {
   "A": "primary official data or model output",
@@ -26,7 +26,7 @@
    "do_not_add_to": "Never averaged with ihme-gbd-2021 or who-ghe-2019; never summed with excluded components without stating overlap.",
    "note": "Point estimate; the cited table prints no uncertainty interval, which is not the same as no uncertainty.",
    "tags": "core,modeled",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "ihme-gbd-2021",
@@ -44,7 +44,7 @@
    "do_not_add_to": "Never averaged with who-ghe-2021. The 26,028 gap is model disagreement, not a head count.",
    "note": "Independent model and input database from WHO.",
    "tags": "core,modeled",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-ghe-2019",
@@ -62,7 +62,7 @@
    "do_not_add_to": "Cannot be used with who-ghe-2021 to show a rise 2019→2021: different vintage.",
    "note": "Still quoted on some WHO pages.",
    "tags": "core,modeled,legacy",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "gbd-2017-franklin",
@@ -80,7 +80,7 @@
    "do_not_add_to": "Different GBD round from ihme-gbd-2021; do not chain into a trend across rounds.",
    "note": "Reports a 44.5% fall since 1990.",
    "tags": "core,modeled,trend",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "gbd-1990-franklin",
@@ -98,7 +98,7 @@
    "do_not_add_to": "Trend only within the same GBD round.",
    "note": "Basis of the 44.5% decline 1990–2017.",
    "tags": "trend",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-rate-trend",
@@ -116,7 +116,7 @@
    "do_not_add_to": "A rate, not a count.",
    "note": "",
    "tags": "trend",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-income-low",
@@ -134,7 +134,7 @@
    "do_not_add_to": "Rows sum to 299,000 because of rounding; a share of who-ghe-2021, not an addition to it.",
    "note": "",
    "tags": "income",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-income-lower-middle",
@@ -152,7 +152,7 @@
    "do_not_add_to": "Share of the WHO 2021 figure.",
    "note": "",
    "tags": "income",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-income-upper-middle",
@@ -170,7 +170,7 @@
    "do_not_add_to": "Share of the WHO 2021 figure.",
    "note": "",
    "tags": "income",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-income-high",
@@ -188,7 +188,7 @@
    "do_not_add_to": "Share of the WHO 2021 figure.",
    "note": "",
    "tags": "income",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-age-under5",
@@ -206,7 +206,7 @@
    "do_not_add_to": "A share of one estimate; overlaps with region and income cuts.",
    "note": "The 2024 report prints 21% (over 62,000) in some summaries; we chart the fact-sheet wording.",
    "tags": "age",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-age-under30",
@@ -224,7 +224,7 @@
    "do_not_add_to": "Share, not a count.",
    "note": "",
    "tags": "age",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-sex",
@@ -242,7 +242,7 @@
    "do_not_add_to": "Ratio, not a count.",
    "note": "",
    "tags": "sex",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-region-wpr",
@@ -260,7 +260,7 @@
    "do_not_add_to": "A share of the WHO global figure.",
    "note": "Highest rate among people 70 and older: 13.7 per 100,000.",
    "tags": "region",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-region-sear",
@@ -278,7 +278,7 @@
    "do_not_add_to": "Share of the WHO figure. Verify against the report table before citing.",
    "note": "WHO fact sheet: over half of drownings occur in WPR and SEAR combined.",
    "tags": "region,verify",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-region-afr",
@@ -296,7 +296,7 @@
    "do_not_add_to": "Share of the WHO figure. Verify.",
    "note": "Highest regional rate.",
    "tags": "region,verify",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-region-emr",
@@ -314,7 +314,7 @@
    "do_not_add_to": "Share of the WHO figure. Verify.",
    "note": "",
    "tags": "region,verify",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-region-amr",
@@ -332,7 +332,7 @@
    "do_not_add_to": "Share of the WHO figure. Verify.",
    "note": "",
    "tags": "region,verify",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-region-eur",
@@ -350,7 +350,7 @@
    "do_not_add_to": "Share of the WHO figure. Verify.",
    "note": "Rates differ more than tenfold between European countries.",
    "tags": "region,verify",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-nonfatal",
@@ -368,7 +368,7 @@
    "do_not_add_to": "Not deaths. Never added to any death count.",
    "note": "Verify the exact wording in the report.",
    "tags": "nonfatal,verify",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-data-gaps",
@@ -386,7 +386,7 @@
    "do_not_add_to": "A survey result, not a count.",
    "note": "This is the gap the register pilot is written for.",
    "tags": "gap,verify",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-flood-share",
@@ -404,7 +404,7 @@
    "do_not_add_to": "A share, not a count. Applied to a flood-death count it gives an estimate, not an observation.",
    "note": "",
    "tags": "floods",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "emdat-flood-deaths-2019",
@@ -422,7 +422,7 @@
    "do_not_add_to": "All causes, not only drowning. Yearly totals swing several-fold.",
    "note": "With who-flood-share: about 3,800 flood drownings in 2019.",
    "tags": "floods",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "flood-drowning-band",
@@ -440,7 +440,7 @@
    "do_not_add_to": "A band we drew. Replace it with a sourced multi-year average and this row is retired.",
    "note": "Open task: compute 75% of EM-DAT flood deaths for 2010–2024.",
    "tags": "floods,open",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "ferry-wfsa",
@@ -458,7 +458,7 @@
    "do_not_add_to": "Ferries only; other shipping and small craft have no global series. Outside the WHO figure by definition.",
    "note": "Old estimate. Open task: ask WFSA for its current database totals.",
    "tags": "transport,verify",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "water-transport-other",
@@ -476,7 +476,7 @@
    "do_not_add_to": "Cannot be drawn. Single disasters sit in the ledger when sourced.",
    "note": "The largest unmeasured piece of the toll.",
    "tags": "transport,open",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "fishing-ilo-1999",
@@ -494,7 +494,7 @@
    "do_not_add_to": "How much falls inside the WHO figure is unresolved; do not add without stating an overlap assumption.",
    "note": "Still used by authorities; called \"seemingly faulty, decades-old\" by FISH Safety Foundation.",
    "tags": "fishing",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "fishing-fao-32000",
@@ -512,7 +512,7 @@
    "do_not_add_to": "Overlap with the WHO figure unresolved.",
    "note": "",
    "tags": "fishing",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "fishing-fsf-100000",
@@ -530,7 +530,7 @@
    "do_not_add_to": "Not all drownings; overlap with the WHO figure unresolved.",
    "note": "No comprehensive global data on fisher deaths exists; no agreed definition of a fisher.",
    "tags": "fishing",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "migrants-iom-2024",
@@ -548,7 +548,7 @@
    "do_not_add_to": "Not all at sea; not all drownings. Excluded from the WHO figure.",
    "note": "Deadliest year on record at the time.",
    "tags": "migrants",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "migrants-maritime-sep24-may25",
@@ -566,7 +566,7 @@
    "do_not_add_to": "A minimum; two-thirds of Mediterranean dead remain missing.",
    "note": "Over 1,600 drowned in the Mediterranean in this window.",
    "tags": "migrants",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "migrants-2025-sea-routes",
@@ -584,7 +584,7 @@
    "do_not_add_to": "A minimum for three routes only. Verify against IOM's own 2025 release.",
    "note": "IOM warns that a lower total does not mean lower risk: verification and access limits affect the count.",
    "tags": "migrants,verify",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "migrants-since-2014",
@@ -602,7 +602,7 @@
    "do_not_add_to": "Cumulative over a decade; never a yearly figure. WHO states these are excluded from its global estimates.",
    "note": "",
    "tags": "migrants",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "intentional-drowning",
@@ -620,7 +620,7 @@
    "do_not_add_to": "Outside the unintentional core by definition. A different problem with different prevention.",
    "note": "Open task: reproduce GBD self-harm by drowning from a primary table.",
    "tags": "intentional,open",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "us-cdc-4345",
@@ -638,7 +638,7 @@
    "do_not_add_to": "Windows overlap with us-cdc-4500; never averaged.",
    "note": "",
    "tags": "us",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "us-cdc-4500",
@@ -656,7 +656,7 @@
    "do_not_add_to": "Overlaps us-cdc-4345.",
    "note": "",
    "tags": "us",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "uscg-boating-2024",
@@ -674,7 +674,7 @@
    "do_not_add_to": "A subset of US drownings plus non-drowning boating deaths; not added to CDC figures.",
    "note": "About 70% of deaths involved an operator with no boating safety instruction; alcohol the leading known factor (20%). Fewest deaths in 50+ years.",
    "tags": "us,boating",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "uscg-sar-fy2024",
@@ -692,7 +692,7 @@
    "do_not_add_to": "\"Lives saved\" uses the Coast Guard's own definition.",
    "note": "",
    "tags": "us,rescue",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "peterson-us-348",
@@ -710,7 +710,7 @@
    "do_not_add_to": "A model, not a count.",
    "note": "The $4.5 billion in the paper is the yearly economic cost of those deaths, not the cost of fences or jackets.",
    "tags": "prevention,modeled",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-investment-case",
@@ -728,7 +728,7 @@
    "do_not_add_to": "A projection to 2050, never a yearly share of 300,000.",
    "note": "Return estimated at 9 times the cost.",
    "tags": "prevention,modeled",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "who-prevention-measures",
@@ -746,7 +746,7 @@
    "do_not_add_to": "Recommendations, not counts.",
    "note": "",
    "tags": "prevention",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "preventable-share",
@@ -764,7 +764,7 @@
    "do_not_add_to": "We will not draw one.",
    "note": "",
    "tags": "open",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "exclusion-halves-hic",
@@ -782,7 +782,7 @@
    "do_not_add_to": "A statement about definitions, not a global multiplier.",
    "note": "Evidence that the true toll sits above the core in some settings.",
    "tags": "definitions",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "icd-definition",
@@ -800,7 +800,7 @@
    "do_not_add_to": "A definition.",
    "note": "X38 flood, V90/V92 water transport, Y21 undetermined intent.",
    "tags": "definitions",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "rnli-lives-saved",
@@ -818,7 +818,7 @@
    "do_not_add_to": "Cumulative; a definition the RNLI publishes.",
    "note": "",
    "tags": "rescue",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "wood-island-rescues",
@@ -836,25 +836,43 @@
    "do_not_add_to": "Three counts that are not a total. Aided is not saved.",
    "note": "",
    "tags": "here,history",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "piscataqua-current",
-   "figure": "About 4 knots",
+   "figure": "Over 4 knots on the ebb (maximum average velocity, off Nobles Island and off Dover Point)",
    "low": 4,
-   "high": 4,
+   "high": null,
    "unit": "knots",
    "year": 2026,
-   "scope": "Current speed near the river mouth.",
-   "geography": "Piscataqua River",
+   "scope": "Maximum average tidal current velocity in the Piscataqua River. Deep-draft navigation is limited to 1.5 hours either side of slack water; strong currents and eddies in the bend at Fort Point.",
+   "geography": "Piscataqua River, NH–ME",
    "category": "local",
-   "source": "Local knowledge; lab statement",
-   "url": "",
-   "grade": "D",
-   "do_not_add_to": "Not a safety figure; conditions vary with tide and weather.",
-   "note": "Open task: cite NOAA tidal current predictions.",
-   "tags": "here,open",
-   "last_checked": "2026-10-14"
+   "source": "NOAA, U.S. Coast Pilot 1, Chapter 9 (20 Sep 2026 edition), paragraphs 296, 369 and 371",
+   "url": "https://nauticalcharts.noaa.gov/publications/coast-pilot/files/cp1/CPB1_C09_WEB.pdf",
+   "grade": "A",
+   "do_not_add_to": "A current speed, not a count. It is the maximum average; the river is slower near slack and in the coves.",
+   "note": "Upgraded 15 Oct 2026 from a lab statement (grade D) to the NOAA Coast Pilot. A kayak paddles about three knots; a swimmer far less.",
+   "tags": "here,cold-water,current",
+   "last_checked": "2026-10-15"
+  },
+  {
+   "id": "ndbc-44007-water-temp",
+   "figure": "Mean monthly sea temperature 2.9 °C (March) to 16.7 °C (August); June mean 12.5 °C",
+   "low": 2.9,
+   "high": 16.7,
+   "unit": "degrees C",
+   "year": 2008,
+   "scope": "Climatic summary of NOAA buoy 44007, 12 nautical miles southeast of Portland, Maine, February 1982 to December 2008; monthly means with extremes.",
+   "geography": "Gulf of Maine, off Portland ME",
+   "category": "local",
+   "source": "NOAA National Data Buoy Center, station 44007 climatic summary",
+   "url": "https://www.ndbc.noaa.gov/data/climatic/44007.txt",
+   "grade": "A",
+   "do_not_add_to": "A temperature, not a count. The buoy is about 50 nautical miles up the coast from Portsmouth; harbor and river water differ from the open gulf.",
+   "note": "In June, when the lab runs, the sea is about 12 °C (54 °F). Cold-water immersion rules apply here all year.",
+   "tags": "here,cold-water",
+   "last_checked": "2026-10-15"
   },
   {
    "id": "hf-radar-search-area",
@@ -872,7 +890,7 @@
    "do_not_add_to": "A technical claim, not a count of lives.",
    "note": "Relevant to the Drift pilot track.",
    "tags": "rescue,drift",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "cape-town-agreement",
@@ -890,7 +908,7 @@
    "do_not_add_to": "A milestone, not a count. Boats under 24 m, where most fishing deaths happen, are outside it.",
    "note": "",
    "tags": "fishing,policy",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "usla-guarded-risk",
@@ -908,7 +926,7 @@
    "do_not_add_to": "An organisation's own calculation; the denominator is beach attendance as agencies report it.",
    "note": "Strong practice evidence for guarded swim areas; not a controlled study.",
    "tags": "prevention,lifeguards",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "cummings-pfd-2011",
@@ -926,7 +944,7 @@
    "do_not_add_to": "A ratio, not a count. The authors caution the estimate may be biased because many vessels were excluded.",
    "note": "If the association is causal, wearing a life jacket may prevent one in two boating drownings.",
    "tags": "prevention,boating",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "cochrane-pool-fencing",
@@ -944,7 +962,7 @@
    "do_not_add_to": "Ratios, not counts.",
    "note": "The clearest evidence in the tree: a fence that separates the pool from the house.",
    "tags": "prevention,pool",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "giesbrecht-1-10-1",
@@ -962,7 +980,7 @@
    "do_not_add_to": "A teaching rule, not a count, and never a reason to delay a call.",
    "note": "The clock pilot track turns this into a hand-size card and tests whether crews use it.",
    "tags": "prevention,cold-water",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "rahman-anchal-2012",
@@ -980,7 +998,7 @@
    "do_not_add_to": "Ratios from one country programme; not a global share.",
    "note": "The evidence behind WHO's day-care and swim-skills recommendations and its 2050 investment case.",
    "tags": "prevention,children",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "australia-2024-25",
@@ -998,7 +1016,7 @@
    "do_not_add_to": "A national count with its own definition; not comparable to UK or US rows without that definition.",
    "note": "",
    "tags": "country",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "australia-location-2024-25",
@@ -1016,7 +1034,7 @@
    "do_not_add_to": "Shares of one national count; the categories do not sum to 357 because some locations are not listed.",
    "note": "A real split by water setting, for one country that counts. The first entry toward gap 4.",
    "tags": "country,setting",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "australia-age-2024-25",
@@ -1034,7 +1052,7 @@
    "do_not_add_to": "Shares of one national count.",
    "note": "In a high-income country the age profile inverts: older adults, not under-fives, carry the largest share.",
    "tags": "country,age",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "exposure-denominators",
@@ -1052,7 +1070,7 @@
    "do_not_add_to": "Cannot be drawn. Without it, no rate on this site is a risk.",
    "note": "Open task: count launches at one ramp for one season; pair with AIS for larger vessels.",
    "tags": "gap,open,exposure",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "uscg-bard",
@@ -1070,7 +1088,7 @@
    "do_not_add_to": "US boating only; reporting thresholds apply.",
    "note": "Proof that event-level records with activity and life-jacket fields can be kept at national scale.",
    "tags": "us,boating,register",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   },
   {
    "id": "uk-waid-2024",
@@ -1088,7 +1106,7 @@
    "do_not_add_to": "Accidental only; the open coroner cases may add to it. Not comparable to other countries without the definition.",
    "note": "",
    "tags": "country",
-   "last_checked": "2026-10-14"
+   "last_checked": "2026-10-15"
   }
  ]
 }

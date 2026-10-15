@@ -1,6 +1,6 @@
 {
  "schema": "lifesavinglab.tree.v2",
- "version": "0.3.0",
+ "version": "0.4.0",
  "start": "now",
  "grades": {
   "A": "Recommended by WHO",
@@ -458,7 +458,7 @@
   "harbor-recreational": {
    "type": "leaf",
    "title": "Recreational boaters and paddlers in a river mouth",
-   "summary": "The Piscataqua runs near four knots at the mouth. A kayak paddles about three. The measures are a jacket, a plan, and respect for the tide table.",
+   "summary": "The Piscataqua runs over four knots on the ebb at its fastest, by NOAA's Coast Pilot. A kayak paddles about three. The sea here is near 12 °C in June. The measures are a jacket, a plan, and respect for the tide table.",
    "measures": [
     {
      "text": "Always wear a life jacket: about half the drowning risk for boaters who wear one",
@@ -488,7 +488,11 @@
     },
     {
      "text": "A hand-size card on time in cold water",
-     "grade": "D"
+     "grade": "D",
+     "rows": [
+      "giesbrecht-1-10-1",
+      "ndbc-44007-water-temp"
+     ]
     }
    ],
    "count": [
@@ -504,7 +508,8 @@
    "track": "signal",
    "unknown": null,
    "rows": [
-    "piscataqua-current"
+    "piscataqua-current",
+    "ndbc-44007-water-temp"
    ]
   },
   "harbor-foot": {
