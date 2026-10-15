@@ -165,7 +165,7 @@
     <div><span class="n">${DATA.watch && DATA.watch.counts ? fmt(DATA.watch.counts.reported || 0) : '—'}</span><b>Reports waiting to be read</b><span class="small muted">In the watch, hourly, since 15 Oct 2026</span></div>
     <div><span class="n" style="color:var(--rust)">${rows}</span><b>Ledger rows</b><span class="small muted">Each with a source, a year and a rule for what it must not be added to</span></div>
   </div>
-  <p class="mono muted">Counting starts June 2027. Last checked 15 Oct 2026. <a href="#pilots">What a pilot is, and how one is scored →</a></p>
+  <p class="mono muted">Pilot counts start with the June 2027 lab; the board and the watch are live now. Last checked 15 Oct 2026. <a href="#pilots">What a pilot is, and how one is scored →</a></p>
 </div></section>
 
 <section class="section band" aria-labelledby="join-title"><div class="wrap stack" style="gap:36px">
