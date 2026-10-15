@@ -499,6 +499,31 @@
    "done_receipt": null
   },
   {
+   "id": "rnli-rss-feed-access",
+   "title": "Why does the RNLI news feed return HTTP 403 to the watch, and what address or headers work?",
+   "kind": "verify",
+   "size": "S",
+   "status": "open",
+   "ask": "The watch (watch/sources.json) reads https://rnli.org/news-and-media/rss with the user agent \"lifesavinglab-watch/1.0\" and gets HTTP 403 (first run, 15 Oct 2026). Find out whether the RNLI publishes an RSS or Atom feed of its news or lifeboat launches, what its working address is, and whether it refuses non-browser user agents. Return the address that works and any header it needs, or status not-found with what was tried.",
+   "inputs": [
+    "https://rnli.org/news-and-media",
+    "watch/sources.json",
+    "watch/queue.json (the runs list shows the error)"
+   ],
+   "accept": [
+    "A feed address confirmed to return items, with the date of the newest item",
+    "The request headers that work, if any are needed",
+    "A note on the feed's terms of use if the site states them"
+   ],
+   "rows": [],
+   "unlocks": "Turns on the most complete official source of rescues in the UK and Ireland.",
+   "parent": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null
+  },
+  {
    "id": "uscg-rss-feed-address",
    "title": "Confirm the RSS feed address for U.S. Coast Guard news releases",
    "kind": "verify",

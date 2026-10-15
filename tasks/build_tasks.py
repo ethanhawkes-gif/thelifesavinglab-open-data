@@ -75,6 +75,12 @@ for state, hint in [('New Hampshire', 'the Office of the Chief Medical Examiner 
          ['One row per year with the count and the source\'s definition (accidental only? all intents? water transport included?)', 'A quote of 25 words or fewer from the report or the query page', 'Nothing summed across years or settings'],
          rows=['us-cdc-4345', 'uscg-boating-2024'], unlocks=f'The first local denominator: how many a year, and in which water, in {state}.')
 
+task('rnli-rss-feed-access', 'Why does the RNLI news feed return HTTP 403 to the watch, and what address or headers work?', 'verify', 'S',
+     'The watch (watch/sources.json) reads https://rnli.org/news-and-media/rss with the user agent "lifesavinglab-watch/1.0" and gets HTTP 403 (first run, 15 Oct 2026). Find out whether the RNLI publishes an RSS or Atom feed of its news or lifeboat launches, what its working address is, and whether it refuses non-browser user agents. Return the address that works and any header it needs, or status not-found with what was tried.',
+     ['https://rnli.org/news-and-media', 'watch/sources.json', 'watch/queue.json (the runs list shows the error)'],
+     ['A feed address confirmed to return items, with the date of the newest item', 'The request headers that work, if any are needed', 'A note on the feed\'s terms of use if the site states them'],
+     rows=[], unlocks='Turns on the most complete official source of rescues in the UK and Ireland.')
+
 task('uscg-rss-feed-address', 'Confirm the RSS feed address for U.S. Coast Guard news releases', 'verify', 'S',
      'The watch (watch/sources.json) has the U.S. Coast Guard news feed disabled because its RSS address is unconfirmed. Find the working RSS or Atom feed URL for news releases at news.uscg.mil (the site is built on AFPIMS/DNN; feeds usually look like /DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=<id>&max=30). Confirm it returns XML with recent items and return the exact URL.',
      ['https://www.news.uscg.mil/', 'watch/sources.json'],
