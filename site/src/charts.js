@@ -127,10 +127,13 @@ ${bars}
 
   function regions(rows) {
     const ids = ['who-region-wpr', 'who-region-sear', 'who-region-afr', 'who-region-emr', 'who-region-amr', 'who-region-eur'];
+    /* Change in the death rate 2000–2021 by region, from row who-trend-2000-2021 (WHO 2024 report, p. 17, Fig. 6). */
+    const trend = { 'who-region-wpr': -38, 'who-region-sear': -48, 'who-region-afr': -3, 'who-region-emr': -21, 'who-region-amr': -38, 'who-region-eur': -68 };
     const items = ids.map((id) => {
       const r = rows[id]; if (!r) return null;
       const verify = r.grade === 'C' ? ' <span class="pill pill-C" title="Secondary source; verify against the WHO report table">verify</span>' : ' <span class="pill pill-A">WHO</span>';
-      return { label: esc(r.geography) + verify, value: r.high, text: (r.grade === 'C' ? '~' : '') + fmt(r.high), color: r.grade === 'C' ? '#8FA9B8' : 'var(--navy)' };
+      const since = rows['who-trend-2000-2021'] && trend[id] != null ? `<span class="muted" style="display:block;font-size:11px;white-space:normal;line-height:1.2">rate ${trend[id]}% since 2000</span>` : '';
+      return { label: esc(r.geography) + verify, value: r.high, text: (r.grade === 'C' ? '~' : '') + fmt(r.high) + since, color: r.grade === 'C' ? '#8FA9B8' : 'var(--navy)' };
     }).filter(Boolean);
     const alt = ids.map((id) => rows[id] ? `${rows[id].geography} ${fmt(rows[id].high)}` : null).filter(Boolean).join('; ');
     return `<div role="img" aria-label="Drowning deaths by WHO region, 2021, as printed in the WHO report: ${alt}.">${hbars(items, 90000, { labelW: '200px' })}<div class="axis" aria-hidden="true" style="margin-left:212px;margin-right:70px"><span style="left:0">0</span><span style="left:50%">45k</span><span style="left:100%">90k</span></div></div>`;
