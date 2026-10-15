@@ -5,7 +5,7 @@
   const LABEL = { 'co-host-brief-applied-wisdom': 'For a co-host', 'partner-one-pager': 'For a partner', 'funder-one-pager': 'For a funder' };
   const REPO = 'https://github.com/ethanhawkes-gif/thelifesavinglab-open-data';
   let cache = null;
-  function page(ctx, arg) {
+  function page(ctx) {
     const { sectionHead } = ctx;
     return `
 <section class="section" style="padding-bottom:36px"><div class="wrap stack" style="gap:22px">
@@ -26,7 +26,7 @@
     body.innerHTML = `<p class="eyebrow">${esc(LABEL[item.id] || '')}</p><h2 class="display h2">${esc(item.title)}</h2>${item.html}<p class="small muted" style="padding-top:12px;border-top:1px solid var(--line)">Source: <a href="${REPO}/blob/main/${esc(item.source)}">${esc(item.source)}</a> · to change it, open a pull request.</p>`;
     document.title = `${item.title} · The Life-Saving Lab`;
   }
-  function mount(ctx, arg) {
+  function mount(arg) {
     if (cache) { show(arg); return; }
     fetch('data/briefs.json').then((r) => r.json()).then((d) => { cache = d; show(arg); }).catch(() => { cache = { items: [] }; show(arg); });
   }

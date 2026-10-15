@@ -67,7 +67,7 @@ async function briefs() {
   const items = [];
   for (const f of files) {
     const md = await readFile(path.join(dir, f), 'utf8');
-    const title = (md.match(/^# (.+)$/m) || [, f])[1];
+    const title = (md.match(/^# (.+)$/m) || ['', f])[1];
     items.push({ id: f.replace(/\.md$/, ''), title, html: markdown(md.replace(/^# .+\n/, '')), source: `docs/briefs/${f}` });
   }
   return { schema: 'lifesavinglab.briefs.v1', generated: new Date().toISOString(), items };
