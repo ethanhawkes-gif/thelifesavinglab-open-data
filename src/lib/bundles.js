@@ -94,3 +94,24 @@ export async function makeReceipt(bundle, { reviewer, decision, release = null, 
   };
 }
 
+/**
+ * Two agents, one task: compare every bundle returned for the same task. Independent agreement on a correction's
+ * value is cheap evidence; disagreement sends the row to a person. Returns per-(row, field) verdicts and host overlap.
+ */
+export function agreement(bundles) {
+  const norm = (v) => String(v ?? '').toLowerCase().replace(/[\s,]+/g, ' ').trim();
+  const byKey = new Map();
+  for (const [i, b] of bundles.entries()) {
+    for (const c of b.corrections || []) {
+      const k = c.row_id + '\u0000' + c.field;
+      if (!byKey.has(k)) byKey.set(k, { row_id: c.row_id, field: c.field, values: new Map() });
+      const e = byKey.get(k); const v = norm(c.new);
+      if (!e.values.has(v)) e.values.set(v, { value: c.new, by: [] });
+      e.values.get(v).by.push(b.contributor?.handle || `bundle ${i + 1}`);
+    }
+  }
+  const items = [...byKey.values()].map((e) => ({ row_id: e.row_id, field: e.field, values: [...e.values.values()], agreed: e.values.size === 1 && [...e.values.values()][0].by.length === bundles.length, contested: e.values.size > 1 }));
+  const hosts = bundles.map((b) => new Set((b.evidence || []).map((e) => { try { return new URL(e.url).hostname.replace(/^www\./, ''); } catch { return null; } }).filter(Boolean)));
+  const shared = hosts.length ? [...hosts[0]].filter((h) => hosts.every((s) => s.has(h))) : [];
+  return { bundles: bundles.length, agreed: items.filter((i) => i.agreed).length, contested: items.filter((i) => i.contested).length, partial: items.filter((i) => !i.agreed && !i.contested).length, items, shared_hosts: shared };
+}

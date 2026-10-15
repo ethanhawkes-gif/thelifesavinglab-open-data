@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validate } from '../src/lib/minischema.js';
-import { buildPrompt, checkBundle, leaseState, makeReceipt, MAX_QUOTE_WORDS } from '../scripts/tasks.mjs';
+import { buildPrompt, checkBundle, leaseState, makeReceipt, agreement, MAX_QUOTE_WORDS } from '../scripts/tasks.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(here, '..');
@@ -108,4 +108,19 @@ test('a receipt hashes the bundle deterministically and records what changed', a
   assert.deepEqual(r1.changed, { rows: 0, corrections: 1, evidence: 1, next_tasks: 1 });
   assert.equal(r1.handle, 'example-handle');
   assert.equal(r1.reviewed, '2026-10-15T00:00:00.000Z');
+});
+
+test('two bundles on one task: agreement, contest and single coverage are told apart', () => {
+  const a = clone(); a.contributor = { handle: 'one', agent: 'agent-a' };
+  a.corrections = [{ row_id: 'who-nonfatal', field: 'grade', old: 'C', new: 'A', evidence: 'x' }, { row_id: 'who-nonfatal', field: 'figure', old: '4–5', new: '4 to 5 per death', evidence: 'x' }];
+  const b = clone(); b.contributor = { handle: 'two', agent: 'agent-b' };
+  b.corrections = [{ row_id: 'who-nonfatal', field: 'grade', old: 'C', new: 'A', evidence: 'y' }, { row_id: 'who-nonfatal', field: 'figure', old: '4–5', new: '2 per death', evidence: 'y' }, { row_id: 'who-nonfatal', field: 'year', old: '2024', new: '2021', evidence: 'y' }];
+  const r = agreement([a, b]);
+  assert.equal(r.bundles, 2);
+  assert.equal(r.agreed, 1);
+  assert.equal(r.contested, 1);
+  assert.equal(r.partial, 1);
+  assert.deepEqual(r.shared_hosts, ['who.int']);
+  const grade = r.items.find((i) => i.field === 'grade');
+  assert.deepEqual(grade.values[0].by, ['one', 'two']);
 });

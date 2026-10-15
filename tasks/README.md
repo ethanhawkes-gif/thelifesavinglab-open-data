@@ -35,8 +35,9 @@ never lost.
   matrix), and every accepted bundle may propose `next_tasks`, which a reviewer can promote to the board.
 - **Prompt packs are versioned.** When reviewers see the same mistake twice, the pack is edited once and every later
   run is better. The pack version is recorded on each receipt.
-- **Two agents, one task.** A `verify` task can be run by two different models. Agreement on the primary source keeps
-  the grade; disagreement reopens the task for a person. Independent agreement is cheap evidence.
+- **Two agents, one task.** A `verify` task can be run by two different models. `node scripts/tasks.mjs agree <id>`
+  compares every bundle returned for the task, field by field: agreement on a value keeps it, disagreement sends that
+  field to a person, and the receipts record which. Independent agreement is cheap evidence.
 - **Machine checks first, people last.** Reviewers spend their minutes on judgment, not on formatting.
 - **Claims are leases, not locks.** `claim` holds a task for seven days so two people do not do the same work; it
   lapses by itself.
@@ -57,6 +58,6 @@ precise position. Report a `done` status without a primary source it actually op
 | `../receipts/lend.json` | Every reviewed bundle, with its decision, the bundle's hash and what it changed. |
 | `prompt-preamble.md` | The shared head of every prompt pack: the rules and the output shape. Versioned. |
 | `example-bundle.json` | A real returned bundle: the WHO regional figures verified against the report on 15 Oct 2026. |
-| `../scripts/tasks.mjs` | `list`, `prompt`, `claim`, `release`, `check`, `receipt`, `promote`. |
+| `../scripts/tasks.mjs` | `list`, `prompt`, `claim`, `release`, `check`, `check-all`, `agree`, `receipt`, `promote`, `pull`. |
 | `../contributions/` | Returned bundles, one file each, submitted by pull request. |
 | `../estimates/` | The ledger the tasks refer to: every figure with its source, scope, grade and do-not-add rule. |
