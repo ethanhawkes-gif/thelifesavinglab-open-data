@@ -306,6 +306,8 @@ table.matrix th{vertical-align:bottom}
 .gap-preview .s{font-size:14px;color:var(--muted);line-height:1.5}
 .gap-preview .n{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--rust)}
 .pf{display:flex;flex-direction:column;gap:5px;min-width:0}.pf p{font-size:15px;line-height:1.5}
+/* The static pages: records read at a comfortable measure. */
+[data-page] .rec p{max-width:62em}[data-page] .rec .k{margin-bottom:2px}
 
 /* Motion is a courtesy, not a requirement. */
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.brand:hover svg{transform:none}}

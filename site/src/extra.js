@@ -101,7 +101,7 @@
     <p class="eyebrow">The June lab · 2027 · dates proposed, a person sets them</p>
     <h1 class="display h2">Two days on Wood Island. One rule: nobody enters the water.</h1>
     <p class="lede">24 students in six teams, with the people who work this harbor beside them. Each team takes one branch of the tree, sizes it from the ledger, and writes a one-page change that a harbormaster, co-op or crew could run this year. Day one tests the pilots. Day two tests the people, with a clock running. Co-hosted with Applied Wisdom for Nonprofits, whose eight insights are the way every team works.</p>
-    <div class="row"><a class="btn btn--primary" href="${SITE}/cohort">Apply for a seat</a><a class="btn btn--ghost" href="#contribute-offer">Offer a boat, a drone or a classroom day</a></div>
+    <div class="row"><a class="btn btn--primary" href="${SITE}/cohort/">Apply for a seat</a><a class="btn btn--ghost" href="#contribute-offer">Offer a boat, a drone or a classroom day</a></div>
   </div>
   ${photo(PHOTOS.hero, 'Wood Island Life-Saving Station down its boardwalk, with a surfboat on its carriage', 'The classroom, proposed · Photo: Ethan Hawkes', 'flex:1 1 340px;min-height:300px')}
 </div></section>

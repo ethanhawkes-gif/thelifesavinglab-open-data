@@ -1,0 +1,17 @@
+# thelifesavinglab.org as a Cloudflare Worker that serves static assets: the built site in site/dist, nothing else.
+# Deploy from the repository root:   node site/build.mjs && npx wrangler deploy --config site/wrangler.toml
+# The Worker name must match the Worker that already holds the custom domain thelifesavinglab.org, so that a deploy
+# replaces the live site in place; pass --name <that-name> if it differs from the one below.
+name = "thelifesavinglab"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+[assets]
+directory = "./dist"
+# Old addresses (/chart, /bring, /sources) are real pages that forward; everything else that is missing gets the site's 404 page.
+not_found_handling = "404-page"
+html_handling = "auto-trailing-slash"
+
+[[routes]]
+pattern = "thelifesavinglab.org"
+custom_domain = true

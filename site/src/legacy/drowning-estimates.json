@@ -1,0 +1,82 @@
+{
+  "schema": "lifesavinglab.drowning-estimates.v1",
+  "last_verified": "2026-10-14",
+  "unit": "modeled deaths",
+  "caution": "Do not average or sum these estimates. The model, estimate year, scope, and published uncertainty differ.",
+  "estimates": [
+    {
+      "id": "who-ghe-2021",
+      "organization": "World Health Organization",
+      "model": "WHO Global Health Estimates 2021",
+      "estimate_year": 2021,
+      "release_year": 2024,
+      "value": 300228,
+      "uncertainty_interval_95": null,
+      "geography": "Global",
+      "scope": "Drowning, ICD-10 W65–W74",
+      "exclusions": [
+        "water transport incidents",
+        "flood and environmental disasters",
+        "intentional drowning"
+      ],
+      "evidence_grade": "A — primary official model output",
+      "source_url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2021_deaths_global_new2.xlsx?sfvrsn=e1f725b1_3",
+      "uncertainty_note": "The cited WHO summary table publishes a point estimate, not an uncertainty interval."
+    },
+    {
+      "id": "ihme-gbd-2021",
+      "organization": "Institute for Health Metrics and Evaluation / GBD",
+      "model": "Global Burden of Disease 2021",
+      "estimate_year": 2021,
+      "release_year": 2025,
+      "value": 274200,
+      "uncertainty_interval_95": [
+        252000,
+        298000
+      ],
+      "geography": "204 countries and territories",
+      "scope": "GBD drowning cause; peer-reviewed work describes the core definition as unintentional drowning W65–W74",
+      "exclusions": [
+        "water transport incidents",
+        "flood disasters",
+        "intentional drowning"
+      ],
+      "evidence_grade": "B — peer-reviewed analysis of model output",
+      "source_url": "https://doi.org/10.1038/s41598-025-95486-w",
+      "uncertainty_note": "95% uncertainty interval reported in Table 1."
+    },
+    {
+      "id": "who-ghe-2019",
+      "organization": "World Health Organization",
+      "model": "WHO Global Health Estimates 2019",
+      "estimate_year": 2019,
+      "release_year": 2020,
+      "value": 235642,
+      "uncertainty_interval_95": null,
+      "geography": "Global",
+      "scope": "Drowning, ICD-10 W65–W74",
+      "exclusions": [
+        "water transport incidents",
+        "flood and environmental disasters",
+        "intentional drowning"
+      ],
+      "evidence_grade": "A — primary official model output; legacy vintage",
+      "source_url": "https://www.who.int/docs/default-source/gho-documents/global-health-estimates/ghe2019_cod_global_2000_20194e572f53-509f-4578-b01e-6370c65d9fc5.xlsx?sfvrsn=eaf8ca5_5",
+      "uncertainty_note": "The cited WHO summary table publishes a point estimate, not an uncertainty interval."
+    }
+  ],
+  "omitted_candidates": [
+    {
+      "label": "WHO 2014 · 372,000",
+      "reason": "Historical benchmark omitted from the main chart because it is another model vintage and was not independently reproduced from a primary machine-readable table in this pass."
+    },
+    {
+      "label": "GBD 2023",
+      "reason": "Omitted because no exact global drowning total and uncertainty interval were independently reproduced from a primary or peer-reviewed table in this pass."
+    },
+    {
+      "label": "Our World in Data",
+      "reason": "Omitted as an independent estimate because its drowning series is derived from WHO; the downloadable chart was also marked non-redistributable."
+    }
+  ]
+}

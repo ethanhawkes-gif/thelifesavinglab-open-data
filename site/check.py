@@ -12,6 +12,8 @@ from playwright.sync_api import sync_playwright
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, 'site', 'dist')
+PAGES = ['history', 'bridge', 'cohort', 'compact', 'stations']   # static pages built from site/src/pages
+REDIRECTS = {'chart/': '#toll', 'chart/?section=tree': '#tree', 'bring/': '#contribute', 'sources/': '#ledger'}
 ROUTES = ['home', 'toll', 'gaps', 'ledger', 'ledger-who-ghe-2021', 'tree', 'tree-harbor-recreational', 'pilots', 'pilots-cold-water-card', 'harbor', 'briefs', 'briefs-funder-one-pager', 'watch', 'june', 'wisdom', 'register', 'lend', 'contribute', 'glossary']
 PORT = 8791
 SHOTS = '--shots' in sys.argv
@@ -53,6 +55,7 @@ try:
         browser = p.chromium.launch()
         for width in (1440, 390):
             page = browser.new_page(viewport={'width': width, 'height': 900})
+            page.route('https://fonts.googleapis.com/**', lambda r: r.fulfill(status=200, content_type='text/css', body=''))  # offline: no web fonts
             errors = []
             page.on('console', lambda m: errors.append(m.text) if m.type == 'error' else None)
             page.on('pageerror', lambda e: errors.append('PAGEERROR ' + str(e)))
@@ -68,8 +71,25 @@ try:
                 if SHOTS:
                     os.makedirs(os.path.join(DIST, 'shots'), exist_ok=True)
                     page.screenshot(path=os.path.join(DIST, 'shots', f'{route}-{width}.png'), full_page=True)
+            for name in PAGES:
+                page.goto(f'http://127.0.0.1:{PORT}/{name}/'); page.wait_for_timeout(500)
+                o = page.evaluate(OVERFLOW)
+                if o['sw'] > o['vw']: failures.append(f'{width} /{name}/: horizontal scroll ({o["sw"]} > {o["vw"]}): {o["bad"]}')
+                if width == 1440:
+                    c = page.evaluate(CONTRAST)
+                    if c: failures.append(f'/{name}/: low contrast: {json.dumps(c[:5])}')
+                    a = page.evaluate(A11Y)
+                    if a['h1'] != 1 or a['jumps'] or a['img_no_alt'] or a['unnamed_buttons'] or a['unlabeled']: failures.append(f'/{name}/: a11y {json.dumps(a)}')
+                    if not page.locator('#navlinks a').count(): failures.append(f'/{name}/: the masthead is missing')
+                if SHOTS: page.screenshot(path=os.path.join(DIST, 'shots', f'page-{name}-{width}.png'), full_page=True)
             if errors: failures.append(f'{width}: console errors: {errors[:5]}')
             page.close()
+        # Old addresses send the reader on.
+        page = browser.new_page()
+        for old, dest in REDIRECTS.items():
+            page.goto(f'http://127.0.0.1:{PORT}/{old}'); page.wait_for_timeout(600)
+            if not page.url.endswith('/' + dest) and not page.url.endswith('/index.html' + dest): failures.append(f'redirect /{old} landed on {page.url}, expected {dest}')
+        page.close()
 
         # The tools: the register keeps a row and refuses personal data; the lend checker passes the example bundle.
         page = browser.new_page()
@@ -92,5 +112,5 @@ finally:
     except OSError: pass
 
 for f in failures: print('FAIL', f)
-print(f'{len(ROUTES)} routes at two widths; {len(failures)} failure(s)')
+print(f'{len(ROUTES)} routes and {len(PAGES)} pages at two widths, {len(REDIRECTS)} redirects; {len(failures)} failure(s)')
 sys.exit(1 if failures else 0)
