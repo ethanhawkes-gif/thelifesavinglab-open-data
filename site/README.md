@@ -10,6 +10,13 @@ node site/build.mjs                 # writes site/dist
 python3 -m http.server -d site/dist 8080   # preview at http://localhost:8080
 ```
 
+## Checking
+
+`python3 site/check.py` opens the built site in a headless browser and fails on horizontal scroll at phone width,
+console errors, text below WCAG AA contrast, heading-order or labelling slips, and a register or lend checker that
+does not work. `--shots` writes full-page screenshots to `site/dist/shots/`. CI runs it on every change to the site or
+its data (`.github/workflows/site-check.yml`) and keeps the screenshots for a week.
+
 ## Deploying
 
 `.github/workflows/pages.yml` builds `site/dist` on every push to `main` that touches the site or its data, and

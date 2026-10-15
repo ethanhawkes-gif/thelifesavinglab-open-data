@@ -1,0 +1,31 @@
+name: site-check
+on:
+  push:
+    branches: [main]
+    paths: ['site/**', 'estimates/**', 'tasks/**', '.github/workflows/site-check.yml']
+  pull_request:
+    paths: ['site/**', 'estimates/**', 'tasks/**']
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright==1.47.0 && python -m playwright install --with-deps chromium
+      - run: node site/build.mjs
+      - name: render, contrast, accessibility, tools
+        run: python3 site/check.py --shots
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: site-screenshots
+          path: site/dist/shots
+          retention-days: 7
