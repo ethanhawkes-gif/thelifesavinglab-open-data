@@ -629,6 +629,32 @@
    "done_note": null
   },
   {
+   "id": "official-feeds-five-services",
+   "title": "Find working news or incident feeds for five official rescue services the watch could read",
+   "kind": "verify",
+   "size": "M",
+   "status": "open",
+   "ask": "The watch (watch/sources.json) reads public feeds every hour and keeps only links, dates and a derived kind. It has one official source enabled (none working: the RNLI feed returns 403, the U.S. Coast Guard address is unconfirmed) and leans on news searches. Find RSS or Atom feeds, or a JSON endpoint, for five of: Surf Life Saving Australia, Royal Life Saving Australia, Maritime New Zealand, the Irish Coast Guard, the Canadian Coast Guard, the Dutch KNRM, the German DGzRS, the Norwegian Redningsselskapet, the Spanish Salvamento Marítimo, the Italian Guardia Costiera. For each: the exact feed address, confirmed to return items, the date of the newest item, the kind of content (press releases, incident log, rescue statistics), and any stated terms of use.",
+   "inputs": [
+    "watch/sources.json",
+    "watch/README.md",
+    "Note: a feed that needs a browser user agent is still useful; say which header it needs"
+   ],
+   "accept": [
+    "Five feed addresses confirmed to return items, each with the newest item's date",
+    "The content kind of each, in one line",
+    "Status partial with fewer than five is fine if what was tried is listed"
+   ],
+   "rows": [],
+   "unlocks": "Official sources for the watch beyond the English-language press.",
+   "parent": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": null
+  },
+  {
    "id": "uscg-rss-feed-address",
    "title": "Confirm the RSS feed address for U.S. Coast Guard news releases",
    "kind": "verify",

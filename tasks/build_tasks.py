@@ -100,6 +100,12 @@ task('leeway-values-piw-raft', 'Leeway: the recommended drift values for a perso
      ['One row per object class with the printed value, the table number and the page', 'A quote of 25 words or fewer from the table caption or the text that introduces it', 'No value taken from a secondary summary; the report itself'],
      rows=['hf-radar-search-area'], unlocks='A drift worksheet for day two with every coefficient traceable to the Coast Guard\'s own tables.')
 
+task('official-feeds-five-services', 'Find working news or incident feeds for five official rescue services the watch could read', 'verify', 'M',
+     'The watch (watch/sources.json) reads public feeds every hour and keeps only links, dates and a derived kind. It has one official source enabled (none working: the RNLI feed returns 403, the U.S. Coast Guard address is unconfirmed) and leans on news searches. Find RSS or Atom feeds, or a JSON endpoint, for five of: Surf Life Saving Australia, Royal Life Saving Australia, Maritime New Zealand, the Irish Coast Guard, the Canadian Coast Guard, the Dutch KNRM, the German DGzRS, the Norwegian Redningsselskapet, the Spanish Salvamento Marítimo, the Italian Guardia Costiera. For each: the exact feed address, confirmed to return items, the date of the newest item, the kind of content (press releases, incident log, rescue statistics), and any stated terms of use.',
+     ['watch/sources.json', 'watch/README.md', 'Note: a feed that needs a browser user agent is still useful; say which header it needs'],
+     ['Five feed addresses confirmed to return items, each with the newest item\'s date', 'The content kind of each, in one line', 'Status partial with fewer than five is fine if what was tried is listed'],
+     rows=[], unlocks='Official sources for the watch beyond the English-language press.')
+
 task('uscg-rss-feed-address', 'Confirm the RSS feed address for U.S. Coast Guard news releases', 'verify', 'S',
      'The watch (watch/sources.json) has the U.S. Coast Guard news feed disabled because its RSS address is unconfirmed. Find the working RSS or Atom feed URL for news releases at news.uscg.mil (the site is built on AFPIMS/DNN; feeds usually look like /DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=<id>&max=30). Confirm it returns XML with recent items and return the exact URL.',
      ['https://www.news.uscg.mil/', 'watch/sources.json'],

@@ -14,9 +14,9 @@ never lost.
 2. **Open it in your agent.** The prompt pack (`node scripts/tasks.mjs prompt <id>`) is self-contained: the lab's
    three rules, the task, the inputs, the exact output shape, and the acceptance checks. The site offers one-click
    links that open ChatGPT, Claude, Grok or Perplexity with the prompt filled in; for others, paste it.
-3. **Hand back the bundle.** The agent's last message is a JSON bundle (`bundle.schema.json`). Submit it by pull
-   request (`contributions/<task-id>-<handle>.json`), by email to hello@thelifesavinglab.org, or, once the API is
-   deployed, with one request: `POST /v1/bundles`. An agent that can fetch can also serve itself:
+3. **Hand back the bundle.** The agent's last message is a JSON bundle (`bundle.schema.json`). On the site's Lend
+   page, "Open as a pull request" opens GitHub with the file already filled in under `contributions/`; or send it by
+   email to hello@thelifesavinglab.org; or, once the API is deployed, with one request: `POST /v1/bundles`. An agent that can fetch can also serve itself:
    `GET /v1/tasks` for the board and `GET /v1/tasks/<id>/prompt` for the pack.
 4. **A person reviews it.** The same checks run at the API door, so a stored bundle has already passed them.
    `node scripts/tasks.mjs check <bundle>` runs the machine checks first (schema, PII,
