@@ -3,6 +3,36 @@
  "note": "One receipt per reviewed bundle. The hash is the SHA-256 of the bundle with its keys sorted; anyone holding the bundle can recompute it.",
  "receipts": [
   {
+   "id": "rcpt-f1e1dad60f",
+   "task_id": "setting-split-canada",
+   "handle": "agent-four",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "partial",
+   "preamble_version": "1.2",
+   "bundle_sha256": "f1e1dad60f0086a638a3d8742032ba66934d9c2aa58b4806de2164931a3e2be7",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T08:26:01.990Z",
+   "changed": {
+    "rows": 8,
+    "corrections": 0,
+    "evidence": 7,
+    "next_tasks": 2
+   },
+   "release": "0.7.0",
+   "note": "Merged into estimates by the lab's session on 15 Oct 2026 after reading the bundle and spot-checking its sources; Ethan Hawkes can reverse any of it with a commit.",
+   "next_tasks": [
+    {
+     "title": "Open the full 2026 Canadian Drowning Report and replace the 2018–2022 shares with printed counts per setting; confirm the Bathtubs 15% / Other 7% pairing from the page layout",
+     "why": "The snapshot prints percentages only and the pairing was inferred from text order."
+    },
+    {
+     "title": "Record the Canadian activity split (boating, aquatic vs non-aquatic) from the same 2026 snapshot",
+     "why": "It answers the water-transport question for Canada but was not captured verbatim."
+    }
+   ]
+  },
+  {
    "id": "rcpt-26423b7c66",
    "task_id": "nonfatal-ratio-primary",
    "handle": "agent-two",
@@ -37,36 +67,6 @@
     {
      "title": "Verify the pre-2024 WHO drowning fact sheet and the 2008 World report on child injury prevention drowning chapter for any non-fatal ratio",
      "why": "Both were unreachable in this run (archive and MedBox fetches blocked) and are the last WHO documents that could plausibly hold such a statement."
-    }
-   ]
-  },
-  {
-   "id": "rcpt-4e077f892a",
-   "task_id": "setting-split-canada",
-   "handle": "agent-four",
-   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
-   "status": "partial",
-   "preamble_version": "1.2",
-   "bundle_sha256": "4e077f892a90f63799e4d91f23e079883ebfd5cc0f1924c87936d6e32c12ce83",
-   "decision": "accepted",
-   "reviewer": "claude-session-for-ethan",
-   "reviewed": "2026-10-15T08:23:53.301Z",
-   "changed": {
-    "rows": 0,
-    "corrections": 0,
-    "evidence": 7,
-    "next_tasks": 2
-   },
-   "release": "0.7.0",
-   "note": "Merged into estimates by the lab's session on 15 Oct 2026 after reading the bundle and spot-checking its sources; Ethan Hawkes can reverse any of it with a commit.",
-   "next_tasks": [
-    {
-     "title": "Open the full 2026 Canadian Drowning Report and replace the 2018–2022 shares with printed counts per setting; confirm the Bathtubs 15% / Other 7% pairing from the page layout",
-     "why": "The snapshot prints percentages only and the pairing was inferred from text order."
-    },
-    {
-     "title": "Record the Canadian activity split (boating, aquatic vs non-aquatic) from the same 2026 snapshot",
-     "why": "It answers the water-transport question for Canada but was not captured verbatim."
     }
    ]
   },

@@ -1,1 +1,186 @@
-{"schema":"lifesavinglab.bundle.v1","task_id":"setting-split-canada","preamble_version":"1.2","contributor":{"handle":"agent-four","agent":"Claude Fable 5.1 (claude-fable-5-1)"},"status":"partial","rows":[],"corrections":[],"evidence":[{"url":"https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf","quote":"With the exception of the first chart, all data refers to the most current five-year period, 2018–2022.","where":"Period statement near the top of the snapshot, under the first (annual totals) chart"},{"url":"https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf","quote":"Lakes 36% Rivers 27% 9% Pools <1% Drowning in a lifeguard supervised setting 7% Other 15% Bathtubs","where":"Section 'WHERE ARE THEY DROWNING?'; tokens in the order the text extractor returned them (label-value pairing for Pools/Other/Bathtubs inferred from this order)"},{"url":"https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf","quote":"Ocean 6%","where":"Location figures; in the text extraction the Ocean label and value appear in a separate block near the age chart"},{"url":"https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf","quote":"466, 428, 423, 408, 465, 488, 430, 552, 509, 560","where":"First chart, annual drowning deaths 2013–2022, values in printed order; 2022 = 560, rate 1.4 per 100,000"},{"url":"https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf","quote":"The data includes only unintentional deaths, not deaths due to natural causes, suicide, or homicide.","where":"Methods note at the bottom of the snapshot"},{"url":"https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf","quote":"The 2016–2021 totals are based on partial data.","where":"Footnote to the annual totals chart"},{"url":"https://www.lifesavingsociety.com/media/533178/national_snapshot_fr_8.5x11_20260804_aoda.pdf","quote":"Sauf dans le cas de ce premier graphique, toutes les données proviennent de la période 2018 à 2022.","where":"French edition of the same snapshot; its location section lists Lacs, Rivières, Piscine, supervisé, Autres, Baignoires, Océan with 36, 27, 9, <1, 7, 15, 6 % in that order"}],"tried":["https://www.lifesaving.org/public/download/files/361108 (2026 Canadian Drowning Report, English PDF): fetch blocked, permission request not answered. This is the primary full report and likely holds counts per setting.","https://lifesaving.ca/public-education/drowning-research/national-drowning-report/: blocked, permission request not answered.","https://www.lifesaving.org/public/download/files/352882: opened, but it is the Alberta & NWT Branch 2026 Annual Report, not the national report."],"notes":"Condensed copy of the returned bundle (the eight rows it returned were merged into estimates/build_data.py as the canada-* rows on 15 Oct 2026; see git history). The latest national Canadian breakdown by water setting is the 2026-edition National Drowning Data Snapshot, read from the Lifesaving Society Ontario mirror. Status partial: the snapshot prints percentages only, and the Bathtubs 15% / Other 7% pairing was inferred from text-extraction order (two extractions, English and French, agree). The 2026 edition's latest data year is 2022 (560 deaths, 1.4 per 100,000); the setting split is five-year pooled, 2018–2022.","next_tasks":[{"title":"Open the full 2026 Canadian Drowning Report and replace the 2018–2022 shares with printed counts per setting; confirm the Bathtubs 15% / Other 7% pairing from the page layout","why":"The snapshot prints percentages only and the pairing was inferred from text order."},{"title":"Record the Canadian activity split (boating, aquatic vs non-aquatic) from the same 2026 snapshot","why":"It answers the water-transport question for Canada but was not captured verbatim."}]}
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "setting-split-canada",
+ "preamble_version": "1.2",
+ "contributor": {
+  "handle": "agent-four",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "canada-location-lakes-2018-22",
+   "figure": "36%",
+   "low": 36,
+   "high": 36,
+   "unit": "share",
+   "year": 2022,
+   "scope": "Share of all unintentional drowning deaths in Canada over the pooled five-year period 2018-2022 that occurred in lakes (report label 'Lakes'). Counts not printed. Excludes natural-cause, suicide and homicide deaths.",
+   "geography": "Canada (all provinces and territories; British Columbia data noted as incomplete at collection time)",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (PDF mirrored by Lifesaving Society Ontario)",
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "grade": "A",
+   "do_not_add_to": "Five-year pooled share, unintentional only, coroner/ME case-finding: do not add to WHO/IHME drowning totals or any single-year count; do not combine with australia-location-2024-25 or uk-waid-2024 (different setting taxonomies, periods, definitions); do not multiply by the 2022 total to derive counts.",
+   "note": "Percent of unintentional drowning deaths, Canada, 2018-2022 pooled. Only percentages are printed; no counts and no five-year total. Pairing is direct in the text extraction ('Lakes 36%'); French edition lists Lacs 36 %. Year field = end year of the 2018-2022 period."
+  },
+  {
+   "id": "canada-location-rivers-2018-22",
+   "figure": "27%",
+   "low": 27,
+   "high": 27,
+   "unit": "share",
+   "year": 2022,
+   "scope": "Share of all unintentional drowning deaths in Canada over the pooled five-year period 2018-2022 that occurred in rivers (report label 'Rivers'). Counts not printed. Excludes natural-cause, suicide and homicide deaths.",
+   "geography": "Canada (all provinces and territories; British Columbia data noted as incomplete at collection time)",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (PDF mirrored by Lifesaving Society Ontario)",
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "grade": "A",
+   "do_not_add_to": "Five-year pooled share, unintentional only, coroner/ME case-finding: do not add to WHO/IHME drowning totals or any single-year count; do not combine with australia-location-2024-25 or uk-waid-2024 (different setting taxonomies, periods, definitions); do not multiply by the 2022 total to derive counts.",
+   "note": "Percent of unintentional drowning deaths, Canada, 2018-2022 pooled. Only percentages printed. Pairing is direct in the text extraction ('Rivers 27%'); French edition lists Rivières 27 %."
+  },
+  {
+   "id": "canada-location-bathtubs-2018-22",
+   "figure": "15%",
+   "low": 15,
+   "high": 15,
+   "unit": "share",
+   "year": 2022,
+   "scope": "Share of all unintentional drowning deaths in Canada over the pooled five-year period 2018-2022 that occurred in bathtubs (report label 'Bathtubs'). Counts not printed. Excludes natural-cause, suicide and homicide deaths.",
+   "geography": "Canada (all provinces and territories; British Columbia data noted as incomplete at collection time)",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (PDF mirrored by Lifesaving Society Ontario)",
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "grade": "A",
+   "do_not_add_to": "Five-year pooled share, unintentional only, coroner/ME case-finding: do not add to WHO/IHME drowning totals or any single-year count; do not combine with australia-location-2024-25 or uk-waid-2024 (different setting taxonomies, periods, definitions); do not multiply by the 2022 total to derive counts.",
+   "note": "Pairing INFERRED from extraction order '7% Other 15% Bathtubs', where the percentage precedes its label as it does for '9% Pools' and '<1% Drowning in a lifeguard supervised setting'; the French edition lists Autres, Baignoires with 7 %, 15 % in the same order. Not visually confirmed: a reviewer should check the PDF layout (the alternative reading is Bathtubs 7%, Other 15%)."
+  },
+  {
+   "id": "canada-location-pools-2018-22",
+   "figure": "9%",
+   "low": 9,
+   "high": 9,
+   "unit": "share",
+   "year": 2022,
+   "scope": "Share of all unintentional drowning deaths in Canada over the pooled five-year period 2018-2022 that occurred in pools (public/private and hot tubs not distinguished on the snapshot) (report label 'Pools'). Counts not printed. Excludes natural-cause, suicide and homicide deaths.",
+   "geography": "Canada (all provinces and territories; British Columbia data noted as incomplete at collection time)",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (PDF mirrored by Lifesaving Society Ontario)",
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "grade": "A",
+   "do_not_add_to": "Five-year pooled share, unintentional only, coroner/ME case-finding: do not add to WHO/IHME drowning totals or any single-year count; do not combine with australia-location-2024-25 or uk-waid-2024 (different setting taxonomies, periods, definitions); do not multiply by the 2022 total to derive counts.",
+   "note": "Printed label 'Pools' (French 'Piscine'); the snapshot does not say whether hot tubs or private vs public pools are included. Pairing from extraction order '9% Pools'."
+  },
+  {
+   "id": "canada-location-other-2018-22",
+   "figure": "7%",
+   "low": 7,
+   "high": 7,
+   "unit": "share",
+   "year": 2022,
+   "scope": "Share of all unintentional drowning deaths in Canada over the pooled five-year period 2018-2022 that occurred in locations the report labels 'Other' (not defined; no separate 'unknown' category printed) (report label 'Other'). Counts not printed. Excludes natural-cause, suicide and homicide deaths.",
+   "geography": "Canada (all provinces and territories; British Columbia data noted as incomplete at collection time)",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (PDF mirrored by Lifesaving Society Ontario)",
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "grade": "A",
+   "do_not_add_to": "Five-year pooled share, unintentional only, coroner/ME case-finding: do not add to WHO/IHME drowning totals or any single-year count; do not combine with australia-location-2024-25 or uk-waid-2024 (different setting taxonomies, periods, definitions); do not multiply by the 2022 total to derive counts.",
+   "note": "'Other' is not defined on the snapshot. Pairing INFERRED from extraction order '7% Other 15% Bathtubs'; French edition lists Autres 7 %, Baignoires 15 % in the same order. Not visually confirmed."
+  },
+  {
+   "id": "canada-location-ocean-2018-22",
+   "figure": "6%",
+   "low": 6,
+   "high": 6,
+   "unit": "share",
+   "year": 2022,
+   "scope": "Share of all unintentional drowning deaths in Canada over the pooled five-year period 2018-2022 that occurred in the ocean (report label 'Ocean'). Counts not printed. Excludes natural-cause, suicide and homicide deaths.",
+   "geography": "Canada (all provinces and territories; British Columbia data noted as incomplete at collection time)",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (PDF mirrored by Lifesaving Society Ontario)",
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "grade": "A",
+   "do_not_add_to": "Five-year pooled share, unintentional only, coroner/ME case-finding: do not add to WHO/IHME drowning totals or any single-year count; do not combine with australia-location-2024-25 or uk-waid-2024 (different setting taxonomies, periods, definitions); do not multiply by the 2022 total to derive counts.",
+   "note": "In the English text extraction 'Ocean 6%' sits in a separate block near the age chart; the French edition lists Océan 6 % among the location labels. Treated as the ocean share of the same location partition, pending a check of the PDF layout."
+  },
+  {
+   "id": "canada-location-lifeguard-supervised-2018-22",
+   "figure": "<1%",
+   "low": 0,
+   "high": 1,
+   "unit": "share",
+   "year": 2022,
+   "scope": "Share of all unintentional drowning deaths in Canada over the pooled five-year period 2018-2022 that occurred in a lifeguard-supervised setting (report label 'Drowning in a lifeguard supervised setting'). A supervision measure cutting across water bodies, not a water-body category.",
+   "geography": "Canada (all provinces and territories; British Columbia data noted as incomplete at collection time)",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (PDF mirrored by Lifesaving Society Ontario)",
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "grade": "A",
+   "do_not_add_to": "Not part of the water-body partition: do not add to the lakes/rivers/ocean/pools/bathtubs/other shares. Five-year pooled, unintentional only; do not combine with WHO/IHME figures or with australia-location-2024-25 / uk-waid-2024.",
+   "note": "Printed as '<1%' under 'Drowning in a lifeguard supervised setting' in the WHERE ARE THEY DROWNING? section, 2018-2022 pooled; low=0, high=1 encode '<1%'."
+  },
+  {
+   "id": "canada-total-2022",
+   "figure": "560",
+   "low": 560,
+   "high": 560,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "All unintentional drowning deaths in Canada in calendar year 2022 from incidents in, on or near water, per provincial/territorial coroner and medical examiner data; excludes natural causes, suicide and homicide; boating deaths included (printed as an activity category). Rate printed as 1.4 per 100,000.",
+   "geography": "Canada (all provinces and territories; British Columbia data noted as incomplete at collection time)",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (PDF mirrored by Lifesaving Society Ontario)",
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "grade": "A",
+   "do_not_add_to": "Do not add to WHO/IHME drowning estimates (different definition and case-finding); do not add to the 2026 Alberta or Northern Canada reports, which are subsets; do not add across years (annual totals 2013-2022 are printed separately and were revised in 2026); do not use as denominator to convert the 2018-2022 shares into counts.",
+   "note": "Latest data year in the 2026 edition is 2022. Printed annual totals 2013-2022, in order: 466, 428, 423, 408, 465, 488, 430, 552, 509, 560 (the 560 is read as the 2022 value from its position in the chart). Caveats printed: 'The 2016-2021 totals are based on partial data'; 'Complete information for British Columbia was not available at the time of data collection'. Whether 2022 is also partial is not stated."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "quote": "With the exception of the first chart, all data refers to the most current five-year period, 2018–2022.",
+   "where": "Period statement near the top of the snapshot, under the first (annual totals) chart"
+  },
+  {
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "quote": "Lakes 36% Rivers 27% 9% Pools <1% Drowning in a lifeguard supervised setting 7% Other 15% Bathtubs",
+   "where": "Section 'WHERE ARE THEY DROWNING?'; tokens in the order the text extractor returned them (label-value pairing for Pools/Other/Bathtubs inferred from this order)"
+  },
+  {
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "quote": "Ocean 6%",
+   "where": "Location figures; in the text extraction the Ocean label and value appear in a separate block near the age chart"
+  },
+  {
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "quote": "466, 428, 423, 408, 465, 488, 430, 552, 509, 560",
+   "where": "First chart, annual drowning deaths 2013–2022, values in printed order; 2022 = 560, rate 1.4 per 100,000"
+  },
+  {
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "quote": "The data includes only unintentional deaths, not deaths due to natural causes, suicide, or homicide.",
+   "where": "Methods note at the bottom of the snapshot"
+  },
+  {
+   "url": "https://www.lifesavingsociety.com/media/533175/national_snapshot_en_8.5x11_20260804_aoda.pdf",
+   "quote": "The 2016–2021 totals are based on partial data.",
+   "where": "Footnote to the annual totals chart"
+  },
+  {
+   "url": "https://www.lifesavingsociety.com/media/533178/national_snapshot_fr_8.5x11_20260804_aoda.pdf",
+   "quote": "Sauf dans le cas de ce premier graphique, toutes les données proviennent de la période 2018 à 2022.",
+   "where": "French edition of the same snapshot; its location section lists Lacs, Rivières, Piscine, supervisé, Autres, Baignoires, Océan with 36, 27, 9, <1, 7, 15, 6 % in that order"
+  }
+ ],
+ "tried": [
+  "https://www.lifesaving.org/public/download/files/361108 (2026 Canadian Drowning Report, English PDF): fetch blocked, permission request not answered. This is the primary full report and likely holds counts per setting.",
+  "https://lifesaving.ca/public-education/drowning-research/national-drowning-report/: blocked, permission request not answered.",
+  "https://www.lifesaving.org/public/download/files/352882: opened, but it is the Alberta & NWT Branch 2026 Annual Report, not the national report."
+ ],
+ "notes": "The returned bundle, with its notes shortened by the reviewer; the eight rows were merged into estimates/build_data.py as the canada-* rows on 15 Oct 2026. The latest national Canadian breakdown by water setting is the 2026-edition National Drowning Data Snapshot, read from the Lifesaving Society Ontario mirror. Status partial: the snapshot prints percentages only, and the Bathtubs 15% / Other 7% pairing was inferred from text-extraction order (two extractions, English and French, agree). The 2026 edition's latest data year is 2022 (560 deaths, 1.4 per 100,000); the setting split is five-year pooled, 2018–2022.",
+ "next_tasks": [
+  {
+   "title": "Open the full 2026 Canadian Drowning Report and replace the 2018–2022 shares with printed counts per setting; confirm the Bathtubs 15% / Other 7% pairing from the page layout",
+   "why": "The snapshot prints percentages only and the pairing was inferred from text order."
+  },
+  {
+   "title": "Record the Canadian activity split (boating, aquatic vs non-aquatic) from the same 2026 snapshot",
+   "why": "It answers the water-transport question for Canada but was not captured verbatim."
+  }
+ ]
+}
