@@ -1,0 +1,912 @@
+{
+ "schema": "lifesavinglab.tree.v2",
+ "version": "0.3.0",
+ "start": "now",
+ "grades": {
+  "A": "Recommended by WHO",
+  "B": "Modeled or peer-reviewed evidence",
+  "C": "Established practice, outcome unmeasured",
+  "D": "Open question: a lab pilot"
+ },
+ "nodes": {
+  "now": {
+   "type": "question",
+   "q": "Is someone in the water right now?",
+   "help": "The tree starts here every time. Nothing on this site dispatches help.",
+   "options": [
+    {
+     "label": "Yes",
+     "sub": "Someone is in the water or missing on it",
+     "to": "emergency"
+    },
+    {
+     "label": "No",
+     "sub": "I want to prevent the next one",
+     "to": "water"
+    }
+   ]
+  },
+  "emergency": {
+   "type": "emergency",
+   "title": "Get help moving first.",
+   "steps": [
+    {
+     "h": "On the sea, a harbor or a river",
+     "p": "Call VHF channel 16 or the Coast Guard. In the United States, 911 also reaches them. Give a position, how many people, and the water."
+    },
+    {
+     "h": "Anywhere else",
+     "p": "Call your local emergency number."
+    },
+    {
+     "h": "Someone on a bridge, or thinking of harm",
+     "p": "In the United States call or text 988. Stay with them if you safely can."
+    },
+    {
+     "h": "Reach or throw. Don't go.",
+     "p": "Keep your eyes on the person. Reach with anything long, throw anything that floats. Enter the water only if you are trained and equipped: untrained rescuers drown."
+    },
+    {
+     "h": "Cold water",
+     "p": "The first minute is the gasp. Tell the person to float and get their breathing under control before trying to swim."
+    }
+   ],
+   "note": "These are the actions responders teach. They are not a substitute for a call."
+  },
+  "water": {
+   "type": "question",
+   "q": "Which water?",
+   "help": "A measure that works in a pool does nothing in a tide. Name the water first, then the person, then the measure.",
+   "options": [
+    {
+     "label": "Open sea and coast",
+     "sub": "Surf, rocks, cold water, offshore",
+     "to": "sea"
+    },
+    {
+     "label": "Harbor, river, estuary",
+     "sub": "Currents, working boats, docks, bridges",
+     "to": "harbor"
+    },
+    {
+     "label": "Lake, pond, reservoir, canal",
+     "sub": "Still water, ice in winter",
+     "to": "lake"
+    },
+    {
+     "label": "Pool and spa",
+     "sub": "Home or public",
+     "to": "pool"
+    },
+    {
+     "label": "The home",
+     "sub": "Bath, bucket, well, tank",
+     "to": "home-under5"
+    },
+    {
+     "label": "Flood water",
+     "sub": "River flood, flash flood, storm surge",
+     "to": "flood"
+    }
+   ],
+   "principle": "The water decides the measure."
+  },
+  "sea": {
+   "type": "question",
+   "q": "Who is at risk on the open sea and coast?",
+   "help": "Pick the person the measure is for.",
+   "options": [
+    {
+     "label": "Swimmers and surfers",
+     "sub": "Beaches, rocks, rips, cold water",
+     "to": "sea-swimmers"
+    },
+    {
+     "label": "People in small craft",
+     "sub": "Kayaks, dinghies, recreational boats",
+     "to": "sea-small-craft"
+    },
+    {
+     "label": "Fishing crews and workers",
+     "sub": "Commercial and artisanal",
+     "to": "sea-fishing"
+    },
+    {
+     "label": "Passengers",
+     "sub": "Ferries, overloaded or unsafe vessels, migrant crossings",
+     "to": "sea-passengers"
+    }
+   ]
+  },
+  "harbor": {
+   "type": "question",
+   "q": "Who is at risk in the harbor or river?",
+   "help": "Pick the person the measure is for.",
+   "options": [
+    {
+     "label": "Working boats and crews",
+     "sub": "Lobster boats, tugs, pilots, charters",
+     "to": "harbor-working"
+    },
+    {
+     "label": "Recreational boaters and paddlers",
+     "sub": "Including the four-knot Piscataqua",
+     "to": "harbor-recreational"
+    },
+    {
+     "label": "People on foot near the water",
+     "sub": "Docks, rocks, seawalls, bridges",
+     "to": "harbor-foot"
+    },
+    {
+     "label": "Children and teens",
+     "sub": "Jumping, swimming, wading",
+     "to": "harbor-children"
+    }
+   ]
+  },
+  "lake": {
+   "type": "question",
+   "q": "Who is at risk at the lake?",
+   "help": "Pick the person the measure is for.",
+   "options": [
+    {
+     "label": "Children under 5",
+     "sub": "Near water at home or on holiday",
+     "to": "lake-under5"
+    },
+    {
+     "label": "Children 5–14 and teens",
+     "sub": "Swimming, playing, ice",
+     "to": "lake-children"
+    },
+    {
+     "label": "Adults",
+     "sub": "Swimming, boating, fishing, ice",
+     "to": "lake-adults"
+    }
+   ]
+  },
+  "pool": {
+   "type": "question",
+   "q": "Who is at risk at the pool?",
+   "help": "Pick the person the measure is for.",
+   "options": [
+    {
+     "label": "Children under 5",
+     "sub": "The leading pool risk",
+     "to": "pool-under5"
+    },
+    {
+     "label": "Children and teens",
+     "sub": "",
+     "to": "pool-children"
+    },
+    {
+     "label": "Adults",
+     "sub": "",
+     "to": "pool-adults"
+    }
+   ]
+  },
+  "flood": {
+   "type": "question",
+   "q": "Where are you in the flood?",
+   "help": "Pick the situation the measure is for.",
+   "options": [
+    {
+     "label": "A community, before the flood",
+     "sub": "Planning, warning, routes",
+     "to": "flood-before"
+    },
+    {
+     "label": "A household, in a flood",
+     "sub": "Water is rising now",
+     "to": "flood-during"
+    }
+   ]
+  },
+  "sea-swimmers": {
+   "type": "leaf",
+   "title": "Swimmers and surfers on the open coast",
+   "summary": "Most coastal swimming deaths involve rips, cold water, or swimming where no one is watching. The measures with the best evidence are skills and supervision; the cold-water clock is still a question.",
+   "measures": [
+    {
+     "text": "Basic swimming, water-safety and safe-rescue skills for school-age children",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures"
+     ]
+    },
+    {
+     "text": "Lifeguarded swimming areas, flags and local hazard signs: at USLA-guarded beaches the chance of drowning is about 1 in 18 million",
+     "grade": "C",
+     "rows": [
+      "usla-guarded-risk"
+     ]
+    },
+    {
+     "text": "Rip-current and float-first public messaging",
+     "grade": "C"
+    },
+    {
+     "text": "A hand-size card on time in cold water (1 minute to control breathing, 10 of useful movement, about 1 hour), tested by the people it is for",
+     "grade": "D",
+     "rows": [
+      "giesbrecht-1-10-1"
+     ]
+    }
+   ],
+   "count": [
+    "where (named beach or coordinates)",
+    "water temperature",
+    "lifeguard present or not",
+    "rip current reported",
+    "activity",
+    "minutes from alarm to reaching the person",
+    "outcome"
+   ],
+   "adopter": "A beach patrol, a town recreation department, a surf club",
+   "track": "clock",
+   "unknown": "No one publishes a global split of drownings by water setting, so the size of this branch is unknown.",
+   "rows": [
+    "who-prevention-measures",
+    "who-data-gaps"
+   ]
+  },
+  "sea-small-craft": {
+   "type": "leaf",
+   "title": "People in small craft offshore",
+   "summary": "In the United States three in four boating deaths are drownings and 87% of those who drowned wore no life jacket. Wearing one is the strongest single measure with evidence behind it.",
+   "measures": [
+    {
+     "text": "Set and enforce safe boating rules",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures"
+     ]
+    },
+    {
+     "text": "Always wear a life jacket: boaters who wore one drowned at about half the rate of those who did not (risk ratio 0.51)",
+     "grade": "B",
+     "rows": [
+      "cummings-pfd-2011",
+      "uscg-boating-2024",
+      "peterson-us-348"
+     ]
+    },
+    {
+     "text": "Boating safety instruction: about 70% of US deaths involve an operator with none (an association, not proof)",
+     "grade": "C",
+     "rows": [
+      "uscg-boating-2024"
+     ]
+    },
+    {
+     "text": "A late-boat watch a small harbor can run this season",
+     "grade": "D"
+    },
+    {
+     "text": "A one-page drift sheet whose error grows honestly",
+     "grade": "D",
+     "rows": [
+      "hf-radar-search-area"
+     ]
+    }
+   ],
+   "count": [
+    "vessel type and length",
+    "persons aboard",
+    "life jackets worn",
+    "float plan filed",
+    "wind, sea state, water temperature",
+    "minutes overdue before the alarm",
+    "who responded",
+    "outcome"
+   ],
+   "adopter": "A harbormaster, a marina, a paddling club",
+   "track": "signal",
+   "unknown": null,
+   "rows": [
+    "uscg-boating-2024",
+    "peterson-us-348"
+   ]
+  },
+  "sea-fishing": {
+   "type": "leaf",
+   "title": "Fishing crews and workers",
+   "summary": "Somewhere between 24,000 and more than 100,000 fishers die each year, depending on who counts. Most work on boats the treaties do not reach. The first measure here is to count.",
+   "measures": [
+    {
+     "text": "Safe shipping and vessel rules; the Cape Town Agreement enters into force on 24 Feb 2027 for vessels of 24 m and over",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures",
+      "cape-town-agreement"
+     ]
+    },
+    {
+     "text": "One rule or one piece of kit for boats under the treaty size",
+     "grade": "D"
+    },
+    {
+     "text": "Life jackets designed for working on deck",
+     "grade": "C"
+    },
+    {
+     "text": "A report short enough that a tired harbor will file it",
+     "grade": "D",
+     "rows": [
+      "who-data-gaps"
+     ]
+    }
+   ],
+   "count": [
+    "vessel length and type",
+    "crew aboard",
+    "life jackets worn",
+    "activity (hauling, transit, moored)",
+    "weather",
+    "time of day",
+    "outcome",
+    "who reported it, and to whom"
+   ],
+   "adopter": "A fishing co-op, a fisheries safety body, a harbormaster",
+   "track": "register",
+   "unknown": "How much of the fishing toll is already inside WHO's 300,000 is unresolved.",
+   "rows": [
+    "fishing-ilo-1999",
+    "fishing-fao-32000",
+    "fishing-fsf-100000"
+   ]
+  },
+  "sea-passengers": {
+   "type": "leaf",
+   "title": "Passengers on ferries and unsafe vessels",
+   "summary": "Ferry deaths run to perhaps a thousand or two a year by an old estimate; deaths on migrant crossings were at least 3,650 in the year to May 2025. Neither is inside the core count.",
+   "measures": [
+    {
+     "text": "Set and enforce safe shipping and ferry rules, including regular inspections",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures"
+     ]
+    },
+    {
+     "text": "Overloading enforcement and passenger counts at the dock",
+     "grade": "C",
+     "rows": [
+      "ferry-wfsa"
+     ]
+    },
+    {
+     "text": "Search and rescue at sea for crossings: a state and NGO task; the lab keeps the count, not a pilot",
+     "grade": "C",
+     "rows": [
+      "migrants-maritime-sep24-may25"
+     ]
+    },
+    {
+     "text": "A global yearly series for water-transport deaths, which does not exist",
+     "grade": "D",
+     "rows": [
+      "water-transport-other"
+     ]
+    }
+   ],
+   "count": [
+    "vessel",
+    "persons aboard and capacity",
+    "life jackets aboard",
+    "route",
+    "weather",
+    "deaths and missing, separately",
+    "source of the count"
+   ],
+   "adopter": "A flag state, a port authority, a ferry operator",
+   "track": "register",
+   "unknown": "No global series for water-transport deaths: the largest unmeasured piece of the toll.",
+   "rows": [
+    "ferry-wfsa",
+    "water-transport-other",
+    "migrants-maritime-sep24-may25"
+   ]
+  },
+  "harbor-working": {
+   "type": "leaf",
+   "title": "Working boats and crews in the harbor",
+   "summary": "A working harbor still learns about a late boat from a cousin. The measures here are cheap and old: a watch, a radio, a jacket, and a form.",
+   "measures": [
+    {
+     "text": "A late-boat watch a small harbor can run this season",
+     "grade": "D"
+    },
+    {
+     "text": "A VHF radio carried, channel 16 known by every crew member",
+     "grade": "C"
+    },
+    {
+     "text": "Life jackets worn on deck",
+     "grade": "C",
+     "rows": [
+      "uscg-boating-2024"
+     ]
+    },
+    {
+     "text": "A hand-size card on time in cold water",
+     "grade": "D"
+    },
+    {
+     "text": "A report short enough that a tired harbor will file it",
+     "grade": "D"
+    }
+   ],
+   "count": [
+    "vessel",
+    "crew",
+    "departure and expected return",
+    "life jackets",
+    "water temperature",
+    "minutes overdue before the alarm",
+    "outcome"
+   ],
+   "adopter": "A harbormaster, a fishing co-op, a Coast Guard station",
+   "track": "signal",
+   "unknown": null,
+   "rows": []
+  },
+  "harbor-recreational": {
+   "type": "leaf",
+   "title": "Recreational boaters and paddlers in a river mouth",
+   "summary": "The Piscataqua runs near four knots at the mouth. A kayak paddles about three. The measures are a jacket, a plan, and respect for the tide table.",
+   "measures": [
+    {
+     "text": "Always wear a life jacket: about half the drowning risk for boaters who wear one",
+     "grade": "B",
+     "rows": [
+      "cummings-pfd-2011",
+      "uscg-boating-2024"
+     ]
+    },
+    {
+     "text": "Boating safety instruction before the first trip",
+     "grade": "C",
+     "rows": [
+      "uscg-boating-2024"
+     ]
+    },
+    {
+     "text": "A float plan left with someone ashore; a late-boat watch to receive it",
+     "grade": "D"
+    },
+    {
+     "text": "Tidal current awareness: plan around slack water",
+     "grade": "C",
+     "rows": [
+      "piscataqua-current"
+     ]
+    },
+    {
+     "text": "A hand-size card on time in cold water",
+     "grade": "D"
+    }
+   ],
+   "count": [
+    "craft type",
+    "persons aboard",
+    "life jackets worn",
+    "tide state and current",
+    "water temperature",
+    "alcohol suspected",
+    "outcome"
+   ],
+   "adopter": "A harbormaster, a paddling club, an outfitter",
+   "track": "signal",
+   "unknown": null,
+   "rows": [
+    "piscataqua-current"
+   ]
+  },
+  "harbor-foot": {
+   "type": "leaf",
+   "title": "People on foot near the water",
+   "summary": "Docks, seawalls, rocks and bridges. Two different problems share this branch: falls into cold water, and crisis on a bridge.",
+   "measures": [
+    {
+     "text": "Throw rings and reach poles at docks and seawalls, checked monthly",
+     "grade": "C"
+    },
+    {
+     "text": "\"Reach or throw, don't go\" public messaging",
+     "grade": "C"
+    },
+    {
+     "text": "For a bridge: a physical barrier. Reviews find fewer deaths at sites after barriers; the evidence is low quality and displacement is unsettled",
+     "grade": "B"
+    },
+    {
+     "text": "988 signs, phones and lighting on a bridge: help, but do not restrict access",
+     "grade": "C"
+    }
+   ],
+   "count": [
+    "location",
+    "fall or entry type",
+    "water temperature",
+    "time to rescue",
+    "outcome"
+   ],
+   "adopter": "A town, a harbor authority, two state DOTs",
+   "track": null,
+   "unknown": "There is no published annual count for the Piscataqua River Bridge. The span brief keeps what is known.",
+   "rows": []
+  },
+  "harbor-children": {
+   "type": "leaf",
+   "title": "Children and teens around the harbor",
+   "summary": "Jumping from docks and bridges, wading on a falling tide. Skills and rules, with adults who know the water.",
+   "measures": [
+    {
+     "text": "Basic swimming, water-safety and safe-rescue skills for school-age children",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures"
+     ]
+    },
+    {
+     "text": "Supervised swim areas and clear rules on jumping",
+     "grade": "C"
+    },
+    {
+     "text": "Life jackets for children on docks and in boats",
+     "grade": "C"
+    }
+   ],
+   "count": [
+    "age band",
+    "activity",
+    "supervision present",
+    "tide state",
+    "outcome"
+   ],
+   "adopter": "A town recreation department, a sailing school, a harbormaster",
+   "track": null,
+   "unknown": null,
+   "rows": [
+    "who-age-under30"
+   ]
+  },
+  "lake-under5": {
+   "type": "leaf",
+   "title": "Children under 5 near a lake or pond",
+   "summary": "Nearly a quarter of the world's drowning deaths are children under five. The measures with the strongest evidence are barriers and supervised care.",
+   "measures": [
+    {
+     "text": "Control access to water: barriers, fencing, covered wells",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures"
+     ]
+    },
+    {
+     "text": "Community day-care for pre-school children: village crèches in Bangladesh cut child drowning deaths by about 82%",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures",
+      "rahman-anchal-2012",
+      "who-investment-case"
+     ]
+    },
+    {
+     "text": "Caregiver CPR and safe-rescue skills",
+     "grade": "C"
+    }
+   ],
+   "count": [
+    "age",
+    "supervision at the time",
+    "barrier present",
+    "distance from home",
+    "outcome"
+   ],
+   "adopter": "A town, a child-care provider, a lake association",
+   "track": null,
+   "unknown": null,
+   "rows": [
+    "who-age-under5",
+    "who-investment-case"
+   ]
+  },
+  "lake-children": {
+   "type": "leaf",
+   "title": "Children 5–14 and teens at the lake",
+   "summary": "Drowning is a leading cause of death for children 5–14 in several regions. Skills first, then supervised places to use them.",
+   "measures": [
+    {
+     "text": "Basic swimming, water-safety and safe-rescue skills: SwimSafe lessons in Bangladesh cut child drowning deaths by about 93%",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures",
+      "rahman-anchal-2012"
+     ]
+    },
+    {
+     "text": "Lifeguarded swim areas",
+     "grade": "C",
+     "rows": [
+      "usla-guarded-risk"
+     ]
+    },
+    {
+     "text": "Ice safety education and a throw rope at known crossings",
+     "grade": "C"
+    }
+   ],
+   "count": [
+    "age band",
+    "swim skills reported",
+    "lifeguard present",
+    "ice or open water",
+    "outcome"
+   ],
+   "adopter": "A school district, a camp, a town",
+   "track": null,
+   "unknown": null,
+   "rows": [
+    "who-region-wpr"
+   ]
+  },
+  "lake-adults": {
+   "type": "leaf",
+   "title": "Adults at the lake",
+   "summary": "Alcohol, cold water and no life jacket. In US boating deaths alcohol is the leading known factor.",
+   "measures": [
+    {
+     "text": "Always wear a life jacket on the water: about half the drowning risk",
+     "grade": "B",
+     "rows": [
+      "cummings-pfd-2011"
+     ]
+    },
+    {
+     "text": "Alcohol and water don't mix: the leading known factor in US boating deaths (an association)",
+     "grade": "C",
+     "rows": [
+      "uscg-boating-2024"
+     ]
+    },
+    {
+     "text": "A hand-size card on time in cold water",
+     "grade": "D",
+     "rows": [
+      "giesbrecht-1-10-1"
+     ]
+    },
+    {
+     "text": "Ice-rescue kit and training for the first responders who will be called",
+     "grade": "C"
+    }
+   ],
+   "count": [
+    "activity",
+    "life jacket",
+    "alcohol suspected",
+    "water temperature",
+    "time to rescue",
+    "outcome"
+   ],
+   "adopter": "A lake association, a volunteer fire department",
+   "track": "clock",
+   "unknown": null,
+   "rows": [
+    "uscg-boating-2024"
+   ]
+  },
+  "pool-under5": {
+   "type": "leaf",
+   "title": "Children under 5 at a pool",
+   "summary": "Four-sided fencing that separates the pool from the house is the measure with the clearest evidence.",
+   "measures": [
+    {
+     "text": "Four-sided fencing that separates the pool from the house, with a self-latching gate: a quarter of the odds of drowning versus no fence",
+     "grade": "B",
+     "rows": [
+      "cochrane-pool-fencing",
+      "peterson-us-348",
+      "who-prevention-measures"
+     ]
+    },
+    {
+     "text": "Supervision within arm's reach, with one adult named as the watcher",
+     "grade": "C"
+    },
+    {
+     "text": "Caregiver CPR",
+     "grade": "C"
+    }
+   ],
+   "count": [
+    "age",
+    "fence type",
+    "gate latched",
+    "supervision at the time",
+    "outcome"
+   ],
+   "adopter": "A town building department, a homeowners' association, a pool company",
+   "track": null,
+   "unknown": null,
+   "rows": [
+    "peterson-us-348"
+   ]
+  },
+  "pool-children": {
+   "type": "leaf",
+   "title": "Children and teens at a pool",
+   "summary": "Skills and lifeguards.",
+   "measures": [
+    {
+     "text": "Swimming and water-safety lessons",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures"
+     ]
+    },
+    {
+     "text": "Lifeguards and posted rules at public pools",
+     "grade": "C"
+    }
+   ],
+   "count": [
+    "age band",
+    "lifeguard present",
+    "swim skills",
+    "outcome"
+   ],
+   "adopter": "A school, a town pool, a swim club",
+   "track": null,
+   "unknown": null,
+   "rows": []
+  },
+  "pool-adults": {
+   "type": "leaf",
+   "title": "Adults at a pool",
+   "summary": "Alcohol, swimming alone and medical conditions.",
+   "measures": [
+    {
+     "text": "Never swim alone",
+     "grade": "C"
+    },
+    {
+     "text": "Alcohol away from the water",
+     "grade": "C"
+    },
+    {
+     "text": "Lifeguards at public pools",
+     "grade": "C"
+    }
+   ],
+   "count": [
+    "age",
+    "alone or accompanied",
+    "alcohol suspected",
+    "medical condition reported",
+    "outcome"
+   ],
+   "adopter": "A pool operator, a hotel",
+   "track": null,
+   "unknown": null,
+   "rows": []
+  },
+  "home-under5": {
+   "type": "leaf",
+   "title": "Children under 5 at home",
+   "summary": "Baths, buckets, wells and tanks. In low-income settings this is where a large share of under-five drownings happen. The WHO investment case puts day-care and swim skills at the center.",
+   "measures": [
+    {
+     "text": "Cover wells and tanks; empty buckets and baths after use; doorway barriers and playpens",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures"
+     ]
+    },
+    {
+     "text": "Community day-care for pre-school children: crèches cut child drowning deaths by about 82% in Bangladesh",
+     "grade": "A",
+     "rows": [
+      "who-investment-case",
+      "rahman-anchal-2012"
+     ]
+    },
+    {
+     "text": "Caregiver safe-rescue skills",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures"
+     ]
+    }
+   ],
+   "count": [
+    "age",
+    "water source",
+    "supervision at the time",
+    "barrier present",
+    "outcome"
+   ],
+   "adopter": "A health ministry, an NGO running day-care, a village council",
+   "track": null,
+   "unknown": null,
+   "rows": [
+    "who-age-under5",
+    "who-investment-case"
+   ]
+  },
+  "flood-before": {
+   "type": "leaf",
+   "title": "A community before the flood",
+   "summary": "Three in four flood-disaster deaths are drownings. Preparedness and early warning are the measures WHO recommends.",
+   "measures": [
+    {
+     "text": "Flood preparedness, planning and early warning",
+     "grade": "A",
+     "rows": [
+      "who-prevention-measures"
+     ]
+    },
+    {
+     "text": "Marked evacuation routes to high ground, practiced",
+     "grade": "C"
+    },
+    {
+     "text": "Count flood drownings as drownings so they appear in the ledger",
+     "grade": "D",
+     "rows": [
+      "who-flood-share"
+     ]
+    }
+   ],
+   "count": [
+    "event",
+    "warning lead time",
+    "deaths and missing",
+    "drownings among them",
+    "source"
+   ],
+   "adopter": "A municipality, a national disaster agency",
+   "track": null,
+   "unknown": "Flood drownings sit outside the core count. We estimate 3,000–8,000 a year and call that a band, not a count.",
+   "rows": [
+    "who-flood-share",
+    "emdat-flood-deaths-2019"
+   ]
+  },
+  "flood-during": {
+   "type": "leaf",
+   "title": "A household in a flood",
+   "summary": "Moving water takes cars and people. The measure is not to enter it.",
+   "measures": [
+    {
+     "text": "Do not walk or drive through moving water",
+     "grade": "C"
+    },
+    {
+     "text": "Move to high ground early, before routes close",
+     "grade": "C"
+    },
+    {
+     "text": "Call the local emergency number for anyone in the water",
+     "grade": "C"
+    }
+   ],
+   "count": [
+    "event",
+    "entered water on foot or in a vehicle",
+    "depth and flow",
+    "outcome"
+   ],
+   "adopter": "A household; the lab has no pilot here",
+   "track": null,
+   "unknown": null,
+   "rows": []
+  }
+ }
+}

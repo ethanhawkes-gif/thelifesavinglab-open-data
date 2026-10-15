@@ -1,0 +1,5 @@
+{
+ "schema": "lifesavinglab.receipts.v1",
+ "note": "One receipt per reviewed bundle. The hash is the SHA-256 of the bundle with its keys sorted; anyone holding the bundle can recompute it.",
+ "receipts": []
+}

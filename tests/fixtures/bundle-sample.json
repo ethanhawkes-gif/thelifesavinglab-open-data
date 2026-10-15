@@ -1,0 +1,19 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "nonfatal-ratio-primary",
+ "preamble_version": "1.0",
+ "contributor": {"handle": "example-handle", "agent": "example-agent 1.0"},
+ "status": "done",
+ "rows": [],
+ "corrections": [
+  {"row_id": "who-nonfatal", "field": "grade", "old": "C", "new": "A", "evidence": "WHO fact sheet, section 'Scope of the problem'"}
+ ],
+ "evidence": [
+  {"url": "https://www.who.int/news-room/fact-sheets/detail/drowning", "quote": "an illustrative placeholder quote used only by the test suite", "where": "Scope of the problem"}
+ ],
+ "tried": [],
+ "notes": "Fixture for tests. Not a real finding.",
+ "next_tasks": [
+  {"title": "Find the non-fatal ratio by WHO region", "why": "The global ratio hides large regional differences"}
+ ]
+}

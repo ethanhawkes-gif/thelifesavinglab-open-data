@@ -1,0 +1,108 @@
+{
+ "schema": "lifesavinglab.toll.v1",
+ "last_checked": "2026-10-14",
+ "method": "Floor = the lowest documented value of every component that is outside the core by definition, plus the core's lowest published bound. Ceiling = the highest documented value of each, assuming the fishing figure sits entirely outside the core. Beyond the ceiling the toll is unknown, not zero.",
+ "layers": [
+  {
+   "id": "core",
+   "label": "Core: unintentional drowning",
+   "status": "modeled",
+   "low": 252000,
+   "high": 300228,
+   "inside_core": true,
+   "rows": [
+    "ihme-gbd-2021",
+    "who-ghe-2021"
+   ],
+   "note": "Two models of the same year. The spread is the uncertainty, not new deaths."
+  },
+  {
+   "id": "fishing",
+   "label": "Fishing work (share outside the core unknown)",
+   "status": "range",
+   "low": 0,
+   "high": 100000,
+   "inside_core": "unknown",
+   "rows": [
+    "fishing-ilo-1999",
+    "fishing-fao-32000",
+    "fishing-fsf-100000"
+   ],
+   "note": "24,000 to 100,000+ a year across sources and decades. Nobody has published how much is already inside WHO's figure, so the floor is 0 and the ceiling assumes none of it is."
+  },
+  {
+   "id": "floods",
+   "label": "Flood and disaster drownings",
+   "status": "estimate",
+   "low": 3000,
+   "high": 8000,
+   "inside_core": false,
+   "rows": [
+    "who-flood-share",
+    "emdat-flood-deaths-2019",
+    "flood-drowning-band"
+   ],
+   "note": "75% of flood-disaster deaths (WHO) applied to EM-DAT yearly totals, which swing several-fold."
+  },
+  {
+   "id": "migrants",
+   "label": "Migrants at sea",
+   "status": "minimum",
+   "low": 3650,
+   "high": 5700,
+   "inside_core": false,
+   "rows": [
+    "migrants-maritime-sep24-may25",
+    "migrants-2025-sea-routes"
+   ],
+   "note": "Recorded deaths are a minimum; IOM estimates about 1,500 more in wrecks no one recorded."
+  },
+  {
+   "id": "ferries",
+   "label": "Ferry accidents",
+   "status": "estimate",
+   "low": 800,
+   "high": 2000,
+   "inside_core": false,
+   "rows": [
+    "ferry-wfsa"
+   ],
+   "note": "An old estimate from the Worldwide Ferry Safety Association, which said the true figure could be double."
+  },
+  {
+   "id": "transport-other",
+   "label": "Other shipping and small craft",
+   "status": "unknown",
+   "low": null,
+   "high": null,
+   "inside_core": false,
+   "rows": [
+    "water-transport-other"
+   ],
+   "note": "No global yearly series exists."
+  },
+  {
+   "id": "intentional",
+   "label": "Intentional and undetermined intent",
+   "status": "unknown",
+   "low": null,
+   "high": null,
+   "inside_core": false,
+   "rows": [
+    "intentional-drowning"
+   ],
+   "note": "A different problem with different prevention; no primary global figure reproduced here."
+  }
+ ],
+ "nonfatal": {
+  "label": "Non-fatal drownings",
+  "ratio_low": 4,
+  "ratio_high": 5,
+  "rows": [
+   "who-nonfatal"
+  ],
+  "note": "For every death, four to five people survive a drowning, many with lasting injury. Never added to deaths."
+ },
+ "floor": 259450,
+ "ceiling": 415928
+}

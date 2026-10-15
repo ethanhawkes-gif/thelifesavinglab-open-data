@@ -57,6 +57,20 @@ Contribution → validation → staged or quarantined → reviewer accepts/decli
 like a drowning, a search, a capsize or a rescue, for a person to read. It stores links, sources, dates and a derived kind:
 no headline text and no names. `scripts/watch-review.mjs` turns a report into a register row. See `watch/README.md`.
 
+## Lend your agent an hour
+
+`tasks/` is a board of small, well-defined tasks that anyone can hand to an AI assistant they already pay for (ChatGPT,
+Claude, Gemini, Grok, or any other): verify one figure, find one primary source, write one row. `node scripts/tasks.mjs
+prompt <id>` prints a self-contained prompt pack; the agent returns a JSON bundle; `node scripts/tasks.mjs check` runs the
+machine checks (schema, personal data, quote length, press domains, sums); a person decides; `receipt` writes a public
+receipt to `receipts/lend.json` with the bundle's hash. Accepted bundles may propose follow-ups, which `promote` puts on
+the board. See `tasks/README.md`.
+
+## Estimates
+
+`estimates/` is the ledger behind the site's sizing of the global toll: every figure with its source, scope, year, grade
+and the rule for what it must not be added to, plus the toll layers and the decision tree. See `estimates/README.md`.
+
 ## Documents
 
 `DATA_POLICY.md` · `SECURITY.md` · `CONTRIBUTING.md` · `GOVERNANCE.md` · `docs/ARCHITECTURE.md` ·
