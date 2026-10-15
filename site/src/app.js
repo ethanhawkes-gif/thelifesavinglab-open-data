@@ -174,7 +174,7 @@
     <div class="card stack-sm" style="border-top:4px solid var(--buoy)"><h3 class="h3">Students</h3><p class="small" style="font-size:16px">24 seats. Own a branch of the tree, name an adopter, and defend a pilot.</p><a class="btn btn--primary btn--sm" style="margin-top:auto" href="${SITE}/cohort">Join the cohort</a></div>
     <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Experts and responders</h3><p class="small" style="font-size:16px">Harbormasters, crews, fishers, lifeguards: bring the sentence your service still uses, or a pilot you would adopt.</p><a class="btn btn--ghost btn--sm" style="margin-top:auto" href="#contribute-pilot">Bring expertise</a></div>
     <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Data contributors</h3><p class="small" style="font-size:16px">Add a ledger row, verify a secondary one, or run the incident register in your harbor.</p><a class="btn btn--ghost btn--sm" style="margin-top:auto" href="#contribute-row">Open the queue</a></div>
-    <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Funders and partners</h3><p class="small" style="font-size:16px">Read the method and the ledger first. We report pilots written, adopted and failed. The lab holds no money: donations go directly to the <a href="${WILSSA}">Wood Island Life Saving Station Association</a>, which restored the station. <a href="https://github.com/ethanhawkes-gif/thelifesavinglab-open-data/blob/main/docs/briefs/funder-one-pager.md">The one-page brief.</a></p><div class="row" style="margin-top:auto;gap:8px"><a class="btn btn--sm" href="${WILSSA}">Give to the station</a><a class="btn btn--ghost btn--sm" href="#contribute-offer">Write to us</a></div></div>
+    <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Funders and partners</h3><p class="small" style="font-size:16px">Read the method and the ledger first. We report pilots written, adopted and failed. The lab holds no money: donations go directly to the <a href="${WILSSA}">Wood Island Life Saving Station Association</a>, which restored the station. <a href="#briefs-funder-one-pager">The one-page brief.</a></p><div class="row" style="margin-top:auto;gap:8px"><a class="btn btn--sm" href="${WILSSA}">Give to the station</a><a class="btn btn--ghost btn--sm" href="#contribute-offer">Write to us</a></div></div>
   </div>
   <div class="card--dark" style="padding:clamp(22px,3vw,36px);border-radius:2px;display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between">
     <div class="stack-sm" style="flex:1 1 420px;min-width:0"><p class="eyebrow">Spare AI usage this month?</p><h3 class="h3" style="color:var(--paper)">Lend your assistant an hour.</h3><p class="small" style="font-size:16px;color:var(--mist);max-width:40em">One click opens a small, sourced task in ChatGPT, Claude, Grok or Perplexity (paste it into Gemini). Hand back what it found; a person checks it; you get a receipt that says what changed.</p></div>
@@ -577,6 +577,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     register: { html: () => window.Register.page(ctx()), mount: () => window.Register.mount({ toast, copyText, saveFile }), title: 'The register · The Life-Saving Lab' },
     pilots: { html: () => window.Pilots.page(ctx()), mount: (arg) => window.Pilots.mount(ctx(), { toast, copyText, saveFile }, arg), title: 'Pilots · The Life-Saving Lab' },
     harbor: { html: () => window.Harbor.page(ctx()), title: 'This water · The Life-Saving Lab' },
+    briefs: { html: (arg) => window.Briefs.page(ctx(), arg), mount: (arg) => window.Briefs.mount(ctx(), arg), title: 'Briefs · The Life-Saving Lab' },
     lend: { html: () => window.Lend.page(ctx()), mount: () => window.Lend.mount(ctx(), { toast, copyText, saveFile }), title: 'Lend your agent · The Life-Saving Lab' },
     wisdom: { html: wisdomPage, title: 'Applied Wisdom · The Life-Saving Lab' },
     contribute: { html: contributePage, mount: mountContribute, title: 'Contribute · The Life-Saving Lab' }
@@ -604,7 +605,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     window.Extra.startCounter(DATA.toll);
     document.title = routes[route].title;
     if (route !== lastRoute || route !== 'tree') {
-      const keep = (route === 'ledger' || route === 'pilots') && arg;
+      const keep = ((route === 'ledger' || route === 'pilots') && arg) || (route === 'briefs' && lastRoute === 'briefs');
       if (!keep) jumpTop();
     }
     if (route === 'tree' && lastRoute === 'tree') { const b = document.getElementById('tree-body'); if (b) { const top = b.getBoundingClientRect().top + window.scrollY - 140; if (window.scrollY > top) window.scrollTo({ top, behavior: 'smooth' }); } }

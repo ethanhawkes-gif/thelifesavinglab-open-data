@@ -163,7 +163,7 @@
     <div class="card card--dashed stack-sm"><p class="eyebrow">Partners sought</p><p class="small" style="font-size:15px">A harbormaster · a fishing co-op · a fisheries safety body · a volunteer lifeboat station · a surfboat or helicopter training cell · a flag state or death register. None has been asked yet.</p></div>
     <div class="card card--dashed stack-sm"><p class="eyebrow">What we report</p><p class="small" style="font-size:15px">Pilots written, adopted and failed; minutes from surprise to first report; whether pilots are still in use six months on. Never lives saved that nobody counted.</p></div>
   </div>
-  <p class="small muted">One-page briefs, plain language, everything marked proposed: <a href="https://github.com/ethanhawkes-gif/thelifesavinglab-open-data/blob/main/docs/briefs/co-host-brief-applied-wisdom.md">for a co-host</a> · <a href="https://github.com/ethanhawkes-gif/thelifesavinglab-open-data/blob/main/docs/briefs/partner-one-pager.md">for a partner</a> · <a href="https://github.com/ethanhawkes-gif/thelifesavinglab-open-data/blob/main/docs/briefs/funder-one-pager.md">for a funder</a>.</p>
+  <p class="small muted">One-page briefs, plain language, everything marked proposed: <a href="#briefs-co-host-brief-applied-wisdom">for a co-host</a> · <a href="#briefs-partner-one-pager">for a partner</a> · <a href="#briefs-funder-one-pager">for a funder</a>.</p>
 </div></section>`;
   }
 

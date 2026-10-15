@@ -31,7 +31,7 @@ You would get numbers anyone can check, starting at zero: pilots written, pilots
 
 ## How the lab makes its figures
 
-Every figure on the site sits in a ledger row with its source, its year, its scope, a grade for its provenance (A primary official, B peer-reviewed, C press or secondary, D a judgment stated as such) and a rule for what it must not be added to. The global toll is given as a range, a floor of about 260,000 a year and a ceiling of about 416,000, and the unknown is drawn as unknown.
+Every figure on the site sits in a ledger row with its source, its year, its scope, a grade for its provenance (A primary official, B peer-reviewed, C press or secondary, D a judgment stated as such) and a rule for what it must not be added to. The global toll is given as a range, a floor of about 260,000 a year and a ceiling of about 415,000, and the unknown is drawn as unknown.
 
 ## Gates
 

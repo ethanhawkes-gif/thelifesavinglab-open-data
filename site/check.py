@@ -12,7 +12,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, 'site', 'dist')
-ROUTES = ['home', 'toll', 'gaps', 'ledger', 'ledger-who-ghe-2021', 'tree', 'tree-harbor-recreational', 'pilots', 'pilots-cold-water-card', 'harbor', 'watch', 'june', 'wisdom', 'register', 'lend', 'contribute', 'glossary']
+ROUTES = ['home', 'toll', 'gaps', 'ledger', 'ledger-who-ghe-2021', 'tree', 'tree-harbor-recreational', 'pilots', 'pilots-cold-water-card', 'harbor', 'briefs', 'briefs-funder-one-pager', 'watch', 'june', 'wisdom', 'register', 'lend', 'contribute', 'glossary']
 PORT = 8791
 SHOTS = '--shots' in sys.argv
 

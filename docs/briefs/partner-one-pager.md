@@ -23,7 +23,7 @@ No names, contacts or precise positions in any data. No figure summed across sou
 
 ## What exists today
 
-A sized global toll (a floor of about 260,000 drownings a year and a ceiling of about 416,000, with the unknown drawn as unknown); a ledger of 61 sourced figures; a decision tree of 17 branches, each with graded measures; an incident register you can use on a phone at the ramp; an hourly watch of reported drownings; a board of tasks anyone's AI assistant can take.
+A sized global toll (a floor of about 260,000 drownings a year and a ceiling of about 415,000, with the unknown drawn as unknown); a ledger of more than sixty sourced figures; a decision tree of seventeen branches, each with graded measures; an incident register you can use on a phone at the ramp; an hourly watch of reported drownings; a board of tasks anyone's AI assistant can take.
 
 ## Money
 

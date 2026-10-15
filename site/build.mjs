@@ -39,17 +39,52 @@ function changelog() {
   } catch { return { schema: 'lifesavinglab.changelog.v1', generated: new Date().toISOString(), entries: [] }; }
 }
 
+/** A small Markdown-to-HTML converter for the briefs: headings, paragraphs, lists, tables, bold, italics, links, blockquotes. */
+function markdown(md) {
+  const esc = (t) => t.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const inline = (t) => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<i>$1</i>').replace(/`(.+?)`/g, '<span class="mono">$1</span>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>').replace(/\b((?:https?:\/\/|github\.com\/)[^\s<]+)/g, (m) => `<a href="${m.startsWith('http') ? m : 'https://' + m}">${m}</a>`);
+  const lines = md.replace(/\r/g, '').split('\n'); const out = []; let i = 0;
+  while (i < lines.length) {
+    const l = lines[i];
+    if (!l.trim()) { i++; continue; }
+    if (/^#{1,3} /.test(l)) { const n = l.match(/^#+/)[0].length; out.push(`<h${n + 1} class="${n === 1 ? 'display h2' : n === 2 ? 'h3' : 'h4'}">${inline(l.slice(n + 1))}</h${n + 1}>`); i++; continue; }
+    if (/^> /.test(l)) { out.push(`<blockquote class="quote">${inline(l.slice(2))}</blockquote>`); i++; continue; }
+    if (/^\|/.test(l)) { const rows = []; while (i < lines.length && /^\|/.test(lines[i])) rows.push(lines[i++]); const cells = (r) => r.replace(/^\||\|$/g, '').split('|').map((c) => c.trim());
+      const head = cells(rows[0]); const body = rows.slice(2).map(cells);
+      out.push(`<div class="tscroll"><table class="data"><thead><tr>${head.map((h) => `<th>${inline(h)}</th>`).join('')}</tr></thead><tbody>${body.map((r) => `<tr>${r.map((c) => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`); continue; }
+    if (/^(-|\d+\.) /.test(l)) { const ordered = /^\d/.test(l); const items = []; while (i < lines.length && /^(-|\d+\.) /.test(lines[i])) { let item = lines[i].replace(/^(-|\d+\.) /, ''); i++; while (i < lines.length && /^\s{2,}\S/.test(lines[i])) item += ' ' + lines[i++].trim(); items.push(item); }
+      out.push(`<${ordered ? 'ol' : 'ul'} class="small" style="font-size:16px;padding-left:22px;display:flex;flex-direction:column;gap:8px">${items.map((t) => `<li>${inline(t)}</li>`).join('')}</${ordered ? 'ol' : 'ul'}>`); continue; }
+    const para = []; while (i < lines.length && lines[i].trim() && !/^(#{1,3} |> |\||- |\d+\. )/.test(lines[i])) para.push(lines[i++].trim());
+    out.push(`<p>${inline(para.join(' '))}</p>`);
+  }
+  return out.join('\n');
+}
+
+async function briefs() {
+  const dir = path.join(ROOT, 'docs', 'briefs'); const { readdir } = await import('node:fs/promises');
+  const files = (await readdir(dir)).filter((f) => f.endsWith('.md') && f !== 'README.md').sort();
+  const items = [];
+  for (const f of files) {
+    const md = await readFile(path.join(dir, f), 'utf8');
+    const title = (md.match(/^# (.+)$/m) || [, f])[1];
+    items.push({ id: f.replace(/\.md$/, ''), title, html: markdown(md.replace(/^# .+\n/, '')), source: `docs/briefs/${f}` });
+  }
+  return { schema: 'lifesavinglab.briefs.v1', generated: new Date().toISOString(), items };
+}
+
 async function main() {
   await rm(OUT, { recursive: true, force: true });
   await mkdir(path.join(OUT, 'data'), { recursive: true });
   const body = await readFile(path.join(SRC, 'index.html'), 'utf8');
   await writeFile(path.join(OUT, 'index.html'), HEAD + body + FOOT);
-  for (const f of ['site.css', 'charts.js', 'extra.js', 'register.js', 'lend.js', 'pilots.js', 'harbor.js', 'app.js']) await cp(path.join(SRC, f), path.join(OUT, f));
+  for (const f of ['site.css', 'charts.js', 'extra.js', 'register.js', 'lend.js', 'pilots.js', 'harbor.js', 'briefs.js', 'app.js']) await cp(path.join(SRC, f), path.join(OUT, f));
   await cp(path.join(SRC, 'img'), path.join(OUT, 'img'), { recursive: true });
   for (const [from, to] of DATA) await cp(path.join(ROOT, from), path.join(OUT, to));
   await writeFile(path.join(OUT, 'data', 'changelog.json'), JSON.stringify(changelog(), null, 1));
+  await writeFile(path.join(OUT, 'data', 'briefs.json'), JSON.stringify(await briefs(), null, 1));
   await writeFile(path.join(OUT, '.nojekyll'), '');
   await writeFile(path.join(OUT, 'robots.txt'), 'User-agent: *\nAllow: /\n');
-  console.log(`built ${OUT}: index.html, 7 assets, ${DATA.length + 1} data files`);
+  console.log(`built ${OUT}: index.html, 8 assets, ${DATA.length + 2} data files`);
 }
 main().catch((e) => { console.error(e); process.exit(1); });
