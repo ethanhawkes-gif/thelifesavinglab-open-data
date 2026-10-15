@@ -8,7 +8,7 @@
   const API = null;
   const MAX_QUOTE_WORDS = 25;
   const PRESS = ['bbc.co.uk', 'bbc.com', 'cnn.com', 'reuters.com', 'apnews.com', 'nytimes.com', 'theguardian.com', 'washingtonpost.com', 'foxnews.com', 'nbcnews.com', 'abcnews.go.com', 'cbsnews.com', 'dailymail.co.uk', 'independent.co.uk', 'telegraph.co.uk', 'aljazeera.com', 'yahoo.com', 'msn.com', 'wikipedia.org', 'medium.com', 'substack.com', 'x.com', 'twitter.com', 'facebook.com', 'reddit.com', 'youtube.com'];
-  const PII = [['email', /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i], ['phone', /(?:\+?\d{1,3}[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\b/], ['id number', /\b\d{3}-\d{2}-\d{4}\b/], ['street address', /\b\d{1,5}\s+\w+(?:\s\w+)?\s(?:St|Street|Ave|Avenue|Rd|Road|Ln|Lane|Dr|Drive|Ct|Court|Blvd)\b/i], ['position', /-?\d{1,3}\.\d{4,},\s*-?\d{1,3}\.\d{4,}/], ['named person', /\b(?:victim|deceased|survivor|patient|next of kin)\s*(?:name)?\s*[:=]/i], ['credential', /\b(?:api[_-]?key|secret|password|token)\s*[:=]|\bgh[pousr]_[A-Za-z0-9]{20,}|\bsk-[A-Za-z0-9]{20,}/i]];
+  const PII = [['email', /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i], ['phone', /(?<!\d)(?:\+?\d{1,3}[\s.-])?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}(?!\d)/], ['phone', /(?<!\d)\+\d{1,3}(?:[\s.-]?\d{2,4}){2,4}(?!\d)/], ['id number', /\b\d{3}-\d{2}-\d{4}\b/], ['street address', /\b\d{1,5}\s+\w+(?:\s\w+)?\s(?:St|Street|Ave|Avenue|Rd|Road|Ln|Lane|Dr|Drive|Ct|Court|Blvd)\b/i], ['position', /-?\d{1,3}\.\d{4,},\s*-?\d{1,3}\.\d{4,}/], ['named person', /\b(?:victim|deceased|survivor|patient|next of kin)\s*(?:name)?\s*[:=]/i], ['credential', /\b(?:api[_-]?key|secret|password|token)\s*[:=]|\bgh[pousr]_[A-Za-z0-9]{20,}|\bsk-[A-Za-z0-9]{20,}/i]];
   const AGENTS = [
     ['ChatGPT', (p) => 'https://chatgpt.com/?q=' + encodeURIComponent(p)],
     ['Claude', (p) => 'https://claude.ai/new?q=' + encodeURIComponent(p)],
@@ -116,7 +116,7 @@
 
 <section class="section--tight band" aria-labelledby="back-title"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:36px 56px">
   <div class="stack" style="flex:1.2 1 460px;min-width:0;gap:16px">
-    <div class="stack-sm"><p class="eyebrow">Hand it back</p><h2 class="h2 display" id="back-title">Paste the file your assistant returned.</h2><p class="small muted" style="font-size:15px">Its last message should be one JSON object and nothing else. Paste it whole. The checks run here; nothing leaves this page until you send it.</p></div>
+    <div class="stack-sm"><p class="eyebrow">Hand it back</p><h2 class="h2 display" id="back-title">Paste the file your assistant returned.</h2><p class="small muted" style="font-size:15px">Its last message should be one JSON object and nothing else. Paste it whole. The checks run here; nothing leaves this page until you send it. <a href="${REPO}/blob/main/tasks/example-bundle.json">A real returned file, for comparison.</a></p></div>
     <div class="field"><label for="bundle-in">The bundle</label><textarea id="bundle-in" style="min-height:220px;font-family:var(--mono);font-size:13px" spellcheck="false" placeholder='{ "schema": "lifesavinglab.bundle.v1", "task_id": "...", ... }'></textarea></div>
     <div class="row"><button class="btn btn--primary" id="bundle-check" type="button">Check it</button><button class="btn btn--ghost" id="bundle-clear" type="button">Clear</button></div>
     <div id="bundle-out" class="stack-sm"></div>
@@ -161,7 +161,7 @@
       return `<article class="rec" style="gap:10px;padding:22px 0" id="task-${esc(t.id)}">
   <div class="row" style="align-items:center;gap:8px 14px"><span class="k">${esc(t.id)}</span><span class="pill pill-${st === 'open' ? 'A' : st === 'claimed' ? 'C' : 'B'}">${st}</span><span class="small muted" style="font-size:14px">${esc(KIND[t.kind] || t.kind)} · ${esc(SIZE[t.size] || t.size)}${st === 'claimed' ? ' · held by ' + esc(t.claimed_by) + ' until ' + esc(String(t.claimed_until).slice(0, 10)) : ''}${st === 'done' && t.done_receipt ? ' · receipt ' + esc(t.done_receipt) : ''}</span></div>
   <h3 class="h4" style="max-width:40em">${esc(t.title)}</h3>
-  <p class="small" style="font-size:15px;max-width:60em">${esc(t.ask)}</p>
+  ${st === 'done' && t.done_note ? `<p class="small" style="font-size:14px;max-width:60em;color:var(--teal)">${esc(t.done_note)}</p>` : `<p class="small" style="font-size:15px;max-width:60em">${esc(t.ask)}</p>`}
   <p class="small muted" style="font-size:14px"><b>Unlocks:</b> ${esc(t.unlocks)}${t.rows.length ? ' · Rows: ' + t.rows.map((r) => `<a href="#ledger-${esc(r)}">${esc(r)}</a>`).join(', ') : ''}</p>
   <div class="row" style="gap:8px">${links}</div>
   <pre class="json" id="prompt-${esc(t.id)}" hidden></pre>

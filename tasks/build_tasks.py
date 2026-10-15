@@ -5,17 +5,24 @@ LEDGER = 'https://raw.githubusercontent.com/ethanhawkes-gif/thelifesavinglab-ope
 
 
 T = []
-def task(id, title, kind, size, ask, inputs, accept, rows=None, unlocks='', parent=None):
-    T.append(dict(id=id, title=title, kind=kind, size=size, status='open', ask=ask, inputs=inputs, accept=accept, rows=rows or [],
-                  unlocks=unlocks, parent=parent, claimed_by=None, claimed_until=None, created='2026-10-15', done_receipt=None))
+def task(id, title, kind, size, ask, inputs, accept, rows=None, unlocks='', parent=None, status='open', done_note=None):
+    T.append(dict(id=id, title=title, kind=kind, size=size, status=status, ask=ask, inputs=inputs, accept=accept, rows=rows or [],
+                  unlocks=unlocks, parent=parent, claimed_by=None, claimed_until=None, created='2026-10-15', done_receipt=None, done_note=done_note))
 
-for region, rid, fig in [('South-East Asia', 'who-region-sear', '~83,000'), ('Africa', 'who-region-afr', '~77,000 · 5.7 per 100,000'),
-                         ('Eastern Mediterranean', 'who-region-emr', '~36,000'), ('Americas', 'who-region-amr', '~16,500'), ('Europe', 'who-region-eur', '9,155 · 1.0 per 100,000')]:
+DONE_NOTE = 'Done by the lab on 15 Oct 2026 by reading the report (Fig. 2 and p. 14); the row is now grade A. The bundle that would have been returned is tasks/example-bundle.json.'
+for region, rid, fig in [('South-East Asia', 'who-region-sear', '83,000 · 4.0 per 100,000'), ('Africa', 'who-region-afr', '66,000 · 5.6 per 100,000'),
+                         ('Eastern Mediterranean', 'who-region-emr', '35,000 · 4.4 per 100,000'), ('Americas', 'who-region-amr', '17,000 · 1.6 per 100,000'), ('Europe', 'who-region-eur', '15,000 · 1.7 per 100,000')]:
     task(f'verify-{rid}', f'Verify the {region} drowning figure for 2021 against the WHO report', 'verify', 'S',
-         f'The ledger carries "{fig}" for the WHO {region} Region in 2021, taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the {region} Region as printed, with the page or table. If the report gives an uncertainty interval, include it.',
-         ['https://www.who.int/publications/i/item/9789240103962', 'Row to verify: ' + rid],
+         f'The ledger carried a figure for the WHO {region} Region in 2021 taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the {region} Region as printed, with the page or table.',
+         ['https://www.who.int/publications/i/item/9789240103962', 'Row verified: ' + rid + ' now reads ' + fig],
          ['A correction or confirmation for row ' + rid + ' citing a page or table in the WHO report', 'A quote of 25 words or fewer from that page', 'Grade proposed: A if read from the report itself'],
-         rows=[rid], unlocks='Upgrades the row from C to A; the region chart becomes citable.')
+         rows=[rid], unlocks='Upgrades the row from C to A; the region chart becomes citable.', status='done', done_note=DONE_NOTE)
+
+task('who-europe-9155-reconcile', 'Europe: 9,155 (1.0 per 100,000) or 15,000 (1.7)? Find where the smaller figure comes from', 'verify', 'M',
+     'The WHO 2024 report prints 15 000 drowning deaths and 1.7 per 100 000 for the WHO European Region in 2021 (Fig. 2 and p. 14). A secondary summary gave 9,155 and 1.0 per 100,000, which the ledger carried until 15 Oct 2026. Find the primary source of 9,155: possibly a WHO Regional Office for Europe release, a different year, a subset of countries (EU/EEA), or a different cause definition. Report what the two figures count, with pages or table names, and whether both can stand as separate rows.',
+     ['https://www.who.int/publications/i/item/9789240103962', 'https://www.who.int/europe/', 'Row: who-region-eur'],
+     ['The primary source of the 9,155 figure, or status not-found with what was tried', 'What each figure counts: region membership, year, ICD codes', 'A proposed scope note for row who-region-eur, or a new row if both stand'],
+     rows=['who-region-eur'], unlocks='Resolves a discrepancy that a careful reader will spot.')
 
 task('flood-series-emdat', 'Compute flood drownings from EM-DAT for 2010–2024', 'row', 'M',
      'WHO states that drowning is 75% of deaths in flood disasters. The ledger carries one year (2019: 5,110 flood deaths, EM-DAT) and a lab band of 3,000–8,000 flood drownings a year. Using EM-DAT (free for research use; register at emdat.be) or CRED\'s annual reports, list total flood deaths for each year 2010–2024, apply 75%, and return one row per year plus a row for the 15-year mean, each citing the CRED report or EM-DAT query used.',
@@ -55,11 +62,11 @@ task('transport-series-national', 'National water-transport death series: UK, Ca
      ['Rows with year, count, and the source\'s definition (commercial only? recreational included?)', 'Each row cites a report or table, not a press release', 'Nothing summed across countries'],
      rows=['water-transport-other', 'uscg-bard'], unlocks='The first pieces of a transport sub-ledger.')
 
-task('nonfatal-ratio-primary', 'Find the primary statement behind "4–5 non-fatal drownings per death"', 'verify', 'S',
-     'The ledger carries "4–5 non-fatal drownings per death" from a secondary summary of the WHO 2024 report. Find where WHO (or the peer-reviewed study WHO cites) states this ratio, quote it, and give the page. If WHO states a different ratio or a range, report that instead.',
-     ['https://www.who.int/publications/i/item/9789240103962', 'https://www.who.int/news-room/fact-sheets/detail/drowning', 'Row: who-nonfatal'],
-     ['A quote of 25 words or fewer with page or section', 'A correction to row who-nonfatal if the wording differs'],
-     rows=['who-nonfatal'], unlocks='Upgrades the survivors figure to grade A.')
+task('nonfatal-ratio-primary', 'Where does "4–5 non-fatal drownings per death" come from? It is not in the WHO 2024 report', 'verify', 'M',
+     'The ledger carried "4–5 non-fatal drownings per death" attributed to the WHO 2024 report. On 15 Oct 2026 the lab read the report: it says (p. 6) that accurate global data on the scale and impacts of non-fatal drowning are largely unavailable, and gives no ratio; the WHO drowning fact sheet gives none either. The row is now grade D (unsupported). Find the primary origin of the 4–5 claim: an earlier WHO document (the 2014 Global report on drowning?), a regional office page, or a peer-reviewed study. Quote it with the page. If it cannot be found, say so: the row will be retired.',
+     ['https://www.who.int/publications/i/item/9789240103962', 'https://www.who.int/news-room/fact-sheets/detail/drowning', 'Rows: who-nonfatal, cdc-nonfatal-ed-2012-2021 (the only counted ratio: about 2 emergency-department visits per death, United States)'],
+     ['A quote of 25 words or fewer with page or section, from a primary document, or status not-found with what was tried', 'A correction to row who-nonfatal: source, url, grade', 'No ratio stated as fact without a document behind it'],
+     rows=['who-nonfatal', 'cdc-nonfatal-ed-2012-2021'], unlocks='Either sources a number the whole field repeats, or retires it.')
 
 task('exposure-any-published', 'Is there any published measure of boating or swimming exposure (trips, hours, launches)?', 'method', 'M',
      'Every drowning rate is per resident, not per trip or hour on the water. Search for any published exposure measure: national boating participation surveys with trips per year (for example the U.S. National Recreational Boating Survey), beach attendance counts from lifeguard services, or harbor launch counts. Return what exists, with its definition, year and source, and a judgment of whether a risk-per-trip figure could be computed from it.',

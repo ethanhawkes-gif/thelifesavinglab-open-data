@@ -11,7 +11,7 @@ def row(id, figure, low, high, unit, year, scope, geography, category, source, u
 
 row('who-ghe-2021', '300,228', 300228, 300228, 'deaths', 2021, 'Unintentional drowning, ICD-10 W65–W74. Excludes water transport, flood and other disasters, intentional drowning.', 'Global', 'core',
     'WHO Global Health Estimates 2021, summary table (released 2024)', 'https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death', 'A',
-    'Never averaged with ihme-gbd-2021 or who-ghe-2019; never summed with excluded components without stating overlap.', 'Point estimate; the cited table prints no uncertainty interval, which is not the same as no uncertainty.', 'core,modeled')
+    'Never averaged with ihme-gbd-2021 or who-ghe-2019; never summed with excluded components without stating overlap.', 'Point estimate; the cited table prints no uncertainty interval, which is not the same as no uncertainty. The 2024 report rounds it to 300 000 and gives a global rate of 3.8 per 100 000 (p. 14).', 'core,modeled')
 row('ihme-gbd-2021', '274,200 (95% UI 252,000–298,000)', 252000, 298000, 'deaths', 2021, 'GBD drowning cause; core definition unintentional drowning W65–W74. Same exclusions as WHO.', '204 countries and territories', 'core',
     'Xie Z et al., Global burden of drowning 1990–2021, Scientific Reports 15:10916 (2025), Table 1', 'https://doi.org/10.1038/s41598-025-95486-w', 'B',
     'Never averaged with who-ghe-2021. The 26,028 gap is model disagreement, not a head count.', 'Independent model and input database from WHO.', 'core,modeled')
@@ -28,34 +28,36 @@ row('who-rate-trend', 'Rate fell 38%, 6.1 → 3.8 per 100,000', 3.8, 6.1, 'death
     'WHO, Drowning fact sheet (2026)', 'https://www.who.int/news-room/fact-sheets/detail/drowning', 'A',
     'A rate, not a count.', '', 'trend')
 row('who-income-low', '39,000 · 5.8 per 100,000 · 13%', 39000, 39000, 'deaths', 2021, 'Unintentional drowning by World Bank income group.', 'Low-income countries', 'who-drowns',
-    'WHO Global status report on drowning prevention 2024, Table 1 (reproduced in Injury Prevention editorial, PMC12911604)', 'https://www.who.int/publications/i/item/9789240103962', 'A',
+    'WHO Global status report on drowning prevention 2024, Fig. 3 (p. 15); confirmed in the report on 15 Oct 2026 (an editorial in Injury Prevention reproduces it as its Table 1)', 'https://www.who.int/publications/i/item/9789240103962', 'A',
     'Rows sum to 299,000 because of rounding; a share of who-ghe-2021, not an addition to it.', '', 'income')
 row('who-income-lower-middle', '147,000 · 4.9 per 100,000 · 49%', 147000, 147000, 'deaths', 2021, 'Unintentional drowning by income group.', 'Lower-middle-income countries', 'who-drowns',
-    'WHO Global status report 2024, Table 1', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'Share of the WHO 2021 figure.', '', 'income')
+    'WHO Global status report on drowning prevention 2024, Fig. 3 (p. 15)', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'Share of the WHO 2021 figure.', '', 'income')
 row('who-income-upper-middle', '89,000 · 3.2 per 100,000 · 30%', 89000, 89000, 'deaths', 2021, 'Unintentional drowning by income group.', 'Upper-middle-income countries', 'who-drowns',
-    'WHO Global status report 2024, Table 1', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'Share of the WHO 2021 figure.', '', 'income')
+    'WHO Global status report on drowning prevention 2024, Fig. 3 (p. 15)', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'Share of the WHO 2021 figure.', '', 'income')
 row('who-income-high', '24,000 · 1.7 per 100,000 · 8%', 24000, 24000, 'deaths', 2021, 'Unintentional drowning by income group.', 'High-income countries', 'who-drowns',
-    'WHO Global status report 2024, Table 1', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'Share of the WHO 2021 figure.', '', 'income')
+    'WHO Global status report on drowning prevention 2024, Fig. 3 (p. 15)', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'Share of the WHO 2021 figure.', '', 'income')
 row('who-age-under5', 'Nearly a quarter of drowning deaths', 0.24, 0.24, 'share', 2021, 'Children under 5.', 'Global', 'who-drowns',
     'WHO, Drowning fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/drowning', 'A', 'A share of one estimate; overlaps with region and income cuts.', 'The 2024 report prints 21% (over 62,000) in some summaries; we chart the fact-sheet wording.', 'age')
 row('who-age-under30', '57% of drowning deaths', 0.57, 0.57, 'share', 2021, 'Ages 0–29.', 'Global', 'who-drowns',
     'WHO, Drowning fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/drowning', 'A', 'Share, not a count.', '', 'age')
 row('who-sex', 'Male rate more than twice the female rate', 2, 2, 'ratio', 2021, 'Drowning death rate by sex.', 'Global', 'who-drowns',
     'WHO, Drowning fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/drowning', 'A', 'Ratio, not a count.', '', 'sex')
-row('who-region-wpr', 'Over 84,000 · 4.3 per 100,000 · ~30% of global', 84000, 84000, 'deaths', 2021, 'Unintentional drowning, WHO Western Pacific Region.', 'Western Pacific', 'who-drowns',
-    'WHO Western Pacific Regional Office, drowning 2024 data page', 'https://data.wpro.who.int/drowning-2024', 'A', 'A share of the WHO global figure.', 'Highest rate among people 70 and older: 13.7 per 100,000.', 'region')
-row('who-region-sear', '~83,000', 83000, 83000, 'deaths', 2021, 'Unintentional drowning, WHO South-East Asia Region.', 'South-East Asia', 'who-drowns',
-    'WHO Global status report 2024, as summarised by a secondary source (esanum, 2025)', 'https://www.who.int/publications/i/item/9789240103962', 'C', 'Share of the WHO figure. Verify against the report table before citing.', 'WHO fact sheet: over half of drownings occur in WPR and SEAR combined.', 'region,verify')
-row('who-region-afr', '~77,000 · 5.7 per 100,000', 77000, 77000, 'deaths', 2021, 'Unintentional drowning, WHO African Region.', 'Africa', 'who-drowns',
-    'WHO Global status report 2024, via secondary source', 'https://www.who.int/publications/i/item/9789240103962', 'C', 'Share of the WHO figure. Verify.', 'Highest regional rate.', 'region,verify')
-row('who-region-emr', '~36,000', 36000, 36000, 'deaths', 2021, 'Unintentional drowning, WHO Eastern Mediterranean Region.', 'Eastern Mediterranean', 'who-drowns',
-    'WHO Global status report 2024, via secondary source', 'https://www.who.int/publications/i/item/9789240103962', 'C', 'Share of the WHO figure. Verify.', '', 'region,verify')
-row('who-region-amr', '~16,500', 16500, 16500, 'deaths', 2021, 'Unintentional drowning, WHO Region of the Americas.', 'Americas', 'who-drowns',
-    'WHO Global status report 2024, via secondary source', 'https://www.who.int/publications/i/item/9789240103962', 'C', 'Share of the WHO figure. Verify.', '', 'region,verify')
-row('who-region-eur', '9,155 · 1.0 per 100,000 · ~3%', 9155, 9155, 'deaths', 2021, 'Unintentional drowning, WHO European Region.', 'Europe', 'who-drowns',
-    'WHO Global status report 2024, via secondary source', 'https://www.who.int/publications/i/item/9789240103962', 'C', 'Share of the WHO figure. Verify.', 'Rates differ more than tenfold between European countries.', 'region,verify')
-row('who-nonfatal', '4–5 non-fatal drownings per death', 4, 5, 'ratio', 2024, 'Non-fatal drowning, many with lasting neurological injury.', 'Global', 'context',
-    'WHO Global status report 2024, as summarised by a secondary source', 'https://www.who.int/publications/i/item/9789240103962', 'C', 'Not deaths. Never added to any death count.', 'Verify the exact wording in the report.', 'nonfatal,verify')
+row('who-region-wpr', '84,000 · 4.3 per 100,000 · 28% of global', 84000, 84000, 'deaths', 2021, 'Unintentional drowning, WHO Western Pacific Region. The report prints deaths to the nearest thousand.', 'Western Pacific', 'who-drowns',
+    'WHO, Global status report on drowning prevention 2024, Fig. 2 (p. 14) and the text on p. 14; figures from WHO Global Health Estimates 2021', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'A share of the WHO global figure; never added to another region\'s share from a different source.', 'Confirmed 15 Oct 2026 against the report (p. 14: 84 000 deaths, 28% of the global burden). The WHO Western Pacific data page gives the same figure and a rate of 13.7 per 100,000 among people 70 and older.', 'region')
+row('who-region-sear', '83,000 · 4.0 per 100,000 · 28% of global', 83000, 83000, 'deaths', 2021, 'Unintentional drowning, WHO South-East Asia Region. The report prints deaths to the nearest thousand.', 'South-East Asia', 'who-drowns',
+    'WHO, Global status report on drowning prevention 2024, Fig. 2 (p. 14) and the text on p. 14; figures from WHO Global Health Estimates 2021', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'A share of the WHO global figure.', 'Upgraded from C to A on 15 Oct 2026 after reading the report: Fig. 2 prints 83 000; p. 14 gives 4.0 per 100 000. WHO fact sheet: over half of the world\'s drowning occurs in the Western Pacific and South-East Asia Regions.', 'region')
+row('who-region-afr', '66,000 · 5.6 per 100,000', 66000, 66000, 'deaths', 2021, 'Unintentional drowning, WHO African Region. The report prints deaths to the nearest thousand.', 'Africa', 'who-drowns',
+    'WHO, Global status report on drowning prevention 2024, Fig. 2 (p. 14) and the text on p. 14; figures from WHO Global Health Estimates 2021', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'A share of the WHO global figure.', 'Corrected 15 Oct 2026: a secondary summary had given ~77,000 and 5.7; the report\'s Fig. 2 prints 66 000 and p. 14 gives 5.6 per 100 000, the highest regional rate.', 'region')
+row('who-region-emr', '35,000 · 4.4 per 100,000', 35000, 35000, 'deaths', 2021, 'Unintentional drowning, WHO Eastern Mediterranean Region. The report prints deaths to the nearest thousand.', 'Eastern Mediterranean', 'who-drowns',
+    'WHO, Global status report on drowning prevention 2024, Fig. 2 (p. 14) and the text on p. 14; figures from WHO Global Health Estimates 2021', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'A share of the WHO global figure.', 'Corrected 15 Oct 2026 from ~36,000 (secondary summary) to the report\'s 35 000; rate 4.4 per 100 000 (p. 14). The fact sheet gives this region the highest rate among children under 5: 16.8 per 100,000.', 'region')
+row('who-region-amr', '17,000 · 1.6 per 100,000', 17000, 17000, 'deaths', 2021, 'Unintentional drowning, WHO Region of the Americas. The report prints deaths to the nearest thousand.', 'Americas', 'who-drowns',
+    'WHO, Global status report on drowning prevention 2024, Fig. 2 (p. 14) and the text on p. 14; figures from WHO Global Health Estimates 2021', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'A share of the WHO global figure.', 'Corrected 15 Oct 2026 from ~16,500 (secondary summary) to the report\'s 17 000; rate 1.6 per 100 000 (p. 14).', 'region')
+row('who-region-eur', '15,000 · 1.7 per 100,000', 15000, 15000, 'deaths', 2021, 'Unintentional drowning, WHO European Region. The report prints deaths to the nearest thousand.', 'Europe', 'who-drowns',
+    'WHO, Global status report on drowning prevention 2024, Fig. 2 (p. 14) and the text on p. 14; figures from WHO Global Health Estimates 2021', 'https://www.who.int/publications/i/item/9789240103962', 'A', 'A share of the WHO global figure.', 'Corrected 15 Oct 2026: a secondary summary had given 9,155 and 1.0 per 100,000; the report\'s Fig. 2 prints 15 000 and p. 14 gives 1.7. The 9,155 figure may come from a different region membership or cause definition; unresolved, and a task on the board.', 'region,open')
+row('who-nonfatal', '4–5 non-fatal drownings per death (often quoted; no primary source found)', 4, 5, 'ratio', 2024, 'Non-fatal drowning, many with lasting neurological injury.', 'Global', 'context',
+    'Often quoted; checked 15 Oct 2026 and not found in the WHO 2024 report or the WHO fact sheet', '', 'D', 'Not deaths. Never added to any death count. Unsupported until a primary source is found.', 'The WHO 2024 report says (p. 6) that accurate global data on the scale and impacts of non-fatal drowning are largely unavailable; the fact sheet gives no ratio. Kept on the record so the claim can be traced, not relied on.', 'nonfatal,open')
+row('cdc-nonfatal-ed-2012-2021', 'About 2 emergency-department visits for non-fatal drowning per death (8,111 visits to 4,083 deaths a year)', 2, 2, 'ratio', 2021, 'United States, 2012–2021 averages: 4,083 unintentional drowning deaths and 8,111 estimated emergency department visits for non-fatal drowning a year. Counts only survivors who reached an emergency department.', 'United States', 'context',
+    'CDC, Drowning facts (page dated 27 Jan 2026)', 'https://www.cdc.gov/drowning/data-research/facts', 'A', 'A US ratio of emergency-department visits to deaths; not a global ratio and not a count of all survivors.', 'The only counted non-fatal ratio in the ledger. Survivors who never reach an emergency department are not in it.', 'nonfatal,us')
 row('who-data-gaps', '31% of countries record where; under 30% record the activity', 0.31, 0.31, 'share of countries', 2024, 'Surveillance coverage reported by countries.', 'Global', 'gap',
     'WHO Global status report 2024, via secondary source', 'https://www.who.int/publications/i/item/9789240103962', 'C', 'A survey result, not a count.', 'This is the gap the register pilot is written for.', 'gap,verify')
 row('who-flood-share', 'Drowning is 75% of deaths in flood disasters', 0.75, 0.75, 'share', 2026, 'Share of flood-disaster deaths that are drownings.', 'Global', 'excluded',
@@ -140,7 +142,7 @@ row('uk-waid-2024', '193 accidental water-related deaths; 84% male; 61% inland',
     'National Water Safety Forum, Water Incident Database (WAID) 2024', 'https://www.port.ac.uk/news-events-and-blogs/news/193-accidental-water-related-fatalities-in-2024', 'A', 'Accidental only; the open coroner cases may add to it. Not comparable to other countries without the definition.', '', 'country')
 
 with open(os.path.join(OUT, 'ledger.json'), 'w', encoding='utf8') as f:
-    json.dump({"schema": "lifesavinglab.ledger.v2", "version": "0.4.0", "last_checked": CHECKED,
+    json.dump({"schema": "lifesavinglab.ledger.v2", "version": "0.5.0", "last_checked": CHECKED,
                "rule": "No figure in this ledger is summed or averaged across rows unless a row states the overlap assumption and names the rows it combines.",
                "grades": {"A": "primary official data or model output", "B": "peer-reviewed analysis", "C": "press, secondary summary, or an organisation's own statement", "D": "lab judgment, stated as such, with the task that retires it"},
                "rows": R}, f, indent=1, ensure_ascii=False)
@@ -168,7 +170,7 @@ toll = {
   {"id": "intentional", "label": "Intentional and undetermined intent", "status": "unknown", "low": None, "high": None, "inside_core": False,
    "rows": ["intentional-drowning"], "note": "A different problem with different prevention; no primary global figure reproduced here."}
  ],
- "nonfatal": {"label": "Non-fatal drownings", "ratio_low": 4, "ratio_high": 5, "rows": ["who-nonfatal"], "note": "For every death, four to five people survive a drowning, many with lasting injury. Never added to deaths."}
+ "nonfatal": {"label": "Non-fatal drownings", "ratio_low": 2, "ratio_high": 5, "rows": ["cdc-nonfatal-ed-2012-2021", "who-nonfatal"], "note": "In the United States about two people are treated in an emergency department for non-fatal drowning for every death (counted). Four to five per death is often quoted worldwide; no primary source has been found. Never added to deaths."}
 }
 floor = sum(l["low"] for l in toll["layers"] if l["low"] is not None)
 ceiling = sum(l["high"] for l in toll["layers"] if l["high"] is not None)

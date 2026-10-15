@@ -11,11 +11,11 @@
    "title": "Verify the South-East Asia drowning figure for 2021 against the WHO report",
    "kind": "verify",
    "size": "S",
-   "status": "open",
-   "ask": "The ledger carries \"~83,000\" for the WHO South-East Asia Region in 2021, taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the South-East Asia Region as printed, with the page or table. If the report gives an uncertainty interval, include it.",
+   "status": "done",
+   "ask": "The ledger carried a figure for the WHO South-East Asia Region in 2021 taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the South-East Asia Region as printed, with the page or table.",
    "inputs": [
     "https://www.who.int/publications/i/item/9789240103962",
-    "Row to verify: who-region-sear"
+    "Row verified: who-region-sear now reads 83,000 · 4.0 per 100,000"
    ],
    "accept": [
     "A correction or confirmation for row who-region-sear citing a page or table in the WHO report",
@@ -30,18 +30,19 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": "Done by the lab on 15 Oct 2026 by reading the report (Fig. 2 and p. 14); the row is now grade A. The bundle that would have been returned is tasks/example-bundle.json."
   },
   {
    "id": "verify-who-region-afr",
    "title": "Verify the Africa drowning figure for 2021 against the WHO report",
    "kind": "verify",
    "size": "S",
-   "status": "open",
-   "ask": "The ledger carries \"~77,000 · 5.7 per 100,000\" for the WHO Africa Region in 2021, taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the Africa Region as printed, with the page or table. If the report gives an uncertainty interval, include it.",
+   "status": "done",
+   "ask": "The ledger carried a figure for the WHO Africa Region in 2021 taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the Africa Region as printed, with the page or table.",
    "inputs": [
     "https://www.who.int/publications/i/item/9789240103962",
-    "Row to verify: who-region-afr"
+    "Row verified: who-region-afr now reads 66,000 · 5.6 per 100,000"
    ],
    "accept": [
     "A correction or confirmation for row who-region-afr citing a page or table in the WHO report",
@@ -56,18 +57,19 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": "Done by the lab on 15 Oct 2026 by reading the report (Fig. 2 and p. 14); the row is now grade A. The bundle that would have been returned is tasks/example-bundle.json."
   },
   {
    "id": "verify-who-region-emr",
    "title": "Verify the Eastern Mediterranean drowning figure for 2021 against the WHO report",
    "kind": "verify",
    "size": "S",
-   "status": "open",
-   "ask": "The ledger carries \"~36,000\" for the WHO Eastern Mediterranean Region in 2021, taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the Eastern Mediterranean Region as printed, with the page or table. If the report gives an uncertainty interval, include it.",
+   "status": "done",
+   "ask": "The ledger carried a figure for the WHO Eastern Mediterranean Region in 2021 taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the Eastern Mediterranean Region as printed, with the page or table.",
    "inputs": [
     "https://www.who.int/publications/i/item/9789240103962",
-    "Row to verify: who-region-emr"
+    "Row verified: who-region-emr now reads 35,000 · 4.4 per 100,000"
    ],
    "accept": [
     "A correction or confirmation for row who-region-emr citing a page or table in the WHO report",
@@ -82,18 +84,19 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": "Done by the lab on 15 Oct 2026 by reading the report (Fig. 2 and p. 14); the row is now grade A. The bundle that would have been returned is tasks/example-bundle.json."
   },
   {
    "id": "verify-who-region-amr",
    "title": "Verify the Americas drowning figure for 2021 against the WHO report",
    "kind": "verify",
    "size": "S",
-   "status": "open",
-   "ask": "The ledger carries \"~16,500\" for the WHO Americas Region in 2021, taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the Americas Region as printed, with the page or table. If the report gives an uncertainty interval, include it.",
+   "status": "done",
+   "ask": "The ledger carried a figure for the WHO Americas Region in 2021 taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the Americas Region as printed, with the page or table.",
    "inputs": [
     "https://www.who.int/publications/i/item/9789240103962",
-    "Row to verify: who-region-amr"
+    "Row verified: who-region-amr now reads 17,000 · 1.6 per 100,000"
    ],
    "accept": [
     "A correction or confirmation for row who-region-amr citing a page or table in the WHO report",
@@ -108,18 +111,19 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": "Done by the lab on 15 Oct 2026 by reading the report (Fig. 2 and p. 14); the row is now grade A. The bundle that would have been returned is tasks/example-bundle.json."
   },
   {
    "id": "verify-who-region-eur",
    "title": "Verify the Europe drowning figure for 2021 against the WHO report",
    "kind": "verify",
    "size": "S",
-   "status": "open",
-   "ask": "The ledger carries \"9,155 · 1.0 per 100,000\" for the WHO Europe Region in 2021, taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the Europe Region as printed, with the page or table. If the report gives an uncertainty interval, include it.",
+   "status": "done",
+   "ask": "The ledger carried a figure for the WHO Europe Region in 2021 taken from a secondary summary (grade C). Open the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962), find the table or figure that gives drowning deaths and the rate per 100,000 by WHO region for 2021, and report the exact value for the Europe Region as printed, with the page or table.",
    "inputs": [
     "https://www.who.int/publications/i/item/9789240103962",
-    "Row to verify: who-region-eur"
+    "Row verified: who-region-eur now reads 15,000 · 1.7 per 100,000"
    ],
    "accept": [
     "A correction or confirmation for row who-region-eur citing a page or table in the WHO report",
@@ -134,7 +138,36 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": "Done by the lab on 15 Oct 2026 by reading the report (Fig. 2 and p. 14); the row is now grade A. The bundle that would have been returned is tasks/example-bundle.json."
+  },
+  {
+   "id": "who-europe-9155-reconcile",
+   "title": "Europe: 9,155 (1.0 per 100,000) or 15,000 (1.7)? Find where the smaller figure comes from",
+   "kind": "verify",
+   "size": "M",
+   "status": "open",
+   "ask": "The WHO 2024 report prints 15 000 drowning deaths and 1.7 per 100 000 for the WHO European Region in 2021 (Fig. 2 and p. 14). A secondary summary gave 9,155 and 1.0 per 100,000, which the ledger carried until 15 Oct 2026. Find the primary source of 9,155: possibly a WHO Regional Office for Europe release, a different year, a subset of countries (EU/EEA), or a different cause definition. Report what the two figures count, with pages or table names, and whether both can stand as separate rows.",
+   "inputs": [
+    "https://www.who.int/publications/i/item/9789240103962",
+    "https://www.who.int/europe/",
+    "Row: who-region-eur"
+   ],
+   "accept": [
+    "The primary source of the 9,155 figure, or status not-found with what was tried",
+    "What each figure counts: region membership, year, ICD codes",
+    "A proposed scope note for row who-region-eur, or a new row if both stand"
+   ],
+   "rows": [
+    "who-region-eur"
+   ],
+   "unlocks": "Resolves a discrepancy that a careful reader will spot.",
+   "parent": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "flood-series-emdat",
@@ -163,7 +196,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "ferry-database-totals",
@@ -191,7 +225,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "fishing-overlap-method",
@@ -219,7 +254,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "setting-split-canada",
@@ -247,7 +283,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "setting-split-new-zealand",
@@ -275,7 +312,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "setting-split-united-states",
@@ -303,7 +341,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "setting-split-ireland",
@@ -331,7 +370,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "intentional-drowning-who-mdb",
@@ -358,7 +398,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "transport-series-national",
@@ -387,33 +428,37 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "nonfatal-ratio-primary",
-   "title": "Find the primary statement behind \"4–5 non-fatal drownings per death\"",
+   "title": "Where does \"4–5 non-fatal drownings per death\" come from? It is not in the WHO 2024 report",
    "kind": "verify",
-   "size": "S",
+   "size": "M",
    "status": "open",
-   "ask": "The ledger carries \"4–5 non-fatal drownings per death\" from a secondary summary of the WHO 2024 report. Find where WHO (or the peer-reviewed study WHO cites) states this ratio, quote it, and give the page. If WHO states a different ratio or a range, report that instead.",
+   "ask": "The ledger carried \"4–5 non-fatal drownings per death\" attributed to the WHO 2024 report. On 15 Oct 2026 the lab read the report: it says (p. 6) that accurate global data on the scale and impacts of non-fatal drowning are largely unavailable, and gives no ratio; the WHO drowning fact sheet gives none either. The row is now grade D (unsupported). Find the primary origin of the 4–5 claim: an earlier WHO document (the 2014 Global report on drowning?), a regional office page, or a peer-reviewed study. Quote it with the page. If it cannot be found, say so: the row will be retired.",
    "inputs": [
     "https://www.who.int/publications/i/item/9789240103962",
     "https://www.who.int/news-room/fact-sheets/detail/drowning",
-    "Row: who-nonfatal"
+    "Rows: who-nonfatal, cdc-nonfatal-ed-2012-2021 (the only counted ratio: about 2 emergency-department visits per death, United States)"
    ],
    "accept": [
-    "A quote of 25 words or fewer with page or section",
-    "A correction to row who-nonfatal if the wording differs"
+    "A quote of 25 words or fewer with page or section, from a primary document, or status not-found with what was tried",
+    "A correction to row who-nonfatal: source, url, grade",
+    "No ratio stated as fact without a document behind it"
    ],
    "rows": [
-    "who-nonfatal"
+    "who-nonfatal",
+    "cdc-nonfatal-ed-2012-2021"
    ],
-   "unlocks": "Upgrades the survivors figure to grade A.",
+   "unlocks": "Either sources a number the whole field repeats, or retires it.",
    "parent": null,
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "exposure-any-published",
@@ -440,7 +485,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "state-counts-new-hampshire",
@@ -468,7 +514,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "state-counts-maine",
@@ -496,7 +543,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "rnli-rss-feed-access",
@@ -521,7 +569,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   },
   {
    "id": "uscg-rss-feed-address",
@@ -544,7 +593,8 @@
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",
-   "done_receipt": null
+   "done_receipt": null,
+   "done_note": null
   }
  ]
 }

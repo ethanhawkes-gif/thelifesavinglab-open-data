@@ -1,0 +1,33 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "verify-who-region-sear",
+ "preamble_version": "1.0",
+ "contributor": {"handle": "lab", "agent": "Claude Fable 5.1, run inside the lab's own session"},
+ "status": "done",
+ "rows": [],
+ "corrections": [
+  {"row_id": "who-region-sear", "field": "figure", "old": "~83,000", "new": "83,000 · 4.0 per 100,000 · 28% of global", "evidence": "Fig. 2 (p. 14): South-East Asia Region 83 000; p. 14 text: 4.0 per 100 000"},
+  {"row_id": "who-region-sear", "field": "grade", "old": "C", "new": "A", "evidence": "Read from the report itself, Fig. 2 and p. 14"},
+  {"row_id": "who-region-afr", "field": "figure", "old": "~77,000 · 5.7 per 100,000", "new": "66,000 · 5.6 per 100,000", "evidence": "Fig. 2 (p. 14): African Region 66 000; p. 14 text: 5.6 per 100 000"},
+  {"row_id": "who-region-emr", "field": "figure", "old": "~36,000", "new": "35,000 · 4.4 per 100,000", "evidence": "Fig. 2 (p. 14): Eastern Mediterranean Region 35 000; p. 14 text: 4.4 per 100 000"},
+  {"row_id": "who-region-amr", "field": "figure", "old": "~16,500", "new": "17,000 · 1.6 per 100,000", "evidence": "Fig. 2 (p. 14): Region of the Americas 17 000; p. 14 text: 1.6 per 100 000"},
+  {"row_id": "who-region-eur", "field": "figure", "old": "9,155 · 1.0 per 100,000 · ~3%", "new": "15,000 · 1.7 per 100,000", "evidence": "Fig. 2 (p. 14): European Region 15 000; p. 14 text: 1.7 per 100 000"}
+ ],
+ "evidence": [
+  {"url": "https://www.who.int/publications/i/item/9789240103962", "quote": "Fig. 2. Number and rate of drowning deaths by WHO region", "where": "Fig. 2 caption, p. 14"},
+  {"url": "https://www.who.int/publications/i/item/9789240103962", "quote": "The African Region has the highest rate (5.6 per 100 000 population)", "where": "p. 14"},
+  {"url": "https://www.who.int/publications/i/item/9789240103962", "quote": "the Western Pacific Region (4.3 per 100 000 population), the South-East Asia Region (4.0 per 100 000 population)", "where": "p. 14"},
+  {"url": "https://www.who.int/publications/i/item/9789240103962", "quote": "the European Region (1.7 per 100 000 population) and the Region of the Americas (1.6 per 100 000 population)", "where": "p. 14"},
+  {"url": "https://www.who.int/publications/i/item/9789240103962", "quote": "the highest number of drowning deaths occurred in the Western Pacific Region (84 000 deaths, 28% of the global burden)", "where": "p. 14"},
+  {"url": "https://www.who.int/publications/i/item/9789240103962", "quote": "In 2021, there were an estimated 300 000 drowning deaths globally", "where": "p. 12"}
+ ],
+ "tried": [
+  "WHO's own download (iris.who.int bitstream af997e91…) refused the fetch; the same PDF (ISBN 978-92-4-010396-2, 253 pages) was read from a Spanish health-ministry mirror. A reviewer should spot-check one value against WHO's copy.",
+  "Fig. 2 is a map; the extracted labels pair each region with its count, and the p. 14 text gives every rate, so each pairing was checked both ways. The six regional counts add to 300 000."
+ ],
+ "notes": "The task asked for one region; the figure gives all six, so corrections for the other four rows are included (expect reviewer warnings that they were not in the task). The Europe correction is the large one: 9,155 to 15 000. The smaller figure may come from a different region membership or cause definition; proposed as a follow-up. The report gives no uncertainty intervals for the regional figures.",
+ "next_tasks": [
+  {"title": "Europe: find the primary source of 9,155 (1.0 per 100,000) and what it counts", "why": "A reader who has seen the smaller figure will ask; the report prints 15 000"},
+  {"title": "Where does '4–5 non-fatal drownings per death' come from?", "why": "Not in the WHO 2024 report (p. 6 says global non-fatal data are largely unavailable) nor the fact sheet"}
+ ]
+}

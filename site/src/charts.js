@@ -132,7 +132,8 @@ ${bars}
       const verify = r.grade === 'C' ? ' <span class="pill pill-C" title="Secondary source; verify against the WHO report table">verify</span>' : ' <span class="pill pill-A">WHO</span>';
       return { label: esc(r.geography) + verify, value: r.high, text: (r.grade === 'C' ? '~' : '') + fmt(r.high), color: r.grade === 'C' ? '#8FA9B8' : 'var(--navy)' };
     }).filter(Boolean);
-    return `<div role="img" aria-label="Drowning deaths by WHO region, 2021, approximate: Western Pacific over 84,000; South-East Asia about 83,000; Africa about 77,000; Eastern Mediterranean about 36,000; Americas about 16,500; Europe 9,155.">${hbars(items, 90000, { labelW: '200px' })}<div class="axis" aria-hidden="true" style="margin-left:212px;margin-right:70px"><span style="left:0">0</span><span style="left:50%">45k</span><span style="left:100%">90k</span></div></div>`;
+    const alt = ids.map((id) => rows[id] ? `${rows[id].geography} ${fmt(rows[id].high)}` : null).filter(Boolean).join('; ');
+    return `<div role="img" aria-label="Drowning deaths by WHO region, 2021, as printed in the WHO report: ${alt}.">${hbars(items, 90000, { labelW: '200px' })}<div class="axis" aria-hidden="true" style="margin-left:212px;margin-right:70px"><span style="left:0">0</span><span style="left:50%">45k</span><span style="left:100%">90k</span></div></div>`;
   }
 
   function ages() {

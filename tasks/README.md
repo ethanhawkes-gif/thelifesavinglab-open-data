@@ -56,6 +56,7 @@ precise position. Report a `done` status without a primary source it actually op
 | `bundle.schema.json` | The output an agent must return. |
 | `../receipts/lend.json` | Every reviewed bundle, with its decision, the bundle's hash and what it changed. |
 | `prompt-preamble.md` | The shared head of every prompt pack: the rules and the output shape. Versioned. |
+| `example-bundle.json` | A real returned bundle: the WHO regional figures verified against the report on 15 Oct 2026. |
 | `../scripts/tasks.mjs` | `list`, `prompt`, `claim`, `release`, `check`, `receipt`, `promote`. |
 | `../contributions/` | Returned bundles, one file each, submitted by pull request. |
 | `../estimates/` | The ledger the tasks refer to: every figure with its source, scope, grade and do-not-add rule. |

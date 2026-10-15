@@ -68,6 +68,13 @@ test('parseToll edge: absences and non-tolls carry null figures; empty throws', 
   assert.equal(parseToll('Not one number').kind, 'not-a-toll');
   assert.throws(() => parseToll(''), RangeError);
 });
+test('detectPII leaves ISBNs, long identifiers and dates alone, and catches international numbers', () => {
+  assert.deepEqual(detectPII('https://www.who.int/publications/i/item/9789240103962'), []);
+  assert.deepEqual(detectPII('ISBN 978-92-4-010396-2, 253 pages, 2026-10-15 12:30'), []);
+  assert.deepEqual(detectPII('station 8423898; buoy 44007; 300 000 deaths; 100 000 population'), []);
+  assert.ok(detectPII('ring +44 20 7946 0958').includes('phone_intl'));
+  assert.ok(detectPII('+1 603 555 0100').some((k) => k.startsWith('phone')));
+});
 test('detectPII finds emails, phones, addresses, credentials, person markers', () => {
   assert.deepEqual(detectPII({ note: 'write to a.b@example.org' }), ['email']);
   assert.ok(detectPII('call 603-555-0142').includes('phone'));

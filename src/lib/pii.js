@@ -3,7 +3,8 @@
 const PATTERNS = [
   ['email', /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i],
   ['email_obfuscated', /\b[\w.+-]+\s*(?:[[(]\s*at\s*[\])]|\s+at\s+)\s*[\w-]+\s*(?:[[(]\s*dot\s*[\])]|\s+dot\s+)\s*[a-z]{2,}\b/i],
-  ['phone', /(?:\+?\d{1,3}[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\b/],
+  ['phone', /(?<!\d)(?:\+?\d{1,3}[\s.-])?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}(?!\d)/],
+  ['phone_intl', /(?<!\d)\+\d{1,3}(?:[\s.-]?\d{2,4}){2,4}(?!\d)/],
   ['us_ssn', /\b\d{3}-\d{2}-\d{4}\b/],
   ['street_address', /\b\d{1,5}\s+\w+(?:\s\w+)?\s(?:St|Street|Ave|Avenue|Rd|Road|Ln|Lane|Dr|Drive|Ct|Court|Blvd)\b/i],
   ['gps_point', /-?\d{1,3}\.\d{4,},\s*-?\d{1,3}\.\d{4,}/],
