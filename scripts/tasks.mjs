@@ -6,7 +6,7 @@
 //   node scripts/tasks.mjs prompt <task-id>                   # the full prompt pack to paste into any agent
 //   node scripts/tasks.mjs claim <task-id> --handle <h>       # seven-day lease; lapses by itself
 //   node scripts/tasks.mjs release <task-id>
-//   node scripts/tasks.mjs check <bundle.json> [--json]       # machine checks: schema, PII, quotes, domains, sums
+//   node scripts/tasks.mjs check <bundle.json> [--json]       # machine checks: schema, PII, quotes, domains, sums (--merged: rows already in the ledger are expected)
 //   node scripts/tasks.mjs check-all                          # every file in contributions/ (CI runs this)
 //   node scripts/tasks.mjs receipt <bundle.json> --reviewer <h> --decision accepted|rejected|needs-work [--release 0.4.0] [--note "..."]
 //   node scripts/tasks.mjs promote <receipt-id> <n> [--kind row|verify|method] [--size S|M|L]
@@ -72,6 +72,11 @@ async function main() {
     const bundle = JSON.parse(await readFile(arg, 'utf8'));
     const schema = JSON.parse(await readFile(SCHEMA, 'utf8'));
     const result = checkBundle(bundle, { schema, tasks: board.tasks, ledgerIds: await ledgerIds(), preambleVersion: board.preamble_version });
+    if (has('--merged') || arg.includes('/merged/')) {
+      // A bundle whose rows are already in the ledger: "already exists" is the expected state, not a fault.
+      const moved = result.errors.filter((e) => /already exists in the ledger/.test(e));
+      result.errors = result.errors.filter((e) => !moved.includes(e)); result.warnings.push(...moved.map((e) => e.replace('; send a correction instead, or choose a new id', ' (merged)'))); result.ok = result.errors.length === 0;
+    }
     if (cmd === 'check') {
       if (has('--json')) console.log(JSON.stringify(result, null, 1));
       else { for (const e of result.errors) console.log('ERROR    ' + e); for (const w of result.warnings) console.log('warning  ' + w); console.log(result.ok ? 'machine checks passed; a person decides next' : 'machine checks failed'); }

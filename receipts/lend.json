@@ -1,5 +1,154 @@
 {
  "schema": "lifesavinglab.receipts.v1",
  "note": "One receipt per reviewed bundle. The hash is the SHA-256 of the bundle with its keys sorted; anyone holding the bundle can recompute it.",
- "receipts": []
+ "receipts": [
+  {
+   "id": "rcpt-26423b7c66",
+   "task_id": "nonfatal-ratio-primary",
+   "handle": "agent-two",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "not-found",
+   "preamble_version": "1.1",
+   "bundle_sha256": "26423b7c66ed38c7c3e4b4442b233a0caa6b06026c31ff1ed0782597cbad651b",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T08:24:12.020Z",
+   "changed": {
+    "rows": 2,
+    "corrections": 3,
+    "evidence": 20,
+    "next_tasks": 4
+   },
+   "release": "0.7.0",
+   "note": "Merged into estimates by the lab's session on 15 Oct 2026 after reading the bundle and spot-checking its sources; Ethan Hawkes can reverse any of it with a commit.",
+   "next_tasks": [
+    {
+     "title": "Open an archived copy of the October 2014 CDC 'Unintentional Drowning: Get the Facts' page and record its children's 'another five' ratio with data years",
+     "why": "It is the primary behind the 'five times' figure propagated by BMJ Open 2015, Safe Kids 2016 and many secondary pages; only second-hand citations were reachable here."
+    },
+    {
+     "title": "Add a row for WHO's modelled 178 000 avoided 'severe, life-limiting injuries due to non-fatal drowning' from the fact sheet's Prevention section",
+     "why": "It is the only quantified non-fatal figure WHO currently publishes and is an investment-case projection, not a ratio."
+    },
+    {
+     "title": "Add place-specific non-fatal:fatal ratio rows (NSW ambulance 1:15; New Zealand under-5 hospitalisations 6.9; Alberta 6; CDC children under 18 'another 7')",
+     "why": "They document how widely the ratio varies by place and denominator, which is the reason no single global ratio should be carried."
+    },
+    {
+     "title": "Verify the pre-2024 WHO drowning fact sheet and the 2008 World report on child injury prevention drowning chapter for any non-fatal ratio",
+     "why": "Both were unreachable in this run (archive and MedBox fetches blocked) and are the last WHO documents that could plausibly hold such a statement."
+    }
+   ]
+  },
+  {
+   "id": "rcpt-4e077f892a",
+   "task_id": "setting-split-canada",
+   "handle": "agent-four",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "partial",
+   "preamble_version": "1.2",
+   "bundle_sha256": "4e077f892a90f63799e4d91f23e079883ebfd5cc0f1924c87936d6e32c12ce83",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T08:23:53.301Z",
+   "changed": {
+    "rows": 0,
+    "corrections": 0,
+    "evidence": 7,
+    "next_tasks": 2
+   },
+   "release": "0.7.0",
+   "note": "Merged into estimates by the lab's session on 15 Oct 2026 after reading the bundle and spot-checking its sources; Ethan Hawkes can reverse any of it with a commit.",
+   "next_tasks": [
+    {
+     "title": "Open the full 2026 Canadian Drowning Report and replace the 2018–2022 shares with printed counts per setting; confirm the Bathtubs 15% / Other 7% pairing from the page layout",
+     "why": "The snapshot prints percentages only and the pairing was inferred from text order."
+    },
+    {
+     "title": "Record the Canadian activity split (boating, aquatic vs non-aquatic) from the same 2026 snapshot",
+     "why": "It answers the water-transport question for Canada but was not captured verbatim."
+    }
+   ]
+  },
+  {
+   "id": "rcpt-01112538d6",
+   "task_id": "who-europe-9155-reconcile",
+   "handle": "agent-three",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "partial",
+   "preamble_version": "1.2",
+   "bundle_sha256": "01112538d6c568dfd69b5ecef2fea8251e704cf666d62b99c853b358f50a596c",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T08:23:53.229Z",
+   "changed": {
+    "rows": 1,
+    "corrections": 2,
+    "evidence": 21,
+    "next_tasks": 5
+   },
+   "release": "0.7.0",
+   "note": "Merged into estimates by the lab's session on 15 Oct 2026 after reading the bundle and spot-checking its sources; Ethan Hawkes can reverse any of it with a commit.",
+   "next_tasks": [
+    {
+     "title": "Fetch Franklin et al. 2020 supplementary table S1 (GBD 2017 drowning deaths by region) and test whether 9 155 is its WHO-European-Region or Europe value for 2017",
+     "why": "The esanum article's global 295,210 is the GBD 2017 figure; S1 would confirm or rule out the origin of 9,155."
+    },
+    {
+     "title": "Read WHO GHE regional Excel (deaths_whoregion_2026-09-30.xlsx, GHE 2000-2023) for unrounded European Region drowning deaths in 2019, 2021 and 2023",
+     "why": "Gives the exact figure behind the printed 15 000 and shows whether a newer GHE release changed it."
+    },
+    {
+     "title": "Add an EU-27 row from Eurostat hlth_cd_aro: 5 004 (2021), 4 810 (2022) deaths by drowning and submersion, with ICD codes verified in Statistics Explained",
+     "why": "A primary EU subset figure that readers may confuse with WHO regional figures."
+    },
+    {
+     "title": "Record the WHO Europe 24 Jul 2023 statement's 'estimated 20 000 people each year' as a separate grade-C row with undefined scope and a do-not-compare rule",
+     "why": "A third, higher WHO-Europe figure exists with no stated year or definition."
+    },
+    {
+     "title": "Check the WHO 2024 report annexes and country profiles (pp. 47-241, not readable via the mirror text) for the European Region definition and any regional table",
+     "why": "The mirror's extracted text stopped at Section 3, so the data annex was not verified."
+    }
+   ]
+  },
+  {
+   "id": "rcpt-b893ee92e8",
+   "task_id": "verify-who-region-afr",
+   "handle": "second-agent",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "done",
+   "preamble_version": "1.1",
+   "bundle_sha256": "b893ee92e814cccd0d96b0248beae1fb77d2455fb612a8e0659b28fd09995b11",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T08:23:53.078Z",
+   "changed": {
+    "rows": 0,
+    "corrections": 4,
+    "evidence": 5,
+    "next_tasks": 4
+   },
+   "release": "0.7.0",
+   "note": "Merged into estimates by the lab's session on 15 Oct 2026 after reading the bundle and spot-checking its sources; Ethan Hawkes can reverse any of it with a commit.",
+   "next_tasks": [
+    {
+     "title": "Record the other five WHO regions and the global total from Fig. 2 (p. 14) as grade A rows",
+     "why": "Same figure, same source note; values were read in this pass but fall outside this task's scope."
+    },
+    {
+     "title": "Record 2000-2021 drowning death rate changes by WHO region from Section 1 (pp. 17-18)",
+     "why": "African Region fell only 3% versus 38% globally; a useful trend row with the same primary source."
+    },
+    {
+     "title": "Re-read page 14 from WHO's own IRIS copy and archive the PDF",
+     "why": "IRIS refused automated fetches; this verification relied on a sanidad.gob.es mirror copy."
+    },
+    {
+     "title": "Trace where the old '~77,000 · 5.7 per 100,000' figure came from",
+     "why": "It does not appear in the WHO report; it may be a different source, year or model and should not be mixed with WHO values."
+    }
+   ]
+  }
+ ]
 }
