@@ -59,6 +59,7 @@
   }
   const gradeName = { A: 'A · primary official', B: 'B · peer-reviewed', C: 'C · secondary', D: 'D · lab judgment' };
   const pill = (g) => `<span class="pill pill-${g}" title="${esc(gradeName[g] || g)}">${g}</span>`;
+  const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return 'source'; } };
   const ledgerLink = (id) => { const r = DATA.byId[id]; return r ? `<a href="#ledger-${esc(id)}" title="${esc(r.source)}">${esc(id)}</a>` : esc(id); };
 
   /* ---------- data ---------- */
@@ -91,7 +92,7 @@
     <h1 id="hero-title" class="display h1">This harbor’s past was lifesaving. <i style="color:var(--brass)">So is its future.</i></h1>
     <p class="lede">An open lab on drowning. We keep a sourced count of what is known and publish it as a range, not a false point. Each June, students and the people who work this water write one-page changes a real adopter could run that season. We publish the ones that fail.</p>
     <div class="row"><a class="btn btn--primary" href="#contribute">Contribute <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#toll">See the toll</a></div>
-    <div class="row mono hero-stats"><span><b>${rows}</b> sourced ledger rows</span><span><b>${DATA.tree ? Object.values(DATA.tree.nodes).filter((n) => !n.options || !n.options.length).length : 17}</b> branches of the tree</span><span><b>24</b> student seats</span></div>
+    <div class="row mono hero-stats"><span><b>${rows}</b> sourced ledger rows</span><span><b>${DATA.tree ? Object.values(DATA.tree.nodes).filter((n) => n.type === 'leaf').length : 17}</b> branches of the tree</span><span><b>24</b> student seats</span></div>
   </div></div>
   <div class="hero-photo">
     <img src="${PHOTOS.hero}" alt="Wood Island Life-Saving Station in Kittery, Maine, seen down its boardwalk: white shingles, a red roof and lookout tower, a surfboat on its launching carriage, and Whaleback Light on the horizon">
@@ -349,13 +350,13 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
         <dt>Figure</dt><dd>${esc(r.figure)}${r.low != null ? ` <span class="mono muted">(low ${fmt(r.low)} · high ${fmt(r.high)} · ${esc(r.unit)})</span>` : ''}</dd>
         <dt>Scope</dt><dd>${esc(r.scope)}</dd>
         <dt>Geography</dt><dd>${esc(r.geography)}</dd>
-        <dt>Source</dt><dd>${esc(r.source)}${r.url ? ` · <a href="${esc(r.url)}">link</a>` : ''}</dd>
+        <dt>Source</dt><dd>${esc(r.source)}${r.url ? ` · <a href="${esc(r.url)}">${esc(hostOf(r.url))} <span aria-hidden="true">↗</span></a>` : ''}</dd>
         <dt>Grade</dt><dd>${pill(r.grade)} ${esc(gradeName[r.grade])}</dd>
         <dt>Do not add to</dt><dd>${esc(r.do_not_add_to)}</dd>
         ${r.note ? `<dt>Note</dt><dd>${esc(r.note)}</dd>` : ''}
         <dt>Tags</dt><dd class="mono">${esc(r.tags || '—')} · checked ${esc(r.last_checked)}</dd>
       </dl><div class="row" style="margin-top:14px"><a class="btn btn--sm btn--ghost" href="#contribute-correction-${esc(r.id)}">Correct or verify this row</a><button class="btn btn--sm btn--ghost" data-copy-id="${esc(r.id)}">Copy row as JSON</button></div></td></tr>` : '';
-      return `<tr><td><button class="rowbtn" data-row="${esc(r.id)}" style="all:unset;cursor:pointer;color:var(--rust);text-decoration:underline;text-underline-offset:3px;font-family:var(--mono);font-size:13px">${esc(r.id)}</button><div style="font-weight:600;margin-top:4px">${esc(r.figure)}</div></td><td class="small">${esc(r.scope.length > 110 ? r.scope.slice(0, 108) + '…' : r.scope)}<div class="mono muted" style="margin-top:4px">${esc(r.geography)}</div></td><td class="mono">${r.year || '—'}</td><td>${pill(r.grade)}${/verify/.test(r.tags) ? ' <span class="pill pill-C">verify</span>' : ''}${/open/.test(r.tags) ? ' <span class="pill pill-D">open</span>' : ''}</td><td class="small">${esc(r.source.length > 90 ? r.source.slice(0, 88) + '…' : r.source)}</td></tr>${detail}`;
+      return `<tr><td><button class="rowbtn" data-row="${esc(r.id)}" style="all:unset;cursor:pointer;color:var(--rust);text-decoration:underline;text-underline-offset:3px;font-family:var(--mono);font-size:13px">${esc(r.id)}</button><div style="font-weight:600;margin-top:4px">${esc(r.figure)}</div></td><td class="small">${esc(r.scope.length > 110 ? r.scope.slice(0, 108) + '…' : r.scope)}<div class="mono muted" style="margin-top:4px">${esc(r.geography)}</div></td><td class="mono num" style="white-space:nowrap">${r.year || '—'}</td><td>${pill(r.grade)}${/verify/.test(r.tags) ? ' <span class="pill pill-C">verify</span>' : ''}${/open/.test(r.tags) ? ' <span class="pill pill-D">open</span>' : ''}</td><td class="small">${esc(r.source.length > 90 ? r.source.slice(0, 88) + '…' : r.source)}</td></tr>${detail}`;
     }).join('');
     host.innerHTML = `<p class="mono muted">${rows.length} of ${DATA.ledger.rows.length} rows</p><div class="tscroll"><table class="data"><thead><tr><th>Row</th><th>Scope</th><th>Year</th><th>Grade</th><th>Source</th></tr></thead><tbody>${tr || '<tr><td colspan="5">No rows match.</td></tr>'}</tbody></table></div>`;
     host.querySelectorAll('.rowbtn').forEach((b) => b.addEventListener('click', () => { s.openRow = s.openRow === b.dataset.row ? null : b.dataset.row; renderLedgerTable(); }));
@@ -426,7 +427,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
   <div id="tree-body">${body}</div>
 </div></section>
 <section class="section"><div class="wrap stack" style="gap:20px">
-  <details class="row disclose"><summary class="h3"><span class="disclose-mark" aria-hidden="true"></span>The whole tree <span class="mono muted" style="font-size:13px">${Object.keys(DATA.tree.nodes).length} nodes · ${Object.values(DATA.tree.nodes).filter((n) => !n.options || !n.options.length).length} leaves · click any to jump</span></summary><div class="treemap" style="margin-top:18px">${map}</div></details>
+  <details class="row disclose"><summary class="h3"><span class="disclose-mark" aria-hidden="true"></span>The whole tree <span class="mono muted" style="font-size:13px">${Object.keys(DATA.tree.nodes).length} nodes · ${Object.values(DATA.tree.nodes).filter((n) => n.type === 'leaf').length} leaves · click any to jump</span></summary><div class="treemap" style="margin-top:18px">${map}</div></details>
   <p class="small muted">Every branch is in <span class="mono">data/tree.json</span>, free to reuse. Missing a water, a person or a measure? <a href="#contribute-branch">Propose a branch.</a> A person reads it; nothing is published until a person merges it.</p>
 </div></section>`;
   }

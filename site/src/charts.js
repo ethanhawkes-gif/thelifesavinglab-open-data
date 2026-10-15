@@ -21,7 +21,7 @@
     <div style="min-width:0"><div class="mono" style="color:var(--muted)">AT LEAST · THE FLOOR</div><div style="font-family:var(--serif);font-size:${big}px;line-height:1.05">~${fmt(roundK(f))}</div></div>
     <div style="min-width:0;text-align:right"><div class="mono" style="color:var(--muted)">UP TO · FROM WHAT IS DOCUMENTED</div><div style="font-family:var(--serif);font-size:${big}px;line-height:1.05">~${fmt(roundK(c))}</div></div>
   </div>
-  <div style="position:relative;height:${H + 30}px">
+  <div style="position:relative;height:${H + 12}px;margin-top:26px">
     <div style="position:absolute;left:0;right:0;top:0;height:${H}px;background:repeating-linear-gradient(135deg,#D8D1BF 0 6px,transparent 6px 14px);border-radius:2px;overflow:hidden">
       <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent ${pc}%,var(--ground) 100%);opacity:.6"></div>
     </div>
@@ -30,7 +30,7 @@
     <div style="position:absolute;left:${pf}%;top:-8px;height:${H + 16}px;border-left:2px solid var(--ink)"></div>
     <div style="position:absolute;left:${pc}%;top:-8px;height:${H + 16}px;border-left:2px solid var(--ink)"></div>
     <div style="position:absolute;left:${pw}%;top:-4px;height:${H + 8}px;border-left:2px dashed var(--brass)"></div>
-    <div class="mono" style="position:absolute;left:${pw}%;top:${H + 10}px;transform:translateX(-50%);color:#8A6A1F;white-space:nowrap">WHO 2021 · ${fmt(who.high)}</div>
+    <div class="mono num" style="position:absolute;left:${pw}%;top:-26px;transform:translateX(-50%);color:#8A6A1F;white-space:nowrap;font-size:12px">WHO 2021 · ${fmt(who.high)}</div>
   </div>
   <div class="axis" aria-hidden="true">${ticks}</div>
   <figcaption class="legend" style="margin-top:8px">

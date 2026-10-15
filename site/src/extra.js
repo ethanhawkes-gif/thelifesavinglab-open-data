@@ -194,7 +194,7 @@
 
 <section class="section band" aria-labelledby="pipe-title"><div class="wrap stack" style="gap:24px">
   ${sectionHead('How a report becomes a row', '<span id="pipe-title">Five stages. A person at the one that matters.</span>', '')}
-  <ol class="steps" style="grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr))">${stages.map((s, i) => `<li><span class="n">0${i + 1}</span><h3 class="h3">${s[0]}</h3><p class="small" style="font-size:15px">${s[1]}</p></li>`).join('')}</ol>
+  <ol class="steps" style="grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr))">${stages.map((s, i) => `<li><span class="n">0${i + 1}</span><h3 class="h3">${s[0]}</h3><p class="small" style="font-size:15px">${s[1]}</p></li>`).join('')}</ol>
   <div class="card stack-sm" id="watch-queue"><p class="eyebrow">The queue · loading</p><p class="small" style="font-size:16px">When the watch runs, this is where reports wait to be read. Each shows its stage, its source and its age. Nothing here is a count: a report is a report until a person turns it into a row.</p>
   <div class="queue-empty"><span class="pill pill-D">Reported</span><span class="pill pill-D">Read</span><span class="pill pill-D">Row written</span><span class="pill pill-D">Matched</span><span class="pill pill-D">Published</span></div></div>
 </div></section>
