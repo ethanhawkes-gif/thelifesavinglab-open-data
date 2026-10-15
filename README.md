@@ -1,15 +1,17 @@
 # Life-Saving Lab — open data
 
-Cited figures on deaths at sea and drowning, with the rules that stop them being misused, served by a small
-Cloudflare Worker. Provenance first: every row names its source, a confidence word, and a citation tier, and the
-dataset ships with a list of figure pairs that must never be added, subtracted, or averaged.
+Everything behind thelifesavinglab.org, in the open: the sized global toll of drowning as a range with its sources
+(`estimates/`), the decision tree of measures graded by evidence, an hourly watch of reported drownings (`watch/`), a
+board of small tasks anyone's AI assistant can take (`tasks/`) with public receipts (`receipts/`), the static site
+(`site/`), and a small Cloudflare Worker API. Provenance first: every row names its source, its grade, and the rule for
+what it must not be added to.
 
 > **Not a rescue service.** Nothing here dispatches, monitors, or advises in an emergency.
 > Distress at sea: VHF channel 16 or the coast guard. Crisis: call or text 988 (U.S.).
 
 ## What this is, and is not
 
-- It **is** a versioned, hashed, CC0 compilation of citation metadata from the Life-Saving Lab chart (release 0.1.0: 38 observations, 34 sources, 16 non-additive pairs; one sensitive entry held out for human review).
+- It **is** two ledgers kept apart: `seeds/` (named events with counted tolls; CC0; release 0.1.0: 38 observations, 34 sources, 16 non-additive pairs) and `estimates/` (yearly figures, rates, shares and definitions behind the site's range; CC BY 4.0; version 0.7.0, 79 rows). Events are counted, estimates are modelled, and the site never adds one to the other.
 - It **is not** a measure of lives saved. No figure here counts lives saved, and the API will not compute one.
 - It **is not** authoritative over its sources. Where a source and this file disagree, the source wins; open a correction.
 - It holds **no personal data**: no names of the dead or the living, no contacts, no locations of individuals.
@@ -19,9 +21,13 @@ dataset ships with a list of figure pairs that must never be added, subtracted, 
 
 ```sh
 npm ci
-npm test                 # 40+ tests: libs, schema/migrations, API contracts, hashes, PII quarantine, security smoke
+npm test                 # 70+ tests: libs, schema/migrations, API contracts, hashes, PII, bundles, the board, data invariants
 npm run build:data       # seeds/ -> src/data/release.json, dist/export.{json,csv}, dist/manifest.json, seeds/seed.sql
-npm run check            # rebuild + verify committed artifacts are byte-identical + tests + typecheck + lint
+npm run check            # rebuild + verify committed artifacts are byte-identical + tests + bundles + typecheck + lint
+python3 estimates/build_data.py && python3 estimates/build_tree.py   # the figures ledger, the toll layers, the tree
+python3 tasks/build_tasks.py                                        # the board
+node site/build.mjs && python3 -m http.server -d site/dist 8080      # the site, at http://localhost:8080
+node scripts/tasks.mjs list                                          # lend-your-agent tasks; `prompt <id>` for the pack
 npx wrangler dev         # local API at http://localhost:8787/v1
 ```
 
