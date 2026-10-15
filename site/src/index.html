@@ -1,0 +1,69 @@
+<title>The Life-Saving Lab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+/* Layout: an open ledger with a working harbor behind it. Cream pages, navy bands, one lifebuoy red for the action, brass for labels on dark. */
+:root{color-scheme:light only}
+</style>
+
+<div class="safety" role="region" aria-label="Emergency information">
+  <div class="wrap">
+    <p><b>In distress on the water:</b> VHF channel 16 or the Coast Guard.</p>
+    <p><b>In crisis:</b> call or text 988.</p>
+    <p class="muted">Nothing on this site dispatches help.</p>
+  </div>
+</div>
+
+<header class="site">
+  <nav class="wrap" aria-label="Main">
+    <a class="brand" href="#home" data-route="home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="11.5" fill="none" stroke="#FFFFFF" stroke-width="7"></circle><circle cx="17" cy="17" r="11.5" fill="none" stroke="#C4402B" stroke-width="7" stroke-dasharray="9.03 9.03" transform="rotate(-22 17 17)"></circle><circle cx="17" cy="17" r="15.25" fill="none" stroke="#13222A" stroke-width="1.5"></circle><circle cx="17" cy="17" r="7.75" fill="none" stroke="#13222A" stroke-width="1.5"></circle></svg>
+      <span>The Life-Saving Lab</span>
+    </a>
+    <div class="navlinks" id="navlinks">
+      <a href="#toll" data-route="toll">The toll</a>
+      <a href="#gaps" data-route="gaps">Gaps</a>
+      <a href="#ledger" data-route="ledger">Ledger</a>
+      <a href="#tree" data-route="tree">Tree</a>
+      <a href="#watch" data-route="watch">Watch</a>
+      <a href="#june" data-route="june">June lab</a>
+      <a href="#wisdom" data-route="wisdom">Wisdom</a>
+      <a href="#lend" data-route="lend">Lend an hour</a>
+      <a href="#contribute" data-route="contribute" class="btn btn--sm">Contribute</a>
+    </div>
+  </nav>
+</header>
+
+<main id="app" aria-live="polite"></main>
+
+<footer class="site">
+  <div class="wrap section--tight stack" style="gap:32px">
+    <div class="split" style="align-items:flex-start">
+      <div class="stack-sm" style="max-width:36em">
+        <div style="display:flex;align-items:center;gap:12px">
+          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="11.5" fill="none" stroke="#F4F1E9" stroke-width="7"></circle><circle cx="17" cy="17" r="11.5" fill="none" stroke="#C4402B" stroke-width="7" stroke-dasharray="9.03 9.03" transform="rotate(-22 17 17)"></circle></svg>
+          <p style="font-family:var(--serif);font-size:24px;color:var(--paper)">The Life-Saving Lab</p>
+        </div>
+        <p class="small">A teaching and research project on Portsmouth Harbor, Maine and New Hampshire, co-designed with Applied Wisdom for Nonprofits. The lab dispatches no one.</p>
+        <p class="small">Data and text: CC BY 4.0. Sources keep their own licences. Corrections: <span class="mono" id="foot-mail">hello@thelifesavinglab.org</span></p>
+      </div>
+      <div class="card--dark" style="padding:18px 20px;border:1px solid var(--navy-line);border-radius:2px;display:flex;flex-direction:column;gap:6px;flex:1 1 320px;max-width:none">
+        <p style="font-weight:600;color:var(--paper)">In distress on the water: VHF channel 16 or the Coast Guard.</p>
+        <p style="font-weight:600;color:var(--paper)">In crisis: call or text 988.</p>
+      </div>
+    </div>
+    <nav aria-label="Pages" class="row" style="gap:10px 26px;font-size:15px">
+      <a href="#toll">The toll</a><a href="#gaps">Gaps</a><a href="#ledger">Ledger</a><a href="#tree">Tree</a><a href="#watch">Watch</a><a href="#june">June lab</a><a href="#wisdom">Wisdom</a><a href="#register">Register</a><a href="#lend">Lend your agent</a><a href="#contribute">Contribute</a><a href="#glossary">Glossary</a>
+      <a href="https://thelifesavinglab.org/history">History</a><a href="https://thelifesavinglab.org/bridge">The span brief</a>
+    </nav>
+    <p class="small" style="padding-top:18px;border-top:1px solid var(--navy-line);color:var(--mist)">Since you opened this page, an estimated <b data-live="since" style="color:var(--paper)">—</b> people have drowned somewhere in the world. No figure on this site is summed across sources or waters unless the row that does it says so. Last checked 14 Oct 2026.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="charts.js"></script>
+<script src="extra.js"></script>
+<script src="register.js"></script>
+<script src="lend.js"></script>
+<script src="app.js"></script>

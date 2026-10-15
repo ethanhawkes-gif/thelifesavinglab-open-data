@@ -2,7 +2,8 @@
 import json, os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 LEDGER = 'https://raw.githubusercontent.com/ethanhawkes-gif/thelifesavinglab-open-data/main/seeds/ledger.json'
-SITE_LEDGER = 'https://thelifesavinglab.org/data/drowning-estimates.json'
+
+
 T = []
 def task(id, title, kind, size, ask, inputs, accept, rows=None, unlocks='', parent=None):
     T.append(dict(id=id, title=title, kind=kind, size=size, status='open', ask=ask, inputs=inputs, accept=accept, rows=rows or [],

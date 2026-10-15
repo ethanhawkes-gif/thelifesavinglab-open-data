@@ -4,3 +4,4 @@ dist/worker/
 .dev.vars
 *.log
 .env*
+site/dist/
