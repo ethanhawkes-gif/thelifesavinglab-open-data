@@ -1,8 +1,9 @@
 # thelifesavinglab.org as a Cloudflare Worker that serves static assets: the built site in site/dist, nothing else.
 # Deploy from the repository root:   node site/build.mjs && npx wrangler deploy --config site/wrangler.toml
-# The Worker name must match the Worker that already holds the custom domain thelifesavinglab.org, so that a deploy
-# replaces the live site in place; pass --name <that-name> if it differs from the one below.
-name = "thelifesavinglab"
+# The name is the Worker that holds the custom domains thelifesavinglab.org and www.thelifesavinglab.org (it carried the
+# previous site), so a deploy replaces the live site in place and the domains stay attached. Cloudflare keeps the
+# previous deployments: Workers & Pages → thelifesavinglab-proxy → Deployments → Rollback brings the old site back.
+name = "thelifesavinglab-proxy"
 compatibility_date = "2026-10-01"
 workers_dev = false
 
@@ -14,4 +15,8 @@ html_handling = "auto-trailing-slash"
 
 [[routes]]
 pattern = "thelifesavinglab.org"
+custom_domain = true
+
+[[routes]]
+pattern = "www.thelifesavinglab.org"
 custom_domain = true

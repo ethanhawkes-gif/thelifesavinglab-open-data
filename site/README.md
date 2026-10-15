@@ -24,10 +24,10 @@ assets directory `site/dist`, custom domain `thelifesavinglab.org`). Two ways to
 
 1. **From a machine with wrangler logged in** (`wrangler login` once):
    `node site/build.mjs && npx wrangler deploy --config site/wrangler.toml`. The Worker name in the config must be the
-   one that already holds the custom domain, so the deploy replaces the live site in place; pass `--name <name>` otherwise.
+   one that already holds the custom domains (`thelifesavinglab-proxy`, which carried the previous site), so the deploy replaces the live site in place; Cloudflare keeps the earlier deployments for rollback.
 2. **From GitHub on every push** (`.github/workflows/deploy-site.yml`): add the repository secret `CLOUDFLARE_API_TOKEN`
    (an API token from the "Edit Cloudflare Workers" template) and the variable `CLOUDFLARE_ACCOUNT_ID`; set the variable
-   `SITE_WORKER_NAME` if the live Worker is not called `thelifesavinglab`. Until the secret exists the workflow only
+   `SITE_WORKER_NAME` if the live Worker is ever renamed from `thelifesavinglab-proxy`. Until the secret exists the workflow only
    builds. Nobody but Cloudflare and GitHub ever sees the token.
 
 What a deploy carries: the one-page app at `/`, the pages the previous site had (`/history/`, `/bridge/`, `/cohort/`,

@@ -3,7 +3,7 @@ name: deploy-site
 # It deploys only once two repository settings exist (Settings → Secrets and variables → Actions):
 #   secret   CLOUDFLARE_API_TOKEN   an API token made from the "Edit Cloudflare Workers" template
 #   variable CLOUDFLARE_ACCOUNT_ID  the account id shown on the Workers & Pages overview
-# Optional variable SITE_WORKER_NAME: the name of the Worker that holds the custom domain (default: thelifesavinglab).
+# Optional variable SITE_WORKER_NAME: the Worker that holds the custom domain (default: thelifesavinglab-proxy, which carried the previous site).
 on:
   push:
     branches: [main]
@@ -17,7 +17,7 @@ concurrency:
 env:
   CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
   CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-  SITE_WORKER_NAME: ${{ vars.SITE_WORKER_NAME || 'thelifesavinglab' }}
+  SITE_WORKER_NAME: ${{ vars.SITE_WORKER_NAME || 'thelifesavinglab-proxy' }}
 jobs:
   deploy:
     runs-on: ubuntu-latest
