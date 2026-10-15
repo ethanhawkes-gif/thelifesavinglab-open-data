@@ -96,17 +96,23 @@ async function main() {
     console.log(`${receipt.id}  ${decision}  ${receipt.task_id}  by ${receipt.handle} (${receipt.agent})  sha256 ${receipt.bundle_sha256}`);
     if (receipt.next_tasks.length) console.log(`${receipt.next_tasks.length} follow-up(s) proposed; promote with: node scripts/tasks.mjs promote ${receipt.id} <n>`);
   } else if (cmd === 'agree') {
-    const t = find();
+    // agree <task-id>: every bundle returned for that task. agree <row-id>: every bundle (any task, plus tasks/example-bundle.json) that corrects that row.
     const dir = path.join(ROOT, 'contributions');
-    const files = (await readdir(dir)).filter((f) => f.endsWith('.json'));
+    const files = (await readdir(dir)).filter((f) => f.endsWith('.json')).map((f) => path.join(dir, f));
+    files.push(path.join(ROOT, 'tasks', 'example-bundle.json'));
+    const isTask = board.tasks.some((x) => x.id === arg); const ids = await ledgerIds();
+    if (!isTask && !(ids && ids.has(arg))) { console.error(`${arg} is neither a task on the board nor a ledger row`); process.exit(2); }
     const bundles = [];
-    for (const f of files) { const b = JSON.parse(await readFile(path.join(dir, f), 'utf8')); if (b.task_id === t.id) bundles.push(b); }
-    if (bundles.length < 2) { console.log(`${bundles.length} bundle(s) for ${t.id} in contributions/; agreement needs two from different agents`); process.exit(0); }
+    for (const f of files) {
+      let b; try { b = JSON.parse(await readFile(f, 'utf8')); } catch { continue; }
+      if (isTask ? b.task_id === arg : (b.corrections || []).some((c) => c.row_id === arg)) bundles.push(b);
+    }
+    if (bundles.length < 2) { console.log(`${bundles.length} bundle(s) for ${arg}; agreement needs two from different agents`); process.exit(0); }
     const a = agreement(bundles);
-    console.log(`${t.id}: ${a.bundles} bundles by ${bundles.map((b) => `${b.contributor.handle} (${b.contributor.agent})`).join(' and ')}`);
+    console.log(`${arg}: ${a.bundles} bundles by ${bundles.map((b) => `${b.contributor.handle} (${b.contributor.agent}, task ${b.task_id})`).join(' and ')}`);
     console.log(`agreed ${a.agreed} · contested ${a.contested} · covered by one bundle only ${a.partial} · sources all cite: ${a.shared_hosts.join(', ') || 'none in common'}`);
-    for (const i of a.items) console.log(`  ${i.agreed ? 'AGREE   ' : i.contested ? 'CONTEST ' : 'one     '} ${i.row_id}.${i.field}: ${i.values.map((v) => `"${v.value}" (${v.by.join(', ')})`).join('  vs  ')}`);
-    if (a.contested) console.log('a person decides the contested fields; the agreed ones can be merged with the receipt noting the agreement');
+    for (const i of a.items) if (isTask || i.row_id === arg) console.log(`  ${i.agreed ? (i.same_figures_different_words ? 'AGREE*  ' : 'AGREE   ') : i.contested ? 'CONTEST ' : 'one     '} ${i.row_id}.${i.field}: ${i.values.map((v) => `"${v.value}" (${v.by.join(', ')})`).join('  vs  ')}`);
+    console.log('AGREE* = same figures, different wording. A person decides contested fields; agreed ones can be merged with the receipt noting the agreement.');
   } else if (cmd === 'pull') {
     const api = opt('--api', arg && arg.startsWith('http') ? arg : null); const token = opt('--token');
     if (!api || !token) { console.error('--api <url> and --token <reviewer token> are required'); process.exit(2); }

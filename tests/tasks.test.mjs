@@ -124,3 +124,13 @@ test('two bundles on one task: agreement, contest and single coverage are told a
   const grade = r.items.find((i) => i.field === 'grade');
   assert.deepEqual(grade.values[0].by, ['one', 'two']);
 });
+
+test('agreement sees the same figures through different wording, and still contests different numbers', () => {
+  const mk = (handle, fig) => { const b = clone(); b.contributor = { handle, agent: 'x' }; b.corrections = [{ row_id: 'who-region-afr', field: 'figure', old: '~77,000', new: fig, evidence: 'p. 14' }]; return b; };
+  const r1 = agreement([mk('a', '66,000 · 5.6 per 100,000'), mk('b', '66 000 deaths · 5.6 per 100 000 population (22% of global), 2021')]);
+  assert.equal(r1.agreed, 1); assert.equal(r1.items[0].same_figures_different_words, true);
+  const r2 = agreement([mk('a', '66,000 · 5.6 per 100,000'), mk('b', '77,000 · 5.7 per 100,000')]);
+  assert.equal(r2.contested, 1); assert.equal(r2.agreed, 0);
+  const r3 = agreement([mk('a', 'A'), mk('b', 'A')]);
+  assert.equal(r3.agreed, 1); assert.equal(r3.items[0].same_figures_different_words, false);
+});

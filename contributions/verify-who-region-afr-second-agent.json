@@ -1,0 +1,82 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "verify-who-region-afr",
+ "preamble_version": "1.1",
+ "contributor": {"handle": "second-agent", "agent": "Claude Fable 5.1 (claude-fable-5-1)"},
+ "status": "done",
+ "rows": [],
+ "corrections": [
+  {
+   "row_id": "who-region-afr",
+   "field": "figure",
+   "old": "~77,000 · 5.7 per 100,000",
+   "new": "66 000 deaths · 5.6 per 100 000 population (22% of global drowning deaths), 2021",
+   "evidence": "WHO Global status report on drowning prevention 2024 (ISBN 978-92-4-010396-2), Section 1 text and Fig. 2 'Number and rate of drowning deaths by WHO region', printed page 14. Read in a mirror copy of the PDF hosted at sanidad.gob.es because WHO IRIS refused the fetch; title and ISBN confirmed inside the document."
+  },
+  {
+   "row_id": "who-region-afr",
+   "field": "grade",
+   "old": "C",
+   "new": "A",
+   "evidence": "Figure read directly from the WHO report itself (Fig. 2 and Section 1, printed p. 14); WHO is the organisation that produced the estimate (figure source line reads 'Source: (3)')."
+  },
+  {
+   "row_id": "who-region-afr",
+   "field": "source",
+   "old": "secondary summary (name not shown to this task)",
+   "new": "World Health Organization, Global status report on drowning prevention 2024, Fig. 2 and Section 1, p. 14",
+   "evidence": "Document title page and ISBN 978-92-4-010396-2 confirmed in the PDF; Fig. 2 caption 'Fig. 2. Number and rate of drowning deaths by WHO region' on printed p. 14."
+  },
+  {
+   "row_id": "who-region-afr",
+   "field": "url",
+   "old": "secondary summary url (not shown to this task)",
+   "new": "https://www.who.int/publications/i/item/9789240103962",
+   "evidence": "WHO publication page for ISBN 9789240103962; PDF download link on that page is https://iris.who.int/server/api/core/bitstreams/af997e91-f391-4d98-9119-041c03025b40/content"
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://vsf-iwsold-pre-portal.sanidad.gob.es/areas/promocionPrevencion/lesiones/medioAcuatico/internacional/oms/docs/globalStatusreportondrowningprevention.pdf",
+   "quote": "followed the African Region (66 000 deaths, 22%); the Eastern Mediterranean Region (35 000 deaths, 12%);",
+   "where": "Section 1, printed page 14 (text accompanying Fig. 2), mirror copy of WHO Global status report on drowning prevention 2024"
+  },
+  {
+   "url": "https://vsf-iwsold-pre-portal.sanidad.gob.es/areas/promocionPrevencion/lesiones/medioAcuatico/internacional/oms/docs/globalStatusreportondrowningprevention.pdf",
+   "quote": "The African Region has the highest rate (5.6 per 100 000 population), followed by the Eastern Mediterranean Region (4.4",
+   "where": "Section 1, printed page 14; Fig. 2 'Number and rate of drowning deaths by WHO region' is on the same page"
+  },
+  {
+   "url": "https://www.who.int/news/item/13-12-2024-drowning-deaths-decline-globally-but-the-most-vulnerable-remain-at-risk",
+   "quote": "which has the highest rate of any region with 5.6 deaths per 100 000 people",
+   "where": "WHO news release, 13 December 2024, paragraph on regional differences"
+  },
+  {
+   "url": "https://www.who.int/news/item/13-12-2024-drowning-deaths-decline-globally-but-the-most-vulnerable-remain-at-risk",
+   "quote": "the rate fell by just 3% in the WHO African Region",
+   "where": "WHO news release, 13 December 2024, paragraph on regional differences"
+  },
+  {
+   "url": "https://www.who.int/publications/i/item/9789240103962",
+   "quote": "Global status report on drowning prevention 2024",
+   "where": "WHO publication page; lists ISBN 978-92-4-010396-2, publication date 13 December 2024, 253 pages, and the IRIS PDF download link"
+  }
+ ],
+ "tried": [
+  "Opened https://www.who.int/publications/i/item/9789240103962 (WHO publication page): confirms title, ISBN and PDF link but carries no regional figures.",
+  "Fetched the WHO IRIS PDF https://iris.who.int/server/api/core/bitstreams/af997e91-f391-4d98-9119-041c03025b40/content: fetch refused (client error from target).",
+  "Fetched https://iris.who.int/server/api/core/bitstreams/af997e91-f391-4d98-9119-041c03025b40/download: fetch refused.",
+  "Fetched https://iris.who.int/handle/10665/379872 (guessed IRIS handle): fetch refused; handle not confirmed.",
+  "Opened https://www.who.int/teams/social-determinants-of-health/safety-and-mobility/global-report-on-drowning-prevention: global figures only (more than 300 000 deaths in 2021, 38% rate fall 2000-2021), no regional table.",
+  "Web search for the file name 9789240103962-eng.pdf: no mirror found under that name.",
+  "Web search for iris.who.int handle of the report: no IRIS handle surfaced; found instead a mirror copy of the PDF on the Spanish Ministry of Health site (sanidad.gob.es), which is what the figures were read from.",
+  "Web search for a WHO AFRO regional statement giving 66 000 / 5.6: only the WHO HQ news release and press coverage surfaced; no separate AFRO page opened."
+ ],
+ "notes": "The ledger's '~77,000 · 5.7 per 100,000' does not appear anywhere in the WHO report as read; the report prints the African Region at 66 000 deaths (22% of global drowning deaths) and 5.6 per 100 000 population for 2021, in Section 1 text and Fig. 2 'Number and rate of drowning deaths by WHO region' on printed page 14. WHO's own 13 December 2024 news release independently states 5.6 per 100 000 for the African Region. The Fig. 2 caption itself does not print a year; the surrounding Section 1 text frames the estimates as 2021, and the figure's source line reads 'Source: (3)' (the fetch tool reported reference (3) as WHO Global Health Estimates; a reviewer should confirm in the reference list). Values in Fig. 2 are rounded as printed. Other values read from the same figure, not added as rows because they are outside this task: global 300 000 deaths, 3.8 per 100 000; Western Pacific 84 000 (28%), 4.3; South-East Asia 83 000 (28%), 4.0; Eastern Mediterranean 35 000 (12%), 4.4; Americas 17 000 (6%), 1.6; European 15 000 (5%), 1.7. Section 1 (printed pp. 17-18) gives the 2000-2021 rate change for the African Region as a 3% fall. Caveat on provenance: WHO's IRIS server refused every fetch, so the report was read from a mirror copy of the PDF hosted by Spain's Ministry of Health; the document's title page and ISBNs (978-92-4-010396-2 electronic, 978-92-4-010397-9 print) matched, but a reviewer should spot-check page 14 against WHO's own copy when reachable. The origin of the old 77,000 / 5.7 figure was not identified. The row's numeric low/high/unit/year fields were not shown to this task, so no correction is proposed for them; the reviewer may wish to set deaths 66000 and rate 5.6 with year 2021.",
+ "next_tasks": [
+  {"title": "Record the other five WHO regions and the global total from Fig. 2 (p. 14) as grade A rows", "why": "Same figure, same source note; values were read in this pass but fall outside this task's scope."},
+  {"title": "Record 2000-2021 drowning death rate changes by WHO region from Section 1 (pp. 17-18)", "why": "African Region fell only 3% versus 38% globally; a useful trend row with the same primary source."},
+  {"title": "Re-read page 14 from WHO's own IRIS copy and archive the PDF", "why": "IRIS refused automated fetches; this verification relied on a sanidad.gob.es mirror copy."},
+  {"title": "Trace where the old '~77,000 · 5.7 per 100,000' figure came from", "why": "It does not appear in the WHO report; it may be a different source, year or model and should not be mixed with WHO values."}
+ ]
+}

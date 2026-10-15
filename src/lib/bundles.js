@@ -100,6 +100,10 @@ export async function makeReceipt(bundle, { reviewer, decision, release = null, 
  */
 export function agreement(bundles) {
   const norm = (v) => String(v ?? '').toLowerCase().replace(/[\s,]+/g, ' ').trim();
+  // Figures as printed differ in wording ("66 000 deaths" vs "66,000"); compare the numbers they carry as well.
+  const numbers = (v) => (String(v ?? '').replace(/(\d)[ ,](?=\d{3}\b)/g, '$1').match(/\d+(?:\.\d+)?/g) || []).map(Number);
+  // Same figures: the first number printed is the same and every number in the shorter value appears in the longer (extra context such as a share or a year is allowed).
+  const sameNumbers = (vals) => { const sets = vals.map(numbers); if (sets.some((n) => !n.length)) return false; const first = sets[0][0]; if (!sets.every((n) => n[0] === first)) return false; const longest = sets.reduce((a, b) => (b.length > a.length ? b : a)); return sets.every((n) => n.every((x) => longest.includes(x))); };
   const byKey = new Map();
   for (const [i, b] of bundles.entries()) {
     for (const c of b.corrections || []) {
@@ -110,8 +114,14 @@ export function agreement(bundles) {
       e.values.get(v).by.push(b.contributor?.handle || `bundle ${i + 1}`);
     }
   }
-  const items = [...byKey.values()].map((e) => ({ row_id: e.row_id, field: e.field, values: [...e.values.values()], agreed: e.values.size === 1 && [...e.values.values()][0].by.length === bundles.length, contested: e.values.size > 1 }));
+  const items = [...byKey.values()].map((e) => {
+    const values = [...e.values.values()];
+    const everyone = values.reduce((n, v) => n + v.by.length, 0) === bundles.length && new Set(values.flatMap((v) => v.by)).size === bundles.length;
+    const sameText = values.length === 1 && everyone;
+    const sameFigures = !sameText && everyone && sameNumbers(values.map((v) => v.value));
+    return { row_id: e.row_id, field: e.field, values, agreed: sameText || sameFigures, same_figures_different_words: sameFigures, contested: values.length > 1 && !sameFigures && everyone, partial: !everyone };
+  });
   const hosts = bundles.map((b) => new Set((b.evidence || []).map((e) => { try { return new URL(e.url).hostname.replace(/^www\./, ''); } catch { return null; } }).filter(Boolean)));
   const shared = hosts.length ? [...hosts[0]].filter((h) => hosts.every((s) => s.has(h))) : [];
-  return { bundles: bundles.length, agreed: items.filter((i) => i.agreed).length, contested: items.filter((i) => i.contested).length, partial: items.filter((i) => !i.agreed && !i.contested).length, items, shared_hosts: shared };
+  return { bundles: bundles.length, agreed: items.filter((i) => i.agreed).length, contested: items.filter((i) => i.contested).length, partial: items.filter((i) => i.partial).length, items, shared_hosts: shared };
 }

@@ -353,6 +353,24 @@
    "last_checked": "2026-10-15"
   },
   {
+   "id": "who-trend-2000-2021",
+   "figure": "Drowning death rate down 38% since 2000; deaths down 20%, from 375,000 to 300,000",
+   "low": 300000,
+   "high": 375000,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Global unintentional drowning, 2000 compared with 2021, as the WHO 2024 report states it (p. 17; rates in Fig. 6). Low is 2021, high is 2000.",
+   "geography": "Global",
+   "category": "context",
+   "source": "WHO, Global status report on drowning prevention 2024, p. 17 and Fig. 6",
+   "url": "https://www.who.int/publications/i/item/9789240103962",
+   "grade": "A",
+   "do_not_add_to": "A trend, not a count to add. The 2000 figure is a back-cast from the same model, not a count made in 2000.",
+   "note": "By region the rate fell 3% in Africa, 21% in the Eastern Mediterranean, 38% in the Americas, 38% in the Western Pacific, 48% in South-East Asia and 68% in Europe (p. 17). Proposed by an independent agent's bundle on 15 Oct 2026 and read in the report.",
+   "tags": "trend,region",
+   "last_checked": "2026-10-15"
+  },
+  {
    "id": "who-nonfatal",
    "figure": "4–5 non-fatal drownings per death (often quoted; no primary source found)",
    "low": 4,
