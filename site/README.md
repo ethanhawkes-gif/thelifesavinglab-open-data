@@ -31,6 +31,7 @@ task and is not the site of record.
 | `src/extra.js` | The live counter, the June lab, the watch, the gaps page, the glossary, the frontier and selection sections. |
 | `src/register.js` | The incident register as a working tool (rows stay in the browser until exported). |
 | `src/lend.js` | The task board, one-click prompt links, the bundle checker and the receipts wall. |
+| `src/pilots.js` | The one-page pilot format, the forecast rule, three worked examples and the template. |
 | `src/charts.js` | Inline SVG charts: the toll bar, layer strips, estimate dots, income, regions, ages. |
 | `src/img/` | Photographs by Ethan Hawkes, web-sized. |
 

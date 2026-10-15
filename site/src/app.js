@@ -162,7 +162,7 @@
     <div><span class="n">0</span><b>Failed, and published</b><span class="small muted">Failures stay on the record</span></div>
     <div><span class="n" style="color:var(--rust)">${rows}</span><b>Ledger rows</b><span class="small muted">Each with a source, a year and a rule for what it must not be added to</span></div>
   </div>
-  <p class="mono muted">Counting starts June 2027. Last checked 14 Oct 2026.</p>
+  <p class="mono muted">Counting starts June 2027. Last checked 15 Oct 2026. <a href="#pilots">What a pilot is, and how one is scored →</a></p>
 </div></section>
 
 <section class="section band" aria-labelledby="join-title"><div class="wrap stack" style="gap:36px">
@@ -566,6 +566,7 @@
     glossary: { html: () => window.Extra.glossaryPage(ctx()), title: 'Glossary · The Life-Saving Lab' },
     gaps: { html: () => window.Extra.gapsPage(ctx()), title: 'The gaps · The Life-Saving Lab' },
     register: { html: () => window.Register.page(ctx()), mount: () => window.Register.mount({ toast, copyText, saveFile }), title: 'The register · The Life-Saving Lab' },
+    pilots: { html: () => window.Pilots.page(ctx()), mount: () => window.Pilots.mount(ctx(), { toast, copyText, saveFile }), title: 'Pilots · The Life-Saving Lab' },
     lend: { html: () => window.Lend.page(ctx()), mount: () => window.Lend.mount(ctx(), { toast, copyText, saveFile }), title: 'Lend your agent · The Life-Saving Lab' },
     wisdom: { html: wisdomPage, title: 'Applied Wisdom · The Life-Saving Lab' },
     contribute: { html: contributePage, mount: mountContribute, title: 'Contribute · The Life-Saving Lab' }

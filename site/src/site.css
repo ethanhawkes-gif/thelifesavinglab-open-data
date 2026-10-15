@@ -198,3 +198,4 @@ table.matrix th{vertical-align:bottom}
 .gapcard-n{font-family:var(--serif);font-size:40px;line-height:1;color:var(--rust)}
 .gapstep{display:flex;flex-direction:column;gap:6px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:2px}
 @media (max-width:560px){.gapcard{grid-template-columns:1fr}.gapcard-n{font-size:28px}}
+.pf{display:flex;flex-direction:column;gap:5px;min-width:0}.pf p{font-size:15px;line-height:1.5}
