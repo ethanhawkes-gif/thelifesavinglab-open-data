@@ -71,7 +71,7 @@
   }
 
   /* ---------- shared blocks ---------- */
-  function sectionHead(eyebrow, title, lede, dark) {
+  function sectionHead(eyebrow, title, lede) {
     return `<div class="split"><div class="stack"><p class="eyebrow">${eyebrow}</p><h2 class="display h2">${title}</h2></div>${lede ? `<p class="lede">${lede}</p>` : ''}</div>`;
   }
   function photo(src, alt, caption, style) {

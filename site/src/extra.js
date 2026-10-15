@@ -41,7 +41,7 @@
 
   /* ---------- the June lab ---------- */
   function junePage(ctx) {
-    const { sectionHead, photo, PHOTOS, SITE, pill } = ctx;
+    const { sectionHead, photo, PHOTOS, SITE } = ctx;
     const ins = (name) => `<span class="pill pill-wis">${esc(name)}</span>`;
     const block = (t, title, purpose, out, insight, lead) => `
 <div class="agenda">
@@ -216,8 +216,7 @@
   }
 
   /* ---------- the glossary ---------- */
-  function glossaryPage(ctx) {
-    const { sectionHead } = ctx;
+  function glossaryPage() {
     const terms = [
       ['Adopter', 'The organisation that would actually run a change: a harbormaster, a fishing co-op, a crew, a town. A pilot counts only if a real adopter takes it up.'],
       ['Core (count)', 'The modeled number of unintentional drownings, the one WHO reports (about 300,000). It leaves out deaths in boats and ships, floods, and intentional drowning.'],
