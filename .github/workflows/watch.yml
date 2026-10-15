@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '23 * * * *'   # hourly, off the hour so it does not queue behind everyone else's :00 jobs
   workflow_dispatch:
+  push:                     # a change to the sources, the keywords or the poller runs the watch at once
+    branches: [main]
+    paths: ['watch/sources.json', 'watch/keywords.json', 'scripts/watch.mjs', '.github/workflows/watch.yml']
 permissions:
   contents: write
 concurrency:
