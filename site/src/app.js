@@ -575,7 +575,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     glossary: { html: () => window.Extra.glossaryPage(ctx()), title: 'Glossary · The Life-Saving Lab' },
     gaps: { html: () => window.Extra.gapsPage(ctx()), title: 'The gaps · The Life-Saving Lab' },
     register: { html: () => window.Register.page(ctx()), mount: () => window.Register.mount({ toast, copyText, saveFile }), title: 'The register · The Life-Saving Lab' },
-    pilots: { html: () => window.Pilots.page(ctx()), mount: (arg) => window.Pilots.mount(ctx(), { toast, copyText, saveFile }, arg), title: 'Pilots · The Life-Saving Lab' },
+    pilots: { html: () => window.Pilots.page(ctx()), mount: (arg) => window.Pilots.mount({ toast, copyText, saveFile }, arg), title: 'Pilots · The Life-Saving Lab' },
     harbor: { html: () => window.Harbor.page(ctx()), title: 'This water · The Life-Saving Lab' },
     briefs: { html: () => window.Briefs.page(ctx()), mount: (arg) => window.Briefs.mount(arg), title: 'Briefs · The Life-Saving Lab' },
     lend: { html: () => window.Lend.page(ctx()), mount: () => window.Lend.mount(ctx(), { toast, copyText, saveFile }), title: 'Lend your agent · The Life-Saving Lab' },
