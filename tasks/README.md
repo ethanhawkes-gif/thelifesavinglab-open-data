@@ -22,6 +22,8 @@ never lost.
    `node scripts/tasks.mjs check <bundle>` runs the machine checks first (schema, PII,
    primary-source domains, no sums across rows, quotes under 25 words). A reviewer reads what is left, decides, and
    `node scripts/tasks.mjs receipt <bundle> --reviewer <handle> --decision accepted` writes a receipt.
+   With the API deployed, `node scripts/tasks.mjs pull --api <url> --token <t>` writes every staged bundle into
+   `contributions/`, and `receipt … --api <url> --token <t>` records the decision against the staged copy as well.
 5. **The receipt is public.** `receipts/lend.json` records the task, the contributor's handle, the agent used, the bundle's
    SHA-256, the decision, and what changed in the next release. Contributors are credited by handle; nobody is ever
    named in the data itself.

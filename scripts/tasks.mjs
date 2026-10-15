@@ -10,6 +10,8 @@
 //   node scripts/tasks.mjs check-all                          # every file in contributions/ (CI runs this)
 //   node scripts/tasks.mjs receipt <bundle.json> --reviewer <h> --decision accepted|rejected|needs-work [--release 0.4.0] [--note "..."]
 //   node scripts/tasks.mjs promote <receipt-id> <n> [--kind row|verify|method] [--size S|M|L]
+//   node scripts/tasks.mjs pull --api <url> --token <reviewer token>   # staged bundles from the API into contributions/
+//   ... receipt <bundle.json> ... [--api <url> --token <t>]           # also records the decision against the staged bundle
 import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -81,12 +83,30 @@ async function main() {
     const r = await loadReceipts();
     if (r.receipts.some((x) => x.bundle_sha256 === receipt.bundle_sha256)) { console.error('this exact bundle already has a receipt'); process.exit(1); }
     r.receipts.unshift(receipt); await writeFile(RECEIPTS, JSON.stringify(r, null, 1) + '\n');
+    if (opt('--api') && opt('--token')) {
+      const bid = 'b-' + receipt.bundle_sha256.slice(0, 24);
+      const res = await fetch(opt('--api').replace(/\/+$/, '') + '/v1/review/bundles/' + bid, { method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer ' + opt('--token') }, body: JSON.stringify({ decision: decision === 'rejected' ? 'declined' : decision, receipt_id: receipt.id }) });
+      console.log(res.ok ? `API: ${bid} marked ${decision}` : `API: could not mark ${bid} (${res.status}); the receipt is written locally`);
+    }
     const t = board.tasks.find((x) => x.id === bundle.task_id);
     if (t && decision === 'accepted') { t.status = 'done'; t.done_receipt = receipt.id; t.claimed_by = null; t.claimed_until = null; }
     if (t && decision !== 'accepted') { t.claimed_by = null; t.claimed_until = null; if (t.status === 'claimed') t.status = 'open'; }
     await saveBoard(board);
     console.log(`${receipt.id}  ${decision}  ${receipt.task_id}  by ${receipt.handle} (${receipt.agent})  sha256 ${receipt.bundle_sha256}`);
     if (receipt.next_tasks.length) console.log(`${receipt.next_tasks.length} follow-up(s) proposed; promote with: node scripts/tasks.mjs promote ${receipt.id} <n>`);
+  } else if (cmd === 'pull') {
+    const api = opt('--api', arg && arg.startsWith('http') ? arg : null); const token = opt('--token');
+    if (!api || !token) { console.error('--api <url> and --token <reviewer token> are required'); process.exit(2); }
+    const res = await fetch(api.replace(/\/+$/, '') + '/v1/review/bundles', { headers: { authorization: 'Bearer ' + token } });
+    if (!res.ok) { console.error(`API ${res.status}`); process.exit(1); }
+    const { data } = await res.json();
+    const dir = path.join(ROOT, 'contributions'); let n = 0;
+    for (const b of data) {
+      const f = path.join(dir, `${b.task_id}-${slug(b.handle || 'anonymous')}-${b.id.slice(2, 10)}.json`);
+      await writeFile(f, JSON.stringify(JSON.parse(b.payload), null, 1) + '\n'); n++;
+      console.log(`${b.id}  ${b.task_id}  ${b.handle} (${b.agent})  ${b.bundle_status}  warnings ${JSON.parse(b.warnings).length}  → ${path.relative(ROOT, f)}`);
+    }
+    console.log(`${n} staged bundle(s) written; run check-all, then receipt each with --api and --token`);
   } else if (cmd === 'promote') {
     const r = await loadReceipts(); const rc = r.receipts.find((x) => x.id === arg);
     const n = Number(rest[0]); const nt = rc?.next_tasks?.[n];
