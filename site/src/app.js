@@ -21,7 +21,7 @@
   }
   async function copyText(text, el) {
     try { await navigator.clipboard.writeText(text); toast('Copied'); }
-    catch (e) {
+    catch {
       if (el && el.select) { el.select(); toast('Select and copy'); } else toast('Copy is not available here; select the text instead');
     }
   }
@@ -33,9 +33,9 @@
         const blob = new Blob([typeof data === 'string' ? data : JSON.stringify(data, null, 1)], { type: 'text/plain;charset=utf-8' });
         const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = filename; document.body.appendChild(a); a.click(); a.remove();
         setTimeout(() => URL.revokeObjectURL(a.href), 2000); toast('Saved ' + filename); return;
-      } catch (e) { showFallback(filename, data); return; }
+      } catch { showFallback(filename, data); return; }
     }
-    if (downloadsNS === undefined) { try { downloadsNS = await window.claude.use('downloads'); } catch (e) { downloadsNS = null; } }
+    if (downloadsNS === undefined) { try { downloadsNS = await window.claude.use('downloads'); } catch { downloadsNS = null; } }
     if (!downloadsNS) { showFallback(filename, data); return; }
     try { await downloadsNS.save({ filename, data }); toast('Saved ' + filename); }
     catch (e) { if (e && e.code === 'declined') return; showFallback(filename, data); }
@@ -49,7 +49,7 @@
     document.getElementById('fallback-copy').onclick = () => copyText(ta.value, ta);
     box.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
-  function store(key, val) { try { if (val === undefined) return JSON.parse(localStorage.getItem(key) || 'null'); localStorage.setItem(key, JSON.stringify(val)); } catch (e) { return null; } }
+  function store(key, val) { try { if (val === undefined) return JSON.parse(localStorage.getItem(key) || 'null'); localStorage.setItem(key, JSON.stringify(val)); } catch { return null; } }
   function toCSV(rows) {
     const cols = Object.keys(rows[0]);
     const q = (v) => { const s = v == null ? '' : String(v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };

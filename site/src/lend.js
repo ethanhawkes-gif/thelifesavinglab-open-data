@@ -16,7 +16,7 @@
   const KIND = { verify: 'Verify a figure', row: 'Bring a row', method: 'Test a method' };
   const SIZE = { S: 'about 20 minutes', M: 'about an hour', L: 'a long session' };
   const S = { tasks: null, receipts: null, schema: null, kind: 'all', handle: '' };
-  const store = (k, v) => { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } };
+  const store = (k, v) => { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch { return null; } };
 
   /* ---------- the same checks as scripts/tasks.mjs ---------- */
   const typeOf = (v) => (v === null ? 'null' : Array.isArray(v) ? 'array' : typeof v === 'number' && Number.isInteger(v) ? 'integer' : typeof v);
@@ -36,7 +36,7 @@
     }
     return out;
   }
-  const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, '').toLowerCase(); } catch (e) { return null; } };
+  const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, '').toLowerCase(); } catch { return null; } };
   const isPress = (h) => !!h && PRESS.some((p) => h === p || h.endsWith('.' + p));
   const words = (s) => String(s || '').trim().split(/\s+/).filter(Boolean).length;
   function piiKinds(v) { const f = new Set(); const walk = (x) => { if (typeof x === 'string') PII.forEach(([k, re]) => { if (re.test(x)) f.add(k); }); else if (Array.isArray(x)) x.forEach(walk); else if (x && typeof x === 'object') Object.entries(x).forEach(([k, y]) => { walk(k); walk(y); }); }; walk(v); return [...f]; }
@@ -68,7 +68,7 @@
     return { ok: errors.length === 0, errors, warnings };
   }
   function canonical(v) { if (v === null || typeof v !== 'object') return JSON.stringify(v); if (Array.isArray(v)) return '[' + v.map(canonical).join(',') + ']'; return '{' + Object.keys(v).filter((k) => v[k] !== undefined).sort().map((k) => JSON.stringify(k) + ':' + canonical(v[k])).join(',') + '}'; }
-  async function sha256(text) { try { const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)); return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join(''); } catch (e) { return null; } }
+  async function sha256(text) { try { const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)); return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join(''); } catch { return null; } }
 
   /* ---------- the prompt pack, identical to `node scripts/tasks.mjs prompt <id>` ---------- */
   function buildPrompt(t) {
@@ -183,7 +183,7 @@
   async function onCheck(ctx) {
     const ta = document.getElementById('bundle-in'), out = document.getElementById('bundle-out');
     const raw = ta.value.trim(); if (!raw) { out.innerHTML = '<p class="small muted">Paste the file first.</p>'; return; }
-    let b; try { b = JSON.parse(raw.replace(/^```(?:json)?\s*|\s*```$/g, '')); } catch (e) { out.innerHTML = '<p class="notice"><span class="eyebrow">Not valid JSON</span><br>The assistant’s last message should be a single JSON object. Ask it to “return only the JSON object” and paste again.</p>'; return; }
+    let b; try { b = JSON.parse(raw.replace(/^```(?:json)?\s*|\s*```$/g, '')); } catch { out.innerHTML = '<p class="notice"><span class="eyebrow">Not valid JSON</span><br>The assistant’s last message should be a single JSON object. Ask it to “return only the JSON object” and paste again.</p>'; return; }
     if (!S.schema || !S.tasks) { out.innerHTML = '<p class="notice"><span class="eyebrow">Checker not loaded</span><br>Reload the page and try again.</p>'; return; }
     const r = checkBundle(b, new Set(ctx.ledgerIds()));
     const sha = r.ok ? await sha256(canonical(b)) : null;

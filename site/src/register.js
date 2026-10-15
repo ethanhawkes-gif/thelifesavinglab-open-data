@@ -10,8 +10,8 @@
     who: ['', 'Coast Guard', 'harbormaster', 'bystander', 'lifeguard', 'fire', 'other'],
     outcome: ['rescued-unharmed', 'rescued-injured', 'non-fatal-drowning', 'fatal', 'missing'], confidence: ['high', 'medium', 'low']
   };
-  const load = () => { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { return []; } };
-  const save = (rows) => { try { localStorage.setItem(KEY, JSON.stringify(rows)); return true; } catch (e) { return false; } };
+  const load = () => { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; } };
+  const save = (rows) => { try { localStorage.setItem(KEY, JSON.stringify(rows)); return true; } catch { return false; } };
   const csvq = (v) => { const s = v == null ? '' : String(v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
   const toCSV = (rows) => COLS.join(',') + '\n' + rows.map((r) => COLS.map((c) => csvq(r[c])).join(',')).join('\n') + '\n';
   /* The repository's conservative detector, mirrored: a hit refuses the row. Names are not detected; the form says so. */

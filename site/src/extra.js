@@ -374,7 +374,7 @@
   async function mountWatch() {
     const host = document.getElementById('watch-queue'); if (!host) return;
     let feed = null;
-    try { const r = await fetch('data/watch-feed.json'); if (r.ok) feed = await r.json(); } catch (e) { feed = null; }
+    try { const r = await fetch('data/watch-feed.json'); if (r.ok) feed = await r.json(); } catch { feed = null; }
     if (!feed || !feed.generated) {
       host.innerHTML = `<p class="eyebrow">The queue · no run yet</p><p class="small" style="font-size:16px">The job is scheduled but has not written a feed yet, or this copy of the site has not been synced. The live queue is in the open-data repository under <span class="mono">watch/queue.json</span>.</p>`;
       return;
