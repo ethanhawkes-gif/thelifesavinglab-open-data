@@ -15,7 +15,7 @@ what it must not be added to.
 - It **is not** a measure of lives saved. No figure here counts lives saved, and the API will not compute one.
 - It **is not** authoritative over its sources. Where a source and this file disagree, the source wins; open a correction.
 - It holds **no personal data**: no names of the dead or the living, no contacts, no locations of individuals.
-- The live site thelifesavinglab.org is a different Worker. This repository does not deploy to it.
+- thelifesavinglab.org is built from `site/` in this repository (`node site/build.mjs`) and served as a static-assets Worker; `site/README.md` says how a push reaches it. The API Worker (`src/worker.js`) is separate and has no route.
 
 ## Quick start
 
