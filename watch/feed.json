@@ -1,9 +1,9 @@
 {
  "schema": "lifesavinglab.watch.feed.v1",
- "generated": "2026-10-15T12:31:33.143Z",
+ "generated": "2026-10-15T12:48:17.071Z",
  "note": "Reports found by the watch and not yet read by a person, newest first. A report is not a count. No headline text and no names are stored; follow the link to read it.",
  "counts": {
-  "reported": 234,
+  "reported": 235,
   "read": 0,
   "row-written": 0,
   "matched": 8,
@@ -13,14 +13,23 @@
  },
  "sources": {
   "rnli-news": "failed",
-  "uscg-news": "failed",
-  "uscg-press": "failed",
   "uscg-d7-govdelivery": "ok",
   "gnews-us": "ok",
   "gnews-world": "ok",
   "bing-news": "ok"
  },
  "items": [
+  {
+   "id": "aaeb5ac12358e8ab",
+   "kind": "capsize",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "published": "2026-10-15T12:43:23.000Z",
+   "first_seen": "2026-10-15T12:48:17.071Z",
+   "stage": "reported",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQczNIdEtaS01kTzlPVVNYV19lOGhYYlFabVJZTjZsaktpcmhsTWVwSXZBejcyckNRTGFBVzZYSUkySVBpbTJ4bnVoSUUtV0thZmxMelp0TE5xeEs2QXJTdzdwU3NwenFDa05aazY5QW13ZUdudDc5WVZRNGM1eG9nZG5wQQ?oc=5"
+  },
   {
    "id": "28eb8461def62d7b",
    "kind": "drowning-reported",
@@ -669,17 +678,6 @@
    "first_seen": "2026-10-15T05:25:35.927Z",
    "stage": "matched",
    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUd4QW90c3NmaVdXMEdfUE4wZml2blcyMHh0ZUl5Rmc4TU5uNlVxNno0Si1NMTIxWmp0QjEyRVBRUjZZVEhkaGpnRGVwRks0TGVCckZkZEl0cnowbS1GTHo5d2pLR3BtSUVxUE9BblpiMi0wTjVVM3lwMHlBTmVPUXlQTGRwMHZvQVVZc0cta3EzQ2dLTnE2ZkJIc2VZeUJzQy1SRm5jOA?oc=5"
-  },
-  {
-   "id": "33903acc05604863",
-   "kind": "drowning-reported",
-   "source": "gnews-us",
-   "source_kind": "press",
-   "region": "United States",
-   "published": "2026-10-12T18:16:00.000Z",
-   "first_seen": "2026-10-15T05:25:35.927Z",
-   "stage": "reported",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWDRHQUwxSjNyc2xuRlBKU2pCeGZVRGJmbFRmM2RNUDNqQWJkVGFnUGNRMzE1cEpqRGZtU08td2ZiZ1RCbFF5enlLcmxMajhjYWNMU2JoTnZiWGRKbGdGTnhMS2Naa1BBX0pWRmoxcWs4RmpST1lKSjVBaUhFam5ybFZqUng2MENNamZFcjRfalFkaE5HRWtabWlB?oc=5"
   }
  ]
 }

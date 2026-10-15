@@ -1,8 +1,8 @@
 {
  "schema": "lifesavinglab.watch.queue.v1",
- "generated": "2026-10-15T12:31:33.143Z",
+ "generated": "2026-10-15T12:48:17.071Z",
  "counts": {
-  "reported": 234,
+  "reported": 235,
   "read": 0,
   "row-written": 0,
   "matched": 8,
@@ -11,6 +11,20 @@
   "held": 31
  },
  "items": [
+  {
+   "id": "aaeb5ac12358e8ab",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQczNIdEtaS01kTzlPVVNYV19lOGhYYlFabVJZTjZsaktpcmhsTWVwSXZBejcyckNRTGFBVzZYSUkySVBpbTJ4bnVoSUUtV0thZmxMelp0TE5xeEs2QXJTdzdwU3NwenFDa05aazY5QW13ZUdudDc5WVZRNGM1eG9nZG5wQQ?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "capsize",
+   "published": "2026-10-15T12:43:23.000Z",
+   "first_seen": "2026-10-15T12:48:17.071Z",
+   "stage": "reported",
+   "title_sha256": "07c7e2d640183bac321889665e58e775dc0a221539443c337f3199753b5c0c56",
+   "held": null,
+   "note": null
+  },
   {
    "id": "28eb8461def62d7b",
    "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNb3lIdm5JZlRsMmlJVUpVVW9oa0ZWNHEwMHk2ODJfVnJ6VjFSOWtvMnZGT3dKLVZ0YWtBa0RNZWdmaHhqcTRwQ2REdkRLWEJxNGhSUkFrT2xCVDF0WjN4NUx5LVMtNE41T3dyUy1TeDJCOHU1d21IT2dzanFlQXIwb0xuWm1tdC02RHdXNzFiTHZzcHNLQUo0Wk5OV0drX3NiaTBpY1RjU0FsY3ItMkpIYTUxWmVJVGVHT1lkTnUwN0lvRFR1SElJWUstdC1zdTBIankydHNfNEhFMFZpckQ1cmJuY21UeFBYczZqTG1xOWV4SUJKMFBieEJEcmlXbzhoOUkxVS0xbWJrOFZm?oc=5",
@@ -3463,6 +3477,40 @@
   }
  ],
  "runs": [
+  {
+   "at": "2026-10-15T12:48:17.071Z",
+   "sources": {
+    "rnli-news": {
+     "ok": false,
+     "error": "HTTP 403"
+    },
+    "uscg-d7-govdelivery": {
+     "ok": true,
+     "items": 100,
+     "matched": 31,
+     "added": 0
+    },
+    "gnews-us": {
+     "ok": true,
+     "items": 100,
+     "matched": 96,
+     "added": 1
+    },
+    "gnews-world": {
+     "ok": true,
+     "items": 100,
+     "matched": 91,
+     "added": 0
+    },
+    "bing-news": {
+     "ok": true,
+     "items": 0,
+     "matched": 0,
+     "added": 0
+    }
+   },
+   "added": 1
+  },
   {
    "at": "2026-10-15T12:31:33.143Z",
    "sources": {
