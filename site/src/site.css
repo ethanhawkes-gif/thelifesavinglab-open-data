@@ -21,15 +21,17 @@ button{font:inherit;cursor:pointer}
 .band{background:var(--band)}
 .dark{background:var(--navy);color:var(--paper)}
 .dark a{color:var(--brass-2)}.dark a:hover{color:#F1DFA8}
+.dark a.btn--primary,.hero a.btn--primary,.card--dark a.btn--primary{color:#fff}.dark a.btn--primary:hover,.hero a.btn--primary:hover{color:#fff}
 .eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust)}
-.dark .eyebrow{color:var(--brass)}
+.dark .eyebrow,.hero .eyebrow,.card--dark .eyebrow,.counter--dark .eyebrow{color:var(--brass)}
+.dark .steps .n,.hero .steps .n{color:var(--brass)}
 .display{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spacing:-.015em;text-wrap:balance}
 .h1{font-size:clamp(42px,5.4vw,80px);line-height:1.02}
 .h2{font-size:clamp(34px,4.4vw,60px)}
 .h3{font-family:var(--serif);font-weight:500;font-size:28px;line-height:1.15}
 .h4{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.2}
 .lede{font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);text-wrap:pretty;max-width:36em}
-.dark .lede{color:var(--pale)}
+.dark .lede,.hero .lede{color:var(--pale)}
 .mono{font-family:var(--mono);font-size:13px;letter-spacing:.04em}
 .muted{color:var(--muted)}.dark .muted{color:var(--mist)}
 .small{font-size:14px;line-height:1.5}
@@ -52,7 +54,7 @@ button{font:inherit;cursor:pointer}
 .btn:hover{background:#000;color:#fff}
 .btn--primary{background:var(--buoy);color:#fff}.btn--primary:hover{background:#A33322;color:#fff}
 .btn--ghost{background:transparent;border-color:var(--ink);color:var(--ink)}.btn--ghost:hover{background:var(--ink);color:var(--ground)}
-.dark .btn--ghost{border-color:#6F8A8C;color:var(--paper)}.dark .btn--ghost:hover{background:var(--paper);color:var(--navy)}
+.dark .btn--ghost,.hero .btn--ghost,.card--dark .btn--ghost{border-color:#6F8A8C;color:var(--paper)}.dark .btn--ghost:hover,.hero .btn--ghost:hover,.card--dark .btn--ghost:hover{background:var(--paper);color:var(--navy)}
 .btn--sm{min-height:40px;padding:0 14px;font-size:15px}
 .pill{display:inline-block;padding:2px 8px;border-radius:2px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;line-height:1.5}
 .pill-A{background:var(--ink);color:var(--ground)}.pill-B{background:var(--teal);color:#fff}.pill-C{background:#D8D1BF;color:var(--ink)}.pill-D{background:transparent;border:1.5px dashed #8E8670;color:var(--ink-2)}
@@ -61,7 +63,7 @@ button{font:inherit;cursor:pointer}
 .dark .pill-estimate{background:#2A4650;color:var(--paper)}.dark .pill-unknown{border-color:#6F8A8C;color:var(--pale)}
 .safety{background:var(--deep);color:#E4E9E7;font-size:14px;line-height:1.4}
 .safety .wrap{padding-top:10px;padding-bottom:10px;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:center;text-align:center}
-.safety b{color:#fff}
+.safety b{color:#fff}.safety .muted{color:var(--mist)}
 header.site{background:var(--ground);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
 header.site nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;padding-top:12px;padding-bottom:12px}
 .brand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none}
