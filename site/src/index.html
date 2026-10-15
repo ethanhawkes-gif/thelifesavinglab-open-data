@@ -2,10 +2,9 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="site.css">
-<style>
-/* Layout: an open ledger with a working harbor behind it. Cream pages, navy bands, one lifebuoy red for the action, brass for labels on dark. */
-:root{color-scheme:light only}
-</style>
+<!-- Layout: an open ledger with a working harbor behind it. Cream pages, navy bands, one lifebuoy red for the action, brass for labels on dark. -->
+
+<a class="skip" href="#app">Skip to content</a>
 
 <div class="safety" role="region" aria-label="Emergency information">
   <div class="wrap">
@@ -17,10 +16,17 @@
 
 <header class="site">
   <nav class="wrap" aria-label="Main">
-    <a class="brand" href="#home" data-route="home">
-      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="11.5" fill="none" stroke="#FFFFFF" stroke-width="7"></circle><circle cx="17" cy="17" r="11.5" fill="none" stroke="#C4402B" stroke-width="7" stroke-dasharray="9.03 9.03" transform="rotate(-22 17 17)"></circle><circle cx="17" cy="17" r="15.25" fill="none" stroke="#13222A" stroke-width="1.5"></circle><circle cx="17" cy="17" r="7.75" fill="none" stroke="#13222A" stroke-width="1.5"></circle></svg>
-      <span>The Life-Saving Lab</span>
-    </a>
+    <div class="mast">
+      <a class="brand" href="#home" data-route="home">
+        <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="11.5" fill="none" stroke="#FFFFFF" stroke-width="7"></circle><circle cx="17" cy="17" r="11.5" fill="none" stroke="#C4402B" stroke-width="7" stroke-dasharray="9.03 9.03" transform="rotate(-22 17 17)"></circle><circle cx="17" cy="17" r="15.25" fill="none" stroke="#13222A" stroke-width="1.5"></circle><circle cx="17" cy="17" r="7.75" fill="none" stroke="#13222A" stroke-width="1.5"></circle></svg>
+        <span>The Life-Saving Lab</span>
+      </a>
+      <div class="mast-right">
+        <span class="mast-note mono">Portsmouth Harbor · an open lab on drowning</span>
+        <a class="btn btn--sm" href="#contribute" data-route="contribute">Contribute</a>
+        <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="navlinks"><span aria-hidden="true">☰</span> Menu</button>
+      </div>
+    </div>
     <div class="navlinks" id="navlinks">
       <a href="#toll" data-route="toll">The toll</a>
       <a href="#gaps" data-route="gaps">Gaps</a>
@@ -32,12 +38,14 @@
       <a href="#june" data-route="june">June lab</a>
       <a href="#wisdom" data-route="wisdom">Wisdom</a>
       <a href="#lend" data-route="lend">Lend an hour</a>
-      <a href="#contribute" data-route="contribute" class="btn btn--sm">Contribute</a>
+      <a href="#briefs" data-route="briefs">Briefs</a>
+      <a href="#register" data-route="register">Register</a>
+      <a href="#contribute" data-route="contribute" class="nav-contribute">Contribute</a>
     </div>
   </nav>
 </header>
 
-<main id="app" aria-live="polite"></main>
+<main id="app" aria-live="polite" tabindex="-1"></main>
 
 <footer class="site">
   <div class="wrap section--tight stack" style="gap:32px">
@@ -51,7 +59,7 @@
         <p class="small">Data and text: CC BY 4.0. Sources keep their own licences. Corrections: <span class="mono" id="foot-mail">hello@thelifesavinglab.org</span></p>
         <p class="small">The lab holds no money. Donations go directly to the <a href="https://woodislandlifesaving.org">Wood Island Life Saving Station Association</a>, which restored the station.</p>
       </div>
-      <div class="card--dark" style="padding:18px 20px;border:1px solid var(--navy-line);border-radius:2px;display:flex;flex-direction:column;gap:6px;flex:1 1 320px;max-width:none">
+      <div class="card--dark" style="padding:18px 20px;border:1px solid var(--navy-line);border-radius:3px;display:flex;flex-direction:column;gap:6px;flex:1 1 320px;max-width:none">
         <p style="font-weight:600;color:var(--paper)">In distress on the water: VHF channel 16 or the Coast Guard.</p>
         <p style="font-weight:600;color:var(--paper)">In crisis: call or text 988.</p>
       </div>
@@ -60,7 +68,8 @@
       <a href="#toll">The toll</a><a href="#gaps">Gaps</a><a href="#ledger">Ledger</a><a href="#tree">Tree</a><a href="#pilots">Pilots</a><a href="#harbor">This water</a><a href="#watch">Watch</a><a href="#june">June lab</a><a href="#wisdom">Wisdom</a><a href="#register">Register</a><a href="#lend">Lend your agent</a><a href="#briefs">Briefs</a><a href="#contribute">Contribute</a><a href="#glossary">Glossary</a><a href="https://woodislandlifesaving.org">Give to the station</a>
       <a href="https://thelifesavinglab.org/history">History</a><a href="https://thelifesavinglab.org/bridge">The span brief</a>
     </nav>
-    <p class="small" style="padding-top:18px;border-top:1px solid var(--navy-line);color:var(--mist)">Since you opened this page, an estimated <b data-live="since" style="color:var(--paper)">—</b> people have drowned somewhere in the world. No figure on this site is summed across sources or waters unless the row that does it says so. Last checked 15 Oct 2026.</p>
+    <p class="small" style="padding-top:18px;border-top:1px solid var(--navy-line);color:var(--mist)">Since you opened this page, an estimated <b data-live="since" style="color:var(--paper)">—</b> people have drowned somewhere in the world. No figure on this site is summed across sources or waters unless the row that does it says so.</p>
+    <p class="colophon"><span>Ledger <b data-foot="version">—</b> · <b data-foot="rows">—</b> rows</span><span>Last checked <b data-foot="checked">15 Oct 2026</b></span><span>Board: <b data-foot="open">—</b> open tasks · <b data-foot="receipts">—</b> receipts</span><span>Code MIT · seeds CC0 · estimates CC BY 4.0</span><span><a href="https://github.com/ethanhawkes-gif/thelifesavinglab-open-data">Repository</a> · <a href="llms.txt">llms.txt</a></span></p>
   </div>
 </footer>
 

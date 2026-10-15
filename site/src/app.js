@@ -91,7 +91,7 @@
     <h1 id="hero-title" class="display h1">This harbor’s past was lifesaving. <i style="color:var(--brass)">So is its future.</i></h1>
     <p class="lede">An open lab on drowning. We keep a sourced count of what is known and publish it as a range, not a false point. Each June, students and the people who work this water write one-page changes a real adopter could run that season. We publish the ones that fail.</p>
     <div class="row"><a class="btn btn--primary" href="#contribute">Contribute <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#toll">See the toll</a></div>
-    <div class="row mono" style="gap:8px 28px;padding-top:22px;border-top:1px solid var(--navy-line);color:var(--mist)"><span><b style="color:var(--paper);font-weight:500">${rows}</b> sourced ledger rows</span><span><b style="color:var(--paper);font-weight:500">17</b> branches of the tree</span><span><b style="color:var(--paper);font-weight:500">24</b> student seats</span></div>
+    <div class="row mono hero-stats"><span><b>${rows}</b> sourced ledger rows</span><span><b>${DATA.tree ? Object.values(DATA.tree.nodes).filter((n) => !n.options || !n.options.length).length : 17}</b> branches of the tree</span><span><b>24</b> student seats</span></div>
   </div></div>
   <div class="hero-photo">
     <img src="${PHOTOS.hero}" alt="Wood Island Life-Saving Station in Kittery, Maine, seen down its boardwalk: white shingles, a red roof and lookout tower, a surfboat on its launching carriage, and Whaleback Light on the horizon">
@@ -110,7 +110,7 @@
   ${sectionHead('No. 1 · How the lab works', '<span id="how-title">Count what is known. Change one thing. Publish what failed.</span>', 'One loop, run in public. Every step leaves something on the record that anyone can check, correct or reuse.')}
   <ol class="steps">
     <li><span class="n">01</span><h3 class="h3">Count</h3><p class="small" style="font-size:16px">Keep a sourced ledger. Put disagreeing estimates side by side; never add across sources.</p><a class="mono" href="#ledger">Result: the ledger</a></li>
-    <li><span class="n">02</span><h3 class="h3">Name the water</h3><p class="small" style="font-size:16px">The tree asks which water first, then who is at risk, then which measure fits. A pool fence does nothing in a river.</p><a class="mono" href="#tree">Result: the tree</a></li>
+    <li><span class="n">02</span><h3 class="h3">Name the water</h3><p class="small" style="font-size:16px">The tree asks which water first, then who is at risk, and only then which measure fits that water and that person.</p><a class="mono" href="#tree">Result: the tree</a></li>
     <li><span class="n">03</span><h3 class="h3">Write a pilot</h3><p class="small" style="font-size:16px">A pilot: one page, one change, small enough to run this season, with a written test for how it would fail.</p><a class="mono" href="#june">Result: a pilot page</a></li>
     <li><span class="n">04</span><h3 class="h3">Hand it over</h3><p class="small" style="font-size:16px">To an adopter: the harbormaster, co-op or crew that would actually run it, without a new agency.</p><a class="mono" href="#june">Result: an adopter</a></li>
     <li><span class="n">05</span><h3 class="h3">Publish the result</h3><p class="small" style="font-size:16px">Taken up, failed or still open. What we learn corrects the ledger and the loop starts again.</p><a class="mono" href="#wisdom">Result: the record</a></li>
@@ -118,7 +118,7 @@
 </div></section>
 
 <section class="section band" aria-labelledby="toll-title"><div class="wrap stack" style="gap:36px">
-  ${sectionHead('No. 2 · The toll', '<span id="toll-title">Between ~${floor} and ~${ceil} a year. Nobody knows where in that range the truth sits.</span>', 'Nobody counts every drowning; the global figures are estimates. We add up only what has a source, show the result as a lowest and a highest documented total, and draw the unknown as unknown.')}
+  ${sectionHead('No. 2 · The toll', `<span id="toll-title">Between ~${floor} and ~${ceil} a year. Nobody knows where in that range the truth sits.</span>`, 'Nobody counts every drowning; the global figures are estimates. We add up only what has a source, show the result as a lowest and a highest documented total, and draw the unknown as unknown.')}
   ${toll ? window.Charts.tollBar(toll, { compact: true }) : noData}
   ${window.Extra.counterBlock(toll)}
   <div class="row"><a class="btn" href="#toll">Open the toll, component by component</a><a class="btn btn--ghost" href="#ledger">The ledger behind it</a></div>
@@ -152,7 +152,8 @@
 
 <section class="section" aria-labelledby="gaps-home"><div class="wrap stack" style="gap:24px">
   ${sectionHead('No. 6 · The gaps', '<span id="gaps-home">Most of what a good dataset needs does not exist. That is the work list.</span>', 'A coverage matrix shows, cell by cell, what the world knows about drowning. Each empty cell has a first step one person could take this season.')}
-  <div class="row"><a class="btn btn--primary" href="#gaps">See the gaps</a><a class="btn btn--ghost" href="#toll">The toll</a></div>
+  ${window.Extra.gapsPreview(3)}
+  <div class="row"><a class="btn btn--primary" href="#gaps">All nine gaps, with first steps</a><a class="btn btn--ghost" href="#toll">The toll</a></div>
 </div></section>
 
 <section class="section" aria-labelledby="record-title"><div class="wrap stack" style="gap:36px">
@@ -201,7 +202,7 @@
   <div class="grid g3">
     <div class="card stack-sm"><p class="eyebrow">The floor · ~${floor}</p><p class="small" style="font-size:16px">The lowest published bound of the core (${fmt(toll.layers[0].low)}) plus the lowest documented value of every component outside it. It assumes every fishing death is already inside WHO’s figure.</p></div>
     <div class="card stack-sm"><p class="eyebrow">The ceiling · ~${ceil}</p><p class="small" style="font-size:16px">The highest documented value of each, assuming none of the fishing toll is inside the core. It is a ceiling of what has been written down, not of what happens.</p></div>
-    <div class="card stack-sm card--dashed"><p class="eyebrow">Beyond · unknown</p><p class="small" style="font-size:16px">Shipping and small craft have no global series. Intentional drowning is not reproduced here. Non-fatal drownings run four to five per death and are never added.</p></div>
+    <div class="card stack-sm card--dashed"><p class="eyebrow">Beyond · unknown</p><p class="small" style="font-size:16px">Shipping and small craft have no global series. Intentional drowning is not reproduced here. Survivors, where counted, run two to four per death and are never added.</p></div>
   </div>
 </div></section>
 
@@ -425,7 +426,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
   <div id="tree-body">${body}</div>
 </div></section>
 <section class="section"><div class="wrap stack" style="gap:20px">
-  <details class="row"><summary class="h3" style="display:flex;align-items:center;gap:10px;cursor:pointer">The whole tree <span class="mono muted" style="font-size:13px">25 nodes · 17 leaves · click any to jump</span></summary><div class="treemap" style="margin-top:18px">${map}</div></details>
+  <details class="row disclose"><summary class="h3"><span class="disclose-mark" aria-hidden="true"></span>The whole tree <span class="mono muted" style="font-size:13px">${Object.keys(DATA.tree.nodes).length} nodes · ${Object.values(DATA.tree.nodes).filter((n) => !n.options || !n.options.length).length} leaves · click any to jump</span></summary><div class="treemap" style="margin-top:18px">${map}</div></details>
   <p class="small muted">Every branch is in <span class="mono">data/tree.json</span>, free to reuse. Missing a water, a person or a measure? <a href="#contribute-branch">Propose a branch.</a> A person reads it; nothing is published until a person merges it.</p>
 </div></section>`;
   }
@@ -514,7 +515,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
 </div></section>
 
 <section class="section--tight band"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:36px 56px">
-  <form id="cform" class="stack" style="flex:1.2 1 460px;min-width:0;gap:16px" novalidate>
+  <form id="cform" class="form-grid" style="flex:1.2 1 460px;min-width:0" novalidate>
     <div class="stack-sm"><h2 class="h3">${esc(TYPES[type].label)}</h2><p class="small muted" style="font-size:15px">${esc(TYPES[type].blurb)}</p></div>
     ${TYPES[type].fields.map(([k, label, kind, req]) => {
       const pre = (type === 'correction' && k === 'row_id') || (type === 'branch' && k === 'node_id') ? esc(ref) : '';
@@ -523,7 +524,8 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
       if (kind === 'textarea') input = `<textarea id="${id}" name="${k}" ${req ? 'required' : ''}></textarea>`;
       else if (kind.startsWith('select:')) input = `<select id="${id}" name="${k}" ${req ? 'required' : ''}><option value="">—</option>${kind.slice(7).split(',').map((o) => `<option>${o}</option>`).join('')}</select>`;
       else input = `<input id="${id}" name="${k}" type="${kind}" value="${pre}" ${req ? 'required' : ''}>`;
-      return `<div class="field"><label for="${id}">${esc(label)}${req ? ' *' : ''}</label>${input}<span class="errmsg" hidden>Required</span></div>`;
+      const wide = kind === 'textarea' || ['figure', 'row_id', 'adopter', 'title'].includes(k);
+      return `<div class="field${wide ? ' wide' : ''}"><label for="${id}">${esc(label)}${req ? ' *' : ''}</label>${input}<span class="errmsg" hidden>Required</span></div>`;
     }).join('')}
     <div class="field"><label for="f-name">Your name *</label><input id="f-name" name="name" type="text" required><span class="errmsg" hidden>Required</span></div>
     <div class="field"><label for="f-email">Email (optional, never shown)</label><input id="f-email" name="email" type="email"></div>
@@ -606,9 +608,24 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     const jump = () => { try { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); } catch { window.scrollTo(0, 0); } };
     jump(); requestAnimationFrame(() => { jump(); root.style.scrollBehavior = prev; });
   }
+  /* The phone menu: a disclosure that closes on any route change or Escape. */
+  const menuBtn = document.getElementById('menu-btn'), navlinks = document.getElementById('navlinks');
+  function setMenu(open) { if (!menuBtn || !navlinks) return; navlinks.classList.toggle('open', open); menuBtn.setAttribute('aria-expanded', String(open)); }
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') { setMenu(false); menuBtn.focus(); } });
+  }
+  function fillColophon() {
+    const set = (k, v) => document.querySelectorAll(`[data-foot="${k}"]`).forEach((el) => { el.textContent = v; });
+    if (DATA.ledger) { set('version', 'v' + DATA.ledger.version); set('rows', fmt(DATA.ledger.rows.length)); if (DATA.ledger.last_checked) set('checked', fmtDate(DATA.ledger.last_checked)); }
+    if (DATA.tasks) set('open', String(DATA.tasks.tasks.filter((t) => t.status !== 'done' && !(t.claimed_until && Date.parse(t.claimed_until) > Date.now())).length));
+    if (DATA.receipts) set('receipts', String(DATA.receipts.receipts.length));
+  }
+  function fmtDate(iso) { const d = new Date(iso + 'T00:00:00Z'); return isNaN(d) ? iso : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }); }
   function render() {
     const { route, arg } = parseHash();
-    document.querySelectorAll('#navlinks a').forEach((a) => a.classList.toggle('on', a.dataset.route === route));
+    setMenu(false);
+    document.querySelectorAll('#navlinks a').forEach((a) => { const on = a.dataset.route === route; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     window.Extra.stopCounter();
     app.innerHTML = routes[route].html(arg);
     if (routes[route].mount) routes[route].mount(arg);
@@ -619,6 +636,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
       if (!keep) jumpTop();
     }
     if (route === 'tree' && lastRoute === 'tree') { const b = document.getElementById('tree-body'); if (b) { const top = b.getBoundingClientRect().top + window.scrollY - 140; if (window.scrollY > top) window.scrollTo({ top, behavior: 'smooth' }); } }
+    if (lastRoute !== null && route !== lastRoute) { try { app.focus({ preventScroll: true }); } catch { /* older browsers */ } }
     lastRoute = route;
   }
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
@@ -626,6 +644,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
   (async () => {
     try { await Promise.race([load(), new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), 6000))]); }
     catch (e) { console.warn('data load failed', e); }
+    fillColophon();
     render();
   })();
 })();
