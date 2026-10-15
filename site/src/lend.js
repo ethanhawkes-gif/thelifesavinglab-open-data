@@ -151,8 +151,8 @@
   function renderBoard() {
     const el = document.getElementById('board'); if (!el || !S.tasks) return;
     const tasks = S.tasks.tasks.filter((t) => S.kind === 'all' || t.kind === S.kind);
-    const order = { open: 0, claimed: 1, done: 2 };
-    tasks.sort((a, b) => order[leaseState(a)] - order[leaseState(b)]);
+    const order = { open: 0, claimed: 1, done: 2 }, size = { S: 0, M: 1, L: 2 };
+    tasks.sort((a, b) => (order[leaseState(a)] - order[leaseState(b)]) || ((size[a.size] ?? 9) - (size[b.size] ?? 9)));
     if (!tasks.length) { el.innerHTML = '<p class="small muted">Nothing in this group right now.</p>'; return; }
     el.innerHTML = tasks.map((t) => {
       const st = leaseState(t);
