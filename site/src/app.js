@@ -6,6 +6,8 @@
   const MAIL = 'hello@thelifesavinglab.org';
   const SITE = 'https://thelifesavinglab.org';
   const REPO = 'github.com/ethanhawkes-gif/thelifesavinglab-open-data';
+  /* Money goes to the station, not the lab. The association's own site carries its giving page; we link there and nowhere else. */
+  const WILSSA = 'https://woodislandlifesaving.org';
 
   const PHOTOS = {
     hero: 'img/hero_station.jpg',
@@ -169,7 +171,7 @@
     <div class="card stack-sm" style="border-top:4px solid var(--buoy)"><h3 class="h3">Students</h3><p class="small" style="font-size:16px">24 seats. Own a branch of the tree, name an adopter, and defend a pilot.</p><a class="btn btn--primary btn--sm" style="margin-top:auto" href="${SITE}/cohort">Join the cohort</a></div>
     <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Experts and responders</h3><p class="small" style="font-size:16px">Harbormasters, crews, fishers, lifeguards: bring the sentence your service still uses, or a pilot you would adopt.</p><a class="btn btn--ghost btn--sm" style="margin-top:auto" href="#contribute-pilot">Bring expertise</a></div>
     <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Data contributors</h3><p class="small" style="font-size:16px">Add a ledger row, verify a secondary one, or run the incident register in your harbor.</p><a class="btn btn--ghost btn--sm" style="margin-top:auto" href="#contribute-row">Open the queue</a></div>
-    <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Funders and partners</h3><p class="small" style="font-size:16px">Read the method and the ledger first. We report pilots written, adopted and failed.</p><a class="btn btn--ghost btn--sm" style="margin-top:auto" href="#contribute-offer">Write to us</a></div>
+    <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Funders and partners</h3><p class="small" style="font-size:16px">Read the method and the ledger first. We report pilots written, adopted and failed. The lab holds no money: donations go directly to the <a href="${WILSSA}">Wood Island Life Saving Station Association</a>, which restored the station.</p><div class="row" style="margin-top:auto;gap:8px"><a class="btn btn--sm" href="${WILSSA}">Give to the station</a><a class="btn btn--ghost btn--sm" href="#contribute-offer">Write to us</a></div></div>
   </div>
   <div class="card--dark" style="padding:clamp(22px,3vw,36px);border-radius:2px;display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between">
     <div class="stack-sm" style="flex:1 1 420px;min-width:0"><p class="eyebrow">Spare AI usage this month?</p><h3 class="h3" style="color:var(--paper)">Lend your assistant an hour.</h3><p class="small" style="font-size:16px;color:var(--mist);max-width:40em">One click opens a small, sourced task in ChatGPT, Claude, Grok or Perplexity (paste it into Gemini). Hand back what it found; a person checks it; you get a receipt that says what changed.</p></div>
@@ -477,7 +479,7 @@
       fields: [['your_role', 'Your role (harbormaster, crew, fisher, lifeguard…)', 'text', true], ['water', 'The water you work', 'text', true], ['the_pilot', 'The change, in one page or less', 'textarea', true], ['adopter', 'Who would run it (a role, not a name, unless it is you)', 'text', true], ['how_it_fails', 'How you would know it failed', 'textarea', true]] },
     register: { label: 'Run the register in your harbor', blurb: 'One season of careful rows from one place. We send the template, you send the rows, we publish the method and never a name.',
       fields: [['organisation', 'Organisation', 'text', true], ['place', 'The harbor, club or station', 'text', true], ['season', 'Season you could run it', 'text', true], ['events_per_year', 'Roughly how many events a year (any outcome)', 'text', false], ['data_you_hold', 'Data you already hold', 'textarea', false]] },
-    offer: { label: 'An offer', blurb: 'A boat that already runs the crossing, a drone with an operator, a classroom day, a session you could teach, a season keeping the watch, or funding.',
+    offer: { label: 'An offer', blurb: 'A boat that already runs the crossing, a drone with an operator, a classroom day, a session you could teach, or a season keeping the watch. Money is different: donations go directly to the Wood Island Life Saving Station Association, not to the lab.',
       fields: [['what', 'What you can offer', 'textarea', true], ['when', 'When', 'text', false], ['conditions', 'Any conditions', 'textarea', false]] }
   };
   function contributePage(arg) {
@@ -514,6 +516,7 @@
     <div class="card stack-sm" id="out-box"><p class="eyebrow">Your submission</p><p class="small muted">Fill in the form and press “Prepare it”. You will get a file to copy or save, and the address to send it to.</p></div>
     <div id="fallback-box" hidden></div>
     <div class="card stack-sm"><p class="eyebrow">How a change gets in</p><ol class="small" style="font-size:15px;padding-left:20px;display:flex;flex-direction:column;gap:6px"><li>You send the file to <span class="mono" id="mail-addr">${MAIL}</span> <button class="btn btn--sm btn--ghost" type="button" id="copy-mail" style="min-height:32px;padding:0 10px">copy</button>, or open a pull request at <span class="mono">${esc(REPO)}</span>.</li><li>A person reads it and checks the source.</li><li>It is merged with your name in the row’s note, or returned with a reason.</li><li>Every merge bumps the ledger version. Nothing is deleted; rows are retired with a date.</li></ol></div>
+    <div class="card stack-sm" style="border-left:4px solid var(--buoy)"><p class="eyebrow">Giving</p><p class="small" style="font-size:15px">The lab holds no money. Donations go directly to the <a href="${WILSSA}">Wood Island Life Saving Station Association</a>, the association that restored the station and keeps it standing; its own site has the giving page. Robots, boats and classroom days are gifts in kind: use the form.</p><div class="row"><a class="btn btn--sm" href="${WILSSA}">Give to the station</a></div></div>
     <div class="card stack-sm card--dashed"><p class="eyebrow">What makes a good row</p><ul class="small" style="font-size:15px;padding-left:20px;display:flex;flex-direction:column;gap:4px"><li>The figure exactly as the source prints it, interval included.</li><li>The year it describes, not the year it was published.</li><li>What it leaves out.</li><li>The rule: what it must never be added to, and why.</li></ul></div>
   </div>
 </div></section>
