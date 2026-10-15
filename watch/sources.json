@@ -12,12 +12,12 @@
     },
     {
       "id": "uscg-news",
-      "name": "U.S. Coast Guard · news (trial: ContentType=1)",
+      "name": "U.S. Coast Guard · news releases (address unconfirmed)",
       "kind": "official",
       "region": "United States",
       "url": "https://www.news.uscg.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1041&max=30",
-      "enabled": true,
-      "note": "Trial address, unconfirmed: the site id and content type are guesses from the AFPIMS pattern. The run's status for this source, in watch/feed.json, says whether it answers. An assistant without a browser could not confirm it on 15 Oct 2026 (board task uscg-rss-feed-address)."
+      "enabled": false,
+      "note": "Tried from GitHub's runner on 15 Oct 2026 12:31 UTC: Site=1041 with ContentType=1 answered HTTP 404 (the server replied, so the site id is wrong) and ContentType=2 timed out. The right id is on the RSS icon of news.uscg.mil, which needs a browser to read: board task uscg-rss-feed-address."
     },
     {
       "id": "uscg-press",
@@ -25,8 +25,8 @@
       "kind": "official",
       "region": "United States",
       "url": "https://www.news.uscg.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=2&Site=1041&max=30",
-      "enabled": true,
-      "note": "Trial address, unconfirmed. On AFPIMS sites ContentType=1 is News and 2 is Press Releases; news.uscg.mil labels its items Press Release. Whichever of the two trial addresses answers is kept."
+      "enabled": false,
+      "note": "Trial of ContentType=2 with Site=1041: timed out from GitHub's runner on 15 Oct 2026. Disabled until the site id is read from the page."
     },
     {
       "id": "uscg-d7-govdelivery",
@@ -35,7 +35,7 @@
       "region": "United States (Southeast)",
       "url": "https://public.govdelivery.com/topics/USDHSCG_164/feed.rss",
       "enabled": true,
-      "note": "A confirmed-live regional feed found by an independent agent on 15 Oct 2026 (newest item under a day old). Regional only; a national GovDelivery topic is being looked for."
+      "note": "Confirmed from GitHub's runner on 15 Oct 2026 12:31 UTC: 100 items, 31 matched the keywords on the first read. Regional (Florida, Georgia, the Carolinas and the Caribbean); a national GovDelivery topic is being looked for. Found by an independent agent."
     },
     {
       "id": "gnews-us",
