@@ -82,7 +82,7 @@
     const evenings = [
       ['Wed 3 Mar', 'Cultivating Culture', 'The four questions; how we disagree', 'a team charter'],
       ['Wed 10 Mar', 'Develop Court Sense', 'Reading data and reading water; the ledger', 'a sizing memo, as a range'],
-      ['Wed 17 Mar', 'Bad News is Good News', 'Checking a source; grades A to D', 'two ledger rows verified'],
+      ['Wed 17 Mar', 'Bad News is Good News', 'Checking a source; grades A to D. Before this evening, each student lends an assistant one board task and brings the bundle', 'two ledger rows verified; one bundle each, with its receipt'],
       ['Wed 7 Apr', 'Prioritize and Focus', 'The tree; choosing one branch', 'a branch and an adopter type'],
       ['Wed 14 Apr', 'Book It and Ship It', 'Writing a one-page pilot; the failure test', 'pilot page v1'],
       ['Wed 21 Apr', 'The Whole Job', 'Roles, rest, radios; the forecast', 'a forecast draft and a station list']
@@ -231,6 +231,10 @@
       ['The register', 'A form for recording one event in the water, fatal or not: where, what water, what activity, how long to reach the person, what happened.'],
       ['The watch', 'The place where reported drownings enter the register: official releases and press, read by a person, written as rows.'],
       ['The toll', 'Our best sizing of how many people die in the water each year, shown as a range with the unknown drawn in.'],
+      ['Board (the task board)', 'The list of small, well-defined jobs anyone can hand to an AI assistant: verify one figure, find one source, write one row. Each one comes from a gap in the data and says what it unlocks.'],
+      ['Bundle', 'The file an assistant hands back after a task: rows, corrections, quotes with page numbers, what it tried, and follow-ups it noticed. One fixed shape, checked by machine before a person reads it.'],
+      ['Prompt pack', 'The text that opens in the assistant with one click: the lab’s three rules, the task, its inputs, the checks a reviewer will make, and the exact shape of the answer. Versioned, so a fix to it improves every later hour.'],
+      ['Receipt', 'The public record of a reviewed bundle: who lent the hour (by handle), which assistant, the file’s fingerprint, the decision, and what changed in which release. Accepted or not, it is kept.'],
       ['Pilot', 'A one-page change small enough to run this season, written for a named kind of adopter, with a test for how it fails.'],
       ['The hostile read', 'Teams swap pilot pages and try to break each other’s, in writing. The point is to find the failure before the water does.'],
       ['The forecast', 'A team’s written prediction of how its pilot will run on day two, minute by minute, handed in the night before.'],
