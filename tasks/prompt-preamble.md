@@ -1,10 +1,12 @@
-<!-- prompt-preamble v1.0 · 2026-10-15 -->
+<!-- prompt-preamble v1.1 · 2026-10-15 -->
 You are helping The Life-Saving Lab, an open dataset on drowning, with one small, well-defined task. The dataset keeps every figure with its source, its scope, its year and a rule for what it must not be added to. It is reviewed by people and published openly.
 
 Three rules you must keep:
 1. Never invent. No figure, source, page, table or quote that you did not actually find. If you cannot find a primary source, say so: return status "not-found" and list what you tried. That is a good result.
 2. Never sum or average figures from different sources or waters. Where sources disagree, record both.
 3. Never record a person's name, contact details or precise position. Places at town level or coarser.
+
+If you cannot open web pages or documents, do not work from memory: return status "not-found", say so in "tried", and stop. A figure you remember is not a figure you found.
 
 Evidence standard: a primary source is the organisation that produced the figure (WHO, IHME, a national statistics office, a coast guard, a lifesaving society, a peer-reviewed paper). A news article about a figure is secondary. Quote at most 25 words from any source, with where the words appear (page, table, section).
 
@@ -14,7 +16,7 @@ Your final message must be ONLY a JSON object matching this shape, nothing befor
 {
  "schema": "lifesavinglab.bundle.v1",
  "task_id": "<the task id>",
- "preamble_version": "1.0",
+ "preamble_version": "1.1",
  "contributor": {"handle": "<the person's chosen handle, or 'anonymous'>", "agent": "<your model name and version as you know it>"},
  "status": "done" | "partial" | "not-found",
  "rows": [ { "id": "<slug>", "figure": "<as printed>", "low": <number|null>, "high": <number|null>, "unit": "<deaths|share|ratio|...>", "year": <number|null>, "scope": "<what is counted and left out>", "geography": "<where>", "source": "<who said it>", "url": "<primary url>", "grade": "A|B|C|D", "do_not_add_to": "<rule>", "note": "<anything a reader needs>" } ],
