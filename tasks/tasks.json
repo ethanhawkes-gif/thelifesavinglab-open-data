@@ -2,8 +2,8 @@
  "schema": "lifesavinglab.tasks.v1",
  "version": "0.1.0",
  "generated": "2026-10-15",
- "preamble_version": "1.1",
- "preamble": "You are helping The Life-Saving Lab, an open dataset on drowning, with one small, well-defined task. The dataset keeps every figure with its source, its scope, its year and a rule for what it must not be added to. It is reviewed by people and published openly.\n\nThree rules you must keep:\n1. Never invent. No figure, source, page, table or quote that you did not actually find. If you cannot find a primary source, say so: return status \"not-found\" and list what you tried. That is a good result.\n2. Never sum or average figures from different sources or waters. Where sources disagree, record both.\n3. Never record a person's name, contact details or precise position. Places at town level or coarser.\n\nIf you cannot open web pages or documents, do not work from memory: return status \"not-found\", say so in \"tried\", and stop. A figure you remember is not a figure you found.\n\nEvidence standard: a primary source is the organisation that produced the figure (WHO, IHME, a national statistics office, a coast guard, a lifesaving society, a peer-reviewed paper). A news article about a figure is secondary. Quote at most 25 words from any source, with where the words appear (page, table, section).\n\nGrades describe provenance, not truth: A = primary official data or model output · B = peer-reviewed analysis · C = press, secondary summary or an organisation's own statement · D = a judgment, stated as such.\n\nYour final message must be ONLY a JSON object matching this shape, nothing before or after it:\n{\n \"schema\": \"lifesavinglab.bundle.v1\",\n \"task_id\": \"<the task id>\",\n \"preamble_version\": \"1.1\",\n \"contributor\": {\"handle\": \"<the person's chosen handle, or 'anonymous'>\", \"agent\": \"<your model name and version as you know it>\"},\n \"status\": \"done\" | \"partial\" | \"not-found\",\n \"rows\": [ { \"id\": \"<slug>\", \"figure\": \"<as printed>\", \"low\": <number|null>, \"high\": <number|null>, \"unit\": \"<deaths|share|ratio|...>\", \"year\": <number|null>, \"scope\": \"<what is counted and left out>\", \"geography\": \"<where>\", \"source\": \"<who said it>\", \"url\": \"<primary url>\", \"grade\": \"A|B|C|D\", \"do_not_add_to\": \"<rule>\", \"note\": \"<anything a reader needs>\" } ],\n \"corrections\": [ { \"row_id\": \"<existing row id>\", \"field\": \"<field>\", \"old\": \"<current value>\", \"new\": \"<corrected value>\", \"evidence\": \"<where you saw it>\" } ],\n \"evidence\": [ { \"url\": \"<url you opened>\", \"quote\": \"<25 words or fewer>\", \"where\": \"<page, table or section>\" } ],\n \"tried\": [ \"<what you searched or opened that did not pan out>\" ],\n \"notes\": \"<anything the reviewer should know>\",\n \"next_tasks\": [ { \"title\": \"<a small follow-up task you noticed>\", \"why\": \"<one line>\" } ]\n}\nEmpty lists are fine. Do not add fields. Do not wrap the JSON in prose.\n",
+ "preamble_version": "1.2",
+ "preamble": "You are helping The Life-Saving Lab, an open dataset on drowning, with one small, well-defined task. The dataset keeps every figure with its source, its scope, its year and a rule for what it must not be added to. It is reviewed by people and published openly.\n\nThree rules you must keep:\n1. Never invent. No figure, source, page, table or quote that you did not actually find. If you cannot find a primary source, say so: return status \"not-found\" and list what you tried. That is a good result.\n2. Never sum or average figures from different sources or waters. Where sources disagree, record both.\n3. Never record a person's name, contact details or precise position. Places at town level or coarser.\n\nIf you cannot open web pages or documents, do not work from memory: return status \"not-found\", say so in \"tried\", and stop. A figure you remember is not a figure you found.\n\nEvidence standard: a primary source is the organisation that produced the figure (WHO, IHME, a national statistics office, a coast guard, a lifesaving society, a peer-reviewed paper). A news article about a figure is secondary. Quote at most 25 words from any source, with where the words appear (page, table, section).\n\nGrades describe provenance, not truth: A = primary official data or model output · B = peer-reviewed analysis · C = press, secondary summary or an organisation's own statement · D = a judgment, stated as such.\n\nYour final message must be ONLY a JSON object matching this shape, nothing before or after it:\n{\n \"schema\": \"lifesavinglab.bundle.v1\",\n \"task_id\": \"<the task id>\",\n \"preamble_version\": \"1.2\",\n \"contributor\": {\"handle\": \"<the person's chosen handle, or 'anonymous'>\", \"agent\": \"<your model name and version as you know it>\"},\n \"status\": \"done\" | \"partial\" | \"not-found\",\n \"rows\": [ { \"id\": \"<slug>\", \"figure\": \"<as printed>\", \"low\": <number|null>, \"high\": <number|null>, \"unit\": \"<deaths|share|ratio|...>\", \"year\": <number|null>, \"scope\": \"<what is counted and left out>\", \"geography\": \"<where>\", \"source\": \"<who said it>\", \"url\": \"<primary url>\", \"grade\": \"A|B|C|D\", \"do_not_add_to\": \"<rule>\", \"note\": \"<anything a reader needs>\" } ],\n \"corrections\": [ { \"row_id\": \"<existing row id>\", \"field\": \"<field>\", \"old\": \"<current value>\", \"new\": \"<corrected value>\", \"evidence\": \"<where you saw it>\" } ],\n \"evidence\": [ { \"url\": \"<url you opened>\", \"quote\": \"<25 words or fewer>\", \"where\": \"<page, table or section>\" } ],\n \"tried\": [ \"<what you searched or opened that did not pan out>\" ],\n \"notes\": \"<anything the reviewer should know>\",\n \"next_tasks\": [ { \"title\": \"<a small follow-up task you noticed>\", \"why\": \"<one line>\" } ]\n}\nEmpty lists are fine. Do not add fields. Do not wrap the JSON in prose. Keep each \"tried\" item and each \"evidence.where\" under 300 characters, each \"note\" and \"evidence\" field under 600, and \"notes\" under 4,000: the file is checked by machine and refused if a field runs long.\n",
  "note": "Small tasks an agent can finish in one session. Claims lapse after seven days. Every accepted bundle earns a receipt.",
  "tasks": [
   {
@@ -464,12 +464,12 @@
    "title": "Where does \"4–5 non-fatal drownings per death\" come from? It is not in the WHO 2024 report",
    "kind": "verify",
    "size": "M",
-   "status": "open",
-   "ask": "The ledger carried \"4–5 non-fatal drownings per death\" attributed to the WHO 2024 report. On 15 Oct 2026 the lab read the report: it says (p. 6) that accurate global data on the scale and impacts of non-fatal drowning are largely unavailable, and gives no ratio; the WHO drowning fact sheet gives none either. The row is now grade D (unsupported). Find the primary origin of the 4–5 claim: an earlier WHO document (the 2014 Global report on drowning?), a regional office page, or a peer-reviewed study. Quote it with the page. If it cannot be found, say so: the row will be retired.",
+   "status": "done",
+   "ask": "The ledger carried \"4–5 non-fatal drownings per death\" attributed to the WHO 2024 report. The report says (p. 6) that accurate global data on non-fatal drowning are largely unavailable; the fact sheet gives no ratio. Find the primary origin of the claim or declare it unsupported.",
    "inputs": [
     "https://www.who.int/publications/i/item/9789240103962",
     "https://www.who.int/news-room/fact-sheets/detail/drowning",
-    "Rows: who-nonfatal, cdc-nonfatal-ed-2012-2021 (the only counted ratio: about 2 emergency-department visits per death, United States)"
+    "Rows: who-nonfatal (retired), cdc-nonfatal-ed-2012-2021, ontario-nonfatal-ed-ratio-2014-2023, australia-nonfatal-hospitalisation-ratio-2002-2015"
    ],
    "accept": [
     "A quote of 25 words or fewer with page or section, from a primary document, or status not-found with what was tried",
@@ -482,6 +482,63 @@
    ],
    "unlocks": "Either sources a number the whole field repeats, or retires it.",
    "parent": null,
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": "Done by an independent agent on 15 Oct 2026 (contributions/nonfatal-ratio-primary-agent-two.json): after reading the WHO 2024 and 2014 reports, the fact sheet and thirteen other documents, no primary states 4–5; the figure appears only in a press article with no source. The row was retired and three counted, place-specific ratios were added."
+  },
+  {
+   "id": "cdc-2014-children-five",
+   "title": "Open an archived copy of the October 2014 CDC \"Unintentional Drowning: Get the Facts\" page and record its children's \"another five\" ratio",
+   "kind": "verify",
+   "size": "S",
+   "status": "open",
+   "ask": "Several papers and reports (BMJ Open 2015;5:e008444; Safe Kids, Dangerous Waters, 2016) cite a CDC fact page from October 2014 for the statement that for every child who dies from drowning, another five receive emergency department care. The page is no longer on a CDC server. Find an archived copy (the Internet Archive's Wayback Machine, or CDC Stacks), quote the sentence with the data years it covers, and return it as a row.",
+   "inputs": [
+    "https://web.archive.org/",
+    "https://stacks.cdc.gov/",
+    "Row for comparison: cdc-children-nonfatal-ed-7 (the current CDC document says seven)"
+   ],
+   "accept": [
+    "A quote of 25 words or fewer from the archived page with its capture date",
+    "The data years the ratio covers, as the page states them",
+    "A row with grade A if the archived page is CDC's own"
+   ],
+   "rows": [
+    "cdc-children-nonfatal-ed-7"
+   ],
+   "unlocks": "The primary behind a figure that a dozen secondary sources repeat.",
+   "parent": "nonfatal-ratio-primary",
+   "claimed_by": null,
+   "claimed_until": null,
+   "created": "2026-10-15",
+   "done_receipt": null,
+   "done_note": null
+  },
+  {
+   "id": "nonfatal-ratios-by-place",
+   "title": "Non-fatal to fatal drowning ratios by place and by door: NSW ambulance, New Zealand under-5, Alberta",
+   "kind": "row",
+   "size": "M",
+   "status": "open",
+   "ask": "The ledger now carries three counted ratios (United States emergency departments 2.0; Ontario emergency departments 3.6; Australia hospital admissions 2.71). An independent agent found three more it did not have room to return as rows: New South Wales ambulance-attended incidents 1:15 (Journal of Safety Research 2024;91:373–380); New Zealand children under five 6.9 hospitalisations and 74.7 ACC claims per fatal drowning (Aust N Z J Public Health 2022;46(1):46–51); Alberta 6 non-fatal per fatal (Lifesaving Society Alberta and NWT, 28 July 2021). Open each source, confirm the figure, and return one row per source with its denominator (ambulance, hospital, claims) and years.",
+   "inputs": [
+    "https://researchonline.jcu.edu.au/85178/1/85178.pdf",
+    "https://www.lifesaving.org/about/news/post/20-year-analysis-on-drowning",
+    "Rows: ontario-nonfatal-ed-ratio-2014-2023, australia-nonfatal-hospitalisation-ratio-2002-2015, cdc-nonfatal-ed-2012-2021"
+   ],
+   "accept": [
+    "One row per source with the ratio as printed, the denominator named, the years and the page",
+    "A quote of 25 words or fewer per source",
+    "Nothing averaged across places or denominators"
+   ],
+   "rows": [
+    "ontario-nonfatal-ed-ratio-2014-2023",
+    "australia-nonfatal-hospitalisation-ratio-2002-2015"
+   ],
+   "unlocks": "Shows how much the ratio depends on which door is counted, which is the argument against any single global ratio.",
+   "parent": "nonfatal-ratio-primary",
    "claimed_by": null,
    "claimed_until": null,
    "created": "2026-10-15",

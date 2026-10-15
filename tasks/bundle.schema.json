@@ -4,25 +4,233 @@
   "title": "Life-Saving Lab contribution bundle",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "task_id", "preamble_version", "contributor", "status", "rows", "corrections", "evidence", "tried", "notes", "next_tasks"],
+  "required": [
+    "schema",
+    "task_id",
+    "preamble_version",
+    "contributor",
+    "status",
+    "rows",
+    "corrections",
+    "evidence",
+    "tried",
+    "notes",
+    "next_tasks"
+  ],
   "properties": {
-    "schema": { "const": "lifesavinglab.bundle.v1" },
-    "task_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,80}$" },
-    "preamble_version": { "type": "string" },
-    "contributor": { "type": "object", "required": ["handle", "agent"], "additionalProperties": false,
-      "properties": { "handle": { "type": "string", "maxLength": 40 }, "agent": { "type": "string", "maxLength": 80 } } },
-    "status": { "enum": ["done", "partial", "not-found"] },
-    "rows": { "type": "array", "maxItems": 40, "items": { "type": "object", "required": ["id", "figure", "unit", "scope", "geography", "source", "url", "grade", "do_not_add_to"], "additionalProperties": false,
-      "properties": { "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,80}$" }, "figure": { "type": "string", "maxLength": 200 }, "low": { "type": ["number", "null"] }, "high": { "type": ["number", "null"] },
-        "unit": { "type": "string", "maxLength": 40 }, "year": { "type": ["integer", "null"] }, "scope": { "type": "string", "maxLength": 400 }, "geography": { "type": "string", "maxLength": 120 },
-        "source": { "type": "string", "maxLength": 200 }, "url": { "type": "string", "maxLength": 500 }, "grade": { "enum": ["A", "B", "C", "D"] }, "do_not_add_to": { "type": "string", "maxLength": 400 }, "note": { "type": "string", "maxLength": 400 } } } },
-    "corrections": { "type": "array", "maxItems": 40, "items": { "type": "object", "required": ["row_id", "field", "old", "new", "evidence"], "additionalProperties": false,
-      "properties": { "row_id": { "type": "string" }, "field": { "type": "string" }, "old": { "type": "string", "maxLength": 400 }, "new": { "type": "string", "maxLength": 400 }, "evidence": { "type": "string", "maxLength": 400 } } } },
-    "evidence": { "type": "array", "maxItems": 40, "items": { "type": "object", "required": ["url", "quote", "where"], "additionalProperties": false,
-      "properties": { "url": { "type": "string", "maxLength": 500 }, "quote": { "type": "string", "maxLength": 300 }, "where": { "type": "string", "maxLength": 200 } } } },
-    "tried": { "type": "array", "maxItems": 40, "items": { "type": "string", "maxLength": 300 } },
-    "notes": { "type": "string", "maxLength": 2000 },
-    "next_tasks": { "type": "array", "maxItems": 10, "items": { "type": "object", "required": ["title", "why"], "additionalProperties": false,
-      "properties": { "title": { "type": "string", "maxLength": 160 }, "why": { "type": "string", "maxLength": 300 } } } }
+    "schema": {
+      "const": "lifesavinglab.bundle.v1"
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{2,80}$"
+    },
+    "preamble_version": {
+      "type": "string"
+    },
+    "contributor": {
+      "type": "object",
+      "required": [
+        "handle",
+        "agent"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "handle": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "agent": {
+          "type": "string",
+          "maxLength": 80
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "done",
+        "partial",
+        "not-found"
+      ]
+    },
+    "rows": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "figure",
+          "unit",
+          "scope",
+          "geography",
+          "source",
+          "url",
+          "grade",
+          "do_not_add_to"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{2,80}$"
+          },
+          "figure": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "low": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "high": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "year": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "scope": {
+            "type": "string",
+            "maxLength": 600
+          },
+          "geography": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "source": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "url": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "grade": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "do_not_add_to": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 600
+          }
+        }
+      }
+    },
+    "corrections": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "type": "object",
+        "required": [
+          "row_id",
+          "field",
+          "old",
+          "new",
+          "evidence"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "row_id": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string"
+          },
+          "old": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "new": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "evidence": {
+            "type": "string",
+            "maxLength": 600
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "type": "object",
+        "required": [
+          "url",
+          "quote",
+          "where"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "quote": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "where": {
+            "type": "string",
+            "maxLength": 300
+          }
+        }
+      }
+    },
+    "tried": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "type": "string",
+        "maxLength": 600
+      }
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 4000
+    },
+    "next_tasks": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "why"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "why": {
+            "type": "string",
+            "maxLength": 400
+          }
+        }
+      }
+    }
   }
 }

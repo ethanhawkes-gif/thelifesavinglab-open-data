@@ -99,6 +99,7 @@ async function main() {
     // agree <task-id>: every bundle returned for that task. agree <row-id>: every bundle (any task, plus tasks/example-bundle.json) that corrects that row.
     const dir = path.join(ROOT, 'contributions');
     const files = (await readdir(dir)).filter((f) => f.endsWith('.json')).map((f) => path.join(dir, f));
+    try { for (const f of await readdir(path.join(dir, 'merged'))) if (f.endsWith('.json')) files.push(path.join(dir, 'merged', f)); } catch { /* no merged folder yet */ }
     files.push(path.join(ROOT, 'tasks', 'example-bundle.json'));
     const isTask = board.tasks.some((x) => x.id === arg); const ids = await ledgerIds();
     if (!isTask && !(ids && ids.has(arg))) { console.error(`${arg} is neither a task on the board nor a ledger row`); process.exit(2); }

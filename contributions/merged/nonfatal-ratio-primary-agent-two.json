@@ -1,0 +1,106 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "nonfatal-ratio-primary",
+ "preamble_version": "1.1",
+ "contributor": {"handle": "agent-two", "agent": "Claude Fable 5.1 (claude-fable-5-1)"},
+ "status": "not-found",
+ "rows": [
+  {
+   "id": "ontario-nonfatal-ed-ratio-2014-2023",
+   "figure": "nearly four (3.6 times)",
+   "low": 3.6,
+   "high": 3.6,
+   "unit": "ratio",
+   "year": 2023,
+   "scope": "Non-fatal drowning incidents serious enough to require an emergency department visit (Ontario ED visits 2014-2023, Public Health Ontario from CIHI NACRS, about 585 per year) per average water-related fatality (2012-2021, 164 per year). Counts only cases presenting to an ED; the ED and fatality year windows differ.",
+   "geography": "Ontario, Canada",
+   "source": "Lifesaving Society Ontario / Drowning Prevention Research Centre Canada, Ontario Non-Fatal Drowning Report, 2025 Edition",
+   "url": "https://www.lifesavingsociety.com/media/497393/ontariononfataldrowningreport2025-20250716.pdf",
+   "grade": "A",
+   "do_not_add_to": "Do not combine with ratios from other places, with hospitalisation- or ambulance-based ratios, or with global death totals; not a global figure.",
+   "note": "Printed as 'nearly four' (p. 1 and p. 4) and '3.6 times' (p. 2); the ratio sentence carries no citation and is the society's computation from official counts. Earlier editions agree (2021: 3.6; 2022: 3.6; 2023: 3.5)."
+  },
+  {
+   "id": "australia-nonfatal-hospitalisation-ratio-2002-2015",
+   "figure": "1:2.71",
+   "low": 2.71,
+   "high": 2.71,
+   "unit": "ratio",
+   "year": 2015,
+   "scope": "Hospital separations for non-fatal drowning (6158) per fatal drowning (2272), Australia, 1 July 2002 to 30 June 2015. Leaves out ED-only presentations and cases never reaching hospital.",
+   "geography": "Australia",
+   "source": "BMJ Open 2018;8(11):e024868, 'Understanding the full burden of drowning: a retrospective, cross-sectional analysis of fatal and non-fatal drowning in Australia' (peer-reviewed)",
+   "url": "https://bmjopen.bmj.com/content/8/11/e024868",
+   "grade": "B",
+   "do_not_add_to": "Do not combine with ED-visit or ambulance-based ratios or with other countries' figures.",
+   "note": "Same paper gives 1:7.63 for children 0-4 years and 1:4.35 for swimming pools; Royal Life Saving Australia's web page rounds the national figure to 'three'."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "who-nonfatal",
+   "field": "source",
+   "old": "WHO Global status report on drowning prevention 2024 (attribution as described in the task brief)",
+   "new": "No primary origin found. Exact wording occurs only in esanum.com, 'Drowning: an underestimated global emergency' (press article, undated, no byline), given as 'it is estimated' with no source; its only listed reference is the WHO 2024 report, which contains no ratio. Recommend retiring the row.",
+   "evidence": "esanum body text (paragraph beginning 'Even survivors are not exempt from consequences'); WHO 2024 publication page overview; WHO fact sheet 1 May 2026 (sections 'Sex' and 'Prevention'); WHO Global report on drowning 2014, p. vii, 'Limitations of data'"
+  },
+  {
+   "row_id": "who-nonfatal",
+   "field": "url",
+   "old": "https://www.who.int/publications/i/item/9789240103962",
+   "new": "https://www.esanum.com/today/posts/drowning-an-underestimated-global-emergency",
+   "evidence": "The WHO page and the WHO fact sheet give no non-fatal:fatal ratio; the esanum article is the only document opened that carries '4-5'"
+  },
+  {
+   "row_id": "who-nonfatal",
+   "field": "grade",
+   "old": "D",
+   "new": "C",
+   "evidence": "Provenance is a press article with no primary behind it (grade C by the lab's definition); because the article cites nothing, the figure remains unverifiable and the row should be retired rather than kept at C"
+  }
+ ],
+ "evidence": [
+  {"url": "https://www.esanum.com/today/posts/drowning-an-underestimated-global-emergency", "quote": "for every death, there are at least 4-5 cases of non-fatal drowning, many of which result in permanent neurological damage", "where": "body text, paragraph beginning 'Even survivors are not exempt from consequences'; introduced by 'it is estimated'; only listed source is WHO Global status report on drowning prevention 2024"},
+  {"url": "https://vsf-iwsold-pre-portal.sanidad.gob.es/areas/promocionPrevencion/lesiones/medioAcuatico/internacional/oms/docs/AhogamientosSumersion_InformeMundial_ingles.pdf", "quote": "Data on non-fatal drownings, which could reveal something about the burden of serious injury ... are not routinely collected", "where": "WHO Global report on drowning: preventing a leading killer (2014), p. vii, Executive summary, 'Limitations of data'; copy hosted by Spain's Ministry of Health because WHO IRIS would not fetch; report gives no non-fatal:fatal ratio"},
+  {"url": "https://www.who.int/news-room/fact-sheets/detail/drowning", "quote": "Males are also more likely to be hospitalized than females for non-fatal drowning.", "where": "WHO drowning fact sheet dated 1 May 2026, section 'Sex'; 'Prevention' section gives a projected 178 000 avoided severe injuries; no ratio anywhere"},
+  {"url": "https://www.who.int/publications/i/item/9789240103962", "quote": "details the scale of global drowning fatalities", "where": "publication page overview, Global status report on drowning prevention 2024, 13 December 2024; overview mentions no non-fatal ratio; PDF fetch failed"},
+  {"url": "https://www.who.int/health-topics/drowning", "quote": "Outcomes are classified as death, morbidity and no morbidity.", "where": "WHO health-topic page, Overview; no ratio"},
+  {"url": "https://www.who.int/europe/news/item/24-07-2023-statement---at-least-20-000-people-lose-their-lives-to-drowning-every-year-in-the-european-region-yet-these-deaths-are-entirely-preventable", "quote": "drowning also causes a wide spectrum of non-fatal injuries with significant health impacts", "where": "WHO Regional Office for Europe statement, 24 July 2023; no ratio"},
+  {"url": "https://www.who.int/southeastasia/news/detail/22-07-2021-nearly-two-thirds-of-global-drowning-deaths-occur-in-asia-pacific", "quote": "also results in a substantial number of hospitalizations in the two WHO regions", "where": "WHO SEARO news release, 22 July 2021, sentence on non-fatal drowning; no ratio"},
+  {"url": "https://www.cdc.gov/drowning/data-research/facts/index.html", "quote": "An average 8,111 estimated emergency department visits due to non-fatal drowning occurred each year from 2012-2021.", "where": "CDC Drowning Facts, 'Fast facts', footnote B; footnote A gives 4,083 unintentional drowning deaths per year 2012-2021; page last reviewed 27 January 2026; ratio not stated (about 2.0)"},
+  {"url": "https://stacks.cdc.gov/view/cdc/130749/cdc_130749_DS1.pdf", "quote": "For every child under age 18 who dies from drowning, another 7 receive emergency department care for nonfatal drowning.", "where": "CDC 'Drowning Facts' document, 'What is drowning?' block, last reviewed 7 October 2022; United States, children only"},
+  {"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4679898", "quote": "Since the prevalence of non-fatal drowning is at least five times that of fatal drowning", "where": "BMJ Open 2015;5(12):e008444, Introduction, citing reference 2 = CDC unintentional drowning fact sheet, October 2014 (United States, children)"},
+  {"url": "https://www.safekids.org/sites/default/files/dangerous_waters_research_report.pdf", "quote": "for every death another five children visit an emergency department", "where": "Safe Kids Worldwide, Dangerous Waters (June 2016), p. 3, Introduction, citing reference 1 = BMJ Open 2015;5:e008444"},
+  {"url": "https://www.lifesavingsociety.com/media/497393/ontariononfataldrowningreport2025-20250716.pdf", "quote": "For every fatal drowning in Ontario, there are nearly four non-fatal drowning incidents", "where": "Ontario Non-Fatal Drowning Report 2025, p. 1; p. 2 states 3.6 times; no separate citation for the ratio"},
+  {"url": "https://www.lifesavingsociety.com/drowning-research.aspx", "quote": "non-fatal drowning in Ontario is at least 4 times more common than fatal drowning", "where": "Lifesaving Society (Canada) Drowning Research page, section 'Non-Fatal Drowning'; sources named: Public Health Ontario, CIHI"},
+  {"url": "https://www.lifesaving.org/about/news/post/20-year-analysis-on-drowning", "quote": "for every 1 fatal drownings there are 6 non-fatal drownings", "where": "Lifesaving Society Alberta and Northwest Territories news post, 28 July 2021; Alberta 1999-2019"},
+  {"url": "https://bmjopen.bmj.com/content/8/11/e024868", "quote": "2272 fatalities and 6158 hospital separations occurred during the study period, a ratio of 1:2.71.", "where": "BMJ Open 2018;8(11):e024868, Abstract (Results); Australia, 2002/03-2014/15"},
+  {"url": "https://royallifesaving.com.au/research-and-policy/drowning-research/non-fatal-drowning", "quote": "for every fatal drowning, there are three non-fatal drowning incidents", "where": "Royal Life Saving Society - Australia, section 'Non-Fatal Drowning Research'; 8 for children 0-4; no study cited on the page"},
+  {"url": "https://researchonline.jcu.edu.au/85178/1/85178.pdf", "quote": "The overall ratio of fatal to nonfatal incidents was 1:15.", "where": "Journal of Safety Research 2024;91:373-380, Abstract; ambulance-attended incidents, New South Wales, 2010-2021"},
+  {"url": "https://repository.unar.ac.id/jspui/bitstream/123456789/4531/1/46-51.pdf", "quote": "For every one fatal drowning there were 6.9 hospitalisations and 74.7 ACC claims.", "where": "Aust N Z J Public Health 2022;46(1):46-51, Abstract; children under five, New Zealand, 2012-2017"},
+  {"url": "https://www.statpearls.com/point-of-care/20708", "quote": "For every fatal drowning, 4 nonfatal drowning cases require medical evaluation.", "where": "StatPearls 'Drowning: Clinical Management', Epidemiology, updated 15 September 2025; sentence carries no citation (secondary)"},
+  {"url": "https://www.epicentro.iss.it/incidenti/pdf/rapporto-istisan-2011-annegamenti-in-Italia.pdf", "quote": "su 8 eventi, solo 1 ha esito mortale, mentre in Italia su 8 eventi ben 4 esitano in un decesso", "where": "Rapporti ISTISAN 11/13 (2011), p. i, Abstract, comparing United States and Italy; no reference cited"}
+ ],
+ "tried": [
+  "WHO Global status report on drowning prevention 2024 PDF (https://iris.who.int/server/api/core/bitstreams/af997e91-f391-4d98-9119-041c03025b40/content): fetch error; relied on the lab's reading of p. 6 and on the publication page overview.",
+  "WHO Global report on drowning 2014 PDF on WHO IRIS (https://iris.who.int/server/api/core/bitstreams/af4b8253-32c6-4f43-a833-e73b97bdf5ae/content): fetch error twice; IRIS record https://iris.who.int/handle/10665/143893 also errored.",
+  "Blocked (permission request not answered, not retried): https://apps.who.int/iris/bitstream/handle/10665/143893/9789241564786_eng.pdf; http://apps.who.int/iris/bitstream/handle/10665/144002/WHO_NMH_NVI_14.1_eng.pdf (2014 executive summary); https://islasurf.org/wp-content/uploads/2014/11/World-Health-Organization-WHO-Global-Report-On-Drowning.pdf (ISLA mirror). The 2014 report was finally read from Spain's Ministry of Health copy on sanidad.gob.es, an official government mirror rather than WHO's own server.",
+  "Older WHO fact-sheet wording: Wayback Machine copy https://web.archive.org/web/2016/https://www.who.int/mediacentre/factsheets/fs347/en/ blocked; https://www.who.int/mediacentre/factsheets/fs347/es/ fetch error. Pre-2024 fact-sheet text therefore unverified.",
+  "WHO/UNICEF World report on child injury prevention 2008, drowning chapter: MedBox PDF https://www.medbox.org/pdf/5e148832db60a2044c2d4e32 blocked; chapter unverified.",
+  "WHO pages read with no ratio: news release 17 November 2014 'WHO highlights devastating global impact of drowning'; health-topic page; WHO Europe statement 24 July 2023; WHO SEARO release 22 July 2021; WHO EMRO 'Situation de la prevention de la noyade dans la Region OMS de la Mediterranee orientale' 2025 (WHO-EM/HLP/182/F); PAHO and Monash catalogue pages for the 2014 report (link back to WHO only).",
+  "CDC: MMWR 4 June 2004 (mm5321a1) and 18 May 2012 (mm6119a4) give counts, no ratio; current Drowning Facts page gives counts only. The October 2014 CDC 'Unintentional Drowning: Get the Facts' page carrying 'another five receive emergency department care' could not be opened on a CDC server; seen only second-hand as reference 2 of BMJ Open 2015;5:e008444, in Children's Safety Network webinar slides (21 June 2017), Safe Kids 'Dangerous Waters' 2016 (p. 3) and Connecticut Office of the Child Advocate 'Drowning Deaths' 2019.",
+  "Lifesaving societies: Ontario Non-Fatal Drowning Reports 2021, 2022, 2023, 2025 and Lifeliner September 2021 all say 'nearly four' / 3.5-3.6 times; Lifesaving Society research page 'at least 4 times'; Alberta and NWT post '6'; Royal Life Saving Australia page '3' (8 for ages 0-4); Life Saving Victoria symposium page 10 August 2026 'seven' (ages 0-4) and 'four' (pools). None states 4-5.",
+  "ILS World Drowning Report 2007 page (ilsf.org, 19 December 2007): no non-fatal mention, no PDF.",
+  "Peer-reviewed papers read: BMJ Open 2018;8:e024868 (Australia 1:2.71); Journal of Safety Research 2024;91:373 (NSW ambulance 1:15; ScienceDirect page blocked by robots, read via JCU repository copy); Aust N Z J Public Health 2022;46:46 (NZ under-5 6.9); BMJ Open 2015;5:e008444 (cites CDC 'five'). None gives 4-5.",
+  "Non-English checks in case the esanum text was translated: Italian (ISS event sheet 112D25 of 2025; Rapporti ISTISAN 11/13 of 2011; tio.ch 23 July 2026; maldita.es fact-check 2022/2024), plus German, French and Spanish searches for the same ratio phrasing. No 4-5 ratio found.",
+  "Web searches run (English): '4-5' / '4 to 5' / 'four to five' with 'non-fatal drowning(s)' and 'for every death'; 'at least 4-5'; 'four to five times'; 'five non-fatal drownings for every'; 'WHO estimates' with non-fatal ratio; 'Preventing drowning: an implementation guide' 2017 with non-fatal; 'World report on child injury prevention' with 'for every'; RoSPA/RNLI/National Water Safety Forum; WHO regional office pages. The only page carrying '4-5' was esanum.com.",
+  "StatPearls 'Drowning: Clinical Management' (updated 15 September 2025) says 4 nonfatal cases per fatal drowning with no citation; secondary and uncited, not an origin."
+ ],
+ "notes": "No primary document states 4-5 non-fatal drownings per drowning death. The exact wording was found only in an esanum.com press article (undated, no byline) that introduces it with 'it is estimated', names no source, and lists only the WHO 2024 report, which the lab has already confirmed carries no ratio. The WHO fact sheet (1 May 2026), the WHO 2014 Global report (p. vii: non-fatal data 'not routinely collected'), the WHO health-topic page, and the WHO Europe (2023), SEARO (2021) and EMRO (2025) pages give no ratio either. Recommend retiring row who-nonfatal. The nearest documented ratios are place- and denominator-specific: Australia hospitalisations 2.71 (peer-reviewed), Ontario ED visits 3.6 ('nearly four'), United States children 5 (CDC fact sheet October 2014, seen only as cited by BMJ Open 2015) and 7 (CDC stacks document reviewed 7 October 2022), Alberta 6, New Zealand under-5 hospitalisations 6.9, NSW ambulance 15; a '4-5' figure most plausibly arose by blending the Ontario 'four' and the CDC 'five', but no document says so, and none of these may be presented as global or combined. Row cdc-nonfatal-ed-2012-2021 was checked against the CDC Drowning Facts page (last reviewed 27 January 2026): 8,111 ED visits per year versus 4,083 deaths per year, 2012-2021, consistent with 'about 2 per death'; no correction needed. The 'old' values in corrections are taken from the task brief because the ledger file was not accessible in this run. The proposed grade C for who-nonfatal reflects press provenance under the lab's definitions; keeping D until retirement is equally defensible, since the substantive finding is that no document supports the figure. Several fetches were blocked or failed (listed in tried); the 2014 WHO report was read from an official Spanish Ministry of Health mirror, and the 2008 child injury report and pre-2024 WHO fact-sheet versions remain unverified.",
+ "next_tasks": [
+  {"title": "Open an archived copy of the October 2014 CDC 'Unintentional Drowning: Get the Facts' page and record its children's 'another five' ratio with data years", "why": "It is the primary behind the 'five times' figure propagated by BMJ Open 2015, Safe Kids 2016 and many secondary pages; only second-hand citations were reachable here."},
+  {"title": "Add a row for WHO's modelled 178 000 avoided 'severe, life-limiting injuries due to non-fatal drowning' from the fact sheet's Prevention section", "why": "It is the only quantified non-fatal figure WHO currently publishes and is an investment-case projection, not a ratio."},
+  {"title": "Add place-specific non-fatal:fatal ratio rows (NSW ambulance 1:15; New Zealand under-5 hospitalisations 6.9; Alberta 6; CDC children under 18 'another 7')", "why": "They document how widely the ratio varies by place and denominator, which is the reason no single global ratio should be carried."},
+  {"title": "Verify the pre-2024 WHO drowning fact sheet and the 2008 World report on child injury prevention drowning chapter for any non-fatal ratio", "why": "Both were unreachable in this run (archive and MedBox fetches blocked) and are the last WHO documents that could plausibly hold such a statement."}
+ ]
+}

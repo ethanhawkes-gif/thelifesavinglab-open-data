@@ -97,12 +97,14 @@
  "nonfatal": {
   "label": "Non-fatal drownings",
   "ratio_low": 2,
-  "ratio_high": 5,
+  "ratio_high": 3.6,
   "rows": [
    "cdc-nonfatal-ed-2012-2021",
+   "ontario-nonfatal-ed-ratio-2014-2023",
+   "australia-nonfatal-hospitalisation-ratio-2002-2015",
    "who-nonfatal"
   ],
-  "note": "In the United States about two people are treated in an emergency department for non-fatal drowning for every death (counted). Four to five per death is often quoted worldwide; no primary source has been found. Never added to deaths."
+  "note": "Where it is counted, two to nearly four people are treated in an emergency department for non-fatal drowning for every death (United States 2.0; Ontario 3.6); hospital admissions run lower (Australia 2.7) and children's ratios far higher (5 to 8). No global ratio exists; the often-quoted four to five was traced to a press article with no source and retired. Never added to deaths."
  },
  "floor": 259450,
  "ceiling": 415928
