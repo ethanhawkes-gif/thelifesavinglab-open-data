@@ -1,0 +1,142 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "new-zealand-activity-split-2025",
+ "preamble_version": "1.3",
+ "contributor": {"handle": "agent-eleven", "agent": "Claude Fable 5.1 (claude-fable-5-1)"},
+ "status": "partial",
+ "rows": [
+  {
+   "id": "new-zealand-activity-swimming-2025",
+   "figure": "15 people lost their lives while swimming (14 of the 15 male)",
+   "low": 15,
+   "high": 15,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Preventable drowning deaths in which the activity recorded was swimming, New Zealand, calendar 2025, all ages and all environments, from WSNZ's DrownBase (provisional, revised as coronial findings arrive); 14 of the 15 were male. The web edition prints no 2024 figure, year-on-year change or 10-year average for swimming in its text, and does not define 'swimming' (the 2024 report page labelled the category Swimming/'playing in the water').",
+   "geography": "New Zealand",
+   "source": "Water Safety New Zealand, 2025 Drowning Prevention Report (web edition, 'Detailed breakdown', section 'Swimming'), released 19 Feb 2026, data correct as of 19 Feb 2026",
+   "url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report",
+   "grade": "A",
+   "do_not_add_to": "One activity of one national count (78, provisional). The activity rows do not reach the total (the Underwater and Other recreation counts are not printed in the text, and no non-recreational or unknown activity is shown) and must never be summed to it. A different partition from the setting rows (new-zealand-location-*): never added to them. Preventable drownings by WSNZ case-finding, not an ICD count: never added to WHO or IHME figures, never combined with Australian, UK, US or Canadian activity rows, whose categories differ.",
+   "note": "Printed sentence: '15 people lost their lives while swimming in 2025, with 14 of the 15 drowning fatalities being male.' Swimming was the highest-risk activity in inland still water (new-zealand-location-inland-still-2025). For 2024 the only swimming number on WSNZ's site is the Drowning Insights card for coastal environments (13 deaths, coast only), not a national count; the 2024 report page gave swimming as 25% of 2024's 72 deaths, a share, not a count. Found by an independent agent, 15 Oct 2026."
+  },
+  {
+   "id": "new-zealand-activity-craft-2025",
+   "figure": "Craft activities were involved in 17 deaths",
+   "low": 17,
+   "high": 17,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Preventable drowning deaths in which the activity recorded was craft (watercraft of any kind; the web edition does not define the category), New Zealand, calendar 2025, all ages and all environments, from WSNZ's DrownBase (provisional); seven of the 17 were people on craft in tidal environments. 'Key themes and findings' adds that 94% of craft-related fatalities involved people not wearing lifejackets. The web edition prints no 2024 figure, year-on-year change or 10-year average for craft in its text.",
+   "geography": "New Zealand",
+   "source": "Water Safety New Zealand, 2025 Drowning Prevention Report (web edition, 'Detailed breakdown', section 'Craft'), released 19 Feb 2026, data correct as of 19 Feb 2026",
+   "url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report",
+   "grade": "A",
+   "do_not_add_to": "One activity of one national count (78, provisional). The activity rows do not reach the total (the Underwater and Other recreation counts are not printed in the text, and no non-recreational or unknown activity is shown) and must never be summed to it. A different partition from the setting rows (new-zealand-location-*): never added to them. Preventable drownings by WSNZ case-finding, not an ICD count: never added to WHO or IHME figures, never combined with Australian, UK, US or Canadian activity rows, whose categories differ.",
+   "note": "Printed sentences: 'Craft activities were involved in 17 deaths.' and 'People on craft in tidal environments were the most at risk, with seven deaths.' Equal to the Rivers setting count (17) by coincidence of two different partitions, not the same deaths. Shows water transport is inside the national count. The 19 Feb 2026 media release says WSNZ modelling shows 12 lives a year could be saved if lifejackets were worn on all watercraft. The 2024 report page gave craft as 25% of 2024's 72 deaths, a share, not a count. Found by an independent agent, 15 Oct 2026."
+  },
+  {
+   "id": "new-zealand-activity-fishing-from-land-2025",
+   "figure": "10 deaths in 2025, three more than the previous year (all male)",
+   "low": 10,
+   "high": 10,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Preventable drowning deaths in which the activity recorded was fishing from land (land-based fishing; the web edition does not define it further), New Zealand, calendar 2025, all ages, from WSNZ's DrownBase (provisional); all 10 were male. 'Key statistics' prints 'three more than the previous year', which makes 2024 seven as the report counts it (an implication, not a printed 2024 count). The 19 Feb 2026 media release gives the 10-year average as six.",
+   "geography": "New Zealand",
+   "source": "Water Safety New Zealand, 2025 Drowning Prevention Report (web edition, 'Key statistics' sub-heading 'More die fishing from land' and 'Detailed breakdown' section 'Fishing from land'), released 19 Feb 2026, data correct as of 19 Feb 2026",
+   "url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report",
+   "grade": "A",
+   "do_not_add_to": "One activity of one national count (78, provisional). The activity rows do not reach the total (the Underwater and Other recreation counts are not printed in the text, and no non-recreational or unknown activity is shown) and must never be summed to it. A different partition from the setting rows (new-zealand-location-*): never added to them. Preventable drownings by WSNZ case-finding, not an ICD count: never added to WHO or IHME figures, never combined with Australian, UK, US or Canadian activity rows, whose categories differ.",
+   "note": "Printed in two places. Key statistics: 'There has been a significant increase in drowning deaths involving people fishing from land.' 'There were 10 deaths in 2025, three more than the previous year.' Detailed breakdown: 'It was a tough year for land-based fishing drownings, with 10 deaths.' 'All land-based fishing fatalities were male.' The media release adds 'well above the 10-year average of six'. The only activity for which the 2025 web edition prints a 2024 comparison. Found by an independent agent, 15 Oct 2026."
+  },
+  {
+   "id": "new-zealand-activity-slips-and-falls-2025",
+   "figure": "24 slips and falls drownings",
+   "low": 24,
+   "high": 24,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Preventable drowning deaths in which the activity recorded was slips and falls, which the report also calls 'unexpected entry' (neither term is defined on the web edition), New Zealand, calendar 2025, all ages and all environments, from WSNZ's DrownBase (provisional). The largest activity count the web edition prints. Slips and falls were the leading cause of deaths in rivers (new-zealand-location-rivers-2025). The web edition prints no 2024 figure, year-on-year change or 10-year average for slips and falls in its text.",
+   "geography": "New Zealand",
+   "source": "Water Safety New Zealand, 2025 Drowning Prevention Report (web edition, 'Detailed breakdown', section 'Slips and falls'), released 19 Feb 2026, data correct as of 19 Feb 2026",
+   "url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report",
+   "grade": "A",
+   "do_not_add_to": "One activity of one national count (78, provisional). The activity rows do not reach the total (the Underwater and Other recreation counts are not printed in the text, and no non-recreational or unknown activity is shown) and must never be summed to it. A different partition from the setting rows (new-zealand-location-*): never added to them. Preventable drownings by WSNZ case-finding, not an ICD count: never added to WHO or IHME figures, never combined with Australian, UK, US or Canadian activity rows, whose categories differ.",
+   "note": "Printed sentence: 'There were 24 slips and falls drownings in 2025, \"unexpected entry\" remains a major challenge in reducing drownings.' The 2024 report page gave slips and falls as 28% of 2024's 72 deaths, a share, not a count. Found by an independent agent, 15 Oct 2026."
+  },
+  {
+   "id": "new-zealand-activity-underwater-2025",
+   "figure": "Underwater: a 2025 count exists but was not read (chart and PDF only)",
+   "low": null,
+   "high": null,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Preventable drowning deaths in which the activity recorded was underwater (presumably diving and snorkelling; the web edition does not define it), New Zealand, calendar 2025. The section's only text is that people aged 25 to 54 dominate the 10-year statistics for underwater drownings; the 2025 count sits in an embedded chart (Infogram 28344e31-c827-4ef4-9da8-6dcebc26d489, titled '2025 DR underwater activity') and in the PDF, which Dropbox refuses to serve to an automated reader.",
+   "geography": "New Zealand",
+   "source": "Water Safety New Zealand, 2025 Drowning Prevention Report (web edition, 'Detailed breakdown', section 'Underwater'), released 19 Feb 2026, data correct as of 19 Feb 2026",
+   "url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report",
+   "grade": "D",
+   "do_not_add_to": "A placeholder for an activity whose count exists but was not read: nothing to add. Replace with the printed count once the PDF or chart is read.",
+   "note": "A gap row so the report's own activity list stays complete, as the ledger does for the Pools and Home settings. Printed sentence: 'People between the ages of 25 and 54 dominate the 10-year statistics for underwater drownings.' No 2025 underwater count was found in WSNZ's media release, its Drowning Insights page or press coverage. Found by an independent agent, 15 Oct 2026."
+  },
+  {
+   "id": "new-zealand-activity-other-recreation-2025",
+   "figure": "Other recreation: a 2025 count exists but was not read (chart and PDF only)",
+   "low": null,
+   "high": null,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Preventable drowning deaths in which the activity recorded was other recreation, which the report defines as 'activities undertaken for enjoyment, for example board riding, jumping, water skiing, river crossing etc.', New Zealand, calendar 2025. The section prints no count in its text; the 2025 count sits in an embedded chart (Infogram c9377a52-855b-4e75-a601-65333a6ff447, titled '2025 DR other activity') and in the PDF, which Dropbox refuses to serve to an automated reader.",
+   "geography": "New Zealand",
+   "source": "Water Safety New Zealand, 2025 Drowning Prevention Report (web edition, 'Detailed breakdown', section 'Other recreation'), released 19 Feb 2026, data correct as of 19 Feb 2026",
+   "url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report",
+   "grade": "D",
+   "do_not_add_to": "A placeholder for an activity whose count exists but was not read: nothing to add. Replace with the printed count once the PDF or chart is read.",
+   "note": "A gap row so the report's own activity list stays complete. The web edition shows six activity sections (Swimming, Craft, Fishing from land, Underwater, Slips and falls, Other recreation) and no non-recreational or unknown activity section, so the six may not partition the 78. Found by an independent agent, 15 Oct 2026."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "new-zealand-total-2025",
+   "field": "note",
+   "old": "The page prints \"four more than the previous year\" (so 2024 = 74), while the same site gave 2024 as 72 in Jan 2025: annual totals move for months as coronial findings arrive. Ten-year average 86. Found by an independent agent, 15 Oct 2026.",
+   "new": "The page prints \"four more than the previous year\" (so 2024 = 74), while the same site gave 2024 as 72 in Jan 2025: annual totals move for months as coronial findings arrive. Ten-year average 86. Found by an independent agent, 15 Oct 2026. The web edition's activity split (Swimming 15, Craft 17, Fishing from land 10, Slips and falls 24; Underwater and Other recreation in charts only) is in the new-zealand-activity-*-2025 rows.",
+   "evidence": "Only if the new-zealand-activity-* rows in this bundle are merged. The counts are printed in the 'Detailed breakdown' sections Swimming, Craft, Fishing from land and Slips and falls of https://www.watersafetynz.org/drowning-insights/latest-drowning-report; the Underwater and Other recreation sections print no count in their text (chart only)."
+  }
+ ],
+ "evidence": [
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "15 people lost their lives while swimming in 2025, with 14 of the 15 drowning fatalities being male.", "where": "'Detailed breakdown', section 'Swimming', its only text; the section carries Infogram chart 3722c220-c62d-431e-8c74-376d96a5450d"},
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "Craft activities were involved in 17 deaths.", "where": "'Detailed breakdown', section 'Craft', first sentence; Infogram chart ec633b24-778d-4842-927a-6d89100e7f22"},
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "People on craft in tidal environments were the most at risk, with seven deaths.", "where": "'Detailed breakdown', section 'Craft', second sentence"},
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "It was a tough year for land-based fishing drownings, with 10 deaths.", "where": "'Detailed breakdown', section 'Fishing from land', first sentence; the second reads 'All land-based fishing fatalities were male.'; Infogram chart 3a08b86a-b155-4b6a-8232-fd82eb83e80d"},
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "There were 10 deaths in 2025, three more than the previous year.", "where": "'Key statistics', sub-heading 'More die fishing from land', second sentence; the first reads 'There has been a significant increase in drowning deaths involving people fishing from land.'"},
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "There were 24 slips and falls drownings in 2025, \"unexpected entry\" remains a major challenge in reducing drownings.", "where": "'Detailed breakdown', section 'Slips and falls', its only text; Infogram chart e33b0410-d934-4ee9-b66d-ea94c7c99d18"},
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "People between the ages of 25 and 54 dominate the 10-year statistics for underwater drownings.", "where": "'Detailed breakdown', section 'Underwater', its only sentence (no 2025 count in text); Infogram chart 28344e31-c827-4ef4-9da8-6dcebc26d489"},
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "These are activities undertaken for enjoyment, for example board riding, jumping, water skiing, river crossing etc.", "where": "'Detailed breakdown', section 'Other recreation', its only sentence (no 2025 count in text); Infogram chart c9377a52-855b-4e75-a601-65333a6ff447"},
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "With 94% of craft-related fatalities involving individuals not wearing lifejackets,", "where": "'Key themes and findings', sub-heading 'Lifejacket use would save lives'; the sentence continues 'a nationwide mandate for lifejacket use on watercraft is urgently needed.'"},
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "Each year we look at what people were doing when things went wrong", "where": "'Detailed breakdown', paragraph introducing the six activity sections (begins 'What we do in and on the water'); the navigation tab is labelled 'Activities'. Section order: Swimming, Craft, Fishing from land, Underwater, Slips and falls, Other recreation"},
+  {"url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report", "quote": "Data correct as of 19 Feb 2026", "where": "Foot of the report page; the 'Download Report' link points to a Dropbox PDF (Drowning-Prevention-Report-2025_002.pdf)"},
+  {"url": "https://www.watersafetynz.org/news-media/drowning-prevention-report-2025-youre-not-ok-by-yourself", "quote": "There were 10 such deaths in 2025 - well above the 10-year average of six - and all were male.", "where": "WSNZ media release, 19 Feb 2026, body text on land-based fishing; the release gives no other activity counts"},
+  {"url": "https://www.watersafetynz.org/news-media/drowning-prevention-report-2025-youre-not-ok-by-yourself", "quote": "Data modelling from Water Safety NZ shows that 12 lives could be saved every year", "where": "WSNZ media release, 19 Feb 2026, body text; the sentence continues 'if lifejackets were worn on all watercrafts.'"},
+  {"url": "https://www.watersafetynz.org/drowning-reports/2024-drowning-prevention-report", "quote": "Slips and falls (28%), Craft (25%) and Swimming/'playing in the water' (25%) made up 78% of all fatalities.", "where": "2024 Drowning Prevention Report web page, 'Key statistics'; the same section prints '72 drowning fatalities - the lowest since 2018 and 13% below the 10-year average of 82.7'. Shares only, no activity counts"},
+  {"url": "https://www.watersafetynz.org/drowning-insights", "quote": "Swimming-related incidents were the leading cause of drowning death, 13 deaths.", "where": "Drowning Insights page, card 'Coastal environments - 2024' in the '2014 - 2024 key statistics' section (coast only, 2024); page 'Last Updated: 12/10/2026'; no 2025 activity split on the page"},
+  {"url": "https://e.infogram.com/28344e31-c827-4ef4-9da8-6dcebc26d489", "quote": "2025 DR underwater activity", "where": "Title tag of the Underwater chart embed; no chart data in the HTML served (renders client-side); canonical page infogram.com/2025-dr-underwater-activity-1hxj48m05pr852v"}
+ ],
+ "tried": [
+  "https://infogram.com/2025-dr-underwater-activity-1hxj48m05pr852v (canonical page of the Underwater chart): permission request not answered in time; told not to retry.",
+  "https://e.infogram.com/28344e31-c827-4ef4-9da8-6dcebc26d489 and https://e.infogram.com/c9377a52-855b-4e75-a601-65333a6ff447 (Underwater and Other recreation chart embeds): only page metadata (titles '2025 DR underwater activity' and '2025 DR other activity'; canonical infogram.com/2025-dr-other-activity-1h1749w0lvd1l2z); chart data renders client-side. The four other activity charts were not tried because their counts are printed in the text.",
+  "The report PDF on Dropbox (Drowning-Prevention-Report-2025_002.pdf, linked as 'Download Report'): not attempted, per the operational note that it refuses automated readers. It almost certainly prints the Underwater and Other recreation counts, any non-recreational or unknown activity category, and 2024 activity counts.",
+  "https://www.watersafetynz.org/drowning-insights (Drowning Insights page, Last Updated 12/10/2026): no 2025 activity split; its activity cards are for 2024 and setting-specific (coastal, rivers).",
+  "https://www.watersafetynz.org/drowning-reports/2024-drowning-prevention-report (2024 report web page, for the previous year's activity counts): prints shares only (Slips and falls 28%, Craft 25%, Swimming 25% of 72), no counts for any activity, and nothing on underwater, fishing from land or other recreation.",
+  "https://www.watersafetynz.org/news-media/drowning-prevention-report-2025-youre-not-ok-by-yourself (WSNZ media release, 19 Feb 2026): activity figures only for land-based fishing (10, 10-year average six, all male) and lifejacket modelling (12 lives a year); nothing for swimming, craft, underwater, slips and falls or other recreation.",
+  "https://www.divepacific.co.nz/post/drowning-statistics-on-the-increase (Dive Pacific, 21 May 2026): no 2025 underwater or diving count.",
+  "Web searches for any printing of the 2025 Underwater and Other recreation counts (WSNZ site, Scoop, Gisborne Herald, RNZ, dive press): nothing beyond the pages listed above."
+ ],
+ "notes": "Source: the web edition of Water Safety New Zealand's 2025 Drowning Prevention Report (released 19 Feb 2026, data correct as of 19 Feb 2026), 'Detailed breakdown', which has six activity sections in this order: Swimming, Craft, Fishing from land, Underwater, Slips and falls, Other recreation. Four print a 2025 count in their text: Swimming 15 (14 of the 15 male), Craft 17 (seven of them on craft in tidal environments), Fishing from land 10 (all male) and Slips and falls 24. Each is entered as printed, one row per section, grade A. Underwater and Other recreation print no count in their text; their counts sit in Infogram charts that render client-side and in the Dropbox PDF, which was not attempted. Those two are entered as gap rows (grade D, null low and high), as the ledger already does for the Pools and Home settings; the reviewer may prefer to drop them. Status partial for that reason. 2024 comparisons: the 2025 web edition prints one, for fishing from land only ('three more than the previous year', under 'Key statistics'), which makes 2024 seven as the report counts it (an implication, recorded as such, not a printed 2024 count). No 2024 figure, year-on-year change or activity-specific 10-year average is printed for swimming, craft, underwater, slips and falls or other recreation. The media release adds a 10-year average of six for land-based fishing. The 2024 report web page prints shares, not counts (Slips and falls 28%, Craft 25%, Swimming/'playing in the water' 25% of 72 deaths); these are noted but not converted to counts, since 72 has since been revised (the 2025 report treats 2024 as 74). Nothing was summed. The four printed counts do not reach 78 and must not be summed to it: the web edition shows no non-recreational, unknown or 'other' activity section, so the six sections may not partition the total; whether 'Craft' includes commercial or non-recreational boating, and whether 'Underwater' covers snorkelling and free-diving as well as scuba, is not defined on the web edition. Activity and setting are two different partitions of the same 78: Craft (17) equals Rivers (17) by coincidence; swimming is the highest-risk activity in inland still water and slips and falls the leading cause in rivers, per the setting sections already in the ledger. The counts are on the 78 basis (Feb 2026 printing); WSNZ's Drowning Insights page gives the provisional 2025 total as 79 by Oct 2026 and no revised activity split was found. One correction is proposed, to the note of new-zealand-total-2025, pointing to the activity rows, and only if they are merged. No names, contact details or precise positions were recorded. Infogram chart ids for each activity section are given in the evidence so a browser-equipped follow-up can read the two missing counts.",
+ "next_tasks": [
+  {"title": "Open the 2025 Drowning Prevention Report PDF in a browser and fill in the Underwater and Other recreation counts for 2025, plus any non-recreational or unknown activity category and the 2024 activity counts it prints", "why": "Two of the six activities are chart-only on the web edition, and the PDF on Dropbox refuses automated fetches."},
+  {"title": "Record the report's risk-factor figures from the same page: 43 deaths (more than 55%) of people by themselves, two more than the 10-year average, and 94% of craft fatalities not wearing lifejackets", "why": "Printed on the same page and bear on the register's risk-factor fields, but outside this task's one-row-per-activity brief."},
+  {"title": "When the 2026 WSNZ report appears (about Feb 2027), re-check the 2025 activity counts against its revised 2025 figures and retire or correct these rows", "why": "WSNZ counts move for months as coronial findings arrive; the 2025 total already reads 79 on the site against 78 in the report."}
+ ]
+}

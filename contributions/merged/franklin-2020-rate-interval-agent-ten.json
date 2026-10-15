@@ -1,0 +1,37 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "franklin-2020-rate-interval",
+ "preamble_version": "1.3",
+ "contributor": {"handle": "agent-ten", "agent": "Claude Fable 5.1 (claude-fable-5-1)"},
+ "status": "done",
+ "rows": [],
+ "corrections": [
+  {
+   "row_id": "gbd-2017-franklin-rate",
+   "field": "scope",
+   "old": "Unintentional drowning, global, both sexes, all ages, age-standardised rate for 2017 with 95% uncertainty interval, as printed in the abstract; 57.4% below the 1990 rate of 9.3 (8.5 to 10.0). The Discussion was reported to print the interval as 3.6 to 4.1; which is the typo is unresolved.",
+   "new": "Unintentional drowning, global, both sexes, all ages, age-standardised rate for 2017 with 95% uncertainty interval, as printed in the Abstract and in the Results (UI: 3.8 to 4.1); 57.4% below the 1990 rate of 9.3 (8.5 to 10.0). The Discussion (second paragraph) prints the interval once as 3.6–4.1 in a passing comparison with four high-burden countries. Two of three passages, including the formal Results statement, give 3.8 to 4.1, so cite 3.8 to 4.1 and treat 3.6 as the outlier unless the IHME GBD 2017 results tool shows otherwise.",
+   "evidence": "Brunel full text: Abstract prints '4.0 (3.8 to 4.1) per 100 000 per annum in 2017'; Results first paragraph prints 'a rate of 4.0 (UI: 3.8 to 4.1) per 100000 in 2017'; Discussion second paragraph prints 'global average of 4.0 (3.6–4.1)'."
+  },
+  {
+   "row_id": "gbd-2017-franklin-rate",
+   "field": "note",
+   "old": "Companion to gbd-2017-franklin. Found by an independent agent, 15 Oct 2026, in the Brunel repository copy of the full text and on IHME's library page.",
+   "new": "Companion to gbd-2017-franklin. Found by an independent agent, 15 Oct 2026, in the Brunel repository copy of the full text and on IHME's library page. Interval discrepancy checked by agent-ten, 15 Oct 2026, in the Brunel copy: Abstract and Results both print 3.8 to 4.1; Discussion prints 3.6–4.1 once.",
+   "evidence": "Same three passages in https://bura.brunel.ac.uk/bitstream/2438/23369/1/FullText.pdf (Abstract; Results, first paragraph; Discussion, second paragraph)."
+  }
+ ],
+ "evidence": [
+  {"url": "https://bura.brunel.ac.uk/bitstream/2438/23369/1/FullText.pdf", "quote": "from 9.3 (8.5 to 10.0) in 1990 to 4.0 (3.8 to 4.1) per 100 000 per annum in 2017", "where": "Abstract (Results sentence on the age-standardised rate)"},
+  {"url": "https://bura.brunel.ac.uk/bitstream/2438/23369/1/FullText.pdf", "quote": "to a rate of 4.0 (UI: 3.8 to 4.1) per 100000 in 2017", "where": "Results, first paragraph (spacing of '100000' is as returned by text extraction)"},
+  {"url": "https://bura.brunel.ac.uk/bitstream/2438/23369/1/FullText.pdf", "quote": "All four countries in 2017 had rates higher than the global average of 4.0 (3.6–4.1)", "where": "Discussion, second paragraph (begins 'Four countries in 2017 (China, India, Pakistan and Bangladesh) accounted for half of all drowning deaths'); en dash between 3.6 and 4.1"}
+ ],
+ "tried": [
+  "The PDF reader returned only short verbatim fragments per pass and gave no character offset for the Discussion, so the full text was read in three targeted passes (Abstract/Results, Discussion sentence, then the 20 words before and 10 after the Discussion figure) rather than by offset."
+ ],
+ "notes": "Both intervals are printed in the Brunel full text. 3.8 to 4.1 appears twice (Abstract, and Results first paragraph with the explicit 'UI:' label); 3.6–4.1 appears once, in the Discussion second paragraph, inside a passing comparison with China, India, Pakistan and Bangladesh. Recommendation: the lab should keep citing 4.0 (3.8 to 4.1) from the Abstract/Results; the existing figure, low and high on gbd-2017-franklin-rate are correct and need no change. The proposed corrections only update the scope and note text, which currently say the discrepancy is 'unresolved' and mention the abstract alone. Caveat: the paper itself cannot show which of the two is the typo; the consistency of Abstract and Results and the UI label make 3.8 the better-supported value, and the GBD 2017 results tool would settle it (next task). I did not check which manuscript version the Brunel copy is (accepted manuscript or version of record). Quote spacing ('per 100 000' vs 'per 100000') reflects the text extraction, not a difference in the paper. No file in the repository was edited.",
+ "next_tasks": [
+  {"title": "Query the IHME GBD 2017 Results Tool for the global age-standardised drowning death rate in 2017 with its 95% UI, to settle whether 3.8 or 3.6 is the misprint", "why": "The paper prints two different lower bounds; the model output (grade A) is the only source that can say which one is wrong."},
+  {"title": "Check whether the BMJ version of record of Franklin et al. 2020 (doi 10.1136/injuryprev-2019-043484) prints the same two intervals as the Brunel repository copy", "why": "The Brunel copy may be an accepted manuscript; a correction may have been applied in the published version or in a later erratum."}
+ ]
+}

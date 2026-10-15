@@ -3,6 +3,70 @@
  "note": "One receipt per reviewed bundle. The hash is the SHA-256 of the bundle with its keys sorted; anyone holding the bundle can recompute it.",
  "receipts": [
   {
+   "id": "rcpt-33967084c5",
+   "task_id": "new-zealand-activity-split-2025",
+   "handle": "agent-eleven",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "partial",
+   "preamble_version": "1.3",
+   "bundle_sha256": "33967084c52b215a8215575a24e45e5cdf243e63ac723219811031fe40e3fa94",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T13:56:36.997Z",
+   "changed": {
+    "rows": 6,
+    "corrections": 1,
+    "evidence": 16,
+    "next_tasks": 3
+   },
+   "release": "0.9.0",
+   "note": "Merged by the lab's session on 15 Oct 2026: four activity counts as printed, two gap rows following the ledger's convention, and the total's note points to them. The PDF reading is folded into the existing browser task.",
+   "next_tasks": [
+    {
+     "title": "Open the 2025 Drowning Prevention Report PDF in a browser and fill in the Underwater and Other recreation counts for 2025, plus any non-recreational or unknown activity category and the 2024 activity counts it prints",
+     "why": "Two of the six activities are chart-only on the web edition, and the PDF on Dropbox refuses automated fetches."
+    },
+    {
+     "title": "Record the report's risk-factor figures from the same page: 43 deaths (more than 55%) of people by themselves, two more than the 10-year average, and 94% of craft fatalities not wearing lifejackets",
+     "why": "Printed on the same page and bear on the register's risk-factor fields, but outside this task's one-row-per-activity brief."
+    },
+    {
+     "title": "When the 2026 WSNZ report appears (about Feb 2027), re-check the 2025 activity counts against its revised 2025 figures and retire or correct these rows",
+     "why": "WSNZ counts move for months as coronial findings arrive; the 2025 total already reads 79 on the site against 78 in the report."
+    }
+   ]
+  },
+  {
+   "id": "rcpt-2de68abea5",
+   "task_id": "franklin-2020-rate-interval",
+   "handle": "agent-ten",
+   "agent": "Claude Fable 5.1 (claude-fable-5-1)",
+   "status": "done",
+   "preamble_version": "1.3",
+   "bundle_sha256": "2de68abea5472a13265bc6d04c0c4b90485ce9a34b97649665e53502ebc768e6",
+   "decision": "accepted",
+   "reviewer": "claude-session-for-ethan",
+   "reviewed": "2026-10-15T13:56:36.907Z",
+   "changed": {
+    "rows": 0,
+    "corrections": 2,
+    "evidence": 3,
+    "next_tasks": 2
+   },
+   "release": "0.9.0",
+   "note": "Merged by the lab's session on 15 Oct 2026: the rate row's scope and note now say where each interval is printed and which the lab cites. Ethan Hawkes can reverse any of it with a commit.",
+   "next_tasks": [
+    {
+     "title": "Query the IHME GBD 2017 Results Tool for the global age-standardised drowning death rate in 2017 with its 95% UI, to settle whether 3.8 or 3.6 is the misprint",
+     "why": "The paper prints two different lower bounds; the model output (grade A) is the only source that can say which one is wrong."
+    },
+    {
+     "title": "Check whether the BMJ version of record of Franklin et al. 2020 (doi 10.1136/injuryprev-2019-043484) prints the same two intervals as the Brunel repository copy",
+     "why": "The Brunel copy may be an accepted manuscript; a correction may have been applied in the published version or in a later erratum."
+    }
+   ]
+  },
+  {
    "id": "rcpt-076c533928",
    "task_id": "gbd-2017-franklin-s1-europe",
    "handle": "agent-seven",

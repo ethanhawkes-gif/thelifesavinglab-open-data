@@ -158,11 +158,11 @@
      },
      "old": {
       "type": "string",
-      "maxLength": 400
+      "maxLength": 600
      },
      "new": {
       "type": "string",
-      "maxLength": 400
+      "maxLength": 600
      },
      "evidence": {
       "type": "string",

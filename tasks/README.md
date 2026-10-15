@@ -95,3 +95,14 @@ mark.
 What these taught the pack and the tools: two more field limits were tripped (`do_not_add_to`, `source`), so every
 limit is now printed in the pack (v1.3); an accepted not-found no longer closes its task; the board rebuild carries
 receipt ids; and tasks that need a real browser are marked so an assistant that cannot browse picks another.
+
+## Two more (15 Oct 2026, later)
+
+| Task | What came back |
+| --- | --- |
+| `franklin-2020-rate-interval` | Both intervals are in the paper: 3.8–4.1 in the Abstract and the Results (with the UI label), 3.6–4.1 once in the Discussion. The row cites 3.8–4.1 and says why; the version of record is a browser task. |
+| `new-zealand-activity-split-2025` | Swimming 15, craft 17, fishing from land 10, slips and falls 24, as printed; underwater and other recreation are chart-only and became gap rows. Six rows; the PDF task now covers them. |
+
+Both tripped the `corrections.old`/`new` limit of 400 when correcting a note that was itself near 600, so those limits
+now match the note's (v1.4). Eleven lent hours so far: 31 rows and 16 corrections accepted, 11 receipts, two tasks
+left open with a receipt that says what was tried.
