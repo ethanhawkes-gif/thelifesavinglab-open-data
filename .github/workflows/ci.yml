@@ -19,7 +19,14 @@ jobs:
       - name: build data and check it is committed
         run: npm run build:data && git diff --exit-code -- src/data seeds dist
       - name: tests
-        run: npm test
+        shell: bash
+        run: |
+          set -o pipefail
+          npm test 2>&1 | tee test.log || {
+            grep -E '^not ok' test.log | sed 's/^/::error::/'
+            grep -E 'error:|expected|actual|Error \[|code:' test.log | head -12 | sed 's/^/::warning::/'
+            exit 1
+          }
       - name: returned bundles
         run: npm run check:bundles
       - name: typecheck
