@@ -61,3 +61,19 @@ precise position. Report a `done` status without a primary source it actually op
 | `../scripts/tasks.mjs` | `list`, `prompt`, `claim`, `release`, `check`, `check-all`, `agree`, `receipt`, `promote`, `pull`. |
 | `../contributions/` | Returned bundles, one file each, submitted by pull request. |
 | `../estimates/` | The ledger the tasks refer to: every figure with its source, scope, grade and do-not-add rule. |
+
+## The first four lent hours (15 Oct 2026)
+
+Each was an independent agent with the prompt pack and web access only; each bundle passed the machine checks, was
+read by a person's session, merged, and received a receipt (`receipts/lend.json`, `contributions/merged/`).
+
+| Task | What came back |
+| --- | --- |
+| `verify-who-region-afr` | The WHO figure read blind matched the lab's own reading (66,000; 5.6 per 100,000); `agree` confirmed it. |
+| `nonfatal-ratio-primary` | "4–5 non-fatal drownings per death" exists only in a press article that says "it is estimated"; no primary in 14 documents. Row retired; three counted ratios added. |
+| `who-europe-9155-reconcile` | The 9,155 figure came from the same article, whose global total is a 2017 model and whose regional figures exceed it. Europe row now carries WHO's definition; Eurostat and WHO Europe rows added. |
+| `setting-split-canada` | Seven setting shares for 2018–2022 and the 2022 total from Canada's 2026 snapshot; one pairing flagged for a visual check. |
+
+What the runs taught the pack: assistants that cannot browse must say so (v1.1); field limits were too tight for a
+thorough agent (v1.2); and the personal-data detector was reading WHO's 13-digit ISBN as a phone number, which would
+have refused every WHO task. All fixed before an outsider met them.

@@ -2,7 +2,7 @@
 (function () {
   const { fmt, esc, roundK } = window.Charts;
   const app = document.getElementById('app');
-  const DATA = { ledger: null, toll: null, tree: null, byId: {}, parent: {}, tasks: null, watch: null, changelog: null };
+  const DATA = { ledger: null, toll: null, tree: null, byId: {}, parent: {}, tasks: null, watch: null, changelog: null, receipts: null };
   const MAIL = 'hello@thelifesavinglab.org';
   const SITE = 'https://thelifesavinglab.org';
   const REPO = 'github.com/ethanhawkes-gif/thelifesavinglab-open-data';
@@ -65,8 +65,8 @@
   async function load() {
     const get = (p) => fetch(p).then((r) => { if (!r.ok) throw new Error(p); return r.json(); });
     const soft = (p) => get(p).catch(() => null);
-    const [ledger, toll, tree, tasks, watch, changelog] = await Promise.all([get('data/ledger.json'), get('data/toll.json'), get('data/tree.json'), soft('data/tasks.json'), soft('data/watch-feed.json'), soft('data/changelog.json')]);
-    DATA.ledger = ledger; DATA.toll = toll; DATA.tree = tree; DATA.tasks = tasks; DATA.watch = watch; DATA.changelog = changelog;
+    const [ledger, toll, tree, tasks, watch, changelog, receipts] = await Promise.all([get('data/ledger.json'), get('data/toll.json'), get('data/tree.json'), soft('data/tasks.json'), soft('data/watch-feed.json'), soft('data/changelog.json'), soft('data/receipts.json')]);
+    DATA.ledger = ledger; DATA.toll = toll; DATA.tree = tree; DATA.tasks = tasks; DATA.watch = watch; DATA.changelog = changelog; DATA.receipts = receipts;
     ledger.rows.forEach((r) => { DATA.byId[r.id] = r; });
     Object.entries(tree.nodes).forEach(([id, n]) => (n.options || []).forEach((o) => { DATA.parent[o.to] = id; }));
   }
@@ -177,7 +177,7 @@
     <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Funders and partners</h3><p class="small" style="font-size:16px">Read the method and the ledger first. We report pilots written, adopted and failed. The lab holds no money: donations go directly to the <a href="${WILSSA}">Wood Island Life Saving Station Association</a>, which restored the station. <a href="#briefs-funder-one-pager">The one-page brief.</a></p><div class="row" style="margin-top:auto;gap:8px"><a class="btn btn--sm" href="${WILSSA}">Give to the station</a><a class="btn btn--ghost btn--sm" href="#contribute-offer">Write to us</a></div></div>
   </div>
   <div class="card--dark" style="padding:clamp(22px,3vw,36px);border-radius:2px;display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between">
-    <div class="stack-sm" style="flex:1 1 420px;min-width:0"><p class="eyebrow">Spare AI usage this month?</p><h3 class="h3" style="color:var(--paper)">Lend your assistant an hour.</h3><p class="small" style="font-size:16px;color:var(--mist);max-width:40em">One click opens a small, sourced task in ChatGPT, Claude, Grok or Perplexity (paste it into Gemini). Hand back what it found; a person checks it; you get a receipt that says what changed.</p></div>
+    <div class="stack-sm" style="flex:1 1 420px;min-width:0"><p class="eyebrow">Spare AI usage this month?</p><h3 class="h3" style="color:var(--paper)">Lend your assistant an hour.</h3><p class="small" style="font-size:16px;color:var(--mist);max-width:40em">One click opens a small, sourced task in ChatGPT, Claude, Grok or Perplexity (paste it into Gemini). Hand back what it found; a person checks it; you get a receipt that says what changed.${DATA.receipts && DATA.receipts.receipts.length ? ` So far: ${DATA.receipts.receipts.length} receipt${DATA.receipts.receipts.length === 1 ? '' : 's'}, ${DATA.receipts.receipts.filter((r) => r.decision === 'accepted').reduce((n, r) => n + r.changed.rows + r.changed.corrections, 0)} rows and corrections accepted.` : ''}</p></div>
     <a class="btn btn--primary" href="#lend">See the board</a>
   </div>
 </div></section>`;
