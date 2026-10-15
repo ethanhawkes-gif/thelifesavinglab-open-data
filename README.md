@@ -71,6 +71,11 @@ the board. See `tasks/README.md`.
 `estimates/` is the ledger behind the site's sizing of the global toll: every figure with its source, scope, year, grade
 and the rule for what it must not be added to, plus the toll layers and the decision tree. See `estimates/README.md`.
 
+## Briefs
+
+`docs/briefs/` holds one-page briefs for a co-host (Applied Wisdom), for partners and for funders. Everything in them is
+proposed unless marked otherwise.
+
 ## Documents
 
 `DATA_POLICY.md` · `SECURITY.md` · `CONTRIBUTING.md` · `GOVERNANCE.md` · `docs/ARCHITECTURE.md` ·
