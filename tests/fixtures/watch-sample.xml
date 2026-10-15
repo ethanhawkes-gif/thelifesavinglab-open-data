@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Test feed</title>
+<item><title>Coast Guard suspends search for missing swimmer off the north shore</title><link>https://example.org/news/1?utm_source=rss</link><pubDate>Tue, 13 Oct 2026 14:00:00 GMT</pubDate><description><![CDATA[The search was suspended after 30 hours.]]></description></item>
+<item><title>Ferry capsizes in rough seas; dozens rescued</title><link>https://example.org/news/2</link><pubDate>Tue, 13 Oct 2026 09:30:00 GMT</pubDate><description>Rescue crews pulled passengers from the water.</description></item>
+<item><title>Town council drowning in paperwork over marina lease</title><link>https://example.org/news/3</link><pubDate>Mon, 12 Oct 2026 09:30:00 GMT</pubDate><description>A budget story.</description></item>
+<item><title>New film about a lifeboat crew opens Friday</title><link>https://example.org/news/4</link><pubDate>Mon, 12 Oct 2026 08:00:00 GMT</pubDate><description>A movie trailer.</description></item>
+<item><title>Lifeboat crew rescue kayaker; victim: John Doe, contact 555-123-4567</title><link>https://example.org/news/5</link><pubDate>Sun, 11 Oct 2026 08:00:00 GMT</pubDate><description>Named person test.</description></item>
+<item><title>Ferry capsizes in rough seas; dozens rescued</title><link>https://example.org/news/2-syndicated</link><pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate><description>Syndicated copy.</description></item>
+</channel></rss>

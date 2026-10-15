@@ -1,0 +1,47 @@
+{
+  "schema": "lifesavinglab.watch.sources.v1",
+  "note": "Public feeds the watch reads on a schedule. kind: official = an agency or rescue service's own releases; press = news search. A disabled source is listed so the gap is visible.",
+  "sources": [
+    {
+      "id": "rnli-news",
+      "name": "RNLI · Latest news",
+      "kind": "official",
+      "region": "UK and Ireland",
+      "url": "https://rnli.org/news-and-media/rss",
+      "enabled": true
+    },
+    {
+      "id": "uscg-news",
+      "name": "U.S. Coast Guard · news releases",
+      "kind": "official",
+      "region": "United States",
+      "url": "https://www.news.uscg.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1041&max=30",
+      "enabled": false,
+      "note": "The site id in this URL is unconfirmed. Confirm the feed address at news.uscg.mil, set enabled to true, and the next run picks it up."
+    },
+    {
+      "id": "gnews-us",
+      "name": "Google News · US press search",
+      "kind": "press",
+      "region": "United States",
+      "url": "https://news.google.com/rss/search?q=%22missing+swimmer%22+OR+%22overdue+vessel%22+OR+%22overdue+boat%22+OR+drowned+OR+drowning+OR+capsized+OR+%22man+overboard%22+OR+%22pulled+from+the+water%22&hl=en-US&gl=US&ceid=US:en",
+      "enabled": true
+    },
+    {
+      "id": "gnews-world",
+      "name": "Google News · world press search",
+      "kind": "press",
+      "region": "World",
+      "url": "https://news.google.com/rss/search?q=%22ferry+capsized%22+OR+%22boat+capsized%22+OR+%22migrants+drowned%22+OR+%22fishermen+missing%22+OR+%22fishing+boat+sank%22&hl=en-US&gl=US&ceid=US:en",
+      "enabled": true
+    },
+    {
+      "id": "bing-news",
+      "name": "Bing News · press search (backup)",
+      "kind": "press",
+      "region": "World",
+      "url": "https://www.bing.com/news/search?q=drowned+OR+%22missing+swimmer%22+OR+%22overdue+vessel%22+OR+capsized&format=rss",
+      "enabled": true
+    }
+  ]
+}

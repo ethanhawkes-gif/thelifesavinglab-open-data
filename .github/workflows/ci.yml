@@ -1,5 +1,10 @@
 name: ci
-on: [push, pull_request]
+on:
+  push:
+    paths-ignore:
+      - 'watch/queue.json'
+      - 'watch/feed.json'
+  pull_request:
 permissions:
   contents: read
 jobs:

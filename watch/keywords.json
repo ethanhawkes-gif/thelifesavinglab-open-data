@@ -1,0 +1,19 @@
+{
+  "schema": "lifesavinglab.watch.keywords.v1",
+  "note": "A report enters the queue when its title or summary matches an include pattern and no exclude pattern. kinds map the first matching pattern to a neutral label; the headline itself is never stored.",
+  "kinds": [
+    { "kind": "search-suspended", "pattern": "suspend(?:s|ed) (?:the )?search|search (?:has been )?(?:suspended|called off)" },
+    { "kind": "search-underway", "pattern": "search(?:es|ing)? for (?:a |an )?(?:missing|overdue)|searching for|missing (?:swimmer|kayaker|boater|diver|surfer|paddleboarder|fisherman|fishermen|angler)|overdue (?:vessel|boat|kayaker|fishing)" },
+    { "kind": "rescue", "pattern": "rescue[sd]?\\b|pulled from the water|plucked from|airlifted|lifeboat launch|lifeboat crew" },
+    { "kind": "capsize", "pattern": "capsiz|overturn(?:ed|s)|boat sank|vessel sank|ferry sank|sinking" },
+    { "kind": "overboard", "pattern": "overboard" },
+    { "kind": "drowning-reported", "pattern": "drown(?:ed|ing|s)\\b" },
+    { "kind": "migrant-crossing", "pattern": "migrants?\\b.*(?:drown|capsiz|sank|missing|dead)|(?:drown|capsiz|sank|missing|dead).*migrants?\\b" },
+    { "kind": "flood", "pattern": "flood(?:s|ing|water)?\\b.*(?:drown|swept|dead|killed)" }
+  ],
+  "exclude": [
+    "drowning in debt", "drowning in paperwork", "drowning in emails", "drown out", "drowned out", "capsized the deal",
+    "film", "movie", "trailer", "episode", "novel", "review:", "opinion:", "podcast", "recipe", "lawsuit settled",
+    "water polo", "swim meet", "swimming pool opens", "fundraiser", "gala", "lifeguard shortage"
+  ]
+}

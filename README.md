@@ -51,6 +51,12 @@ Contribution → validation → staged or quarantined → reviewer accepts/decli
 → `npm run check` → new release version with new hashes. The API never writes canonical rows. See
 `docs/ARCHITECTURE.md`, `GOVERNANCE.md`, `CONTRIBUTING.md`.
 
+## The watch
+
+`watch/` holds a scheduled job (`.github/workflows/watch.yml`, hourly) that reads public feeds and queues reports that look
+like a drowning, a search, a capsize or a rescue, for a person to read. It stores links, sources, dates and a derived kind:
+no headline text and no names. `scripts/watch-review.mjs` turns a report into a register row. See `watch/README.md`.
+
 ## Documents
 
 `DATA_POLICY.md` · `SECURITY.md` · `CONTRIBUTING.md` · `GOVERNANCE.md` · `docs/ARCHITECTURE.md` ·

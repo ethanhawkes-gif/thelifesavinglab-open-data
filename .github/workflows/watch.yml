@@ -1,0 +1,35 @@
+name: watch
+# The watch runs on a schedule: read public feeds, queue reports that look like a drowning, a search, a capsize or a
+# rescue, and commit the queue. A person reads the queue; nothing here counts anything or names anyone.
+on:
+  schedule:
+    - cron: '23 * * * *'   # hourly, off the hour so it does not queue behind everyone else's :00 jobs
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: watch
+  cancel-in-progress: false
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Read the feeds
+        run: node scripts/watch.mjs
+      - name: Commit the queue if it changed
+        run: |
+          git config user.name "lsl-watch"
+          git config user.email "watch@thelifesavinglab.org"
+          git add watch/queue.json watch/feed.json
+          if git diff --cached --quiet; then
+            echo "watch: nothing new"
+          else
+            git commit -m "[watch] $(date -u +%FT%TZ): $(node -e "const q=require('./watch/queue.json');console.log(JSON.stringify(q.counts))")"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
