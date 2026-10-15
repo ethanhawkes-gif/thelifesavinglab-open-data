@@ -45,7 +45,7 @@
     <p id="r-msg" class="small muted" aria-live="polite"></p>
   </form>
   <div class="stack" style="flex:1 1 300px;min-width:0;gap:14px">
-    <div class="card stack-sm"><p class="eyebrow">Why these columns</p><p class="small" style="font-size:15px">Only 31% of countries record where a drowning happened and fewer than 30% record the activity. Minutes from alarm to reach is the number no global dataset has. Two hundred careful rows from one harbor are the first dataset of their kind.</p></div>
+    <div class="card stack-sm"><p class="eyebrow">Why these columns</p><p class="small" style="font-size:15px">Only 31% of countries record where a drowning happened and 27% record the activity. Minutes from alarm to reach is the number no global dataset has. Two hundred careful rows from one harbor are the first dataset of their kind.</p></div>
     <div class="card stack-sm card--dashed"><p class="eyebrow">Where rows go</p><p class="small" style="font-size:15px">Export the CSV and send it to the lab, or open a pull request in the open-data repository. A person reads every row before it joins a release. Your harbor is credited; no person is ever named.</p></div>
   </div>
 </div></section>
