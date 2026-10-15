@@ -6,6 +6,10 @@ import { findViolations } from './lib/nonadditive.js';
 import { classifyContribution, MAX_BODY_BYTES } from './lib/validate.js';
 import { detectDistress } from './lib/pii.js';
 import { OPENAPI } from './openapi.js';
+import board from '../tasks/tasks.json' with { type: 'json' };
+import bundleSchema from '../tasks/bundle.schema.json' with { type: 'json' };
+import estimates from '../estimates/ledger.json' with { type: 'json' };
+import { leaseState, buildPrompt, checkBundle } from './lib/bundles.js';
 
 const BASE_HEADERS = {
   'x-content-type-options': 'nosniff',
@@ -79,12 +83,62 @@ async function review(request, env, id) {
   return respond({ id, status: body.decision }, 200, { 'cache-control': 'no-store' });
 }
 
+/* ---- Lend your agent an hour: the board, prompt packs, returned bundles ---- */
+const MAX_BUNDLE_BYTES = 65536;
+const ledgerIds = new Set(estimates.rows.map((r) => r.id));
+const publicTask = (t) => ({ ...t, state: leaseState(t) });
+
+async function stageBundle(request, env) {
+  if (!env.DB) return fail(503, 'staging store not configured');
+  if (!(request.headers.get('content-type') || '').toLowerCase().startsWith('application/json')) return fail(415, 'content-type must be application/json');
+  const raw = await request.text();
+  if (new TextEncoder().encode(raw).length > MAX_BUNDLE_BYTES) return fail(413, 'body too large');
+  if (detectDistress(raw)) return respond({ status: 'not-received', emergency: DISTRESS_NOTICE }, 200, { 'cache-control': 'no-store' });
+  let bundle;
+  try { bundle = JSON.parse(raw); } catch { return fail(400, 'invalid JSON'); }
+  const result = checkBundle(bundle, { schema: bundleSchema, tasks: board.tasks, ledgerIds, preambleVersion: board.preamble_version });
+  if (!result.ok) return fail(400, 'machine checks failed; nothing was stored', result.errors);
+  const cap = Number(env.MAX_PENDING || 500);
+  const pending = await env.DB.prepare("SELECT count(*) AS n FROM bundles WHERE status = 'staged'").first();
+  if ((pending?.n ?? 0) >= cap) return fail(429, 'review queue full; try later');
+  const body = canonicalJSON(bundle);
+  const digest = await sha256Hex(body);
+  const id = 'b-' + digest.slice(0, 24);
+  const now = new Date().toISOString();
+  const res = await env.DB.prepare('INSERT OR IGNORE INTO bundles (id,task_id,status,handle,agent,bundle_status,payload,payload_sha256,warnings,preamble_version,submitted_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)')
+    .bind(id, bundle.task_id, 'staged', bundle.contributor.handle, bundle.contributor.agent, bundle.status, body, digest, JSON.stringify(result.warnings), bundle.preamble_version, now).run();
+  if (res?.meta?.changes) await env.DB.prepare('INSERT INTO audit_events (at,actor_role,action,target,detail_sha256) VALUES (?,?,?,?,?)').bind(now, 'public', 'bundle.staged', id, digest).run();
+  return respond({ id, status: 'staged', duplicate: !res?.meta?.changes, provisional_receipt: 'rcpt-' + digest.slice(0, 10), bundle_sha256: digest, warnings: result.warnings, next: 'A person reviews it. The receipt appears in receipts/lend.json with this hash.' }, 202, { 'cache-control': 'no-store' });
+}
+
+async function reviewBundles(request, env, id) {
+  if (!(await reviewerOk(request, env))) return fail(401, 'unauthorized');
+  if (!env.DB) return fail(503, 'staging store not configured');
+  if (id === 'queue') {
+    const { results } = await env.DB.prepare("SELECT id,task_id,status,handle,agent,bundle_status,payload,payload_sha256,warnings,preamble_version,submitted_at FROM bundles WHERE status = 'staged' ORDER BY submitted_at LIMIT 100").all();
+    return respond({ data: results ?? [] }, 200, { 'cache-control': 'no-store' });
+  }
+  if (!/^b-[0-9a-f]{24}$/.test(id)) return fail(404, 'not found');
+  let body;
+  try { body = await request.json(); } catch { return fail(400, 'invalid JSON'); }
+  if (!['accepted', 'declined', 'needs-work'].includes(body?.decision)) return fail(400, 'decision must be accepted, declined or needs-work');
+  const receipt = typeof body.receipt_id === 'string' && /^rcpt-[0-9a-f]{10}$/.test(body.receipt_id) ? body.receipt_id : null;
+  const now = new Date().toISOString();
+  const res = await env.DB.prepare("UPDATE bundles SET status=?, decided_at=?, receipt_id=? WHERE id=? AND status = 'staged'").bind(body.decision, now, receipt, id).run();
+  if (!res?.meta?.changes) return fail(404, 'not found or already decided');
+  await env.DB.prepare('INSERT INTO audit_events (at,actor_role,action,target,detail_sha256) VALUES (?,?,?,?,NULL)').bind(now, 'reviewer', 'bundle.' + body.decision, id).run();
+  return respond({ id, status: body.decision, receipt_id: receipt }, 200, { 'cache-control': 'no-store' });
+}
+
 export async function handle(request, env = {}) {
   const url = new URL(request.url);
   const path = url.pathname.replace(/\/+$/, '') || '/';
   const m = request.method;
   if (m === 'OPTIONS') return new Response(null, { status: 204, headers: { ...BASE_HEADERS, 'access-control-allow-methods': 'GET, POST, OPTIONS', 'access-control-allow-headers': 'content-type, authorization', 'access-control-max-age': '600' } });
   if (path === '/v1/contributions') return m === 'POST' ? stage(request, env) : fail(405, 'method not allowed');
+  if (path === '/v1/bundles') return m === 'POST' ? stageBundle(request, env) : fail(405, 'method not allowed');
+  if (path === '/v1/review/bundles') return m === 'GET' ? reviewBundles(request, env, 'queue') : fail(405, 'method not allowed');
+  if (path.startsWith('/v1/review/bundles/')) return m === 'POST' ? reviewBundles(request, env, path.slice(19)) : fail(405, 'method not allowed');
   if (path === '/v1/review/queue') return m === 'GET' ? review(request, env, 'queue') : fail(405, 'method not allowed');
   if (path.startsWith('/v1/review/')) return m === 'POST' ? review(request, env, path.slice(11)) : fail(405, 'method not allowed');
   if (m !== 'GET' && m !== 'HEAD') return fail(405, 'method not allowed');
@@ -95,6 +149,11 @@ export async function handle(request, env = {}) {
     case '/v1/status': return respond({ ok: true, release: ex.manifest, staging: Boolean(env.DB), excluded_from_release: release.excluded }, 200, { 'cache-control': 'no-store' });
     case '/v1/openapi.json': return respond(OPENAPI);
     case '/v1/sources': return respond({ data: release.sources });
+    case '/v1/tasks': {
+      const all = url.searchParams.get('all') === '1';
+      const data = board.tasks.map(publicTask).filter((t) => all || t.state === 'open');
+      return respond({ data, version: board.version, preamble_version: board.preamble_version, how: 'GET /v1/tasks/{id}/prompt for a self-contained prompt; POST the returned bundle to /v1/bundles.' });
+    }
     case '/v1/non-additive': return respond({ data: release.non_additive });
     case '/v1/releases/latest': return respond(ex.manifest);
     case '/v1/export.json': return new Response(ex.json, { headers: { ...BASE_HEADERS, 'content-type': 'application/json; charset=utf-8', 'x-sha256': ex.manifest.sha256['export.json'] } });
@@ -115,6 +174,13 @@ export async function handle(request, env = {}) {
       }
       return respond({ data, release: release.meta.version });
     }
+  }
+  const tm = /^\/v1\/tasks\/([^/]+)(\/prompt)?$/.exec(path);
+  if (tm) {
+    const t = ID.test(tm[1]) && board.tasks.find((x) => x.id === tm[1]);
+    if (!t) return fail(404, 'not found');
+    if (tm[2]) return new Response(buildPrompt(t, board.preamble), { headers: { ...BASE_HEADERS, 'content-type': 'text/plain; charset=utf-8', 'x-task-id': t.id, 'x-preamble-version': board.preamble_version } });
+    return respond(publicTask(t));
   }
   const om = /^\/v1\/observations\/([^/]+)$/.exec(path);
   if (om) {

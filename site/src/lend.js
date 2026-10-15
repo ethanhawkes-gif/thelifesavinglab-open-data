@@ -4,6 +4,8 @@
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const MAIL = 'hello@thelifesavinglab.org';
   const REPO = 'https://github.com/ethanhawkes-gif/thelifesavinglab-open-data';
+  /* The open-data API, once deployed (see docs/OPERATIONS.md): bundles can then be handed back with one press. Null until then. */
+  const API = null;
   const MAX_QUOTE_WORDS = 25;
   const PRESS = ['bbc.co.uk', 'bbc.com', 'cnn.com', 'reuters.com', 'apnews.com', 'nytimes.com', 'theguardian.com', 'washingtonpost.com', 'foxnews.com', 'nbcnews.com', 'abcnews.go.com', 'cbsnews.com', 'dailymail.co.uk', 'independent.co.uk', 'telegraph.co.uk', 'aljazeera.com', 'yahoo.com', 'msn.com', 'wikipedia.org', 'medium.com', 'substack.com', 'x.com', 'twitter.com', 'facebook.com', 'reddit.com', 'youtube.com'];
   const PII = [['email', /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i], ['phone', /(?:\+?\d{1,3}[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\b/], ['id number', /\b\d{3}-\d{2}-\d{4}\b/], ['street address', /\b\d{1,5}\s+\w+(?:\s\w+)?\s(?:St|Street|Ave|Avenue|Rd|Road|Ln|Lane|Dr|Drive|Ct|Court|Blvd)\b/i], ['position', /-?\d{1,3}\.\d{4,},\s*-?\d{1,3}\.\d{4,}/], ['named person', /\b(?:victim|deceased|survivor|patient|next of kin)\s*(?:name)?\s*[:=]/i], ['credential', /\b(?:api[_-]?key|secret|password|token)\s*[:=]|\bgh[pousr]_[A-Za-z0-9]{20,}|\bsk-[A-Za-z0-9]{20,}/i]];
@@ -192,9 +194,19 @@
     out.innerHTML = `
 ${r.errors.length ? `<div class="notice stack-sm"><p class="eyebrow">Not ready · ${r.errors.length} problem${r.errors.length === 1 ? '' : 's'}</p><ul style="padding-left:20px;display:flex;flex-direction:column;gap:4px">${r.errors.map((e) => `<li>${esc(e)}</li>`).join('')}</ul><p class="small">Fix the file (or ask your assistant to), then check again.</p></div>` : ''}
 ${r.warnings.length ? `<div class="card stack-sm card--dashed"><p class="eyebrow">For the reviewer · ${r.warnings.length} note${r.warnings.length === 1 ? '' : 's'}</p><ul class="small" style="font-size:15px;padding-left:20px;display:flex;flex-direction:column;gap:4px">${r.warnings.map((w) => `<li>${esc(w)}</li>`).join('')}</ul></div>` : ''}
-${r.ok ? `<div class="card stack-sm" style="border-left:4px solid var(--teal)"><p class="eyebrow">Machine checks passed · provisional receipt</p><p class="mono" style="font-size:14px">${sha ? 'rcpt-' + sha.slice(0, 10) : 'rcpt-(hash unavailable in this view)'}</p><p class="small" style="font-size:15px">Task <b>${esc(b.task_id)}</b> · ${esc(b.status)} · ${b.rows.length} rows, ${b.corrections.length} corrections, ${b.evidence.length} quotes, ${b.next_tasks.length} follow-ups · by <b>${esc(b.contributor.handle)}</b> with ${esc(b.contributor.agent)}</p>${sha ? `<p class="small muted" style="font-size:13px;word-break:break-all">SHA-256 ${esc(sha)}</p>` : ''}<p class="small muted" style="font-size:14px">This becomes a real receipt when a person reviews the file. The id will match as long as the file is sent unchanged.</p><div class="row"><button class="btn btn--sm" id="bundle-copy" type="button">Copy file</button><button class="btn btn--sm" id="bundle-save" type="button">Save ${esc(fname)}</button></div></div>` : ''}`;
+${r.ok ? `<div class="card stack-sm" style="border-left:4px solid var(--teal)"><p class="eyebrow">Machine checks passed · provisional receipt</p><p class="mono" style="font-size:14px">${sha ? 'rcpt-' + sha.slice(0, 10) : 'rcpt-(hash unavailable in this view)'}</p><p class="small" style="font-size:15px">Task <b>${esc(b.task_id)}</b> · ${esc(b.status)} · ${b.rows.length} rows, ${b.corrections.length} corrections, ${b.evidence.length} quotes, ${b.next_tasks.length} follow-ups · by <b>${esc(b.contributor.handle)}</b> with ${esc(b.contributor.agent)}</p>${sha ? `<p class="small muted" style="font-size:13px;word-break:break-all">SHA-256 ${esc(sha)}</p>` : ''}<p class="small muted" style="font-size:14px">This becomes a real receipt when a person reviews the file. The id will match as long as the file is sent unchanged.</p><div class="row">${API ? '<button class="btn btn--sm btn--primary" id="bundle-send" type="button">Send it now</button>' : ''}<button class="btn btn--sm" id="bundle-copy" type="button">Copy file</button><button class="btn btn--sm" id="bundle-save" type="button">Save ${esc(fname)}</button></div><p class="small muted" id="bundle-sent" style="font-size:14px"></p></div>` : ''}`;
     const c = document.getElementById('bundle-copy'); if (c) c.addEventListener('click', () => S.copy(json));
     const s = document.getElementById('bundle-save'); if (s) s.addEventListener('click', () => S.save(fname, json));
+    const send = document.getElementById('bundle-send'); if (send) send.addEventListener('click', async () => {
+      send.disabled = true; const msg = document.getElementById('bundle-sent'); msg.textContent = 'Sending…';
+      try {
+        const res = await fetch(API + '/v1/bundles', { method: 'POST', headers: { 'content-type': 'application/json' }, body: json });
+        const d = await res.json();
+        if (res.status === 202) msg.textContent = (d.duplicate ? 'Already received. ' : 'Received. ') + 'Staged as ' + d.id + '; provisional receipt ' + d.provisional_receipt + '. A person reviews it next.';
+        else if (d.emergency) msg.textContent = d.emergency;
+        else { msg.textContent = 'Not accepted: ' + (d.details || [d.error]).join('; '); send.disabled = false; }
+      } catch { msg.textContent = 'Could not reach the API. Save the file and send it by pull request or email.'; send.disabled = false; }
+    });
   }
   function mount(ctx, tools) {
     S.copy = tools.copyText; S.save = tools.saveFile;

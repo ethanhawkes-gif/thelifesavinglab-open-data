@@ -29,7 +29,7 @@ Node 22.5+ (tests use the built-in `node:sqlite` to run the real migrations).
 
 ## API (v1)
 
-OpenAPI 3.1 at `/v1/openapi.json`. Reads come from the bundled release; the only write is a staged contribution.
+OpenAPI 3.1 at `/v1/openapi.json`. Reads come from the bundled release; the only writes are a staged contribution and a staged bundle.
 
 | Method | Path | Purpose |
 |---|---|---|
@@ -42,6 +42,9 @@ OpenAPI 3.1 at `/v1/openapi.json`. Reads come from the bundled release; the only
 | POST | `/v1/contributions` | stage a correction or addition (validated; PII -> quarantine) |
 | GET | `/v1/review/queue` | pending contributions with payloads (bearer token) |
 | POST | `/v1/review/{id}` | reviewer decision: `accepted` or `declined` (bearer token) |
+| GET | `/v1/tasks`, `/v1/tasks/{id}`, `/v1/tasks/{id}/prompt` | the lend-your-agent board; a task; its prompt pack as plain text |
+| POST | `/v1/bundles` | hand back a bundle; machine checks first, a bundle that fails them (any personal data included) is refused and never stored |
+| GET / POST | `/v1/review/bundles`, `/v1/review/bundles/{id}` | reviewer: staged bundles; `accepted`, `declined` or `needs-work` with the receipt id (bearer token) |
 
 Verify an export: `curl -s $API/v1/export.csv | shasum -a 256` must equal `sha256["export.csv"]` in `/v1/releases/latest`.
 

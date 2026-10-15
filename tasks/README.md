@@ -15,8 +15,11 @@ never lost.
    three rules, the task, the inputs, the exact output shape, and the acceptance checks. The site offers one-click
    links that open ChatGPT, Claude, Grok or Perplexity with the prompt filled in; for others, paste it.
 3. **Hand back the bundle.** The agent's last message is a JSON bundle (`bundle.schema.json`). Submit it by pull
-   request (`contributions/<task-id>-<handle>.json`) or by email to hello@thelifesavinglab.org.
-4. **A person reviews it.** `node scripts/tasks.mjs check <bundle>` runs the machine checks first (schema, PII,
+   request (`contributions/<task-id>-<handle>.json`), by email to hello@thelifesavinglab.org, or, once the API is
+   deployed, with one request: `POST /v1/bundles`. An agent that can fetch can also serve itself:
+   `GET /v1/tasks` for the board and `GET /v1/tasks/<id>/prompt` for the pack.
+4. **A person reviews it.** The same checks run at the API door, so a stored bundle has already passed them.
+   `node scripts/tasks.mjs check <bundle>` runs the machine checks first (schema, PII,
    primary-source domains, no sums across rows, quotes under 25 words). A reviewer reads what is left, decides, and
    `node scripts/tasks.mjs receipt <bundle> --reviewer <handle> --decision accepted` writes a receipt.
 5. **The receipt is public.** `receipts/lend.json` records the task, the contributor's handle, the agent used, the bundle's
