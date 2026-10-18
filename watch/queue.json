@@ -1,8 +1,8 @@
 {
  "schema": "lifesavinglab.watch.queue.v1",
- "generated": "2026-10-18T18:43:43.447Z",
+ "generated": "2026-10-18T21:36:21.080Z",
  "counts": {
-  "reported": 395,
+  "reported": 398,
   "read": 0,
   "row-written": 0,
   "matched": 17,
@@ -92,6 +92,20 @@
    "first_seen": "2026-10-18T15:59:37.202Z",
    "stage": "reported",
    "title_sha256": "1feeeed6417e76b603f7a83fd4631df01cb792720b6ee9b6dbff9bd12a5d813b",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "1fb785abdc43d5e7",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOWkduNDdja2JCWk82dmVkeTlCaFJ6bTZsTXF0QmZEbnZSaFloRnBGX3dnU1JBYUFJNGtFX2JKak1GUXZ3U0tEa0VWUGN6MXVDeFpLOVJzbnpRMmM2cm5ySGNYQXV2LTIxTVQzZ0E5SnhlLU5hTXFWMlF2dDlzQ3RtT0JrOVY3bkxRYzZVOVBlWEF6d0wzakR6WVJ1NmJnTGhBRmFQYTlHS3VuRDhvc0NVdjVfamhJTFVnd1R0Y1lZaHBSMWdNWFE?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "capsize",
+   "published": "2026-10-18T14:00:00.000Z",
+   "first_seen": "2026-10-18T21:36:21.080Z",
+   "stage": "reported",
+   "title_sha256": "0b2bf49f2237e2a0b3a2a7d5866883dbc670960af69b75d1a81cf3a6e904fa59",
    "held": null,
    "note": null
   },
@@ -4128,6 +4142,20 @@
    "note": null
   },
   {
+   "id": "9af626eb674c05cc",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOc042SjFRVDc0NUItRFl0ekxqaWg1UUo3UG0yNGtWZWUydEg4ZWlONlRvRnZOTGlLelZOdmhMRnhfa3dRX3g2ZGxSYnY3LTFYY3JmRzdPR0ZkN3Z0TzZBMjJ0dmJIY0FRejNvbTFtbElyMHlHMlB5Qk96aTdBU1NnemFSZXVvUTVhS3E2c1FNcy1fWVMwR3pQMzJURGlzSlFhMTBobkYxM1N6UWt2cF9CTkE4QnVmOW9IeFRDMg?oc=5",
+   "source": "gnews-world",
+   "source_kind": "press",
+   "region": "World",
+   "kind": "capsize",
+   "published": "2026-09-13T07:00:00.000Z",
+   "first_seen": "2026-10-18T21:36:21.080Z",
+   "stage": "reported",
+   "title_sha256": "3f05987316d002815f9882ff24bfe9c2cb2ef142d826081c4ee8f86f5858ef8a",
+   "held": null,
+   "note": null
+  },
+  {
    "id": "73282d8dbdca185a",
    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5FR3RfMzBFNE8xalk4R0VIcFdjckxYRWMwbGszaWZQcUFrTGY4OXpwMGRyQmsyWTJHenk3MmpjXzc1VlRXZndZbnptS244SGluTUxrdlVTMnM3RHY2TTljUmxRaG9Zanhta3ZsQTY4SDNqUDFCZklMOWFYZ001OUU?oc=5",
    "source": "gnews-world",
@@ -5246,6 +5274,20 @@
    "note": null
   },
   {
+   "id": "312a70748e3973d4",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQV01FR3JFeEtuUm9tQ0VtZV9ySnUzZllSY2I1SERTSmRibXdYaFB6dEZRSzZZWUFyVHB1bXF4d2c0VkpuVHVMblUwTTJlSFBRdnFGUE01TnVDRFJVRE8waVctOVlGYzNJbmk2Z3Q2WGhRUUgtRjBQMnhaT0hnZHJKX3hkTWpCVmUwNzFhcXNla1JPOHZmbGdqOGtsTjFOdWVrdnh1ekxPeTlYcjdkX0VKNkk1d3MzRFdiVkxVcUp3OWxHT0FyR3c?oc=5",
+   "source": "gnews-world",
+   "source_kind": "press",
+   "region": "World",
+   "kind": "search-underway",
+   "published": "2026-07-15T07:00:00.000Z",
+   "first_seen": "2026-10-18T21:36:21.080Z",
+   "stage": "reported",
+   "title_sha256": "e8407ae319082e358e142607f824ab46af41e8d89be5536d8de26ed57daf92b8",
+   "held": null,
+   "note": null
+  },
+  {
    "id": "bef7e5b1db31ea85",
    "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOaXdHcDBHTWdWblBrbmhmT19HMkJnMURPaXJjdWxfTHRvU1d2Rm9oU1lOcjBSNzhubng1cWlqVnVoUEw5bEl0Q003c0hHbThJSkJzck9QeEdiems5QUlqX215SDBXUkd5ejI2bWFBaFdxVGRWNGxOMV9xTnBXTHFEVVc0UWV3U3dMVTMwS1pJWHhtSDFhTjFfYVctdmpjOTcwczh5U3pPZ05jaDgwcGl5MkItS2ozcVRSUk1faGxHV2doQjhkNjRIUXdrYWJfcHo4WUdBWg?oc=5",
    "source": "gnews-world",
@@ -5845,6 +5887,40 @@
   }
  ],
  "runs": [
+  {
+   "at": "2026-10-18T21:36:21.080Z",
+   "sources": {
+    "rnli-news": {
+     "ok": false,
+     "error": "HTTP 403"
+    },
+    "uscg-d7-govdelivery": {
+     "ok": true,
+     "items": 100,
+     "matched": 32,
+     "added": 0
+    },
+    "gnews-us": {
+     "ok": true,
+     "items": 100,
+     "matched": 93,
+     "added": 1
+    },
+    "gnews-world": {
+     "ok": true,
+     "items": 100,
+     "matched": 90,
+     "added": 2
+    },
+    "bing-news": {
+     "ok": true,
+     "items": 0,
+     "matched": 0,
+     "added": 0
+    }
+   },
+   "added": 3
+  },
   {
    "at": "2026-10-18T18:43:43.447Z",
    "sources": {

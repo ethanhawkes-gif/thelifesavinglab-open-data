@@ -1,9 +1,9 @@
 {
  "schema": "lifesavinglab.watch.feed.v1",
- "generated": "2026-10-18T18:43:43.447Z",
+ "generated": "2026-10-18T21:36:21.080Z",
  "note": "Reports found by the watch and not yet read by a person, newest first. A report is not a count. No headline text and no names are stored; follow the link to read it.",
  "counts": {
-  "reported": 395,
+  "reported": 398,
   "read": 0,
   "row-written": 0,
   "matched": 17,
@@ -84,6 +84,17 @@
    "first_seen": "2026-10-18T15:59:37.202Z",
    "stage": "reported",
    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZlRzLWFqeENvVFBtc05ZYmdFeWhveWlOWFVnVjJBSzhRbmRnMW1OeDRJZy1SeDFNY0RuQUNzV09jdVlwS3dpNUx2eEJ4d2htcTQyaUdqbG52QzYxZElwQ0M3RnV5czdKdzF1aFFWVzdaa0hRdXRIbEdlSHlkQTI2U09n?oc=5"
+  },
+  {
+   "id": "1fb785abdc43d5e7",
+   "kind": "capsize",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "published": "2026-10-18T14:00:00.000Z",
+   "first_seen": "2026-10-18T21:36:21.080Z",
+   "stage": "reported",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOWkduNDdja2JCWk82dmVkeTlCaFJ6bTZsTXF0QmZEbnZSaFloRnBGX3dnU1JBYUFJNGtFX2JKak1GUXZ3U0tEa0VWUGN6MXVDeFpLOVJzbnpRMmM2cm5ySGNYQXV2LTIxTVQzZ0E5SnhlLU5hTXFWMlF2dDlzQ3RtT0JrOVY3bkxRYzZVOVBlWEF6d0wzakR6WVJ1NmJnTGhBRmFQYTlHS3VuRDhvc0NVdjVfamhJTFVnd1R0Y1lZaHBSMWdNWFE?oc=5"
   },
   {
    "id": "3798a23662e787ba",
@@ -667,17 +678,6 @@
    "first_seen": "2026-10-17T10:58:13.155Z",
    "stage": "reported",
    "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB5NUJaLVlUZE5xU2FqN1lPVGhoUkkySUZIUGQyaUhNYldEaml5VHByeVM0ZVdSQlZwaDZvVVJpVVI5V3J0RzZFM3YtRVhidFVkWm43Z21IQ0QtRHd1MzhzYUw4WEI?oc=5"
-  },
-  {
-   "id": "445e092406a3aa24",
-   "kind": "drowning-reported",
-   "source": "gnews-us",
-   "source_kind": "press",
-   "region": "United States",
-   "published": "2026-10-17T05:10:00.000Z",
-   "first_seen": "2026-10-17T05:42:46.142Z",
-   "stage": "reported",
-   "link": "https://news.google.com/rss/articles/CBMisgJBVV95cUxObmVLQ29VcTdibUNjaFRPWFZVNW9tRnJzV2l1OU1XUVNqenR2M3dWMm5YcG8zRFUtaEd2UndxLTE3a3UtMkZHSWpLZGU4Yng1S0liV0lXbVZUcTFHcGZPQ3BQVmdGMzdLTkVjQzZyV0hvYXphYmtfQlEyZ3VMUjJuUDlWcERTNEYydUxFN2ZGNXUxUjlIWmRhYkRLdV9LSnQ5eXNMejNOdENjbExsUmJTUWhDZlhGUS0yUXZTYy00dndTYjNBQnNqSGZuUXNwUExnVG84b3RLeTRFNTZlNVhTblFzRUpwSUZGdUVGSkFhUE45d2Q0cFRzcGtEeUIwUHY4UUplM1VZWHBaZEVITVhYUXNBVmNvUFJod2U1RnduN1JDQzdUT2F4b2d0NEc4dE5GZnfSAbcCQVVfeXFMUGF1VEVXd2o2QTFud1Q0Z0lHNHJ4TndNblJuQUpoM2xFaUU0VHZkbkM2MHMtZ1ByZi01bTRnbENRWnFTbjA4eFZnRFpXb1Y0TXhhT0Y3R1FHN2tWWFY4cGhLX1dIQV90YmoyUlVjZ1VuWEloOWZpc0pLS1VkRWE5Qlk1b2hZLTdDTFh2WU9xWWxsWGE1UVRCUzMxMUZLdXdoeThmbXdtSng3SmlIRjBvQ3JhRzRYYjNtS2hYMzBIajlrSkNEQ1ZYNHA1YzNXZ0FmNnU0WldRYUxMNG1FcS1ub1hQeVBvTGVQU0FNQXZXdy03WEZVMEQ2R1piM3V1MEFzLXRHRDkwb082SkplckhoZFBCY2xvX3JPVnduU1Z1WFdEc3ZkRTUxTHR6b2thRUg4ZTZlbF9GXzQ?oc=5"
   }
  ]
 }
