@@ -641,11 +641,19 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     lastRoute = route;
   }
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  window.addEventListener('hashchange', render);
+  /* The page waits for the data rather than racing it: a slow connection keeps the loading line, a failed read is tried
+     once more, and only a second failure shows the not-loaded notice. A read that stalls past 45 s still gets the page,
+     and it re-renders if the data lands later. */
+  let ready = false;
+  const show = () => { ready = true; fillColophon(); render(); };
+  window.addEventListener('hashchange', () => { if (ready) render(); });
   (async () => {
-    try { await Promise.race([load(), new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), 6000))]); }
-    catch (e) { console.warn('data load failed', e); }
-    fillColophon();
-    render();
+    const slow = setTimeout(() => { const p = app.querySelector('.loading'); if (p) p.textContent = 'Reading the ledger · slow connection, still loading'; }, 6000);
+    const stalled = setTimeout(show, 45000);
+    for (let tries = 0; tries < 2; tries++) {
+      try { await load(); break; } catch (e) { console.warn('data load failed', e); }
+    }
+    clearTimeout(slow); clearTimeout(stalled);
+    show();
   })();
 })();
