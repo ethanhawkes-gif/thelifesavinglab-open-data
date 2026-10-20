@@ -10,6 +10,7 @@ const register = await readFile('site/src/register.js', 'utf8');
 const bundles = await readFile('src/lib/bundles.js', 'utf8');
 const mini = await readFile('src/lib/minischema.js', 'utf8');
 const extra = await readFile('site/src/extra.js', 'utf8');
+const index = await readFile('site/src/index.html', 'utf8');
 
 const literal = (name) => { const m = pii.match(new RegExp(`\\['${name}', (/.*?/[a-z]*)\\],`)); assert.ok(m, `pattern ${name} not found in pii.js`); return m[1]; };
 
@@ -49,4 +50,5 @@ test('the since-open counter moves before the first whole expected death', () =>
   assert.equal(estimateRange(60, lowRate, highRate, true), '0.49–0.80');
   assert.equal(estimateRange(120, lowRate, highRate, true), '0.9–1.6');
   assert.equal(estimateRange(3600, lowRate, highRate, false), '29–48');
+  assert.match(index, /data-live="since" data-live-precision="coarse"/);
 });

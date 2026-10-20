@@ -44,7 +44,10 @@
       const midnight = new Date(now); midnight.setHours(0, 0, 0, 0);
       const jan1 = new Date(now.getFullYear(), 0, 1);
       const vals = { since: range(since, true), today: range((now - midnight) / 1000), year: range((now - jan1) / 1000) };
-      document.querySelectorAll('[data-live]').forEach((el) => { const v = vals[el.dataset.live]; if (v != null && el.textContent !== v) el.textContent = v; });
+      document.querySelectorAll('[data-live]').forEach((el) => {
+        const v = el.dataset.live === 'since' && el.dataset.livePrecision === 'coarse' ? range(since) : vals[el.dataset.live];
+        if (v != null && el.textContent !== v) el.textContent = v;
+      });
     };
     tick(); timer = setInterval(tick, 1000);
   }

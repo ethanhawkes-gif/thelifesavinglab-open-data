@@ -273,6 +273,7 @@ details.row>summary::-webkit-details-marker{display:none}
 .counter-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:14px 24px}
 .counter-cell{display:flex;flex-direction:column;gap:2px;min-width:0}
 .counter-n{font-family:var(--serif);font-size:clamp(30px,3.4vw,42px);line-height:1.05;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+@media (max-width:560px){.counter-row{grid-template-columns:1fr}}
 .pill-wis{background:#F1DFA8;color:#4A3408;text-transform:none;letter-spacing:.02em;font-size:12px;white-space:normal}
 .dark .pill-wis{background:#3A3115;color:var(--brass-2)}
 .agenda-list{display:flex;flex-direction:column}
