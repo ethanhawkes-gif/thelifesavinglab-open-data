@@ -178,7 +178,7 @@ table.data td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-ali
 table.data tbody tr:not(.detail):hover td{background:rgba(19,34,42,.035)}
 table.data tr.detail td{background:var(--card);padding:16px 14px 20px}
 .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;min-width:0;max-width:100%;position:relative}
-#ledger-table{min-width:0;max-width:100%}
+#ledger-table{width:100%;min-width:0;max-width:100%;overflow:hidden}
 .tbar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:end}
 .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px;align-items:start}
 .form-grid>.stack-sm,.form-grid>.row,.form-grid>.field:has(textarea),.form-grid>.field.wide,.form-grid>p{grid-column:1/-1}
