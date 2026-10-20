@@ -25,7 +25,7 @@
     return `
 <div class="counter ${dark ? 'counter--dark' : ''}" role="group" aria-label="Estimated drowning deaths while you read, from the yearly range">
   <div class="counter-row">
-    <div class="counter-cell"><span class="mono muted">SINCE YOU OPENED THIS PAGE</span><span class="counter-n" data-live="since">—</span><span class="small muted">expected deaths · range</span></div>
+    <div class="counter-cell"><span class="mono muted">SINCE YOU OPENED THIS PAGE</span><span class="counter-n" data-live="since">—</span><span class="small muted">estimated range</span></div>
     <div class="counter-cell"><span class="mono muted">SO FAR TODAY</span><span class="counter-n" data-live="today">—</span><span class="small muted">in your time zone</span></div>
     <div class="counter-cell"><span class="mono muted">SO FAR THIS YEAR</span><span class="counter-n" data-live="year">—</span><span class="small muted">since 1 January</span></div>
   </div>
