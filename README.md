@@ -93,4 +93,4 @@ proposed unless marked otherwise.
 
 ## Licenses
 
-Code: MIT (`LICENSE`). Data: CC0 1.0 (`DATA_LICENSE.md`). Sources keep their own terms; we store citations, not their text.
+Code: MIT (`LICENSE`). Data: `seeds/`, `src/data/`, `dist/` and the watch files under CC0 1.0; `estimates/`, `tasks/`, `receipts/` and the briefs under CC BY 4.0 (`DATA_LICENSE.md` has the split). Sources keep their own terms; we store citations, not their text.

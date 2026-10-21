@@ -19,6 +19,17 @@ test('every ledger row has an id, a grade, a source and a do-not-add rule; ids a
   }
 });
 
+test('no ledger field carries an unfilled template placeholder, and a url is https or empty (a lab judgment)', () => {
+  const placeholder = /\{[A-Z][A-Z_]*\}/;
+  for (const r of ledger.rows) {
+    for (const [k, v] of Object.entries(r)) assert.doesNotMatch(String(v ?? ''), placeholder, `${r.id}.${k}`);
+    assert.ok(r.url === '' || r.url.startsWith('https://'), `${r.id}: url must be https or empty`);
+  }
+  // edge: the pattern catches the case that reached the published ledger, and not ordinary braces in prose
+  assert.match('{SRC}', placeholder);
+  assert.doesNotMatch('a set {a, b} of rows', placeholder);
+});
+
 test('the toll layers cite rows that exist and are not retired, and the range is floor < ceiling', () => {
   assert.ok(toll.floor > 0 && toll.floor < toll.ceiling);
   const layers = [...(toll.layers || []), { id: 'nonfatal', ...toll.nonfatal }];
