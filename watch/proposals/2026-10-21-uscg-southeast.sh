@@ -24,47 +24,52 @@ R="node scripts/watch-review.mjs"
 # transferred; search suspended Thu 1 Oct after 78 hours over 2,000 sq nm. CHECK: one outcome per row, so 'fatal' with
 # the missing count in the note.
 # https://content.govdelivery.com/accounts/USDHSCG/bulletins/42cf0da  ·  https://www.news.uscg.mil/Press-Releases/Article/4613083/
-$R row 4567dbfd743f844d --water sea-coast --activity migrant-crossing --outcome fatal --date 2026-09-27 \
-  --place "off Mona Island, Puerto Rico" --vessel "makeshift vessel" --persons "about 60 (survivors' estimate)" --pfd no \
-  --who "Coast Guard Sector San Juan, a merchant vessel, Puerto Rico Police, CBP" --confidence high \
-  --note "3 recovered deceased, 49 survivors, about 8 unaccounted for by the survivors' estimate; violence aboard preceded the capsize; search suspended after 78 h"
+# APPLIED 21 Oct 2026 (row-written; do not run again): checked against 42cf0da/4613083 and the suspension release 42d8bf6/4617075; run as proposed.
+# $R row 4567dbfd743f844d --water sea-coast --activity migrant-crossing --outcome fatal --date 2026-09-27 \
+#   --place "off Mona Island, Puerto Rico" --vessel "makeshift vessel" --persons "about 60 (survivors' estimate)" --pfd no \
+#   --who "Coast Guard Sector San Juan, a merchant vessel, Puerto Rico Police, CBP" --confidence high \
+#   --note "3 recovered deceased, 49 survivors, about 8 unaccounted for by the survivors' estimate; violence aboard preceded the capsize; search suspended after 78 h"
 $R match 1c9be63906b1b92c --with 4567dbfd743f844d   # 42d8bf6: the suspension release for the same event
 
 # Condado Beach, San Juan, PR: a man (20s) went missing Wed 18 Mar at night while trying to rescue one of two people in
 # distress; body recovered Fri 20 Mar about 1.5 nm offshore. High rip-current risk on the north coast that week.
 # This is the tree's rescuer-drowning branch.
 # https://content.govdelivery.com/accounts/USDHSCG/bulletins/40f0a2d  ·  .../bulletins/40f4a04
-$R row f39fe9fe64c2a0db --water sea-coast --activity bystander-rescue --outcome fatal --date 2026-03-18 \
-  --place "Condado Beach, San Juan, Puerto Rico" --persons 3 --age 15-29 \
-  --who "Coast Guard Sector San Juan, San Juan Maritime Police" --confidence high \
-  --note "the person who died was a bystander attempting a rescue; rip currents; recovered 1.5 nm offshore on day 3"
+# APPLIED 21 Oct 2026 (row-written; do not run again): checked against 40f0a2d/4438081 and 40f4a04/4440069; run as proposed.
+# $R row f39fe9fe64c2a0db --water sea-coast --activity bystander-rescue --outcome fatal --date 2026-03-18 \
+#   --place "Condado Beach, San Juan, Puerto Rico" --persons 3 --age 15-29 \
+#   --who "Coast Guard Sector San Juan, San Juan Maritime Police" --confidence high \
+#   --note "the person who died was a bystander attempting a rescue; rip currents; recovered 1.5 nm offshore on day 3"
 $R match 2b74d2856bddff8e --with f39fe9fe64c2a0db   # 40f4a04: recovery release
 
 # Biscayne Bay, Miami: a person (20s) last seen aboard a vessel transiting the bay, reported Fri 12 Jun; a person in the
 # water was found south of Brickell Key on Sun 14 Jun and later identified. CHECK: the release offers condolences and
 # says 'recovered' but does not print 'deceased'; 'fatal' is inferred, so confidence medium.
 # https://content.govdelivery.com/accounts/USDHSCG/bulletins/41c62be  ·  https://www.news.uscg.mil/Press-Releases/Article/4517509/
-$R row 184833bcf3cb6af9 --water harbor-river --activity overboard --outcome fatal --date 2026-06-12 \
-  --place "Biscayne Bay, Miami, Florida" --persons 1 --age 15-29 \
-  --who "Coast Guard Sector Miami, Miami-Dade Sheriff's Office, Good Samaritans" --confidence medium \
-  --note "last seen aboard a vessel; found in the water two days later; outcome inferred from the release's wording"
+# APPLIED 21 Oct 2026 (row-written; do not run again): checked against 41c62be/4517509; run with --vessel "cabin cruiser, 39 ft" added (the release gives it).
+# $R row 184833bcf3cb6af9 --water harbor-river --activity overboard --outcome fatal --date 2026-06-12 \
+#   --place "Biscayne Bay, Miami, Florida" --vessel "cabin cruiser, 39 ft" --persons 1 --age 15-29 \
+#   --who "Coast Guard Sector Miami, Miami-Dade Sheriff's Office, Good Samaritans" --confidence medium \
+#   --note "last seen aboard a vessel; found in the water two days later; outcome inferred from the release's wording"
 $R match 0f473dd2818b4b89 --with 184833bcf3cb6af9   # 41c6111: earlier version of the same release
 
 # Jupiter, FL: paddleboarder (40s) last seen Mon 14 Sep about 4 miles east of Jupiter Beach; search suspended
 # Sat 19 Sep after about 28,490 sq miles.
 # https://content.govdelivery.com/accounts/USDHSCG/bulletins/42ad935  ·  https://www.news.uscg.mil/Press-Releases/Article/4606717/
-$R row fd31f016b7e7836c --water sea-coast --activity paddleboarding --outcome missing --date 2026-09-14 \
-  --place "off Jupiter Beach, Florida" --persons 1 --age 45-59 \
-  --who "Coast Guard Sector Miami, air stations Miami and Clearwater, local law enforcement" --confidence high \
-  --note "search suspended after about 28,490 square miles"
+# APPLIED 21 Oct 2026 (row-written; do not run again): checked against 4601546 (initial) and 42ad935/4606717; run as proposed.
+# $R row fd31f016b7e7836c --water sea-coast --activity paddleboarding --outcome missing --date 2026-09-14 \
+#   --place "off Jupiter Beach, Florida" --persons 1 --age 45-59 \
+#   --who "Coast Guard Sector Miami, air stations Miami and Clearwater, local law enforcement" --confidence high \
+#   --note "search suspended after about 28,490 square miles"
 $R match 9fc5bec024566098 --with fd31f016b7e7836c   # 42b9c90: suspension release
 
 # Ponce, PR: fisherman (60s) left the local boat ramp Sat 18 Jul about 6 p.m., not back by Sunday morning; search
 # suspended Wed 22 Jul.
 # https://content.govdelivery.com/accounts/USDHSCG/bulletins/421cc0a  ·  https://www.news.uscg.mil/Press-Releases/Article/4553539/
-$R row e61479c21e9ac498 --water sea-coast --activity fishing --outcome missing --date 2026-07-18 \
-  --place "off Ponce, Puerto Rico" --persons 1 --age 60+ \
-  --who "Coast Guard Sector San Juan and partners" --confidence high --note "overdue small-boat fisherman; search suspended after 4 days"
+# APPLIED 21 Oct 2026 (row-written; do not run again): checked against 421cc0a/4553539; run with --vessel "recreational vessel, 19 ft" added (boat name left out).
+# $R row e61479c21e9ac498 --water sea-coast --activity fishing --outcome missing --date 2026-07-18 \
+#   --place "off Ponce, Puerto Rico" --vessel "recreational vessel, 19 ft" --persons 1 --age 60+ \
+#   --who "Coast Guard Sector San Juan and partners" --confidence high --note "overdue small-boat fisherman; search suspended after 4 days"
 
 # --- Rescued -----------------------------------------------------------------------------------------------------
 

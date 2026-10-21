@@ -2,9 +2,9 @@
  "schema": "lifesavinglab.watch.queue.v1",
  "generated": "2026-10-21T13:57:15.694Z",
  "counts": {
-  "reported": 554,
+  "reported": 549,
   "read": 0,
-  "row-written": 0,
+  "row-written": 5,
   "matched": 27,
   "published": 0,
   "dismissed": 0,
@@ -5558,12 +5558,13 @@
    "kind": "rescue",
    "published": "2026-09-28T21:45:07.000Z",
    "first_seen": "2026-10-15T12:31:33.143Z",
-   "stage": "reported",
+   "stage": "row-written",
    "title_sha256": "fbc0275f32dc98f6cb1307c5e1bfe2e37762a9cc75a4d169c154f0ba1a32cacf",
    "held": [
     "phone"
    ],
-   "note": null
+   "note": null,
+   "row_id": "w-4567dbfd743f844d"
   },
   {
    "id": "f67c27e02bc5e919",
@@ -6026,12 +6027,13 @@
    "kind": "search-underway",
    "published": "2026-09-15T19:15:07.000Z",
    "first_seen": "2026-10-15T12:31:33.143Z",
-   "stage": "reported",
+   "stage": "row-written",
    "title_sha256": "9f839e86479ad3e3b18ff8df114d6eca23adac35db6089c7a16e2594d3c90371",
    "held": [
     "phone"
    ],
-   "note": null
+   "note": null,
+   "row_id": "w-fd31f016b7e7836c"
   },
   {
    "id": "2f21bd90275b3955",
@@ -6930,12 +6932,13 @@
    "kind": "search-suspended",
    "published": "2026-07-23T16:45:07.000Z",
    "first_seen": "2026-10-15T12:31:33.143Z",
-   "stage": "reported",
+   "stage": "row-written",
    "title_sha256": "3c956562820cb44f9eb16d996dc820f8d551dfef42d4d0db275532f4dbfff396",
    "held": [
     "phone"
    ],
-   "note": null
+   "note": null,
+   "row_id": "w-e61479c21e9ac498"
   },
   {
    "id": "c92fc2f8e0a981f8",
@@ -7696,12 +7699,13 @@
    "kind": "search-suspended",
    "published": "2026-06-17T00:00:19.000Z",
    "first_seen": "2026-10-15T12:31:33.143Z",
-   "stage": "reported",
+   "stage": "row-written",
    "title_sha256": "9ef070b8cec4bf71b92b19b65bd5dc1a84139d1988602e9488221186556a3942",
    "held": [
     "phone"
    ],
-   "note": null
+   "note": null,
+   "row_id": "w-184833bcf3cb6af9"
   },
   {
    "id": "0f473dd2818b4b89",
@@ -7888,12 +7892,13 @@
    "kind": "search-underway",
    "published": "2026-03-19T13:45:09.000Z",
    "first_seen": "2026-10-15T12:31:33.143Z",
-   "stage": "reported",
+   "stage": "row-written",
    "title_sha256": "f8d034363d0e5aedd202f160a6817ac8799904932c2382aa599df3828a149351",
    "held": [
     "phone"
    ],
-   "note": null
+   "note": null,
+   "row_id": "w-f39fe9fe64c2a0db"
   },
   {
    "id": "67983a4720b54932",
