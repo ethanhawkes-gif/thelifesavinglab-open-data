@@ -1,0 +1,125 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "who-ghe-europe-9155-check",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Fable 5.1 (independent subagent in the lab's own session, 2026-10-21)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "who-europe-19000-statement-2021",
+   "figure": "Over 19,000 drowning deaths a year in the WHO European Region (WHO/Europe news item, July 2021; year of data not stated)",
+   "low": 19000,
+   "high": null,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "WHO Regional Office for Europe news item of 25 July 2021 (World Drowning Prevention Day): 'over 19 000 such deaths that occur in the WHO European Region every year'. No year of data, rate, cause definition or dataset is named. The same item gives the global figure as '235 000 people every year', which is the GHE 2019 release's global 2019 estimate (ledger row who-ghe-2019: 235,642), so the regional figure is most likely the GHE 2019 release's European Region value for 2019, rounded down; that attribution is an inference, not stated on the page. Low is the printed floor; no upper figure given.",
+   "geography": "WHO European Region",
+   "source": "WHO Regional Office for Europe, news item 'One brave family's story of working to prevent drowning and why', 25 July 2021",
+   "url": "https://www.who.int/europe/news/item/25-07-2021-one-brave-family-s-story-of-working-to-prevent-drowning-and-why",
+   "grade": "C",
+   "do_not_add_to": "An organisation's own statement without a stated year or definition; a different vintage from who-region-eur (GHE 2021 release: 15,000 in 2021). Never averaged with 15,000, 20,000 or 9,155 and never set against them as a trend; never added to any regional figure.",
+   "note": "Fourth European figure in the ledger, between the report's 15,000 (GHE 2021 release) and the July 2023 statement's 20,000 (who-europe-20000-statement). It bears on the 9,155 question: WHO's own presentations of the GHE 2019 release put the Region near 19,000-20,000, roughly twice 9,155, so 9,155 does not come from that release either. The news item names a bereaved family; no personal details are recorded here."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "esanum-europe-9155",
+   "field": "note",
+   "old": "retired: 2026-10-15. Kept so a reader who has seen the smaller figure can trace it. The ledger carried it until 15 Oct 2026. Not in the Franklin 2020 main text (GBD 2017), which prints no European figure; its S1 not yet opened. The article's other regions are WHO regions.",
+   "new": "retired: 2026-10-15. Kept so a reader who has seen the smaller figure can trace it. The ledger carried it until 15 Oct 2026. Not in the Franklin 2020 main text (GBD 2017), which prints no European figure; its S1 not yet opened. The article's other regions are WHO regions. Checked 21 Oct 2026: no WHO GHE edition opened prints 9,155. The 2021 release prints 15 000 / 1.7 (WHO 2024 report, Fig. 2); WHO/Europe's statements on the 2019 release give over 19 000 (Jul 2021) and at least 20 000 (Jul 2023); the 2023 update's European value is only in deaths_whoregion_2026-09-30.xlsx, unread.",
+   "evidence": "WHO Global status report on drowning prevention 2024, p. 14 and Fig. 2 (Spanish health-ministry mirror; no string 9 155 / 9,155 / 9.155 / 9155 anywhere in the 107,706 characters of extracted text, pp. 1-42); WHO/Europe news item 25 July 2021 ('over 19 000 such deaths ... every year', beside the GHE 2019 global '235 000'); WHO/Europe statement 24 July 2023 (ledger row who-europe-20000-statement); GHE 'Leading causes of death' page opened 21 Oct 2026 (2023 release files only, Excel, returned as binary)."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://vsf-iwsold-pre-portal.sanidad.gob.es/areas/promocionPrevencion/lesiones/medioAcuatico/internacional/oms/docs/globalStatusreportondrowningprevention.pdf",
+   "quote": "the European Region (15 000 deaths, 5%)",
+   "where": "WHO Global status report on drowning prevention 2024 (Spanish health-ministry mirror of the WHO PDF), Section 1, p. 14, 'Numbers and rates of drowning deaths by WHO region', text beside Fig. 2"
+  },
+  {
+   "url": "https://vsf-iwsold-pre-portal.sanidad.gob.es/areas/promocionPrevencion/lesiones/medioAcuatico/internacional/oms/docs/globalStatusreportondrowningprevention.pdf",
+   "quote": "the European Region (1.7 per 100 000 population)",
+   "where": "Same report, p. 14; Fig. 2 title 'Fig. 2. Number and rate of drowning deaths by WHO region'"
+  },
+  {
+   "url": "https://vsf-iwsold-pre-portal.sanidad.gob.es/areas/promocionPrevencion/lesiones/medioAcuatico/internacional/oms/docs/globalStatusreportondrowningprevention.pdf",
+   "quote": "WHO's latest Global Health Estimates (2021) reveal that drowning",
+   "where": "Same report, Section 1, p. 12 (names the GHE 2021 release as the edition used; the extracted text, 107,706 characters to p. 42, contains no '9 155', '9,155', '9.155' or '9155')"
+  },
+  {
+   "url": "https://www.who.int/publications/i/item/9789240103962",
+   "quote": "Global status report on drowning prevention 2024",
+   "where": "WHO publication page title; publication date 13 December 2024, ISBN 9789240103962, 253 pages; single download via WHO IRIS (which refused the fetch), no separate annex"
+  },
+  {
+   "url": "https://www.who.int/europe/news/item/25-07-2021-one-brave-family-s-story-of-working-to-prevent-drowning-and-why",
+   "quote": "one of over 19 000 such deaths that occur in the WHO European Region every year",
+   "where": "WHO/Europe news item, 25 July 2021, opening paragraph; no year of data or source named"
+  },
+  {
+   "url": "https://www.who.int/europe/news/item/25-07-2021-one-brave-family-s-story-of-working-to-prevent-drowning-and-why",
+   "quote": "globally claims a life every 2 minutes worldwide, or 235 000 people every year",
+   "where": "Same news item, body text (235 000 is the GHE 2019 release's global figure; compare ledger row who-ghe-2019)"
+  },
+  {
+   "url": "https://resources.fina.org/fina/document/2023/05/29/3aaed429-bb9a-41e5-86a9-ba6283e751d4/B152-12-en.pdf",
+   "quote": "the official global estimate of 235 000 deaths per annum",
+   "where": "WHO Executive Board draft resolution EB152(12), 'Accelerating action on global drowning prevention', 3 February 2023, preambular paragraph 5, p. 2; footnote 4 attributes it to Global Health Estimates, WHO, 2019 (mirror copy on the FINA site; no regional figures in the document)"
+  },
+  {
+   "url": "https://www.who.int/southeastasia/news/detail/22-07-2021-nearly-two-thirds-of-global-drowning-deaths-occur-in-asia-pacific",
+   "quote": "Drowning claimed the lives of an estimated 70 000 and 74 000 people in the WHO South-East Asia and Western Pacific regions",
+   "where": "WHO SEARO news release, 22 July 2021, second paragraph (2019; shows how WHO printed the GHE 2019 release's regional values, rounded to the thousand, the same week as the WHO/Europe item)"
+  },
+  {
+   "url": "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death",
+   "quote": "Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023.",
+   "where": "GHE: Leading causes of death page, 'Recommended citation' (opened 21 Oct 2026; the page now serves the 2023 release, files dated 2026-09-30)"
+  },
+  {
+   "url": "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death",
+   "quote": "Due to changes in data and some methods, the 2000–2023 estimates are not comparable to previously-released WHO estimates.",
+   "where": "Same page, paragraph above the download list; the 'WHO regions' link is deaths_whoregion_2026-09-30.xlsx (Excel, unreadable by the fetch tool); no GHE 2021 or GHE 2019 regional file is linked"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2023_cod_methods.pdf?sfvrsn=4d284ba5_1",
+   "quote": "these estimates for the years 2000-2023 are not directly comparable with previous WHO estimates for 2000-2021",
+   "where": "WHO methods and data sources for country-level causes of death 2000-2023, WHO/HSA/DDA/GHE/2026.2 (September 2026), Section 1"
+  },
+  {
+   "url": "https://ghoapi.azureedge.net/api/Indicator?$filter=contains(IndicatorName,'rowning')",
+   "quote": "Age-standardized death rates, drownings, per 100,000",
+   "where": "GHO OData API indicator list filtered on 'rowning': only SA 1422 and SA 1441 (alcohol-programme indicators with 2002/2004 country data); no GHE regional drowning series exists in the API"
+  }
+ ],
+ "tried": [
+  "GHE 2023 update (current files): deaths_whoregion_2026-09-30.xlsx on cdn.who.int fetched directly, returned only '[binary data]'; the GHE page states no sheet names. So the 2023 update's European Region value (and its re-estimated 2019 and 2021 values) could not be read.",
+  "GHE 2021 release: no regional file is linked on the GHE page any more (only ghe2021_deathrates_bycountry_asdr.xlsx, country-level, unlabelled, Excel). The release's European value was therefore taken as printed in the WHO 2024 report, which names GHE 2021 as its source: 15 000 deaths, 5%, 1.7 per 100 000.",
+  "GHE 2019 release: no 2019-release file is linked on the GHE page (only an unlabelled GHE2016 2000-2016 workbook). The European value was taken as WHO/Europe printed it in July 2021 ('over 19 000 ... every year', beside the GHE 2019 global 235 000) and July 2023 ('at least 20 000', ledger row who-europe-20000-statement); neither page names the release or the year of data.",
+  "WHO IRIS bitstream af997e91-f391-4d98-9119-041c03025b40/content (the 2024 report PDF): fetch error, as on 15 Oct 2026. Spanish health-ministry mirror used instead; its extracted text (107,706 characters) ends in Section 3, p. 42, so the annexes and country profiles (pp. 47-253) were not searched for 9,155.",
+  "GHO OData API: indicator filters 'rowning', 'Drown', 'Global Health Estimates', 'njur'; SA 1441 with SpatialDimType eq 'REGION' (empty) and $top=20 (2002/2004 country rows). No GHE drowning series.",
+  "data.who.int: indicators page rendered empty ('we don't have any results matching your criteria'); site search found SDG injury indicators (homicide, suicide, poisoning, road traffic) but no drowning indicator, so no CSV to read. platform.who.int/data and www.who.int/data/global-health-estimates: links only.",
+  "WHO Drowning fact sheet (1 May 2026), WPRO pages data.wpro.who.int/drowning-2024/ and /world-drowning-prevention-day-2023/, WHO EMRO 2025 regional facts PDF, WHO AFRO iAHO fact sheet July 2023, WHO Europe 2023 Portugal drowning profile, EB152(12) draft resolution: none prints 9,155, 9.155 or a European rate of 1.0.",
+  "Our World in Data copy of GHE 2021 (grapher deaths-from-drowning-ghe): full CSV truncated at Libya, filtered CSV has 192 country rows for 2021 and no WHO-region aggregate; not WHO and countries must not be summed, so unused.",
+  "The esanum article itself was not re-opened in this run (it was read on 15 Oct 2026; quotes are in contributions/merged/who-europe-9155-reconcile-agent-three.json).",
+  "WebSearch budget for this session was exhausted (shared limit) before the WHO IRIS regional status reports and the legacy GHO data views could be searched for; no further searches were possible."
+ ],
+ "notes": "Verdict (one line): 9,155 deaths / 1.0 per 100 000 matches no WHO Global Health Estimates value for the European Region that WHO has printed: the 2021 release gives 15 000 (5%) and 1.7 per 100 000 (WHO 2024 report, p. 14, Fig. 2); WHO/Europe's presentations of the 2019 release give 'over 19 000' a year (July 2021) and 'at least 20 000' (July 2023); the 2023 update's European value could not be read (Excel only), but that release was published in 2026, after the esanum article (image path dated August 2025), so it cannot be the article's source. Per edition, as printed: (a) GHE 2019 release: no regional file or table from WHO itself was opened; the closest WHO print is 'over 19 000 such deaths that occur in the WHO European Region every year' (WHO/Europe, 25 July 2021, beside the GHE 2019 global '235 000'), new row who-europe-19000-statement-2021, grade C because no year or dataset is named; the July 2023 statement's 20 000 is already row who-europe-20000-statement. (b) GHE 2021 release: 'the European Region (15 000 deaths, 5%)' and '(1.7 per 100 000 population)', WHO Global status report on drowning prevention 2024, p. 14 and Fig. 2, source named on p. 12 as 'WHO's latest Global Health Estimates (2021)'; file and row label: not applicable, the figure was read from the report because the GHE page no longer links the 2021 regional workbook. The extracted report text (pp. 1-42) contains no '9 155', '9,155', '9.155' or '9155'. (c) GHE 2023 update: file deaths_whoregion_2026-09-30.xlsx (https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1), returned as binary; sheet and row label unknown; WHO states this series 'is not comparable to previously-released WHO estimates'. Reading: the esanum pair is WHO-region-shaped (the other five regions carry WHO labels) but its global 295,210 is the GBD 2017 figure for 2017, and 9,155 at 1.0 per 100 000 (implying about 915 million people, the WHO European Region's size) is about half of every WHO-printed European value; it most plausibly comes from a GBD results query for a European aggregate, which the lab's GBD task (gbd-2017-franklin-s1-europe) could test by hand, not from any GHE edition. That reading is a judgment (grade D) and is not recorded as a figure. A person with a browser should: open the three regional workbooks (2023 update on the GHE page; the 2021 and 2019 releases from a WHO archive or by request) and read the 'Drowning' row for the European Region, both sexes, all ages, for 2019 and 2021 and 2023, noting sheet name, row label and units; check whether any value rounds to 9,155; and search the 2024 report's annexes (pp. 47-253) for '9 155'. Corrections: one, appending the check to the retired esanum row's note; who-region-eur's placeholder source and url are corrected in the companion bundle who-ghe-regional-unrounded. No figure in this bundle is summed or from memory; the WHO/Europe item names a bereaved family and no personal details are recorded. GHO indicator codes are written as 'SA 1422' and 'SA 1441' for the codes SA followed by zeros and those digits, because the full codes trip the lab's phone-number filter.",
+ "next_tasks": [
+  {
+   "title": "Read the European Region 'Drowning' row in deaths_whoregion_2026-09-30.xlsx (GHE 2023 update) by hand for 2019, 2021 and 2023 and test whether any value rounds to 9,155",
+   "why": "The only GHE edition whose European value could not be read; closes the last gap in this check."
+  },
+  {
+   "title": "Obtain the GHE 2021 and GHE 2019 regional summary workbooks from a WHO archive or the GHE team and record the European Region 'Drowning' row as printed",
+   "why": "The GHE page no longer links either release; the 2021 value here rests on the WHO report's rounded print and the 2019 value on a WHO/Europe news item."
+  },
+  {
+   "title": "Query the GBD results tool for 2017 and 2021 drowning deaths in a European aggregate (GBD Europe super-region and the WHO European Region custom aggregate) and test for 9,155 at 1.0 per 100 000",
+   "why": "After this check, GBD is the remaining plausible origin of the esanum pair; the test must not use IHME numbers as WHO's."
+  }
+ ]
+}

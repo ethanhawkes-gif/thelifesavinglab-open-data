@@ -1,0 +1,360 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "setting-split-new-zealand-pdf",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Fable 5.1, lab session with the desktop app's browser, 2026-10-21"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "new-zealand-location-coast-2025",
+   "figure": "29 coastal deaths, three fewer than the 10-year average (32), two more than 2024 (27)",
+   "low": 29,
+   "high": 29,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Drowning deaths in the environment the report labels \"Coast\" (glossary, PDF p. 65: locations along the shoreline 0-1 km from shore: calm-water beach, rocky foreshore, surf beach), New Zealand, calendar 2025, preventable drownings, all ages, both sexes (27 male). Read from the chart data behind the web edition ('2025 DR coast environment', series 2015-2025: 39, 30, 28, 27, 32, 30, 32, 40, 35, 27, 29; 10-year average 32) and from the PDF, pp. 35-36.",
+   "geography": "New Zealand",
+   "source": "Water Safety New Zealand, 2025 Drowning Prevention Report (web edition, 'Detailed breakdown', Infogram chart data; data correct as of 19 Feb 2026), and the report PDF (68 pages, dated 17 Mar 2026 in its metadata)",
+   "url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report",
+   "grade": "A",
+   "do_not_add_to": "One setting of one national count (78 in the Feb 2026 printing): never summed to reach the total, which the report prints itself. Preventable drownings by WSNZ case-finding, not an ICD count: never added to WHO or IHME figures, never combined with the Australian, UK, US or Canadian setting rows, whose categories differ. Contains the 27 men of new-zealand-location-coast-men-2025: never added to that row.",
+   "note": "The all-sex count the earlier agent could not read. PDF p. 35: swimming (33%) then fishing from land were the highest-risk coastal activities. Read by the lab session with a browser, 21 Oct 2026."
+  },
+  {
+   "id": "new-zealand-preventable-drowning-definition-2025",
+   "figure": "\"Each preventable drowning has multiple classifications, categorised under different environments and activities within New Zealand's authoritative drowning record, DrownBase.\"",
+   "low": null,
+   "high": null,
+   "unit": "definition",
+   "year": 2025,
+   "scope": "The closest the 2025 report comes to defining a preventable drowning: a definition by classification, not by cause. The report prints no formal definition of preventable or non-preventable drowning; its glossary (PDF pp. 63-67) defines craft, activities, environments and life stages only. The ledger's existing description (deaths of unknown origin, road or air accidents, homicide and suicide excluded since 2016) comes from earlier reports and the website, not from this PDF.",
+   "geography": "New Zealand",
+   "source": "Water Safety New Zealand, Drowning Prevention Report 2025 (PDF), Executive Summary, p. 6",
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "grade": "A",
+   "do_not_add_to": "A definition, not a count.",
+   "note": "The same page says the report is an annual publication of the previous calendar year's drowning statistics and that numbers may be adjusted as information changes. PDF read by OCR in a browser (the file's text layer is not extractable); the sentence was checked word by word against the page image's OCR."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "new-zealand-location-pools-2025",
+   "field": "figure",
+   "old": "Pools: a 2025 count exists but was not read (chart and PDF only)",
+   "new": "3 deaths in pools (10-year average 5.6)",
+   "evidence": "Infogram chart '2025 DR pools environments' (id 779a74cd-c903-4136-9620-422a435bf354), row 2025: Fatalities 3, 10 yr average 5.6; PDF p. 41 headline 'Fatalities 2025 3', 'Three fewer than the 10-year average'"
+  },
+  {
+   "row_id": "new-zealand-location-pools-2025",
+   "field": "low",
+   "old": "null",
+   "new": "3",
+   "evidence": "Chart row 2025 = 3; PDF p. 41"
+  },
+  {
+   "row_id": "new-zealand-location-pools-2025",
+   "field": "high",
+   "old": "null",
+   "new": "3",
+   "evidence": "Chart row 2025 = 3; PDF p. 41"
+  },
+  {
+   "row_id": "new-zealand-location-pools-2025",
+   "field": "scope",
+   "old": "Drowning deaths in the environment the report labels \"Pools\", New Zealand, calendar 2025, preventable drownings. The section's text says only that pools environments continue to reflect improvements made around risk to children; the count sits in an embedded chart (Infogram 779a74cd-c903-4136-9620-422a435bf354) and in the PDF, which Dropbox refused to serve to an automated reader.",
+   "new": "Drowning deaths in the environment the report labels \"Pools\" (glossary, PDF p. 66: artificial, enclosed water structures primarily used for recreational swimming: home, hotel or motel, institution, portable, public, school, spa and thermal pools), New Zealand, calendar 2025, preventable drownings. Read from the chart data behind the web edition and from the PDF, p. 41. Chart series 2015-2025: 1, 2, 10, 10, 4, 7, 5, 5, 11, 1, 3.",
+   "evidence": "Infogram chart data (series 2015-2025) and PDF pp. 41 and 66, read in a browser on 21 Oct 2026"
+  },
+  {
+   "row_id": "new-zealand-location-pools-2025",
+   "field": "grade",
+   "old": "D",
+   "new": "A",
+   "evidence": "The organisation's own chart data and PDF"
+  },
+  {
+   "row_id": "new-zealand-location-pools-2025",
+   "field": "do_not_add_to",
+   "old": "A placeholder for a setting whose count exists but was not read: nothing to add. Replace with the printed count once the PDF or chart is read (board task setting-split-new-zealand-pdf).",
+   "new": "One setting of one national count (78 in the Feb 2026 printing): never summed to reach the total, which the report prints itself. Preventable drownings by WSNZ case-finding, not an ICD count: never added to WHO or IHME figures, never combined with the Australian, UK, US or Canadian setting rows, whose categories differ.",
+   "evidence": "Replaces the placeholder rule"
+  },
+  {
+   "row_id": "new-zealand-location-pools-2025",
+   "field": "note",
+   "old": "A gap row so the report's own setting list stays complete. Found by an independent agent, 15 Oct 2026.",
+   "new": "One of seven environments the report prints (Coast, Tidal, Rivers, Offshore, Inland still, Pools, Home), each defined in the PDF glossary (pp. 65-66). PDF p. 41: 33% male, 67% female. Read by the lab session with a browser, 21 Oct 2026.",
+   "evidence": "PDF p. 41 and glossary pp. 65-66"
+  },
+  {
+   "row_id": "new-zealand-location-home-2025",
+   "field": "figure",
+   "old": "Home: a 2025 count exists but was not read (chart and PDF only)",
+   "new": "3 deaths at home (10-year average 4.8)",
+   "evidence": "Infogram chart '2025 DR home environments' (id c9d2e98c-a7ba-4c1a-8598-7ff9f016c841), row 2025: Fatalities 3, 10 yr average 4.8; PDF p. 42 headline 'Fatalities 2025 3', 'Two fewer than the 10-year average'"
+  },
+  {
+   "row_id": "new-zealand-location-home-2025",
+   "field": "low",
+   "old": "null",
+   "new": "3",
+   "evidence": "Chart row 2025 = 3; PDF p. 42"
+  },
+  {
+   "row_id": "new-zealand-location-home-2025",
+   "field": "high",
+   "old": "null",
+   "new": "3",
+   "evidence": "Chart row 2025 = 3; PDF p. 42"
+  },
+  {
+   "row_id": "new-zealand-location-home-2025",
+   "field": "scope",
+   "old": "Drowning deaths in the environment the report labels \"Home\", New Zealand, calendar 2025, preventable drownings. The section's text says only that home environments continue to reflect improvements made around risk to children; the count sits in an embedded chart (Infogram c9d2e98c-a7ba-4c1a-8598-7ff9f016c841) and in the PDF, which Dropbox refused to serve to an automated reader.",
+   "new": "Drowning deaths in the environment the report labels \"Home\" (glossary, PDF p. 65: non-pool domestic water environments found within or around homes: bath, other domestic locations such as water tanks, buckets), New Zealand, calendar 2025, preventable drownings. Read from the chart data behind the web edition and from the PDF, p. 42. Chart series 2015-2025: 4, 4, 6, 5, 3, 6, 4, 5, 8, 3, 3.",
+   "evidence": "Infogram chart data and PDF pp. 42 and 65, read in a browser on 21 Oct 2026"
+  },
+  {
+   "row_id": "new-zealand-location-home-2025",
+   "field": "grade",
+   "old": "D",
+   "new": "A",
+   "evidence": "The organisation's own chart data and PDF"
+  },
+  {
+   "row_id": "new-zealand-location-home-2025",
+   "field": "do_not_add_to",
+   "old": "A placeholder for a setting whose count exists but was not read: nothing to add. Replace with the printed count once the PDF or chart is read (board task setting-split-new-zealand-pdf).",
+   "new": "One setting of one national count (78 in the Feb 2026 printing): never summed to reach the total, which the report prints itself. Preventable drownings by WSNZ case-finding, not an ICD count: never added to WHO or IHME figures, never combined with the Australian, UK, US or Canadian setting rows, whose categories differ.",
+   "evidence": "Replaces the placeholder rule"
+  },
+  {
+   "row_id": "new-zealand-location-home-2025",
+   "field": "note",
+   "old": "A gap row so the report's own setting list stays complete. Found by an independent agent, 15 Oct 2026.",
+   "new": "One of seven environments the report prints, each defined in the PDF glossary (pp. 65-66). PDF p. 42: 67% male, 33% female. Read by the lab session with a browser, 21 Oct 2026.",
+   "evidence": "PDF p. 42 and glossary p. 65"
+  },
+  {
+   "row_id": "new-zealand-activity-underwater-2025",
+   "field": "figure",
+   "old": "Underwater: a 2025 count exists but was not read (chart and PDF only)",
+   "new": "6 underwater deaths (10-year average 8.3)",
+   "evidence": "Infogram chart '2025 DR underwater activity' (id 28344e31-c827-4ef4-9da8-6dcebc26d489), row 2025: Fatalities 6, 10 yr average 8.3; PDF p. 31 headline 'Fatalities 2025 6', 'Two fewer than the 10-year average'"
+  },
+  {
+   "row_id": "new-zealand-activity-underwater-2025",
+   "field": "low",
+   "old": "null",
+   "new": "6",
+   "evidence": "Chart row 2025 = 6; PDF p. 31"
+  },
+  {
+   "row_id": "new-zealand-activity-underwater-2025",
+   "field": "high",
+   "old": "null",
+   "new": "6",
+   "evidence": "Chart row 2025 = 6; PDF p. 31"
+  },
+  {
+   "row_id": "new-zealand-activity-underwater-2025",
+   "field": "scope",
+   "old": "Preventable drowning deaths in which the activity recorded was underwater, New Zealand, calendar 2025. The count sits in an embedded chart (Infogram 28344e31-c827-4ef4-9da8-6dcebc26d489) and in the PDF, which Dropbox refuses to serve to an automated reader.",
+   "new": "Preventable drowning deaths in which the activity recorded was underwater (glossary, PDF p. 64: activities occurring under the water: free diving, scuba diving, snorkelling), New Zealand, calendar 2025, all ages and environments. Read from the chart data behind the web edition and from the PDF, p. 31. Chart series 2015-2025: 8, 6, 12, 5, 11, 13, 6, 11, 7, 4, 6.",
+   "evidence": "Infogram chart data and PDF pp. 31 and 64, read in a browser on 21 Oct 2026"
+  },
+  {
+   "row_id": "new-zealand-activity-underwater-2025",
+   "field": "grade",
+   "old": "D",
+   "new": "A",
+   "evidence": "The organisation's own chart data and PDF"
+  },
+  {
+   "row_id": "new-zealand-activity-underwater-2025",
+   "field": "do_not_add_to",
+   "old": "A placeholder for an activity whose count exists but was not read: nothing to add. Replace with the printed count once the PDF or chart is read (board task setting-split-new-zealand-pdf).",
+   "new": "One activity of one national count (78 in the Feb 2026 printing): never summed to reach the total, which the report prints itself. A different partition from the setting rows (new-zealand-location-*): never added to them. Preventable drownings by WSNZ case-finding, not an ICD count: never added to WHO or IHME figures, never combined with other countries' activity rows, whose categories differ.",
+   "evidence": "Replaces the placeholder rule"
+  },
+  {
+   "row_id": "new-zealand-activity-underwater-2025",
+   "field": "note",
+   "old": "A gap row so the report's own activity list stays complete. The section says only that people aged 25 to 54 dominate the ten-year statistics for underwater drownings. Found by an independent agent, 15 Oct 2026.",
+   "new": "One of six activity sections the report prints (Swimming, Craft, Fishing from land, Underwater, Slips and falls, Other recreation). PDF p. 31: 83% male, 17% female. Read by the lab session with a browser, 21 Oct 2026.",
+   "evidence": "PDF p. 31"
+  },
+  {
+   "row_id": "new-zealand-activity-other-recreation-2025",
+   "field": "figure",
+   "old": "Other recreation: a 2025 count exists but was not read (chart and PDF only)",
+   "new": "6 other-recreation deaths (10-year average 5.9)",
+   "evidence": "Infogram chart '2025 DR other activity' (id c9377a52-855b-4e75-a601-65333a6ff447), row 2025: Fatalities 6, 10 yr average 5.9; PDF p. 33 headline 'Fatalities 2025 6', 'Consistent with the 10-year average'"
+  },
+  {
+   "row_id": "new-zealand-activity-other-recreation-2025",
+   "field": "low",
+   "old": "null",
+   "new": "6",
+   "evidence": "Chart row 2025 = 6; PDF p. 33"
+  },
+  {
+   "row_id": "new-zealand-activity-other-recreation-2025",
+   "field": "high",
+   "old": "null",
+   "new": "6",
+   "evidence": "Chart row 2025 = 6; PDF p. 33"
+  },
+  {
+   "row_id": "new-zealand-activity-other-recreation-2025",
+   "field": "scope",
+   "old": "Preventable drowning deaths in which the activity recorded was other recreation, New Zealand, calendar 2025. The count sits in an embedded chart (Infogram c9377a52-855b-4e75-a601-65333a6ff447) and in the PDF, which Dropbox refuses to serve to an automated reader.",
+   "new": "Preventable drowning deaths in which the activity recorded was other recreation (glossary, PDF p. 64: activities undertaken for enjoyment and relaxation: board riding, boogie boarding, diving or jumping, other recreation, rescuing others, river crossing, tubing or canyoning, water skiing), New Zealand, calendar 2025, all ages and environments. Read from the chart data behind the web edition and from the PDF, p. 33. Chart series 2015-2025: 5, 8, 2, 4, 4, 7, 8, 10, 6, 5, 6.",
+   "evidence": "Infogram chart data and PDF pp. 33 and 64, read in a browser on 21 Oct 2026"
+  },
+  {
+   "row_id": "new-zealand-activity-other-recreation-2025",
+   "field": "grade",
+   "old": "D",
+   "new": "A",
+   "evidence": "The organisation's own chart data and PDF"
+  },
+  {
+   "row_id": "new-zealand-activity-other-recreation-2025",
+   "field": "do_not_add_to",
+   "old": "A placeholder for an activity whose count exists but was not read: nothing to add. Replace with the printed count once the PDF or chart is read (board task setting-split-new-zealand-pdf).",
+   "new": "One activity of one national count (78 in the Feb 2026 printing): never summed to reach the total, which the report prints itself. A different partition from the setting rows (new-zealand-location-*): never added to them. Preventable drownings by WSNZ case-finding, not an ICD count: never added to WHO or IHME figures, never combined with other countries' activity rows, whose categories differ.",
+   "evidence": "Replaces the placeholder rule"
+  },
+  {
+   "row_id": "new-zealand-activity-other-recreation-2025",
+   "field": "note",
+   "old": "A gap row so the report's own activity list stays complete. The report defines the category as activities undertaken for enjoyment, for example board riding, jumping, water skiing and river crossing. Found by an independent agent, 15 Oct 2026.",
+   "new": "One of six activity sections the report prints. PDF p. 33: 67% male, 33% female. Read by the lab session with a browser, 21 Oct 2026.",
+   "evidence": "PDF p. 33"
+  },
+  {
+   "row_id": "new-zealand-location-coast-men-2025",
+   "field": "scope",
+   "old": "Male drowning deaths only, in the environment the report labels \"Coast\", New Zealand, calendar 2025, preventable drownings. The all-sex coastal count is printed only in a chart that could not be read; the page says more deaths occur in coastal environments than elsewhere. 27 at 93% implies about 29 in all, an inference, not a printed figure.",
+   "new": "Male drowning deaths only, in the environment the report labels \"Coast\", New Zealand, calendar 2025, preventable drownings. The all-sex coastal count is 29 (row new-zealand-location-coast-2025, read from the chart data and PDF p. 35 on 21 Oct 2026); 27 of the 29 were men.",
+   "evidence": "PDF p. 35: 'There were 29 coastal deaths in 2025' and 'men being 93% (27) of coastal deaths'"
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://e.infogram.com/ef900d57-43ec-48f1-9e5f-ae5ba4eb9a91",
+   "quote": "2025 DR coast environment · Fatalities · 10 yr average · 2025 · 29 · 32",
+   "where": "Infogram chart embedded on the web edition under 'Coast', chart data (window.infographicData), row 2025; chart updated 2026-02-11"
+  },
+  {
+   "url": "https://e.infogram.com/779a74cd-c903-4136-9620-422a435bf354",
+   "quote": "2025 DR pools environments · 2025 · 3 · 5.6",
+   "where": "Infogram chart under 'Pools', data row 2025 (Fatalities, 10 yr average); updated 2026-02-11"
+  },
+  {
+   "url": "https://e.infogram.com/c9d2e98c-a7ba-4c1a-8598-7ff9f016c841",
+   "quote": "2025 DR home environments · 2025 · 3 · 4.8",
+   "where": "Infogram chart under 'Home', data row 2025; updated 2026-02-11"
+  },
+  {
+   "url": "https://e.infogram.com/28344e31-c827-4ef4-9da8-6dcebc26d489",
+   "quote": "2025 DR underwater activity · 2025 · 6 · 8.3",
+   "where": "Infogram chart under 'Underwater', data row 2025; updated 2026-02-13"
+  },
+  {
+   "url": "https://e.infogram.com/c9377a52-855b-4e75-a601-65333a6ff447",
+   "quote": "2025 DR other activity · 2025 · 6 · 5.9",
+   "where": "Infogram chart under 'Other recreation', data row 2025; updated 2026-02-13"
+  },
+  {
+   "url": "https://e.infogram.com/223e2692-0ad6-45b6-a3fd-9a23f4e6b966",
+   "quote": "2025 DR 10 year fatalities · 2025 · 78 · 86",
+   "where": "Infogram chart under 'Total NZ drowning deaths', data row 2025 (Fatalities 78, 10 yr average 86)"
+  },
+  {
+   "url": "https://www.watersafetynz.org/drowning-insights/latest-drowning-report",
+   "quote": "Data correct as of 19 Feb 2026",
+   "where": "Web edition, 'Detailed breakdown' heading; the charts' infogram ids are in the page's iframes"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "There were 29 coastal deaths in 2025, three fewer than the 10-year average but two more than 2024.",
+   "where": "PDF p. 35 (Environments, Coastal), OCR of the page image"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Each preventable drowning has multiple classifications, categorised under different environments and activities within New Zealand's authoritative drowning record, DrownBase.",
+   "where": "PDF p. 6, Executive Summary, Key Insights"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Fatalities 2025 3 · Three fewer than the 10-year average",
+   "where": "PDF p. 41 (Environments, Pools), headline figure and caption, OCR"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Fatalities 2025 3 · Two fewer than the 10-year average",
+   "where": "PDF p. 42 (Environments, Home), headline figure and caption, OCR"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Fatalities 2025 6 · Two fewer than the 10-year average",
+   "where": "PDF p. 31 (Activities, Underwater), headline figure and caption, OCR"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Fatalities 2025 6 · Consistent with the 10-year average",
+   "where": "PDF p. 33 (Activities, Other Recreation), headline figure and caption, OCR"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Inland still (see glossary on page 65) saw a dramatic increase in fatalities on 2024, with deaths climbing from three to nine",
+   "where": "PDF p. 35 (Environments, Inland)"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Artificial, enclosed water structures primarily used for recreational swimming.",
+   "where": "PDF p. 66, glossary, Pools heading"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Non-pool domestic water environments found within or around homes.",
+   "where": "PDF p. 65, glossary, Home heading"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Environments include locations along the shoreline, characterised by varying water conditions such as waves, tides, and currents 0-1km from shore",
+   "where": "PDF p. 65, glossary, Coast heading"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Activities occurring under the water.",
+   "where": "PDF p. 64, glossary, Underwater heading"
+  },
+  {
+   "url": "https://www.dropbox.com/scl/fi/691v4r0jb5xxj0uv0pruy/Drowning-Prevention-Report-2025_002.pdf?rlkey=p6o0lj1gr38tsryjnyobaqqvb&st=tj0pj573&dl=0",
+   "quote": "Other Recreation Activities undertaken for enjoyment and relaxation.",
+   "where": "PDF p. 64, glossary"
+  }
+ ],
+ "tried": [
+  "The Dropbox PDF link on the report page refuses the fetch tool (robots), so it was opened in the desktop app's browser with raw=1 (served inline from dl.dropboxusercontent.com), fetched in-page and parsed with pdf.js: 68 pages, created 17 Mar 2026 in Adobe InDesign. Its text layer does not extract (subset fonts without usable Unicode maps), so every page was rendered to a canvas and read with Tesseract OCR in the browser; nothing was saved to disk.",
+  "OCR reads body text well but misreads some large infographic numerals (the Coast page's headline came back as '2 0'); the counts were therefore taken from the Infogram chart data behind the web edition (window.infographicData of each embed, which holds the 2015-2025 series and the 10-year average) and checked against the PDF's headline figures and captions, which agree on every page used.",
+  "The report prints no formal definition of a preventable drowning: searched all 68 OCR pages for 'preventable' (pp. 4 and 6 only) and 'non-preventable', 'DrownBase' and 'glossary'; the glossary (pp. 63-67) defines categories, not inclusion."
+ ],
+ "notes": "The four placeholder rows can now carry printed counts: Pools 3 (p. 41), Home 3 (p. 42), Underwater 6 (p. 31), Other recreation 6 (p. 33); the all-sex Coast count is 29 (p. 35 text; chart), of which 27 were men, so the ledger's inference of 'about 29' is confirmed by the source. A reviewer may note, without the lab summing anything, that the seven environment values the report prints (29, 14, 17, 3, 9, 3, 3) and the six activity values (15, 17, 10, 6, 24, 6) are each consistent with the total of 78 the report prints. The chart data also gives the 2015-2025 series and the 10-year averages for every environment and activity (recorded in the corrections' scope fields), which the web edition shows only as graphics. The 'definition of preventable drowning' the task asked for does not exist in the PDF as a definition; the closest sentence is on p. 6 and is recorded as a definition row. Page numbers are the report's printed numbers, which equal the PDF page index. PDF text was obtained by OCR of rendered pages, so quotes from it were checked against the page image text; the chart figures come from the publisher's own data arrays, not OCR.",
+ "next_tasks": [
+  {
+   "title": "Record the 2015-2024 environment and activity series from the same chart data as a time-series block",
+   "why": "Eleven years per category are in the publisher's own chart arrays, already read; the ledger holds only 2025"
+  },
+  {
+   "title": "Ask Water Safety New Zealand, or read its DrownBase page, for the written rule separating preventable from non-preventable drownings",
+   "why": "The 2025 report defines categories but not inclusion; the ledger's description rests on earlier reports"
+  }
+ ]
+}

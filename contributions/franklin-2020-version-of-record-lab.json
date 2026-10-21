@@ -1,0 +1,58 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "franklin-2020-version-of-record",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Fable 5.1, lab session with the desktop app's browser, 2026-10-21"
+ },
+ "status": "done",
+ "rows": [],
+ "corrections": [
+  {
+   "row_id": "gbd-2017-franklin-rate",
+   "field": "note",
+   "old": "Companion to gbd-2017-franklin. Found by an independent agent, 15 Oct 2026, in the Brunel repository copy of the full text and on IHME's library page; a second agent checked the interval the same day: Abstract and Results print 3.8 to 4.1, the Discussion prints 3.6–4.1 once.",
+   "new": "Companion to gbd-2017-franklin. Found by an independent agent, 15 Oct 2026, in the Brunel repository copy of the full text and on IHME's library page; a second agent checked the interval the same day: Abstract and Results print 3.8 to 4.1, the Discussion prints 3.6–4.1 once. Version of record checked 21 Oct 2026 (BMJ's typeset PDF at PMC, pp. i84, i85, i86): same two intervals in the same three places; supplementary table S1 prints 4.0 (3.8 to 4.1); the only erratum (Inj Prev 2020;26(Suppl 1):i166) corrects authorship and affiliations, not figures.",
+   "evidence": "PMC typeset PDF pp. i84-i86; supplement supp003.pdf p. 1 Global row; correction notice PMC7571343 (doi 10.1136/injuryprev-2019-043484corr1)"
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571364/pdf/injuryprev-2019-043484.pdf",
+   "quote": "from 9.3 (8.5 to 10.0) in 1990 to 4.0 (3.8 to 4.1) per 100 000 per annum in 2017",
+   "where": "Typeset article, Abstract (Results paragraph), journal p. i84; running header \"Franklin RC, et al. Inj Prev 2020;26:i83–i95. doi:10.1136/injuryprev-2019-043484\""
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571364/pdf/injuryprev-2019-043484.pdf",
+   "quote": "to a rate of 4.0 (UI: 3.8 to 4.1) per 100 000 in 2017 (online supplementary table S1)",
+   "where": "Typeset article, Results, first paragraph, journal p. i85"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571364/pdf/injuryprev-2019-043484.pdf",
+   "quote": "All four countries in 2017 had rates higher than the global average of 4.0 (3.6–4.1)",
+   "where": "Typeset article, Discussion, journal p. i86"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571364/",
+   "quote": "This article has been corrected. See Inj Prev. 2020 Sep 28;26(Suppl 1):i166.",
+   "where": "PMC article page, notice under the author list"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571343/",
+   "quote": "This article was previously published with errors in authorship and affiliations. Please note the below updates",
+   "where": "Correction, Inj Prev 2020;26(Suppl 1):i166, doi 10.1136/injuryprev-2019-043484corr1, first paragraph"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "quote": "Global 531 956 (484 107 to 572 854) 295 210 (284 493 to 306 187)",
+   "where": "Online supplementary table S1 (file supp003.pdf), p. 1, Global row; its rate columns read 9.3 (8.5 to 10.0) and 4.0 (3.8 to 4.1)"
+  }
+ ],
+ "tried": [
+  "https://doi.org/10.1136/injuryprev-2019-043484 resolves to injuryprevention.bmj.com/content/26/Suppl_2/i83; in the desktop app's browser that page stayed on the publisher's bot check (\"Performing security verification\") for over a minute and never rendered, so the BMJ-hosted page itself was not read. The typeset PDF read here is BMJ's own deposit at PubMed Central (running header carries the journal citation and DOI), which for this open-access article is the published version.",
+  "https://vizhub.healthdata.org/gbd-results/ was not opened: the question was settled from the published article and its supplement, and the GBD results tool is interactive."
+ ],
+ "notes": "The version of record prints the same two intervals as the repository copy, in the same three places: Abstract (p. i84) \"4.0 (3.8 to 4.1)\"; Results (p. i85) \"4.0 (UI: 3.8 to 4.1)\"; Discussion (p. i86) \"4.0 (3.6–4.1)\". Supplementary table S1 (the table the Results cite) prints 4.0 (3.8 to 4.1) for the global age-standardised rate in 2017, so 3.8–4.1 is the interval carried by the data table and 3.6–4.1 appears only once, in the Discussion. An erratum exists: Inj Prev 2020;26(Suppl 1):i166 (28 Sep 2020, doi 10.1136/injuryprev-2019-043484corr1), but it corrects authorship and affiliations only and says nothing about any figure, so neither interval has been formally corrected. No change to row gbd-2017-franklin-rate is proposed: it already cites 3.8–4.1 and explains the discrepancy. The reviewer may wish to add to its note that the version of record and its erratum were checked on 21 Oct 2026 and that S1 prints 3.8 to 4.1. Page numbers are the journal's (i84–i86), read from the running header of each PDF page; PMC's citation line prints \"Suppl 1\" while the BMJ URL path says \"Suppl_2\".",
+ "next_tasks": []
+}
