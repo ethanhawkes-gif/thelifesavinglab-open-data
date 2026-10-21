@@ -1,0 +1,390 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "setting-split-ireland",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "ireland-total-2018-22",
+   "figure": "578 drowning incidents from 2018 to 2022 (351 accidental, 207 suicide, 20 unclassified)",
+   "low": 578,
+   "high": 578,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland (Republic), five years pooled 2018-2022, final CSO cause-of-death data (Tables VSA35 and VSA29, extracted 01/05/2025) as compiled by WSI. All intents: the 578 comprise 351 accidental, 207 deaths by suicide and 20 unclassified. Water transport is inside the count (Boating is an action category with 7 drownings). Year is the end of the period.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "A pooled five-year figure, all intents, from one national count: never added to WHO or IHME figures, never added to the 2019-2023 rows from WSI's statistics page (different period and accidental-only base), never combined with australia-location-2024-25, uk-waid-2024, canada-location-* or new-zealand-location-* rows (different taxonomies, periods and intent rules). This is the total the setting rows are shares of; the report's own made (141) and natural (439) groups sum to 580, not 578, so the setting rows cannot be reconciled to it.",
+   "note": "p.15 (\"There was a total of 578 drowning incidents from 2018 to 2022\"); classification shares 60.7% / 35.8% / 3.5% on p.15; p.4 compares with 662 for 2013-2017. Yearly totals on WSI's statistics page: 2018 145, 2019 125, 2020 106, 2021 102, 2022 100."
+  },
+  {
+   "id": "ireland-location-made-2018-22",
+   "figure": "141 (24.2%) in Made Bodies of Water",
+   "low": 141,
+   "high": 141,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland (Republic), five years pooled 2018-2022, final CSO cause-of-death data (Tables VSA35 and VSA29, extracted 01/05/2025) as compiled by WSI. All intents: the 578 comprise 351 accidental, 207 deaths by suicide and 20 unclassified. Water transport is inside the count (Boating is an action category with 7 drownings). Year is the end of the period. Setting group the report labels \"Made Bodies of Water\": dock areas/piers, pools, quarries, drains, slurry pits, tanks/wells, bath tubs, and canals.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "A pooled five-year figure, all intents, from one national count: never added to WHO or IHME figures, never added to the 2019-2023 rows from WSI's statistics page (different period and accidental-only base), never combined with australia-location-2024-25, uk-waid-2024, canada-location-* or new-zealand-location-* rows (different taxonomies, periods and intent rules). Not to be added to ireland-location-natural-2018-22 to rebuild the total: 141 + 439 = 580, which the report does not reconcile with 578.",
+   "note": "p.32, \"In Focus: Bodies of Water\". Of the 141, the text prints only dock areas (54) and canals (51); the other made categories appear in Figure 19 (p.33), a by-year chart whose labels could not be read. The text also mentions four young children drowned in pools and bathtubs."
+  },
+  {
+   "id": "ireland-location-dock-areas-2018-22",
+   "figure": "Dock areas (54)",
+   "low": 54,
+   "high": 54,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland (Republic), five years pooled 2018-2022, final CSO cause-of-death data (Tables VSA35 and VSA29, extracted 01/05/2025) as compiled by WSI. All intents: the 578 comprise 351 accidental, 207 deaths by suicide and 20 unclassified. Water transport is inside the count (Boating is an action category with 7 drownings). Year is the end of the period. Setting the report labels \"Dock areas\" (listed as dock areas/piers among made bodies of water).",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "A pooled five-year figure, all intents, from one national count: never added to WHO or IHME figures, never added to the 2019-2023 rows from WSI's statistics page (different period and accidental-only base), never combined with australia-location-2024-25, uk-waid-2024, canada-location-* or new-zealand-location-* rows (different taxonomies, periods and intent rules). One category inside the 141 made bodies of water: never summed with canals to stand for the made group, which has further unprinted categories.",
+   "note": "p.32: \"Dock areas (54) and canals (51) are the two most frequent made bodies of water for drowning\". The same page says dock areas and canals combine for 58 (28.1%) of deaths by suicide from drowning, so this count is all intents."
+  },
+  {
+   "id": "ireland-location-canals-2018-22",
+   "figure": "Canals (51)",
+   "low": 51,
+   "high": 51,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland (Republic), five years pooled 2018-2022, final CSO cause-of-death data (Tables VSA35 and VSA29, extracted 01/05/2025) as compiled by WSI. All intents: the 578 comprise 351 accidental, 207 deaths by suicide and 20 unclassified. Water transport is inside the count (Boating is an action category with 7 drownings). Year is the end of the period. Setting the report labels \"Canals\" (a made body of water).",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "A pooled five-year figure, all intents, from one national count: never added to WHO or IHME figures, never added to the 2019-2023 rows from WSI's statistics page (different period and accidental-only base), never combined with australia-location-2024-25, uk-waid-2024, canada-location-* or new-zealand-location-* rows (different taxonomies, periods and intent rules). One category inside the 141 made bodies of water; all intents (part of the 58 suicide deaths in docks and canals).",
+   "note": "p.32. The text links canal drownings to slippery surfaces and to recovery points far from entry points because of the water's speed."
+  },
+  {
+   "id": "ireland-location-natural-2018-22",
+   "figure": "439 (75.8%) in Natural Bodies of Water",
+   "low": 439,
+   "high": 439,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland (Republic), five years pooled 2018-2022, final CSO cause-of-death data (Tables VSA35 and VSA29, extracted 01/05/2025) as compiled by WSI. All intents: the 578 comprise 351 accidental, 207 deaths by suicide and 20 unclassified. Water transport is inside the count (Boating is an action category with 7 drownings). Year is the end of the period. Setting group the report labels \"Natural Bodies of Water\": rivers, lakes, beaches, sea rocks, open sea, and bogs. The CSO separates beach from open sea at 10 nautical miles from the land-water boundary.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "A pooled five-year figure, all intents, from one national count: never added to WHO or IHME figures, never added to the 2019-2023 rows from WSI's statistics page (different period and accidental-only base), never combined with australia-location-2024-25, uk-waid-2024, canada-location-* or new-zealand-location-* rows (different taxonomies, periods and intent rules). Not to be added to ireland-location-made-2018-22 (141 + 439 = 580, not 578).",
+   "note": "p.33. Of the 439, the text prints only rivers (151); lakes, beaches, sea rocks, open sea and bogs appear only in Figure 22 (p.34), which could not be read. By year the text gives 110 in 2018 and 71 in 2022 (see ireland-location-natural-2022)."
+  },
+  {
+   "id": "ireland-location-rivers-2018-22",
+   "figure": "Rivers accounted for 151 (26.1%) of all drownings",
+   "low": 151,
+   "high": 151,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland (Republic), five years pooled 2018-2022, final CSO cause-of-death data (Tables VSA35 and VSA29, extracted 01/05/2025) as compiled by WSI. All intents: the 578 comprise 351 accidental, 207 deaths by suicide and 20 unclassified. Water transport is inside the count (Boating is an action category with 7 drownings). Year is the end of the period. Setting the report labels \"Rivers\" (a natural body of water); 64 of the 151 were deaths by suicide.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "A pooled five-year figure, all intents, from one national count: never added to WHO or IHME figures, never added to the 2019-2023 rows from WSI's statistics page (different period and accidental-only base), never combined with australia-location-2024-25, uk-waid-2024, canada-location-* or new-zealand-location-* rows (different taxonomies, periods and intent rules). One category inside the 439 natural bodies of water; all intents.",
+   "note": "p.33. 151/578 = 26.1%, so the rivers share is computed on the 578 total even though the made/natural groups add up to 580."
+  },
+  {
+   "id": "ireland-location-natural-2022",
+   "figure": "71 drownings recorded in 2022 (Natural Bodies of Water)",
+   "low": 71,
+   "high": 71,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland, calendar 2022 only, final CSO data: drownings in the setting group the report labels \"Natural Bodies of Water\" (rivers, lakes, beaches, sea rocks, open sea, bogs), all intents. The same bullet prints 110 for 2018. This is the only single-year setting figure printed in prose in the report; the made-water count for 2022 is in a chart only.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "A single-year count for one setting group, all intents, from one national count: never added to ireland-total-2018-22 or the pooled setting rows, never added to WHO or IHME figures, never combined with the Australian, UK, Canadian or New Zealand setting rows. The 2022 all-waters total on WSI's statistics page is 100; do not subtract to infer made-water deaths.",
+   "note": "p.33, bullet under \"There is a notable downward trend of drownings occurring in Natural Bodies of Water from 2018 to 2022\": \"110 drownings recorded in 2018 compared to 71 drownings recorded in 2022.\" Chart labels (Figure 21) suggest 98, 84 and 74 for 2019-2021, but that reading is unverified and not recorded."
+  },
+  {
+   "id": "ireland-location-domestic-2018-22",
+   "figure": "Domestic (4 drownings, 0.7%)",
+   "low": 4,
+   "high": 4,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland (Republic), five years pooled 2018-2022, final CSO cause-of-death data (Tables VSA35 and VSA29, extracted 01/05/2025) as compiled by WSI. All intents: the 578 comprise 351 accidental, 207 deaths by suicide and 20 unclassified. Water transport is inside the count (Boating is an action category with 7 drownings). Year is the end of the period. Category the report labels \"Domestic\" and defines as drownings that occur in a home setting (p.24 adds: such as baths, tubs, and containers). Printed under \"Actions Leading to Drowning\", not in the bodies-of-water section.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "A pooled five-year figure, all intents, from one national count: never added to WHO or IHME figures, never added to the 2019-2023 rows from WSI's statistics page (different period and accidental-only base), never combined with australia-location-2024-25, uk-waid-2024, canada-location-* or new-zealand-location-* rows (different taxonomies, periods and intent rules). An action category: never added to the made/natural setting rows (bath tubs are also listed among made bodies of water, so the same deaths may sit in both partitions).",
+   "note": "p.28. p.24 prints the related summary that 13 (3.5%) of accidental or unclassified drownings involved watercraft or domestic settings in 2018-2022."
+  },
+  {
+   "id": "ireland-activity-boating-2018-22",
+   "figure": "Boating (7 drownings, 1.2%)",
+   "low": 7,
+   "high": 7,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland (Republic), five years pooled 2018-2022, final CSO cause-of-death data (Tables VSA35 and VSA29, extracted 01/05/2025) as compiled by WSI. All intents: the 578 comprise 351 accidental, 207 deaths by suicide and 20 unclassified. Water transport is inside the count (Boating is an action category with 7 drownings). Year is the end of the period. Category the report labels \"Boating\": recreational and commercial, motorised and unmotorised watercraft. Printed under \"Actions Leading to Drowning\". Shows water transport is inside the national count.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "A pooled five-year figure, all intents, from one national count: never added to WHO or IHME figures, never added to the 2019-2023 rows from WSI's statistics page (different period and accidental-only base), never combined with australia-location-2024-25, uk-waid-2024, canada-location-* or new-zealand-location-* rows (different taxonomies, periods and intent rules). An action category, not a setting: never added to the made/natural rows, and never added to ireland-location-boating-2019-23 (different period and base).",
+   "note": "p.28. The swimming/bathing category \"excludes boating incidents or where the body of water is considered domestic\". The seven action categories on p.28 add up to 578."
+  },
+  {
+   "id": "ireland-suicide-location-docks-canals-2018-22",
+   "figure": "Dock areas and canals combine for a total of 58 (28.1%) of deaths by suicide from drowning",
+   "low": 58,
+   "high": 58,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland, 2018-2022 pooled, final CSO data: deaths by suicide (not accidental) by drowning in the settings the report labels dock areas and canals, as a share of the 207 suicide drownings. Year is the end of the period.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "Suicide deaths only, in two settings combined by the report: never added to the all-intent dock (54) or canal (51) rows, never subtracted from them to make an accidental count, never added to WHO or IHME figures or to other countries' setting rows.",
+   "note": "p.32. The checker may flag 58 = 54 + 4 (dock areas + domestic); that is a coincidence of small integers, not an addition."
+  },
+  {
+   "id": "ireland-suicide-location-rivers-2018-22",
+   "figure": "64 of these drownings were deaths by suicide, which is 31% of all deaths by suicide from drowning",
+   "low": 64,
+   "high": 64,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland, 2018-2022 pooled, final CSO data: deaths by suicide by drowning in the setting the report labels \"Rivers\", as a share of the 207 suicide drownings. Year is the end of the period.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "Suicide deaths only, a subset of the 151 river drownings: never added to ireland-location-rivers-2018-22, never subtracted from it to make an accidental river count, never added to WHO or IHME figures.",
+   "note": "p.33, bullet under rivers."
+  },
+  {
+   "id": "ireland-suicide-location-beaches-lakes-2018-22",
+   "figure": "Beaches and lakes combine for 57 (27.3%) of deaths by suicide from drowning",
+   "low": 57,
+   "high": 57,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Ireland, 2018-2022 pooled, final CSO data: deaths by suicide by drowning in the settings the report labels beaches and lakes (the report prints the two together), as a share of the 207 suicide drownings. The all-intent beach and lake counts are not printed in text. Year is the end of the period.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "Suicide deaths only, two settings combined by the report: never used as a beach or lake count, never added to the natural-water rows, never added to WHO or IHME figures.",
+   "note": "p.33."
+  },
+  {
+   "id": "ireland-total-2019-23",
+   "figure": "607 drownings 2019 to 2023 (394 accidental, 202 suicide, 11 assault or undetermined)",
+   "low": 607,
+   "high": 607,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Ireland, five years pooled 2019-2023, all intents, as printed in the \"Rolling 2019 to 2023 Quick Facts\" summary on WSI's statistics page (CSO-based; 2023 provisional). Shares printed: 64.9% accidental, 33.3% suicide, 1.8% assault/undetermined. The page's own yearly rows for 2019-2023 (125, 106, 102, 100, 129; accidental 70, 68, 57, 73, 95) do not add up to 607 or 394, so the two parts of the page disagree. Year is the end of the period.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, 'Drowning Statistics' web page (watersafety.ie/statistics, page modified 2026-10-12)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "A pooled total from a web summary that does not reconcile with the yearly table on the same page: never added to ireland-total-2018-22 (overlapping years), never added to WHO or IHME figures. It is the base (394 accidental) of the four 2019-2023 location rows.",
+   "note": "Read from the page summary (the fetch tool paraphrased this section; the percentages reproduce exactly from 607, 394, 202 and 11). A reviewer should confirm the 607 by eye."
+  },
+  {
+   "id": "ireland-location-natural-water-2019-23",
+   "figure": "Of accidental drownings 2019 to 2023, 128 (32.5%) occurred in natural water",
+   "low": 128,
+   "high": 128,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Ireland, 2019-2023 pooled, accidental drownings only (base 394 per the page summary), category the page labels \"natural water\"; no sub-categories are printed in the text. The wording \"coded to an unspecified location\" for the residual suggests ICD-10 place coding, but no codes are printed. 2023 data provisional. Year is the end of the period.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, 'Drowning Statistics' web page (watersafety.ie/statistics, page modified 2026-10-12)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "Accidental only, pooled, with 63.5% of the base unlocated: never added to the 2018-2022 report rows (overlapping years, all-intent base, different taxonomy), never added to WHO or IHME figures, never combined with australia-location-2024-25, uk-waid-2024, canada-location-* or new-zealand-location-* rows.",
+   "note": "Section \"2019 to 2023 Summary of Key Statistics\" under \"Rolling 2019 to 2023 Quick Facts\". The four categories (128, 11, 5, 250) add up to 394, the page's accidental count for the period."
+  },
+  {
+   "id": "ireland-location-boating-2019-23",
+   "figure": "11 (2.8%) in boating incidents",
+   "low": 11,
+   "high": 11,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Ireland, 2019-2023 pooled, accidental drownings only (base 394), category the page labels \"boating incidents\". Shows water transport deaths are inside the accidental count. 2023 data provisional. Year is the end of the period.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, 'Drowning Statistics' web page (watersafety.ie/statistics, page modified 2026-10-12)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "Accidental only, pooled: never added to ireland-activity-boating-2018-22 (overlapping years), never added to the natural-water or unspecified rows to make a sub-total, never added to WHO or IHME figures. The checker may flag 11 = 7 + 4; coincidence.",
+   "note": "Same section as ireland-location-natural-water-2019-23."
+  },
+  {
+   "id": "ireland-location-domestic-pool-2019-23",
+   "figure": "5 (1.3%) in domestic/pool settings",
+   "low": 5,
+   "high": 5,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Ireland, 2019-2023 pooled, accidental drownings only (base 394), category the page labels \"domestic/pool settings\". 2023 data provisional. Year is the end of the period.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, 'Drowning Statistics' web page (watersafety.ie/statistics, page modified 2026-10-12)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "Accidental only, pooled: never added to ireland-location-domestic-2018-22 (overlapping years, different category definition), never added to WHO or IHME figures.",
+   "note": "Same section as ireland-location-natural-water-2019-23."
+  },
+  {
+   "id": "ireland-location-unspecified-2019-23",
+   "figure": "250 (63.5%) were coded to an unspecified location",
+   "low": 250,
+   "high": 250,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Ireland, 2019-2023 pooled, accidental drownings only (base 394): deaths with no water setting recorded, category the page labels \"unspecified location\". 2023 data provisional. Year is the end of the period.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, 'Drowning Statistics' web page (watersafety.ie/statistics, page modified 2026-10-12)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "A residual, not a setting: never treated as a count for any water type, never added to the natural-water, boating or domestic/pool rows, never added to WHO or IHME figures.",
+   "note": "The gap row who-data-gaps describes: Ireland records a water setting for only about a third of accidental drownings in CSO coding, while the WSI report's 2018-2022 bodies-of-water split (made 141, natural 439) locates every death, so the two sources use different location information."
+  },
+  {
+   "id": "ireland-total-2023",
+   "figure": "129 (95 accidental, 32 suicide, 2 undetermined, assault or other)",
+   "low": 129,
+   "high": 129,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Ireland, calendar 2023, all intents, as printed in the \"Drowning Statistics\" table on WSI's statistics page (CSO data, \"subject to change\"; only the 2024 row is starred as provisional). Water transport included (6 boating deaths in the 2023 activity split: 45 swimming/bathing, 44 land-based activity, 6 boating). Disagrees with the 78 printed for 2023 in the WSI report (see ireland-total-2023-provisional-may-2025).",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, 'Drowning Statistics' web page (watersafety.ie/statistics, page modified 2026-10-12)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "A national count with its own classification: never added to WHO or IHME figures. A revision of the same count as ireland-total-2023-provisional-may-2025: cite one printing, never both. Not comparable with uk-waid-2024 (accidental only) or australia-2024-25 (July-June year) without harmonising intent.",
+   "note": "The page prints a 29% rise on 2022 (100). The 2023 figure moved from 78 (CSO extract of 01/05/2025) to 129 (page as of Oct 2026), a 65% revision against the report's rule of thumb that provisional CSO data run about 10% low; a reviewer should check by eye whether the page's 2023 row is CSO data or WSI's own collation."
+  },
+  {
+   "id": "ireland-total-2023-provisional-may-2025",
+   "figure": "78 drowning fatalities recorded to date (2023: 64 accidental, 13 suicide, 1 unclassified)",
+   "low": 78,
+   "high": 78,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Ireland, calendar 2023, all intents, provisional CSO data as extracted by WSI on 01/05/2025 and printed in the National Drowning Report 2023/2024 (p.7); \"subject to changes at any time over the next 12 to 18 months\". Superseded by 129 on WSI's statistics page by Oct 2026.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "An earlier printing of the same count as ireland-total-2023: cite one, never both, and never add to ireland-total-2024 (the report's \"156\" for 2023/2024 is its own sum of two provisional years). Never added to WHO or IHME figures.",
+   "note": "Recorded because the two WSI sources disagree. The 2024 provisional figure in the same report (78: 56/11/11) still matches the statistics page."
+  },
+  {
+   "id": "ireland-total-2024",
+   "figure": "78 drowning fatalities recorded to date (2024: 56 accidental, 11 suicide, 11 unclassified)",
+   "low": 78,
+   "high": 78,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Ireland, calendar 2024, all intents, provisional CSO data (report p.8, extract of 01/05/2025; statistics page row \"2024*\", \"Provisional data from the Central Statistics Office and is subject to change\"). Water transport included under WSI's classification. 71.8% accidental, 14.1% suicide, 14.1% unclassified; about 72% male.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025; CSO Tables VSA35 and VSA29 extracted 01/05/2025); same figures on WSI's statistics page (Oct 2026)",
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "grade": "A",
+   "do_not_add_to": "Provisional and expected to rise (the report says provisional CSO data have historically been about 10% below final): never added to WHO or IHME figures, never added to ireland-total-2023 or ireland-total-2025, not comparable with uk-waid-2024 (accidental only) without harmonising intent.",
+   "note": "The high unclassified share (11 of 78) reflects open coroner cases; the CSO later assigns ICD-10 codes. Province split on the statistics page: Munster 25, Leinster 24, Connacht 17, Ulster (part) 12; coastal counties 1.6 per 100,000 versus 0.9 inland."
+  },
+  {
+   "id": "ireland-total-2025",
+   "figure": "Total drownings 2025 (subject to change): 80",
+   "low": 80,
+   "high": 80,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Ireland, calendar 2025, provisional count collated by WSI from the Irish Coast Guard, An Garda Siochana, the Coroner's Court and media reports (not yet CSO cause-of-death data); intent split not printed. Seven drownings of Irish nationals overseas are listed separately and are not in the 80. Year-to-date 2026 (to 7 July 2026): 51.",
+   "geography": "Ireland",
+   "source": "Water Safety Ireland, 'Drowning Statistics' web page (watersafety.ie/statistics, page modified 2026-10-12)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "C",
+   "do_not_add_to": "A provisional operational collation with different case-finding from the CSO-based rows: never added to WHO or IHME figures, never added to ireland-total-2024, never compared with the 2018-2022 or 2019-2023 rows as if on the same basis. The CSO figure for 2025 will replace it.",
+   "note": "Province split printed: Leinster 27, Munster 23, Connacht 17, Ulster (part) 13. The page labels this block \"Provisional data from the Central Statistics Office\" while naming non-CSO sources beside it; a reviewer should treat the basis as unclear. Regraded C on verification: a provisional WSI collation from Coast Guard, Garda, Coroner's Court and media reports, not CSO cause-of-death data."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "who-data-gaps",
+   "field": "note",
+   "old": "Upgraded from C to A on 15 Oct 2026 by reading the report: place of drowning collected by 31% of countries, activity by 27%, age and sex by 59%; 26% report a national strategy specific to drowning (p. 33). This is the gap the register pilot is written for. Countries whose setting split is in this ledger: Australia, the UK, Canada, New Zealand (2025, partial).",
+   "new": "Upgraded from C to A on 15 Oct 2026 by reading the report: place of drowning collected by 31% of countries, activity by 27%, age and sex by 59%; 26% report a national strategy specific to drowning (p. 33). This is the gap the register pilot is written for. Countries whose setting split is in this ledger: Australia, the UK, Canada, New Zealand (2025, partial), Ireland (2018-2022 pooled, partial; 63.5% of 2019-2023 accidental drownings have no location coded).",
+   "evidence": "Only if the ireland-location-* rows in this bundle are merged. WSI National Drowning Report 2023/2024 pp. 32-33 (made 141, natural 439, 2018-2022) and watersafety.ie/statistics, \"2019 to 2023 Summary of Key Statistics\" (250 of 394 accidental drownings coded to an unspecified location)."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://watersafety.ie/wp-content/uploads/2025/11/229867-WSI-ND-Report-2025-Pages.pdf",
+   "quote": "Dock areas (54) and canals (51) are the two most frequent",
+   "where": "p.32 \"In Focus: Bodies of Water\" (made 141; definitions; docks and canals suicides 58); p.33 (natural 439; rivers 151; river suicides 64; beaches and lakes 57; 110 in 2018 vs 71 in 2022); p.15 (578; 351/207/20); p.5 (CSO tables); p.7-8 (2023, 2024); p.28 (boating 7, domestic 4); Figs 19-22"
+  },
+  {
+   "url": "https://watersafety.ie/statistics/",
+   "quote": "Of accidental drownings 2019 to 2023, 128 (32.5%) occurred in natural water",
+   "where": "\"Rolling 2019 to 2023 Quick Facts\" (607; 394 accidental; 11 boating, 5 domestic/pool, 250 unspecified); \"Drowning Statistics\" table (2023 row 95/32/2/129; 2024* row 56/11/11/78; provisional footnote); \"Total drownings 2025 (subject to change): 80\" and its sources line; \"Drownings 2023\" section"
+  },
+  {
+   "url": "https://watersafety.ie/wp-content/uploads/2025/12/230191-WSI-ND-Report-2025-Gaelige.pdf",
+   "quote": "Líon iomlán báite i gCorp Uisce Déanta (141) 2018 go 2022",
+   "where": "Caption of Fíor 19 (Irish-language edition of the same report); its extracted series labels are Canáil, Duga, Cheantar Déanta Eile, Iomlán Mór (canal, dock, other made, grand total), showing Figure 19 is a by-year chart by made-water type; the numeric labels extract scrambled"
+  },
+  {
+   "url": "https://www.cso.ie/en/releasesandpublications/in/vs/informationnote-newandupdateddeathoccurrencetablesavailableonthecsosopendataportal",
+   "quote": "Revised Deaths Occurring",
+   "where": "Table list: VSA35 \"Revised Deaths Occurring\", yearly deaths including late registrations by sex, age group and detailed underlying cause of death; VSA112 by selected cause and local authority, 2015-2021"
+  },
+  {
+   "url": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadMetadata/VSA35/JSON-stat/2.0/en",
+   "quote": "V90 Accident to watercraft causing drowning and submersion",
+   "where": "JSON-stat metadata for VSA35, cause-of-death dimension C02478V04618 (3-character ICD-10 categories; V90-V94 read, W65-W74 and X71 beyond the fetch truncation); year dimension 2007 to 2022; sex dimension C02199V02655"
+  }
+ ],
+ "tried": [
+  "CSO PxStat JSON-RPC query (GET https://ws.cso.ie/public/api.jsonrpc?data=...) for VSA35 filtered to ICD-10 W65, W67, W69, W74, V90, V92, X71: three URL variants of about 700, 596 and 521 characters were all refused by the fetch proxy (\"url exceeds the maximum fetchable length\"). The unfiltered dataset (ReadDataset/VSA35/CSV/1.0/en) was not attempted: 16 years x 3 sexes x roughly 1,800 causes is far more than one fetch returns. A person at data.cso.ie/table/VSA35 can run the same selection in a browser.",
+  "Figures 19 and 22 of the WSI National Drowning Report 2023/2024 (the only charts by water type, pp.33-34): in the English PDF the numeric labels extract in scrambled order and Figure 22 has no extractable block at all; the Irish-language PDF was fetched for the same purpose and gives the series names (canal, dock, other made, grand total) but the same scrambled numbers. Counts for pools, quarries, drains, slurry pits, tanks/wells, bath tubs, lakes, beaches, sea rocks, open sea and bogs could not be read.",
+  "The fetch tool's summariser declines to reproduce whole pages verbatim (it capped quotes at about 125 characters), so each quoted sentence was obtained one at a time; the 607 / 394 / 202 / 11 figures for 2019-2023 on the statistics page came back paraphrased, not quoted.",
+  "HRB National Drugs Library listing for Water Safety Ireland (drugsandalcohol.ie/view/browse_by/Water_Safety_Ireland.html): only WSI annual reports 2019-2025, no National Drowning Report newer than the 2023/2024 edition; a copy of the 2023 annual report PDF is hosted there but was not opened (not a drowning report).",
+  "Web searches \"Water Safety Ireland drowning statistics by location report\" and for a \"National Drowning Report\" 2024/2025 or \"Rolling Report 2019 to 2023\": nothing newer than the 2023/2024 edition; WSI's statistics page (modified 2026-10-12) still links that edition as the latest. Press hits (donegallive.ie, beat102103.com, galwaybayfm.ie) were not used.",
+  "CSO information note on new and updated death-occurrence tables: lists VSA35, VSM01, RIP01, RIP02, VSA111, VSA112; the CSO publishes no drowning-by-setting release of its own, so the only CSO route is a VSA35 query by ICD-10 code."
+ ],
+ "notes": "Latest source: Water Safety Ireland, National Drowning Report 2023/2024 With Rolling Report 2018 to 2022 (published Nov 2025, CSO Tables VSA35 and VSA29 extracted 01/05/2025). No newer edition was found; WSI's statistics page (modified 2026-10-12) links it as the latest and adds 2025 (80, provisional). Status partial: Ireland prints no setting split for its latest year. The report's split (\"In Focus: Bodies of Water\", pp.32-34) is pooled 2018-2022 and only three categories are printed in text (dock areas 54, canals 51, rivers 151) beside the two groups (made 141, natural 439); the remaining categories (pools, quarries, drains, slurry pits, tanks/wells, bath tubs; lakes, beaches, sea rocks, open sea, bogs) sit in Figures 19 and 22, whose labels extract scrambled. The one single-year setting figure in prose (natural waters: 110 in 2018, 71 in 2022) is recorded. The statistics page adds a 2019-2023 pooled split of accidental drownings (natural water 128, boating 11, domestic/pool 5, unspecified 250 of 394) in which 63.5% have no location. Definition: the report gives no formal definition of drowning; the Foreword says WSI \"defines drownings as preventable injuries and tragedies\". The counts are CSO cause-of-death records (\"Every drowning incident recorded by the CSO attracts an ICD classification code\", p.28) in three classes: accidental, deaths by suicide, and unclassified (undetermined, assault, other). So the totals and the setting rows are ALL INTENTS; suicides are 35.8% of 2018-2022 and are concentrated in docks, canals, rivers, beaches and lakes (rows ireland-suicide-location-*). Water transport is INCLUDED: Boating is an action category (7 of 578; the seven action categories on p.28 add up to 578) and the statistics page counts \"boating incidents\" (11 of 394 accidental, 2019-2023). The CSO has assigned \"almost all unclassified drownings to an appropriate ICD-10 code\" (p.15). Provisional CSO data have historically run about 10% below final (p.13). Overseas deaths of Irish nationals are listed separately. Disagreements the reviewer should look at by eye: (1) 2023 total is 78 in the report (provisional, 01/05/2025) but 129 on the statistics page (Oct 2026), a 65% revision, both recorded as separate rows; (2) the statistics page's 2019-2023 Quick Facts (607, 394 accidental) do not reconcile with its own yearly rows for those years (125, 106, 102, 100, 129; accidental 70, 68, 57, 73, 95) and the page prints 2019 as 125 in one table and 126 in another; (3) the report's made (141) and natural (439) groups add up to 580, not 578, while the rivers share (26.1%) is computed on 578; (4) the 2025 block names Coast Guard, Garda, coroner and media sources under a \"Provisional data from the Central Statistics Office\" label. Chart reading, NOT recorded as rows, for a person to verify in the PDF: the by-classification charts (Figures 20 and 21) carry labels that, matched against the statistics page's yearly intent totals, read as made waters 35, 27, 22, 28, 29 and natural waters 110, 98, 84, 74, 71 for 2018-2022 (natural: accidental 63, 52, 50, 46, 53; suicide 38, 45, 32, 27, 18); Figure 19 (canal, dock area, other made by year) cannot be assigned to years with confidence. The checker prints twelve numeric-coincidence warnings (58 = 54 + 4, 58 = 7 + 51, 64 = 7 + 57, 71 = 7 + 64, 78 = 7 + 71, 128 = 71 + 57, 129 = 51 + 78, 129 = 71 + 58, 151 = 71 + 80, 11 = 7 + 4): accidents of small integers; every row is a figure as printed and nothing was added across rows. Pooled rows carry year = end of period, as the canada-location-* rows do. Grade A is used for the statistics page because it is WSI's own publication of CSO data; the reviewer may prefer C for the 2025 collation. Not comparable with australia-location-2024-25, uk-waid-2024, canada-location-* or new-zealand-location-* without harmonising intent and taxonomy. No name, contact detail or precise position was recorded.",
+ "next_tasks": [
+  {
+   "title": "Ireland: read Figures 19 and 22 of the WSI National Drowning Report 2023/2024 (pp.33-34) by eye for per-year counts by water type (canals, dock areas, other made; rivers, lakes, beaches, sea rocks, open sea, bogs), 2018-2022",
+   "why": "The only single-year setting counts for Ireland; the chart labels extract scrambled, so this needs a person with a PDF viewer."
+  },
+  {
+   "title": "Ireland: run CSO PxStat table VSA35 (Revised Deaths Occurring) for ICD-10 W65-W74, V90, V92, X71 and Y21 by year, 2007-2022, both sexes",
+   "why": "A primary dataset query giving a single-year setting split (bathtub, pool, natural water, unspecified, watercraft) that WSI does not print; needs a person with a browser because the fetch proxy refuses the query URL."
+  },
+  {
+   "title": "Ireland: reconcile the 2023 drowning total, 78 provisional in the WSI report (CSO extract 01/05/2025) against 129 on WSI's statistics page (Oct 2026), and the page's 2019-2023 summary (607) against its own yearly rows",
+   "why": "A 65% revision is far above the roughly 10% the report says is typical for provisional CSO data; the later figure may come from a different source or vintage."
+  },
+  {
+   "title": "Ireland: check WSI's single-year \"Analysis of Drownings\" PDFs (2005-2018, linked from watersafety.ie/statistics) for by-location tables",
+   "why": "They may give a per-year setting split under the older taxonomy, extending the Irish series backwards."
+  }
+ ]
+}

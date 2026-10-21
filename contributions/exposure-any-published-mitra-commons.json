@@ -1,0 +1,346 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "exposure-any-published",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "us-nrbss-boat-hours-2018",
+   "figure": "3.42 billion hours (over 130 hours per boat)",
+   "low": 3420000000,
+   "high": 3420000000,
+   "unit": "boat-hours",
+   "year": 2018,
+   "scope": "Hours that recreational boats, registered and unregistered, were operated out on the water in calendar 2018, all 50 states and DC, estimated by the 2018 NRBSS Exposure Survey, run monthly by RTI International for the Coast Guard: 213,659 addresses sampled, 44,422 surveys returned, 31,733 from boat-owning households; a registry frame (commercial list of registered boats) plus an address-based sample for households with only unregistered boats; eight states barred registry sharing. 'Boat hours' is the hours a boat is used out on the water in a period (p. 4). Boat-hours, not person-hours.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, bulletin 'U.S. Coast Guard releases National Recreational Boating Safety Survey results' (7 Dec 2020), releasing the 2018 NRBSS Exposure Survey Final Report (RTI International, October 2020 (file dated 30 Nov 2020))",
+   "url": "https://content.govdelivery.com/accounts/USDHSCG/bulletins/2affa6f",
+   "grade": "C",
+   "do_not_add_to": "An exposure denominator, not a count of people or deaths: never added to any deaths row. Not paired with uscg-boating-2024 or us-location-boating-2024 (2024 deaths against 2018 hours) and not added to or averaged with us-nrbss-person-hours-2012 (person-hours, 2012). Any risk ratio built on it must name the 2018 fatality count and state the rule used.",
+   "note": "Graded C on verification: the only primary-publisher document reached that prints 3.42 billion is the Coast Guard's own release bulletin; the report's Table 3-36 (p. 66) was not read (text extraction stops at p. 18). Regrade A once a person confirms Table 3-36 by eye. The same release prints 25.4 million boats owned, 13.4 million unregistered. Same population as the Coast Guard's boating deaths series, but the years differ (2018 against 2024); the next survey is 2026."
+  },
+  {
+   "id": "us-nrbss-boaters-2018",
+   "figure": "84,544 thousand persons (26.5% of the U.S. population)",
+   "low": 84544000,
+   "high": 84544000,
+   "unit": "persons",
+   "year": 2018,
+   "scope": "Persons who went out on the water aboard a recreational boat at least once in 2018 ('boater', report p. 14), all ages, United States, estimated from the NRBSS Participation Survey: address-based household sample fielded in four quarterly waves during 2018 by RTI International for the Coast Guard; 43,590 addresses sampled, 5,851 completed responses, 14.9% response rate. The same table gives 28.37 million households (23.3%) with at least one boater.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, 2018 National Recreational Boating Safety Survey, Participation Survey Final Report (RTI International, October 2020 (file dated 30 Nov 2020)), Table 3-1, p. 14",
+   "url": "https://mail.uscgboating.org/library/recreational-boating-servey/NRBSS-Participation-Survey-Final-Report-11302020.pdf",
+   "grade": "A",
+   "do_not_add_to": "A participation head-count, not a trip or hour count and not a deaths row: never added to any US drowning count; not divided into us-nrbss-boat-hours-2018 to make hours per boater (the Coast Guard did not print that). The release rounds it to '84.5 million Americans'.",
+   "note": "Participation (persons) is the loosest exposure unit: one boater may boat once or two hundred times. The same report's Section 3.4 gives days per boater (us-nrbss-boating-days-per-boater-2018)."
+  },
+  {
+   "id": "us-nrbss-boating-days-per-boater-2018",
+   "figure": "17.5 days (median 8.0)",
+   "low": 17.5,
+   "high": 17.5,
+   "unit": "days per boater",
+   "year": 2018,
+   "scope": "Mean number of boating days per boater in 2018, where a boating day is 'any day that a person spent some time out on the water on a recreational boat' (report Section 3.4, p. 19); median 8.0 days; persons in boat-owning households averaged about 25.8 days (Table 3-10, p. 24). Survey as in us-nrbss-boaters-2018. National totals of boat days, person boat days and person boat hours are in the separate Exposure Survey report (Tables 3-24, 3-28, 3-44, 3-46), which could not be read past p. 18 here.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, 2018 National Recreational Boating Safety Survey, Participation Survey Final Report (RTI International, October 2020 (file dated 30 Nov 2020)), Section 3.4 and Table 3-6, p. 19",
+   "url": "https://mail.uscgboating.org/library/recreational-boating-servey/NRBSS-Participation-Survey-Final-Report-11302020.pdf",
+   "grade": "A",
+   "do_not_add_to": "A per-person mean: not multiplied by us-nrbss-boaters-2018 to make a person-days total (that total exists in the Exposure report and should be read there), and never added to any deaths row.",
+   "note": "Exposure in days, not hours: a day on the water counts whether it lasted ten minutes or ten hours."
+  },
+  {
+   "id": "us-nrbss-person-hours-2012",
+   "figure": "3.6 billion person hours",
+   "low": 3600000000,
+   "high": 3600000000,
+   "unit": "person-hours",
+   "year": 2012,
+   "scope": "Estimated hours persons spent on board recreational boats taken out on the water in 2012, United States, from the 2012 NRBSS, as restated in the introduction (p. 1) of the 2018 NRBSS Exposure Survey Final Report; the same page says boats were out on the water an average of about 11.3 days and 4.5 hours per day in 2012, and that 22,217,000 registered and unregistered recreational boats were owned, about 55% registered and about 66% operated at least once.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, 2018 National Recreational Boating Safety Survey, Exposure Survey Final Report (RTI International, October 2020 (file dated 30 Nov 2020), v3.0), Section 1, p. 1, restating the 2012 survey",
+   "url": "https://uscgboating.org/library/recreational-boating-servey/NRBSS-Exposure-Survey-Final-Report-20201130-v3.0.pdf",
+   "grade": "A",
+   "do_not_add_to": "A 2012 figure in person-hours: not added to or averaged with us-nrbss-boat-hours-2018 (boat-hours, 2018) and not paired with any deaths year other than 2012. The 2012 survey report itself was not opened.",
+   "note": "Recorded because it is the only national person-hours total that could be read from a Coast Guard document here; the 2018 person-hours total exists in the same report's Table 3-46 but was not reachable."
+  },
+  {
+   "id": "us-nrbss-deaths-per-exposure-hours-2011",
+   "figure": "boating deaths in states per 100 million exposure hours ranged from 3 to 130",
+   "low": 3,
+   "high": 130,
+   "unit": "deaths per 100 million exposure hours",
+   "year": 2011,
+   "scope": "Range across states of recreational boating deaths per 100 million exposure hours, 2011 data, as printed in the Exposure Survey report's Section 1.2 (Risk Ratios, pp. 4-5) to show why exposure denominators matter; two states are contrasted at 121 and 82 deaths per 100 million exposure hours. The states are not named in the portion read, and the report's own tables behind the range were not reached.",
+   "geography": "United States (by state)",
+   "source": "U.S. Coast Guard, 2018 National Recreational Boating Safety Survey, Exposure Survey Final Report (RTI International, October 2020 (file dated 30 Nov 2020), v3.0), Section 1.2, pp. 4-5",
+   "url": "https://uscgboating.org/library/recreational-boating-servey/NRBSS-Exposure-Survey-Final-Report-20201130-v3.0.pdf",
+   "grade": "A",
+   "do_not_add_to": "A range of state rates, not a national rate: never averaged, never applied to another year, and never set beside resident-based rates such as us-total-2022 as if comparable. The errata (28 Oct 2022) rewrites the surrounding text so that exposure is the denominator and casualties the numerator.",
+   "note": "The clearest proof that a risk per exposure has been published for boating. Section 3.22 (pp. 91-109) of the same report prints 2018 state risk ratios per 100 million boat days and per million boat hours (the errata corrects the Maine entry to 56 per 100 million boat days and 10 per million boat hours) but was not readable here."
+  },
+  {
+   "id": "usla-beach-attendance-2023",
+   "figure": "292,660,201",
+   "low": 292660201,
+   "high": 292660201,
+   "unit": "visits (estimated attendance)",
+   "year": 2023,
+   "scope": "Estimated beach attendance for 2023 as of 4 Nov 2023, compiled by USLA from the reports of its affiliated lifeguard agencies ('Nationwide Incident Data' table, p. 2); typically more than 140 agencies/beaches report each year; not all US beaches contribute, and the method agencies use to estimate attendance is not described. Same table: 64,578 rescues, 104 drownings in unguarded areas, 16 in guarded areas.",
+   "geography": "United States (USLA-affiliated beaches)",
+   "source": "United States Lifesaving Association, Board of Directors report 'Statistics Activity' (Feb 2024), p. 2, 2023 National Lifesaving Statistics",
+   "url": "https://cdn.ymaws.com/www.usla.org/resource/collection/5EC218B0-758E-42CC-8FFD-A0503A24D3BA/2024_02_50_USLABOD_StatisticsActivity.pdf",
+   "grade": "A",
+   "do_not_add_to": "Attendance at reporting USLA agencies only, a partial-year snapshot: not a count of US beach visits, not added across years or to the Australian visitation rows, and never used as a denominator for CDC or WHO death counts. It pairs only with the drownings in the same table (usla-drownings-guarded-2023), which is what USLA itself does.",
+   "note": "This is the kind of denominator behind usla-guarded-risk (1 in 18 million over ten years). The per-year series lives in the USLA statistics database (arc.usla.org), which refused automated fetching. Brewster, Gould and Brander (2019) note the dataset cannot be shown to represent proportional exposure per visitor."
+  },
+  {
+   "id": "usla-drownings-guarded-2023",
+   "figure": "16 (guarded); 104 (unguarded)",
+   "low": 16,
+   "high": 16,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Fatal drownings reported by USLA-affiliated agencies for 2023 as of 4 Nov 2023, split by whether they occurred in guarded areas (16) or unguarded areas (104) within reporting agencies' jurisdictions; same table and caveats as usla-beach-attendance-2023. Not vital statistics; not all beaches report; partial year.",
+   "geography": "United States (USLA-affiliated beaches)",
+   "source": "United States Lifesaving Association, Board of Directors report 'Statistics Activity' (Feb 2024), p. 2, 2023 National Lifesaving Statistics",
+   "url": "https://cdn.ymaws.com/www.usla.org/resource/collection/5EC218B0-758E-42CC-8FFD-A0503A24D3BA/2024_02_50_USLABOD_StatisticsActivity.pdf",
+   "grade": "A",
+   "do_not_add_to": "A subset of US drownings with its own case-finding: never added to us-cdc-4500, us-cdc-4345, us-total-2022, uscg-boating-2024 or any WHO/IHME figure. The table prints 16 and 104 separately; no total is formed here. Only the guarded 16 share a denominator with the attendance figure.",
+   "note": "Recorded so the exposure row has its numerator from the same source, year and beaches. Rescues in the same table: 64,578."
+  },
+  {
+   "id": "australia-coastal-visits-2020-21",
+   "figure": "over 500 million individual visitations to the coast",
+   "low": 500000000,
+   "high": null,
+   "unit": "visits",
+   "year": 2021,
+   "scope": "SLSA's estimate of coastal visits by Australian adults (16 and over) in the 12 months before the 2021 National Coastal Safety Survey, derived by SLSA from 14.4 million adults visiting on average 3.3 times each month, with an average 2.3 hours per visit; a visit is any trip to the coast whether or not the person entered the water (activity participants were 10.9 million; swimming/wading 48%, boating 15%, land-based fishing 13%). Financial year 2020/21; a 2% increase on the previous period. Children under 16 are not covered.",
+   "geography": "Australia",
+   "source": "Surf Life Saving Australia, National Coastal Safety Report 2021, pp. 1 and 7 (read from a copy of the SLSA PDF hosted at marinebusinessnews.com.au; the SLSA original is on Issuu)",
+   "url": "https://www.marinebusinessnews.com.au/wp-content/uploads/2021/09/Surf-Life-Saving-2021-Report.pdf.pdf",
+   "grade": "A",
+   "do_not_add_to": "A survey-based visit estimate for adults: not added to the NSW rows (nsw-coastal-visits-2022-23 is a different year and NSW is inside the national figure) or to usla-beach-attendance-2023; not used as a denominator for australia-2024-25 or australia-location-2024-25 (different years; deaths include children and all coastal activities). SLSA prints its drowning rate per 100,000 population only (0.53 for 2020/21, p. 35).",
+   "note": "Same report, pp. 1 and 33: 136 coastal drowning deaths in 2020/21 among 241 coastal deaths. SLSA does not divide deaths by visits. Lab judgment (D): a crude risk per coastal visit could be formed from this one report but would set adult visits, many with no water entry, against all-age deaths from every coastal activity; not computed here."
+  },
+  {
+   "id": "australia-coastal-visitors-2020-21",
+   "figure": "14.4 million Australian adults (16 years and above) visited the coast",
+   "low": 14400000,
+   "high": 14400000,
+   "unit": "persons",
+   "year": 2021,
+   "scope": "Adults aged 16 and over who visited the coast in the 12 months before the 2021 National Coastal Safety Survey (SLSA's annual survey of coastal participation, behaviours and perceptions; sample size and fieldwork dates are not stated in the portion read). State figures printed on pp. 6-7: NSW 4.7M, QLD 3.1M, VIC 3.4M, WA 1.6M, SA 1.0M, TAS 0.4M, NT 0.2M.",
+   "geography": "Australia",
+   "source": "Surf Life Saving Australia, National Coastal Safety Report 2021, pp. 5 and 7 (read from a copy of the SLSA PDF hosted at marinebusinessnews.com.au)",
+   "url": "https://www.marinebusinessnews.com.au/wp-content/uploads/2021/09/Surf-Life-Saving-2021-Report.pdf.pdf",
+   "grade": "A",
+   "do_not_add_to": "A head-count of visitors: the state figures are the report's own split and are not re-added here; not added to australia-coastal-visits-2020-21 (visits) or to any deaths row.",
+   "note": "Participation (persons), the loosest exposure unit; SLSA multiplies it by visit frequency to reach the visits figure."
+  },
+  {
+   "id": "nsw-patrolled-beach-visits-2022-23",
+   "figure": "More than 13 million visitations were recorded on patrolled beaches",
+   "low": 13000000,
+   "high": null,
+   "unit": "visits (recorded)",
+   "year": 2023,
+   "scope": "Visitations recorded on patrolled beaches in New South Wales, 1 July 2022 to 30 June 2023 (report p. 5): a count made by surf lifesaving patrols, as distinct from the survey-based coastal visitation estimate in nsw-coastal-visits-2022-23. How the counts are taken is not described in the portion read.",
+   "geography": "New South Wales, Australia",
+   "source": "Surf Life Saving New South Wales, New South Wales Coastal Safety Report 2023, p. 5",
+   "url": "https://www.surflifesaving.com.au/wp-content/uploads/sites/2/2023/11/New-South-Wales-Coastal-Safety-Report-2023.pdf",
+   "grade": "A",
+   "do_not_add_to": "Patrolled beaches during patrol hours only: not added to nsw-coastal-visits-2022-23 (which already contains these visits as the 51% share to patrolled locations), to the Australian national rows or to usla-beach-attendance-2023. Not a denominator for the same report's 48 NSW coastal drowning deaths (2022/23), which are not split by patrol status in the portion read.",
+   "note": "The only recorded (not surveyed) beach visit count found outside the USLA. Comparable in kind to USLA attendance but a different method and coast."
+  },
+  {
+   "id": "nsw-coastal-visits-2022-23",
+   "figure": "over 200 million individual visitations to the coast",
+   "low": 200000000,
+   "high": null,
+   "unit": "visits",
+   "year": 2023,
+   "scope": "SLSNSW's estimate for the 12 months to April 2023 from the National Coastal Safety Survey (online, 6-30 April 2023, national sample of 3,118 respondents aged 16 and above, run by a market research company for SLSA): 5.5 million NSW adults visited the coast, on average 3.6 times each month (males 4.1, females 3.2); 51% of visits were to patrolled locations during patrolled hours; about 2.6 hours per visit. Adults 16 and over only; any purpose.",
+   "geography": "New South Wales, Australia",
+   "source": "Surf Life Saving New South Wales, New South Wales Coastal Safety Report 2023, pp. 5 and 8 (survey method p. 43)",
+   "url": "https://www.surflifesaving.com.au/wp-content/uploads/sites/2/2023/11/New-South-Wales-Coastal-Safety-Report-2023.pdf",
+   "grade": "A",
+   "do_not_add_to": "Not added to australia-coastal-visits-2020-21 (different year; NSW is already inside the national figure) or to nsw-patrolled-beach-visits-2022-23. The report's own drowning rate is 0.59 per 100,000 population (p. 30), computed as deaths divided by population (p. 43), not per visit; its 48 coastal drowning deaths for 2022/23 (p. 5) are 85% open coronial cases (p. 43).",
+   "note": "Lab judgment (D): visits and deaths sit in one report for one coast and one year, so a crude risk per adult coastal visit is arithmetically possible, but the denominator counts adults on any errand while the numerator counts all ages and all coastal activities; the publisher does not compute it."
+  },
+  {
+   "id": "england-swimming-participants-2018-19",
+   "figure": "4.7 million people swim twice or more a month",
+   "low": 4700000,
+   "high": 4700000,
+   "unit": "persons",
+   "year": 2019,
+   "scope": "People in England who swam at least twice in the previous 28 days, Sport England Active Lives Adult Survey, 12 months to May 2019 ('May 2018/19'); the page also prints 4.9 million for November 2015-16 and 4.5 million for May 2017/18. No split between pool and open water, no age threshold stated on the page, and no trips or hours.",
+   "geography": "England",
+   "source": "Sport England, 'Swimming' research page (Active Lives Adult Survey figures), 'At a glance' and 'Active Lives' sections",
+   "url": "https://microsites.sportengland.org/research-and-data/research/popular-activities/swimming",
+   "grade": "A",
+   "do_not_add_to": "A participation head-count with no pool/open-water split: not a denominator for uk-waid-2024 (UK, open water, 2024) and not added to any other participation row; not current (the page's latest period is May 2018/19).",
+   "note": "Recorded as the only published swimming exposure measure found for the UK; the Active Lives 2023-24 data tables, which may split open-water swimming, were not opened. Lab judgment (D): no risk per swim can be formed from this."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "exposure-denominators",
+   "field": "figure",
+   "old": "No measure of how many people are on the water",
+   "new": "Exposure is measured for US boating (boat-hours, boaters, days), USLA-guarded US beaches (attendance) and the Australian coast (visits); published risk per exposure exists only for the first two",
+   "evidence": "Coast Guard bulletin of 7 Dec 2020 (3.42 billion boat-hours, 84.5 million boaters, 2018); USLA 2023 statistics table (292,660,201 attendance) and usla.org/page/statistics (1 in 18 million); SLSA NCSR 2021 p. 7 (over 500 million visits); NRBSS Exposure report pp. 4-5 (3 to 130 deaths per 100 million exposure hours, 2011)."
+  },
+  {
+   "row_id": "exposure-denominators",
+   "field": "scope",
+   "old": "Rates are published per 100,000 residents, not per hour or per trip on the water. Risk per trip is unknown everywhere.",
+   "new": "Drowning rates are published per 100,000 residents. Exposure denominators exist but are partial: US recreational boating (NRBSS 2018: 3.42 billion boat-hours, 84.5 million boaters), USLA-affiliated US beaches (estimated attendance, 2023: 292,660,201), Australian coastal visits by adults 16+ (SLSA survey, 2020/21: over 500 million; NSW 2022/23: over 200 million), England swimming (4.7 million people twice a month, 2018/19). Risk per exposure is published only for US boating (Coast Guard, by state) and USLA-guarded beaches (1 in 18 million). Unknown for open-water swimming and inland waters.",
+   "evidence": "Rows us-nrbss-boat-hours-2018, us-nrbss-boaters-2018, us-nrbss-boating-days-per-boater-2018, us-nrbss-person-hours-2012, us-nrbss-deaths-per-exposure-hours-2011, usla-beach-attendance-2023, australia-coastal-visits-2020-21, nsw-coastal-visits-2022-23, nsw-patrolled-beach-visits-2022-23, england-swimming-participants-2018-19 in this bundle, each with its document and page."
+  },
+  {
+   "row_id": "exposure-denominators",
+   "field": "source",
+   "old": "None found",
+   "new": "U.S. Coast Guard, 2018 National Recreational Boating Safety Survey (Exposure and Participation reports, Oct 2020; released 7 Dec 2020); USLA, 2023 National Lifesaving Statistics; SLSA, NCSR 2021; SLS NSW, Coastal Safety Report 2023; Sport England, Active Lives (swimming)",
+   "evidence": "Documents opened for this bundle; see the evidence list."
+  },
+  {
+   "row_id": "exposure-denominators",
+   "field": "url",
+   "old": "",
+   "new": "https://uscgboating.org/statistics/national-recreational-boating-safety-survey.php",
+   "evidence": "The Coast Guard's NRBSS page, which links the 2018 Exposure and Participation reports and the 28 Oct 2022 errata and announces the 2026 survey; chosen because it is the one exposure survey built to be a fatality denominator."
+  },
+  {
+   "row_id": "exposure-denominators",
+   "field": "do_not_add_to",
+   "old": "Cannot be drawn. Without it, no rate on this site is a risk.",
+   "new": "Still not a single denominator: the measures named here differ in unit (boat-hours, person-hours, persons, days, visits), population (boaters; adults 16+; reporting beaches) and year, and none may be divided into a deaths row from another source, year or water. Risk per exposure is taken only where the publisher computed it (USLA, Coast Guard). Resident-based rates on this site are still not risks per trip.",
+   "evidence": "Definitions read in the NRBSS Exposure report p. 4, the USLA 2023 table, SLSA NCSR 2021 p. 7 and SLSNSW 2023 pp. 8 and 43."
+  },
+  {
+   "row_id": "exposure-denominators",
+   "field": "note",
+   "old": "Open task: count launches at one ramp for one season; pair with AIS for larger vessels.",
+   "new": "Lab judgment (D), 21 Oct 2026: a US boating risk per boat-hour is computable from NRBSS 2018 boat-hours and the Coast Guard's 2018 fatality count (not in the ledger); the Coast Guard already prints state risk ratios per boat day and boat hour in Section 3.22 of its Exposure report (unread here). A per-visit figure exists for USLA-guarded beaches (usla-guarded-risk). Australian coastal visits (adults, any purpose) and coastal drownings (all ages, all activities) are not compatible without adjustment; SLSA does not divide them. No launch or ramp count was found; that idea stays open.",
+   "evidence": "NRBSS Exposure report Section 1.2 pp. 4-5 and errata items for pp. 91, 97 and 109; usla.org/page/statistics opening paragraph; SLSA NCSR 2021 p. 35 and SLSNSW 2023 p. 43 (rates per 100,000 population only)."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://www.usla.org/page/statistics",
+   "quote": "comparing estimated beach attendance to the number of drowning deaths",
+   "where": "Opening paragraph, 'American Lifeguard Rescue and Drowning Statistics for Beaches'; same paragraph: 1 in 18 million (.0000055%), based on the last ten years of agency reports; USLA receives between 125 and 150 reports annually"
+  },
+  {
+   "url": "https://cdn.ymaws.com/www.usla.org/resource/collection/5EC218B0-758E-42CC-8FFD-A0503A24D3BA/2024_02_50_USLABOD_StatisticsActivity.pdf",
+   "quote": "Not all beaches in the United States contribute to the database.",
+   "where": "'Website Upgrades' section; p. 2 table 'Nationwide Incident Data', 2023 as of 4 Nov 2023: Beach Attendance 292,660,201, Rescues 64,578, Drownings unguarded 104, guarded 16; 'Beaches, Collection and Categories' section: typically more than 140 agencies/beaches report each year"
+  },
+  {
+   "url": "https://mail.uscgboating.org/library/recreational-boating-servey/NRBSS-Participation-Survey-Final-Report-11302020.pdf",
+   "quote": "averaged 17.5 days out on the water in recreational boats",
+   "where": "Section 3.4, p. 19 and Table 3-6 (median 8.0); Table 3-1, p. 14: 84,544 thousand persons boated, 26.5% of the population, 28.37 million households; 'boater' defined p. 14; sample pp. 9-11: 43,590 addresses, 5,851 completes, 14.9% response; Table 3-10, p. 24: 25.8 days"
+  },
+  {
+   "url": "https://uscgboating.org/library/recreational-boating-servey/NRBSS-Exposure-Survey-Final-Report-20201130-v3.0.pdf",
+   "quote": "3.6 billion person hours were spent on board recreational boats",
+   "where": "Section 1, p. 1 (2012 survey restated); p. 4 definitions of boat day, boat hours, person boat day, person boat hours; Section 1.2, pp. 4-5: 2011 state boating deaths per 100 million exposure hours ranged from 3 to 130; pp. 10-12 sample; text extraction ended at p. 18"
+  },
+  {
+   "url": "https://content.govdelivery.com/accounts/USDHSCG/bulletins/2affa6f",
+   "quote": "3.42 billion hours (over 130 hours per boat)",
+   "where": "Bulletin of 7 Dec 2020, paragraph on hours boats were operated; same bulletin: 84.5 million Americans boated, over 25% of the population; 14.5 million households; 25.4 million boats, 13.4 million unregistered"
+  },
+  {
+   "url": "https://uscgboating.org/library/recreational-boating-servey/2018-NRBSS-Errata-20221028.pdf",
+   "quote": "Recreational boating risk ratios use the numbers of boat days, boat hours,",
+   "where": "Correction to Exposure Report p. 91, paras 1-2; also p. 97 para 3 corrected to 56 per 100 million boat days and 10 per million boat hours for Maine; pp. 4-5 corrected so exposure is the denominator and casualties the numerator; p. 109 'million person boat days'"
+  },
+  {
+   "url": "https://uscgboating.org/statistics/national-recreational-boating-safety-survey.php",
+   "quote": "the launch of the 2026 National Recreational Boating Safety Survey (NRBSS)",
+   "where": "Page body; links the 2018 Exposure (v3.0) and Participation (v4.0) final reports and the 28 Oct 2022 errata; over 50,000 households to be invited in 2026; no 2012 or later results listed"
+  },
+  {
+   "url": "https://www.surflifesaving.com.au/wp-content/uploads/sites/2/2023/11/New-South-Wales-Coastal-Safety-Report-2023.pdf",
+   "quote": "More than 13 million visitations were recorded on patrolled beaches",
+   "where": "p. 5; p. 8: 5.5 million adults visited the coast, 3.6 times each month, over 200 million individual visitations, 51% to patrolled locations during patrolled hours; p. 5: 48 coastal drowning deaths 2022/23; p. 43: survey 6-30 April 2023, 3,118 respondents; rate = deaths divided by population"
+  },
+  {
+   "url": "https://www.marinebusinessnews.com.au/wp-content/uploads/2021/09/Surf-Life-Saving-2021-Report.pdf.pdf",
+   "quote": "over 500 million individual visitations to the coast last year",
+   "where": "SLSA National Coastal Safety Report 2021, pp. 1 and 7; p. 7: 14.4 million adults (16 and above) visited the coast 3.3 times each month, 2.3 hours per visit, 10.9 million activity participants; pp. 6-7 state table; p. 33: 136 coastal drowning deaths among 241 coastal deaths; p. 35: 0.53/100,000"
+  },
+  {
+   "url": "https://lifesaving.com.au/news/older-australians-most-at-risk-as-coastal-drownings-rises",
+   "quote": "154 lives were lost to drowning on Australia’s coast",
+   "where": "SLSA news release for the National Coastal Safety Report 2025 (FY25); no visitation or participation figures; the full report is linked only as an Issuu document"
+  },
+  {
+   "url": "https://supporttool.rnli.org/-/media/rnli/downloads/what_we_do/lifeguard_annual_report_2024.pdf",
+   "quote": "monitor the number of beach visitors",
+   "where": "p. 22 (data collection and a computer-vision count in research); pp. 3, 6-8: 198,992 supervised patrol hours, 13,135 incidents, 17,068 people aided, 85 lives saved; p. 30: 242 lifeguarded beaches; no visitor total printed"
+  },
+  {
+   "url": "https://microsites.sportengland.org/research-and-data/research/popular-activities/swimming",
+   "quote": "4.7 million people swim twice or more a month",
+   "where": "'At a glance'; 'Active Lives' section: 4.9 million swam twice in the preceding 28 days for November 2015-16, 4.5m May 2017/18, 4.7m May 2018/19"
+  },
+  {
+   "url": "https://nhess.copernicus.org/articles/19/389/2019/",
+   "quote": "represent a proportional exposure, on a per visitor basis",
+   "where": "Brewster, Gould and Brander 2019, Section 5.3 'Limitations and value of the USLA dataset'; Section 3: agencies include estimates of beach attendance; Section 5.2: 2012-2016 average 109.6 drowning deaths a year reported by surf rescue agencies; no per-visit rate computed"
+  },
+  {
+   "url": "https://researchonline.jcu.edu.au/71158/1/applsci-11-12047.pdf",
+   "quote": "Recorded person‐time in water summed for each subgroup was recorded in minutes.",
+   "where": "Morgan and Ozanne-Smith 2021, Applied Sciences 11:12047, Section 2.2 Step 2 and Table 1; Section 4.4.1: results generalise only to a small number of Victoria's surf beaches over one summer; mortality N = 129, 2001-2005; subgroup ratios only, no rate per exposure"
+  }
+ ],
+ "tried": [
+  "arc.usla.org/Statistics/Public.asp (the USLA statistics database with national totals by year, the ten-year denominator behind 1 in 18 million): fetch refused, robots disallowed. The 2023 national total was taken from the USLA Board of Directors 'Statistics Activity' report instead; per-year attendance was not read.",
+  "usla.org/page/statistics (fetched three times): the page text carries no hyperlinks in the fetched form, so the 'most recent year's statistics' link and the agency/region/year search could not be followed.",
+  "2018 NRBSS Exposure Survey Final Report PDF (mail.uscgboating.org ...11302020.pdf and uscgboating.org ...20201130-v3.0.pdf): the fetch tool's text extraction stops at 80,205 characters (about p. 18 of a 110-plus-page report), confirmed with offsets 40000, 60000 and 120000. Tables 3-24, 3-28, 3-36, 3-44 and 3-46 (national boat days, boat hours, person boat days, person boat hours) and Section 3.22 (risk ratios, pp. 91-109) were not read. The 3.42 billion boat-hours total was taken from the Coast Guard's own release bulletin.",
+  "Search for 2018 NRBSS 'person boat hours' / 'boat days' totals: only reprints of the Coast Guard bulletin (boatingindustry.com, workboat.com, sailingscuttlebutt.com, hstoday.us, iyba.org, marinadockage.com, latitude38.com); none prints person-hours or boat-days totals.",
+  "NASBLA public library copies (community.nasbla.org/viewdocument/exposure-survey-report-2018-nation and participation-survey-report-2018-n): not opened; a document-viewer page that likely needs a login, and the publisher's own PDFs were available.",
+  "SLSA National Coastal Safety Report 2025 and National Drowning Report 2025: published only on Issuu (issuu.com/surflifesavingaustralia/docs/slsa_ncsr_2025); the Issuu page exposes no document text. The SLSA news release for it (lifesaving.com.au) has no visitation figures. The Australian Sports Commission clearinghouse page (ausport.gov.au/clearinghouse/evidence/water-safety/slsa) lists the SLSA reports but links to Issuu only. Needs a person with a browser.",
+  "Searches for an sls.com.au PDF of the National Coastal Safety Report 2024 or 2025: none surfaced; the only PDF of a national edition found was the 2021 report mirrored on marinebusinessnews.com.au (used, and flagged in the rows).",
+  "RNLI lifeguard annual report 2024 (supporttool.rnli.org PDF): prints 242 lifeguarded beaches, 198,992 supervised patrol hours, 13,135 incidents, 17,068 people aided and 85 lives saved, but no beach-visit or visitor total; p. 22 says lifeguards collect data to monitor the number of beach visitors and a computer-vision count is in research. No exposure row possible. The 2023 edition was not opened.",
+  "Sport England swimming page (microsites.sportengland.org): the latest period named is May 2018/19 and there is no pool / open-water split; the Active Lives 2023-24 data tables were not opened (search surfaced only Swim England and press summaries).",
+  "Brewster, Gould and Brander 2019 (NHESS 19:389-397): analyses USLA rescues 1997-2016 and fatalities 2012-2016 but computes no per-visit rate and prints no attendance total.",
+  "Morgan and Ozanne-Smith 2021 (Applied Sciences 11:12047): measures surf bather exposure by direct observation in person-minutes at a few Victorian beaches but reports subgroup ratios, not a drowning rate per exposure; the group's earlier Injury Prevention paper (2008, 14:62-65) was not opened (bmj.com link only).",
+  "uscgboating.org NRBSS page: no 2012 survey report and no results after 2018 are listed; the 2026 survey (NORC) is announced with no results yet.",
+  "No search found any harbour, marina or boat-ramp launch count published as an exposure series, nor any inland-water exposure measure; the search budget (about 35 fetches and searches) was spent on the national surveys above."
+ ],
+ "notes": "Status done: published exposure measures exist, and two publishers already divide deaths by them. (1) US boating: the Coast Guard's 2018 National Recreational Boating Safety Survey (two RTI International reports, 30 Nov 2020; release 7 Dec 2020) gives 84.5 million boaters, 17.5 boating days per boater (median 8.0) and 3.42 billion boat-hours for all recreational boats; the 2012 survey gave 3.6 billion person-hours. The Exposure report's Section 1.2 prints 2011 state fatality rates of 3 to 130 per 100 million exposure hours, and Section 3.22 (pp. 91-109) holds 2018 state risk ratios per 100 million boat days and per million boat hours (the errata corrects the Maine entry to 56 and 10). The fetch tool's PDF text stopped at p. 18, so the national boat-day and person-hour tables and Section 3.22 were not read; the 3.42 billion rests on the Coast Guard's own release and should be confirmed in Table 3-36 by eye. Compatibility: the deaths series (uscg-boating-2024, us-location-boating-2024) and the NRBSS both cover recreational vessels nationwide, so a risk per boat-hour is computable for a matching year (2018 deaths are not in the ledger); the Coast Guard has done this itself. The next survey is 2026 (NORC), no results yet. (2) US beaches: USLA attendance is estimated by each reporting agency (typically more than 140) and summed by USLA; 2023 as of 4 Nov 2023: 292,660,201 attendance, 64,578 rescues, 16 guarded and 104 unguarded drownings. Numerator and denominator come from the same agencies, beaches and year, which is why USLA's 1 in 18 million (usla-guarded-risk, still printed) is the one per-visit drowning risk in the ledger. Caveats: estimation method unstated, partial-year snapshot, non-reporting beaches excluded, and Brewster et al. 2019 say the dataset cannot be shown to be proportional exposure per visitor. The per-year database (arc.usla.org) blocks automated fetching. (3) Australia: SLSA's annual National Coastal Safety Survey (adults 16+) gives 14.4 million coastal visitors, 3.3 visits a month, 2.3 hours a visit and 'over 500 million' visits for 2020/21 (NCSR 2021, read from a mirror PDF; the 2024 and 2025 editions are Issuu-only). SLS NSW 2022/23: 13 million visits recorded on patrolled beaches, plus 5.5 million adults and 'over 200 million' visits from the survey, 51% to patrolled locations in patrol hours. Compatibility: visits are adults, any purpose, with or without water entry; coastal drowning deaths are all ages and all activities (154 for 2024/25 in australia-location-2024-25; 48 in NSW 2022/23, 85% open cases). Both publishers compute rates per 100,000 population only. Judgment (D): a crude risk per adult coastal visit is arithmetically possible from one report but mixes definitions; not computed. (4) England: Sport England's swimming page prints 4.7 million people swimming twice or more a month (May 2018/19), no pool/open-water split; no risk per swim can be formed. (5) Not found: harbour, marina or ramp launch counts; inland-water exposure anywhere; RNLI beach-visit totals (RNLI counts visitors but publishes none); a current SLSA national figure; a current Active Lives swimming figure. Grades: A for the producers' own documents, including the Coast Guard bulletin (its own release) and the SLSA 2021 PDF read from a mirror; a reviewer may prefer C for the bulletin. For the 'over' and 'more than' rows, low is the printed floor and high is null. No person's name is recorded; the errata sheet names a programme manager and that was left out. Corrections replace the exposure-denominators row's 'none found' wording while keeping its grade D; its year (null) could become 2018 but a null cannot be copied as a string, so it is left to the reviewer. usla-guarded-risk needs no change. The canada-location-lifeguard-supervised-2018-22 note says 'nobody counts the visits'; USLA and SLS NSW do, for their own beaches. About 35 fetches and searches were used, over the 25 suggested. VERIFICATION 21 Oct 2026: all 12 figures confir",
+ "next_tasks": [
+  {
+   "title": "Read Section 3.22 (pp. 91-109) and Tables 3-24, 3-28, 3-36, 3-44 and 3-46 of the 2018 NRBSS Exposure Survey Final Report by eye; file the national boat-day and person-hour totals and the state risk ratios per boat day and boat hour",
+   "why": "The text extraction truncated at p. 18; the Coast Guard already prints per-exposure fatality ratios there (the errata confirm Maine at 56 per 100 million boat days). Needs a person with a browser or PDF reader."
+  },
+  {
+   "title": "Open the SLSA National Coastal Safety Report 2025 (Issuu only) and file the national coastal visitation and participation figures for 2024/25 beside the 154 coastal drowning deaths",
+   "why": "The current national exposure measure for the Australian coast could not be read without a browser; the 2021 edition is the latest reachable."
+  },
+  {
+   "title": "Pull USLA national statistics by year (attendance, rescues, guarded and unguarded drownings) for the ten years behind the 1 in 18 million figure from the USLA statistics database",
+   "why": "arc.usla.org refuses automated fetching; a person with a browser can read the per-year series that the 2023 snapshot only samples."
+  },
+  {
+   "title": "Record the U.S. Coast Guard 2018 Recreational Boating Statistics fatality and drowning counts so they can sit beside the 2018 NRBSS boat-hours as a same-year pair",
+   "why": "The ledger holds 2024 deaths but 2018 exposure; a risk per boat-hour needs the same year, and the pairing must be done by a person who states the rule."
+  },
+  {
+   "title": "Needs a person with the PDF: confirm Table 3-36 (3.42 billion boat-hours) and p. 40 ('3.32 million power boats trailered and launched') in the 2018 NRBSS Exposure report; regrade us-nrbss-boat-hours-2018 to A and file the launch count",
+   "why": "The errata reference a printed launch-related exposure measure the fetch tool could not reach, and the boat-hours row currently rests on the release bulletin."
+  }
+ ]
+}
