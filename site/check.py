@@ -27,7 +27,7 @@ html = re.sub(r'<link rel="stylesheet" href="https://fonts[^>]*>', '', html)
 html = html.replace('</head>', "<style>@font-face{font-family:'Newsreader';src:local('Bitstream Charter'),local('DejaVu Serif')}@font-face{font-family:'Public Sans';src:local('Inter'),local('DejaVu Sans')}@font-face{font-family:'IBM Plex Mono';src:local('DejaVu Sans Mono')}</style></head>", 1)
 open(os.path.join(DIST, 'check.html'), 'w', encoding='utf8').write(html)
 
-OVERFLOW = """() => { const vw = document.documentElement.clientWidth; const bad = []; for (const el of document.querySelectorAll('body *')) { const r = el.getBoundingClientRect(); if (r.width > 0 && r.right > vw + 1 && !el.closest('.tscroll')) bad.push(el.tagName + '.' + (el.className || '') + ':' + Math.round(r.right)); } return { sw: document.documentElement.scrollWidth, vw, bad: bad.slice(0, 6) }; }"""
+OVERFLOW = """() => { const vw = document.documentElement.clientWidth; const bad = [], inner = []; for (const el of document.querySelectorAll('body *')) { const r = el.getBoundingClientRect(); if (r.width > 0 && r.right > vw + 1) (el.closest('.tscroll') ? inner : bad).push(el.tagName + '.' + (el.className || '') + ':' + Math.round(r.right) + (getComputedStyle(el).position === 'fixed' ? ':fixed' : '')); } return { sw: document.documentElement.scrollWidth, vw, bad: bad.slice(0, 6), inner: inner.slice(0, 6) }; }"""
 CONTRAST = r"""() => {
   const parse = (c) => { const m = c.match(/rgba?\(([^)]+)\)/); if (!m) return null; const p = m[1].split(',').map(Number); return { r: p[0], g: p[1], b: p[2], a: p.length > 3 ? p[3] : 1 }; };
   const lum = (c) => { const f = (v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }; return 0.2126 * f(c.r) + 0.7152 * f(c.g) + 0.0722 * f(c.b); };
@@ -62,7 +62,7 @@ try:
             for route in ROUTES:
                 page.goto(f'http://127.0.0.1:{PORT}/check.html#{route}'); page.wait_for_timeout(500)
                 o = page.evaluate(OVERFLOW)
-                if o['sw'] > o['vw']: failures.append(f'{width} {route}: horizontal scroll ({o["sw"]} > {o["vw"]}): {o["bad"]}')
+                if o['sw'] > o['vw']: failures.append(f'{width} {route}: horizontal scroll ({o["sw"]} > {o["vw"]}): {o["bad"] or ("inside .tscroll: " + str(o["inner"]))}')
                 if width == 1440:
                     c = page.evaluate(CONTRAST)
                     if c: failures.append(f'{route}: low contrast: {json.dumps(c[:5])}')
