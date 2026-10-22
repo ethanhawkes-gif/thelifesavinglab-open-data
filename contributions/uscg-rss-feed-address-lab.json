@@ -1,0 +1,310 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "uscg-rss-feed-address",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Fable 5.1, lab session with the desktop app's browser, 2026-10-21"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "uscg-govdelivery-feed-151",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_151/feed.rss · RSS 2.0, 100 items, newest 20 Oct 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_151, channel title \"U.S. Coast Guard Headquarters News - Recent Updates\": press releases and news stories of the national headquarters releases, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_151 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_151/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-158",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_158/feed.rss · RSS 2.0, 100 items, newest 05 Oct 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_158, channel title \"U.S. Coast Guard Northeast District News - Recent Updates\": press releases and news stories of the Northeast District, New England, which covers Portsmouth Harbor, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_158 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_158/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-160",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_160/feed.rss · RSS 2.0, 100 items, newest 22 Sep 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_160, channel title \"U.S. Coast Guard East District News - Recent Updates\": press releases and news stories of the East District, mid-Atlantic, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_160 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_160/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-164",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_164/feed.rss · RSS 2.0, 100 items, newest 20 Oct 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_164, channel title \"U.S. Coast Guard Southeast District News - Recent Updates\": press releases and news stories of the Southeast District, already enabled in the watch as uscg-d7-govdelivery, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_164 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_164/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-169",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_169/feed.rss · RSS 2.0, 100 items, newest 12 Oct 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_169, channel title \"U.S. Coast Guard Heartland District News - Recent Updates\": press releases and news stories of the Heartland District, Gulf Coast and western rivers, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_169 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_169/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-171",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_171/feed.rss · RSS 2.0, 37 items, newest 27 Nov 2023 (stale)",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2023,
+   "scope": "GovDelivery topic USDHSCG_171, channel title \"U.S. Coast Guard Great Lakes District News - Recent Updates\": press releases and news stories of the Great Lakes District, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026. Newest item 27 Nov 2023, so the topic looks abandoned.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_171 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_171/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Stale topic; listed so the gap is visible. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-172",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_172/feed.rss · RSS 2.0, 100 items, newest 18 Oct 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_172, channel title \"U.S. Coast Guard Southwest District News - Recent Updates\": press releases and news stories of the Southwest District, California and Arizona, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_172 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_172/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-176",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_176/feed.rss · RSS 2.0, 100 items, newest 05 Oct 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_176, channel title \"U.S. Coast Guard Northwest District News - Recent Updates\": press releases and news stories of the Northwest District, Pacific Northwest, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_176 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_176/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-178",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_178/feed.rss · RSS 2.0, 100 items, newest 19 Oct 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_178, channel title \"U.S. Coast Guard Oceania District News - Recent Updates\": press releases and news stories of the Oceania District, Hawaii and the Pacific, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_178 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_178/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-179",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_179/feed.rss · RSS 2.0, 100 items, newest 20 Oct 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_179, channel title \"U.S. Coast Guard Arctic District News - Recent Updates\": press releases and news stories of the Arctic District, Alaska, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_179 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_179/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-182",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_182/feed.rss · RSS 2.0, 100 items, newest 28 Sep 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_182, channel title \"U.S. Coast Guard Atlantic Area News - Recent Updates\": press releases and news stories of the Atlantic Area, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_182 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_182/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-183",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_183/feed.rss · RSS 2.0, 100 items, newest 20 Oct 2026",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2026,
+   "scope": "GovDelivery topic USDHSCG_183, channel title \"U.S. Coast Guard Pacific Area News - Recent Updates\": press releases and news stories of the Pacific Area, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_183 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_183/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Returned items to a plain fetch with no special headers. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  },
+  {
+   "id": "uscg-govdelivery-feed-157",
+   "figure": "https://public.govdelivery.com/topics/USDHSCG_157/feed.rss · RSS 2.0, 100 items, newest 24 Jan 2023 (stale)",
+   "low": null,
+   "high": null,
+   "unit": "feed",
+   "year": 2023,
+   "scope": "GovDelivery topic USDHSCG_157, channel title \"U.S. Coast Guard Official News - Recent Updates\": press releases and news stories of the national compilation of every Coast Guard news topic, delivered as bulletins whose links point to content.govdelivery.com (each bulletin carries the release text). Not an incident log and not statistics. Checked from the desktop app's browser on 21 Oct 2026. Newest item 24 Jan 2023, so the topic looks abandoned.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, GovDelivery topic USDHSCG_157 (public RSS feed)",
+   "url": "https://public.govdelivery.com/topics/USDHSCG_157/feed.rss",
+   "grade": "C",
+   "do_not_add_to": "A feed address, not a figure. Items are reports, not counts; the same event appears in several district feeds and in press feeds, so items are never summed.",
+   "note": "Stale topic; listed so the gap is visible. No terms of use are printed in the feed; GovDelivery's public pages carry the Coast Guard's privacy notice only."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_151/feed.rss",
+   "quote": "U.S. Coast Guard Headquarters News - Recent Updates · Official news from the Coast Guard Headquarters in Washington, D.C.",
+   "where": "RSS channel title and description; newest item pubDate Tue, 20 Oct 2026 11:30:05 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_158/feed.rss",
+   "quote": "U.S. Coast Guard Northeast District News - Recent Updates · Official news from the Coast Guard Northeast District in Boston, Massachusetts",
+   "where": "RSS channel title and description; newest item pubDate Mon, 05 Oct 2026 19:15:15 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_160/feed.rss",
+   "quote": "U.S. Coast Guard East District News - Recent Updates",
+   "where": "RSS channel title; newest item pubDate Tue, 22 Sep 2026 16:15:07 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_164/feed.rss",
+   "quote": "U.S. Coast Guard Southeast District News - Recent Updates · Official news from the Coast Guard Southeast District in Miami, Florida",
+   "where": "RSS channel title and description; newest item pubDate Tue, 20 Oct 2026 12:15:07 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_169/feed.rss",
+   "quote": "U.S. Coast Guard Heartland District News - Recent Updates",
+   "where": "RSS channel title; newest item pubDate Mon, 12 Oct 2026 22:15:06 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_171/feed.rss",
+   "quote": "U.S. Coast Guard Great Lakes District News - Recent Updates",
+   "where": "RSS channel title; newest item pubDate Mon, 27 Nov 2023 10:15:09 -0500; 37 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_172/feed.rss",
+   "quote": "U.S. Coast Guard Southwest District News - Recent Updates",
+   "where": "RSS channel title; newest item pubDate Sun, 18 Oct 2026 23:45:04 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_176/feed.rss",
+   "quote": "U.S. Coast Guard Northwest District News - Recent Updates",
+   "where": "RSS channel title; newest item pubDate Mon, 05 Oct 2026 19:00:05 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_178/feed.rss",
+   "quote": "U.S. Coast Guard Oceania District News - Recent Updates",
+   "where": "RSS channel title; newest item pubDate Mon, 19 Oct 2026 04:45:05 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_179/feed.rss",
+   "quote": "U.S. Coast Guard Arctic District News - Recent Updates",
+   "where": "RSS channel title; newest item pubDate Tue, 20 Oct 2026 15:45:08 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_182/feed.rss",
+   "quote": "U.S. Coast Guard Atlantic Area News - Recent Updates",
+   "where": "RSS channel title; newest item pubDate Mon, 28 Sep 2026 14:30:07 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_183/feed.rss",
+   "quote": "U.S. Coast Guard Pacific Area News - Recent Updates",
+   "where": "RSS channel title; newest item pubDate Tue, 20 Oct 2026 16:15:10 -0500; 100 items"
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_157/feed.rss",
+   "quote": "U.S. Coast Guard Official News - Recent Updates · A compilation of official news from all of the Coast Guard news topics",
+   "where": "RSS channel title and description; newest item pubDate Tue, 24 Jan 2023 09:01:20 -0600; 100 items"
+  },
+  {
+   "url": "https://www.news.uscg.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1041&max=5",
+   "quote": "U.S. Department of Homeland Security News",
+   "where": "RSS channel title returned to the browser (HTTP 200, text/xml, 0 items): Site 1041 is DHS, not the Coast Guard"
+  },
+  {
+   "url": "https://www.news.uscg.mil/RSS/",
+   "quote": "United States Coast Guard News > RSS",
+   "where": "Page title of the site's /RSS/ page; its content pane is empty, with no feed addresses"
+  },
+  {
+   "url": "https://www.news.uscg.mil/Press-Releases/",
+   "quote": "NEWS HOME PRESS RELEASES Oct. 20, 2026",
+   "where": "Listing page header and newest item date, 21 Oct 2026; the page source has no RSS link, no RSS.ashx address and no Site id"
+  }
+ ],
+ "tried": [
+  "news.uscg.mil home page, /Press-Releases/ and an article page, read as rendered HTML in the browser on 21 Oct 2026: no RSS icon, no feed link element, no \"RSS.ashx\" string anywhere in the source; the site's social-links block has an empty RSS URL; the portal id is 11 (Portals/11/) and the press-release list module is ModuleId 30762, but neither is the ArticleCS Site id.",
+  "https://www.news.uscg.mil/RSS/ exists (page title \"United States Coast Guard News > RSS\") but its content pane is empty.",
+  "RSS.ashx?ContentType=1&Site=1041 answered the browser with HTTP 200 and a valid RSS 2.0 channel titled \"U.S. Department of Homeland Security News\" (0 items), so 1041 is DHS's ArticleCS site id, and the HTTP 404 the GitHub runner got on 15 Oct 2026 was client filtering rather than a wrong path: the handler answers browsers and refuses the runner's user agent. ContentType=2 with Site=1041 returned HTTP 200 with an empty body.",
+  "Site ids are shared across every AFPIMS site (1030 is \"NCO World Campus News\", 1035 \"Director Operational Test and Evaluation News\", 1042 \"Air Force Nuclear Weapons Center News\"). Probing ids 1 to 760 and 1030 to 1045 found no Coast Guard channel; the site's edge then answered Akamai \"Access Denied\" (HTTP 403) on the RSS.ashx path for the rest of the session while ordinary pages kept loading. Do not repeat this: the id has to come from the Coast Guard's web team or a page that prints it.",
+  "www.uscg.mil home page: no feed link, empty RSS URL in its social-links block.",
+  "public.govdelivery.com/accounts/USDHSCG/subscriber/topics redirects to the sign-up form, which needs an email address before it lists topics, so the topic list was not read that way; the topic feeds themselves are public, and USDHSCG_1 to USDHSCG_260 were fetched directly (feed.rss) to find the news topics in the rows.",
+  "No national GovDelivery news topic is live: USDHSCG_157 \"U.S. Coast Guard Official News\" (\"A compilation of official news from all of the Coast Guard news topics\") stopped on 24 Jan 2023; national coverage today is the headquarters topic (151) plus the district and area topics."
+ ],
+ "notes": "The ArticleCS feed on news.uscg.mil was not confirmed: the handler works for browser clients (proved with the DHS channel at Site=1041) but the Coast Guard's own Site id is printed nowhere on the site, and guessing ids got the browser's address blocked on that path. What was confirmed instead, by fetching each feed and reading its channel title and newest pubDate on 21 Oct 2026, is the full set of Coast Guard GovDelivery news topics: headquarters (USDHSCG_151, newest 20 Oct 2026) and one topic per district and area (rows). Together they cover every district, which is what the watch wanted from a national feed. Suggested watch change: enable 151, 158, 160, 169, 172, 176, 178, 179, 182 and 183 beside the Southeast topic (164) already enabled, and keep 171 and 157 disabled with a note. Public-affairs detachment topics also exist and return items (159 New York, 166 Jacksonville, 167 Tampa Bay, 168 Puerto Rico and USVI, 170 Texas, 174 San Diego, 175 Los Angeles-Long Beach, 177 Astoria, 180 Kodiak, 181 Anchorage); they repeat their district's releases, so they are listed here rather than as rows. Bulletin links point to content.govdelivery.com rather than news.uscg.mil; the watch's link-only storage works unchanged. The runner's 404 on 15 Oct 2026 means the watch's user agent is refused by the ArticleCS handler; if the Site id is ever learned, the fetch will need a browser-like user agent. Nothing in this bundle is a count.",
+ "next_tasks": [
+  {
+   "title": "Ask the Coast Guard news site's web team for the ArticleCS Site id of news.uscg.mil, or find one page that prints the RSS.ashx address",
+   "why": "The handler answers browsers; only the site id is missing, and probing ids triggers an edge block"
+  },
+  {
+   "title": "Enable the ten live Coast Guard GovDelivery district and headquarters topics in watch/sources.json and record the per-source match rate after a week",
+   "why": "Confirmed feeds with items from October 2026; the watch currently reads only the Southeast topic"
+  }
+ ]
+}

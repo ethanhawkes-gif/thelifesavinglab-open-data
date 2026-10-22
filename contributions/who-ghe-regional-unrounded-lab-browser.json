@@ -1,0 +1,400 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "who-ghe-regional-unrounded",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Fable 5.1, lab session with the desktop app's browser, 2026-10-21"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "who-ghe2023-global-2019-drowning",
+   "figure": "322,447 drowning deaths (cell value 322447.461)",
+   "low": 322447,
+   "high": 322447,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"Global 2019\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 225,597, female 96,850. The sheet prints the population as 7,795,438.199 thousand. A modelled point estimate; the workbook prints no uncertainty range. The GHE 2019 release printed a different 2019 value; this is the re-estimate in the 2023 release.",
+   "geography": "Global",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"Global 2019\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-global-2021-drowning",
+   "figure": "319,879 drowning deaths (cell value 319879.011)",
+   "low": 319879,
+   "high": 319879,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"Global 2021\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 221,840, female 98,039. The sheet prints the population as 7,938,440.928 thousand. A modelled point estimate; the workbook prints no uncertainty range. Not comparable with the GHE 2021 release the 2024 WHO report used (300 000 (300,228 in the GHE 2021 summary table) for 2021): WHO says these estimates are not comparable to previously released ones.",
+   "geography": "Global",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"Global 2021\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-global-2023-drowning",
+   "figure": "324,021 drowning deaths (cell value 324021.333) · CDR 4.01 per 100 000",
+   "low": 324021,
+   "high": 324021,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"Global 2023\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 229,937, female 94,084. The sheet prints the population as 8,075,610.335 thousand. A modelled point estimate; the workbook prints no uncertainty range. First GHE value the ledger holds for 2023; the 2024 WHO report has none.",
+   "geography": "Global",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"Global 2023\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "CDR as printed in the workbook's Summary sheet for 2023 (* CDR = crude death rate (per 100 000 population)): 4.01. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-afr-2019-drowning",
+   "figure": "69,055 drowning deaths (cell value 69055.411)",
+   "low": 69055,
+   "high": 69055,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"AFR 2019\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 48,174, female 20,882. The sheet prints the population as 1,120,228.652 thousand. A modelled point estimate; the workbook prints no uncertainty range. The GHE 2019 release printed a different 2019 value; this is the re-estimate in the 2023 release.",
+   "geography": "African Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"AFR 2019\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-afr-2021-drowning",
+   "figure": "69,522 drowning deaths (cell value 69521.746)",
+   "low": 69522,
+   "high": 69522,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"AFR 2021\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 47,494, female 22,028. The sheet prints the population as 1,177,529.967 thousand. A modelled point estimate; the workbook prints no uncertainty range. Not comparable with the GHE 2021 release the 2024 WHO report used (66 000 · 5.6 for 2021): WHO says these estimates are not comparable to previously released ones.",
+   "geography": "African Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"AFR 2021\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-afr-2023-drowning",
+   "figure": "73,743 drowning deaths (cell value 73743.176) · CDR 5.96 per 100 000",
+   "low": 73743,
+   "high": 73743,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"AFR 2023\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 52,552, female 21,191. The sheet prints the population as 1,236,605.866 thousand. A modelled point estimate; the workbook prints no uncertainty range. First GHE value the ledger holds for 2023; the 2024 WHO report has none.",
+   "geography": "African Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"AFR 2023\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "CDR as printed in the workbook's Summary sheet for 2023 (* CDR = crude death rate (per 100 000 population)): 5.96. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-amr-2019-drowning",
+   "figure": "18,986 drowning deaths (cell value 18985.510)",
+   "low": 18986,
+   "high": 18986,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"AMR 2019\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 15,741, female 3,245. The sheet prints the population as 1,015,932.326 thousand. A modelled point estimate; the workbook prints no uncertainty range. The GHE 2019 release printed a different 2019 value; this is the re-estimate in the 2023 release.",
+   "geography": "Region of the Americas",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"AMR 2019\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-amr-2021-drowning",
+   "figure": "19,541 drowning deaths (cell value 19540.860)",
+   "low": 19541,
+   "high": 19541,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"AMR 2021\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 16,173, female 3,367. The sheet prints the population as 1,027,256.481 thousand. A modelled point estimate; the workbook prints no uncertainty range. Not comparable with the GHE 2021 release the 2024 WHO report used (17 000 · 1.6 for 2021): WHO says these estimates are not comparable to previously released ones.",
+   "geography": "Region of the Americas",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"AMR 2021\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-amr-2023-drowning",
+   "figure": "19,757 drowning deaths (cell value 19757.382) · CDR 1.90 per 100 000",
+   "low": 19757,
+   "high": 19757,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"AMR 2023\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 16,487, female 3,270. The sheet prints the population as 1,039,858.310 thousand. A modelled point estimate; the workbook prints no uncertainty range. First GHE value the ledger holds for 2023; the 2024 WHO report has none.",
+   "geography": "Region of the Americas",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"AMR 2023\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "CDR as printed in the workbook's Summary sheet for 2023 (* CDR = crude death rate (per 100 000 population)): 1.90. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-emr-2019-drowning",
+   "figure": "27,570 drowning deaths (cell value 27569.805)",
+   "low": 27570,
+   "high": 27570,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"EMR 2019\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 19,725, female 7,845. The sheet prints the population as 752,215.971 thousand. A modelled point estimate; the workbook prints no uncertainty range. The GHE 2019 release printed a different 2019 value; this is the re-estimate in the 2023 release.",
+   "geography": "Eastern Mediterranean Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"EMR 2019\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-emr-2021-drowning",
+   "figure": "23,775 drowning deaths (cell value 23775.497)",
+   "low": 23775,
+   "high": 23775,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"EMR 2021\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 16,856, female 6,919. The sheet prints the population as 779,594.129 thousand. A modelled point estimate; the workbook prints no uncertainty range. Not comparable with the GHE 2021 release the 2024 WHO report used (35 000 · 4.4 for 2021): WHO says these estimates are not comparable to previously released ones.",
+   "geography": "Eastern Mediterranean Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"EMR 2021\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-emr-2023-drowning",
+   "figure": "27,886 drowning deaths (cell value 27885.631) · CDR 3.44 per 100 000",
+   "low": 27886,
+   "high": 27886,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"EMR 2023\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 20,181, female 7,705. The sheet prints the population as 809,901.418 thousand. A modelled point estimate; the workbook prints no uncertainty range. First GHE value the ledger holds for 2023; the 2024 WHO report has none.",
+   "geography": "Eastern Mediterranean Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"EMR 2023\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "CDR as printed in the workbook's Summary sheet for 2023 (* CDR = crude death rate (per 100 000 population)): 3.44. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-eur-2019-drowning",
+   "figure": "16,940 drowning deaths (cell value 16940.001)",
+   "low": 16940,
+   "high": 16940,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"EUR 2019\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 13,594, female 3,346. The sheet prints the population as 934,339.490 thousand. A modelled point estimate; the workbook prints no uncertainty range. The GHE 2019 release printed a different 2019 value; this is the re-estimate in the 2023 release.",
+   "geography": "European Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"EUR 2019\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-eur-2021-drowning",
+   "figure": "16,972 drowning deaths (cell value 16971.747)",
+   "low": 16972,
+   "high": 16972,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"EUR 2021\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 13,730, female 3,242. The sheet prints the population as 938,046.694 thousand. A modelled point estimate; the workbook prints no uncertainty range. Not comparable with the GHE 2021 release the 2024 WHO report used (15 000 · 1.7 for 2021): WHO says these estimates are not comparable to previously released ones.",
+   "geography": "European Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"EUR 2021\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-eur-2023-drowning",
+   "figure": "18,469 drowning deaths (cell value 18469.176) · CDR 1.97 per 100 000",
+   "low": 18469,
+   "high": 18469,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"EUR 2023\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 15,162, female 3,307. The sheet prints the population as 939,115.518 thousand. A modelled point estimate; the workbook prints no uncertainty range. First GHE value the ledger holds for 2023; the 2024 WHO report has none.",
+   "geography": "European Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"EUR 2023\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "CDR as printed in the workbook's Summary sheet for 2023 (* CDR = crude death rate (per 100 000 population)): 1.97. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-sear-2019-drowning",
+   "figure": "91,051 drowning deaths (cell value 91050.593)",
+   "low": 91051,
+   "high": 91051,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"SEAR 2019\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 61,593, female 29,458. The sheet prints the population as 1,757,522.168 thousand. A modelled point estimate; the workbook prints no uncertainty range. The GHE 2019 release printed a different 2019 value; this is the re-estimate in the 2023 release.",
+   "geography": "South-East Asia Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"SEAR 2019\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-sear-2021-drowning",
+   "figure": "94,187 drowning deaths (cell value 94187.306)",
+   "low": 94187,
+   "high": 94187,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"SEAR 2021\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 63,902, female 30,286. The sheet prints the population as 1,788,026.921 thousand. A modelled point estimate; the workbook prints no uncertainty range. Not comparable with the GHE 2021 release the 2024 WHO report used (83 000 · 4.0 for 2021): WHO says these estimates are not comparable to previously released ones.",
+   "geography": "South-East Asia Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"SEAR 2021\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-sear-2023-drowning",
+   "figure": "89,915 drowning deaths (cell value 89914.851) · CDR 4.95 per 100 000",
+   "low": 89915,
+   "high": 89915,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"SEAR 2023\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 61,862, female 28,053. The sheet prints the population as 1,817,153.989 thousand. A modelled point estimate; the workbook prints no uncertainty range. First GHE value the ledger holds for 2023; the 2024 WHO report has none.",
+   "geography": "South-East Asia Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"SEAR 2023\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "CDR as printed in the workbook's Summary sheet for 2023 (* CDR = crude death rate (per 100 000 population)): 4.95. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-wpr-2019-drowning",
+   "figure": "98,846 drowning deaths (cell value 98846.141)",
+   "low": 98846,
+   "high": 98846,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"WPR 2019\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 66,771, female 32,075. The sheet prints the population as 2,215,199.592 thousand. A modelled point estimate; the workbook prints no uncertainty range. The GHE 2019 release printed a different 2019 value; this is the re-estimate in the 2023 release.",
+   "geography": "Western Pacific Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"WPR 2019\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-wpr-2021-drowning",
+   "figure": "95,882 drowning deaths (cell value 95881.854)",
+   "low": 95882,
+   "high": 95882,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"WPR 2021\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 63,685, female 32,197. The sheet prints the population as 2,227,986.736 thousand. A modelled point estimate; the workbook prints no uncertainty range. Not comparable with the GHE 2021 release the 2024 WHO report used (84 000 · 4.3 for 2021): WHO says these estimates are not comparable to previously released ones.",
+   "geography": "Western Pacific Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"WPR 2021\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "The region sheet prints deaths and population but no rate for this cause; the Summary sheet prints a crude rate for 2023 only. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  },
+  {
+   "id": "who-ghe2023-wpr-2023-drowning",
+   "figure": "94,251 drowning deaths (cell value 94251.117) · CDR 4.22 per 100 000",
+   "low": 94251,
+   "high": 94251,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "WHO Global Health Estimates 2023 release (workbook dated September 2026), sheet \"WPR 2023\", row with Code 1570 and Cause of death \"Drowning\" (GHE cause group \"5.\" under Unintentional injuries), column Both sexes, Total (all ages). Male 63,694, female 30,558. The sheet prints the population as 2,232,975.234 thousand. A modelled point estimate; the workbook prints no uncertainty range. First GHE value the ledger holds for 2023; the 2024 WHO report has none.",
+   "geography": "Western Pacific Region",
+   "source": "WHO, Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023 (Geneva, 2026), regional summary workbook deaths_whoregion_2026-09-30.xlsx, sheet \"WPR 2023\"",
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "grade": "A",
+   "do_not_add_to": "Regions are never summed by the lab (the workbook's own Global sheet is the total). Never averaged with or compared as a trend against the GHE 2021 or GHE 2019 release values in who-ghe-2021, who-ghe-2019 or the who-region rows: different revision series.",
+   "note": "CDR as printed in the workbook's Summary sheet for 2023 (* CDR = crude death rate (per 100 000 population)): 4.22. Read from the xlsx in the desktop app's browser on 21 Oct 2026 (the lab's fetch tools cannot read Excel)."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "quote": "GLOBAL HEALTH ESTIMATES 2023 SUMMARY TABLES: DEATHS BY CAUSE, AGE AND SEX, BY WHO REGION, 2000-2023",
+   "where": "Sheet Notes, rows 1-2 (the sheet dates the workbook \"Sepetember 2026\", as spelled)"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "quote": "Due to changes in data and some methods, these estimates are not comparable to previously-released WHO estimates.",
+   "where": "Sheet Notes, workbook description paragraph"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "quote": "Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023. Geneva, World Health Organization; 2026.",
+   "where": "Sheet Notes, Recommended citation"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "quote": "* CDR = crude death rate (per 100 000 population)",
+   "where": "Sheet Summary, row 4; the Summary sheet gives Deaths (000s), % of total deaths and CDR for 2023 and 2000 by region"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "quote": "1570 5. Drowning 324.021 0.530 4.012",
+   "where": "Sheet Summary, row 215, Global 2023 columns (Deaths (000s), % of total deaths, CDR)"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "quote": "1570 5. Drowning 16971.747 13730.084 3241.662",
+   "where": "Sheet EUR 2021, row 216, columns Both sexes, Male, Female (Total, all ages)"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "quote": "Region: European Region Year: 2021 Population (thousands) 938046.694",
+   "where": "Sheet EUR 2021, rows 3, 4 and 8"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "quote": "1570 5. Drowning 69521.746 47493.597 22028.148",
+   "where": "Sheet AFR 2021, Drowning row, Both sexes, Male, Female"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1",
+   "quote": "1570 5. Drowning 319879.010 221840.220 98038.790",
+   "where": "Sheet Global 2021, Drowning row, Both sexes, Male, Female"
+  },
+  {
+   "url": "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death",
+   "quote": "WHO regions",
+   "where": "Leading causes of death page, link text of the regional workbook (deaths_whoregion_2026-09-30.xlsx), 21 Oct 2026"
+  }
+ ],
+ "tried": [
+  "The workbook could not be fetched from a www.who.int page (cross-origin), so the browser was pointed at the cdn.who.int folder and the file fetched from the same origin and parsed in the page with SheetJS; no file was saved to disk.",
+  "Sheets present: Notes, Top20, Summary, and one sheet per region and year for Global, AFR, AMR, EMR, EUR, SEAR and WPR in 2000, 2010, 2015, 2019, 2020, 2021, 2022 and 2023. The 2020 and 2022 sheets were not transcribed (the task asked for 2019, 2021 and 2023).",
+  "The 2021-release and 2019-release regional workbooks are no longer linked from the page (only the 2023 release, dated September 2026, and a GHE2016 .xls), so the rounded report figures could not be matched against their own vintage here."
+ ],
+ "notes": "The task asked whether the unrounded 2021 values match the 2024 report's rounded figures. They do not, and WHO says they should not: the only regional workbook now served is the GHE 2023 release (September 2026), whose Notes sheet says the estimates are not comparable to previously released ones. In that release, 2021 drowning deaths are Global 319,879; Western Pacific 95,882; South-East Asia 94,187; Africa 69,522; Eastern Mediterranean 23,775; Americas 19,541; Europe 16,972 — against the report's GHE 2021 figures of 300,000 (300,228); 84,000; 83,000; 66,000; 35,000; 17,000; 15,000. Europe, for example, moved from 15,000 to 16,972, the Eastern Mediterranean from 35,000 to 23,775. The cause row is GHE code 1570 \"Drowning\", group 5 under Unintentional injuries; the workbook does not print ICD codes, so the W65–W74 mapping rests on the GHE methods paper the ledger already cites. Counts are model outputs stored with decimals; rows give the cell value and the nearest whole death. Rates: the Summary sheet prints a crude death rate for 2023 only (Global 4.01; Africa 5.96; South-East Asia 4.95; Western Pacific 4.22; Eastern Mediterranean 3.44; Americas 1.90; Europe 1.97 per 100 000); for 2019 and 2021 the region sheets print deaths and population (thousands) but no rate, and none was computed. Nothing was summed across regions: the Global rows are the workbook's own Global sheets. Reviewer: a companion bundle from an independent agent for this task records the GHE 2019-release regional statements and corrections to who-region-eur's placeholder source and url; this bundle adds the workbook values only. Second bundle for this task from the lab session, reading the workbook the independent agent could not open. Cell values are quoted to three decimals because the full-precision strings trip the lab's phone-number filter; the workbook holds more decimals.",
+ "next_tasks": [
+  {
+   "title": "Decide how the ledger shows WHO revision series: keep the 2024 report's GHE 2021 figures as the cited vintage, and add the GHE 2023 release as a separate, non-comparable series",
+   "why": "Readers will meet both 15,000 and 16,972 for Europe 2021; the ledger should say why without averaging"
+  },
+  {
+   "title": "Transcribe the 2020 and 2022 sheets of the same workbook for all regions",
+   "why": "They sit in the file already opened and would give an unbroken 2019–2023 series on one vintage"
+  },
+  {
+   "title": "Read the GHE 2023 methods paper's cause list to confirm that GHE cause 1570 Drowning is still W65–W74 in this release",
+   "why": "The workbook prints no ICD codes"
+  }
+ ]
+}

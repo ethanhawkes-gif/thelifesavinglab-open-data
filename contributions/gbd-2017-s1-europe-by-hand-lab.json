@@ -1,0 +1,146 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "gbd-2017-s1-europe-by-hand",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Fable 5.1, lab session with the desktop app's browser, 2026-10-21"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "gbd-2017-s1-central-europe-eastern-europe-central-asia",
+   "figure": "19 360 (18 857 to 19 935) deaths · 4.4 (4.3 to 4.5) per 100 000, age-standardised, 2017",
+   "low": 18857,
+   "high": 19935,
+   "unit": "deaths",
+   "year": 2017,
+   "scope": "GBD 2017 super-region labelled exactly \"Central Europe, Eastern Europe, and Central Asia\": all-age unintentional drowning deaths (ICD-10 W65–W74 as modelled by GBD) with 95% uncertainty interval, and the age-standardised rate per 100 000 with its interval, for 2017. Includes Central Asia, so it is wider than any definition of Europe. The 1990 values printed beside it (36 096; 8.6) are not recorded here.",
+   "geography": "Central Europe, Eastern Europe and Central Asia (GBD super-region)",
+   "source": "Franklin RC et al., Inj Prev 2020;26(Suppl 1):i83–i95, online supplementary table S1 (file injuryprev-2019-043484supp003.pdf, titled inside the file \"Table 1: Cause-specific mortality in and percentage change between 1990 and 2017 for drowning\"), p. 1 of 4",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "grade": "B",
+   "do_not_add_to": "A GBD super-region that contains its own sub-regions (Central Europe, Eastern Europe, Central Asia): never added to them or to any WHO-region figure (different membership, model and year). Not comparable with WHO's European Region.",
+   "note": "Read from the PMC copy of the supplement in a browser on 21 Oct 2026; the European rows all sit on page 1 of the 4-page file. GBD figures are modelled estimates, graded B as peer-reviewed analysis."
+  },
+  {
+   "id": "gbd-2017-s1-central-europe",
+   "figure": "2 532 (2 430 to 2 645) deaths · 1.9 (1.8 to 2.0) per 100 000, age-standardised, 2017",
+   "low": 2430,
+   "high": 2645,
+   "unit": "deaths",
+   "year": 2017,
+   "scope": "GBD 2017 region labelled exactly \"Central Europe\": all-age unintentional drowning deaths with 95% uncertainty interval, and the age-standardised rate per 100 000 with its interval, for 2017. GBD region membership (not EU, not WHO Europe).",
+   "geography": "Central Europe (GBD region)",
+   "source": "Franklin RC et al., Inj Prev 2020;26(Suppl 1):i83–i95, online supplementary table S1 (injuryprev-2019-043484supp003.pdf), p. 1 of 4",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "grade": "B",
+   "do_not_add_to": "A sub-region of the GBD super-region above: never added to it, to Eastern or Western Europe, or to any WHO-region figure. GBD regions and WHO regions have different members.",
+   "note": "Page 1 of the supplement. The percentage change printed beside it (−53.5% in deaths since 1990) is the source's own and is not recorded as a figure here."
+  },
+  {
+   "id": "gbd-2017-s1-eastern-europe",
+   "figure": "12 651 (12 304 to 13 036) deaths · 5.4 (5.3 to 5.6) per 100 000, age-standardised, 2017",
+   "low": 12304,
+   "high": 13036,
+   "unit": "deaths",
+   "year": 2017,
+   "scope": "GBD 2017 region labelled exactly \"Eastern Europe\": all-age unintentional drowning deaths with 95% uncertainty interval, and the age-standardised rate per 100 000 with its interval, for 2017. GBD region membership (includes Russia; not EU, not WHO Europe).",
+   "geography": "Eastern Europe (GBD region)",
+   "source": "Franklin RC et al., Inj Prev 2020;26(Suppl 1):i83–i95, online supplementary table S1 (injuryprev-2019-043484supp003.pdf), p. 1 of 4",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "grade": "B",
+   "do_not_add_to": "A sub-region of the GBD super-region \"Central Europe, Eastern Europe, and Central Asia\": never added to it, to Central or Western Europe, or to any WHO-region figure.",
+   "note": "Page 1 of the supplement."
+  },
+  {
+   "id": "gbd-2017-s1-western-europe",
+   "figure": "4 073 (3 934 to 4 205) deaths · 0.7 (0.7 to 0.7) per 100 000, age-standardised, 2017",
+   "low": 3934,
+   "high": 4205,
+   "unit": "deaths",
+   "year": 2017,
+   "scope": "GBD 2017 region labelled exactly \"Western Europe\": all-age unintentional drowning deaths with 95% uncertainty interval, and the age-standardised rate per 100 000 with its interval, for 2017. In GBD, Western Europe is a region of the \"High-income\" super-region, not of the Central/Eastern Europe super-region.",
+   "geography": "Western Europe (GBD region)",
+   "source": "Franklin RC et al., Inj Prev 2020;26(Suppl 1):i83–i95, online supplementary table S1 (injuryprev-2019-043484supp003.pdf), p. 1 of 4",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "grade": "B",
+   "do_not_add_to": "A sub-region of the GBD \"High-income\" super-region: never added to Central or Eastern Europe (different super-region, and no GBD \"Europe\" total exists in the table), nor to any WHO-region figure.",
+   "note": "Page 1 of the supplement. The rate's interval prints as (0.7 to 0.7) at the table's one-decimal precision."
+  },
+  {
+   "id": "gbd-2017-s1-high-income",
+   "figure": "18 253 (17 880 to 18 645) deaths · 1.3 (1.2 to 1.3) per 100 000, age-standardised, 2017",
+   "low": 17880,
+   "high": 18645,
+   "unit": "deaths",
+   "year": 2017,
+   "scope": "GBD 2017 super-region labelled exactly \"High-income\": all-age unintentional drowning deaths with 95% uncertainty interval, and the age-standardised rate per 100 000, for 2017. Contains Western Europe, High-income North America, High-income Asia-Pacific, Australasia and Southern Latin America, so it is not a European figure; recorded because the task asked for any \"high-income\" grouping.",
+   "geography": "High-income (GBD super-region)",
+   "source": "Franklin RC et al., Inj Prev 2020;26(Suppl 1):i83–i95, online supplementary table S1 (injuryprev-2019-043484supp003.pdf), p. 1 of 4",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "grade": "B",
+   "do_not_add_to": "A super-region containing Western Europe and non-European regions: never added to any European or WHO-region figure.",
+   "note": "Page 1 of the supplement."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "quote": "Table 1: Cause-specific mortality in and percentage change between 1990 and 2017 for drowning",
+   "where": "Supplement file supp003.pdf (the article's online supplementary table S1), table title on p. 1"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "quote": "All-age mortality counts (95% UI) Age-standardised cause-specific mortality rates per 100,000 (95% UI)",
+   "where": "Column headings, p. 1"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "quote": "Central Europe, Eastern Europe, and Central Asia 36 096 (35 245 to 37 051) 19 360 (18 857 to 19 935)",
+   "where": "p. 1, super-region row, 1990 and 2017 counts"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "quote": "Central Europe 5 442 (5 322 to 5 561) 2 532 (2 430 to 2 645)",
+   "where": "p. 1, region row, 1990 and 2017 counts; rate columns 4.4 (4.3 to 4.5) and 1.9 (1.8 to 2.0)"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "quote": "Eastern Europe 22 968 (22 181 to 23 692) 12 651 (12 304 to 13 036)",
+   "where": "p. 1, region row, 1990 and 2017 counts; rate columns 10.1 (9.7 to 10.4) and 5.4 (5.3 to 5.6)"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "quote": "Western Europe 5 941 (5 840 to 6 039) 4 073 (3 934 to 4 205)",
+   "where": "p. 1, region row, 1990 and 2017 counts; rate columns 1.5 (1.4 to 1.5) and 0.7 (0.7 to 0.7)"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "quote": "High-income 19 448 (19 196 to 19 724) 18 253 (17 880 to 18 645)",
+   "where": "p. 1, super-region row, 1990 and 2017 counts; rate columns 2.1 (2.1 to 2.2) and 1.3 (1.2 to 1.3)"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571364/",
+   "quote": "Online supplementary table S1 provides all-age drowning-specific deaths and age-standardised cause-specific mortality rates for 1990 and 2017",
+   "where": "Article text, Results, first paragraph; the link beside it is injuryprev-2019-043484supp003.pdf (104.5KB)"
+  }
+ ],
+ "tried": [
+  "injuryprevention.bmj.com/content/26/Suppl_2/i83 in the desktop app's browser: stuck on the publisher's bot check (\"Performing security verification\") for over a minute while the browser pane was not painting, so the BMJ copy of the supplement was not opened; the PMC copy (BMJ's deposit) was used instead.",
+  "The task names supp001.pdf as table S1; on the PMC page the file linked beside the words \"online supplementary table S1\" is supp003.pdf (104.5KB), which is the table read here. supp001.pdf (64.6KB) was not opened.",
+  "Searched the whole 4-page table text for 9155, 9 155 and 9,155: no match on any page. The table has no row labelled \"Europe\"; its European rows are the GBD regions Central Europe, Eastern Europe and Western Europe plus the super-region that includes Central Asia."
+ ],
+ "notes": "Verdict on 9,155: it does not appear anywhere in supplementary table S1, and no row of the table (Central Europe 2 532; Eastern Europe 12 651; Western Europe 4 073; the super-region with Central Asia 19 360) equals or rounds to it, so the retired esanum figure is not a GBD 2017 regional value either. The table's own title inside the file is \"Table 1\"; the article refers to it as online supplementary table S1. All European rows are on page 1 of the 4-page file, under the column headings quoted. Interval values are printed with spaces as thousands separators (e.g. 12 651) and copied as printed. The 1990 values and percentage changes were seen but not entered as rows. The PMC copy is the publisher's deposit of the published article (journal citation Inj Prev 2020;26(Suppl 1):i83–i95, DOI 10.1136/injuryprev-2019-043484); a reviewer who wants the BMJ-hosted file should open the same supplement from the article page at the DOI.",
+ "next_tasks": [
+  {
+   "title": "Record the GBD 2017 regional rows beyond Europe from the same table (Oceania, South Asia, the four countries with half of deaths) as context rows",
+   "why": "The table was fully read and gives interval-bearing regional figures the ledger could cite instead of press summaries"
+  },
+  {
+   "title": "Check the retired 9,155 against the GBD results tool (GBD 2019 or 2021 rounds) for a 'Europe' location, since the 2017 paper's table has no such row",
+   "why": "The figure may come from a later GBD round or a different location grouping; S1 rules out GBD 2017 only"
+  }
+ ]
+}
