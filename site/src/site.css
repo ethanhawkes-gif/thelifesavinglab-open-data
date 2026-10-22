@@ -178,6 +178,7 @@ table.data td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-ali
 table.data tbody tr:not(.detail):hover td{background:rgba(19,34,42,.035)}
 table.data tr.detail td{background:var(--card);padding:16px 14px 20px}
 .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;min-width:0;max-width:100%;position:relative}
+#ledger-table{width:100%;min-width:0;max-width:100%;overflow:hidden}
 .tbar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:end}
 .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px;align-items:start}
 .form-grid>.stack-sm,.form-grid>.row,.form-grid>.field:has(textarea),.form-grid>.field.wide,.form-grid>p{grid-column:1/-1}
@@ -273,6 +274,7 @@ details.row>summary::-webkit-details-marker{display:none}
 .counter-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:14px 24px}
 .counter-cell{display:flex;flex-direction:column;gap:2px;min-width:0}
 .counter-n{font-family:var(--serif);font-size:clamp(30px,3.4vw,42px);line-height:1.05;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+@media (max-width:560px){.counter-row{grid-template-columns:1fr}}
 .pill-wis{background:#F1DFA8;color:#4A3408;text-transform:none;letter-spacing:.02em;font-size:12px;white-space:normal}
 .dark .pill-wis{background:#3A3115;color:var(--brass-2)}
 .agenda-list{display:flex;flex-direction:column}
