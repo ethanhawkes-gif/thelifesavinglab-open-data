@@ -1,9 +1,9 @@
 {
  "schema": "lifesavinglab.watch.feed.v1",
- "generated": "2026-10-21T22:29:19.524Z",
+ "generated": "2026-10-22T01:38:03.586Z",
  "note": "Reports found by the watch and not yet read by a person, newest first. A report is not a count. No headline text and no names are stored; follow the link to read it.",
  "counts": {
-  "reported": 577,
+  "reported": 581,
   "read": 0,
   "row-written": 0,
   "matched": 29,
@@ -29,6 +29,17 @@
    "first_seen": "2026-10-21T22:29:19.524Z",
    "stage": "reported",
    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNUVZWdGdKQXFoMFM3cG9PdVVqX0lkQVgzSFR1cDIxcW1MRFdhNVF0d3RfaGJNcHljZVhvR2ZnTUFWMmRRRGZyS1paUzV4bnJWeGJHa3RFQjZHTUNGYVVnMnd4dG5icTE2SEk1SlRmcXZKM295bGRyRm02cUVJb05xVWVHd1JZdzU4cG96WlZnbVdETEFQaUh1TNIBngFBVV95cUxOWkg0Y0xkOTMwN1lLbzVkNktLazNZSi1UeGxfRTJyaHNHMnJpRU5JSmdzcE1lZTYteVFrdk1ESGttNm1WLVlzOUZCQ3pHaG5EZzM2a2YyaWlCMGNEMlRqaFFLN1czUDdmcEhkb2hiV1lWNDhGMnJvN2NlajVaRkFSWlNzZUNCS243OTlMOEg2VHFVQ015VTRpUk5lbGN4QQ?oc=5"
+  },
+  {
+   "id": "47f1a2e12c0f9a66",
+   "kind": "drowning-reported",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "published": "2026-10-21T22:21:37.000Z",
+   "first_seen": "2026-10-22T01:38:03.586Z",
+   "stage": "reported",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVGVRMXE5NXFtbGFXLW5WNVE3YktUdlNIVjIxSXhJS2JvV29oZzFMZWE4blFLd181ZnV3ZnJ0TzhuLXRkc2FyRktzdEx1MVVGUWd4WFBPRk1TX0RwaDdNanJudGpESlJuMUh3SE04S2dka2JFYmpkbDk3TWN6Q01GWWNzdUhsZ1VsQng4U0pzbw?oc=5"
   },
   {
    "id": "1b252a3638451d81",
@@ -139,6 +150,17 @@
    "first_seen": "2026-10-21T18:46:12.992Z",
    "stage": "reported",
    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSGZZVGdTd3Y0ZUsxX0MtZXgtMHhEeGNpcnJKdWpYVzZpbE5HQzZFSDVtQ21rR0FxTmVpUmRza2dTLVBZa0pRcmJCc0s5NUdJSkZxSVItZlFuX1Z5YU9UNjV6ZFIyYTRLSEctVTFNUEFrZkdiWUs5TUdvbFh2aG1XMDJSNHVZQU5IMW5tbm1LU2VvY0o2R2trMWI4Wjd1QUZRWl9NeUpn?oc=5"
+  },
+  {
+   "id": "f89f2300aa55f046",
+   "kind": "drowning-reported",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "published": "2026-10-21T16:43:59.000Z",
+   "first_seen": "2026-10-22T01:38:03.586Z",
+   "stage": "reported",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPY282Nlo5Ym9ITjJDY1o5NzFzdV94RVNnMV9ZZE9qbFlPbVdVbnNoMDZ2MEJ5RUpsWVZQaEdfT3liOTdRS0Qwb0kzZURYRjRpeDdlTHVzYzZRTkdxeVNiRThLekJ4c2RjX0EzMm9JaVBvR05pZUwtazVMTk9sTV91NVJSdU5iamVHZUhlNXU2VU5wVEI4MXV5S3lXZDlwRTZRb1VaaTNn?oc=5"
   },
   {
    "id": "761d240f75d2e2f5",
@@ -656,28 +678,6 @@
    "first_seen": "2026-10-20T18:33:02.736Z",
    "stage": "reported",
    "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNaE5fclEzTTBWZjA3RlZpN20wOWU5VHFYMlVheV9BYWRFYXpOclhWUkpjNzhuMmhsRkJEejdQQ3ZJZ2VNb012c1FkWUtQY0NwSkdoaXI3SDZsVFJld1Y1dS02QUtLVWJyVGczbS1YR1o0U1VUVzNlTGZyemtCakowWFp3R2NEbnhBZ0sxRVc5eDJndUNId3hYX3VhRHh3bUpoekdRLUJaRTVpaWp5R255WThDb3ZRakgzdUpxRXEzOTgtSzk2Y0FIdWx3UXFEU0V0TzZOQUlkQXd4V3VYcF9LZkJxZGVPRDZIajFXNV8zMGNSdlZJbHc?oc=5"
-  },
-  {
-   "id": "6b33c928f35e1804",
-   "kind": "drowning-reported",
-   "source": "gnews-us",
-   "source_kind": "press",
-   "region": "United States",
-   "published": "2026-10-20T17:13:37.000Z",
-   "first_seen": "2026-10-20T18:33:02.736Z",
-   "stage": "reported",
-   "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPSnhjOXI5TFZBZHlfdVl5RTU5dEFwU0lMdUM0ekYwSGMzSEpFRm11c1JZWGl0RXN0aUNpLXRKVHh6TDIwRjZ4eldPeUFZTnVXNjhQZkhYTkVkbUZEdnJCLUpFbk1jaTlvb0IzOUxiak1VRzQ1ZENvZ1k3OEhGMHpwR2RBVWpRdWFQRXExbklfVjhiTlVQemktdXlZVEVCaUpKUVlwczJhVE5Hekx1ODcwS0I3WHk0NkcyX1dkbDJrLTBwLU5ibHNBX3p2Zi1rTmpsY3BRYzRERVRBRmszcGxBYW1OR2haUHJQajRoQl9meHdIRWxhRVVEZE1iQmVIRERKd0E?oc=5"
-  },
-  {
-   "id": "5f33f9f10c2139bd",
-   "kind": "drowning-reported",
-   "source": "gnews-us",
-   "source_kind": "press",
-   "region": "United States",
-   "published": "2026-10-20T17:10:08.000Z",
-   "first_seen": "2026-10-20T18:33:02.736Z",
-   "stage": "reported",
-   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQQmZuaUJOYXNMUGZkbmwySUNuVG5SWmlVNzVvdXhtZGN1aDYybEhTaWtVaVlVQi1EaXlyb0FPam9YX3o3c2MwcXA0cnV4VEpHb0tUeExRSFZIaHprT1lMaHRHTmV1aDYtdDhtVWJXZmVnTk5ZN1pwVG10RFFkbDFkNks2bFNYZFVCLUl6MW1OOWV2VkYzb2MtZGR4ZnBBM2JtRFhWUmM2ZGxwNFNvU29URUpLdWY4ektSeklJRWxQaHRUMEZUMnI3SDQ2TUhlTlpWbDlSWUZzOVQwUFpXWUxwd1gyU2l2Y2Jz0gH2AUFVX3lxTE9xN0VMMlBLMlBUcFFpN3hTWi1aTDlLZmJPdEhfS2U4TmFCUFVOLWU0c3JIalBCSHdfYksxWHJPRVZZVnM0MmhlYnB2RjBDS1dBV05UTXFsYUVjZWhhN2FaclhTQXVUdS1pR0VvTVhLQnFMeEd6dlhvY3psa3ZrdkxNWGxyV3FDNHp0azJfTG8yU1JKeFhUNVd2dnVQRnNNYkIyeEx6ajFMNDdSTDFmRUdRWm9KekZkZUFaQzYyclFiVERFVDhVVDRKVkJZLUJ2Sjc5XzNlRXY1OHFTTFpKeUROakIzU2JrQXNCdmVxZ0d5ZVZmeXVHdw?oc=5"
   }
  ]
 }
