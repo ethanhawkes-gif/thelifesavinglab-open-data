@@ -1,0 +1,79 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "rnli-rss-feed-access",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1), built-in browser"
+ },
+ "status": "partial",
+ "rows": [],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://rnli.org/news-and-media/rss",
+   "quote": "An error has occured",
+   "where": "Page title of the response a real browser receives on 21 Oct 2026: the site redirects to https://rnli.org/errors/error?aspxerrorpath=/news-and-media/rss, its own ASP.NET error page (HTML, ~224 KB), not a bot-block or 403 page."
+  },
+  {
+   "url": "https://rnli.org/robots.txt",
+   "quote": "Disallow: /*?feed=",
+   "where": "single 'User-agent: *' block; quoted line is the only feed-related rule (query string only); no rule matches /news-and-media/rss or /rss; no Crawl-delay, named bots or automated-access statement; also 'Disallow: /cdn-cgi/' and '/*?__cf_chl_tk=' (Cloudflare paths); Sitemap line"
+  },
+  {
+   "url": "https://rnli.org/news-and-media",
+   "quote": "Showing 1 to 12 of 7313 results",
+   "where": "results line above the article grid (read 21 Oct 2026; newest articles dated 19 Oct 2026); no RSS/Atom link element, no 'feed' or 'subscribe' text anywhere on the page; navigation links to 'Latest lifeboat launches' and 'Get in touch' (press enquiries)"
+  },
+  {
+   "url": "https://rnli.org/what-we-do/lifeboats-and-stations/latest-lifeboat-launches",
+   "quote": "Powered by our crew pager system",
+   "where": "caption of the launches map (last 48 hours); 'Lifeboat crews have just launched' list of 10 launches by station and time, newest 20 October 2026; no RSS/Atom, API or JSON link; links to 'RNLI Open Data' at data-rnli.opendata.arcgis.com for past launch data"
+  },
+  {
+   "url": "https://rnli.org/sitemap.xml",
+   "quote": "https://rnli.org/sitemaps/news-and-media.xml",
+   "where": "sitemap index of 8 child sitemaps (beaches, fundraising-groups, lifeboat-stations, magazine, museum-and-shops, news-and-media, support-pages, main-pages); no child named rss, feed or atom; main-pages.xml (287 entries) also has no URL containing rss, feed, atom or api"
+  },
+  {
+   "url": "https://rnli.org/footer/terms-and-conditions",
+   "quote": "No other use of material on our websites may be made",
+   "where": "Term 7.3 under 'Intellectual property rights (IPRs)'; Term 7.2 allows print/download of extracts for personal non-commercial use; Term 11.2 on linking; 'Terms and conditions for RNLI websites', last updated 15 November 2019; nothing on bots, crawling, RSS, feeds or syndication"
+  },
+  {
+   "url": "https://rnli.org/news-and-media/press-and-media-enquiries",
+   "quote": "Follow us",
+   "where": "'Follow us' section lists Facebook, YouTube, Instagram and TikTok only; no RSS/Atom feed, email alert, newsroom distribution service or API is offered; a generic press-office contact exists (details omitted under the personal-data rule)"
+  },
+  {
+   "url": "https://archive.org/wayback/available?url=rnli.org/news-and-media/rss",
+   "quote": "\"timestamp\": \"20220527035942\"",
+   "where": "archived_snapshots.closest: status 200, available true, the same single capture (27 May 2022) is returned with timestamp=20261020; the capture itself on web.archive.org is blocked for the fetch tool here, so whether it held an RSS feed or an HTML page is unconfirmed"
+  }
+ ],
+ "tried": [
+  "https://rnli.org/news-and-media/rss (the address in watch/sources.json): WebFetch refused it twice on 21 Oct 2026 with error type robots_disallowed and no HTTP status shown, even though rnli.org/robots.txt has no rule matching that path. The watch's own log (watch/queue.json runs) shows 'HTTP 403' on all 36 runs from 15 Oct 2026 05:25 UTC to 21 Oct 2026 01:43 UTC and zero items ever ingested from rnli-news. WebFetch cannot set a User-Agent or any header, so whether a browser UA gets a different answer could not be tested from here.",
+  "https://rnli.org/rss and https://rnli.org/news-and-media/rss.xml: WebFetch returned a client error (4xx, status code not shown) for both, so neither is a feed. Note the error type differs from the robots_disallowed answer for /news-and-media/rss, which suggests that path is handled differently (consistent with a 403 rather than a 404), but this is an inference, not an observed status line.",
+  "Wayback Machine: archive.org/wayback/available reports one capture of rnli.org/news-and-media/rss with status 200 dated 27 May 2022 and nothing newer when asked for the closest to 20 Oct 2026. The CDX index (web.archive.org/cdx/...) and the capture itself (web.archive.org/web/20220527035942id_/...) are blocked for the fetch tool in this environment, so the 2022 content was not read. Needs a person with a browser.",
+  "Web searches 'rnli.org rss feed news', '\"rnli\" \"rss\" feed lifeboat launches news subscribe', the exact string '\"rnli.org/news-and-media/rss\"', and a feed-directory search (feedspot, feedly, inoreader, rss.app): no RNLI feed address surfaced; results were RNLI article pages, unrelated government RSS pages, a social-aggregator page and a third-party social-media bot reposting launches (not opened; social media is not a primary source).",
+  "https://rnli.org/sitemap.xml (8 child sitemaps) and https://rnli.org/sitemaps/main-pages.xml (287 URLs): no URL containing rss, feed, atom or api.",
+  "RNLI Open Data (https://data-rnli.opendata.arcgis.com/, linked from the launches page as the place for past launch data): the landing page is JavaScript-rendered and showed no dataset names, feed, API or licence to the fetch tool; /api/v3/datasets on that host answered with the global ArcGIS Hub index (an unrelated US city dataset), not RNLI data. Needs a person with a browser.",
+  "https://rnli.org/news-and-media/press-and-media-enquiries: no feed, email alert or newsroom subscription; only Facebook, YouTube, Instagram and TikTok 'Follow us' links.",
+  "No shell access to rnli.org from this environment (only GitHub/npm/pypi reachable), so no curl test with different User-Agent or Accept headers was possible; the UA question remains open."
+ ],
+ "notes": "BROWSER CHECK, 21 Oct 2026: opening https://rnli.org/news-and-media/rss in a real browser (the desktop app's built-in browser, normal browser user agent) does not return a feed or a 403; the site redirects to its own ASP.NET error handler, /errors/error?aspxerrorpath=/news-and-media/rss, titled 'An error has occured'. So the 403 the watch sees is not a user-agent refusal of a live feed: the path is dead for browsers too, and the feed should be treated as withdrawn. Proposed outside this bundle: set the rnli-news source to enabled:false in watch/sources.json with a note, and keep the task open only for the question of whether any other RNLI feed exists. What was found. No RSS or Atom feed is advertised anywhere on rnli.org that could be opened: the News and media listing (7,313 items, newest 19 Oct 2026) has no feed link element, the 'Latest lifeboat launches' page is an HTML list of 10 launches from the last 48 hours (crew pager system) with no feed or API, the press-enquiries page offers only social accounts, and neither sitemap nor robots.txt names a feed. The address the watch uses, https://rnli.org/news-and-media/rss, has answered HTTP 403 on all 36 watch runs since 15 Oct 2026 and was refused to the fetch tool here too (error type robots_disallowed, HTTP status not shown); sibling guesses /rss and /news-and-media/rss.xml give a client error. The Wayback 'available' API reports a single status-200 capture of /news-and-media/rss from 27 May 2022 and none since, so a feed (or at least a page) may have existed at that address in 2022 and later been removed or blocked; the capture could not be read from here. Acceptance points: a working feed address with newest-item date was NOT found; the headers that work could NOT be determined; the terms-of-use point IS covered, hence 'partial'. The feed question remains open, so if this bundle is accepted the reviewer may want --keep-open.\n\nUser-agent question. WebFetch cannot set custom headers, so the watch's UA (lifesavinglab-watch/1.0 with a site and contact address) versus a browser UA was not tested; this is stated plainly. Indirect evidence only: the fetch tool, which is also a non-browser client, read /news-and-media, robots.txt, the launches page, the terms page and the press page without trouble, so rnli.org is not refusing every non-browser client; the refusal looks path-specific. robots.txt disallows /cdn-cgi/ and the __cf_chl_tk / __cf_chl_rt_tk query parameters, which are Cloudflare paths and challenge tokens, so the site is very likely fronted by Cloudflare, whose bot rules commonly return 403 or a challenge page to unfamiliar user agents. That is an inference, not an observed status line.\n\nTerms of use as stated by the site. robots.txt: one 'User-agent: *' block, no Crawl-delay, no named bots, no AI/automated-access policy; the only feed-related rule is 'Disallow: /*?feed=' (query string only) and /news-and-media/rss is not disallowed. Terms and conditions (last updated 15 November 2019): Term 7.2 permits printing and downloading extracts for personal non-commercial use; Term 7.3 says no other use may be made without written permission; Term 11.2 allows linking but not replication; nothing is said about bots, crawling, feeds or syndication. The watch stores only links, dates and hashes, not article text; whether that fits Term 7.2/7.3 is for the reviewer.\n\nSuggested action (not done, outside the bundle): set rnli-news to enabled:false in watch/sources.json with a note, as was done for the USCG sources, until a person with a browser confirms an address. Figures seen but deliberately not added as rows: '7313 results' is a count of news items, and the launches page prints two different daily-aid averages ('an average of 23 people a day' and '122 people aided by our crews every day on average'), neither of which is a drowning figure or part of this task. No existing ledger row was touched; the only RNLI row in the ledger is rnli-lives-saved.",
+ "next_tasks": [
+  {
+   "title": "Open the Wayback Machine capture of rnli.org/news-and-media/rss (timestamp 20220527035942) in a browser and record whether it was an RSS/Atom feed, its channel link and the newest item date",
+   "why": "It is the only sign a feed ever existed at this address; web.archive.org is blocked for the fetch tool here. Needs a person with a browser."
+  },
+  {
+   "title": "Disable rnli-news in watch/sources.json (enabled:false with a dated note) until a working feed address is confirmed",
+   "why": "36 consecutive HTTP 403 runs since 15 Oct 2026 add noise to every run and the source has never yielded an item."
+  },
+  {
+   "title": "Catalogue the RNLI Open Data portal (data-rnli.opendata.arcgis.com): launch / returns-of-service datasets, years covered, licence and any feed or API",
+   "why": "The launches page points there for past launch data; the portal is JavaScript-rendered and needs a person with a browser."
+  }
+ ]
+}

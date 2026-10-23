@@ -1,0 +1,366 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "canada-full-report-counts",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "canada-total-2017-21",
+   "figure": "2,424 unintentional water-related deaths, 2017–2021 (an average of 485 per year)",
+   "low": 2424,
+   "high": 2424,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Canada, five calendar years 2017–2021, the report's own five-year total: all unintentional deaths from incidents in, on or near water found in provincial and territorial coroner and medical examiner records; natural causes, suicide and homicide excluded; boating deaths included (inferred from the 23% boating activity share; the methods text does not mention boating). The report flags 2016–2021 as partial data and says not all British Columbia data were available at collection. Year is the end of the period.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "The source's own five-year total; never added to canada-total-2022 or to any single year of the 2013–2022 series (the 2026 snapshot revised 2018–2021 upward after Alberta identified additional cases, so the two editions' yearly figures differ), and never added to WHO or IHME figures.",
+   "note": "Printed on p. 6 beside the 1990–2021 annual chart; the 2025 edition's yearly values for 2018–2021 are 485, 428, 544, 502, lower than the 2026 snapshot's 488, 430, 552, 509. This is the latest multi-page edition found on 21 Oct 2026; no multi-page 2026 edition exists yet."
+  },
+  {
+   "id": "canada-location-lakes-2017-21",
+   "figure": "Lake/pond: 36% of unintentional water-related deaths, 2017–2021",
+   "low": 36,
+   "high": 36,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: the share of unintentional water-related deaths by type of body of water, label as printed ('Lake/pond'); coroner and medical examiner case-finding; natural causes, suicide and homicide excluded. 2016–2021 flagged as partial data; British Columbia data incomplete at collection. Year is the end of the period.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "A five-year pooled share from the 2025 edition; never placed in one series with the 2018–2022 shares of the 2026 snapshot (canada-location-lakes-2018-22 and siblings), whose window overlaps four of these five years; never multiplied by canada-total-2017-21 or a yearly total to make a count; never set beside Australian, UK or US setting splits, which use other categories.",
+   "note": "Chart 'Unintentional water-related deaths by type of body of water, 2017–2021', pp. 17–18. The seven printed shares are lake/pond 36, river 27, bathtub 14, pool 9, other 9, ocean 5, lifeguard-supervised 1. The only counts printed are two yearly averages (see canada-location-lakes-count-2017-21 and canada-location-bathtubs-count-2017-21)."
+  },
+  {
+   "id": "canada-location-lakes-count-2017-21",
+   "figure": "An average of 176 drowning deaths occurred in a lake or pond each year during 2017–2021",
+   "low": 176,
+   "high": 176,
+   "unit": "deaths per year (average)",
+   "year": 2021,
+   "scope": "Canada, 2017–2021: the yearly average number of unintentional water-related deaths in a lake or pond, printed as a sentence beside the 36% share; the five-year count itself is not printed. Same case definition as canada-total-2017-21.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "A yearly average, not a count: never multiplied by five to make a five-year figure, never added to canada-location-bathtubs-count-2017-21 or to any yearly total such as canada-total-2022, and never set beside the 2018–2022 snapshot shares.",
+   "note": "Page 17, text block under the 'Lake/pond 36%' label. No other setting except bathtubs has a count printed in the location section."
+  },
+  {
+   "id": "canada-location-rivers-2017-21",
+   "figure": "River: 27% of unintentional water-related deaths, 2017–2021",
+   "low": 27,
+   "high": 27,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: the share of unintentional water-related deaths by type of body of water, label as printed ('River'); coroner and medical examiner case-finding; natural causes, suicide and homicide excluded. 2016–2021 flagged as partial data; British Columbia data incomplete at collection. No count printed. Year is the end of the period.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "A five-year pooled share from the 2025 edition; never placed in one series with canada-location-rivers-2018-22 (overlapping window); never multiplied by canada-total-2017-21 or a yearly total to make a count; never set beside Australian, UK or US setting splits.",
+   "note": "Chart 'Unintentional water-related deaths by type of body of water, 2017–2021', pp. 17–18."
+  },
+  {
+   "id": "canada-location-bathtubs-2017-21",
+   "figure": "Bathtub: 14% of unintentional water-related deaths, 2017–2021",
+   "low": 14,
+   "high": 14,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: the share of unintentional water-related deaths by type of body of water, label as printed ('Bathtub'); coroner and medical examiner case-finding; natural causes, suicide and homicide excluded. 2016–2021 flagged as partial data; British Columbia data incomplete at collection. Year is the end of the period.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "A five-year pooled share from the 2025 edition; never placed in one series with canada-location-bathtubs-2018-22 (overlapping window); never multiplied by canada-total-2017-21 or a yearly total to make a count; never added to the hot-tub share, which the report files under 'Other'.",
+   "note": "Page 18. The report adds that 37% of bathtub deaths were people aged 65 and over and that bathtubs are the only location with more female (52%) than male (48%) deaths. This 14% for 2017–2021 is the main cross-check for the 2018–2022 snapshot's 15% Bathtubs / 7% Other pairing."
+  },
+  {
+   "id": "canada-location-bathtubs-count-2017-21",
+   "figure": "From 2017–2021 there were an average of 67 bathtub deaths each year",
+   "low": 67,
+   "high": 67,
+   "unit": "deaths per year (average)",
+   "year": 2021,
+   "scope": "Canada, 2017–2021: the yearly average number of unintentional bathtub drowning deaths, printed as a sentence beside the 14% share; the five-year count itself is not printed. Same case definition as canada-total-2017-21.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "A yearly average, not a count: never multiplied by five, never added to canada-location-lakes-count-2017-21 or to any yearly total such as canada-total-2022, and never set beside the 2018–2022 snapshot shares.",
+   "note": "Page 18, text block under the 'Bathtub 14%' label."
+  },
+  {
+   "id": "canada-location-pools-2017-21",
+   "figure": "Pool: 9% of unintentional water-related deaths, 2017–2021 (92% of pool deaths in private pools)",
+   "low": 9,
+   "high": 9,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: the share of unintentional water-related deaths by type of body of water, label as printed ('Pool'); coroner and medical examiner case-finding; natural causes, suicide and homicide excluded. Hot tubs are not in this category (they sit under 'Other'). 2016–2021 flagged as partial data; British Columbia data incomplete at collection. No count printed. Year is the end of the period.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "A five-year pooled share from the 2025 edition; never placed in one series with canada-location-pools-2018-22 (overlapping window); never multiplied by canada-total-2017-21 or a yearly total to make a count; the 92% private-pool figure is a share of pool deaths, not of all deaths.",
+   "note": "Page 17. The report also says that where fencing information was available, 65% of the private pools involved had no fence or a non-compliant fence."
+  },
+  {
+   "id": "canada-location-ocean-2017-21",
+   "figure": "Ocean: 5% of unintentional water-related deaths, 2017–2021",
+   "low": 5,
+   "high": 5,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: the share of unintentional water-related deaths by type of body of water, label as printed ('Ocean'); coroner and medical examiner case-finding; natural causes, suicide and homicide excluded. 2016–2021 flagged as partial data; British Columbia data incomplete at collection. No count printed. Year is the end of the period.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "A five-year pooled share from the 2025 edition; never placed in one series with canada-location-ocean-2018-22 (overlapping window); never multiplied by canada-total-2017-21 or a yearly total to make a count; never set beside coastal shares from Australia, the UK or the US.",
+   "note": "Pages 17–18. British Columbia, a Pacific-coast province, is the one the report names as incomplete at collection."
+  },
+  {
+   "id": "canada-location-other-2017-21",
+   "figure": "Other: 9% of unintentional water-related deaths, 2017–2021",
+   "low": 9,
+   "high": 9,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: the share of unintentional water-related deaths by type of body of water, label as printed ('Other'), which the report itemises as hot tubs (2%), ditches (2%), canals (1%), marshes, bogs and swamps (<1%), dams (<1%), quarries (1%), dugouts and retention ponds (1%). No 'unknown' category printed. 2016–2021 flagged as partial data; British Columbia data incomplete at collection. Year is the end of the period.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "A five-year pooled share from the 2025 edition; never placed in one series with canada-location-other-2018-22 (overlapping window); never multiplied by canada-total-2017-21 or a yearly total to make a count; its itemised parts are shares of all deaths already inside the 9% and must not be added to it.",
+   "note": "Page 18. This definition of 'Other' is the fullest one printed by the publisher and is the main cross-check for the 2018–2022 snapshot's 7% Other / 15% Bathtubs pairing."
+  },
+  {
+   "id": "canada-location-lifeguard-supervised-2017-21",
+   "figure": "1% of all water-related deaths occurred in a setting supervised by lifeguards, 2017–2021",
+   "low": 1,
+   "high": 1,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: a supervision measure that cuts across water bodies (public pools, waterfronts), printed as '1%' in the location chart; not a water-body category. No count printed. Year is the end of the period.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "Not part of the water-body split; never added to the other 2017–2021 shares, never placed in one series with canada-location-lifeguard-supervised-2018-22 ('<1%'), and not a risk per visit, since visits are not counted.",
+   "note": "Page 18, sentence 'During 2017–2021, 1% of all water-related deaths occurred in a setting supervised by lifeguards.' The 2026 snapshot prints '<1%' for 2018–2022."
+  },
+  {
+   "id": "canada-activity-aquatic-2017-21",
+   "figure": "Aquatic activity: 26% of unintentional water-related deaths, 2017–2021",
+   "low": 26,
+   "high": 26,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: share of unintentional water-related deaths by type of activity, label as printed ('Aquatic activity', footnote: the person intended to be in the water, e.g. swimming or wading). The four printed types (aquatic 26, boating 23, non-aquatic 18, land/ice/air travel 11) do not reach 100% and no other type label was extracted. No count printed.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "An activity share, not a water-body share: never added to the canada-location-* rows, never placed in one series with canada-activity-aquatic-2018-22 (overlapping window), and never multiplied by canada-total-2017-21 to make a count.",
+   "note": "Chart 'Unintentional water-related deaths by type of activity, 2017–2021', p. 21 or 22 (page token ambiguous). A separate 'purpose' chart on p. 22 prints recreational 55%, daily living 29%, unknown 11%, occupational 3%, attempting rescue 2%."
+  },
+  {
+   "id": "canada-activity-boating-2017-21",
+   "figure": "Boating: 23% of unintentional water-related deaths, 2017–2021",
+   "low": 23,
+   "high": 23,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: share of unintentional water-related deaths by type of activity, label as printed ('Boating'), i.e. deaths of people boating at the time; the report's water-related death series includes boating throughout. Sub-split printed as shares of boating deaths: powerboat 57%, canoe 18%, kayak 8%, inflatable craft 4%, sailboat 2%; capsizing 41%, falling overboard 29%. No count printed.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "An activity share: never added to the canada-location-* rows, never placed in one series with canada-activity-boating-2018-22 (overlapping window), never multiplied by canada-total-2017-21 to make a count, and never set beside uscg-boating-2024 or us-location-boating-2024, which are US Coast Guard casualty counts under a different definition.",
+   "note": "Page 21. The boat-type and cause sub-shares are shares of boating deaths only."
+  },
+  {
+   "id": "canada-activity-non-aquatic-2017-21",
+   "figure": "Non-aquatic activity: 18% of unintentional water-related deaths, 2017–2021",
+   "low": 18,
+   "high": 18,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: share of unintentional water-related deaths by type of activity, label as printed ('Non-aquatic activity', footnote: unintentional fall into water, e.g. walking, biking or working near water and falling in). No count printed.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "An activity share: never added to the canada-location-* rows, never placed in one series with canada-activity-non-aquatic-2018-22 (overlapping window), and never multiplied by canada-total-2017-21 to make a count.",
+   "note": "Page 21."
+  },
+  {
+   "id": "canada-activity-land-ice-air-2017-21",
+   "figure": "Land, ice or air travel: 11% of unintentional water-related deaths, 2017–2021",
+   "low": 11,
+   "high": 11,
+   "unit": "share (%)",
+   "year": 2021,
+   "scope": "Canada, five years pooled, 2017–2021: share of unintentional water-related deaths by type of activity, label as printed ('Land, ice or air travel'); the report's own gloss for this category was not extracted. No count printed.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, Canadian Drowning Report, 2025 edition (multi-page; listed as 'National Drowning Report-2025 Edition' on lifesaving.ca and as '2025 Canadian Drowning Report - Extended' on lifesaving.org, file 354621)",
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "grade": "A",
+   "do_not_add_to": "An activity share: never added to the canada-location-* rows or to canada-activity-boating-2017-21 (it is not boating), and never multiplied by canada-total-2017-21 to make a count. The 2026 snapshot prints no matching label for 2018–2022.",
+   "note": "Page 21. Related detail on p. 23: motor vehicle travel is 19% of daily-living deaths, and snowmobiling 4% of recreational deaths; neither is a definition of this category."
+  },
+  {
+   "id": "canada-activity-boating-2018-22",
+   "figure": "Boating 22%",
+   "low": 22,
+   "high": 22,
+   "unit": "share (%)",
+   "year": 2022,
+   "scope": "Canada, five years pooled, 2018–2022: share of unintentional drowning deaths by activity at the time, label as printed ('Boating') in the section 'WHAT WERE THEY DOING?'. The snapshot prints four activity labels (boating 22, bathing 15, aquatic 26, non-aquatic 17) that do not reach 100%; no other activity label was extracted. Counts not printed. Coroner and medical examiner case-finding; natural causes, suicide and homicide excluded.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (lifesaving.org file 361108, labelled '2026 Canadian Drowning Report (English)'; the same one-page document as the Lifesaving Society Ontario copy)",
+   "url": "https://www.lifesaving.org/public/download/files/361108",
+   "grade": "A",
+   "do_not_add_to": "An activity share: never added to the canada-location-*-2018-22 water-body shares, never placed in one series with canada-activity-boating-2017-21 (overlapping window, different edition), never multiplied by canada-total-2022 to make a count, and never set beside US Coast Guard boating counts.",
+   "note": "The snapshot also prints boat-type shares 57%, 9% and 18% next to the labels Powerboat, Canoe and Kayak, but the text extraction does not pair them reliably (the 2025 edition printed powerboat 57, canoe 18, kayak 8), so they are not recorded here."
+  },
+  {
+   "id": "canada-activity-bathing-2018-22",
+   "figure": "Bathing 15%",
+   "low": 15,
+   "high": 15,
+   "unit": "share (%)",
+   "year": 2022,
+   "scope": "Canada, five years pooled, 2018–2022: share of unintentional drowning deaths by activity at the time, label as printed ('Bathing') in the section 'WHAT WERE THEY DOING?'. Counts not printed. Coroner and medical examiner case-finding; natural causes, suicide and homicide excluded.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (lifesaving.org file 361108, labelled '2026 Canadian Drowning Report (English)'; the same one-page document as the Lifesaving Society Ontario copy)",
+   "url": "https://www.lifesaving.org/public/download/files/361108",
+   "grade": "A",
+   "do_not_add_to": "An activity share: never added to canada-location-bathtubs-2018-22 (the same deaths seen by place rather than activity), never added to the other activity shares to make a total, and never multiplied by canada-total-2022 to make a count.",
+   "note": "This label-value pair is unambiguous in both the English and French extractions ('Bain 15 %'). It is the within-document check that the location share of 15% belongs to Bathtubs, not to Other."
+  },
+  {
+   "id": "canada-activity-aquatic-2018-22",
+   "figure": "Aquatic* 26%",
+   "low": 26,
+   "high": 26,
+   "unit": "share (%)",
+   "year": 2022,
+   "scope": "Canada, five years pooled, 2018–2022: share of unintentional drowning deaths by activity at the time, label as printed ('Aquatic*', footnote: 'The person intended to be in the water (e.g. swimming/wading)') in the section 'WHAT WERE THEY DOING?'. Counts not printed. Coroner and medical examiner case-finding; natural causes, suicide and homicide excluded.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (lifesaving.org file 361108, labelled '2026 Canadian Drowning Report (English)'; the same one-page document as the Lifesaving Society Ontario copy)",
+   "url": "https://www.lifesaving.org/public/download/files/361108",
+   "grade": "A",
+   "do_not_add_to": "An activity share: never added to the canada-location-*-2018-22 water-body shares, never placed in one series with canada-activity-aquatic-2017-21 (overlapping window, different edition), and never multiplied by canada-total-2022 to make a count.",
+   "note": "The snapshot's 'most common activity' list (Powerboating, Walking/Running/Playing Near Water, Swimming, Fishing, Canoeing with 32, 11, 11, 6, 15 in extraction order) could not be paired reliably and is not recorded."
+  },
+  {
+   "id": "canada-activity-non-aquatic-2018-22",
+   "figure": "Non-aquatic** 17%",
+   "low": 17,
+   "high": 17,
+   "unit": "share (%)",
+   "year": 2022,
+   "scope": "Canada, five years pooled, 2018–2022: share of unintentional drowning deaths by activity at the time, label as printed ('Non-aquatic**', footnote: 'Unintentional fall into water (e.g. walking/biking/working near water and fell in)') in the section 'WHAT WERE THEY DOING?'. Counts not printed. Coroner and medical examiner case-finding; natural causes, suicide and homicide excluded.",
+   "geography": "Canada",
+   "source": "Drowning Prevention Research Centre Canada for Lifesaving Society Canada, National Drowning Data Snapshot, 2026 edition (lifesaving.org file 361108, labelled '2026 Canadian Drowning Report (English)'; the same one-page document as the Lifesaving Society Ontario copy)",
+   "url": "https://www.lifesaving.org/public/download/files/361108",
+   "grade": "A",
+   "do_not_add_to": "An activity share: never added to the canada-location-*-2018-22 water-body shares, never placed in one series with canada-activity-non-aquatic-2017-21 (overlapping window, different edition), and never multiplied by canada-total-2022 to make a count.",
+   "note": "Label and footnote as printed on the snapshot."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "canada-location-bathtubs-2018-22",
+   "field": "note",
+   "old": "One of seven printed shares (lakes 36, rivers 27, bathtubs 15, pools 9, other 7, ocean 6, lifeguard-supervised under 1), which sum to 100. Found by an independent agent, 15 Oct 2026. Pairing of 15% with Bathtubs (and 7% with Other) inferred from the order of the extracted text in both the English and French editions; a reader of the printed page should confirm.",
+   "new": "One of seven printed shares (lakes 36, rivers 27, bathtubs 15, pools 9, other 7, ocean 6, lifeguard-supervised under 1), which sum to 100. Found by an independent agent, 15 Oct 2026. Pairing of 15% with Bathtubs (and 7% with Other) checked 21 Oct 2026: the same snapshot prints the activity 'Bathing 15%', and the 2025 full edition prints Bathtub 14% and Other 9% for the overlapping window 2017–2021, so 15% is Bathtubs; four text extractions (English and French, lifesaving.org and the Ontario mirror) agree. Not yet confirmed by eye on the rendered page.",
+   "evidence": "lifesaving.org files 361108 (EN) and 361109 (FR), section 'WHAT WERE THEY DOING?' ('Bathing 15%' / 'Bain 15 %') and 'WHERE ARE THEY DROWNING?'; Canadian Drowning Report 2025 edition (lifesaving.ca copy), pp. 17–18, 'Bathtub 14%', 'Other 9%'."
+  },
+  {
+   "row_id": "canada-location-other-2018-22",
+   "field": "note",
+   "old": "One of seven printed shares (lakes 36, rivers 27, bathtubs 15, pools 9, other 7, ocean 6, lifeguard-supervised under 1), which sum to 100. Found by an independent agent, 15 Oct 2026. \"Other\" is not defined on the snapshot; no separate \"unknown\" category is printed.",
+   "new": "One of seven printed shares (lakes 36, rivers 27, bathtubs 15, pools 9, other 7, ocean 6, lifeguard-supervised under 1), which sum to 100. Found by an independent agent, 15 Oct 2026. \"Other\" is not defined on the snapshot; the 2025 full edition (2017–2021) itemises Other 9% as hot tubs, ditches, canals, marshes/bogs/swamps, dams, quarries, dugouts and retention ponds. Pairing of 7% with Other checked 21 Oct 2026 against the activity 'Bathing 15%' in the same snapshot and the 2017–2021 edition (Bathtub 14%, Other 9%); not yet confirmed by eye on the rendered page.",
+   "evidence": "lifesaving.org files 361108 (EN) and 361109 (FR), sections 'WHERE ARE THEY DROWNING?' and 'WHAT WERE THEY DOING?'; Canadian Drowning Report 2025 edition (lifesaving.ca copy), p. 18, sentence beginning 'Other bodies of water where drowning deaths occurred included hot tubs (2%)'."
+  },
+  {
+   "row_id": "canada-total-2022",
+   "field": "note",
+   "old": "Found by an independent agent, 15 Oct 2026. The full 2026 Canadian Drowning Report (lifesaving.org) could not be opened; it likely holds counts per setting.",
+   "new": "Found by an independent agent, 15 Oct 2026. Checked 21 Oct 2026: lifesaving.org file 361108, labelled '2026 Canadian Drowning Report (English)', is this same one-page snapshot, and no multi-page 2026 edition exists on lifesaving.org, lifesaving.ca or lifesavingsociety.com. The latest multi-page edition is the 2025 Canadian Drowning Report (2017–2021; canada-total-2017-21), which prints no count per setting beyond two yearly averages. The snapshot flags 2016–2021, not 2022, as partial; its British Columbia caveat is not tied to a year.",
+   "evidence": "lifesaving.org/public-education/drowning-reports (link list), lifesaving.org file 361108 (title 'Drowning Data Snapshot', 'NATIONAL | 2026 EDITION', footnotes under the 2013–2022 chart), lifesaving.ca national-drowning-report page (2026 entry is 'National Drowning Report Infographic – 2026' only), lifesavingsociety.com drowning-reports page (2026 entries are the two snapshots only)."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://www.lifesaving.org/public/download/files/361108",
+   "quote": "The 2016–2021 totals are based on partial data.",
+   "where": "One-page 'Drowning Data Snapshot', 'NATIONAL | 2026 EDITION': footnotes under the 2013–2022 chart (partial data, British Columbia, Alberta revision); sections 'WHERE ARE THEY DROWNING?' and 'WHAT WERE THEY DOING?' (Boating 22, Bathing 15, Aquatic 26, Non-aquatic 17); methods note."
+  },
+  {
+   "url": "https://www.lifesaving.org/public/download/files/361109",
+   "quote": "Les données pour 2016 à 2021 sont basé sur des données partielles.",
+   "where": "French edition of the same snapshot, édition 2026: location tokens in order Lacs 36, Rivières 27, 9, Piscine, <1, supervisé, 7, Autres, 15, Baignoires, Océan 6; activity section (Navigation de plaisance 22, Bain 15, Aquatique 26, Non-aquatique 17); Colombie-Britannique footnote."
+  },
+  {
+   "url": "https://lifesaving.ca/wp-content/uploads/2026/09/CanadianDrowningReport_EN_20260423_AODA-1.pdf",
+   "quote": "A total of 2,424 people lost their lives to unintentional water-related deaths",
+   "where": "Canadian Drowning Report, 2025 edition (publisher's copy): p. 6 total and 1990–2021 chart with partial-data notes; pp. 17–18 location chart (lake/pond 36, river 27, bathtub 14, pool 9, ocean 5, lifeguard-supervised 1, other 9 and its items); pp. 21–23 activity charts; p. 19 British Columbia note."
+  },
+  {
+   "url": "https://www.lifesaving.org/public/download/files/354621",
+   "quote": "From 2017–2021 there were an average of 67 bathtub deaths each year.",
+   "where": "Same 2025-edition report, lifesaving.org copy listed as '2025 Canadian Drowning Report - Extended': p. 18 bathtub text block; p. 17 lake/pond text block ('An average of 176 drowning deaths occurred in a lake or pond each year'); p. 21 boat-type sub-shares; p. 22 purpose chart."
+  },
+  {
+   "url": "https://lifesaving.ca/public-education/drowning-research/national-drowning-report/",
+   "quote": "National Drowning Report Infographic – 2026",
+   "where": "Lifesaving Society Canada national report page: the only 2026 entry is the infographic; the next entries are 'National Drowning Report-2025 Edition' (the multi-page PDF cited above) and 'National Drowning Report Infographic – 2025'."
+  },
+  {
+   "url": "https://www.lifesaving.org/public-education/drowning-reports",
+   "quote": "2026 Canadian Drowning Report (English)",
+   "where": "'Recent Drowning Reports' list: links to files 361108 (English) and 361109 (French); 'Previous Drowning Reports' lists '2025 Canadian Drowning Report' (320980) and '2025 Canadian Drowning Report - Extended' (354621)."
+  },
+  {
+   "url": "https://www.lifesavingsociety.com/drowning-research/drowning-reports.aspx",
+   "quote": "2026 National Drowning Data Snapshot",
+   "where": "Lifesaving Society Ontario drowning-reports page, 2026 block: only the Ontario and National snapshots (English and French); a May 2026 notice says some national links are broken while the national branch updates its website."
+  }
+ ],
+ "tried": [
+  "https://www.lifesaving.org/public/download/files/361108 ('2026 Canadian Drowning Report (English)'): opened; it is the one-page National Drowning Data Snapshot, 2026 edition (about 500–600 unique words, title 'Drowning Data Snapshot'), identical in content to the Ontario mirror the ledger cites. It prints percentages only, no count per setting.",
+  "https://www.lifesaving.org/public/download/files/361109 (French): opened; the same one-page snapshot; same extraction order for the location labels, so it does not settle the pairing on its own.",
+  "Search 'lifesaving.org 2026 Canadian Drowning Report extended OR expanded OR full report' and a search on the share values (bathtubs 15%, other 7%): no multi-page 2026 national edition and no web page stating the 2018–2022 bathtub share in text.",
+  "https://www.lifesaving.org/about/news/post/2026-drowning-reports-now-available: opened; the 28 Jul 2026 post covers only the 2026 Alberta (2020–2024) and Northern Canada (2021–2025) editions, nothing national.",
+  "https://www.lifesavingsociety.com/drowning-research/canadian-drowning-report.aspx: 'Page Not Found'. The parent page drowning-research.aspx and drowning-reports.aspx list for 2026 only the Ontario and National snapshots.",
+  "https://lifesaving.ca/public-education/drowning-research/national-drowning-report/: opened this time (it was blocked for the previous agent); for 2026 it lists only the infographic, and its latest multi-page edition is the 2025 one, whose file is dated 23 Apr 2026.",
+  "Settling the Bathtubs/Other pairing from the rendered page: not possible with the tools allowed here (WebFetch returns extracted text only, and the shell may not download the PDF); the verdict below rests on cross-checks, not on seeing the layout."
+ ],
+ "notes": "VERDICT ON THE PAIRING: 15% belongs to Bathtubs and 7% to Other (not the reverse). Basis: (1) the same 2026 snapshot prints the activity 'Bathing 15%' (unambiguous in both languages), and bathing deaths happen in bathtubs; (2) the 2025 full edition prints Bathtub 14% and Other 9% for 2017–2021, a window sharing four of five years with 2018–2022, so a bathtub share of 7% is not possible; (3) in all four extractions (EN/FR, lifesaving.org and the Ontario mirror) the middle group reads '9% Pools <1% [lifeguard-supervised] 7% Other 15% Bathtubs', value before label, and the one pairing in that group that the text makes explicit ('<1%' with the lifeguard sentence) follows that pattern. I could not render the page, so a person should still glance at it. THE 'FULL 2026 REPORT' DOES NOT EXIST: lifesaving.org file 361108 is the one-page snapshot itself, and neither lifesaving.org, lifesaving.ca (the publisher's own site) nor lifesavingsociety.com lists a multi-page 2026 edition as of 21 Oct 2026. The latest multi-page edition is the 2025 Canadian Drowning Report (2017–2021), whose file is dated April 2026, so a 2026 full edition may appear in 2027. COUNTS: that 2025 edition prints no count per setting either; it gives shares and only two yearly averages (lake/pond 176, bathtub 67), plus the five-year total 2,424. I recorded its seven location shares, those two averages, the total and its four activity types as 2017–2021 rows, labelled so they are not mixed with the 2018–2022 snapshot rows. 2022 FLAG: the snapshot flags 2016–2021 as partial (two footnotes) and says 'Complete information for British Columbia was not available at the time of data collection', a sentence not tied to any year; 2022 is not flagged as partial anywhere. The 2025 edition carries the same 2016–2021 flag and puts its BC sentence on the province table (p. 19). Note that 2021 is flagged partial while 2022 is not, as printed. ACTIVITY SPLIT 2018–2022 (snapshot): Boating 22, Bathing 15, Aquatic 26, Non-aquatic 17; these four do not reach 100% and no further label was extracted (the 2025 edition's fourth type, 'Land, ice or air travel', has no visible counterpart on the snapshot). The boat-type figures (57, 9, 18 beside Powerboat, Canoe, Kayak) and the most-common-activity list could not be paired reliably and are left out. REVISION: the 2026 snapshot's 2018–2021 totals (488, 430, 552, 509) are higher than the 2025 edition's (485, 428, 544, 502) because Alberta's medical examiner identified additional cases in 2026, so the two editions must not be placed in one series. WARNINGS: several 'row equals a + b' warnings are coincidences among small percentages (e.g. 36 = 27 + 9); nothing was summed. The ledger's Canada rows cite the Ontario mirror; the publisher's own copies are lifesaving.org 361108 and lifesaving.ca, same document.",
+ "next_tasks": [
+  {
+   "title": "Look at the rendered 2026 National Drowning Data Snapshot and confirm by eye that 15% sits by Bathtubs and 7% by Other (needs a person with a browser or PDF viewer)",
+   "why": "Every automated reading so far is text extraction; the pairing is cross-checked but not seen."
+  },
+  {
+   "title": "Watch lifesaving.ca for a multi-page 2026 Canadian Drowning Report (2018–2022) and, when it appears, record its counts per setting and retire the 2017–2021 rows as the latest",
+   "why": "The 2025 edition's full report was filed in April 2026, so the next full edition is likely months away."
+  },
+  {
+   "title": "Record the 2025 Canadian Drowning Report's province table (p. 19: deaths and rates per province, with the British Columbia caveat) and its age-by-location shares (pp. 10–11)",
+   "why": "They are printed in the full edition and would give the lab provincial rows under the same definition."
+  }
+ ]
+}

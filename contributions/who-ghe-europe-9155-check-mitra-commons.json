@@ -1,0 +1,30 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "who-ghe-europe-9155-check",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Opus 5.5 (claude-opus-5-5), built-in browser"
+ },
+ "status": "partial",
+ "rows": [],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx",
+   "quote": "European Region",
+   "where": "Sheets 'EUR 2000' to 'EUR 2023', row 1570 'Drowning', column 'Both sexes / Total (all ages)': 44,455 (2000), 28,674 (2010), 20,722 (2015), 16,940 (2019), 17,380 (2020), 16,972 (2021), 17,835 (2022), 18,469 (2023)."
+  }
+ ],
+ "tried": [
+  "Every numeric cell in all 49 region-year sheets of the GHE 2023 edition was searched for values from 9,150 to 9,160: none is a European Region drowning total in any year. The only such cell in a Drowning row is one age-group cell of the Western Pacific 2019 sheet (9,154.4), which is not a total and not Europe.",
+  "The GHE 2019 and GHE 2021 editions' regional workbooks are no longer linked from WHO's 'Leading causes of death' page, which now offers only the 2023 edition; they were not found, so the task's two named editions remain unchecked."
+ ],
+ "notes": "Verdict for the edition that could be opened: 9,155 does not appear as, and does not round to, any European Region drowning value for 2000–2023 in WHO's GHE 2023 edition; every European value from 2015 on is 16,900–20,800. Together with the GBD 2017 S1 reading (no 9,155) and the WHO 2024 report (15,000), the press figure now has no match in three WHO/IHME sources. Status partial because the GHE 2019 and 2021 editions' files were not reachable from WHO's page.",
+ "next_tasks": [
+  {
+   "title": "Find archived copies of the GHE 2019 and GHE 2021 editions' regional workbooks (e.g. Wayback captures of the GHE download page) and check European Region drowning for 9,155",
+   "why": "The only two editions left in which the press figure could originate."
+  }
+ ]
+}

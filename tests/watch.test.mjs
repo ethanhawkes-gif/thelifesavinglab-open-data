@@ -49,3 +49,14 @@ test('the same headline from two links is matched, not counted twice', () => {
 test('text() decodes entities and strips tags', () => {
   assert.equal(text('<![CDATA[A &amp; B <b>c</b>]]>'), 'A & B c');
 });
+
+test('reads an item date from <media-date> when a feed prints no pubDate (Maritime NZ)', () => {
+  const feed = '<rss><channel>' +
+    '<item><title>One</title><link>https://example.org/a</link><media-date>Wednesday, 21 October 2026</media-date></item>' +
+    '<item><title>Two</title><link>https://example.org/b</link><pubDate>Tue, 20 Oct 2026 10:00:00 +0000</pubDate><media-date>ignored</media-date></item>' +
+    '</channel></rss>';
+  const items = parseFeed(feed);
+  assert.equal(items.length, 2);
+  assert.equal(items[0].published, 'Wednesday, 21 October 2026', 'media-date is the fallback');
+  assert.equal(items[1].published, 'Tue, 20 Oct 2026 10:00:00 +0000', 'pubDate still wins when present');
+});
