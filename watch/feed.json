@@ -1,9 +1,9 @@
 {
  "schema": "lifesavinglab.watch.feed.v1",
- "generated": "2026-10-24T19:34:38.707Z",
+ "generated": "2026-10-24T22:34:55.942Z",
  "note": "Reports found by the watch and not yet read by a person, newest first. A report is not a count. No headline text and no names are stored; follow the link to read it.",
  "counts": {
-  "reported": 692,
+  "reported": 694,
   "read": 0,
   "row-written": 0,
   "matched": 39,
@@ -19,6 +19,17 @@
   "bing-news": "ok"
  },
  "items": [
+  {
+   "id": "28117fd58f4f042c",
+   "kind": "drowning-reported",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "published": "2026-10-24T19:45:00.000Z",
+   "first_seen": "2026-10-24T22:34:55.942Z",
+   "stage": "reported",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPS0ZkeFg2emcxUU1jTm43NGFmZmQ0eWZLTzFJOHM3YkZvamh0ZXVMVTIwWl9lTzdITkhuWDZZVDkxVU5iV0thMVRYTjYzbUNfTHRUemx2M01MeGs0WGx6SVNxdHVBREtqM2ZqWDhtZXNsOWFkLURiR0s0STR6LXJWMnNxY3gtS1JrWTFNWHRZaFRMbllTS1h5bVJyZmFQWU1LM1FwTnhFakNlaHJkbEFGQS1aTmF6elU?oc=5"
+  },
   {
    "id": "72fa506937611061",
    "kind": "drowning-reported",
@@ -667,17 +678,6 @@
    "first_seen": "2026-10-22T18:39:13.763Z",
    "stage": "reported",
    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVl9mZUkteWRReldPZU1CdVJQUlEwTnVleUl4UzVCQ29WNTFXQUZJejZ1cERZSklVZkZJaTlld05DSUxraWdkMXFISk9jOG9JbzhpMUlMWFc2VFYyVUdnUG9KS2pRbzMwbnBMX1VaaDJXb0V1S3NKUXpsa3A4RXBUZVdIeVlXU29wSFRjOGhjdC05WElidnpNc1VrVWp4V1Y3a3JUZnJNU0E2TjBfMUZUTnNsNA?oc=5"
-  },
-  {
-   "id": "711a568c65f23215",
-   "kind": "capsize",
-   "source": "gnews-us",
-   "source_kind": "press",
-   "region": "United States",
-   "published": "2026-10-22T17:39:55.000Z",
-   "first_seen": "2026-10-22T18:39:13.763Z",
-   "stage": "reported",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObXBuMGVkcGtQcjBoV3dOLUM2TFJkQ2twbFZ0aVV1TlRGUDJKTjQ5Z0FPd0wydmY3NkZGVWxZWjlEWURPbUlLSFVScTRsV2hvTWlyaHRKUmdfUmJVRS1pMVJ3eGEzbkc1UjgzVUlWcG5MMElEdW5SYmg4Uk5sS2tqTTZvdzBOOUVkYThEVEdhNXN5LTVYZ29yUjZKY0g1YjhSel9GNVc1SnR4Zzk0MXl0QzdFc21hWURFdk1PZFUzRlJuRG5KUmxvWg?oc=5"
   }
  ]
 }
