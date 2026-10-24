@@ -1,9 +1,9 @@
 {
  "schema": "lifesavinglab.watch.feed.v1",
- "generated": "2026-10-24T01:43:00.548Z",
+ "generated": "2026-10-24T07:25:42.617Z",
  "note": "Reports found by the watch and not yet read by a person, newest first. A report is not a count. No headline text and no names are stored; follow the link to read it.",
  "counts": {
-  "reported": 668,
+  "reported": 675,
   "read": 0,
   "row-written": 0,
   "matched": 39,
@@ -19,6 +19,17 @@
   "bing-news": "ok"
  },
  "items": [
+  {
+   "id": "bfef49588f2c2a1a",
+   "kind": "drowning-reported",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "published": "2026-10-24T06:00:17.000Z",
+   "first_seen": "2026-10-24T07:25:42.617Z",
+   "stage": "reported",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQU3dXU29lTVhKUkI1VWpfczF6ZmFvUHdSaHRDbmphTFV3MGR4UnIweENIMEt1azZxTWRZY2pub2tGM3pIMTZfU3BpUVpoWmVpMy1vZGNrOWUxNlAtVHYyQ0taZG1zMGtjR1ZhT2FmRzRVaFJkSy1PSHpBSVBlYmpXbjU5Yl9MZFRpZjY2aml6ektvMlNWbnhvT1hjbFNjZnp3Nm5henZzWTQxSFJzY0diZVduZw?oc=5"
+  },
   {
    "id": "a3d3df15e334c389",
    "kind": "drowning-reported",
@@ -394,6 +405,17 @@
    "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNWnBoUm9KaDc0S2tnY0t2bnl3V0l6TnR6eVlmNDVsdmhjU3gxLXE0RkluWndZYXJsZGFxUHMwZ21GVTJvZVRCZThxUWJxblY5ckQ4SDVRZHgtOFdwZUV6ejlsY0ZxYzdCVnhyR0NWamJGNWNVSFFHUUh2UlNBaWE5M3lxd0ltbFd6eWRYOVZ1VlpTV1duUThzWDN0WjlOTURGSjdVV001RWt2bGExZl9DLUtGU0ozSkdhZFBkR0p0RE5EWGkyRzZ3Ul96ckZPSVFkQk1WZEx3eVVXMzZFQURuVWdOXzJ2OGdSeFNONGJZbWFvWnJnSXc?oc=5"
   },
   {
+   "id": "9295566e71851fb0",
+   "kind": "drowning-reported",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "published": "2026-10-23T05:28:56.000Z",
+   "first_seen": "2026-10-24T07:25:42.617Z",
+   "stage": "reported",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE40TGhtOWx6NnhJbTU1MEJGRFdlTDJuLTJiZ1hqUXB4STEzWnZpQWpoWXBreFlQcWtIUmhDSzZpXzNFcGVpX0VjYnJpWXZCaWVJVUZCMC0xV01IcXpoRUZETmlHQjJMLWxveENucF9Xc3ZScXRvdGN6ag?oc=5"
+  },
+  {
    "id": "8fe6d2ebda58bd95",
    "kind": "drowning-reported",
    "source": "gnews-us",
@@ -656,28 +678,6 @@
    "first_seen": "2026-10-22T13:55:58.961Z",
    "stage": "reported",
    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQRUY2ajg2MVpUN1VYdlZ5YzVBdm9ocWpOcUxkMHpRVzE0bV94b3owVGZBZGxBQ0ZYSVZicFh6QUZMcWlOcUlxQlpSNUtQODBqOUVoUEJyakV1bFNnM1lsVnFob1ZtcDhTeW55NmJWZGlZSzdiVnRIV1lGa2x1WjVtZXFDSDZnWmtDbncyNjJXbTd2UFNYTUVuZ2NpZTNsMm1BcWxDcU9GWld3dlUzZTNJX3Q1c3k1STh2VVFjaNIBwgFBVV95cUxPbXlZaE1aU3NsQTdPZ05mN3V6S2gwak93MDA1ZFM4dlNLUE5TY0g0UGhydjJfVjZpYUsxM2hSYXZ1dm5XZy1qWFB0ajYzQXFkQ1NpTm4xQWVVb0RKSEFqQjRkNmhYM3BRVTBCVGRoNWFvSmRPd1hzY2o4aFdxMHM5Y1JKN1V0M3YzUGt4VTgzUlg1Zk1kZXhhTGd4eTFKVWZIVFVpbkxKNDNCVHl3RjJnVkFGSWlLZ3czNmJXTHk0d1VHZw?oc=5"
-  },
-  {
-   "id": "6f4549c90ac6d691",
-   "kind": "drowning-reported",
-   "source": "gnews-us",
-   "source_kind": "press",
-   "region": "United States",
-   "published": "2026-10-22T10:02:15.000Z",
-   "first_seen": "2026-10-22T13:55:58.961Z",
-   "stage": "reported",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQc1hNUUgzLTdzNU5PVHhuMnFiOThodElkRjlsZ2l5YnBZMnRkd0Y3VHVYVm1GdjZLd1BnMTVoTzJEcjAzbGZwa0ZmU2dkdHdoRWV2VDI3ejR3RDN2dWpxWDV2M1dRNzM1d0ZzZkJLbjFtRHBtb0piN1h2Ml9oeGloUWJZRThFeDVrVzItMTdRcDlhOUZRVnA5SmNXRjVHTjltN0QzTXV5WG93NFZCYW1CU1pZVTl0UUdwWnctdmNzUFRUTHc4YVlVTzNUdw?oc=5"
-  },
-  {
-   "id": "b2e1e372d2cb7740",
-   "kind": "drowning-reported",
-   "source": "gnews-us",
-   "source_kind": "press",
-   "region": "United States",
-   "published": "2026-10-22T08:52:00.000Z",
-   "first_seen": "2026-10-22T13:55:58.961Z",
-   "stage": "reported",
-   "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOUkIwVHB3MHgwalFmQmw0NTRVVER2MkZReGxMUmVZc3lNd2NwVEpPVHNYeGRTQXBTSFpwTWJvTDNXbVJEZXk4UXdXZUZxblRiOS1lZmlJdC1NVDdzbHZaMDZOeHhnN09rRzBMQ0J2VjZMaUJlR1V2QWo5RnhzaXBtUjNlTm5XbmZyRjRIeWh3by05MHVsZ1hfQ2RfRnpBMFR3UjYxSWhYS1BNZkxLWmlzLUpvSGdqZUtvSnV3NnhLd25jVUFiTlhLT0xGMmN3RGtDU3VzMW53SXZCNjQ5ZVZkU3QtME54aUVCeEhqdDFadGR3MHB1enfSAfsBQVVfeXFMUFUzYUowcE1aeVBhVUNpMEdpUnIycjJ2LVBnQXplZzlHV0JwM2swOElhckNKMzNKdzB3ZWpLMENYZHhGeTBHenZDaVdCZHdfNlFJVzh5SkVvM09DalFsRDc2cG9zazNza3lRcUswZ3ZjX2kwWFVlS2NFOEpKMW83VjRJaWNVNzhWc3c3dFBMYndUQkIweXV6NjlNN0tacWlJTVpia0tuZ2tOSlMtRnFJa3VTUGZiSW1HVUctTndaV1JDSW5mRC1ROTFSWGdXVTJKcUtabTFESEZoRDVSXzlUTmtvZktrVlZocTRYRGo0NmhCckhxVHpla0NKTG8?oc=5"
   }
  ]
 }
