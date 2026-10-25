@@ -1,8 +1,8 @@
 {
  "schema": "lifesavinglab.watch.queue.v1",
- "generated": "2026-10-24T22:34:55.942Z",
+ "generated": "2026-10-25T01:18:46.271Z",
  "counts": {
-  "reported": 694,
+  "reported": 696,
   "read": 0,
   "row-written": 0,
   "matched": 39,
@@ -11,6 +11,34 @@
   "held": 34
  },
  "items": [
+  {
+   "id": "cc41f5e433c89f10",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOZXZHU3hnZERTTW5nZzFRMEJ6NThOUTl2aHNDaWVJU0taQk82bWpwcHZ5WWtqUFcxM3BJbFRwbDBTNzYxV2RmMGt0VkxuWkdkTGk3YUE3aVZBSGZkNWNLUlZJMS1XbkFGQlFUaEFkTUxWWlJYd1hudWlNclBidFdhZWdqRU1lQ2d4bUE?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-24T22:06:53.000Z",
+   "first_seen": "2026-10-25T01:18:46.271Z",
+   "stage": "reported",
+   "title_sha256": "94698b5224d6c61cec238107510ded3d1159e8d582298999f31dbcc9a9edac86",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "835796b6652158ee",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNeWFGTEdDcGFzWktHdnFDa2dSaTlOREYwOWtCcC1JNzdyQkhxT0czeUtBWlF6TnZBMXhEd2l1YlNVMVZXQ1hYMVJQWjBUTWZKcHF1bHRWUUtPdWJhY2lPSEVWbWpSUHNaVHdZZzFqeHJoMjVfZVBqby0wSDNKWEJxT2pwLU9zdw?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-24T20:07:53.000Z",
+   "first_seen": "2026-10-25T01:18:46.271Z",
+   "stage": "reported",
+   "title_sha256": "5e05b38dd3102bcc929ff6be8530fe04f650080b8e06121f1d4da1d422f6ae89",
+   "held": null,
+   "note": null
+  },
   {
    "id": "28117fd58f4f042c",
    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPS0ZkeFg2emcxUU1jTm43NGFmZmQ0eWZLTzFJOHM3YkZvamh0ZXVMVTIwWl9lTzdITkhuWDZZVDkxVU5iV0thMVRYTjYzbUNfTHRUemx2M01MeGs0WGx6SVNxdHVBREtqM2ZqWDhtZXNsOWFkLURiR0s0STR6LXJWMnNxY3gtS1JrWTFNWHRZaFRMbllTS1h5bVJyZmFQWU1LM1FwTnhFakNlaHJkbEFGQS1aTmF6elU?oc=5",
@@ -10343,6 +10371,40 @@
   }
  ],
  "runs": [
+  {
+   "at": "2026-10-25T01:18:46.271Z",
+   "sources": {
+    "rnli-news": {
+     "ok": false,
+     "error": "HTTP 403"
+    },
+    "uscg-d7-govdelivery": {
+     "ok": true,
+     "items": 100,
+     "matched": 33,
+     "added": 0
+    },
+    "gnews-us": {
+     "ok": true,
+     "items": 100,
+     "matched": 88,
+     "added": 2
+    },
+    "gnews-world": {
+     "ok": true,
+     "items": 100,
+     "matched": 89,
+     "added": 0
+    },
+    "bing-news": {
+     "ok": true,
+     "items": 0,
+     "matched": 0,
+     "added": 0
+    }
+   },
+   "added": 2
+  },
   {
    "at": "2026-10-24T22:34:55.942Z",
    "sources": {
