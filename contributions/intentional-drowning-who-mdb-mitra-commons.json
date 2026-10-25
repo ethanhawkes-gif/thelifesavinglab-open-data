@@ -1,0 +1,195 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "intentional-drowning-who-mdb",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "netherlands-x71-2025",
+   "figure": "99",
+   "low": 99,
+   "high": 99,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Deaths with underlying cause ICD-10 X71 (intentional self-harm by drowning and submersion), Netherlands, both sexes, all ages, 2025 provisional figures (period shown as 2025*). One reporting country only, not a global estimate. The same table prints accidental drowning (W65–W74), water-transport drowning (V90, V92), assault (X92) and undetermined intent (Y21) on separate rows; none of those is in this figure.",
+   "geography": "Netherlands",
+   "source": "Statistics Netherlands (CBS), StatLine table 7233ENG, Deaths; cause of death (extensive list), age and sex, changed on 25 Sep 2026 (2025 provisional figures added)",
+   "url": "https://www.cbs.nl/en-gb/figures/detail/7233ENG?q=drowning",
+   "grade": "A",
+   "do_not_add_to": "Never added to netherlands-y21-2025 (a different intent code; the lab keeps X71 and Y21 apart), nor to who-ghe-2021, eurostat-eu27-drowning-2021-2022 or any unintentional total (different intent, one country, provisional year). Not comparable with another country's X71 count unless that country's undetermined-intent (Y21) coding practice is known: see mexico-y21-x71-ratio-2012-2014.",
+   "note": "Provisional: the page says the provisional figures for 2025 have been added and that figures up to 2024 are final, but the fetched view showed only 2025*. Row label is truncated on the page as 'X71 Intent. self-harm drowning, submer..'. Read on 21 Oct 2026."
+  },
+  {
+   "id": "netherlands-y21-2025",
+   "figure": "5",
+   "low": 5,
+   "high": 5,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Deaths with underlying cause ICD-10 Y21 (drowning and submersion, undetermined intent), Netherlands, both sexes, all ages, 2025 provisional figures (period shown as 2025*). One reporting country only, not a global estimate. Accidental drowning (W65–W74), self-harm (X71) and assault (X92) are printed on separate rows of the same table and are not in this figure.",
+   "geography": "Netherlands",
+   "source": "Statistics Netherlands (CBS), StatLine table 7233ENG, Deaths; cause of death (extensive list), age and sex, changed on 25 Sep 2026 (2025 provisional figures added)",
+   "url": "https://www.cbs.nl/en-gb/figures/detail/7233ENG?q=drowning",
+   "grade": "A",
+   "do_not_add_to": "Never added to netherlands-x71-2025 or to any accidental (W65–W74) count: undetermined intent is a coding outcome that depends on national coroner practice, not a third kind of drowning (Hsieh et al. 2018). One country only, not a global estimate.",
+   "note": "Provisional (2025*). Row label is truncated on the page as 'Y21 Drowning and submersion, und. int..'. Read on 21 Oct 2026."
+  },
+  {
+   "id": "ireland-x71-2021",
+   "figure": "43",
+   "low": 43,
+   "high": 43,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Deaths in Ireland (year-of-death basis, per the answer) with underlying cause ICD-10 X71 (intentional self-harm by drowning and submersion), 2021, all ages and both sexes, coded by the Central Statistics Office from General Register Office death registrations. One reporting country only, not a global estimate. The same table prints V90, V92, V93, W16, W65–W70, W73, W74, X92 and Y21 on separate rows and a Total row of 102. Several cells are blank; the seven printed cells sum to the printed Total, so blanks are nil (the page's confidentiality sentence concerns its county table).",
+   "geography": "Ireland",
+   "source": "Central Statistics Office (CSO) table reproduced in a Dáil Éireann written answer of 7 Feb 2024 (Oireachtas debates, written question 2), Table 1: drowning deaths by underlying cause of death, 2021",
+   "url": "https://www.oireachtas.ie/en/debates/question/2024-02-07/2/",
+   "grade": "A",
+   "do_not_add_to": "Never added to ireland-y21-2021, nor to ireland-drowning-all-codes-2021 (which already contains it), nor to any unintentional figure (who-ghe-2021, eurostat-eu27-drowning-2021-2022). One country, one year; not a global estimate and not comparable across countries without checking each country's Y21 practice.",
+   "note": "Read from the parliamentary record, not from a CSO publication; the CSO's own table was not located (see next_tasks). Graded A because the answer reproduces the statistics office's table; a reviewer may prefer C for the host. X71 is the largest single code in the table (43 of the printed Total 102)."
+  },
+  {
+   "id": "ireland-y21-2021",
+   "figure": "1",
+   "low": 1,
+   "high": 1,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Deaths in Ireland (the answer says the 2021 data 'is based off year of death') with underlying cause ICD-10 Y21 (drowning and submersion, undetermined intent), 2021, all ages and both sexes, coded by the Central Statistics Office. One reporting country only, not a global estimate. Accidental drowning (W65–W74), self-harm (X71) and assault (X92) are printed on separate rows and are not in this figure.",
+   "geography": "Ireland",
+   "source": "Central Statistics Office (CSO) table reproduced in a Dáil Éireann written answer of 7 Feb 2024 (Oireachtas debates, written question 2), Table 1: drowning deaths by underlying cause of death, 2021",
+   "url": "https://www.oireachtas.ie/en/debates/question/2024-02-07/2/",
+   "grade": "A",
+   "do_not_add_to": "Never added to ireland-x71-2021 or any accidental count. A single death. One country only, not a global estimate.",
+   "note": "Read from the parliamentary record, not from a CSO publication. Ireland's very low Y21 share next to a high X71 share is itself a coding-practice pattern (compare mexico-y21-x71-ratio-2012-2014)."
+  },
+  {
+   "id": "ireland-drowning-all-codes-2021",
+   "figure": "102",
+   "low": 102,
+   "high": 102,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "The Total row printed by the source: 2021 deaths occurring in Ireland whose underlying cause is any of the ICD-10 codes the source lists (V90, V92, V93, W16, W65–W70, W73, W74, X71, X92, Y21), every intent together. Not an unintentional-drowning count: it contains the 43 X71 and 1 Y21 deaths. Blank cells are nil (the printed cells sum to 102). V93 and W16, whose ICD titles say 'not causing drowning' and 'injury other than drowning', are listed by the source but blank.",
+   "geography": "Ireland",
+   "source": "Central Statistics Office (CSO) table reproduced in a Dáil Éireann written answer of 7 Feb 2024 (Oireachtas debates, written question 2), Table 1: drowning deaths by underlying cause of death, 2021",
+   "url": "https://www.oireachtas.ie/en/debates/question/2024-02-07/2/",
+   "grade": "A",
+   "do_not_add_to": "The source's own total across every intent; never added to anything and never used as an unintentional count. Not comparable with uk-waid-2024 or lifesaving-society counts, which come from incident records rather than ICD coding of registered deaths.",
+   "note": "Recorded because the source prints it and because it is the denominator that makes the X71 share readable. One country, one year; not a global estimate."
+  },
+  {
+   "id": "mexico-y21-x71-ratio-2012-2014",
+   "figure": "12.35 (593/48)",
+   "low": 12.35,
+   "high": 12.35,
+   "unit": "ratio",
+   "year": 2014,
+   "scope": "Ratio of drowning deaths of undetermined intent (ICD-10 Y21: 593) to intentional self-harm by drowning (X71: 48) in Mexico, over the latest three data years available in WHO's Cause of Death Query Online as of 30 April 2017 (the text says 2012–2014 for 16 of the 32 OECD countries and 2013–2015 for five; this country's exact years are in Table 1, not read, so the row's year is the title's end year). Three-year totals as printed by the paper, not annual counts. Reporting countries only, not a global estimate.",
+   "geography": "Mexico",
+   "source": "Hsieh, Wang and Lu, Drowning mortality by intent: a population-based cross-sectional study of 32 OECD countries, 2012–2014, BMJ Open 2018;8(7):e021501, doi 10.1136/bmjopen-2018-021501",
+   "url": "https://bmjopen.bmj.com/content/8/7/e021501",
+   "grade": "B",
+   "do_not_add_to": "A ratio, never added to anything. The counts inside it (593 Y21, 48 X71) are three-year totals for one country and must not be set beside the annual netherlands or ireland rows as if comparable. Its purpose is the warning that undetermined-intent coding differs by country, so X71 counts cannot be compared across countries on their own.",
+   "note": "The paper's Table 1 (per-country counts by intent for all 32 countries) could not be read here; the Results text prints only Mexico and Poland. The paper also reports age-standardised rates per 100,000 (self-harm drowning: Ireland 0.96, Belgium 0.96, Korea 0.89; undetermined: Austria 0.57, Korea 0.56, Hungary 0.44), not copied as rows."
+  },
+  {
+   "id": "poland-y21-x71-ratio-2012-2014",
+   "figure": "7.53 (444/59)",
+   "low": 7.53,
+   "high": 7.53,
+   "unit": "ratio",
+   "year": 2014,
+   "scope": "Ratio of drowning deaths of undetermined intent (ICD-10 Y21: 444) to intentional self-harm by drowning (X71: 59) in Poland, over the latest three data years available in WHO's Cause of Death Query Online as of 30 April 2017 (the text says 2012–2014 for 16 of the 32 OECD countries and 2013–2015 for five; this country's exact years are in Table 1, not read, so the row's year is the title's end year). Three-year totals as printed by the paper, not annual counts. Reporting countries only, not a global estimate.",
+   "geography": "Poland",
+   "source": "Hsieh, Wang and Lu, Drowning mortality by intent: a population-based cross-sectional study of 32 OECD countries, 2012–2014, BMJ Open 2018;8(7):e021501, doi 10.1136/bmjopen-2018-021501",
+   "url": "https://bmjopen.bmj.com/content/8/7/e021501",
+   "grade": "B",
+   "do_not_add_to": "A ratio, never added to anything. The counts inside it (444 Y21, 59 X71) are three-year totals for one country and must not be set beside the annual netherlands or ireland rows as if comparable. Same warning as mexico-y21-x71-ratio-2012-2014.",
+   "note": "Second-highest ratio in the paper after Mexico. The paper concludes that this variation in classifying undetermined intent hinders valid international comparison of drowning by intent."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "intentional-drowning",
+   "field": "note",
+   "old": "Open task: reproduce GBD self-harm by drowning from a primary table.",
+   "new": "Open task: reproduce GBD self-harm by drowning from a primary table. No cross-country X71/Y21 count was reachable without a browser (WHO Mortality Database portal interactive; raw files zipped, updated 23 Feb 2026). Rows exist for the Netherlands (2025, provisional) and Ireland (2021); Hsieh et al. 2018 (BMJ Open) tabulate 32 OECD countries for 2012–2014 and find the ratio of undetermined-intent (Y21) to self-harm (X71) drowning deaths reaches 12.35 (Mexico) and 7.53 (Poland), so X71 is not comparable across countries without their Y21 practice. Reporting countries only, not a global estimate.",
+   "evidence": "Rows netherlands-x71-2025, netherlands-y21-2025, ireland-x71-2021, ireland-y21-2021 in this bundle; BMJ Open Results text (Mexico 12.35, 593/48; Poland 7.53, 444/59); WHO download page file list dated 23 Feb 2026."
+  },
+  {
+   "row_id": "icd-definition",
+   "field": "note",
+   "old": "X38 flood, V90/V92 water transport, Y21 undetermined intent.",
+   "new": "X38 flood, V90/V92 water transport, Y21 undetermined intent. Also outside W65–W74: X71 intentional self-harm by drowning and submersion and X92 assault by drowning and submersion, which national cause-of-death tables (CSO Ireland 2021, CBS Netherlands 2025) print as separate rows; see intentional-drowning.",
+   "evidence": "Hsieh et al. 2018, Methods (Measures): codes W65–W74, X71, X92, Y21 by intent; CSO table in the Oireachtas written answer of 7 Feb 2024, Table 1; CBS StatLine 7233ENG rows X71, X92, Y21."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://platform.who.int/mortality",
+   "quote": "Only data with at least 65% completeness are published here.",
+   "where": "Landing page, database description. The cause-of-death explorer rendered as 'No Causes of Death Found' in the fetched text; no X71 or Y21 figures, data year or country count were visible."
+  },
+  {
+   "url": "https://www.who.int/data/data-collection-tools/who-mortality-database",
+   "quote": "will not open in programs like Excel",
+   "where": "Raw data files section: morticd10_part6 (ICD-10 data 2021 onward, updated 23 Feb 2026), morticd10_part5 (2017–2020), morticd10_part4 (2013–2016), mort_availability.zip (country-years available), mort_documentation zip (file specifications and cause list)."
+  },
+  {
+   "url": "https://bmjopen.bmj.com/content/8/7/e021501",
+   "quote": "was highest in Mexico (12.35, 593/48) and Poland (7.53, 444/59)",
+   "where": "Results, paragraph on the undetermined intent versus intentional self-harm ratio. Methods (Measures) defines W65–W74, X71, X92 and Y21 by intent; Setting: 32 OECD countries, data from the WHO Cause of Death Query Online, latest 3 years as of 30 April 2017. Table 1 did not render."
+  },
+  {
+   "url": "https://www.oireachtas.ie/en/debates/question/2024-02-07/2/",
+   "quote": "X71 Intentional self-harm by drowning and submersion",
+   "where": "Written answer of 7 Feb 2024 (written question 2), Table 1, 2021 deaths by underlying cause of death: X71 row Count 43; Y21 row Count 1; Total 102; several cells blank, grouped for confidentiality. Text names the CSO as producer and Eurostat for Table 3."
+  },
+  {
+   "url": "https://www.cbs.nl/en-gb/figures/detail/7233ENG?q=drowning",
+   "quote": "The provisional figures for 2025 have been added.",
+   "where": "StatLine table 7233ENG, Sex: Total male and female, Age: Total, Periods: 2025*, column Deaths (number): row X71 = 99, row Y21 = 5; also V90 2, V92 1, W65 8, W69 20, W70 48, W74 22, X92 2. Changed on 25/09/2026."
+  },
+  {
+   "url": "https://datadryad.org/dataset/doi:10.5061/dryad.k5d0rp0",
+   "quote": "OECD drowning mortality Apr 25 2017.xlsx",
+   "where": "Files list (the only file, 93 KB, download path file_stream/45758); dataset title 'Data from: Drowning mortality by intent: a population-based cross-sectional study of 32 OECD countries, 2012–2014'; abstract gives rates and shares only."
+  }
+ ],
+ "tried": [
+  "platform.who.int/mortality: the landing page opened but is an interactive app; the fetched text held only the database description and 'No Causes of Death Found'. The drowning indicator-group address (platform.who.int/mortality/themes/theme-details/topics/indicator-groups/indicator-group-details/MDB/drowning) returned a fetch error. A search for site:platform.who.int pages on drowning, self-harm or undetermined intent found none. The X71/Y21 query needs a person with a browser.",
+  "who.int/data/data-collection-tools/who-mortality-database: opened. It lists the raw files (morticd10_part6 for 2021 onward and mort_availability.zip for country-years, both updated 23 Feb 2026) but they are ZIP archives that a page fetch cannot read and the shell has no web access, so no counts and no number of reporting countries could be taken from them.",
+  "Hsieh et al. 2018 full text: pmc.ncbi.nlm.nih.gov/articles/PMC6059339 showed a browser-verification wall; bmjopen.bmj.com/content/8/7/e021501.long returned a fetch error; europepmc.org/article/MED/30049697 is disallowed for fetching. The abstract and results page bmjopen.bmj.com/content/8/7/e021501 did open, but its Table 1 (counts by intent for all 32 countries) was not in the rendered text.",
+  "datadryad.org/dataset/doi:10.5061/dryad.k5d0rp0 (the paper's data): opened; the only file is the spreadsheet 'OECD drowning mortality Apr 25 2017.xlsx' (93 KB, file_stream/45758), a binary file that could not be read through the fetch tool.",
+  "Searches for a newer multi-country tabulation ('WHO Mortality Database' X71 Y21 drowning; drowning mortality by intent WHO Mortality Database self-harm undetermined 2019–2022): no WHO publication and no paper later than the 2018 OECD study surfaced; other hits were single-jurisdiction reports (Australia 1994–2016 cohort, Arizona DHS annual drowning tables, Los Angeles County) not used.",
+  "abs.gov.au Causes of Death, Australia 2024 (latest-release) and Intentional self-harm (suicide) deaths, 2024: both opened, but the fetch tool truncated each page before any method-of-death section, so no X71 count for Australia was read (only the national totals 3,307 preliminary and 3,326 revised for 2024, not drowning-specific). The method table sits in the data cubes (xlsx), not opened.",
+  "www150.statcan.gc.ca table 13-10-0156-01, Deaths by cause, Chapter XX (latest reference year 2024, released 13 Jan 2026): opened, but the data grid is drawn by JavaScript and the fetched text said 'No results found'; the full-table download is a zipped CSV and was not attempted.",
+  "CDC: WISQARS fatal injury reports are an interactive query tool and CDC WONDER requires accepting a data-use agreement, so neither was attempted. A search for an NCHS 'Deaths: Final Data' table printing X71 and Y21 for 2022 or 2023 returned nothing usable (the 113-cause list folds X71 into 'other and unspecified means').",
+  "ONS England and Wales: a search for a registrations table printing X71 or Y21 for 2023 or 2024 found only the Suicides in England and Wales dataset (xlsx) and an FOI page without method detail; neither was opened."
+ ],
+ "notes": "Status partial. The task's core ask, X71 and Y21 counts for the most recent year across all countries reporting to the WHO Mortality Database with the number of reporting countries, could not be met: the portal (platform.who.int/mortality) is an interactive app that returns no figures to a page fetch, and the downloadable files (morticd10_part6 for 2021 onward, mort_availability.zip, both updated 23 Feb 2026) are ZIP archives that neither the fetch tool nor the shell can open here. No WHO publication tabulating X71/Y21 by country was found. Everything recorded is 'reporting countries only, not a global estimate', and nothing was summed across countries, years or codes.\n\nWhat was recorded instead: (1) Statistics Netherlands StatLine 7233ENG prints X71 = 99 and Y21 = 5 for 2025, provisional (2025*); figures up to 2024 are final but the fetched view showed only 2025. (2) A CSO table for Ireland 2021, read from a Dáil written answer of 7 Feb 2024: X71 = 43, Y21 = 1, printed Total 102 (every intent); blank cells are small numbers grouped for confidentiality. Graded A because it is the statistics office's table reproduced verbatim in an official record; the reviewer may prefer C for the host, and a next_task asks for the CSO's own publication. (3) Hsieh, Wang and Lu (BMJ Open 8(7): e021501), the closest thing to the asked-for tabulation: 32 OECD countries, latest three years as of April 2017, from the WHO Cause of Death Query Online (the Mortality Database's query front end). Only the Mexico (12.35 = 593/48) and Poland (7.53 = 444/59) undetermined-to-self-harm ratios are in the readable text; the per-country Table 1 and the Dryad spreadsheet need a person with a browser.\n\nWhat the reviewer should check by eye: the Oireachtas page gave no visible question title in the fetched text, so 'written question 2 of 7 Feb 2024' comes from the address; the first read of that page miscounted the listed cells, the second read confirmed X71 43, Y21 1, Total 102 (the printed non-blank cells V90 1, W69 5, W70 1, W73 1, W74 50, X71 43, Y21 1 do reach 102). The CBS row labels are truncated on the page ('X71 Intent. self-harm drowning, submer..'); the values were confirmed in a second read. The BMJ Open citation details (journal, year, volume) were not on the fetched page; volume and issue come from the address and the year from the Dryad record.\n\nDefinitions: ICD-10 X71 intentional self-harm by drowning and submersion; Y21 drowning and submersion, undetermined intent; X92 assault by drowning. Both national tables and the OECD paper show that Y21 practice varies enormously (Ireland 1 Y21 beside 43 X71; Mexico 593 Y21 beside 48 X71), which is why the do_not_add_to rules forbid comparing X71 across countries on its own. Two corrections update the notes of intentional-drowning and icd-definition to point at these rows; the old values were copied verbatim from the ledger.",
+ "next_tasks": [
+  {
+   "title": "Run the WHO Mortality Database portal query for X71 and Y21, latest year, all reporting countries, and record the year and the number of countries (needs a person with a browser)",
+   "why": "The portal is interactive and returned no figures to a fetch; a person can export the table and read the country count from mort_availability.zip."
+  },
+  {
+   "title": "Open the Dryad spreadsheet 'OECD drowning mortality Apr 25 2017.xlsx' (Hsieh et al. 2018) and transcribe Table 1: X71 and Y21 counts for each of the 32 OECD countries (needs a person with a browser)",
+   "why": "The only multi-country WHO-derived tabulation of drowning by intent found; the per-country counts were unreadable here."
+  },
+  {
+   "title": "Find the CSO's own publication of the 2021 Ireland drowning-by-ICD-code table (Vital Statistics Annual Report or a CSO statistical release) to re-source ireland-x71-2021, ireland-y21-2021 and ireland-drowning-all-codes-2021",
+   "why": "The figures were read from a parliamentary written answer that reproduces the CSO table; the statistics office's own page would settle the grade."
+  },
+  {
+   "title": "Read 2024 X71 and Y21 values from CBS StatLine 7233ENG (final), the ABS intentional self-harm mechanism table for Australia, and Statistics Canada table 13-10-0156-01 (needs a person with a browser)",
+   "why": "Each source prints the codes, but the fetched views showed only 2025 provisional (CBS), truncated before the method section (ABS) or an empty JavaScript grid (StatCan)."
+  }
+ ]
+}

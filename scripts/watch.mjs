@@ -46,7 +46,7 @@ export function parseFeed(xml) {
   const atom = rss.length ? [] : [...xml.matchAll(/<entry(?:\s[^>]*)?>([\s\S]*?)<\/entry>/gi)].map((m) => m[1]);
   for (const b of rss) {
     items.push({ title: text(tag(b, 'title')), link: text(tag(b, 'link')) || (b.match(/<guid[^>]*>([\s\S]*?)<\/guid>/i) || ['', ''])[1].trim(),
-      published: text(tag(b, 'pubDate')) || text(tag(b, 'dc:date')), summary: text(tag(b, 'description')) });
+      published: text(tag(b, 'pubDate')) || text(tag(b, 'dc:date')) || text(tag(b, 'media-date')), summary: text(tag(b, 'description')) });
   }
   for (const b of atom) {
     const href = (b.match(/<link[^>]*href="([^"]+)"/i) || ['', ''])[1];

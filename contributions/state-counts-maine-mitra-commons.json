@@ -1,0 +1,155 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "state-counts-maine",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "maine-total-2024",
+   "figure": "26",
+   "low": 26,
+   "high": 26,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Deaths with drowning as the OCME 'mode of death' among cases handled by the Maine Office of Chief Medical Examiner in calendar 2024, from the untitled table (Firearm / Drowning / Child (<2 years) / Fire Related, 2021-2024) on p. 10 of the 2024 Annual Report. All manners: the report says these deaths 'may be accidents, suicides or homicides', so not unintentional-only and not an ICD-10 W65-W74 count. Boating drownings are not separated. The OCME takes jurisdiction over deaths not known to be due to exclusively natural processes; residency is not stated. No place or activity split is printed.",
+   "geography": "Maine",
+   "source": "Maine Office of Chief Medical Examiner (Office of the Maine Attorney General), Office of Chief Medical Examiner 2024 Annual Report (posted on DigitalMaine 13 Aug 2026), untitled table under 'Categorizations of Modes of Death', p. 10",
+   "url": "https://digitalmaine.com/cgi/viewcontent.cgi?article=1032&context=ag_docs",
+   "grade": "A",
+   "do_not_add_to": "Never added across the five Maine rows (maine-total-2020 to maine-total-2025), nor to us-cdc-4345, us-cdc-4500 or us-total-2022: Maine is already inside those national figures, and they count unintentional W65-W74/V90/V92 deaths only while the OCME counts all manners. Not added to uscg-boating-2024 or us-location-boating-2024 (Maine boating drownings sit inside this count). Not set against another state's vital-statistics count without a definition check (OCME case-finding and intent differ from NCHS).",
+   "note": "Pie chart p. 9 shows drowning as 2% of OCME accidental deaths in 2024 (label-to-value pairing inferred from label order; not recorded as a row). The report's text (p. 9) says 2024 saw 'an overall decrease in deaths from firearms, drowning, fire related and child deaths'. OCME took jurisdiction of 2,435 of the 4,161 deaths reported to it in 2024 (p. 7). Found 21 Oct 2026."
+  },
+  {
+   "id": "maine-total-2023",
+   "figure": "31",
+   "low": 31,
+   "high": 31,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Deaths with drowning as the OCME 'mode of death' among cases handled by the Maine Office of Chief Medical Examiner in calendar 2023, from the untitled table (Firearm / Drowning / Child (<2 years) / Fire Related, 2021-2024) on p. 10 of the 2024 Annual Report. All manners: the report says these deaths 'may be accidents, suicides or homicides', so not unintentional-only and not an ICD-10 W65-W74 count. Boating drownings are not separated. The OCME takes jurisdiction over deaths not known to be due to exclusively natural processes; residency is not stated. No place or activity split is printed.",
+   "geography": "Maine",
+   "source": "Maine Office of Chief Medical Examiner (Office of the Maine Attorney General), Office of Chief Medical Examiner 2024 Annual Report (posted on DigitalMaine 13 Aug 2026), untitled table under 'Categorizations of Modes of Death', p. 10",
+   "url": "https://digitalmaine.com/cgi/viewcontent.cgi?article=1032&context=ag_docs",
+   "grade": "A",
+   "do_not_add_to": "Never added across the five Maine rows (maine-total-2020 to maine-total-2025), nor to us-cdc-4345, us-cdc-4500 or us-total-2022: Maine is already inside those national figures, and they count unintentional W65-W74/V90/V92 deaths only while the OCME counts all manners. Not added to uscg-boating-2024 or us-location-boating-2024 (Maine boating drownings sit inside this count). Not set against another state's vital-statistics count without a definition check (OCME case-finding and intent differ from NCHS).",
+   "note": "The 2023 Annual Report (p. 11, same table for 2020-2023) prints the same value, 31. Found 21 Oct 2026."
+  },
+  {
+   "id": "maine-total-2022",
+   "figure": "31",
+   "low": 31,
+   "high": 31,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Deaths with drowning as the OCME 'mode of death' among cases handled by the Maine Office of Chief Medical Examiner in calendar 2022, from the untitled table (Firearm / Drowning / Child (<2 years) / Fire Related, 2021-2024) on p. 10 of the 2024 Annual Report. All manners: the report says these deaths 'may be accidents, suicides or homicides', so not unintentional-only and not an ICD-10 W65-W74 count. Boating drownings are not separated. The OCME takes jurisdiction over deaths not known to be due to exclusively natural processes; residency is not stated. No place or activity split is printed.",
+   "geography": "Maine",
+   "source": "Maine Office of Chief Medical Examiner (Office of the Maine Attorney General), Office of Chief Medical Examiner 2024 Annual Report (posted on DigitalMaine 13 Aug 2026), untitled table under 'Categorizations of Modes of Death', p. 10",
+   "url": "https://digitalmaine.com/cgi/viewcontent.cgi?article=1032&context=ag_docs",
+   "grade": "A",
+   "do_not_add_to": "Never added across the five Maine rows (maine-total-2020 to maine-total-2025), nor to us-cdc-4345, us-cdc-4500 or us-total-2022: Maine is already inside those national figures, and they count unintentional W65-W74/V90/V92 deaths only while the OCME counts all manners. Not added to uscg-boating-2024 or us-location-boating-2024 (Maine boating drownings sit inside this count). Not set against another state's vital-statistics count without a definition check (OCME case-finding and intent differ from NCHS).",
+   "note": "The 2023 Annual Report (p. 11, same table for 2020-2023) prints the same value, 31. Found 21 Oct 2026."
+  },
+  {
+   "id": "maine-total-2021",
+   "figure": "29",
+   "low": 29,
+   "high": 29,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Deaths with drowning as the OCME 'mode of death' among cases handled by the Maine Office of Chief Medical Examiner in calendar 2021, from the untitled table (Firearm / Drowning / Child (<2 years) / Fire Related, 2021-2024) on p. 10 of the 2024 Annual Report. All manners: the report says these deaths 'may be accidents, suicides or homicides', so not unintentional-only and not an ICD-10 W65-W74 count. Boating drownings are not separated. The OCME takes jurisdiction over deaths not known to be due to exclusively natural processes; residency is not stated. No place or activity split is printed.",
+   "geography": "Maine",
+   "source": "Maine Office of Chief Medical Examiner (Office of the Maine Attorney General), Office of Chief Medical Examiner 2024 Annual Report (posted on DigitalMaine 13 Aug 2026), untitled table under 'Categorizations of Modes of Death', p. 10",
+   "url": "https://digitalmaine.com/cgi/viewcontent.cgi?article=1032&context=ag_docs",
+   "grade": "A",
+   "do_not_add_to": "Never added across the five Maine rows (maine-total-2020 to maine-total-2025), nor to us-cdc-4345, us-cdc-4500 or us-total-2022: Maine is already inside those national figures, and they count unintentional W65-W74/V90/V92 deaths only while the OCME counts all manners. Not added to uscg-boating-2024 or us-location-boating-2024 (Maine boating drownings sit inside this count). Not set against another state's vital-statistics count without a definition check (OCME case-finding and intent differ from NCHS).",
+   "note": "The 2023 Annual Report (p. 11, same table for 2020-2023) prints the same value, 29. Found 21 Oct 2026."
+  },
+  {
+   "id": "maine-total-2020",
+   "figure": "43",
+   "low": 43,
+   "high": 43,
+   "unit": "deaths",
+   "year": 2020,
+   "scope": "Deaths with drowning as the OCME 'mode of death' among cases handled by the Maine Office of Chief Medical Examiner in calendar 2020, from the untitled table (Firearm / Drowning / Child (<2 years) / Fire Related, 2018-2020) on p. 9 of the 2020 Annual Report. All manners: the report says these deaths 'may be accidents, suicides or homicides', so not unintentional-only and not an ICD-10 W65-W74 count. Boating drownings are not separated. The OCME takes jurisdiction over deaths not known to be due to exclusively natural processes; residency is not stated. No place or activity split is printed.",
+   "geography": "Maine",
+   "source": "Maine Office of Chief Medical Examiner (Office of the Maine Attorney General), Maine Office of Chief Medical Examiner 2020 Annual Report (1 Jul 2021), untitled table under 'Categorizations of Modes of Death', p. 9",
+   "url": "https://digitalmaine.com/cgi/viewcontent.cgi?article=1027&context=ag_docs",
+   "grade": "A",
+   "do_not_add_to": "Never added across the five Maine rows (maine-total-2020 to maine-total-2025), nor to us-cdc-4345, us-cdc-4500 or us-total-2022: Maine is already inside those national figures, and they count unintentional W65-W74/V90/V92 deaths only while the OCME counts all manners. Not added to uscg-boating-2024 or us-location-boating-2024 (Maine boating drownings sit inside this count). Not set against another state's vital-statistics count without a definition check (OCME case-finding and intent differ from NCHS).",
+   "note": "The 2023 Annual Report (p. 11, table for 2020-2023) also prints 43 for 2020. The 2020 report says the OCME 'saw increases in the number of drownings' that year; the same table prints 2019 = 29 and 2018 = 33 (outside the latest five years, so not recorded as rows). Pie chart p. 8 shows drowning as 4% of accidental deaths (pairing inferred from label order). Found 21 Oct 2026."
+  },
+  {
+   "id": "maine-total-2025",
+   "figure": "37",
+   "low": 37,
+   "high": 37,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Deaths with drowning as the OCME 'mode of death' among cases handled by the Maine Office of Chief Medical Examiner in calendar 2025, from the untitled table (Firearm / Drowning / Child (<2 years) / Fire Related, 2022-2025) on p. 9 of the 2025 Annual Report. All manners: the report says these deaths 'may be accidents, suicides or homicides', so not unintentional-only and not an ICD-10 W65-W74 count. Boating drownings are not separated. No place or activity split is printed.",
+   "geography": "Maine",
+   "source": "Maine Office of Chief Medical Examiner (Office of the Maine Attorney General), Office of Chief Medical Examiner 2025 Annual Report (posted on DigitalMaine 31 Aug 2026), untitled table under 'Categorizations of Modes of Death', p. 9",
+   "url": "https://digitalmaine.com/cgi/viewcontent.cgi?article=1033&context=ag_docs",
+   "grade": "A",
+   "do_not_add_to": "Never added across the five Maine rows (maine-total-2020 to maine-total-2025), nor to us-cdc-4345, us-cdc-4500 or us-total-2022: Maine is already inside those national figures, and they count unintentional W65-W74/V90/V92 deaths only while the OCME counts all manners. Not added to uscg-boating-2024 or us-location-boating-2024 (Maine boating drownings sit inside this count). Not set against another state's vital-statistics count without a definition check (OCME case-finding and intent differ from NCHS).",
+   "note": "Found by the independent verifier on 21 Oct 2026 after the first pass stopped at the 2024 edition: table rows as extracted '2022 183 31 33 17 / 2023 207 31 22 23 / 2024 192 26 18 12 / 2025 358 37 12 18' (Firearm / Drowning / Child / Fire). The 2025 edition's change sentence (child deaths fell 18 to 12 while drowning rose 26 to 37) pins the Drowning column. The 2025 firearm value (358 against 192 in 2024) looks anomalous, so a maintainer should open the PDF by eye before using any 2025 value; the drowning value is consistent with the text."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://digitalmaine.com/cgi/viewcontent.cgi?article=1032&context=ag_docs",
+   "quote": "These deaths may be accidents, suicides or homicides.",
+   "where": "p. 9, 'Categorizations of Modes of Death'; untitled table p. 10 (Firearm / Drowning / Child (<2 years) / Fire Related): drowning 2021 = 29, 2022 = 31, 2023 = 31, 2024 = 26; p. 7 deaths reported and cases accepted; p. 2 jurisdiction; p. 9 pie chart."
+  },
+  {
+   "url": "https://digitalmaine.com/cgi/viewcontent.cgi?article=1031&context=ag_docs",
+   "quote": "drug overdoses, falls, and drownings.",
+   "where": "p. 9, 'Accidents'; untitled table p. 11 (Firearm / Drowning / Child (<2 years) / Fire Related): drowning 2020 = 43, 2021 = 29, 2022 = 31, 2023 = 31; p. 10 'Categorizations of Modes of Death'."
+  },
+  {
+   "url": "https://digitalmaine.com/cgi/viewcontent.cgi?article=1027&context=ag_docs",
+   "quote": "increases in the number of drownings, child deaths, and fire-related deaths",
+   "where": "p. 9, 'Categorizations of Modes of Death', from the sentence beginning 'The OCME saw'; untitled table p. 9: drowning 2018 = 33, 2019 = 29, 2020 = 43; p. 8 pie chart and manner definitions."
+  },
+  {
+   "url": "https://www.cdc.gov/drowning/data/index.html",
+   "quote": "An average of 4,083 unintentional drowning deaths occurred each year from 2012–2021.",
+   "where": "Footnote to the sentence 'Every year in the United States there are over 4,000* fatal unintentional drownings', as fetched 21 Oct 2026. Supports the verify follow-up on us-cdc-4345 only; no row rests on it."
+  }
+ ],
+ "tried": [
+  "Maine CDC fact-sheet index (maine.gov/dhhs/mecdc/public-health-systems/data-research/fact-sheet/index.html): the only drowning item is 'Drowning deaths: Maine, 1987-1996' (Series 7, No. 13); nothing after 2003.",
+  "Maine CDC 'Maine Resident Deaths' page (maine.gov/dhhs/mecdc/data-reports/population-health/life-events/deaths): links only Leading Causes of Death reports for 2018-2020, disposition tables and town/county counts; no cause-of-death table with a drowning line. The Tableau death dashboard is an image, not a table.",
+  "Maine Mortality Report: Leading Causes of Death, 2020 (July 2022 PDF): no mention of drowning, W65-W74, V90 or V92; unintentional injury is one line (V01-X59, Y85-86) as a rate only. Not useful for a drowning count.",
+  "Office of Chief Medical Examiner page on maine.gov/ag: no statistics or report links; the annual reports live on DigitalMaine (digitalmaine.com/ag_docs). Editions 2016-2025 are listed (the 2025 edition, online since 31 Aug 2026, was found by the verifier and added as maine-total-2025); the 2021 and 2022 editions were not opened because the 2023 and 2024 editions print 2020-2024 and agree on every overlapping year.",
+  "DigitalMaine Warden Service collection (digitalmaine.com/warden_docs): historical documents only (1964-2014), no annual statistics. IF&W press release id=4956922 (8 Jun 2021) describes one incident with no yearly count. Searches for a Warden Service or Marine Patrol year-end tally returned only press (Bangor Daily News, Sun Journal, WGME), not used.",
+  "U.S. Coast Guard 2024 Recreational Boating Statistics PDF (uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2024.pdf): the fetch tool's text stops at about 81,500 characters, before the by-state casualty table (Table 33, pp. 65-66), so no Maine boating-death count was read. Only Table 8 (alcohol as a contributing factor, p. 27) came through with a Maine row; it is a subset and not drowning-specific, so not recorded.",
+  "CDC WONDER (Underlying Cause of Death, Maine, W65-W74/V90/V92): not attempted, because it requires accepting a data-use agreement. CDC WISQARS: not attempted; an earlier merged bundle found it to be a JavaScript shell with no static tables.",
+  "MMWR QuickStats mm7234a7 (25 Aug 2023): national rates for ages 0-17 only; no state figures. CDC Drowning Data page (cdc.gov/drowning/data/index.html): national figures and a state-rate map that is not in the page text; no Maine value.",
+  "Web searches for Maine CDC injury-prevention or water-safety data with yearly drowning counts by water: only press and aggregator pages (sunjournal.com, bangordailynews.com, wgme.com, mojo.iimu.ac.in), none opened or used."
+ ],
+ "notes": "Five rows, one per year 2020-2024, all from the Maine Office of Chief Medical Examiner annual reports on DigitalMaine (the Attorney General's documents collection). Definition: the OCME prints drowning as a 'mode of death' in an untitled four-column table (Firearm / Drowning / Child (<2 years) / Fire Related) and says these deaths 'may be accidents, suicides or homicides', so the counts cover ALL manners (and presumably undetermined), unlike CDC's unintentional W65-W74/V90/V92 series behind us-cdc-4345, us-cdc-4500 and us-total-2022. Water-transport drownings are neither separated nor excluded. The OCME takes jurisdiction over 'all deaths that are not known to be due to exclusively natural processes'; whether non-residents dying in Maine are included, or Maine residents dying elsewhere excluded, is not stated, so the series is best read as drownings investigated by the Maine OCME. No place or activity split is printed in any edition opened, so no setting rows could be returned; the lab's by-water question for Maine stays open (see next_tasks). Values as printed: 2020 = 43 (2020 edition p. 9; 2023 edition p. 11), 2021 = 29, 2022 = 31, 2023 = 31 (both the 2023 and 2024 editions), 2024 = 26 (2024 edition p. 10). The tables carry no caption, footnote or provisional flag; the 2023 and 2024 editions were posted on DigitalMaine on 13 Aug 2026, the 2020 edition on 1 Jul 2021. Values read by eye from the fetch tool's PDF text; the reviewer should open p. 10 of the 2024 report and p. 9 of the 2020 report to confirm the column order (the fetch tool reported the headers in that order). The pie-chart shares (drowning 2% of accidental deaths in 2024, 4% in 2020) are not recorded as rows because the label-to-value pairing was inferred from label order. Row ids follow the ledger's '<place>-total-<year>' style; a future Maine vital-statistics (ICD W65-W74) series should take a different id stem (for example maine-residents-w65-w74-<year>) because the definitions differ. Comparison rows: nothing to correct in uscg-boating-2024 from what was read. For us-cdc-4345: the CDC Drowning Data page as fetched on 21 Oct 2026 read 'over 4,000' fatal unintentional drownings a year, with a footnote averaging 4,083 for 2012-2021, and described the state map as 2018-2021 rates; the ledger row says 4,345 for 2018-2021 from the page dated 27 Jan 2026. One fetch cannot tell whether the page changed or the tool returned another version, so no correction is proposed; a verify follow-up is listed instead. Budget: about 26 searches and fetches. VERIFICATION 21 Oct 2026: all five original rows confirmed in at least two editions each; column alignment is pinned by each edition's own change sentences (2023: child deaths fell 33 to 22 while drowning stayed 31; 2025: child fell 18 to 12 while drowning rose 26 to 37). The 2025 edition exists and prints drowning = 37, added as maine-total-2025 (needs an eye check: its firearm value looks anomalous). The 2020 and 2023 edition page numbers may be one lower than the PDF page markers.",
+ "next_tasks": [
+  {
+   "title": "Maine: unintentional drowning deaths of residents by ICD-10 W65-W74 (and V90/V92), 2020-2024, from CDC WONDER - needs a person with a browser",
+   "why": "WONDER needs a data-use agreement; a vital-statistics series would match the us-total-2022 definition and give the W-code setting split (bathtub, pool, natural water) for Maine."
+  },
+  {
+   "title": "Maine: recreational boating deaths by year from USCG Recreational Boating Statistics Table 33 (by state), 2020-2024 - needs a person with a browser or a full PDF reader",
+   "why": "The by-state table sits past the point where the fetch tool's PDF text stops; it would give the boating activity split for Maine, though not drowning-specific."
+  },
+  {
+   "title": "Verify us-cdc-4345 against the live CDC Drowning Data page",
+   "why": "Fetched 21 Oct 2026, the page read 'over 4,000' and 'an average of 4,083 ... each year from 2012-2021', not 4,345 for 2018-2021; the ledger row may need its figure, scope and date revised."
+  },
+  {
+   "title": "Maine Warden Service and Marine Patrol: a year-end tally of inland and coastal drownings and boating fatalities, if either agency publishes one",
+   "why": "Press stories quote warden counts of inland drownings each summer, but no primary page or report with a yearly figure was found in this pass."
+  }
+ ]
+}
