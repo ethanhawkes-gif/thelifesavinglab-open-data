@@ -127,6 +127,8 @@ async function main() {
   await redirects();
   await cp(path.join(SRC, 'legacy', 'drowning-estimates.json'), path.join(OUT, 'data', 'drowning-estimates.json'));
   await cp(path.join(SRC, 'img'), path.join(OUT, 'img'), { recursive: true });
+  // The drowning guide is a standalone document (its own styles, images and contents), served as it is at /guide/.
+  await cp(path.join(SRC, 'guide'), path.join(OUT, 'guide'), { recursive: true });
   for (const [from, to] of DATA) await cp(path.join(ROOT, from), path.join(OUT, to));
   await writeFile(path.join(OUT, 'data', 'changelog.json'), JSON.stringify(changelog(), null, 1));
   await writeFile(path.join(OUT, 'data', 'briefs.json'), JSON.stringify(await briefs(), null, 1));
@@ -134,7 +136,7 @@ async function main() {
   await writeFile(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${ORIGIN}/sitemap.txt\n`);
   await cp(path.join(SRC, 'llms.txt'), path.join(OUT, 'llms.txt'));
   await writeFile(path.join(OUT, '404.html'), head('Not found · The Life-Saving Lab', DESC, '/404.html') + body.slice(0, body.indexOf('<main')).replace(/href="#/g, 'href="/#').replace(/href="(site\.css)"/g, 'href="/$1"') + '<main id="app"><section class="section"><div class="wrap stack"><p class="eyebrow">Not found</p><h1 class="display h2">There is no page at this address.</h1><p class="lede">The site moved to one page with sections. <a href="/">Start at the front</a>, or open <a href="/#ledger">the ledger</a>, <a href="/#tree">the tree</a>, <a href="/history/">the history</a> or <a href="/bridge/">the span brief</a>.</p></div></section></main>' + FOOT);
-  await writeFile(path.join(OUT, 'sitemap.txt'), ['/', ...pages.map((p) => `/${p}/`)].map((p) => ORIGIN + p).join('\n') + '\n');
-  console.log(`built ${OUT}: index.html, ${pages.length} pages (${pages.join(', ')}), ${REDIRECTS.length} redirects, ${DATA.length + 3} data files`);
+  await writeFile(path.join(OUT, 'sitemap.txt'), ['/', ...pages.map((p) => `/${p}/`), '/guide/'].map((p) => ORIGIN + p).join('\n') + '\n');
+  console.log(`built ${OUT}: index.html, ${pages.length} pages (${pages.join(', ')}), the guide, ${REDIRECTS.length} redirects, ${DATA.length + 3} data files`);
 }
 main().catch((e) => { console.error(e); process.exit(1); });

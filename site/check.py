@@ -13,6 +13,7 @@ from playwright.sync_api import sync_playwright
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, 'site', 'dist')
 PAGES = ['history', 'bridge', 'cohort', 'compact', 'stations']   # static pages built from site/src/pages
+DOCS = ['guide']   # standalone documents copied as they are (their own head, styles and masthead)
 REDIRECTS = {'chart/': '#toll', 'chart/?section=tree': '#tree', 'bring/': '#contribute', 'sources/': '#ledger'}
 ROUTES = ['home', 'toll', 'gaps', 'ledger', 'ledger-who-ghe-2021', 'tree', 'tree-harbor-recreational', 'pilots', 'pilots-cold-water-card', 'harbor', 'briefs', 'briefs-funder-one-pager', 'watch', 'june', 'wisdom', 'register', 'lend', 'contribute', 'glossary']
 PORT = 8791
@@ -82,6 +83,16 @@ try:
                     if a['h1'] != 1 or a['jumps'] or a['img_no_alt'] or a['unnamed_buttons'] or a['unlabeled']: failures.append(f'/{name}/: a11y {json.dumps(a)}')
                     if not page.locator('#navlinks a').count(): failures.append(f'/{name}/: the masthead is missing')
                 if SHOTS: page.screenshot(path=os.path.join(DIST, 'shots', f'page-{name}-{width}.png'), full_page=True)
+            for name in DOCS:
+                page.goto(f'http://127.0.0.1:{PORT}/{name}/'); page.wait_for_timeout(500)
+                o = page.evaluate(OVERFLOW)
+                if o['sw'] > o['vw']: failures.append(f'{width} /{name}/: horizontal scroll ({o["sw"]} > {o["vw"]}): {o["bad"]}')
+                if width == 1440:
+                    c = page.evaluate(CONTRAST)
+                    if c: failures.append(f'/{name}/: low contrast: {json.dumps(c[:5])}')
+                    a = page.evaluate(A11Y)
+                    if a['h1'] != 1 or a['jumps'] or a['img_no_alt'] or a['unnamed_buttons'] or a['unlabeled']: failures.append(f'/{name}/: a11y {json.dumps(a)}')
+                if SHOTS: page.screenshot(path=os.path.join(DIST, 'shots', f'doc-{name}-{width}.png'), full_page=True)
             if errors: failures.append(f'{width}: console errors: {errors[:5]}')
             page.close()
         # Old addresses send the reader on.
@@ -112,5 +123,5 @@ finally:
     except OSError: pass
 
 for f in failures: print('FAIL', f)
-print(f'{len(ROUTES)} routes and {len(PAGES)} pages at two widths, {len(REDIRECTS)} redirects; {len(failures)} failure(s)')
+print(f'{len(ROUTES)} routes, {len(PAGES)} pages and {len(DOCS)} document at two widths, {len(REDIRECTS)} redirects; {len(failures)} failure(s)')
 sys.exit(1 if failures else 0)

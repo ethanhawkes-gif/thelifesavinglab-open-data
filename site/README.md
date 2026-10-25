@@ -31,7 +31,7 @@ assets directory `site/dist`, custom domain `thelifesavinglab.org`). Two ways to
    builds. Nobody but Cloudflare and GitHub ever sees the token.
 
 What a deploy carries: the one-page app at `/`, the pages the previous site had (`/history/`, `/bridge/`, `/cohort/`,
-`/compact/`, `/stations/`), forwarding pages for its old addresses (`/chart`, `/bring`, `/sources`), the previous
+`/compact/`, `/stations/`), the drowning guide at `/guide/`, forwarding pages for its old addresses (`/chart`, `/bring`, `/sources`), the previous
 site's data file at its old address (`/data/drowning-estimates.json`), a `404.html`, `robots.txt`, `sitemap.txt`,
 `llms.txt`, and the data files under `/data/`.
 
@@ -50,6 +50,7 @@ task and is not the site of record.
 | `src/app.js` | Router, data loading, home, toll, ledger, tree, wisdom and contribute pages. |
 | `src/extra.js` | The live counter, the June lab, the watch, the gaps page, the glossary, the frontier and selection sections. |
 | `src/register.js` | The incident register as a working tool (rows stay in the browser until exported). |
+| `src/guide/` | The drowning guide (*Drowning: what works, where, and for whom*, draft 0.9): a self-contained page with its own styles, contents and images, served as it is at `/guide/`. It is a built copy; its sources are not in this repository, so a small fix can be made here directly and a regenerated copy replaces the whole folder. |
 | `src/pages/*.html` | The static pages (history, the span brief, the first cohort, the compact, the stations): fragments the build wraps in the site's chrome and serves at `/<name>/`. |
 | `src/static.js` | The static pages' menu, colophon and counters. |
 | `src/legacy/` | The previous site's data file, kept at its old address. |
