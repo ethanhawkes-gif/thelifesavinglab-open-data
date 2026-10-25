@@ -1,8 +1,8 @@
 {
  "schema": "lifesavinglab.watch.queue.v1",
- "generated": "2026-10-25T19:46:47.258Z",
+ "generated": "2026-10-25T22:40:05.218Z",
  "counts": {
-  "reported": 718,
+  "reported": 719,
   "read": 0,
   "row-written": 0,
   "matched": 39,
@@ -7328,6 +7328,20 @@
    "note": null
   },
   {
+   "id": "e6773050f3a7521b",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPa3ljVzJSaWVTTFFaRHJ6aGlPYU5yb3lzbi1OWTRWSWFCUmh3S1p5bDVhVlYxN1kwSmlISzFMazBRdTBoMHRYWFRpc2NzTVJ4dzlUbzdxWHRFM3Q2cWg1TVFBbXVIOGRpcHNLc01DSXgtR1AtQXN3bTY0T3RyN2tFejNqaVBQeU1DQkdLcWd3OWhmMjRQQ1ZIbmlWdXlMZEJMZWV3Y3dMRzNlTG8?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "capsize",
+   "published": "2026-10-08T07:00:00.000Z",
+   "first_seen": "2026-10-25T22:40:05.218Z",
+   "stage": "reported",
+   "title_sha256": "12f8e148f93c3f3dce90d91f98fbc6d076b1a4ff01c0cd82868f7f584dfc27e7",
+   "held": null,
+   "note": null
+  },
+  {
    "id": "202b570acfb1868a",
    "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQRUpyNmFTLWtQLVBCSGpuTDhlamh6ajYyWjQtTlhYc2JFUVRoVkg4TXN3R0pKdWFBNTdWTDBDNWJqTGtNWWw2eFlYeTJwd0ZHQ1RkdEhTOVR5T2p0Z3dwV2sxN1Btc1pnZGNmR2JrX1pIandnam1TazhWRXBOdW9iZ2pMSTNDM3Y4bExhMWZycnZpN2VQT2xpT0tDTFhaOTZ0WG00YVBacmYwM280Sm9EVlBiUDM3SXpJRHVRUnhWdzBwSThZcEkzdVFiVVdPT0tHUE9fWktsenIwYUNOc2c3YXhOS1MwZGZzMHpFOEc2VGVPd3VHRkktbVE4TGVTXzFZdUdHVjE1QjNUQUhvRElTaHhXSFZLcHFlLVRZ0gGgAkFVX3lxTE1IU1Q1WGUza2hpN0dnVUVoTHh6LVdhcU9icmExRWZ1eWFlYTVRZ3dMbHc1YnJ5Z3VfNU01RzlrR1VzaFo2N25HMW9MbnNuY3pneFVLN0JtTzhnY294d3U3ZEdqVERjemZoZ1V0ajhqLXVhRnlPUlVSbmM5OHlvYVZtZEVGYnI2S215T204d2UzMlllaGxqSHFnNlY4b1BYc1Z1bzdRSzJTNV95YlFEWUZrOTdfdU5mY183S3VRMzI0N2RzN2pqNUJmZnlnS2czWjlvb3l5ZHM3S1l5b0JTdllxWnF0WDlTdlFkYjAwNWt3QWZpRWZHUmkxVU93Z0pBRkRyOUNUbmpiekg4bkwySzljSGx0d0ZFSUtpbFNFcUtpZA?oc=5",
    "source": "gnews-us",
@@ -10681,6 +10695,40 @@
   }
  ],
  "runs": [
+  {
+   "at": "2026-10-25T22:40:05.218Z",
+   "sources": {
+    "rnli-news": {
+     "ok": false,
+     "error": "HTTP 403"
+    },
+    "uscg-d7-govdelivery": {
+     "ok": true,
+     "items": 100,
+     "matched": 33,
+     "added": 0
+    },
+    "gnews-us": {
+     "ok": true,
+     "items": 100,
+     "matched": 87,
+     "added": 1
+    },
+    "gnews-world": {
+     "ok": true,
+     "items": 100,
+     "matched": 89,
+     "added": 0
+    },
+    "bing-news": {
+     "ok": true,
+     "items": 0,
+     "matched": 0,
+     "added": 0
+    }
+   },
+   "added": 1
+  },
   {
    "at": "2026-10-25T19:46:47.258Z",
    "sources": {
