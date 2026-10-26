@@ -1,8 +1,8 @@
 {
  "schema": "lifesavinglab.watch.queue.v1",
- "generated": "2026-10-26T14:24:50.355Z",
+ "generated": "2026-10-26T20:37:30.751Z",
  "counts": {
-  "reported": 775,
+  "reported": 789,
   "read": 0,
   "row-written": 0,
   "matched": 41,
@@ -11,6 +11,90 @@
   "held": 35
  },
  "items": [
+  {
+   "id": "fc7fe1ac9d059699",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNajZ5VkFuZVBFdjNTZnpwU19xTWxKanZpbldLLVlQeG9ZQTA2ejVnSGlVQlFaVURfamVoRDdKOHBiUGRPQlJDZENzTHRTbm5MY1hyWHA1SEZEVk1KMzZxZWpyendoNzE5QTd2UzVnY2FlTDVSY0ViUTlhUlFpUm5zV3hidTBLUC1sVy01MWl2MjdzOWJYaGk5MDFLVGtNa0xqN1BhZ0dBYW1HQVREMXlMbi14T29FeV9mWmc?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "search-suspended",
+   "published": "2026-10-26T20:24:23.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "4a51c16d45c85f7bb6200979dc6da2164a8eb7a08c26a014a6d954892c47a4df",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "03ecc6535b2f5f28",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQRjFmX015Z3VjcjJscUdod1JON1ZnaUxqUjRuYXktMXBXMFRKZ0xXNG9FNnZwb0lYVmxFZzFScVpWTldhN1YxVkZJb0NRR3ROMG50aDk2bDRSRW9ncUZUaXltNnlLb0M1Ymx0TWw3dXNsVDVRbjgtUkVTaDZsNFZZNE1YdmNaNDdpaW4xOUlCcnFwaDBSWjFGbF92NUZiT1Z6bVBIOVlMbTZ1S2hHVktIeDRfTnF6NnAzdlNva2dGMmdqbDliNm5wcThpaEFPNlRRWTN6dE91VjZYZzJucm5N0gHkAUFVX3lxTFBQTVRGOEUtZktTN0VxTVJfdnhmQTA0blNTa3lqODFISjlOSE9BQXJGV0VuU3VUX2xILWpSbXA1R096dFIyQkh4bTFScmx2RjR4VG14QjB0d01mTUU4MmdwUF9icnFjUkxsTmN1Q1ZTeDNjQ3ZtYTljeVBhdEJlR1lsWVlpRFBnNjB5VkxLOUZIWHU4dVVUMXYtWGF5SGUxRHdab1pxQkxFWUVRdW9DeHFnQlYycHV0bGpJc2FBOUJQVWxzTVF3N1VWdWVWNkYzRlpIaFN3Z1lLQ1N5ejI5Vmo4SFZOVA?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-26T19:02:00.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "54969221e3a1324c3084c3badab420291ed9774a970e9fe8c91dca0f423b61f6",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "1dfe9438b09870dc",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNYVpvczdrM2lybkZZUTZWaXVXR1A5MjlNQ2VkdVh3M21EUlIxSF9Uc2ZYQnRESmZnZms3czZCeFFqUmRzYmtVdDJ6eVhsZEh0U2FtQ3M4M1hsMkRIc0I3VllvQ1FTY3pWZk5WODN6S3l2ZkFSOEFRbEdxNG9LdTRzdUpPWW1reHNtN3Z5U2dSbmF3XzVaQ3pscXREUElvYzVYcHUzU25vc2xnQk15Y1pYUUZhaUdVVVdoNWVxcTVieTVyUGprM0xwdHp2LVlQMDJ3ZzM4Ug?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-26T18:37:51.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "e26ceef96f5a494ce950e9046f622545b709d97fd813656016f98b014d45a5ca",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "fa41f57625ef74a6",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOYURGQ0VET1dVOGlDUVRYNmh2WjJrWHROdmtWczFBRXc0SzhCU2NKWFp1V3FlT09KbHlBdEhfeXVJVmU3NU8ySlBiZ0VZSlJObE95bXR3bXVJZzVIaERSaTJyUVpDZlJGdHZSQ2JoUUM2NTY4c1FRRGlBbm1fdWdZR2NDR2J0RHdWZGhNTW12QXJYY2gzMXUxOXJGRFpMMk95Qy1qYjc0ODVkUzNSajIw?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-26T15:08:57.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "64b1b1b7f04cd10067d7eddd1f6c2bf792317f043477b20ee5316e5a82da491b",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "1967527c4c59dbad",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNXZBU2hRcm9nOGZkZFJOWHdFZGRjX0JObTh3LUhFYVJYVXpYSVhqS1gxaFNQT2NtZzJhZ0JSQnMxampsSGZKTzlDaWVfNUozNkdkbFlfME1Gd0g5MHZGeEJuWTNuVU9jVFBmNUs3dTgyNjYtRkJQQjZFTHBrcXFRM3c2WGU1czZQeU5HVkdtXzBRTmJSS0c4eGtvQXFWQmc?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-26T14:41:38.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "57d19cc553a94ee8dc478f6fd19b944d2b564698ead48fabdfc7c20da9412742",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "e138554eb275c4da",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQazg3TWU2bVNHX1ZXeGNfSXBSaURGOWlYRFAtZ0UtX3lsVngxZnU3WVFTRkFOcHpqYmR3bS1FV1ZVU2t4Sm5FVTdRWE1uZElJQTJ4eXVBVmtSaUtmc3FQZy1IRDRLNTdIQkE0R1dvYWVTU3VzRnBZQkxFT0pqbkwtLWtzV3V1TlhyX1pmeU5NbUNCZjJZek5xTXlyQmVlVmNRbUtpa1p3X19ocEJfRjh1MmRBWnhwS0xMS05JZXdSMFR1LUU?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "rescue",
+   "published": "2026-10-26T14:30:00.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "2b9449126246f109c4bc07e9c7fbb43f624286e9172aa87617c9107064778c0a",
+   "held": null,
+   "note": null
+  },
   {
    "id": "936c1cc30fc7c371",
    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUVM2VXN4X1ZMbmJUaVJ1WUUyUVh1TmN1NVV1WG1zOUhsenhhdkdWdlUxY3QwdXloTm0yV2JXMXl1R20zek1pcXJMNTZzQ2lWR3pUc2wtaVlwMTRTVFZvZlBBNk9XbzRpNVBhV1gyYjctdEZvWVZseUV6NTVYRHcyMGhYdVQ2RkoxWVpoUlQyLUZ5RW9fbkQtRWVUblJEMGs2d1ZHWVRQSTdBbjFu?oc=5",
@@ -78,6 +162,48 @@
    "first_seen": "2026-10-26T14:24:50.355Z",
    "stage": "reported",
    "title_sha256": "974584ba2839ebd4ab4c9d63a28b215b439d9291ec859bd7fc97bf55fb1f5673",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "59bdd88a71161d2d",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOQUphVURvTlBNcHN2bjR1Zm5IdFk3Zy1mR0otUzVZZld5SjJqMzduR3ZNU0hFOG16X0dmSUlMajY2RUxBR0h6azJSSFdNZ1pNR0cyRTktQ250RjBDZnVYTER5al96c05XTzZoWUVuMWdKRFlBVFpPNXB6SlF2OGVPQnhXRENyRVc3cGhRSk9memw0cERocmtnV1JoZ2h5bFNYdmNKZXh5WDU?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-26T12:31:00.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "6739a3aa8725484b170e69ee9bf61a0e3a0dbf0cf6f0062fd9f0f531641d4469",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "ba63084a070afad4",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMXlCWGtEQUtiQ1J1WTNkVWJsMnJ1TDFOTnZ0TVBXRDhBbjBab3AzZ3U0bXdUX3A1QTNDc0lrNGxqell6TXQxMU1Tem1SMjdyU2FZZENfMmFySThidmplMDVMTVFCU3lVUDZyZG5OVEtqcXlzVEpDWmVpQWJtYlN1X0tfdHQ2NjVMTEhVc2owZF9jeG9rQnpxY3dvdDd0eWJzWVM4YnViTVk?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-26T12:31:00.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "bef10b43004fe6d68e5b3c7092499ec5c287b89f1ad0ec3cbbe5372d78728a1c",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "3b87a791b433cd9c",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNFA1TG03ZVFpeFBHRmlCUjZJbHpCbnJfcG95UXFhR1ZMVUFjYkt6TjMzcFMtOVhXamdVT2V6Q055aHU5QzFtdG5DN0x5Q2dZX0hZREItZE5LM2tZdFl4b1cxWXFrOTQ4SlJrNENsV2NlVGhwcVJPd3p4S2dLc3BtTURNWk5oRURGUU5tQzhjQTFwR200TGUxeEQ3ME5CMHpMTzRhZUlGTTc?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-26T12:31:00.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "6a1c13cc0340ecb83953fa6cac57053a1f53ffaa27bc837acd29a34dfa1bdcd8",
    "held": null,
    "note": null
   },
@@ -362,6 +488,20 @@
    "note": null
   },
   {
+   "id": "8c3f5987fc828bf5",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNWHZnWWt1THV6Ulk3eHBwN05ZeWpweHhKNU1UQ1hiZU9sOGtUTWR0aXJvb0g3X0x3akthOXkxTVFtRE9OX3NxQlczVHdkVm12bFFyU3l1MXlYbzBheTNoUkZZZE9Yd3RhMk9nLWMweW9Ca2RQZmJTRDFyZjB4d2x3MHd5VDhXMHUzNEJqTXFvbG5POW16Z0ozQmJRSXdJQWhCWGUyWnBXUHdkQWhQRU9hUHF2d1FOSVJ5MXfSAcIBQVVfeXFMTWpmQlRyeHNETW9jSEZKVVZIWWU5MXk1OWhmY21WSVFJWmZHbDVtaEFpb3dOMUNWTXJJc243a1pHLWZYYjRoN3lFa1ZVVkdGcWJRcDZLckJiWFBUekMzaklGVkhpejBMRVpzLTZYWEtINGVMMXNxcXB6UXhnenh1QzNVVTEyODc2TnJyM0UtNVBKb3pFRlhraHVvMmhRdkY4M3NKYUxEVXhmRmNwNjRZM2hqY09NN0RWQlRRd3lfZVR5UHc?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "rescue",
+   "published": "2026-10-25T15:16:28.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "a8b38c257c51a2c5e8eaaa4f2f968e2d5188ef5dd1a26e8d7ceb7996c8aff400",
+   "held": null,
+   "note": null
+  },
+  {
    "id": "26d074f3f72be014",
    "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSnBQaS1YamNUTHZxSkpRLXJILUoyY3RyZThpMzhPUVJfYWtrWW1LU2o4dWFRSWZhNms1b3V2TTN1SkIzR0RoSU1xZ2ptSXp1RURvTk1QdGJ4enhlRi0wWE55TFA1alEtWHdHcWdGSjIycFh0Y1hEYlFJaHMzdEF6dEVZN1QyVEw4bDFTWkJXNjVPT2E3eTdxa195bw?oc=5",
    "source": "gnews-us",
@@ -444,6 +584,20 @@
    "first_seen": "2026-10-25T11:48:07.392Z",
    "stage": "reported",
    "title_sha256": "7b0fdc65df97c066b32db91ab7f6baa457616a732e6b5dc9422f8e4010959f8c",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "9add179b7cc9bb0b",
+   "link": "https://news.google.com/rss/articles/CBMikANBVV95cUxNMVRzQzczNXIzcEl3YjNqWFdNam9mcmhweVF5VmpzdkNpQ2dINjRGSE5JZVdSbm9aYmVhVzhTOG9TcDRTQnlrUFlsR25PSDI0c3UxOGw2aURkRVpFZTdwcTRBbW5rUncyUmdxSnhfV3FzRlViY3ZUM0RMQmFWZFNwWk5LZTRwWU5SYkc3WV9saWctV1BWZllYQ0NiMkFPV2FEdmpkY1pZUGV5OHdyRFh3S2NfRzE3WUY4ak5aTFRESGxsNlUtMUJZaktMYU5QU1VpemZJcHV1ck53V1kxVDE5Z1pBZFRmeXRDZndzUDdQb0hhX2NwSFZ4ekJ3eGhyT29RSExfOG1PUGhWd0dsZDVQMVFYSnNHd2R2WDJPb2tfRWRRUndsYXhOV2cwaGpEWUtiTWVRVWJpMUwtU2M2a3ljNmp1Q1ZfQnpFVmpYLTczUUJPM1RaU0tsX25EdzM4V0FWWVh1YVNVX3JtbTZoZWdJZkFmcXEwbmVycW9nR2RPMU56bU1DWnFzYV8xWHRNQUkw?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "rescue",
+   "published": "2026-10-25T07:00:00.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "412edf6e0c8b3e2a2a73cf28c02b10965ead20c95322430b5030c263098d8f68",
    "held": null,
    "note": null
   },
@@ -1424,6 +1578,48 @@
    "first_seen": "2026-10-26T14:24:50.355Z",
    "stage": "reported",
    "title_sha256": "6e3a5064a7d48a5529db9bbe0bd1cb6803cb017c7b4842008a78938a8fb326c3",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "dd9f037f46523a27",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPU2pCb2lva0J1eE9pd1BfMFRSWjM4SFJRc0RhUjJrSGx3dFUwWGt4T3VyV2NnaktkazNzaFQ1MHJEb0VUdWhlaG90U2R5YWdFQXBjbDJYRjkxMlpFT0NvNGVDQUJEczd4aHpVUmxTaHVQaWgzU0ZaaFVkWHdPbnhXYW40OGdLUVhsR3Z6cWRkZ3JYbk91N1B6MVhsY3RNNXlBU1NxTmIyNFRJX2lSU3Uzd2ZfSWlSbWVRS05GX2JGSjd4b0hfRHl5Sg?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-23T19:16:00.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "a5c01ad81bde91688ed8a327044b2fe25e3b21e42c7310d8be91f42e71c2d139",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "ad3c43cd47a45eb5",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNSDIzVkxIWEQxcjRtelR1MHY4cVFLVlh6XzRTWWZsVlF6SkMtUkVVaFZZeTNtWTJXOUxYWThMbG1WcUxuNWFuQ0JkNzdBZU1GT1VIRTRmdDc2LUlzTFpQYkJzRUROSVVLMGZoY3RxbFkySi1DY2xxZEFBdDM0VFpnS2JtX0FoaTc0ampPLTVhSmJWUVVVT00wT0d4TWRLSHdYUjJnRU1FRVIzZ1dhSUxVYkQyNWRLR0g4YWdZUXJ4SkhsTTBFQTlKeA?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-23T19:16:00.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "2d14c6a6065e246492185e8142b8f700d302105240a6803bcdb32ff7daef9820",
+   "held": null,
+   "note": null
+  },
+  {
+   "id": "bbfa96255648b12d",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNM2stZW5SS0NIWnJxMzd2QkRjTWlhZ2plNkZmbjlmelAzUl9wUHRwNW1pWlBld2U3bG5pUFlTMmdNdDhrcDR6YW5LbGdTdXZkOG1Ec05QNndYcExORlVCVEVFdkNCNW5kZEtLb2ZYcnBibXRTTFFDNmhOcUJSWjduLVpUSGRTeW5qbXlVUEdqM00zaFg4eVZfYnM3V2VOdXIwc09oM0dGdjFWcmRibk5RM2kxZzYzYnoxUnVidWJFWjNVZ1Jab04w?oc=5",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "kind": "drowning-reported",
+   "published": "2026-10-23T19:16:00.000Z",
+   "first_seen": "2026-10-26T20:37:30.751Z",
+   "stage": "reported",
+   "title_sha256": "c954e022c601c00fb3b3b2b8dabb6470c04d0791501ce524ab9ce737315bf6fd",
    "held": null,
    "note": null
   },
@@ -11507,6 +11703,40 @@
   }
  ],
  "runs": [
+  {
+   "at": "2026-10-26T20:37:30.751Z",
+   "sources": {
+    "rnli-news": {
+     "ok": false,
+     "error": "HTTP 403"
+    },
+    "uscg-d7-govdelivery": {
+     "ok": true,
+     "items": 100,
+     "matched": 33,
+     "added": 0
+    },
+    "gnews-us": {
+     "ok": true,
+     "items": 100,
+     "matched": 96,
+     "added": 14
+    },
+    "gnews-world": {
+     "ok": true,
+     "items": 100,
+     "matched": 90,
+     "added": 0
+    },
+    "bing-news": {
+     "ok": true,
+     "items": 0,
+     "matched": 0,
+     "added": 0
+    }
+   },
+   "added": 14
+  },
   {
    "at": "2026-10-26T14:24:50.355Z",
    "sources": {
