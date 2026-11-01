@@ -1,9 +1,9 @@
 {
  "schema": "lifesavinglab.watch.feed.v1",
- "generated": "2026-11-01T16:51:08.911Z",
+ "generated": "2026-11-01T21:16:00.297Z",
  "note": "Reports found by the watch and not yet read by a person, newest first. A report is not a count. No headline text and no names are stored; follow the link to read it.",
  "counts": {
-  "reported": 1024,
+  "reported": 1026,
   "read": 0,
   "row-written": 0,
   "matched": 51,
@@ -19,6 +19,17 @@
   "bing-news": "ok"
  },
  "items": [
+  {
+   "id": "a6b4a6d85fda98c9",
+   "kind": "drowning-reported",
+   "source": "gnews-us",
+   "source_kind": "press",
+   "region": "United States",
+   "published": "2026-11-01T17:43:28.000Z",
+   "first_seen": "2026-11-01T21:16:00.297Z",
+   "stage": "reported",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcFlFN1p3X3JJVURwS0pzYjFUQkpudUQxUmt1Wll3TXBiLVExYTlYd21xUVUwZGpfZ0ZYX0NkRUJCdW1mZXNMc2ZBVEE2R1J0dmpnbllkaElzZDhuVjBqZjdsWDBveWJVUXN0bFkwamhqQUgtT2toeW8xZWZfbzFON2FFUml0ZHFxQlJ0WThSZ3E?oc=5"
+  },
   {
    "id": "ce29e4e402794853",
    "kind": "capsize",
@@ -667,17 +678,6 @@
    "first_seen": "2026-10-29T21:52:42.536Z",
    "stage": "reported",
    "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNU2hnd1hCY0RTRTg4ME4wY0RhTUhIUmhSRUY3TWV4RW80T0E4TG91cjdLb2FoUmNXQk01LUxNMWhKRnVZaE9UT0lzSUFFQmxZRndrNmdvekxxMUZHM2VoSHBQb3RDS3lELXJSamhzQ3pHN2NCOEY3WjFBV3JrVVZBM3AyVmgxUTFKZ1Jyb0ViT2lpZEo5bjczdFlUNVZyMG53Ym1hTVZLeFR4WlVHbjF3WFdhV3p2NTY4RzVzQmdSS0tqZERsWXdzUzIzWTRxSWtrN1ZTNjNseTEwSzhf?oc=5"
-  },
-  {
-   "id": "ecd63caf6d49fb01",
-   "kind": "drowning-reported",
-   "source": "gnews-us",
-   "source_kind": "press",
-   "region": "United States",
-   "published": "2026-10-29T16:22:02.000Z",
-   "first_seen": "2026-10-29T16:58:51.999Z",
-   "stage": "reported",
-   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMExJdmtoMlNLTUktZDJWZVZWQVFoUDY5OF9uMm53V0xMSHZyRU9RNU02dWF0RE1BdGNlUWp2Vm81dTQtUEFkOTlpUDZMdU8xdjBXMTZJcnZ2YTFQWDAyZk03Y3RFQ3VrZDFxMVZ6SzdHR01VcjhBenNyZXphdlVDUlc3dm91ZXV1bkhPdHBmeExpYlpOaUxZS3ZXUVM4QXY5RlowaFJvdng1enpULU1fcEkydDF1cE54cFBtUQ?oc=5"
   }
  ]
 }
