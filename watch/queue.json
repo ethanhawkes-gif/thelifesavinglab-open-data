@@ -1,6 +1,6 @@
 {
  "schema": "lifesavinglab.watch.queue.v1",
- "generated": "2026-11-01T02:21:11.903Z",
+ "generated": "2026-11-01T09:27:58.821Z",
  "counts": {
   "reported": 1020,
   "read": 0,
@@ -15079,6 +15079,40 @@
   }
  ],
  "runs": [
+  {
+   "at": "2026-11-01T09:27:58.821Z",
+   "sources": {
+    "rnli-news": {
+     "ok": false,
+     "error": "HTTP 403"
+    },
+    "uscg-d7-govdelivery": {
+     "ok": true,
+     "items": 100,
+     "matched": 34,
+     "added": 0
+    },
+    "gnews-us": {
+     "ok": true,
+     "items": 100,
+     "matched": 87,
+     "added": 0
+    },
+    "gnews-world": {
+     "ok": true,
+     "items": 56,
+     "matched": 48,
+     "added": 0
+    },
+    "bing-news": {
+     "ok": true,
+     "items": 0,
+     "matched": 0,
+     "added": 0
+    }
+   },
+   "added": 0
+  },
   {
    "at": "2026-11-01T02:21:11.903Z",
    "sources": {
