@@ -107,6 +107,17 @@
   </div>
 </section>
 
+<section class="section band" aria-labelledby="explainer-title"><div class="wrap stack" style="gap:24px">
+  <div class="card--dark" style="padding:clamp(22px,3vw,36px);border-radius:2px;display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between">
+    <div class="stack-sm" style="flex:1 1 420px;min-width:0">
+      <p class="eyebrow">Watch</p>
+      <h3 id="explainer-title" class="h3" style="color:var(--paper)">Wisdom Under Pressure: the explainer</h3>
+      <p class="small" style="font-size:16px;color:var(--mist);max-width:40em">A short narrated walkthrough of the problem, the solution, and the Solver model this lab is testing. Prototype; voice by ElevenLabs, drill details made up for illustration.</p>
+    </div>
+    <a class="btn btn--primary" href="https://claude.ai/artifact/PAZb3HzfWRbDFevuVhr9RM" target="_blank" rel="noopener">Watch the explainer <span aria-hidden="true">→</span></a>
+  </div>
+</div></section>
+
 <section class="section" aria-labelledby="how-title"><div class="wrap stack" style="gap:44px">
   ${sectionHead('No. 1 · How the lab works', '<span id="how-title">Count what is known. Change one thing. Publish what failed.</span>', 'One loop, run in public. Every step leaves something on the record that anyone can check, correct or reuse.')}
   <ol class="steps">
