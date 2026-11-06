@@ -1,0 +1,249 @@
+{
+  "schema": "lifesavinglab.bundle.v1",
+  "task_id": "official-feeds-five-services",
+  "preamble_version": "1.4",
+  "contributor": {
+    "handle": "lab",
+    "agent": "Claude Fable 5.1 (independent subagent in the lab's own session, 2026-10-21)"
+  },
+  "status": "partial",
+  "rows": [
+    {
+      "id": "feed-canadian-coast-guard-news-atom",
+      "figure": "api.io.canada.ca/io-server/gc/news/en/v2?dept=canadiancoastguard&...&pick=50&format=atom (Atom; news releases; full address in url)",
+      "low": null,
+      "high": null,
+      "unit": "feed",
+      "year": 2026,
+      "scope": "Government of Canada news service, Atom 1.0, 50 entries, feed title 'Canadian Coast Guard'. Content kind: departmental news releases and announcements (shipbuilding, Arctic patrols, infrastructure); not an incident log and not rescue statistics. Newest entry updated 2026-10-15. Confirmed returning entries to the fetch tool on 2026-10-21. The same address without format=atom is listed on canada.ca as the Coast Guard's RSS feed.",
+      "geography": "Canada",
+      "source": "Government of Canada, Canada.ca news web feeds ('Subscribe to emails and RSS feeds' page), Canadian Coast Guard entry",
+      "url": "https://api.io.canada.ca/io-server/gc/news/en/v2?dept=canadiancoastguard&sort=publishedDate&orderBy=desc&publishedDate%3E=2021-07-23&pick=50&format=atom&atomtitle=Canadian%20Coast%20Guard",
+      "grade": "C",
+      "do_not_add_to": "Not a figure. A feed row is a source pointer for the watch only: never count its items as events, rescues or drownings, and never add it to any estimate or register total.",
+      "note": "Terms: canada.ca Terms and conditions allow non-commercial reproduction of materials in whole or in part; commercial redistribution needs permission; RSS and automated access are not mentioned. No rights element inside the feed. Dates in the feed are 'updated' timestamps with a -04:00 offset. No special headers were needed by the fetch tool; the watch's own user agent is untested from here."
+    },
+    {
+      "id": "feed-maritime-nz-news-rss",
+      "figure": "https://www.maritimenz.govt.nz/news-landing-page/news-feed/ (RSS 2.0; news and media releases)",
+      "low": null,
+      "high": null,
+      "unit": "feed",
+      "year": 2026,
+      "scope": "Maritime New Zealand's own RSS 2.0 feed, title 'Maritime News Feed', description 'Maritime NZs News and Media Releases', 143 items back to 10 January 2024. Content kind: news and media releases (safety campaigns, rule changes, lifejacket rules); not an incident log. Newest item dated Wednesday, 21 October 2026. Linked from the site footer as the RSS feed; the alias https://maritimenz.govt.nz/public/news/news-feed returned the same feed. Confirmed on 2026-10-21.",
+      "geography": "New Zealand",
+      "source": "Maritime New Zealand, 'Maritime News Feed' (site footer RSS link)",
+      "url": "https://www.maritimenz.govt.nz/news-landing-page/news-feed/",
+      "grade": "C",
+      "do_not_add_to": "Not a figure. A feed row is a source pointer for the watch only: never count its items as events, rescues or drownings, and never add it to any estimate or register total.",
+      "note": "Terms: the site's Copyright page says copyright is owned by Maritime NZ unless otherwise stated, material may be reproduced for personal use without permission and Maritime NZ must be acknowledged as the source; other uses, contact Maritime NZ. Footer reads '© Maritime NZ 2026'. No copyright text inside the feed. Fetched without special headers."
+    },
+    {
+      "id": "feed-redningsselskapet-ntb-press-rss",
+      "figure": "https://kommunikasjon.ntb.no/rss/releases/latest?publisherId=89422 (RSS 2.0; press releases via NTB Kommunikasjon)",
+      "low": null,
+      "high": null,
+      "unit": "feed",
+      "year": 2026,
+      "scope": "Redningsselskapet (Norwegian Society for Sea Rescue) publishes its press releases through NTB Kommunikasjon; its own press page links to the NTB pressroom instead of a feed. RSS 2.0, title 'Redningsselskapet - siste pressemeldinger', 25 items. Content kind: press releases, including monthly drowning counts (e.g. 'Ni personer druknet i september', 6 Oct 2026) and statements on rescue operations. Newest item published 14 October 2026. Confirmed on 2026-10-21 with the variant ...latest?lang=no&publisherId=89422; the pressroom itself links the address without lang=.",
+      "geography": "Norway",
+      "source": "Redningsselskapet press room on NTB Kommunikasjon (publisherId 89422), RSS link on the pressroom page",
+      "url": "https://kommunikasjon.ntb.no/rss/releases/latest?publisherId=89422",
+      "grade": "C",
+      "do_not_add_to": "Not a figure. A feed row is a source pointer for the watch only: never count its items as events, rescues or drownings, and never add it to any estimate or register total. Monthly drowning counts announced in this feed belong in their own rows with the release as source.",
+      "note": "Terms: none stated on the pressroom page or in the feed (items carry only a regulatory=false element). rs.no itself: /feed/ returns the home page HTML, so the site has no WordPress-style feed. ntbinfo.no (the address rs.no links) is robots-disallowed to the fetch tool; kommunikasjon.ntb.no is not. Some item titles name staff; the watch stores only a hash of the headline, so that is fine."
+    },
+    {
+      "id": "feed-knrm-reddingrapporten-rss",
+      "figure": "https://www.knrm.nl/rss/reddingrapporten (RSS 2.0; rescue reports, i.e. an incident log)",
+      "low": null,
+      "high": null,
+      "unit": "feed",
+      "year": 2026,
+      "scope": "KNRM (Dutch lifeboat society) rescue reports, RSS 2.0, title 'Reddingrapporten', 44 items. Content kind: incident log, one item per written rescue report (e.g. motor yacht taking water on the Westerschelde, kitesurfer injured, person missing at sea). Newest item Sat, 17 Oct 2026. Listed on the site's RSS index https://www.knrm.nl/rss, which also lists per-station feeds at https://www.knrm.nl/rss/reddingrapport-reddingstation-[station] and news feeds per station. Confirmed on 2026-10-21.",
+      "geography": "Netherlands (sea and large inland waters)",
+      "source": "KNRM, RSS index page 'RSS Feeds', entry 'Reddingrapporten'",
+      "url": "https://www.knrm.nl/rss/reddingrapporten",
+      "grade": "C",
+      "do_not_add_to": "Not a figure. A feed row is a source pointer for the watch only: never count its items as events, rescues or drownings, and never add it to any estimate or register total. Reports are a selection written up by stations, not every callout; do not treat the item count as a callout count.",
+      "note": "Terms: KNRM disclaimer says copyright is reserved to the KNRM and nothing from the site may be reproduced in any way without permission except for personal use; RSS and automated access are not mentioned; no rights element in the feed. The watch keeps only link, date and a headline hash, which is compatible. A separate HTML page https://www.knrm.nl/p2000 lists every pager alarm (date, time, priority, type, unit codes) but is not a feed."
+    },
+    {
+      "id": "feed-knrm-nieuws-rss",
+      "figure": "https://www.knrm.nl/rss/nieuws (RSS 2.0; news)",
+      "low": null,
+      "high": null,
+      "unit": "feed",
+      "year": 2026,
+      "scope": "KNRM national news, RSS 2.0, title 'Nieuws', 30 items. Content kind: organisational news and fundraising, with occasional operational items; the rescue reports are in the separate Reddingrapporten feed. Newest dated news item Tue, 13 Oct 2026; the first item is an agenda entry dated 03 Sep 2027 (a future event, so the watch should sort by date and ignore future-dated items). Feed lastBuildDate Wed, 21 Oct 2026. Confirmed on 2026-10-21.",
+      "geography": "Netherlands",
+      "source": "KNRM, RSS index page 'RSS Feeds', entry 'Nieuws'",
+      "url": "https://www.knrm.nl/rss/nieuws",
+      "grade": "C",
+      "do_not_add_to": "Not a figure. A feed row is a source pointer for the watch only: never count its items as events, rescues or drownings, and never add it to any estimate or register total.",
+      "note": "Lower value for the watch than the Reddingrapporten feed; listed because the index exposes both. The fetch tool reported that one item description contained text written as instructions; the watch stores no description text, but a reviewer should know the feed bodies are not clean. Same terms as the KNRM disclaimer (see the Reddingrapporten row)."
+    },
+    {
+      "id": "feed-surf-life-saving-nsw-news-rss",
+      "figure": "https://www.surflifesaving.com.au/feed/ (RSS 2.0; news of the NSW state body, not SLSA itself)",
+      "low": null,
+      "high": null,
+      "unit": "feed",
+      "year": 2026,
+      "scope": "NOT one of the ten named services: Surf Life Saving New South Wales is the state member body of Surf Life Saving Australia. Recorded as a fallback because the SLSA site (sls.com.au) returned errors to the fetch tool on every address tried. WordPress RSS 2.0, title 'Surf Life Saving NSW', 9 items. Content kind: news and media releases (patrol season start, rock fishing safety, surf sports); not an incident log. Newest item Sat, 26 Sep 2026. Confirmed on 2026-10-21.",
+      "geography": "New South Wales, Australia",
+      "source": "Surf Life Saving NSW, site RSS feed (WordPress /feed/)",
+      "url": "https://www.surflifesaving.com.au/feed/",
+      "grade": "C",
+      "do_not_add_to": "Not a figure. A feed row is a source pointer for the watch only: never count its items as events, rescues or drownings, and never add it to any estimate or register total. Not to be recorded as a Surf Life Saving Australia national feed.",
+      "note": "Terms: none found; the home page capture ended before the footer and the feed has no copyright element. Reviewers may drop this row if only the ten named organisations count; it is here because a state surf lifesaving feed is a working official source for the watch in Australia."
+    }
+  ],
+  "corrections": [],
+  "evidence": [
+    {
+      "url": "https://api.io.canada.ca/io-server/gc/news/en/v2?dept=canadiancoastguard&sort=publishedDate&orderBy=desc&publishedDate%3E=2021-07-23&pick=50&format=atom&atomtitle=Canadian%20Coast%20Guard",
+      "quote": "Canadian Coast Guard",
+      "where": "Atom feed <title> element; xmlns http://www.w3.org/2005/Atom; 50 entries; no rights element. Fetched 2026-10-21."
+    },
+    {
+      "url": "https://api.io.canada.ca/io-server/gc/news/en/v2?dept=canadiancoastguard&sort=publishedDate&orderBy=desc&publishedDate%3E=2021-07-23&pick=50&format=atom&atomtitle=Canadian%20Coast%20Guard",
+      "quote": "Canadian Coast Guard ships Des Groseilliers and Louis S. St-Laurent complete first security patrols in Canada's Arctic waters",
+      "where": "First (newest) entry title; entry updated 2026-10-15 (10:54, -04:00 offset). Second entry also 2026-10-15, third 2026-10-14."
+    },
+    {
+      "url": "https://www.canada.ca/en/news/subscribe-emails.html",
+      "quote": "dept=canadiancoastguard&sort=publishedDate&orderBy=desc&publishedDate%3E=2021-07-23&pick=50",
+      "where": "'RSS feeds by Organization' list, Canadian Coast Guard entry; base address shown as https://api.io.canada.ca/io-server/gc/news/en/v2? followed by these parameters."
+    },
+    {
+      "url": "https://www.canada.ca/en/transparency/terms.html",
+      "quote": "you may reproduce the materials in whole or in part for non-commercial purposes",
+      "where": "Terms and conditions, section 'Ownership and usage of content provided on this site', 'Non-commercial reproduction'. Commercial redistribution is not permitted without permission; RSS and automated access not mentioned."
+    },
+    {
+      "url": "https://www.maritimenz.govt.nz/news-landing-page/news-feed/",
+      "quote": "Maritime NZs News and Media Releases",
+      "where": "RSS 2.0 channel <description>; channel <title> is 'Maritime News Feed'; 143 items; oldest item Wednesday, 10 January 2024. Fetched 2026-10-21."
+    },
+    {
+      "url": "https://www.maritimenz.govt.nz/news-landing-page/news-feed/",
+      "quote": "Staying safe on the water in El Niño conditions",
+      "where": "First (newest) item title; pubDate Wednesday, 21 October 2026. Next items: Monday, 19 October 2026 and Friday, 09 October 2026."
+    },
+    {
+      "url": "https://www.maritimenz.govt.nz/",
+      "quote": "© Maritime NZ 2026",
+      "where": "Home page footer; the footer's RSS link points to https://www.maritimenz.govt.nz/news-landing-page/news-feed/, beside links named Copyright and Disclaimer."
+    },
+    {
+      "url": "https://www.maritimenz.govt.nz/about-us/copyright/",
+      "quote": "The copyright is owned by Maritime NZ unless otherwise stated.",
+      "where": "Copyright page, main text; the same page says material may be reproduced for personal use without permission and 'Maritime NZ must be acknowledged as the source.'"
+    },
+    {
+      "url": "https://kommunikasjon.ntb.no/rss/releases/latest?lang=no&publisherId=89422",
+      "quote": "Redningsselskapet - siste pressemeldinger",
+      "where": "RSS 2.0 channel <title>; description 'Siste publiserte pressemeldinger'; 25 items; newest item published Wed, 14 Oct 2026 (its title names a staff member and is not recorded here)."
+    },
+    {
+      "url": "https://kommunikasjon.ntb.no/rss/releases/latest?lang=no&publisherId=89422",
+      "quote": "Ni personer druknet i september",
+      "where": "Second item title, published Tue, 06 Oct 2026; third item published Fri, 02 Oct 2026. Shows that monthly drowning counts are released through this feed."
+    },
+    {
+      "url": "https://kommunikasjon.ntb.no/pressroom/redningsselskapet?publisherId=89422",
+      "quote": "https://kommunikasjon.ntb.no/rss/releases/latest?publisherId=89422",
+      "where": "RSS link on the Redningsselskapet pressroom page, which shows a count of 662 press releases under 'Pressemeldinger'; no terms-of-use text on the page."
+    },
+    {
+      "url": "https://rs.no/om-oss/presse/",
+      "quote": "https://www.ntbinfo.no/pressroom/redningsselskapet?publisherId=89422",
+      "where": "Press page of Redningsselskapet, the only link under the headings 'Siste pressemeldinger' and 'Siste nyheter'; no RSS link on rs.no itself."
+    },
+    {
+      "url": "https://www.knrm.nl/rss",
+      "quote": "https://www.knrm.nl/rss/reddingrapporten",
+      "where": "RSS index page, table under the heading 'RSS Feeds': Nieuws, Reddingrapporten, Agenda, Intranet RSS-feed, then a news feed and a rescue-report feed per reddingstation."
+    },
+    {
+      "url": "https://www.knrm.nl/rss/reddingrapporten",
+      "quote": "Motorjacht maakt water op Westerschelde",
+      "where": "First (newest) item title, pubDate Sat, 17 Oct 2026 (+0200); channel title 'Reddingrapporten'; 44 items; next items Sat, 10 Oct 2026 and Wed, 07 Oct 2026."
+    },
+    {
+      "url": "https://www.knrm.nl/rss/nieuws",
+      "quote": "Bijna 5.000 euro dankzij jullie stemmen",
+      "where": "Item dated Tue, 13 Oct 2026; channel title 'Nieuws'; 30 items; the first item is an agenda entry dated Fri, 03 Sep 2027, later than the lastBuildDate of Wed, 21 Oct 2026."
+    },
+    {
+      "url": "https://www.knrm.nl/p2000",
+      "quote": "20-10-26 14:14 Prio 1: Vaartuig aangetroffen / URK1",
+      "where": "'P2000 - Laatste alarm' list, newest entry (date, time, priority, type, unit code); HTML only, no feed or API address on the page."
+    },
+    {
+      "url": "https://www.knrm.nl/disclaimer",
+      "quote": "mag niets van onze website worden verveelvoudigd op welke wijze dan ook",
+      "where": "Section 'AUTEURSRECHTEN EN ANDERE INTELLECTUELE EIGENDOMSRECHTEN'; exception for personal use; RSS and automated access not mentioned."
+    },
+    {
+      "url": "https://www.surflifesaving.com.au/feed/",
+      "quote": "NSW Volunteer Surf Lifesavers Raise Patrol Flags as New Season Starts",
+      "where": "First (newest) item title, published Sat, 26 Sep 2026; channel title 'Surf Life Saving NSW'; 9 items; next items Mon, 21 Sep 2026 and Thu, 10 Sep 2026."
+    },
+    {
+      "url": "https://www.seenotretter.de/aktuelles",
+      "quote": "Seenotretter helfen manövrierunfähigem Fischkutter",
+      "where": "Seenotfälle list, newest item, 20. Oktober 2026; the page has no RSS, feed, Atom or XML link and no rel=alternate link; TYPO3 CMS."
+    },
+    {
+      "url": "https://www.royallifesaving.com.au/about/news-and-updates/news",
+      "quote": "229 lives lost in multiple-fatality drowning incidents over the past decade",
+      "where": "News listing (537 items), Research item dated 29/09/2026; no RSS, feed or subscribe link and no rel=alternate link on the page."
+    },
+    {
+      "url": "https://www.gov.ie/en/department-of-transport/press-releases/irish-coast-guard-responded-to-2793-incidents-in-2025/",
+      "quote": "the Coast Guard managed 2793 incidents",
+      "where": "Department of Transport press release, published 7 January 2026; no RSS, feed, Atom or subscribe link in head, body or footer; no licence statement in the footer."
+    }
+  ],
+  "tried": [
+    "Surf Life Saving Australia: WebFetch https://sls.com.au/feed/, /news/feed/, /rss and the home page all returned a fetch error (CLIENT_ERROR) on 2026-10-21; https://sls.com.au/news/ opened but showed undated items from about 2015 and no feed link. feeder.co/discover/site/sls.com.au: fetch error.",
+    "Surf Life Saving Australia, searches: 'sls.com.au news feed rss', 'Surf Life Saving Australia media releases', 'sls.com.au media centre news 2026', 'Surf Life Saving Australia newsroom media release October 2026', 'sls.com.au media release drowning', 'SLSA sls.com.au media release 2026', 'feeder.co discover sls.com.au': no SLSA feed surfaced; only the state bodies (NSW at surflifesaving.com.au, Queensland at lifesaving.com.au) appear.",
+    "Royal Life Saving Australia: https://www.royallifesaving.com.au/media-centre opened (no feed link, no rel=alternate); /media-centre/media-releases and /rss returned a fetch error; /about/news-and-updates/news opened (537 items, newest 02/10/2026, no feed link). Site is Squiz Matrix (__data/assets paths). Search 'royallifesaving.com.au media releases rss': no feed. The site offers an email newsletter only.",
+    "Maritime New Zealand: found via search 'maritimenz.govt.nz rss news feed' (first result was the XML itself at https://maritimenz.govt.nz/public/news/news-feed); the footer of the home page links the same feed as https://www.maritimenz.govt.nz/news-landing-page/news-feed/, which is the address recorded.",
+    "Irish Coast Guard: it has no site of its own; its releases are Department of Transport press releases on gov.ie. https://www.gov.ie/en/press-releases/?organisation=department-of-transport and https://www.gov.ie/en/department-of-transport/press-releases/ both returned a fetch error; a single release page opened and had no feed link. merrionstreet.ie/en/connect/connect.html redirects (302) to https://www.gov.ie/en/news/, so the old government news service is gone.",
+    "Irish Coast Guard, searches: 'gov.ie press releases RSS feed' (only Northern Ireland results) and 'Irish Coast Guard press release gov.ie 2026' (release pages only, no feed).",
+    "Canadian Coast Guard: search 'canada.ca news RSS Canadian Coast Guard' gave only release pages; 'canada.ca web feeds news releases RSS service' led to https://www.canada.ca/en/news/subscribe-emails.html, which lists the api.io.canada.ca address per organisation. The listed address ends at pick=50; format=atom&atomtitle=... was added following the 'All National News' entry's pattern and returned Atom.",
+    "KNRM: https://www.knrm.nl/nieuws showed no feed link; https://www.knrm.nl/p2000 is an HTML alarm log without a feed or API address. https://www.knrm.nl/rss (guessed) is an RSS index page listing national and per-station feeds; both national feeds confirmed. Search 'knrm.nl rss feed nieuws' had not found it.",
+    "DGzRS (seenotretter.de): /aktuelles, /presse and /aktuelles/seenotfaelle opened (TYPO3, newest Seenotfall 20. Oktober 2026) with no RSS, feed, Atom, XML or rel=alternate link; /rss.xml returned a server error and /rss a fetch error. Searches 'seenotretter.de rss feed presse' and 'DGzRS Seenotretter presseportal Pressemitteilungen': no feed; no presseportal newsroom found. Only an email newsletter is offered.",
+    "Redningsselskapet: https://rs.no/feed/ returned the home page HTML (no WordPress feed); https://rs.no/aktuelt/ had no feed link; https://rs.no/om-oss/presse/ links the NTB pressroom. https://www.ntbinfo.no/pressroom/redningsselskapet?publisherId=89422: ROBOTS_DISALLOWED. Search 'ntbinfo.no rss releases publisherId' showed feeder.co entries with the pattern kommunikasjon.ntb.no/rss/releases/latest?lang=no&publisherId=..., which worked for publisherId 89422.",
+    "Salvamento Marítimo: https://www.salvamentomaritimo.es/ and https://www.salvamentomaritimo.es/sala-de-prensa/noticias both ROBOTS_DISALLOWED to the fetch tool on 2026-10-21, so nothing on that host could be read. Searches 'salvamentomaritimo.es rss noticias' and 'salvamentomaritimo.es feed rss.xml': no feed address surfaced (only press coverage).",
+    "Guardia Costiera: https://www.guardiacostiera.gov.it/, /stampa/Pages/comunicati.aspx and /stampa/Pages/default.aspx all returned a fetch error (CLIENT_ERROR; the site is SharePoint, whose list feeds need a list GUID that could not be read). Searches 'guardiacostiera.gov.it rss comunicati stampa', 'Guardia Costiera feed RSS notizie', 'guardiacostiera.gov.it listfeed.aspx': nothing.",
+    "The shared web-search budget for this session ran out after about 37 searches (on the query 'sls.com.au/news'), so no further directory searches (feeder.co, feedspot, rssing) could be made for SLSA, RLSA, DGzRS, Salvamento Marítimo or Guardia Costiera. All feed confirmations above were made by fetching the feed address itself.",
+    "Headers: the fetch tool presents a browser-like client and cannot send custom headers, so whether each feed accepts the watch's user agent 'lifesavinglab-watch/1.0' is untested from here; none of the five confirmed feeds needed anything special for the fetch tool."
+  ],
+  "notes": "Outcome: four of the ten named services have a confirmed feed (Canadian Coast Guard, Maritime New Zealand, Redningsselskapet via NTB Kommunikasjon, KNRM with two feeds), plus one working fallback from a state body (Surf Life Saving NSW) that is not one of the named ten; hence 'partial'. Every address in rows was fetched on 2026-10-21 and returned items; dates and feed titles are quoted in evidence. Content kinds: Canadian Coast Guard = government news releases (announcements, not incidents); Maritime NZ = news and media releases (safety campaigns and rules); Redningsselskapet = press releases, including monthly drowning counts ('Ni personer druknet i september'); KNRM Reddingrapporten = incident log of written rescue reports (newest 17 Oct 2026); KNRM Nieuws = organisational news; SLS NSW = news and media releases. For the watch, the KNRM Reddingrapporten feed and the Redningsselskapet feed are the most useful; the Canadian feed will rarely match the watch's keywords. Terms of use found: canada.ca allows non-commercial reproduction; Maritime NZ allows personal-use reproduction with acknowledgement; KNRM's disclaimer reserves all reproduction except personal use; NTB and SLS NSW state none. None of them mentions RSS or automated reading; since the watch stores only links, dates, a derived kind and a headline hash, none of these terms appears to be a barrier, but a person should decide. Robots: knrm.nl, maritimenz.govt.nz, api.io.canada.ca, kommunikasjon.ntb.no and surflifesaving.com.au were all readable by the fetch tool, which respects robots.txt; ntbinfo.no and salvamentomaritimo.es were not. Not found: SLSA (sls.com.au errors on every address), Royal Life Saving Australia (no feed on a Squiz site; newsletter only), DGzRS (TYPO3 site, newsletter only), Irish Coast Guard (gov.ie has no feeds), Salvamento Marítimo (host unreadable from here), Guardia Costiera (host unreadable from here). Two caveats for whoever enables these in watch/sources.json: the KNRM Nieuws feed carries a future-dated agenda item (2027) as its first item, and the fetch tool flagged instruction-like text inside one KNRM Nieuws item description, so the watch should keep ignoring descriptions. The Canadian feed's dates are 'updated' timestamps, not 'published'. No repository file was modified.",
+  "next_tasks": [
+    {
+      "title": "Confirm the five feeds from the watch runner with the watch's own user agent",
+      "why": "Each address returned items to a browser-like fetcher; whether lifesavinglab-watch/1.0 from a GitHub runner is accepted (as the RNLI case shows) is untested."
+    },
+    {
+      "title": "Find the JSON endpoint behind https://www.knrm.nl/p2000 (every KNRM pager alarm with date, time, priority and type)",
+      "why": "It is a complete callout log, far more than the written Reddingrapporten; a person with a browser can read the request in the network tab."
+    },
+    {
+      "title": "Read the RSS icon or page source of sls.com.au, royallifesaving.com.au and seenotretter.de in a browser",
+      "why": "All three sites were unreadable or showed no feed link to the fetch tool; a WordPress, Squiz or TYPO3 site often has a feed that is only in the page source."
+    },
+    {
+      "title": "Try Salvamento Marítimo and Guardia Costiera from a browser and look for a feed link or SharePoint listfeed address",
+      "why": "Both hosts refused the fetch tool outright (robots and client errors), so nothing could be established from here."
+    },
+    {
+      "title": "Add the Redningsselskapet monthly drowning releases to the ledger as source rows",
+      "why": "The feed carries monthly national drowning counts (e.g. nine in September 2026); each release is a primary organisational statement worth a dated row."
+    }
+  ]
+}

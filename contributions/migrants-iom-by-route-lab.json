@@ -1,0 +1,773 @@
+{
+  "schema": "lifesavinglab.bundle.v1",
+  "task_id": "migrants-iom-by-route",
+  "preamble_version": "1.4",
+  "contributor": {
+    "handle": "lab",
+    "agent": "Claude Fable 5.1 (independent subagent in the lab's own session, 2026-10-21)"
+  },
+  "status": "partial",
+  "rows": [
+    {
+      "id": "iom-mmp-2025-sea-routes-to-europe",
+      "figure": "3,400 deaths and disappearances recorded on sea routes to Europe in 2025 (43 per cent of the global death toll)",
+      "low": 3400,
+      "high": 3400,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "IOM's own aggregate for 'sea routes to Europe' (Central, Eastern and Western Mediterranean and the Western Africa/Atlantic Route to the Canary Islands). Recorded dead (bodies recovered) plus missing presumed dead, all causes of death. Excludes the at least 1,500 people reported missing at sea whose deaths IOM could not verify. Calendar year 2025, data as of 1 March 2026.",
+      "geography": "Sea routes to Europe (Mediterranean and Atlantic approaches)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (StoryMap published 21 April 2026; all data as of 1 March 2026), section 'Key routes and regions for migrant deaths and disappearances in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Already contains the 2025 Central, Eastern and Western Mediterranean and Atlantic/Canary route rows; do not re-add them. Never add the 1,500 unverified missing (IOM excludes them). Not all drownings: IOM counts all causes of death.",
+      "note": "IOM compares this with 'over 3,800' on the same routes in 2024. IOM prints no single 'Mediterranean' total for 2025 in this report; the ledger's 2,185 comes from a UN briefing citing IOM (row un-briefing-2025-mediterranean). Report body is served by the ArcGIS item JSON endpoint (see evidence)."
+    },
+    {
+      "id": "iom-mmp-2025-central-mediterranean",
+      "figure": "1,330 deaths documented in the Central Mediterranean in 2025",
+      "low": 1330,
+      "high": 1330,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "Route name as printed: 'Central Mediterranean'. Dead plus missing presumed dead, all causes, calendar year 2025, data as of 1 March 2026. Largest single component of IOM's 3,400 on sea routes to Europe.",
+      "geography": "Central Mediterranean (North Africa to Italy and Malta)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Key routes and regions for migrant deaths and disappearances in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Already inside iom-mmp-2025-sea-routes-to-europe (3,400). Not all drownings. Figures are revised as cases are verified; check missingmigrants.iom.int/data for the current value.",
+      "note": "Printed inside the sentence giving the 3,400 total: 'most deaths (1,330) documented in the Central Mediterranean'."
+    },
+    {
+      "id": "iom-mmp-2025-eastern-mediterranean",
+      "figure": "372 recorded in 2025 on the Eastern Mediterranean (compared to 191 in 2024)",
+      "low": 372,
+      "high": 372,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "Route name as printed: 'Eastern Mediterranean'. Dead plus missing presumed dead, all causes, calendar year 2025, data as of 1 March 2026. IOM attributes the rise partly to the Libya to Crete crossing.",
+      "geography": "Eastern Mediterranean (Türkiye and eastern Libya to Greece/Cyprus)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths and disappearances recorded on sea routes to Europe in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Already inside iom-mmp-2025-sea-routes-to-europe (3,400). Not all drownings.",
+      "note": "The 2024 comparison figure 191 is recorded separately as iom-mmp-2024-eastern-mediterranean."
+    },
+    {
+      "id": "iom-mmp-2025-western-mediterranean",
+      "figure": "nearly 500 recorded on the Western Mediterranean crossing in 2025",
+      "low": null,
+      "high": 500,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "Route name as printed: 'Western Mediterranean crossing'. Dead plus missing presumed dead, all causes, calendar year 2025, data as of 1 March 2026. Rounded by IOM ('nearly 500'); exact count not printed in the report. Excludes another 400 reported missing at sea on this route that IOM could not verify.",
+      "geography": "Western Mediterranean (Morocco and Algeria to Spain)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths and disappearances recorded on sea routes to Europe in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Already inside iom-mmp-2025-sea-routes-to-europe (3,400). Never add the 400 unverified missing (row iom-mmp-2025-unverified-missing-western-mediterranean). Not all drownings.",
+      "note": "A person with a browser should read the exact count from the portal's Western Mediterranean route filter for 2025."
+    },
+    {
+      "id": "iom-mmp-2025-atlantic-canary-islands",
+      "figure": "more than 1,200 deaths confirmed on the Canary Islands route for the second year running",
+      "low": 1200,
+      "high": null,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "Route name as first printed: 'Western Africa/Atlantic Route to the Spanish Canary Islands', then 'the Canary Islands route'. Confirmed dead plus missing presumed dead, all causes, calendar year 2025, data as of 1 March 2026. Excludes at least 730 people reported missing at sea on the Atlantic crossing whose deaths IOM could not verify.",
+      "geography": "Atlantic route, West Africa to the Canary Islands (Spain)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths and disappearances recorded on sea routes to Europe in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Already inside iom-mmp-2025-sea-routes-to-europe (3,400). Never add the 730 unverified missing. Not all drownings: IOM's 2025 UN submission said 60 per cent of Atlantic-route deaths in Sept 2024 to May 2025 were from causes other than drowning.",
+      "note": "IOM's report prints only 'more than 1,200'. The exact figure 1,214 in the ledger comes from a UN briefing of 26 February 2026 citing IOM (row un-briefing-2025-atlantic-canary)."
+    },
+    {
+      "id": "iom-mmp-2025-bay-of-bengal-andaman-sea",
+      "figure": "Nearly 900 deaths were recorded during sea crossings of the Bay of Bengal and Andaman Sea in 2025",
+      "low": null,
+      "high": 900,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "As printed under the heading 'Rohingya deaths recorded in the Bay of Bengal and Andaman Sea in 2025'. Dead plus missing presumed dead, calendar year 2025, data as of 1 March 2026. Rounded by IOM. IOM says four large shipwrecks accounted for nearly 800 of these and that smaller shipwrecks and boats that disappear entirely are likely undocumented.",
+      "geography": "Bay of Bengal and Andaman Sea (Bangladesh/Myanmar towards Malaysia and Indonesia)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Rohingya deaths recorded in the Bay of Bengal and Andaman Sea in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Not part of IOM's 'sea routes to Europe' aggregate; part of IOM's Asia regional total (at least 3,314 in 2025). Not all drownings.",
+      "note": "The ledger's '800+' for this route is a press figure; IOM's own report prints 'nearly 900'. IOM's June 2025 UN submission separately gave 'a minimum of 900 Rohingya refugees' for Sept 2024 to May 2025, a different window."
+    },
+    {
+      "id": "iom-mmp-2025-mainland-europe-to-uk-channel",
+      "figure": "36 deaths were recorded in 2025 (compared to 85 in 2024) on the route from mainland Europe to the United Kingdom, including the English Channel crossing",
+      "low": 36,
+      "high": 36,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "Route as printed: 'the route from mainland Europe to the United Kingdom, including the English Channel crossing'. Counted by IOM under 'migration routes within Europe' (Europe region, 99 deaths in 2025), not under sea routes to Europe. Includes deaths on land en route as well as the Channel crossing. Data as of 1 March 2026.",
+      "geography": "English Channel and northern France to the United Kingdom",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths and disappearances recorded on migration routes within Europe 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Not inside the 3,400 sea routes to Europe figure. Not sea-only and not all drownings. The portal route label is 'English Channel to the UK'.",
+      "note": "IOM also notes small-boat arrivals to the UK rose from just under 37,000 in 2024 to over 41,000 in 2025."
+    },
+    {
+      "id": "iom-mmp-2025-caribbean",
+      "figure": "In the Caribbean, deaths also decreased with 130 recorded in 2025 compared to 302 in 2024",
+      "low": 130,
+      "high": 130,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "IOM sub-region 'Caribbean' within the Americas (land and sea incidents on Caribbean migration routes). Data as of 1 March 2026. IOM separately prints 'just 5 deaths' in 2025 on the route from Caribbean Islands to the United States, compared to 187 in 2024.",
+      "geography": "Caribbean",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths recorded during migration in the Americas in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Part of IOM's Americas total (408 in 2025); not sea-only; not all drownings.",
+      "note": "IOM says data for the Americas is incomplete and that falling counts partly reflect restricted access to information."
+    },
+    {
+      "id": "iom-mmp-2025-sea-crossing-to-yemen",
+      "figure": "the sea crossing to Yemen, which claimed at least 720 lives (2025)",
+      "low": 720,
+      "high": null,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "As printed under 'Deaths recorded on the Eastern Route to and from Eastern Africa in 2025'. Sea crossing from the Horn of Africa (Djibouti/Somalia) to Yemen only; the land legs of the Eastern Route are excluded here. Data as of 1 March 2026.",
+      "geography": "Gulf of Aden and Red Sea, Horn of Africa to Yemen",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths recorded on the Eastern Route to and from Eastern Africa in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Not a 'sea route to Europe'; part of IOM's Africa regional total. IOM says many deaths on this route go unrecorded.",
+      "note": "The portal names this the 'Eastern Route'; IOM's decade report called it 'the Gulf of Aden crossing between the Horn of Africa and Yemen'."
+    },
+    {
+      "id": "iom-mmp-2025-global-all-routes",
+      "figure": "The deaths or disappearance of nearly 7,900 people were documented on global migration routes worldwide in 2025",
+      "low": null,
+      "high": 7900,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "All routes, land and sea, all causes, worldwide, calendar year 2025, data as of 1 March 2026. Rounded by IOM. Excludes the at least 1,500 reported missing at sea that IOM could not verify. IOM gives 'nearly 9,200' for 2024 in the same report.",
+      "geography": "Global",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section '2025 Data on Migrant Deaths and Disappearances' and executive summary",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Contains every 2025 route row above; not all at sea; not all drownings; never add the 1,500 unverified. Excluded from WHO drowning estimates.",
+      "note": "An earlier UN briefing (26 February 2026) cited 'at least 7,667' for 2025; IOM's figure rose to 'nearly 7,900' by 1 March 2026 as cases were verified."
+    },
+    {
+      "id": "iom-mmp-2025-unverified-missing-at-sea",
+      "figure": "at least 1,500 people reported missing at sea whose deaths could not be verified (IOM: 'another 1,500 potentially missing and presumed dead'); unverified count, not included in IOM totals",
+      "low": 1500,
+      "high": null,
+      "unit": "missing persons, unverified",
+      "year": 2025,
+      "scope": "IOM's count of reports of people missing at sea on sea routes to Europe in 2025 that it could not verify for lack of information, mostly 'invisible shipwrecks' in which entire boats are reported missing and no information on rescue or interception at sea is ever found. Excluded from IOM's confirmed totals (nearly 7,900 global; 3,400 sea routes to Europe). A floor of unverified reports, not a statistical estimate of unrecorded deaths; IOM publishes no such estimate.",
+      "geography": "Sea routes to Europe (Atlantic crossing and Western Mediterranean named)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), executive summary and section 'Deaths and disappearances recorded on sea routes to Europe in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Never add to confirmed counts: IOM itself computes its death rate 'Even excluding these 1,500 unverified disappearances'. The ledger's high value 5,700 (4,200 + 1,500) does exactly this and should be dropped.",
+      "note": "IOM breaks it down as at least 730 on the Atlantic crossing and another 400 on the Western Mediterranean (separate rows). IOM links the growth of such cases to information restriction and aid funding cuts."
+    },
+    {
+      "id": "iom-mmp-2025-unverified-missing-atlantic-crossing",
+      "figure": "at least 730 people were reported missing at sea on the Atlantic crossing (unverified, 2025)",
+      "low": 730,
+      "high": null,
+      "unit": "missing persons, unverified",
+      "year": 2025,
+      "scope": "Reports of people missing at sea on the Atlantic crossing to the Canary Islands in 2025 that IOM could not verify; mostly 'invisible shipwrecks'. Not included in IOM's confirmed Atlantic-route count (more than 1,200). Data as of 1 March 2026.",
+      "geography": "Atlantic route, West Africa to the Canary Islands (Spain)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths and disappearances recorded on sea routes to Europe in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Never add to iom-mmp-2025-atlantic-canary-islands or any confirmed total; part of the 1,500 in iom-mmp-2025-unverified-missing-at-sea.",
+      "note": "Labelled by IOM as unverified; treat as a count of reports, not of deaths."
+    },
+    {
+      "id": "iom-mmp-2025-unverified-missing-western-mediterranean",
+      "figure": "another 400 [reported missing at sea] on the Western Mediterranean (unverified, 2025)",
+      "low": 400,
+      "high": null,
+      "unit": "missing persons, unverified",
+      "year": 2025,
+      "scope": "Reports of people missing at sea on the Western Mediterranean crossing in 2025 that IOM could not verify; mostly 'invisible shipwrecks'. Not included in IOM's confirmed Western Mediterranean count (nearly 500). Data as of 1 March 2026.",
+      "geography": "Western Mediterranean (Morocco and Algeria to Spain)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths and disappearances recorded on sea routes to Europe in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Never add to iom-mmp-2025-western-mediterranean or any confirmed total; part of the 1,500 in iom-mmp-2025-unverified-missing-at-sea.",
+      "note": "Printed in the same sentence as the Atlantic 730: 'at least 730 ... and another 400 on the Western Mediterranean'."
+    },
+    {
+      "id": "iom-mmp-2024-sea-routes-to-europe",
+      "figure": "over 3,800 migrant deaths recorded on these routes [sea routes to Europe] in 2024",
+      "low": 3800,
+      "high": null,
+      "unit": "deaths and disappearances",
+      "year": 2024,
+      "scope": "IOM's aggregate for sea routes to Europe (Central, Eastern and Western Mediterranean and the Western Africa/Atlantic route) in calendar year 2024, as revised by 1 March 2026. Dead plus missing presumed dead, all causes.",
+      "geography": "Sea routes to Europe (Mediterranean and Atlantic approaches)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Key routes and regions for migrant deaths and disappearances in 2025' (2024 comparison)",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Contains the 2024 Mediterranean (2,452 as of March 2025) and Atlantic route rows; do not re-add. Not all drownings.",
+      "note": "Only a rounded 2024 figure is printed. The 2024 Mediterranean total 2,452 and Atlantic 1,167 (both as of March 2025) are earlier, pre-revision IOM figures."
+    },
+    {
+      "id": "iom-mmp-2024-eastern-mediterranean",
+      "figure": "191 recorded in 2024 on the Eastern Mediterranean",
+      "low": 191,
+      "high": 191,
+      "unit": "deaths and disappearances",
+      "year": 2024,
+      "scope": "Route name as printed: 'Eastern Mediterranean'. Dead plus missing presumed dead, all causes, calendar year 2024, as revised by 1 March 2026.",
+      "geography": "Eastern Mediterranean (Türkiye and eastern Libya to Greece/Cyprus)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths and disappearances recorded on sea routes to Europe in 2025' (2024 comparison)",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Part of IOM's 2024 Mediterranean total (2,452 as of March 2025; revised since) and of the over 3,800 sea routes to Europe. Not all drownings.",
+      "note": "Printed as the comparison in 'with 372 recorded in 2025 compared to 191 in 2024'."
+    },
+    {
+      "id": "iom-mmp-2024-mainland-europe-to-uk-channel",
+      "figure": "85 deaths recorded in 2024 on the route from mainland Europe to the United Kingdom, including the English Channel crossing",
+      "low": 85,
+      "high": 85,
+      "unit": "deaths and disappearances",
+      "year": 2024,
+      "scope": "Route as printed: 'the route from mainland Europe to the United Kingdom, including the English Channel crossing'. Counted under migration routes within Europe (Europe region, 245 deaths in 2024, a record). Includes land deaths en route. As revised by 1 March 2026.",
+      "geography": "English Channel and northern France to the United Kingdom",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths and disappearances recorded on migration routes within Europe 2025' (2024 comparison)",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Not inside sea routes to Europe. Not sea-only; not all drownings.",
+      "note": "IOM's March 2025 press release gave 233 for Europe in 2024; the 2025 report gives 245 after revision."
+    },
+    {
+      "id": "iom-mmp-2024-caribbean-as-of-mar-2026",
+      "figure": "302 recorded in the Caribbean in 2024 (as revised by 1 March 2026)",
+      "low": 302,
+      "high": 302,
+      "unit": "deaths and disappearances",
+      "year": 2024,
+      "scope": "IOM sub-region 'Caribbean' within the Americas, land and sea incidents, calendar year 2024, as revised by 1 March 2026. The sub-route 'Caribbean Islands to the United States' alone had 187 in 2024.",
+      "geography": "Caribbean",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths recorded during migration in the Americas in 2025' (2024 comparison)",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Same quantity as iom-mmp-2024-caribbean-as-of-mar-2025 (341) at a different date; use one, never both. Not sea-only.",
+      "note": "IOM's own figure for the same year moved from 341 (20 March 2025) and 301 (IOM data portal, March 2025) to 302 (1 March 2026); the series is revised as cases are verified."
+    },
+    {
+      "id": "iom-mmp-2024-caribbean-as-of-mar-2025",
+      "figure": "an unprecedented 341 lives lost in the Caribbean in 2024",
+      "low": 341,
+      "high": 341,
+      "unit": "deaths and disappearances",
+      "year": 2024,
+      "scope": "IOM sub-region 'Caribbean' within the Americas, land and sea, calendar year 2024, data available as of 20 March 2025 (IOM press release of 21 March 2025).",
+      "geography": "Caribbean",
+      "source": "IOM press release '2024 Deadliest Year on Record for Migrants, New IOM Data Reveals', 21 March 2025 (Missing Migrants Project data as of 20 March 2025)",
+      "url": "https://www.iom.int/news/2024-deadliest-year-record-migrants-new-iom-data-reveals",
+      "grade": "A",
+      "do_not_add_to": "Same quantity as iom-mmp-2024-caribbean-as-of-mar-2026 (302); use one, never both. Part of the Americas 2024 total (at least 1,233 in that release). Not sea-only.",
+      "note": "Later revised downward by IOM to 302 (2025 Annual Global Report)."
+    },
+    {
+      "id": "iom-mmp-2024-mediterranean",
+      "figure": "The 2,452 deaths documented in the Mediterranean Sea in 2024",
+      "low": 2452,
+      "high": 2452,
+      "unit": "deaths and disappearances",
+      "year": 2024,
+      "scope": "IOM region 'Mediterranean' (Central, Eastern and Western Mediterranean routes together), dead plus missing presumed dead, all causes, calendar year 2024, data available as of 20 March 2025. IOM notes it is not the largest annual Mediterranean total ever.",
+      "geography": "Mediterranean Sea (all three IOM routes)",
+      "source": "IOM press release '2024 Deadliest Year on Record for Migrants, New IOM Data Reveals', 21 March 2025 (Missing Migrants Project data as of 20 March 2025)",
+      "url": "https://www.iom.int/news/2024-deadliest-year-record-migrants-new-iom-data-reveals",
+      "grade": "A",
+      "do_not_add_to": "Contains iom-mmp-2024-central-mediterranean and iom-mmp-2024-eastern-mediterranean; do not re-add. Not all drownings. Later revisions exist (IOM's 2025 report gives only 'over 3,800' for sea routes to Europe incl. Atlantic).",
+      "note": "The portal home page snapshot read in this run showed 1,618 for the Mediterranean in 2024 with latest incident 16 October 2024, i.e. a partial-year value; not recorded as a row."
+    },
+    {
+      "id": "iom-mmp-2024-central-mediterranean",
+      "figure": "Central Mediterranean: claiming the lives of more than 1,700 people in 2024",
+      "low": 1700,
+      "high": null,
+      "unit": "deaths and disappearances",
+      "year": 2024,
+      "scope": "Central Mediterranean route, dead plus missing presumed dead, all causes, calendar year 2024, as published on IOM GMDAC's Migration Data Portal thematic page (page states it is no longer updated as of March 2025). Rounded; exact count not printed.",
+      "geography": "Central Mediterranean (North Africa to Italy and Malta)",
+      "source": "IOM GMDAC, Migration Data Portal, thematic page 'Migrant deaths and disappearances' (citing Missing Migrants Project, 2025; page frozen as of March 2025)",
+      "url": "https://www.migrationdataportal.org/themes/migrant-deaths-and-disappearances",
+      "grade": "A",
+      "do_not_add_to": "Already inside iom-mmp-2024-mediterranean (2,452). Not all drownings. Exact 2024 count should be read from the portal route filter or the MMP 2024 blog (unreachable in this run).",
+      "note": "The Migration Data Portal is run by IOM's Global Migration Data Analysis Centre; it summarises the Missing Migrants Project's own data."
+    },
+    {
+      "id": "iom-mmp-2024-atlantic-canary-islands-as-of-mar-2025",
+      "figure": "the maritime route from West Africa to the Spanish Canary Islands (1,167)",
+      "low": 1167,
+      "high": 1167,
+      "unit": "deaths and disappearances",
+      "year": 2024,
+      "scope": "Atlantic route to the Canary Islands, dead plus missing presumed dead, all causes, calendar year 2024, as published on IOM GMDAC's Migration Data Portal (frozen as of March 2025).",
+      "geography": "Atlantic route, West Africa to the Canary Islands (Spain)",
+      "source": "IOM GMDAC, Migration Data Portal, thematic page 'Migrant deaths and disappearances' (citing Missing Migrants Project, 2025; page frozen as of March 2025)",
+      "url": "https://www.migrationdataportal.org/themes/migrant-deaths-and-disappearances",
+      "grade": "A",
+      "do_not_add_to": "Same quantity as iom-mmp-2024-atlantic-canary-islands-as-of-mar-2026 ('more than 1,200'); use one, never both. Not inside the Mediterranean total. Not all drownings.",
+      "note": "IOM's 2025 report later says more than 1,200 were confirmed on this route 'for the second year running', i.e. the 2024 count was revised above 1,200."
+    },
+    {
+      "id": "iom-mmp-2024-atlantic-canary-islands-as-of-mar-2026",
+      "figure": "more than 1,200 deaths confirmed on the Canary Islands route (2024, implied by 'for the second year running')",
+      "low": 1200,
+      "high": null,
+      "unit": "deaths and disappearances",
+      "year": 2024,
+      "scope": "Western Africa/Atlantic Route to the Spanish Canary Islands, calendar year 2024, as revised by 1 March 2026. IOM prints no exact 2024 figure in the 2025 report; the row rests on the phrase 'for the second year running'.",
+      "geography": "Atlantic route, West Africa to the Canary Islands (Spain)",
+      "source": "IOM Missing Migrants Project, 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (data as of 1 March 2026), section 'Deaths and disappearances recorded on sea routes to Europe in 2025'",
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "grade": "A",
+      "do_not_add_to": "Same quantity as iom-mmp-2024-atlantic-canary-islands-as-of-mar-2025 (1,167); use one, never both. Part of the over 3,800 on sea routes to Europe in 2024.",
+      "note": "Inferred only from IOM's wording; a person with a browser should read the exact 2024 count from the portal."
+    },
+    {
+      "id": "iom-mmp-2024-global-as-of-mar-2025",
+      "figure": "At least 8,938 people died on migration routes worldwide in 2024",
+      "low": 8938,
+      "high": null,
+      "unit": "deaths and disappearances",
+      "year": 2024,
+      "scope": "All routes, land and sea, all causes, worldwide, calendar year 2024, data available as of 20 March 2025. Same quantity as ledger row migrants-iom-2024 (9,191 as of 5 June 2025) and as 'nearly 9,200' in IOM's 2025 report (as of 1 March 2026).",
+      "geography": "Global",
+      "source": "IOM press release '2024 Deadliest Year on Record for Migrants, New IOM Data Reveals', 21 March 2025 (Missing Migrants Project data as of 20 March 2025)",
+      "url": "https://www.iom.int/news/2024-deadliest-year-record-migrants-new-iom-data-reveals",
+      "grade": "A",
+      "do_not_add_to": "Duplicate of migrants-iom-2024 at an earlier date; use one, never both. Not all at sea; excluded from WHO figures.",
+      "note": "Shows how IOM's annual totals rise after year end as cases are verified."
+    },
+    {
+      "id": "iom-mmp-2023-mediterranean-as-of-mar-2024",
+      "figure": "In the Mediterranean Sea, at least 3,105 lives were lost in 2023",
+      "low": 3105,
+      "high": null,
+      "unit": "deaths and disappearances",
+      "year": 2023,
+      "scope": "IOM region 'Mediterranean' (Central, Eastern and Western routes together), dead plus missing presumed dead, all causes, calendar year 2023, Missing Migrants Project database accessed 13 March 2024. IOM compares with 2,411 in 2022.",
+      "geography": "Mediterranean Sea (all three IOM routes)",
+      "source": "IOM Missing Migrants Project / GMDAC report 'A decade of documenting migrant deaths: Data analysis and reflection on deaths during migration documented by IOM's Missing Migrants Project, 2014 to 2023' (2024), Section 1.1, p. 8",
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "grade": "A",
+      "do_not_add_to": "Contains iom-mmp-2023-central-mediterranean (2,476). Same quantity as iom-mmp-2023-mediterranean-portal-snapshot (3,155); use one, never both. Not all drownings.",
+      "note": "IOM's own value for the same year moved from 3,041 (press release 29 January 2024, 'by the end of 2023') to 3,105 (13 March 2024) to 3,155 (portal, by late 2024)."
+    },
+    {
+      "id": "iom-mmp-2023-mediterranean-portal-snapshot",
+      "figure": "3,155 dead/missing, Mediterranean, 2023 (portal home page year table)",
+      "low": 3155,
+      "high": 3155,
+      "unit": "deaths and disappearances",
+      "year": 2023,
+      "scope": "IOM region 'Mediterranean', dead plus missing presumed dead, all causes, calendar year 2023, from the 'Year Dead/Missing' table on the Missing Migrants Project home page. The page served to this run states the latest incident recorded occurred on 16 October 2024, so the snapshot is from late 2024 or later; exact as-of date unknown.",
+      "geography": "Mediterranean Sea (all three IOM routes)",
+      "source": "IOM Missing Migrants Project data portal, home page, 'Year Dead/Missing' table by region (snapshot read 21 October 2026 but showing latest incident 16 October 2024)",
+      "url": "https://missingmigrants.iom.int/",
+      "grade": "A",
+      "do_not_add_to": "Same quantity as iom-mmp-2023-mediterranean-as-of-mar-2024 (3,105); use one, never both. Not all drownings.",
+      "note": "The same table gave Europe region 158 for 2023 and 122 for 2024 (partial), Mediterranean 1,618 for 2024 (partial). A person with a browser should confirm the live portal values and their as-of date."
+    },
+    {
+      "id": "iom-mmp-2023-central-mediterranean",
+      "figure": "2,476 deaths and disappearances recorded (Central Mediterranean crossing between North Africa and Italy, 2023)",
+      "low": 2476,
+      "high": 2476,
+      "unit": "deaths and disappearances",
+      "year": 2023,
+      "scope": "Route as printed: 'Central Mediterranean crossing between North Africa and Italy'. Dead plus missing presumed dead, all causes, calendar year 2023, database accessed 13 March 2024.",
+      "geography": "Central Mediterranean (North Africa to Italy and Malta)",
+      "source": "IOM Missing Migrants Project / GMDAC report 'A decade of documenting migrant deaths' (2014 to 2023; 2024), Section 1.1, p. 8",
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "grade": "A",
+      "do_not_add_to": "Already inside iom-mmp-2023-mediterranean-as-of-mar-2024 (3,105). Not all drownings.",
+      "note": "Eastern and Western Mediterranean 2023 figures are not printed in the report text (data annex not reproduced); see next_tasks."
+    },
+    {
+      "id": "iom-mmp-2023-atlantic-canary-islands",
+      "figure": "959 deaths were documented on the Atlantic route in 2023, compared to 559 in 2022",
+      "low": 959,
+      "high": 959,
+      "unit": "deaths and disappearances",
+      "year": 2023,
+      "scope": "Route as printed in the sentence: 'the Atlantic route'; section heading form 'Atlantic Route to Spain's Canary Islands'. Dead plus missing presumed dead, all causes, calendar year 2023, database accessed 13 March 2024.",
+      "geography": "Atlantic route, West Africa to the Canary Islands (Spain)",
+      "source": "IOM Missing Migrants Project / GMDAC report 'A decade of documenting migrant deaths' (2014 to 2023; 2024), Section 1.2, p. 8",
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "grade": "A",
+      "do_not_add_to": "Not inside the Mediterranean total. Never add the NGO figure in iom-cited-caminando-fronteras-2023-atlantic. Not all drownings.",
+      "note": "In the same section IOM quotes an NGO estimate of more than 6,000 disappearances on this route in 2023 and calls such reports nearly impossible to verify."
+    },
+    {
+      "id": "iom-mmp-2023-caribbean",
+      "figure": "247 fatalities recorded in 2023 (Caribbean migration routes)",
+      "low": 247,
+      "high": 247,
+      "unit": "deaths and disappearances",
+      "year": 2023,
+      "scope": "IOM sub-region 'Caribbean' within the Americas, calendar year 2023, database accessed 13 March 2024. Not sea-only.",
+      "geography": "Caribbean",
+      "source": "IOM Missing Migrants Project / GMDAC report 'A decade of documenting migrant deaths' (2014 to 2023; 2024), Section 1.4, p. 8",
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "grade": "A",
+      "do_not_add_to": "Part of the Americas regional total; not sea-only; not all drownings.",
+      "note": "The report also gives 636 for the United States to Mexico border crossing in 2023 (land) and 429 for the Sahara Desert crossing; not recorded here."
+    },
+    {
+      "id": "iom-mmp-2023-global-as-of-mar-2025",
+      "figure": "8,747 migrant deaths were recorded (2023)",
+      "low": 8747,
+      "high": 8747,
+      "unit": "deaths and disappearances",
+      "year": 2023,
+      "scope": "All routes, land and sea, all causes, worldwide, calendar year 2023, as revised by 20 March 2025. IOM's March 2024 release had put 2023 at nearly 8,600 (that release could not be opened in this run).",
+      "geography": "Global",
+      "source": "IOM press release '2024 Deadliest Year on Record for Migrants, New IOM Data Reveals', 21 March 2025 (Missing Migrants Project data as of 20 March 2025)",
+      "url": "https://www.iom.int/news/2024-deadliest-year-record-migrants-new-iom-data-reveals",
+      "grade": "A",
+      "do_not_add_to": "Not all at sea; not all drownings; excluded from WHO figures.",
+      "note": "Context only; the task is about sea routes."
+    },
+    {
+      "id": "iom-cited-caminando-fronteras-2023-atlantic",
+      "figure": "more than 6,000 disappearances on the Atlantic route in 2023, with 84 total invisible shipwrecks (NGO estimate quoted by IOM; not IOM data)",
+      "low": 6000,
+      "high": null,
+      "unit": "disappearances (NGO estimate)",
+      "year": 2023,
+      "scope": "Estimate by the Spanish NGO Caminando Fronteras of people who disappeared on the Atlantic route to the Canary Islands in 2023, including 84 'invisible shipwrecks' (boats that vanish without trace). Quoted by IOM in its decade report, which says such reports are nearly impossible to verify and does not include them in Missing Migrants Project counts.",
+      "geography": "Atlantic route, West Africa to the Canary Islands (Spain)",
+      "source": "Caminando Fronteras (NGO) estimate, as quoted in IOM Missing Migrants Project / GMDAC report 'A decade of documenting migrant deaths' (2024), Section 1.2, p. 8",
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "grade": "C",
+      "do_not_add_to": "Never add to any IOM count; IOM explicitly treats it as unverifiable. Not an IOM estimate of unrecorded deaths; IOM publishes no such estimate.",
+      "note": "Recorded because the task asks what 'invisible shipwrecks' means: IOM uses the phrase for entire boats reported missing with no trace of rescue or interception."
+    },
+    {
+      "id": "un-briefing-2025-mediterranean",
+      "figure": "at least 2,185 people died or went missing in the Mediterranean (2025)",
+      "low": 2185,
+      "high": null,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "Mediterranean Sea, all three IOM routes, calendar year 2025, as cited by the UN Spokesperson's briefing of 26 February 2026 from IOM Missing Migrants Project data (IOM's cut-off date for this figure not stated). IOM's own 2025 report (data as of 1 March 2026) prints no Mediterranean total, only route figures.",
+      "geography": "Mediterranean Sea (all three IOM routes)",
+      "source": "UN Audiovisual Library, 'UN / IOM MIGRANT DEATHS 2025' (UN Spokesperson's briefing citing IOM), 26 February 2026",
+      "url": "https://media.un.org/unifeed/en/asset/d353/d3539494",
+      "grade": "C",
+      "do_not_add_to": "Secondary; prefer the IOM route rows. Do not add to the Atlantic figure to make a 'three sea routes' total: IOM's own aggregate for sea routes to Europe is 3,400.",
+      "note": "This is the origin of the 2,185 in ledger row migrants-2025-sea-routes. The same briefing gave 'at least 7,667' for the 2025 global total."
+    },
+    {
+      "id": "un-briefing-2025-atlantic-canary",
+      "figure": "1,214 were recorded on the Western Africa/Atlantic route toward the Canary Islands (2025)",
+      "low": 1214,
+      "high": 1214,
+      "unit": "deaths and disappearances",
+      "year": 2025,
+      "scope": "Atlantic route to the Canary Islands, calendar year 2025, as cited by the UN Spokesperson's briefing of 26 February 2026 from IOM data. Consistent with IOM's own 'more than 1,200' (as of 1 March 2026).",
+      "geography": "Atlantic route, West Africa to the Canary Islands (Spain)",
+      "source": "UN Audiovisual Library, 'UN / IOM MIGRANT DEATHS 2025' (UN Spokesperson's briefing citing IOM), 26 February 2026",
+      "url": "https://media.un.org/unifeed/en/asset/d353/d3539494",
+      "grade": "C",
+      "do_not_add_to": "Secondary; prefer iom-mmp-2025-atlantic-canary-islands. Never add the 730 unverified missing.",
+      "note": "This is the origin of the 1,214 in ledger row migrants-2025-sea-routes."
+    }
+  ],
+  "corrections": [
+    {
+      "row_id": "migrants-2025-sea-routes",
+      "field": "figure",
+      "old": "~4,200 on three sea routes, plus ~1,500 estimated in unrecorded wrecks",
+      "new": "IOM prints no three-route total. IOM's own 2025 aggregate is 3,400 deaths and disappearances on sea routes to Europe (data as of 1 March 2026), plus at least 1,500 people reported missing at sea whose deaths could not be verified, which IOM excludes from that total",
+      "evidence": "IOM Missing Migrants Project 2025 Annual Global Report 'Missing Migrants and their Families Left Behind' (StoryMap, 21 April 2026), section 'Key routes and regions for migrant deaths and disappearances in 2025' and executive summary; footnote 1: 'All data in this report is as of 1 March 2026'. No IOM document opened in this run prints 4,200."
+    },
+    {
+      "row_id": "migrants-2025-sea-routes",
+      "field": "scope",
+      "old": "Mediterranean 2,185; Atlantic route to the Canaries 1,214; Bay of Bengal and Andaman Sea 800+.",
+      "new": "IOM 2025 Annual Global Report (data as of 1 March 2026): Central Mediterranean 1,330; Eastern Mediterranean 372; Western Mediterranean nearly 500; Western Africa/Atlantic Route to the Spanish Canary Islands more than 1,200; Bay of Bengal and Andaman Sea nearly 900; mainland Europe to the UK incl. English Channel 36; Caribbean 130; sea crossing to Yemen at least 720. The 2,185 (Mediterranean) and 1,214 (Atlantic) figures come from a UN briefing of 26 February 2026 citing IOM, not from IOM's report.",
+      "evidence": "IOM 2025 Annual Global Report (StoryMap) sections 'Key routes and regions...', 'Deaths and disappearances recorded on sea routes to Europe in 2025', 'Rohingya deaths recorded in the Bay of Bengal and Andaman Sea in 2025', 'Deaths and disappearances recorded on migration routes within Europe 2025', 'Deaths recorded during migration in the Americas in 2025', 'Deaths recorded on the Eastern Route...'; UN Audiovisual Library asset d3539494 (26 February 2026) for 2,185 and 1,214."
+    },
+    {
+      "row_id": "migrants-2025-sea-routes",
+      "field": "note",
+      "old": "IOM warns that a lower total does not mean lower risk: verification and access limits affect the count.",
+      "new": "The ~1,500 is not an IOM estimate of unrecorded deaths. It is IOM's count of people reported missing at sea in 2025 whose deaths could not be verified for lack of information, mostly 'invisible shipwrecks' (entire boats reported missing, no information on rescue or interception ever found): at least 730 on the Atlantic crossing and another 400 on the Western Mediterranean. IOM excludes them from its confirmed totals and calls all its figures a minimum estimate. IOM warns that a lower total does not mean lower risk: verification and access limits affect the count.",
+      "evidence": "IOM 2025 Annual Global Report (StoryMap), executive summary ('another 1,500 potentially missing and presumed dead'; 'invisible shipwrecks') and section 'Deaths and disappearances recorded on sea routes to Europe in 2025' (730 Atlantic, 400 Western Mediterranean); IOM methodology page: data 'best understood as a minimum estimate'."
+    },
+    {
+      "row_id": "migrants-2025-sea-routes",
+      "field": "do_not_add_to",
+      "old": "A minimum for three routes only. Verify against IOM's own 2025 release.",
+      "new": "Do not treat 4,200 as an IOM figure; IOM's own aggregate is 3,400 for sea routes to Europe. Never add the 1,500 unverified missing to confirmed counts: IOM itself computes its death rate 'Even excluding these 1,500 unverified disappearances'. Prefer rows iom-mmp-2025-*. Not all drownings: IOM counts all causes of death.",
+      "evidence": "IOM 2025 Annual Global Report (StoryMap), section 'Deaths and disappearances recorded on sea routes to Europe in 2025' ('Even excluding these 1,500 unverified disappearances, 1 person died for every 47 who attempted to cross')."
+    },
+    {
+      "row_id": "migrants-2025-sea-routes",
+      "field": "high",
+      "old": "5700",
+      "new": "null",
+      "evidence": "5,700 equals 4,200 plus the 1,500 unverified missing; IOM excludes the 1,500 from its totals and no IOM document opened in this run prints 5,700 or 4,200. Leave high empty (or set it to IOM's own 3,400 for sea routes to Europe) until the row is rebuilt from the iom-mmp-2025-* rows."
+    }
+  ],
+  "evidence": [
+    {
+      "url": "https://missingmigrants.iom.int/methodology",
+      "quote": "counts migrants who have died at the external borders of states",
+      "where": "Methodology page, section 'What is included in Missing Migrants Project data?'"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/methodology",
+      "quote": "The total number of people confirmed dead in one incident, i.e. the number of bodies recovered.",
+      "where": "Methodology page, section 'What are the variables used in the Missing Migrants Project database?', variable 'Number dead' (field left blank when victims are missing and presumed dead, e.g. shipwrecks)"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/methodology",
+      "quote": "The total number of those who are missing and are thus assumed to be dead.",
+      "where": "Methodology page, variable 'Number missing'"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/methodology",
+      "quote": "The number of missing is calculated by subtracting the number of bodies recovered",
+      "where": "Methodology page, variable 'Number missing' (continues: and survivors from the reported number aboard; may be reported by surviving migrants or witnesses; 'Total dead and missing' is the sum of the two fields)"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/methodology",
+      "quote": "best understood as a minimum estimate of the true number of people's lives lost during migration worldwide.",
+      "where": "Methodology page, 'Data' section; the challenges section adds that at sea many of the deceased may not be recovered and without passenger lists the precise number of missing is unknown"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/",
+      "quote": "The latest incident recorded occurred on 16 October 2024.",
+      "where": "Home page as served to WebFetch on 21 October 2026 (stale snapshot; headline 68,447 missing migrants since 2014, Mediterranean 30,522)"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/",
+      "quote": "2023 | 1,874 | 1,267 | 1,582 | 158 | 3,155 | 570",
+      "where": "Home page 'Year Dead/Missing' table, row 2023; columns Africa, The Americas, Asia, Europe, Mediterranean, Western Asia (row 2024 partial: 1,425 | 850 | 822 | 122 | 1,618 | 260)"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "quote": "In the Mediterranean Sea, at least 3,105 lives were lost in 2023, compared to 2,411 recorded in 2022.",
+      "where": "'A decade of documenting migrant deaths' (IOM GMDAC, 2024), Section 1.1, p. 8"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "quote": "with 2,476 deaths and disappearances recorded",
+      "where": "Section 1.1, p. 8, sentence on the 'Central Mediterranean crossing between North Africa and Italy'"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "quote": "959 deaths were documented on the Atlantic route in 2023, compared to 559 in 2022.",
+      "where": "Section 1.2, p. 8 (heading form 'Atlantic Route to Spain's Canary Islands')"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "quote": "with 247 fatalities recorded in 2023",
+      "where": "Section 1.4, p. 8, Caribbean migration routes"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "quote": "reported more than 6,000 disappearances on the Atlantic route in 2023",
+      "where": "Section 1.2, p. 8, on the Spanish NGO Caminando Fronteras; same sentence continues 'with 84 total invisible shipwrecks'; IOM calls these reports 'nearly impossible to verify'"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "quote": "Missing Migrants Project (MMP) database, accessed 13 March 2024.",
+      "where": "Footnote 7, p. 6 (as-of date for all 2023 figures in the report)"
+    },
+    {
+      "url": "https://missingmigrants.iom.int/sites/g/files/tmzbdl601/files/publication/file/A%20decade%20of%20documenting%20migrant%20deaths.pdf",
+      "quote": "as MMP's methodology always uses the minimum number of persons onboard in large shipwrecks",
+      "where": "Section 2.1, p. 14 (footnote 12 defines large shipwrecks as 50 or more lives lost); footnote 1, p. 5 says data cover bodies recovered and those missing and presumed dead"
+    },
+    {
+      "url": "https://www.iom.int/news/2024-deadliest-year-record-migrants-new-iom-data-reveals",
+      "quote": "At least 8,938 people died on migration routes worldwide in 2024",
+      "where": "IOM press release, 21 March 2025, opening paragraph (data available as of 20 March 2025)"
+    },
+    {
+      "url": "https://www.iom.int/news/2024-deadliest-year-record-migrants-new-iom-data-reveals",
+      "quote": "when 8,747 migrant deaths were recorded.",
+      "where": "IOM press release, 21 March 2025, comparison with 2023"
+    },
+    {
+      "url": "https://www.iom.int/news/2024-deadliest-year-record-migrants-new-iom-data-reveals",
+      "quote": "The 2,452 deaths documented in the Mediterranean Sea in 2024 are not the largest annual total ever.",
+      "where": "IOM press release, 21 March 2025, regional paragraph"
+    },
+    {
+      "url": "https://www.iom.int/news/2024-deadliest-year-record-migrants-new-iom-data-reveals",
+      "quote": "an unprecedented 341 lives lost in the Caribbean in 2024.",
+      "where": "IOM press release, 21 March 2025, Americas paragraph (at least 1,233 in the Americas; 174 in the Darién)"
+    },
+    {
+      "url": "https://www.iom.int/news/iom-chief-nearly-100-disappeared-or-dead-mediterranean-2024-underscoring-need-regular-pathways",
+      "quote": "to 3,041 by the end of 2023.",
+      "where": "IOM press release, 29 January 2024, Mediterranean annual total; same release describes three 'invisible' shipwrecks from Libya, Lebanon and Tunisia with 158 people unaccounted for, 73 recorded by IOM as missing and presumed dead"
+    },
+    {
+      "url": "https://www.migrationdataportal.org/themes/migrant-deaths-and-disappearances",
+      "quote": "claiming the lives of more than 1,700 people in 2024.",
+      "where": "Migration Data Portal (IOM GMDAC), theme 'Migrant deaths and disappearances', Central Mediterranean sentence"
+    },
+    {
+      "url": "https://www.migrationdataportal.org/themes/migrant-deaths-and-disappearances",
+      "quote": "the maritime route from West Africa to the Spanish Canary Islands (1,167).",
+      "where": "Migration Data Portal (IOM GMDAC), theme page, 2024 routes paragraph (also: 'the Caribbean has already reached a 301 deaths and disappearances')"
+    },
+    {
+      "url": "https://www.migrationdataportal.org/themes/migrant-deaths-and-disappearances",
+      "quote": "Thematic pages are not being updated as of March 2025.",
+      "where": "Migration Data Portal, banner on the theme page (as-of limit for its 2024 figures)"
+    },
+    {
+      "url": "https://storymaps.arcgis.com/stories/f84086a46e5547f4ba6968ab5ea0623a",
+      "quote": "Missing Migrants and their Families Left Behind",
+      "where": "StoryMap page title; description 'IOM Missing Migrants Project 2025 Annual Global Report'; published 21 April 2026 (body is JavaScript-rendered; text read from the ArcGIS item data endpoint below)"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "[1] All data in this report is as of 1 March 2026. The latest figures can be found at missingmigrants.iom.int/data.",
+      "where": "StoryMap item data (JSON), footnote 1"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "The deaths or disappearance of nearly 7,900 people were documented on global migration routes worldwide in 2025.",
+      "where": "StoryMap item data, section '2025 Data on Migrant Deaths and Disappearances' (compares with 'the nearly 9,200 recorded in 2024')"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "The 3,400 deaths and disappearances recorded on sea routes to Europe made up 43 per cent of the global death toll in 2025",
+      "where": "StoryMap item data, section 'Key routes and regions for migrant deaths and disappearances in 2025'"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "most deaths (1,330) documented in the Central Mediterranean.",
+      "where": "StoryMap item data, section 'Key routes and regions for migrant deaths and disappearances in 2025', continuation of the 3,400 sentence"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "While this represents a decrease from the over 3,800 migrant deaths recorded on these routes in 2024.",
+      "where": "StoryMap item data, section 'Key routes and regions for migrant deaths and disappearances in 2025'; 'these routes' = sea routes to Europe"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "more than 1,200 deaths confirmed on the Canary Islands route for the second year running",
+      "where": "StoryMap item data, section 'Deaths and disappearances recorded on sea routes to Europe in 2025'; route first named 'Western Africa/Atlantic Route to the Spanish Canary Islands'"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "with 372 recorded in 2025 compared to 191 in 2024.",
+      "where": "StoryMap item data, section 'Deaths and disappearances recorded on sea routes to Europe in 2025', Eastern Mediterranean"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "nearly 500 recorded on the Western Mediterranean crossing in 2025",
+      "where": "StoryMap item data, section 'Deaths and disappearances recorded on sea routes to Europe in 2025'"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "with at least 1,500 people reported missing at sea whose deaths could not be verified due to a lack of information.",
+      "where": "StoryMap item data, section 'Deaths and disappearances recorded on sea routes to Europe in 2025'; IOM then computes its death rate 'Even excluding these 1,500 unverified disappearances'"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "at least 730 people were reported missing at sea on the Atlantic crossing, and another 400 on the Western Mediterranean.",
+      "where": "StoryMap item data, section 'Deaths and disappearances recorded on sea routes to Europe in 2025'"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "This latter group—involving mostly 'invisible shipwrecks' in which entire boats are reported missing",
+      "where": "StoryMap item data, executive summary, second paragraph; preceded by 'nearly 7,900 people known to have died and another 1,500 potentially missing and presumed dead'"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "Nearly 900 deaths were recorded during sea crossings of the Bay of Bengal and Andaman Sea in 2025",
+      "where": "StoryMap item data, section 'Rohingya deaths recorded in the Bay of Bengal and Andaman Sea in 2025' (four large shipwrecks, nearly 800 believed lost; smaller shipwrecks likely undocumented)"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "36 deaths were recorded in 2025 compared to 85 in 2024.",
+      "where": "StoryMap item data, section 'Deaths and disappearances recorded on migration routes within Europe 2025', route 'from mainland Europe to the United Kingdom, including the English Channel crossing'"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "In the Caribbean, deaths also decreased with 130 recorded in 2025 compared to 302 in 2024.",
+      "where": "StoryMap item data, section 'Deaths recorded during migration in the Americas in 2025'"
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f84086a46e5547f4ba6968ab5ea0623a/data?f=json",
+      "quote": "the sea crossing to Yemen, which claimed at least 720 lives.",
+      "where": "StoryMap item data, section 'Deaths recorded on the Eastern Route to and from Eastern Africa in 2025'"
+    },
+    {
+      "url": "https://media.un.org/unifeed/en/asset/d353/d3539494",
+      "quote": "at least 2,185 people died or went missing in the Mediterranean.",
+      "where": "UN Audiovisual Library asset 'UN / IOM MIGRANT DEATHS 2025', 26 February 2026, story text (UN Spokesperson citing IOM; also 'at least 7,667' global for 2025)"
+    },
+    {
+      "url": "https://media.un.org/unifeed/en/asset/d353/d3539494",
+      "quote": "1,214 were recorded on the Western Africa/Atlantic route toward the Canary Islands.",
+      "where": "UN Audiovisual Library asset 'UN / IOM MIGRANT DEATHS 2025', 26 February 2026, story text"
+    }
+  ],
+  "tried": [
+    "missingmigrants.iom.int/blogs/migrant-deaths-and-disappearances-2024-blog ('Migrant Deaths and Disappearances 2024 (blog)', the IOM document most likely to give 2024 by route): four WebFetch attempts over about 20 minutes, all 'error while fetching'.",
+    "missingmigrants.iom.int/region/mediterranean and /region/europe: WebFetch receives only a static list of 2023 incident records (IDs 2023.MMP...), no totals, no 2024 or 2025 records; the route/year dashboards are JavaScript. Route labels seen on the Europe page: Belarus-EU border, Western Balkans, Italy to France, English Channel to the UK, Türkiye-Europe land route, Uncategorized.",
+    "missingmigrants.iom.int/data and /downloads: data page shows cause-of-death totals since 2014 only (drowning 37,976; 26,881 never recovered) with route/year chart data not rendered; downloads page shows two Download buttons without file URLs.",
+    "missingmigrants.iom.int/search, /search?type=situation_report, /mediterranean, /MMP10years, /missing-migrants-project: fetch errors or pages without figures.",
+    "www.iom.int/news/nearly-8000-migrant-deaths-recorded-2025-new-iom-data and www.iom.int/news/21-migrants-died-every-day-2025-new-iom-data-reveals (IOM's own 2025 releases, 21 April 2026): five attempts across www.iom.int and mena.iom.int, all fetch errors. Only one www.iom.int page (the 21 March 2025 release) ever loaded.",
+    "roasiapacific.iom.int/news/2025-among-deadliest-years-record-asia-pacific-migrants and indonesia.iom.int ... missing-migrants-annual-report-2025_indonesia.pdf (IOM Asia-Pacific 2025 report, Feb 2026): two attempts each, fetch errors.",
+    "mena.iom.int/news/more-3400-migrants-died-or-disappeared-middle-east-and-north-africa-2024-iom-report (would give Central Mediterranean 2024): two attempts, fetch errors.",
+    "dtm.iom.int PDFs 'Mixed Migration Flows to Europe, Annual Regional Report (2025)' (with and without ?iframe=true), Q1 2024 and Q3 2024 quarterlies, '2024.06 - ENG - IOM - Flow From Western.pdf', dtm_download_track/84161: every PDF fetch errored; dtm.iom.int/europe/dead-and-missing HTML loads but its 'Dead and Missing' chart/table (Source MMP) renders without values; dtm.iom.int/report-product-series/irregular-migration-routes-europe lists only 2021 to 2023 products.",
+    "rodakar.iom.int/resources/irregular-migration-routes-europe-western-african-atlantic-route-january-december-2024: fetch error.",
+    "reliefweb.int mirrors: 'deadliest-year-record-migrants-nearly-8600-deaths-2023' (IOM March 2024 release) three attempts; decade report page; 'deadliest-quarter-migrants-central-mediterranean-2017'; 'iom-chief-nearly-100...': all fetch errors. The 2025 Annual Global Report page loaded twice but its text contains no attachment URL.",
+    "news.un.org/en/story/2025/03/1161521 (UN News on 2024 figures): fetch error. social.desa.un.org IOM-2025_0.pdf and un.org/depts/los contributions80/13IOM.pdf: loaded but contain no calendar-year route figures.",
+    "WebSearch budget (shared across the session) ran out after about 20 searches; could not search for IOM Italy/Spain/Greece office pages, the MENA 2024 report PDF, or a reliefweb attachment URL for the 2025 report.",
+    "Not found anywhere opened: IOM figures for Eastern and Western Mediterranean 2023, Bay of Bengal/Andaman Sea 2023 and 2024, English Channel 2023, exact Western Mediterranean and Central Mediterranean 2024 and 2025 counts, and any IOM statistical estimate of unrecorded deaths."
+  ],
+  "notes": "COUNTING RULES (IOM methodology page): the project counts people who die 'at the external borders of states' or 'in the process of migration towards an international destination', whatever their legal status, from shipwrecks, transport accidents, violence, harsh conditions etc.; it excludes deaths in immigration detention and deaths after a migrant is established in a new home. 'Number dead' = bodies recovered; 'Number missing' = people missing and assumed dead, usually computed for shipwrecks by subtracting bodies recovered and survivors from the reported number aboard, often from survivor or witness testimony; 'Total dead and missing' is the sum of the two. In large shipwrecks IOM uses the minimum number reported on board. IOM states its data are a minimum estimate and that at sea many bodies are never recovered. IOM publishes no statistical estimate of unrecorded deaths. 'INVISIBLE SHIPWRECKS' is IOM's term for entire boats reported missing with no information on rescue or interception ever found. For 2025 IOM counted 'at least 1,500' such unverified reports on sea routes to Europe (730 Atlantic, 400 Western Mediterranean) and kept them OUT of its confirmed totals; the ledger's '~1,500 estimated in unrecorded wrecks' is this unverified count, not an estimate, and its high=5,700 wrongly adds it. The only other 'invisible shipwrecks' figure IOM prints is an NGO's (Caminando Fronteras) 2023 Atlantic estimate, which IOM calls unverifiable. AS-OF DATES: 2025 route figures are from IOM's 2025 Annual Global Report, 'All data in this report is as of 1 March 2026' (published 21 April 2026 as an ArcGIS StoryMap; body text read from the ArcGIS item JSON endpoint, which a reviewer can open in a browser). The report prints no 2025 Mediterranean total; 2,185 and 1,214 are from a UN briefing of 26 February 2026. 2024 figures: IOM press release 21 March 2025 (data as of 20 March 2025) and IOM GMDAC's Migration Data Portal (frozen March 2025), plus 2024 comparisons in the 2025 report; IOM's own values for 2024 changed between these dates (Caribbean 341 to 302; global 8,938 to 9,191 to nearly 9,200). 2023 figures: IOM decade report, database accessed 13 March 2024 (Mediterranean 3,105; the portal later shows 3,155 and a January 2024 release said 3,041). GAPS: Eastern/Western Mediterranean 2023, Bay of Bengal 2023 and 2024, English Channel 2023, exact Central/Western Mediterranean 2024 and 2025 were not found in any document that opened; the MMP 2024 blog and the live route dashboards should fill them. The portal home page served to this run was a stale render (latest incident 16 October 2024) so its table values carry an uncertain as-of date. Route names as IOM prints them: 'Central Mediterranean', 'Eastern Mediterranean', 'Western Mediterranean' (crossing), 'Western Africa/Atlantic Route to the Spanish Canary Islands' / 'the Canary Islands route', 'Bay of Bengal and Andaman Sea', 'the route from mainland Europe to the United Kingdom, including the English Channel crossing' (portal label 'English Channel to the UK'), 'Caribbean', 'the sea crossing to Yemen' (portal 'Eastern Route'). No figure in this bundle was summed by the agent; the 3,400 and over 3,800 aggregates are IOM's own. Also seen but not rowed: IOM's decade report gives 4,470 drowning deaths worldwide in 2023 (Section 1.6, p. 9) without a verbatim quote captured; worth a follow-up for the drowning layer.",
+  "next_tasks": [
+    {
+      "title": "Open the MMP blog 'Migrant Deaths and Disappearances 2024' in a browser and record 2024 by route (exact Central, Eastern, Western Mediterranean; Atlantic; Bay of Bengal; English Channel) with its as-of date",
+      "why": "The page could not be fetched in this run; it is IOM's own 2024 route breakdown and would retire the rounded 2024 rows."
+    },
+    {
+      "title": "Read the live missingmigrants.iom.int data dashboard with the route filter for 2023, 2024 and 2025 and record IOM's printed per-route totals and the 'latest incident' date",
+      "why": "The dashboards are JavaScript and did not render for WebFetch; they give exact counts that IOM's narrative reports round ('nearly 500', 'more than 1,200')."
+    },
+    {
+      "title": "Fetch the DTM 'Mixed Migration Flows to Europe, Annual Regional Report (2025)' PDF and record its dead-and-missing-by-route table (source MMP)",
+      "why": "dtm.iom.int PDFs errored for WebFetch; the table would give exact 2024 and 2025 figures for all four sea routes to Europe in one IOM document."
+    },
+    {
+      "title": "Find Eastern and Western Mediterranean, Bay of Bengal/Andaman Sea and English Channel figures for 2023 in the data annex of IOM's decade report or the portal",
+      "why": "The decade report text gives only Mediterranean, Central Mediterranean, Atlantic and Caribbean for 2023."
+    },
+    {
+      "title": "Verify and row IOM's 4,470 drowning deaths worldwide in 2023 (decade report, Section 1.6, p. 9) and any drowning-by-year figure for 2024 and 2025",
+      "why": "Drowning-specific counts matter more to the lab than all-cause migrant deaths; the figure was seen only in paraphrase."
+    },
+    {
+      "title": "Decide which of the paired same-quantity rows (Caribbean 341/302, Atlantic 1,167/more than 1,200, Mediterranean 2023 3,105/3,155) the ledger keeps, keyed to an as-of date",
+      "why": "IOM revises counts for months after year end; the ledger needs one dated value per route-year."
+    }
+  ]
+}

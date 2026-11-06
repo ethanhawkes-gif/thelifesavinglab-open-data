@@ -1,0 +1,159 @@
+{
+  "schema": "lifesavinglab.bundle.v1",
+  "task_id": "cdc-2014-children-five",
+  "preamble_version": "1.4",
+  "contributor": {
+    "handle": "lab",
+    "agent": "Claude Fable 5.1 (independent subagent in the lab's own session, 2026-10-21)"
+  },
+  "status": "partial",
+  "rows": [
+    {
+      "id": "cdc-children-nonfatal-ed-5-2005-2014",
+      "figure": "For every child who dies from drowning, another five receive emergency department (ED) care for their submersion injuries",
+      "low": 5,
+      "high": 5,
+      "unit": "ratio",
+      "year": 2014,
+      "scope": "United States; children (the paragraph's preceding sentence refers to children 14 and younger; the ratio sentence itself names no age band); emergency-department visits for nonfatal submersion injuries per child drowning death. The same paragraph states its death average 'from 2005 through 2014'; the ratio sentence carries no separate year range. This is the 2016-onward wording of CDC's 'Unintentional Drowning: Get the Facts' sheet; the 24 October 2014 version was not opened.",
+      "geography": "United States",
+      "source": "CDC, 'Unintentional Drowning: Get the Facts' fact sheet (cited as 'Home and Recreational Safety Water Injury Fact Sheet'), restated verbatim on CDC's NSSP page 'Drowning and Submersion Syndrome Definitions' (last updated 23 April 2024, last reviewed 13 January 2026), reference 1",
+      "url": "https://www.cdc.gov/nssp/php/data-quality/drowning-submersion-syndrome.html",
+      "grade": "A",
+      "do_not_add_to": "Children only, United States only, emergency-department denominator only. A ratio, not a count: do not multiply into death totals, and do not combine with the 2022 CDC 'seven' ratio (row cdc-children-nonfatal-ed-7), with all-ages ratios, or with other countries' ratios.",
+      "note": "The 24 October 2014 page cited by BMJ Open 2015;5:e008444 (reference 2) could not be opened: every web archive was blocked, rate-limited or JavaScript-gated (see tried). Contemporaneous quotations of the same sheet pair 'another five' with 'from 2005-2009' and 3,533 deaths a year (June 2012 and July 2014), so the 2014 version most likely covered 2005-2009, but that is unverified. CDC's 2022 Drowning Facts document says seven for children under 18. Found by an independent agent, 21 Oct 2026."
+    }
+  ],
+  "corrections": [],
+  "evidence": [
+    {
+      "url": "https://www.cdc.gov/nssp/php/data-quality/drowning-submersion-syndrome.html",
+      "quote": "For every child who dies from drowning, another five receive emergency department (ED) care for their submersion injuries.",
+      "where": "Section 'A leading cause of unintentional injury death', sentence carrying reference marker 1; page last updated 23 April 2024, last reviewed 13 January 2026; content source: Office of Public Health Data, Surveillance, and Technology"
+    },
+    {
+      "url": "https://www.cdc.gov/nssp/php/data-quality/drowning-submersion-syndrome.html",
+      "quote": "with an average of 3,536 fatal unintentional non-boating drownings per year in the United States from 2005 through 2014",
+      "where": "Same section, first sentence of the paragraph (begins 'Drowning ranks fifth among the leading causes of unintentional injury death'); the paragraph cites reference 1"
+    },
+    {
+      "url": "https://www.cdc.gov/nssp/php/data-quality/drowning-submersion-syndrome.html",
+      "quote": "Home and Recreational Safety Water Injury Fact Sheet",
+      "where": "References, item 1; its link now resolves to https://www.cdc.gov/drowning/data-research/facts/index.html (the current Drowning Facts page, which prints seven, not five)"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4679898",
+      "quote": "Secondary unintentional drowning: get the facts 24 October 2014.",
+      "where": "BMJ Open 2015;5:e008444, reference 2 (PMC copy); preceded by 'Centers for Disease Control and Prevention. Unintentional drowning: get the facts.' and followed by http://www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html; no accessed date; published 15 December 2015"
+    },
+    {
+      "url": "https://bmjopen.bmj.com/content/5/12/e008444",
+      "quote": "Since the prevalence of non-fatal drowning is at least five times that of fatal drowning",
+      "where": "'Unintentional, non-fatal drowning of children: US trends and racial/ethnic disparities', Introduction, first paragraph, sentence ending with reference marker 2; the publisher page did not render the reference list"
+    },
+    {
+      "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/Drowning%20Morbidity%20and%20Mortality.pdf",
+      "quote": "For every one child who dies from drowning, another five receive emergency department care for nonfatal submersion injuries.",
+      "where": "Vermont Department of Health, 'Drowning in Vermont - Data Brief', July 2017, page 1 of 1, Background; the sentence is uncited; the next sentence's footnote 2 cites the CDC fact sheet (state repost of CDC wording, secondary)"
+    },
+    {
+      "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/Drowning%20Morbidity%20and%20Mortality.pdf",
+      "quote": "CDC, Unintentional Drowning: Get the Facts, https://www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html",
+      "where": "Same brief, footnote 2 (no access date)"
+    },
+    {
+      "url": "https://mysafela.org/?p=7167",
+      "quote": "For every child who dies from drowning, another five receive emergency department care for nonfatal submersion injuries.",
+      "where": "MySafe:LA post 'Don't Drown This Summer!', dated 22 June 2012 (last modified 22 April 2021), body text under a CDC attribution; links only to http://www.cdc.gov/ (secondary)"
+    },
+    {
+      "url": "https://mysafela.org/?p=7167",
+      "quote": "According to the Centers for Disease Control (CDC), from 2005-2009,more than 3,500 people died annually",
+      "where": "Same post, opening sentence (spacing after '2005-2009,' is as returned by text extraction); shows the 2012 sheet paired 'another five' with 2005-2009 data"
+    },
+    {
+      "url": "https://www.childrenssafetynetwork.org/sites/default/files/17_6_21_DrowningWebinarSlides.pdf",
+      "quote": "For every child who dies from drowning, another 5 received emergency department care for nonfatal submersion injuries.",
+      "where": "Children's Safety Network webinar slides, 21 June 2017, slide 'THE FACTS', source line '(CDC)' (secondary)"
+    },
+    {
+      "url": "https://www.childrenssafetynetwork.org/sites/default/files/17_6_21_DrowningWebinarSlides.pdf",
+      "quote": "From 2005-2014 there were an average of 3,536 fatal unintentional drownings (not including boating) in the US.",
+      "where": "Same slide 'THE FACTS'; the 2017 restatement carries 2005-2014, not 2005-2009"
+    },
+    {
+      "url": "https://patch.com/minnesota/maplegrove/14-month-old-dies-pool-accident-maple-grove-home",
+      "quote": "From 2005-2014, there were an average of 3,536 fatal unintentional drownings (non-boating related) annually",
+      "where": "Press article dated 5 July 2017, list headed 'According to the Centers for Disease Control and Prevention:'; the same list repeats the 'another five' sentence verbatim (press, secondary; used only to date the wording)"
+    },
+    {
+      "url": "https://bestcare.org/news/summertime-fun-water-sun-requires-vigilance",
+      "quote": "from 2005-2014 there were an average of 3,536 fatal unintentional drownings (non-boating related) annually",
+      "where": "Methodist Health System news item dated 7 June 2016, attributed to CDC; shows the sheet carried 2005-2014 by June 2016 (secondary)"
+    },
+    {
+      "url": "https://www.safekids.org/sites/default/files/dangerous_waters_research_report.pdf",
+      "quote": "Centers for Disease Control and Prevention. Unintentional Drowning: Get the Facts. Retrieved June 14, 2016.",
+      "where": "Safe Kids Worldwide, 'Dangerous Waters' (2016), reference 19, followed by 'Available from: http://www.cdc.gov/HomeandRecreationalSafety/Water-Safety/waterinjuries-factsheet.html'; the report's 'another five' sentence (p. 3) cites BMJ Open 2015 (reference 1), not the CDC page"
+    },
+    {
+      "url": "https://www.emdocs.net/drowning-and-submersion-injuries/",
+      "quote": "Accessed October 8, 2020.",
+      "where": "emDocs post dated 13 January 2021, reference 2: CDC 'Home and recreational safety: water safety', dated October 7, 2020, URL https://www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html; shows the page was still live in October 2020 (secondary)"
+    },
+    {
+      "url": "https://archive.org/wayback/available?url=www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html&timestamp=20141101",
+      "quote": "\"timestamp\": \"20230418051408\"",
+      "where": "Internet Archive availability API JSON, 'closest' snapshot, status 200; it returned the 18 April 2023 capture although the request asked for 1 November 2014, so the page was still live in April 2023; the capture itself is on web.archive.org, which is blocked here"
+    },
+    {
+      "url": "https://stacks.cdc.gov/view/cdc/130749",
+      "quote": "Drowning facts",
+      "where": "CDC Stacks record title; publication date 7 October 2022; document type 'Webpage'; 'Pages in document: https://www.cdc.gov/drowning/facts/index.html'; this is the source of ledger row cdc-children-nonfatal-ed-7 (seven); no Stacks record for 'Unintentional Drowning: Get the Facts' was found"
+    },
+    {
+      "url": "https://lifesavingsociety.com/media/128941/nejmra1013317.pdf",
+      "quote": "For every person who dies from drowning, another four persons receive care in the emergency department for nonfatal drowning.",
+      "where": "N Engl J Med 2012;366(22):2102-2110, 'Drowning' (Current Concepts), Introduction, p. 2102, citing reference 12 = CDC WISQARS, Atlanta, 2009; an all-ages ratio, distinct from the children's 'five' (reprint hosted by the Lifesaving Society, Canada)"
+    }
+  ],
+  "tried": [
+    "Internet Archive: web.archive.org is blocked for this agent; wayback.archive.org and eot.us.archive.org (End of Term) returned INVALID_URL; only the metadata API archive.org/wayback/available answered (it reports a 18 April 2023 capture, status 200, for both the lower-case and original mixed-case URL).",
+    "Archive-It (wayback.archive-it.org/all/20141015000000/ and /20141101000000/ + the CDC URL): first a 'Rate limit reached' page, then a 'Session Verification / JavaScript Required' gate; unreadable without a browser.",
+    "NARA webharvest.gov (peth04 2004 capture of cdc.gov/ncipc/factsheets/drown.htm, the only webharvest URL search returned): 'Rate limit reached' page; no 2014 harvest URL was found by search.",
+    "UNT End of Term archive (webarchive.library.unt.edu/eot2008/...): ROBOTS_DISALLOWED; no eot2012 or eot2016 URL for the fact sheet surfaced in search.",
+    "Library of Congress web archive (webarchive.loc.gov/all/20141015000000/ and /all/20150101000000*/ + the CDC URL): fetch error both times.",
+    "archive.ph (archive.today): SITE_BLOCKED. arquivo.pt wayback: ROBOTS_DISALLOWED. Memento TimeTravel (timetravel.mementoweb.org list, timemap/json, with and without the http scheme on the inner URL): INVALID_URL every time.",
+    "CDC's own archive (archive.cdc.gov): the host serves retired pages (a 3 June 2004 press release was read), but www_cdc_gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html (lower-case and original HomeandRecreationalSafety/Water-Safety path), .../water-safety/index.html, .../homeandrecreationalsafety/index.html and www_cdc_gov/drowning/facts/index.html all returned fetch errors, so the fact sheet appears not to be archived there; the archive's search is a JavaScript app and could not be queried.",
+    "restoredcdc.org (independent mirror of cdc.gov as archived 6 January 2025): the fact-sheet path returned a fetch error; the mirror works for other pages (MMWR mm6119a4 was read), so the page had been retired before January 2025.",
+    "Live URL https://www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html: fetch error (page retired).",
+    "CDC Stacks: the gsearch endpoint answered one query with an error and the next with HTTP 429 (rate limited; not retried as instructed); the cbrowse advanced-search page ignores a query parameter; web searches restricted to stacks.cdc.gov found no record for 'Unintentional Drowning: Get the Facts'.",
+    "CDC Stacks records opened and ruled out: cdc/22426 (NCHS Data Brief 149, 15 April 2014), cdc/84392 (MMWR QuickStats, 22 August 2014), cdc/28514 (MMWR 4 June 2004 issue, 2001-2002 data, cut off at p. 468), cdc/107521 (NCHS Data Brief 413, 2021), cdc/114861 (J Public Health Manag Pract 2021), cdc/130749 (Drowning facts, 7 October 2022, already the source of row cdc-children-nonfatal-ed-7).",
+    "cdc.gov searches for the sentence: the only CDC page carrying 'another five receive emergency department' is the NSSP syndrome-definition page used for the row; CDC Stacks, archive.cdc.gov and restoredcdc.org searches for the same phrase returned nothing else.",
+    "Publisher copy of BMJ Open 2015;5:e008444: bmjopen.bmj.com/content/5/12/e008444 renders the Introduction but not the reference list; the .long URL errored; the ncbi.nlm.nih.gov/pmc URL redirected to pmc.ncbi.nlm.nih.gov, which answered this time (no captcha) and gave reference 2 in full.",
+    "Reposts opened that do not carry the 2014 text or its data years (1 of 3): menshealthnetwork.org drown.pdf ('Drowning in America', 2014, 2005-2009 deaths only, no ratio; cut off at a 2010 chart); atlanticcountynj.gov water-safety page (links only); knowledgerepository.syndromicsurveillance.org 'CDC Unintentional Drowning v1.pdf' (an NSSP ESSENCE syndrome definition dated 17 June 2022, not the fact sheet); hhs.nd.gov 'The Facts On Childhood Drownings' (a Children's Safety Network infographic, 2010-2014 averages, uncited '5 more'); johnsoncounty.in.gov pool-safety slides (February 2018).",
+    "Reposts opened (2 of 3): ochealthinfo.com immersion report (June 2009); archive.countyofglenn.net Safe Kids sheet (reviewed 11/11); redcross.org flyer (undated, 2005-2009 trend only); nationalgypsum.safetynow.com CDC SafeChild repost (cut off, no ratio); phpa.health.maryland.gov water-safety page (JavaScript, references only); ihs.gov 'Drowning Dangers' brochure (cites the 2020s facts page, no ratio); cdcfoundation.org/node/8207 (2024-2026 content); parachute.ca Ontario Injury Compass June 2014 (Ontario ED data, no CDC ratio); in.gov 'Drownings in Indiana' (updated 23 April 2025).",
+    "Reposts opened (3 of 3): lifesaving.com 'Drowning and Aquatic Injury Facts' (30 September 2016, 1998 statistics); boat-ed.com Drowning Overview (2005-2014, no ratio); leginfo.ca.gov AB 299 analysis (21 April 2015, no ratio); lee-lf.leecountync.gov Laserfiche pages (cookie error); hvswim.com blog (12 September 2024, sentence without years); childrenssafetynetwork.org SxSWdrowningprevention.pdf (CDC presentation, November 2011, no ratio) and the 28 June 2022 webinar slides (no ratio); usla.org safety-tips page not opened.",
+    "A USLA news release dated 7 July 2014 (usla.org, found by searching the phrase 'average of 3,533 fatal unintentional drownings'; it concerns a lifeguard's death, so its URL is not recorded here) quotes CDC as 'from 2005-2009, there were an average of 3,533' deaths a year but does not carry the children's ratio; it shows the sheet still used 2005-2009 three months before the 24 October 2014 update.",
+    "No document dated between 24 October 2014 and April 2016 that reproduces the fact sheet together with its data years was found; the search budget was exhausted once mid-task (then reset) and the following queries returned nothing new: 'Unintentional Drowning: Get the Facts' with 'Page last updated' / 'October 24, 2014' / pdf / docplayer; 'waterinjuries-factsheet.html 2014'; 'another five receive emergency department care' with 2005-2009 and restricted to .gov; 'nonfatal submersion injuries' 'ten deaths per day' '2005-2009'; perma.cc + waterinjuries-factsheet."
+  ],
+  "notes": "What was found. (1) The exact CDC page the papers cite is 'Unintentional drowning: get the facts', dated 24 October 2014 in BMJ Open 2015;5:e008444 reference 2 (read on PMC), at http://www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html; the page itself could not be opened on any host (see tried), so acceptance checks 1 and 2 (a quote from the archived page with its capture date, and the data years as that page states them) are NOT met and the status is partial. (2) The sentence survives in CDC's own words on a live CDC page: the NSSP 'Drowning and Submersion Syndrome Definitions' page (last updated 23 April 2024, reviewed 13 January 2026) restates the fact sheet as 'For every child who dies from drowning, another five receive emergency department (ED) care for their submersion injuries' in a paragraph whose death average is 'from 2005 through 2014', citing the fact sheet as reference 1. That is the row returned, graded A because the producing organisation is CDC, but a reviewer may prefer to hold it at C until the archived 2014 page is read, because it is a restatement on a later CDC page rather than the fact sheet itself. Note the NSSP wording says 'for their submersion injuries' where the fact sheet and its reposts say 'for nonfatal submersion injuries'. (3) Data years by version, from dated quotations of the sheet: June 2012 (MySafe:LA) and 7 July 2014 (USLA) pair the sheet with 'from 2005-2009' and 3,533 deaths a year; June 2016 (Methodist), June 2017 (Children's Safety Network) and July 2017 (Patch) pair it with 'From 2005-2014' and 3,536. So the 24 October 2014 version almost certainly printed 2005-2009 and the 2005-2014 wording arrived with a 2016 revision, but no document dated between October 2014 and April 2016 was found to confirm it; the row's scope therefore states 2005 through 2014 as the only years a CDC page was seen to state, and flags the 2014 years as unverified. (4) The Internet Archive's availability API reports a capture of the page on 18 April 2023 (status 200), and emDocs accessed it on 8 October 2020, so the page lived from at least 2012 to 2023 and was retired before the 6 January 2025 restoredcdc.org snapshot. (5) Comparison row cdc-children-nonfatal-ed-7 (seven, children under 18, CDC Drowning Facts reviewed 7 October 2022) needs no correction; the two figures are different CDC statements from different data years and age bands (14 and younger in the older sheet's paragraph; under 18 in 2022) and must not be averaged or combined. (6) An all-ages CDC-derived ratio was seen in passing: N Engl J Med 2012;366:2102-2110 prints 'another four persons receive care in the emergency department for nonfatal drowning' citing CDC WISQARS 2009; proposed as a next task, not added here. For a person with a browser: open https://web.archive.org/web/2014*/http://www.cdc.gov/HomeandRecreationalSafety/Water-Safety/waterinjuries-factsheet.html (also try the all-lower-case path and https) and choose a capture dated late October to December 2014; the footer should read 'Page last updated: October 24, 2014'. Under the heading 'How big is the problem?' quote the bullet beginning 'From 2005-' (expected '2005-2009 ... 3,533 ... about ten deaths per day') and the bullet 'For every child who dies from drowning, another five receive emergency department care for nonfatal submersion injuries', with its footnote number and the reference it points to (expected: CDC WISQARS). Then open a capture from mid-2016 to confirm when the years changed to 2005-2014, and one from 2021-2023 to see whether 'five' had become 'seven' before the page was retired. Archive-It (wayback.archive-it.org/all/) and archive.cdc.gov may also show it in a browser; both are JavaScript-gated here.",
+  "next_tasks": [
+    {
+      "title": "Read the Wayback Machine capture of CDC's 'Unintentional Drowning: Get the Facts' from late October to December 2014 in a browser and record the 'From 2005-' bullet and the 'another five' bullet with the footnote they carry",
+      "why": "The only missing piece of this task; every archive is blocked, rate-limited or JavaScript-gated for the agent, and the 2014 data years are inferred, not read."
+    },
+    {
+      "title": "Add an all-ages US ratio row from N Engl J Med 2012;366:2102-2110: 'another four persons receive care in the emergency department for nonfatal drowning', citing CDC WISQARS 2009",
+      "why": "A peer-reviewed (grade B) all-ages ratio that is often confused with the children's 'five'; keeping both documented stops them being blended."
+    },
+    {
+      "title": "Date the change from 'five' (children 14 and younger, 2005-2014 data) to 'seven' (children under 18, 2022 document) on CDC's drowning facts pages using 2016-2023 captures",
+      "why": "Secondary sources still repeat 'five' in 2024; the ledger should say which CDC data years each ratio rests on and when CDC changed it."
+    },
+    {
+      "title": "Note that CDC's NSSP syndrome-definition page (updated April 2024) still prints 'another five' while its reference link now resolves to the Drowning Facts page that prints seven",
+      "why": "A CDC-internal inconsistency a reader of the ledger will meet; worth a one-line caveat on both CDC rows."
+    }
+  ]
+}
