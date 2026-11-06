@@ -1,0 +1,250 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "ferry-database-totals",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "ferry-baird-2025",
+   "figure": "1,455 fatalities from 50 accidents in 2025",
+   "low": 1455,
+   "high": 1455,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Known deaths (the editorial's word) in accidents to passenger vessels in the Baird Maritime Passenger Vessel Accident Database, calendar 2025: ferries, tour boats and cruise ships, any waters, worldwide; 50 accidents. Missing persons: not stated (an IMO paper renders Baird's figures as 'dead or missing'). The editorial defines neither ferry nor accident; the compiler's 2018 thesis defines a ferry as a vessel carrying paying passengers on a regular service on a defined route and excludes refugee and migrant boats. Known accidents only; no data from Myanmar or North Korea.",
+   "geography": "Global",
+   "source": "Baird Maritime, editorial 'Passenger vessel death toll falls 28 per cent in 2025; tour boats become an increasing problem', 8 Jan 2026, from the Baird Maritime Passenger Vessel Accident (BMPVA) database",
+   "url": "https://www.bairdmaritime.com/amp/story/security/incidents/accidents/editorial-passenger-vessel-death-toll-falls-28-per-cent-in-2025-tour-boats-become-an-increasing-problem",
+   "grade": "C",
+   "do_not_add_to": "A trade-press database count, grade C. Not a drowning count: includes fire, collision and non-accidental deaths (the 2025 figure holds three cruise-ship deaths, two non-accidental). Never added to WHO or IHME drowning figures, to the WFSA tallies (ferry-wfsa, ferry-wfsa-2000-2014: other compiler, two-death threshold, other years), to migrant rows (migrants-maritime-*: refugee boats excluded here) or to uscg-boating-2024. The ferry-baird-2020 to 2025 rows are one compiler's series: compare, never sum across years or with the country figures in the same editorials.",
+   "note": "Down 28% on 2024 (2,033 from 55). Same text: DR Congo 807 deaths from six accidents, Nigeria 292 from seven; tour-boat accidents 34% of the database's 2025 accidents; three cruise-ship deaths, one a homicide and one apparently self-inflicted, so the count is not limited to accidental deaths. China, the Philippines and Bangladesh 'barely registered'. No method, source list or table is published; the editorial is the only printing found. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "ferry-baird-2024",
+   "figure": "a grand total of 2,033 fatalities from 55 'accidents'",
+   "low": 2033,
+   "high": 2033,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Known deaths (the editorial's word) in accidents to passenger vessels in the Baird Maritime Passenger Vessel Accident Database, calendar 2024: ferries, tour boats and cruise ships, any waters, worldwide; 55 accidents. Missing persons: not stated (an IMO paper renders Baird's figures as 'dead or missing'). The editorial defines neither ferry nor accident; the compiler's 2018 thesis defines a ferry as a vessel carrying paying passengers on a regular service on a defined route and excludes refugee and migrant boats. Known accidents only; no data from Myanmar or North Korea.",
+   "geography": "Global",
+   "source": "Baird Maritime, editorial 'Ferry death toll soars again: three African failed states account for 72 per cent of it', 16 Jan 2025, from the Baird Maritime Passenger Vessel Accident Database; restated in the 8 Jan 2026 editorial",
+   "url": "https://www.bairdmaritime.com/security/incidents/accidents/editorial-ferry-death-toll-soars-again-three-african-failed-states-account-for-72-per-cent-of-it",
+   "grade": "C",
+   "do_not_add_to": "A trade-press database count, grade C. Not a drowning count: includes fire, collision and non-accidental deaths (the 2025 figure holds three cruise-ship deaths, two non-accidental). Never added to WHO or IHME drowning figures, to the WFSA tallies (ferry-wfsa, ferry-wfsa-2000-2014: other compiler, two-death threshold, other years), to migrant rows (migrants-maritime-*: refugee boats excluded here) or to uscg-boating-2024. The ferry-baird-2020 to 2025 rows are one compiler's series: compare, never sum across years or with the country figures in the same editorials.",
+   "note": "Up 55% on 2023 (1,308 from 39). The highest year in the 2020-2025 series. The editorial of 16 Jan 2025 labels the Congolese figure (950 deaths from 11 incidents) and the Nigerian one (423 from 13) as 2023 figures, but the Jan 2026 editorial prints the same numbers as 2024 figures, and 950+423 exceeds the 2023 total, so they belong to 2024: a labelling slip in the Jan 2025 piece. Mozambique 90 deaths from one accident. 'Virtually no fatalities' in developed countries. The editorial calls the true figure 'almost certain' to be significantly higher. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "ferry-baird-2023",
+   "figure": "The 2023 death toll of 1,308 (39 accidents)",
+   "low": 1308,
+   "high": 1308,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Known deaths (the editorial's word) in accidents to passenger vessels in the Baird Maritime Passenger Vessel Accident Database, calendar 2023: ferries, tour boats and cruise ships, any waters, worldwide; 39 accidents. Missing persons: not stated (an IMO paper renders Baird's figures as 'dead or missing'). The editorial defines neither ferry nor accident; the compiler's 2018 thesis defines a ferry as a vessel carrying paying passengers on a regular service on a defined route and excludes refugee and migrant boats. Known accidents only; no data from Myanmar or North Korea.",
+   "geography": "Global",
+   "source": "Baird Maritime, editorial 'Ferry fatalities nearly double in 2023', 5 Feb 2024, from the Baird Maritime Passenger Vessel Accident Database; accident count (39) from the 16 Jan 2025 editorial",
+   "url": "https://www.bairdmaritime.com/passenger/ferry/editorial-ferry-fatalities-nearly-double-in-2023",
+   "grade": "C",
+   "do_not_add_to": "A trade-press database count, grade C. Not a drowning count: includes fire, collision and non-accidental deaths (the 2025 figure holds three cruise-ship deaths, two non-accidental). Never added to WHO or IHME drowning figures, to the WFSA tallies (ferry-wfsa, ferry-wfsa-2000-2014: other compiler, two-death threshold, other years), to migrant rows (migrants-maritime-*: refugee boats excluded here) or to uscg-boating-2024. The ferry-baird-2020 to 2025 rows are one compiler's series: compare, never sum across years or with the country figures in the same editorials.",
+   "note": "Near doubling of 2022 (699). About 80% of 2023 deaths in African countries; DR Congo and Nigeria together 70% of the world total; 'only twenty fatalities were reported in developed countries'; no deaths on modern, properly built and maintained vessels. Causes: 48% capsize, 38% vessel break-up, collision or allision, fire or foundering. January 2024 alone: 237 deaths in ten accidents. The editorial calls IMO figures 'decidedly spurious'. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "ferry-baird-2022",
+   "figure": "41 accidents that resulted in 699 deaths",
+   "low": 699,
+   "high": 699,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Known deaths (the editorial's word) in accidents to passenger vessels in the Baird Maritime Passenger Vessel Accident Database, calendar 2022: ferries, tour boats and cruise ships, any waters, worldwide; 41 accidents. Missing persons: not stated (an IMO paper renders Baird's figures as 'dead or missing'). The editorial defines neither ferry nor accident; the compiler's 2018 thesis defines a ferry as a vessel carrying paying passengers on a regular service on a defined route and excludes refugee and migrant boats. Known accidents only; no data from Myanmar or North Korea.",
+   "geography": "Global",
+   "source": "Baird Maritime, editorial 'Dramatic reduction in ferry fatalities in 2022', 8 Feb 2023 (the editorial names no database; the 2021, 2023 and 2024 editorials in the same series name the Baird Maritime Passenger Vessel Accident Database)",
+   "url": "https://www.bairdmaritime.com/work-boat-world/passenger-vessel-world/ferries/editorial-dramatic-reduction-in-ferry-fatalities-in-2022",
+   "grade": "C",
+   "do_not_add_to": "A trade-press database count, grade C. Not a drowning count: includes fire, collision and non-accidental deaths (the 2025 figure holds three cruise-ship deaths, two non-accidental). Never added to WHO or IHME drowning figures, to the WFSA tallies (ferry-wfsa, ferry-wfsa-2000-2014: other compiler, two-death threshold, other years), to migrant rows (migrants-maritime-*: refugee boats excluded here) or to uscg-boating-2024. The ferry-baird-2020 to 2025 rows are one compiler's series: compare, never sum across years or with the country figures in the same editorials.",
+   "note": "'The known death toll almost halved from 1,378 to 699.' The lowest year in the series after 2020. Same text: Bangladesh 163 deaths from seven accidents, Nigeria 161 from seven, DR Congo 110 from two, Indonesia 52 from five, Madagascar 12 from one, China none; developed countries (New Zealand two accidents; Japan, Greece, UK, Netherlands one each) 57 deaths. No information from Myanmar. Leading causes: collision and allision, then overloading, capsize and poor seaworthiness. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "ferry-baird-2021",
+   "figure": "26 accidents led to 1,380 fatalities (Feb 2022); restated as 25 accidents and 1,378 fatalities (Feb 2023, Feb 2024)",
+   "low": 1378,
+   "high": 1380,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Known deaths (the editorial's word) in accidents to passenger vessels in the Baird Maritime Passenger Vessel Accident Database, calendar 2021: ferries, tour boats and cruise ships, any waters, worldwide; 26, later 25 accidents. Missing persons: not stated (an IMO paper renders Baird's figures as 'dead or missing'). The editorial defines neither ferry nor accident; the compiler's 2018 thesis defines a ferry as a vessel carrying paying passengers on a regular service on a defined route and excludes refugee and migrant boats. Known accidents only; no data from Myanmar or North Korea.",
+   "geography": "Global",
+   "source": "Baird Maritime, editorial '2021: A bad year for ferry fatalities', 11 Feb 2022, from the Baird Maritime Passenger Vessel Accident database (commenced 1966); revised figure in the 8 Feb 2023 and 5 Feb 2024 editorials",
+   "url": "https://www.bairdmaritime.com/passenger/ferry/editorial-2021-a-bad-year-for-ferry-fatalities",
+   "grade": "C",
+   "do_not_add_to": "A trade-press database count, grade C. Not a drowning count: includes fire, collision and non-accidental deaths (the 2025 figure holds three cruise-ship deaths, two non-accidental). Never added to WHO or IHME drowning figures, to the WFSA tallies (ferry-wfsa, ferry-wfsa-2000-2014: other compiler, two-death threshold, other years), to migrant rows (migrants-maritime-*: refugee boats excluded here) or to uscg-boating-2024. The ferry-baird-2020 to 2025 rows are one compiler's series: compare, never sum across years or with the country figures in the same editorials.",
+   "note": "More than five times 2020's 264. Same text: Bangladesh 279 'known fatalities' from five accidents, DR Congo 570 from four, Nigeria 225 from three; Peru, India and Madagascar 60 to 88 each (Madagascar 88 from one accident per the Feb 2023 editorial). 'We simply don't know of some of the accidents.' The 1,378 restatement is not explained. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "ferry-baird-2020",
+   "figure": "in 2020 there were 20 accidents resulting in 264 fatalities",
+   "low": 264,
+   "high": 264,
+   "unit": "deaths",
+   "year": 2020,
+   "scope": "Known deaths (the editorial's word) in accidents to passenger vessels in the Baird Maritime Passenger Vessel Accident Database, calendar 2020: ferries, tour boats and cruise ships, any waters, worldwide; 20 accidents. Missing persons: not stated (an IMO paper renders Baird's figures as 'dead or missing'). The editorial defines neither ferry nor accident; the compiler's 2018 thesis defines a ferry as a vessel carrying paying passengers on a regular service on a defined route and excludes refugee and migrant boats. Known accidents only; no data from Myanmar or North Korea.",
+   "geography": "Global",
+   "source": "Baird Maritime, editorial '2021: A bad year for ferry fatalities', 11 Feb 2022, from the Baird Maritime Passenger Vessel Accident database; repeated in the IMO 'Enhancing Domestic Ferry Safety' project concept paper (as at 17 Aug 2023)",
+   "url": "https://www.bairdmaritime.com/passenger/ferry/editorial-2021-a-bad-year-for-ferry-fatalities",
+   "grade": "C",
+   "do_not_add_to": "A trade-press database count, grade C. Not a drowning count: includes fire, collision and non-accidental deaths (the 2025 figure holds three cruise-ship deaths, two non-accidental). Never added to WHO or IHME drowning figures, to the WFSA tallies (ferry-wfsa, ferry-wfsa-2000-2014: other compiler, two-death threshold, other years), to migrant rows (migrants-maritime-*: refugee boats excluded here) or to uscg-boating-2024. The ferry-baird-2020 to 2025 rows are one compiler's series: compare, never sum across years or with the country figures in the same editorials.",
+   "note": "A pandemic year with far less ferry travel: the lowest figure in the 2020-2025 series. Printed as the comparison year in the 2021 editorial; Baird's own 2020 year-end editorial, if one exists, was not opened. Same text: Bangladesh 58 deaths from two accidents, DR Congo 12 from one, Nigeria 35 from four. Included so the series starts before the 2021 jump. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "ferry-wfsa-2000-2014",
+   "figure": "21,574 lives were lost in 232 ferry accidents, 2000-2014 (average 1,541 a year, 130 per accident)",
+   "low": 21574,
+   "high": 21574,
+   "unit": "deaths",
+   "year": 2014,
+   "scope": "Dead and missing in ferry accidents worldwide, 2000 to 2014, in the Worldwide Ferry Safety Association database as published in its peer-reviewed compilation; only accidents with two or more passenger and/or crew deaths were recorded (p. 18), so single-death accidents are outside it. Sources: news reports, investigation reports where available, IMO GISIS; expands an earlier Interferry/WFSA dataset. 'Ferry' is not defined; the abstract says 'ferries and other passenger vessels'. A 'conservative tally': unreported accidents and unrecorded overloading leave gaps. No yearly series is printed.",
+   "geography": "Global",
+   "source": "Golden and Weisbrod 2016, 'Trends, Causal Analysis, and Recommendations from 14 Years of Ferry Accidents', Journal of Public Transportation 19(1):17-27, doi 10.5038/2375-0901.19.1.2, p. 19",
+   "url": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1513&context=jpt",
+   "grade": "B",
+   "do_not_add_to": "A 14-year period total (2000-2014, as the paper's title counts it) with its own average; never added to any yearly row, to the Baird rows (ferry-baird-*: a different compiler with no death threshold and overlapping years), to ferry-wfsa (the 2014 press estimate this tally supersedes) or to WHO/IHME drowning figures (includes fire, collision and non-drowning deaths; dead and missing). The 1,541 a year is the paper's own average, not to be re-derived.",
+   "note": "The WFSA's own latest published totals: its home page says it keeps 25 data points per fatal accident since 2000, but no later tally was found (Oct 2026). The Jan 2017 Marine News column repeats these numbers for 2000-2015 with 'Fatalities (dead and missing)'. Malicious damage (2004 SuperFerry bombing) disregarded; about 14% of cases had unknown cause. Figures 1-2 (p. 19) give country, not year, splits. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "ferry-baird-2000-2015-average",
+   "figure": "average known annual global death toll 818 (1966-1999); 1,975 for the next sixteen years (2000-2015)",
+   "low": 1975,
+   "high": 1975,
+   "unit": "deaths",
+   "year": 2015,
+   "scope": "Average known deaths a year in fatal ferry accidents worldwide, 2000-2015 (sixteen years), from the passenger-vessel accident database behind the Baird Maritime editorials, as analysed in its compiler's doctoral thesis; 818 a year for 1966-1999. Ferry defined (glossary p. xxvii) as 'A vessel carrying paying passengers on a regular service on a defined route'; refugee and migrant boat deaths excluded (p. 4); 'known' fatalities from reports, missing persons not addressed. Half-century total: some 681 fatal ferry accidents, nearly 60,000 deaths (abstract).",
+   "geography": "Global",
+   "source": "Baird 2018, 'Fatal Ferry Accidents, Their Causes, and How to Prevent Them', doctoral thesis, University of Wollongong (ANCORS), p. 10 and glossary p. xxvii; PDF hosted by Interferry",
+   "url": "https://interferry.com/wp-content/uploads/2019/04/Neil-Baird_Fatal_Passenger_Vessel_Accidents_COMPLETE-for-printing_full_sm.pdf",
+   "grade": "C",
+   "do_not_add_to": "An average over sixteen years, not a yearly count: never added to the ferry-baird-2020 to 2025 rows (same database, later years), to ferry-wfsa-2000-2014 (a different compiler whose 1,541 a year rests on a two-death threshold; the two averages disagree and both stand), to migrant rows (excluded here by design) or to WHO/IHME drowning figures. The 818 and 1,975 are the thesis's own averages.",
+   "note": "Graded C on verification: an examined thesis on the compiler's own database, not a peer-reviewed article. The author puts true totals 'at least 50 per cent higher' than known figures (p. 4); no reports found for Gabon or Congo; Myanmar's pre-2007 record described as far too low (wording not relocated on verification); other databases drop vessels under 100 or 500 gt. Figure 1.2 (p. 10) charts fatal accidents per year without printed values. LRF 2018 (same database): 750 fatal accidents, 59,600 deaths, 1966-2015."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "ferry-wfsa",
+   "field": "note",
+   "old": "Old estimate. Open task: ask WFSA for its current database totals.",
+   "new": "Old estimate. WFSA's own peer-reviewed tally (ferry-wfsa-2000-2014) gives 21,574 dead and missing in 232 accidents of two or more deaths, 2000-2014, an average of 1,541 a year, inside the 800-2,000 range this row carries. WFSA has published no later totals (checked Oct 2026). The only yearly series found is Baird Maritime's passenger-vessel database, rows ferry-baird-2020 to ferry-baird-2025 (grade C), which also feeds the LRF 2018 report, the WMU 2023 scoping study and an IMO 2023 concept paper.",
+   "evidence": "Golden and Weisbrod 2016, p. 19 (https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1513&context=jpt); https://www.ferrysafety.org/ 'Maintain Ferry Fatality Database' (no totals); Baird Maritime editorials of 11 Feb 2022, 8 Feb 2023, 5 Feb 2024, 16 Jan 2025 and 8 Jan 2026 listed in this bundle's evidence."
+  },
+  {
+   "row_id": "water-transport-other",
+   "field": "note",
+   "old": "The largest unmeasured piece of the toll.",
+   "new": "The largest unmeasured piece of the toll. The only yearly series found, Baird Maritime's passenger-vessel database (rows ferry-baird-2020 to ferry-baird-2025), counts ferries, tour boats and cruise ships only; its compiler's 2018 thesis excludes refugee and migrant boats, and cargo shipping, fishing vessels, work boats and private small craft are outside it, so this row stays unmeasured.",
+   "evidence": "Baird 2018 thesis p. 4 and glossary p. xxvii (https://interferry.com/wp-content/uploads/2019/04/Neil-Baird_Fatal_Passenger_Vessel_Accidents_COMPLETE-for-printing_full_sm.pdf); Baird Maritime editorial of 8 Jan 2026 (tour boats, cruise ships)."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://www.bairdmaritime.com/amp/story/security/incidents/accidents/editorial-passenger-vessel-death-toll-falls-28-per-cent-in-2025-tour-boats-become-an-increasing-problem",
+   "quote": "The total of 1,455 fatalities from 50 accidents in 2025",
+   "where": "Editorial, 8 Jan 2026, body. Same text: 2,033 from 55 (2024), 1,308 from 39 (2023); DR Congo 807 from six (2025), 950 from 11 (2024); Nigeria 292 from seven (2025), 423 from 13 (2024); tour boats 34% of 2025 accidents; three cruise-ship deaths; source the BMPVA database"
+  },
+  {
+   "url": "https://www.bairdmaritime.com/security/incidents/accidents/editorial-ferry-death-toll-soars-again-three-african-failed-states-account-for-72-per-cent-of-it",
+   "quote": "1,308 fatalities from 39 accidents in 2023",
+   "where": "Editorial, 16 Jan 2025, body; also 'a grand total of 2,033 fatalities from 55' (2024), DR Congo 950 from 11 and Nigeria 423 from 13 (labelled 2023 here, 2024 in the Jan 2026 editorial), Mozambique 90 from one; names the Baird Maritime Passenger Vessel Accident Database"
+  },
+  {
+   "url": "https://www.bairdmaritime.com/passenger/ferry/editorial-ferry-fatalities-nearly-double-in-2023",
+   "quote": "The 2023 death toll of 1,308 was almost as bad",
+   "where": "Editorial, 5 Feb 2024, body; the sentence continues 'as the dreadful 1,378 fatalities incurred in 2021'. Same text: 'derived from the Baird Maritime Passenger Vessel Accident Database'; 'known' accidents only, real situation 'significantly worse'; no data from Myanmar and North Korea"
+  },
+  {
+   "url": "https://www.bairdmaritime.com/work-boat-world/passenger-vessel-world/ferries/editorial-dramatic-reduction-in-ferry-fatalities-in-2022",
+   "quote": "there were 41 accidents that resulted in 699 deaths",
+   "where": "Editorial, 8 Feb 2023, body; intro reads 'the known death toll almost halved from 1,378 to 699'; also 'there were 25 accidents resulting in 1,378 fatalities' (2021); Bangladesh 7/163, Nigeria 7/161, DR Congo 2/110, Indonesia 5/52, Madagascar 1/12; developed countries 57 deaths; no Myanmar data"
+  },
+  {
+   "url": "https://www.bairdmaritime.com/passenger/ferry/editorial-2021-a-bad-year-for-ferry-fatalities",
+   "quote": "in 2021, 26 accidents led to 1,380 fatalities",
+   "where": "Editorial, 11 Feb 2022, body; the sentence begins 'Overall, in 2020 there were 20 accidents resulting in 264 fatalities whereas'. Names the Baird Maritime Passenger Vessel Accident database (from 1966); Bangladesh 5/279, DR Congo 4/570, Nigeria 3/225; some accidents unknown"
+  },
+  {
+   "url": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1513&context=jpt",
+   "quote": "By a conservative tally based on news reports, 21,574 lives were lost",
+   "where": "Golden and Weisbrod 2016, J. Public Transportation 19(1), p. 19 (232 accidents, 130 per incident, 1,541 per year); Methods p. 18: two-or-more-deaths threshold, sources news reports, investigation reports, IMO GISIS; Table 1 p. 21 'dead and missing'; p. 20 malicious damage disregarded"
+  },
+  {
+   "url": "https://interferry.com/wp-content/uploads/2019/04/Neil-Baird_Fatal_Passenger_Vessel_Accidents_COMPLETE-for-printing_full_sm.pdf",
+   "quote": "carrying paying passengers on a regular service on a defined route",
+   "where": "Glossary p. xxvii, 'Ferry'. p. 10: 'the average known annual global death toll was 818' (1966-1999) 'whereas for the next sixteen years it was 1,975'. p. 4: refugee and migrant deaths excluded; true figures 'at least 50 per cent higher'. Abstract p. xxxvii: 681 fatal accidents, nearly 60,000 deaths"
+  },
+  {
+   "url": "https://www.iims.org.uk/wp-content/uploads/2018/09/LRF_Insight_report_on_safety_in_passenger_ferry_industry.pdf",
+   "quote": "averaged more than 1,000 fatalities per year since the 1960s",
+   "where": "LRF Insight report on safety in the passenger ferry industry, June 2018, Executive summary p. 01; p. 09 Figure 1 'Global trend in ferry fatalities' (per year 1966-2016, values not printed); p. 01 and 09: 750 fatal accidents, 59,600 deaths, 1966-2015; Baird database via ANCORS (p. 09, App. C p. 41)"
+  },
+  {
+   "url": "https://wwwcdn.imo.org/localresources/en/OurWork/PartnershipsProjects/Documents/project%20concept%20papers.pdf",
+   "quote": "There were 264 fatalities in 2020 and 1,380 in 2021.",
+   "where": "IMO project concept paper 'Enhancing Domestic Ferry Safety', compilation 'As at 17 August 2023', no page numbers; preceding sentence cites Baird Maritime ('802 people have been found dead or missing', Jan-Sep 2018); also 'Baird Maritime recorded 681 ferry incidents globally with 36,143 persons'"
+  },
+  {
+   "url": "https://commons.wmu.se/cgi/viewcontent.cgi?article=1086&context=lib_reports",
+   "quote": "around 1,000 deaths annually is the norm among emerging economies",
+   "where": "WMU, 'Safety of domestic ferries: A scoping study of seven high-risk countries', Jan 2023, p. 3 sec. 1.1; footnote 10 credits an Interferry assessment of ShipPax and BMPV data; Figure 1.1 p. 3: seven-country 2000-2021 totals from BMPV; p. 9 lists the databases used; p. 2 defines ferry"
+  },
+  {
+   "url": "https://www.ferrysafety.org/",
+   "quote": "25 data points for each fatal accident since the year 2000",
+   "where": "Home page, 'Maintain Ferry Fatality Database' under Actions; four trend bullets (Philippines, Bangladesh, Indonesia weather, Lake Victoria) and no totals; footer copyright 2024; Reports page (news.htm) lists no statistics document newer than Jan 2017"
+  },
+  {
+   "url": "https://magazines.marinelink.com/Magazines/MarineNews/201701/page/12",
+   "quote": "21,574: Total Number of lives lost (total cases) known & unknown",
+   "where": "Marine News, January 2017, WFSA column, Table 1 (OCR text partly garbled); also '1,541: the Number of Deaths occurring per year as a result of ferry accidents', 232 cases 2000-2015, 'Fatalities (dead and missing)'; Table 2 is a sample of incidents, not yearly totals"
+  },
+  {
+   "url": "https://www.marinelog.com/passenger/ferries/ferry/",
+   "quote": "over 8,000 lives have been lost in ferry-related incidents",
+   "where": "MarineLog, 'Maritime Africa: Strength, promise and opportunity', WFSA byline, 7 July 2025, body; attributed to the head of MOWCA for West and Central Africa over the last decade, not to the WFSA database, which the article says tracks media reports since 2000; no WFSA totals given"
+  }
+ ],
+ "tried": [
+  "https://www.ferrysafety.org/ and https://www.ferrysafety.org/news.htm (WFSA home and Reports pages): the database is described (25 data points per fatal accident since 2000) but no yearly totals; the newest statistics items are the Jan 2017 Marine News column and 2014-2016 student papers; no 'state of ferry safety' report exists.",
+  "https://www.ferrysafety.org/documents/WFSA Annual Report 2023.pdf: activities only, no accident or fatality figures.",
+  "https://www.ferrysafety.org/2025conference.htm: programme page, no statistics.",
+  "https://www.ferrysafety.org/documents/MFA 2000-Jun 2015_Table.xlsx (WFSA 'Ferry Fatalities - Findings' table, 2000 to June 2015): served as binary, unreadable by the fetch tool; needs a person with a browser or spreadsheet software. Likely holds the WFSA database's per-accident rows from which yearly totals 2000-2014 could be read.",
+  "https://www.marinelog.com/passenger/ferries/ferry/ (WFSA's July 2025 MarineLog article): only a MOWCA-attributed 'over 8,000' for West and Central Africa in the last decade; no WFSA database totals.",
+  "https://magazines.marinelink.com/Magazines/MarineNews/201701/page/12 (WFSA column, Jan 2017): repeats the 2000-2015 tally (21,574; 1,541 a year; 232 cases); no 2015 or 2016 yearly totals.",
+  "https://gisis.imo.org/ (IMO GISIS): robots-disallowed to the fetch tool, and the Marine Casualties and Incidents module needs registration and login in any case; not attempted per the brief. Needs a person with a GISIS public-user account.",
+  "https://interferry.com/safety/ : robots-disallowed to the fetch tool. Interferry publishes no yearly ferry fatality series that searches could find; its site hosts the 2018 thesis PDF used here.",
+  "https://ro.uow.edu.au/theses1/498 (University of Wollongong record of the thesis): no PDF link, no year, no abstract heading; the summary text says almost 2,000 passenger-vessel deaths are known a year, ferries 91% of them, and that the appendices (the database) are available from the author on request.",
+  "https://www.iims.org.uk/wp-content/uploads/2018/09/LRF_Insight_report_on_safety_in_passenger_ferry_industry.pdf (LRF, June 2018): long-run averages and 1966-2015 totals from the Baird database; Figure 1 charts deaths per year 1966-2016 but prints no values; its Figure 2 regional total (40,605) does not match the 59,600 in the text.",
+  "https://commons.wmu.se/cgi/viewcontent.cgi?article=1086&context=lib_reports (WMU scoping study, Jan 2023): no global yearly series; seven-country 2000-2021 totals in a chart (Bangladesh 6,348, Indonesia 4,758, Philippines 2,702, DR Congo 4,716, Tanzania 3,979, Senegal 1,883, Nigeria 1,474 per the extracted labels, order uncertain) from the BMPV database; per-country yearly charts (Figures 3.6, 4.7, 9.7) without printed values.",
+  "https://wwwcdn.imo.org/localresources/en/OurWork/PartnershipsProjects/Documents/project concept papers.pdf (IMO, as at 17 Aug 2023): repeats Baird's 2020 and 2021 totals and a 20-year total (681 incidents, 36,143 dead or missing); a search for Baird's own printing of that 20-year total found nothing.",
+  "Web searches for a peer-reviewed global ferry fatality series after 2014 (Marine Policy, Safety Science, Ocean Engineering, J. Marine Science and Engineering): nothing beyond Golden and Weisbrod 2016 and the 2018 thesis; ResearchGate copies not used.",
+  "Baird Maritime's 2016-2019 year-end editorials (search results: '2017 ferry fatality toll increases by 57 per cent over 2016', '2018: A bad year for ferry fatalities'): not opened, outside the five most recent years; a follow-up could extend the series back to 2016."
+ ],
+ "notes": "Status partial. The task asked for the WFSA's current database totals: the WFSA still keeps the database (home page, Oct 2026) but has published no totals after its peer-reviewed 2000-2014 tally (Golden and Weisbrod 2016: 232 accidents of two or more deaths, 21,574 dead and missing, 1,541 a year), repeated for 2000-2015 in its Jan 2017 Marine News column. That tally is entered as ferry-wfsa-2000-2014 (grade B). The only yearly series found is the trade publication Baird Maritime's Passenger Vessel Accident Database, printed once a year in an editorial: 2020 264 deaths (20 accidents), 2021 1,380 (26; later restated 1,378 and 25), 2022 699 (41), 2023 1,308 (39), 2024 2,033 (55), 2025 1,455 (50). Six rows, grade C: the publisher produced the figures (so the editorials are the primary printing) but it is press, publishes no method, source list or table, and the task wanted a table or report. The same database underlies the LRF 2018 insight report, the WMU 2023 scoping study and an IMO 2023 concept paper, which repeats Baird's 2020 and 2021 totals as 'dead or missing'. Definitions: Baird's editorials define neither ferry nor death. Its compiler's 2018 thesis (ferry-baird-2000-2015-average, grade B; an examined thesis, downgrade to C if the lab does not accept theses) defines a ferry as 'A vessel carrying paying passengers on a regular service on a defined route', counts 'known' fatalities from reports, does not say whether missing persons are included, and excludes refugee and migrant boat deaths. The database covers ferries, tour boats and cruise ships, and the 2025 count holds a homicide and an apparently self-inflicted death, so it is not an accidental-death or drowning count. WFSA counts dead and missing in accidents with two or more deaths, from news reports, investigation reports and GISIS. What the counts leave out: accidents nobody reported (Baird: 'the real situation can safely be assumed to be significantly worse'; the thesis puts true figures at least 50 per cent higher); Myanmar and North Korea (no data); single-death accidents (WFSA threshold); refugee and migrant boats (Baird); cargo, fishing, work boats and private small craft (both). Country figures for DR Congo, Nigeria, Bangladesh, Indonesia, Madagascar and Mozambique are printed in the editorials and recorded in notes only; they were not entered as rows and were never added to anything. Disagreements recorded, not reconciled: 2021 printed as 1,380/26 (Feb 2022) then 1,378/25 (Feb 2023, Feb 2024), kept as a low-high pair in one row; the editorial of 16 Jan 2025 labels the Congolese figure (950/11) and the Nigerian one (423/13) as 2023 while that of 8 Jan 2026 labels the same numbers 2024 (and they exceed the 2023 total, so 2024 is right); WFSA's 1,541 a year (2000-2014, two-death threshold) against the thesis's 1,975 a year (2000-2015) from the same era; LRF's 750 fatal passenger-vessel accidents and 59,600 deaths for 1966-2015 against the thesis's 681 ferry accidents and nearly 60,000. Two corrections are proposed, both to notes: ferry-wfsa (its open task is now answered as far as public documents allow) and water-transport-other (what the only series excludes). The Baird 2025 row cites the AMP address that was opened; the canonical address drops '/amp/story'. The thesis URL carries the author's surname as part of the file name, as the publisher hosts it; the citation is by surname, as the ledger does for papers. No names, contact details or precise positions were recorded. GISIS was not opened (login). VERIFICATION 21 Oct 2026: all eight figures confirmed as printed; the thesis row regraded C; the thesis PDF's file name on the publisher's site carries the author's name, as academic citations do (the ledger already cites authors by surname), flagged for the maintainer's PII judgment; the Jan 2025 and Jan 2026 editorials label the DR Congo and Nigeria accidents as 2023 and 2024 respectively, left unresolved.",
+ "next_tasks": [
+  {
+   "title": "Open the WFSA Excel table 'MFA 2000-Jun 2015' in a browser and record the WFSA database's own yearly dead-and-missing totals 2000-2014 (needs a person with a browser)",
+   "why": "The fetch tool gets binary; it is the only WFSA-produced per-year data and would give the WFSA series its own rows."
+  },
+  {
+   "title": "Check the IMO GISIS Marine Casualties and Incidents module for yearly passenger-ship fatality counts and its definitions (needs a person with a GISIS public-user login)",
+   "why": "Registration and login were required and not attempted; Baird calls IMO figures spurious, so a second series would test that."
+  },
+  {
+   "title": "Enter Baird Maritime's per-country figures (DR Congo, Nigeria, Bangladesh, Indonesia, Mozambique, Madagascar) for 2020-2025 as country rows, resolving the 2023/2024 label slip for DR Congo 950 and Nigeria 423",
+   "why": "Printed in the same five editorials; the lab has no country rows for the countries that carry most ferry deaths."
+  },
+  {
+   "title": "Extend the Baird series back to 2016-2019 from its year-end editorials, and ask Baird Maritime or Interferry whether the BMPVA database or a yearly table is published and whether missing persons are counted",
+   "why": "Search results show 2017 and 2018 editorials exist; the counting rule for missing persons is unstated everywhere."
+  }
+ ]
+}

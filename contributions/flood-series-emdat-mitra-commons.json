@@ -1,0 +1,313 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "flood-series-emdat",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "emdat-flood-deaths-2011",
+   "figure": "5,202",
+   "low": 5202,
+   "high": 5202,
+   "unit": "deaths",
+   "year": 2011,
+   "scope": "Deaths attributed to flood disasters in 2011, all causes, as printed in CRED's preliminary year-in-review newsletter (EM-DAT newsletter issue date February 2012; CRED says its data are subject to change; year total 29,782 deaths, of which floods 17%). The final Annual Disaster Statistical Review 2011 (year total 30,773) prints no flood-only count, so this is a preliminary figure that EM-DAT may since have revised. Wet mass movements (landslides) not included.",
+   "geography": "Global",
+   "source": "CRED, CRED Crunch 27, Natural disasters in 2011 (February 2012), text section 'Natural disasters in 2011'",
+   "url": "https://www.cred.be/sites/default/files/CredCrunch27.pdf",
+   "grade": "A",
+   "do_not_add_to": "All causes, not only drowning: never add to drowning counts (WHO, IHME, national) and never present 75% of it as an observation (who-flood-share gives an estimate). Never add to another year's emdat-flood-deaths-* row, to emdat-hydrological-deaths-2012 (which includes landslides) or to emdat-flood-deaths-avg-2000-2019 (a mean). Yearly totals swing several-fold. A preliminary count: do not mix with the final ADSR 2011 total.",
+   "note": "Printed as 'floods killed 5,202 (17%)'. Largest 2011 floods in the ADSR 2011 Table 2 (p. 16): Brazil 900, Thailand 813, Pakistan 509, China 467, Cambodia 247, India 204. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "emdat-hydrological-deaths-2012",
+   "figure": "3,574 deaths",
+   "low": 3574,
+   "high": 3574,
+   "unit": "deaths",
+   "year": 2012,
+   "scope": "Deaths from hydrological disasters in 2012, all causes: floods AND wet mass movements (landslides) together. CRED's ADSR 2012 prints no flood-only total, so 2012 flood deaths are at most this figure. The Executive Summary (p. 2) gives it as 39% of the 9,655 natural-disaster deaths; Section 3 (p. 22) gives hydrological disasters 42.2% of deaths, a conflict the report does not explain. World Bank data accessed 8 July 2013.",
+   "geography": "Global",
+   "source": "CRED, Annual Disaster Statistical Review 2012: The numbers and trends (2013), Executive Summary p. 2",
+   "url": "https://www.cred.be/sites/default/files/ADSR_2012.pdf",
+   "grade": "A",
+   "do_not_add_to": "Not a flood-only count: includes landslides, so never use it as flood deaths and never multiply it by who-flood-share. Never add to any emdat-flood-deaths-* row or to drowning counts. Stands in for 2012 only until an EM-DAT query gives the flood-only figure.",
+   "note": "Largest 2012 floods, Table 2 (p. 17): Pakistan 480, Nigeria 363, Russia 172, China 151 deaths. The 2002-2011 hydrological average is printed as 5,757 deaths a year (p. 2). Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "emdat-flood-deaths-2013",
+   "figure": "9,819",
+   "low": 9819,
+   "high": 9819,
+   "unit": "deaths",
+   "year": 2013,
+   "scope": "Deaths attributed to floods in 2013, all causes, printed in the Executive Summary (p. 1) as the number of people killed by floods, the highest of the decade, and as 45.4% of the 21,610 natural-disaster deaths. Page 21 labels the same 9,819 as 'hydrological disasters' (floods plus wet mass movements), an inconsistency inside the report, and p. 22 gives hydrological disasters 46.5% of deaths. EM-DAT data accessed 17 July 2014.",
+   "geography": "Global",
+   "source": "CRED, Annual Disaster Statistical Review 2013: The numbers and trends (2014), Executive Summary p. 1; Section 3 p. 21",
+   "url": "https://www.cred.be/sites/default/files/ADSR_2013.pdf",
+   "grade": "A",
+   "do_not_add_to": "All causes, not only drowning: never add to drowning counts (WHO, IHME, national) and never present 75% of it as an observation (who-flood-share gives an estimate). Never add to another year's emdat-flood-deaths-* row, to emdat-hydrological-deaths-2012 (which includes landslides) or to emdat-flood-deaths-avg-2000-2019 (a mean). Yearly totals swing several-fold. Because p. 21 calls the same number hydrological, treat it as 'floods, possibly with landslides'.",
+   "note": "Dominated by the June 2013 Uttarakhand flood (Table 2, p. 17: Flood, June, India, 6054). No 2003-2012 flood average is printed. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "emdat-flood-deaths-2014",
+   "figure": "3,634",
+   "low": 3634,
+   "high": 3634,
+   "unit": "deaths",
+   "year": 2014,
+   "scope": "Deaths attributed to floods in 2014, all causes, printed in the Executive Summary (p. 1) and Chapter 3 (p. 21) as the second lowest of the decade. Natural-disaster deaths 7,823; 137 floods. Mass movements of hydrological origin (958 deaths, p. 21) are counted separately. The 2004-2013 annual average of flood deaths is printed as 6,293 (p. 1). Report printed September 2015.",
+   "geography": "Global",
+   "source": "CRED, Annual Disaster Statistical Review 2014: The numbers and trends (2015), pp. 1 and 21",
+   "url": "https://www.cred.be/sites/default/files/ADSR_2014.pdf",
+   "grade": "A",
+   "do_not_add_to": "All causes, not only drowning: never add to drowning counts (WHO, IHME, national) and never present 75% of it as an observation (who-flood-share gives an estimate). Never add to another year's emdat-flood-deaths-* row, to emdat-hydrological-deaths-2012 (which includes landslides) or to emdat-flood-deaths-avg-2000-2019 (a mean). Yearly totals swing several-fold.",
+   "note": "Printed sentence: 'the number of people killed by floods (3,634) and storms (1,239) were, both, the second lowest of the decade'. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "emdat-flood-deaths-2015",
+   "figure": "3,449",
+   "low": 3449,
+   "high": 3449,
+   "unit": "deaths",
+   "year": 2015,
+   "scope": "Deaths attributed to floods in 2015, all causes, printed in the Executive Summary (p. 1) and Section 3.2.2 (p. 25) as the lowest of the decade, 42% below the 2005-2014 annual average printed as 5,933. Natural-disaster deaths 22,765 (Nepal earthquake year); 156 floods (p. 24). Mass movements of hydrological origin (1,000 deaths, p. 25) are counted separately. Report dated October 2016.",
+   "geography": "Global",
+   "source": "CRED, Annual Disaster Statistical Review 2015: The numbers and trends (2016), pp. 1 and 25",
+   "url": "https://www.cred.be/sites/default/files/ADSR_2015.pdf",
+   "grade": "A",
+   "do_not_add_to": "All causes, not only drowning: never add to drowning counts (WHO, IHME, national) and never present 75% of it as an observation (who-flood-share gives an estimate). Never add to another year's emdat-flood-deaths-* row, to emdat-hydrological-deaths-2012 (which includes landslides) or to emdat-flood-deaths-avg-2000-2019 (a mean). Yearly totals swing several-fold.",
+   "note": "Largest 2015 floods, Table 1 (p. 15): India (November) 325, India riverine (July) 293, Malawi riverine (January) 278. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "emdat-flood-deaths-2016",
+   "figure": "4,731",
+   "low": 4731,
+   "high": 4731,
+   "unit": "deaths",
+   "year": 2016,
+   "scope": "Deaths attributed to floods in 2016, all causes, printed in the General Overview (p. 1) and Section 3.2.2 (p. 33), 17% below the 2006-2015 annual average printed as 5,709. Natural-disaster deaths 8,733; 164 floods and 13 landslides. Landslides (361 deaths, p. 34) are counted separately. Flood subtypes are not split for deaths. Report dated October 2017.",
+   "geography": "Global",
+   "source": "CRED, Annual Disaster Statistical Review 2016: The numbers and trends (2017), pp. 1 and 33",
+   "url": "http://emdat.be/sites/default/files/adsr_2016.pdf",
+   "grade": "A",
+   "do_not_add_to": "All causes, not only drowning: never add to drowning counts (WHO, IHME, national) and never present 75% of it as an observation (who-flood-share gives an estimate). Never add to another year's emdat-flood-deaths-* row, to emdat-hydrological-deaths-2012 (which includes landslides) or to emdat-flood-deaths-avg-2000-2019 (a mean). Yearly totals swing several-fold.",
+   "note": "Largest 2016 floods, Table 1 (p. 20): North Korea (August) 538, China (June) 289, China (July) 289, India (July) 254, Zimbabwe (November) 246, Sri Lanka (May) 203. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "emdat-flood-deaths-2017",
+   "figure": "3 331",
+   "low": 3331,
+   "high": 3331,
+   "unit": "deaths",
+   "year": 2017,
+   "scope": "Deaths attributed to floods in 2017, all causes, read from the Flood data label of Figure 4 (Number of deaths by disaster type: 2017 compared to 2007-2016 annual average). The nine 2017 labels (0, 1 012, 359, 3 331, 2 312, 8, 2 510, 0, 165 for Drought, Earthquake, Extreme temperature, Flood, Landslide, Mass movement dry, Storm, Volcanic activity, Wildfire) add up to the printed 2017 total 9,697, which confirms the label order. 126 floods in 2017. EM-DAT file dated 02/07/2018. Landslides counted separately.",
+   "geography": "Global",
+   "source": "CRED, Natural disasters 2017: Lower mortality, higher cost (2018), Figure 4",
+   "url": "https://cred.be/sites/default/files/adsr_2017.pdf",
+   "grade": "A",
+   "do_not_add_to": "All causes, not only drowning: never add to drowning counts (WHO, IHME, national) and never present 75% of it as an observation (who-flood-share gives an estimate). Never add to another year's emdat-flood-deaths-* row, to emdat-hydrological-deaths-2012 (which includes landslides) or to emdat-flood-deaths-avg-2000-2019 (a mean). Yearly totals swing several-fold.",
+   "note": "Read from a chart data label through text extraction, not from a sentence: the reviewer should confirm the Flood bar by eye. The text prints only the largest flood (India, Nepal, Bangladesh, August: 834 deaths, Table 1). Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "emdat-flood-deaths-2018",
+   "figure": "2 879",
+   "low": 2879,
+   "high": 2879,
+   "unit": "deaths",
+   "year": 2018,
+   "scope": "Deaths attributed to floods in 2018, all causes, read from the Flood data label of Figure 4 (Number of deaths by disaster type: 2018 compared to 2008-2017 annual average). The nine 2008-2017 average labels (flood 5 039) add up exactly to the printed 67,572, which confirms the label order, and the Executive Summary gives flooding as 24% of the 11,804 deaths (2,879 is 24.4%). 127 floods in 2018. Landslides (275) counted separately. No data cut-off date printed; published 2019.",
+   "geography": "Global",
+   "source": "CRED, Natural disasters 2018: An opportunity to prepare (2019), Figure 4 and Executive Summary",
+   "url": "https://www.cred.be/sites/default/files/CREDNaturalDisaster2018.pdf",
+   "grade": "A",
+   "do_not_add_to": "All causes, not only drowning: never add to drowning counts (WHO, IHME, national) and never present 75% of it as an observation (who-flood-share gives an estimate). Never add to another year's emdat-flood-deaths-* row, to emdat-hydrological-deaths-2012 (which includes landslides) or to emdat-flood-deaths-avg-2000-2019 (a mean). Yearly totals swing several-fold.",
+   "note": "Read from a chart data label through text extraction: the 2018 one label (Volcanic activity, by difference 878) was lost and the other eight labels reach 10,926 of 11,804, so the reviewer should confirm the Flood bar by eye. Table 1: India Flood 504 (Kerala); text: Nigeria 300, Japan 230. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "emdat-flood-share-2020",
+   "figure": "floods which accounted for 41% of total deaths",
+   "low": 0.41,
+   "high": 0.41,
+   "unit": "share",
+   "year": 2020,
+   "scope": "Share of the 15,080 natural-disaster deaths recorded for 2020 that CRED attributes to floods (all causes), as printed in its year-in-review newsletter. The same text says 2020 had 18% more flood deaths than the 2000-2019 annual average of 5,233 but prints no 2020 flood count; 201 flood events. Data from EM-DAT as of May 2021, no cut-off date printed.",
+   "geography": "Global",
+   "source": "CRED, CRED Crunch 62, Disaster Year in Review 2020 (May 2021), text",
+   "url": "https://cred.be/sites/default/files/CredCrunch62.pdf",
+   "grade": "A",
+   "do_not_add_to": "A share of all-cause flood deaths in one year, not a count and not a drowning share: never add to any deaths row and never confuse with who-flood-share. A 2020 flood count derived from it would be arithmetic, not a printed figure; the lab keeps 2020 as 'count not printed'.",
+   "note": "CRED's fuller report '2020: The Non-COVID Year in Disasters' could not be opened (UNDRR download stub); its deaths-by-type chart probably prints the 2020 flood count. Text figures: India floods 1,922, Africa floods 1,273, Nepal 448, China 397. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "emdat-flood-deaths-2021",
+   "figure": "4143",
+   "low": 4143,
+   "high": 4143,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Deaths attributed to floods in 2021, all causes, read from the Flood data label of Figure 4 (deaths by disaster type, 2021 compared to the 2001-2020 annual average). The nine 2021 labels (0, 2742, 1044, 4143, 474, 0, 1876, 85, 128 for Drought, Earthquake, Extreme temperature, Flood, Landslide, Mass movement dry, Storm, Volcanic activity, Wildfire) add up to the printed 2021 total 10,492, which confirms the label order. 223 flood events (average 163). Landslides counted separately. No data cut-off date printed; published 2022.",
+   "geography": "Global",
+   "source": "CRED, 2021 Disasters in numbers: Extreme events defining our lives (2022), Figure 4",
+   "url": "https://cred.be/sites/default/files/2021_EMDAT_report.pdf",
+   "grade": "A",
+   "do_not_add_to": "All causes, not only drowning: never add to drowning counts (WHO, IHME, national) and never present 75% of it as an observation (who-flood-share gives an estimate). Never add to another year's emdat-flood-deaths-* row, to emdat-hydrological-deaths-2012 (which includes landslides) or to emdat-flood-deaths-avg-2000-2019 (a mean). Yearly totals swing several-fold.",
+   "note": "Read from a chart data label through text extraction: the reviewer should confirm the Flood bar by eye. The same chart's 2001-2020 flood average reads 5,185, but its average labels reach 64,399 against a printed 61,212, so that average is unconfirmed. Table 1: India Flood 1,282; China Flood 352; Afghanistan Flood 260. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "emdat-flood-deaths-avg-2000-2019",
+   "figure": "annual average of 5,233 deaths",
+   "low": 5233,
+   "high": 5233,
+   "unit": "deaths",
+   "year": null,
+   "scope": "CRED's own printed 2000-2019 annual average of flood deaths (all causes) in EM-DAT, as of its 2020 year-in-review (May 2021). A 20-year mean printed by the source, not computed by the lab. Other CRED-printed flood averages, for comparison only: 6,293 (2004-2013, ADSR 2014), 5,933 (2005-2014, ADSR 2015), 5,709 (2006-2015, ADSR 2016), 5 039 (2008-2017, 2018 report chart), 4913 (2009-2018, 2019 report chart), 5 195 (2002-2021, 2022 report chart).",
+   "geography": "Global",
+   "source": "CRED, CRED Crunch 62, Disaster Year in Review 2020 (May 2021), text",
+   "url": "https://cred.be/sites/default/files/CredCrunch62.pdf",
+   "grade": "A",
+   "do_not_add_to": "A multi-year mean of all-cause flood deaths: never add to any yearly emdat-flood-deaths-* row or to drowning counts. Applying who-flood-share to it gives an estimate (grade D), not an observation.",
+   "note": "Candidate sourced multi-year average to retire flood-drowning-band once a person confirms it. 75% of it is deliberately not computed here: the task's estimate row requires all 15 years 2010-2024. Found by an independent agent, 21 Oct 2026."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "emdat-flood-deaths-2019",
+   "field": "note",
+   "old": "With who-flood-share: about 3,800 flood drownings in 2019.",
+   "new": "With who-flood-share: about 3,800 flood drownings in 2019. The 5,110 is the Flood data label of Figure 4 (Number of deaths by disaster type: 2019 compared to 2009-2018 annual average); the Executive Summary prints floods as 43.5% of the 11,755 deaths (5,110/11,755 = 43.5%) and as the deadliest type, and the same chart prints a 2009-2018 flood average of 4913. 194 floods in 2019. Re-checked 21 Oct 2026.",
+   "evidence": "https://cred.be/sites/default/files/adsr_2019.pdf, Executive Summary ('Floods were the deadliest type of disaster accounting for 43.5% of deaths'), Figure 4 label sequence Drought, Earthquake, Extreme temperature, Flood, Landslide, Mass movement (dry), Storm, Volcanic activity, Wildfire with 2019 values 85, 262, 2909, 5110, 727, 0, 2525, 116 (wildfire label lost in extraction), Table 1 'India Flood 1900'."
+  },
+  {
+   "row_id": "flood-drowning-band",
+   "field": "note",
+   "old": "Open task: compute 75% of EM-DAT flood deaths for 2010–2024.",
+   "new": "Open task: compute 75% of EM-DAT flood deaths for 2010–2024. Partial progress 21 Oct 2026: CRED's public reports print flood-only counts for 2011, 2013-2019 and 2021 (emdat-flood-deaths-* rows) and a 2000-2019 average of 5,233 (emdat-flood-deaths-avg-2000-2019); 2010 and 2012 are not printed as flood-only, and 2020, 2022-2024 sit only in chart data labels that need a person to read. No 15-year mean yet.",
+   "evidence": "Bundle flood-series-emdat-mitra-commons: rows and tried list; CRED Crunch 62 (https://cred.be/sites/default/files/CredCrunch62.pdf) for the 5,233 average."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://www.cred.be/sites/default/files/CredCrunch27.pdf",
+   "quote": "floods killed 5,202 (17%)",
+   "where": "Text section 'Natural disasters in 2011'; summary table 'No. of people killed' 29,782; issue dated February 2012"
+  },
+  {
+   "url": "https://www.cred.be/sites/default/files/ADSR_2012.pdf",
+   "quote": "causing 3,574 deaths, and representing 39% of global disaster mortality",
+   "where": "Executive Summary p. 2 (hydrological disasters); Section 3 p. 22 (42.2% share); Table 2 p. 17 (flood event rows); no flood-only total anywhere"
+  },
+  {
+   "url": "https://www.cred.be/sites/default/files/ADSR_2013.pdf",
+   "quote": "the number of people killed by floods (9,819) was the highest",
+   "where": "Executive Summary p. 1 (also 45.4% share); Section 3 p. 21 labels 9,819 'hydrological'; Table 2 p. 17 India June flood 6054; data accessed 17 July 2014"
+  },
+  {
+   "url": "https://www.cred.be/sites/default/files/ADSR_2014.pdf",
+   "quote": "the number of people killed by floods (3,634) and storms (1,239)",
+   "where": "Executive Summary p. 1 (also 2004-2013 average 6,293); Chapter 3 p. 21 (3,634; 137 floods; mass movements 958)"
+  },
+  {
+   "url": "https://www.cred.be/sites/default/files/ADSR_2015.pdf",
+   "quote": "the number of deaths from floods (3,449) and storms (1,260)",
+   "where": "Executive Summary p. 1; Section 3.2.2 p. 25 ('42% below its annual average (5933)'); Section 3.2.1 p. 24 (156 floods); Table 1 p. 15"
+  },
+  {
+   "url": "http://emdat.be/sites/default/files/adsr_2016.pdf",
+   "quote": "floods killed the most people (4,731)",
+   "where": "General Overview p. 1 (also 2006-2015 average 5,709); Section 3.2.2 p. 33 ('164 floods and 13 landslides'); p. 34 landslides 361; Table 1 p. 20"
+  },
+  {
+   "url": "https://cred.be/sites/default/files/adsr_2017.pdf",
+   "quote": "A single flood killed 834 people and affected almost 27 million people",
+   "where": "Executive Summary; Figure 4 'Number of deaths by disaster type: 2017 compared to 2007-2016 annual average', Flood label 3 331; Figure 2 (126 floods); Table 1; 'EM-DAT file dated 02/07/2018'"
+  },
+  {
+   "url": "https://www.cred.be/sites/default/files/CREDNaturalDisaster2018.pdf",
+   "quote": "India Flood 504",
+   "where": "Table 1 (Top 5 mortality); Figure 4 (deaths by type, 2018 vs 2008-2017 average), Flood labels 2 879 and 5 039; Executive Summary (flooding 24% of deaths; 11,804 deaths; 127 flood events)"
+  },
+  {
+   "url": "https://cred.be/sites/default/files/adsr_2019.pdf",
+   "quote": "Floods were the deadliest type of disaster accounting for 43.5% of deaths",
+   "where": "Executive Summary; Figure 4 (deaths by type, 2019 vs 2009-2018 average), Flood labels 5110 and 4913; Table 1 'India Flood 1900'; 194 floods"
+  },
+  {
+   "url": "https://cred.be/sites/default/files/CredCrunch62.pdf",
+   "quote": "18% more flood deaths than the annual average of 5,233 deaths",
+   "where": "Text, Disaster Year in Review 2020 (also 'floods which accounted for 41% of total deaths', 15,080 deaths, 201 flood events); issue dated May 2021"
+  },
+  {
+   "url": "https://cred.be/sites/default/files/2021_EMDAT_report.pdf",
+   "quote": "India experienced a series of deadly floods that claimed 1,282 lives",
+   "where": "Executive summary; Table 1 (Top 10 mortality 2021); Figure 4 (deaths by type, 2021 vs 2001-2020 average), Flood label 4143; 223 flood events; total 10,492"
+  },
+  {
+   "url": "https://cred.be/sites/default/files/2022_EMDAT_report.pdf",
+   "quote": "Monsoon floods also struck India (2,035 deaths, US$4.2 B)",
+   "where": "Text and Table 1 (India 2,035; Pakistan 1,739; Nigeria 603; South Africa 544; Brazil 272); Figure 4 average series Flood 5 195, 2022 Flood label not legible in extraction; 'Preliminary data as of 2023-02-08'"
+  },
+  {
+   "url": "https://files.emdat.be/reports/2023_EMDAT_report.pdf",
+   "quote": "In North-East Nigeria, floods in October resulted in 275 fatalities",
+   "where": "Text; Table 1 Top 10 Mortality 2023 (Congo DR Flood 2,970; India Flood 1,529; Nigeria Flood 275; Yemen Flood 248); Figure 4 labels scrambled; total 86,473; 'Date of reference: 2024-03-24'"
+  },
+  {
+   "url": "https://files.emdat.be/reports/2024_EMDAT_report.pdf",
+   "quote": "floods in Niger from June to October claimed 396 lives",
+   "where": "Africa section text; Table 1 Top 10 Mortality 2024 (Chad Flood 576; Niger Flood 396); Figure 4 labels scrambled; total 16,753; 'Date of reference: 2025-04-08'"
+  },
+  {
+   "url": "https://www.cred.be/sites/default/files/ADSR_2010.pdf",
+   "quote": "Flash flood, July-August Pakistan 1 985",
+   "where": "Table 2 (top 10 disasters by deaths), pp. 15-16; Executive Summary p. 1 ('more than 297 000'); Section 3 p. 22 ('216 hydrological disasters (85.2% floods'); no flood death total printed"
+  },
+  {
+   "url": "https://www.cred.be/sites/default/files/2012.07.05.ADSR_2011.pdf",
+   "quote": "Natural disasters killed a total of 30 773 people",
+   "where": "Executive Summary p. 1; Table 2 p. 16 (flood event rows); Section 3 p. 24 (hydrological 20.4% of deaths); no flood death total printed"
+  },
+  {
+   "url": "https://www.cred.be/sites/default/files/CredCrunch23.pdf",
+   "quote": "They killed over 296,800 people",
+   "where": "Text, Natural disasters in 2010 (summary table 296,818); no deaths-by-type table; issue dated February 2011"
+  }
+ ],
+ "tried": [
+  "https://www.cred.be/publications redirects to the UCLouvain CRED institute page, which lists no reports; the working listing is https://www.emdat.be/publications/ (5 pages), which supplied every PDF link used here.",
+  "2010: ADSR 2010 (https://www.cred.be/sites/default/files/ADSR_2010.pdf) prints no flood or hydrological death total, only Table 2 event rows (Pakistan flash flood 1 985, China flood 1 691) and '216 hydrological disasters (85.2% floods and 14.8% wet mass movements)'. CRED Crunch 23 'Natural disasters in 2010' (https://www.cred.be/sites/default/files/CredCrunch23.pdf): no deaths-by-type table, total 296,818.",
+  "2010: the UNISDR/CRED '2010 Disasters in numbers' two-pager at https://www.preventionweb.net/files/17613_rectoversodisasters2010.pdf returns only a download stub (tried with and without www); the UNISDR release that links it (https://www.undrr.org/news/killer-year-caps-deadly-decade-reducing-disaster-impact-critical-says-top-un-disaster-official) prints only Pakistan (nearly 2,000) and China (1,691) flood deaths. https://www.emdat.be/sites/default/files/PressConference_Presentation.pdf turned out to be the January 2010 briefing on 2009, not 2010.",
+  "2011: ADSR 2011 (https://www.cred.be/sites/default/files/2012.07.05.ADSR_2011.pdf) prints no flood-only or hydrological death count, only '20.4% of the total reported number of people killed' for hydrological disasters (p. 24) and Table 2 event rows; the 5,202 used comes from the earlier, preliminary CRED Crunch 27.",
+  "2012: ADSR 2012 (https://www.cred.be/sites/default/files/ADSR_2012.pdf) read twice (Executive Summary, Section 3, Table 5, annexes): only the hydrological total 3,574 is printed. CRED Crunch 31 'Natural disasters in 2012' (https://www.cred.be/sites/default/files/CredCrunch31.pdf) has no deaths-by-type figure (and prints 9,930 and 9,330 as the year total); CRED Crunch 32 'Floods: the most frequent natural disaster' (https://www.cred.be/sites/default/files/CredCrunch32.pdf) prints only a 1993-2012 cumulative 154,222 flood deaths.",
+  "2020: CRED Crunch 62 prints the 41% share and the 5,233 average but no 2020 flood count. CRED's report '2020: The Non-COVID Year in Disasters' is absent from the emdat.be listing; the UNDRR page https://www.undrr.org/quick/13439 and its download link https://www.undrr.org/media/49057/download return stubs without the PDF text, and https://reliefweb.int/report/world/2020-non-covid-year-disasters-global-trends-and-perspectives repeats the Crunch 62 wording with no attachment URL in the fetched text. Needs a person with a browser.",
+  "2022: the 2022 report (https://cred.be/sites/default/files/2022_EMDAT_report.pdf, fetched twice) and CRED Crunch 70 (https://cred.be/sites/default/files/CredCrunch70.pdf) give no sentence with a 2022 flood total. Figure 4's extracted tokens hold the 2002-2021 averages (1 057, 8 538, 5 195, 838, 37, 10 006, 90, 82: earthquake missing) and seven 2022 values (2 601, 16 416, 403, 0, 1 611, 6, 76) with the 2022 Flood and Earthquake labels missing; a comma-formatted run (5,021, 7,574, 16,393, 43, 1,673) could not be placed. Needs a person to read the chart.",
+  "2023: the 2023 report (https://files.emdat.be/reports/2023_EMDAT_report.pdf, fetched three times) and CRED Crunch 74 (https://files.emdat.be/2024/04/CredCrunch74.pdf) give no sentence with a 2023 flood total. Figure 4 tokens come out interleaved (21,304 63,445 162 35 1,527 1 157 35 124 11 470 5 518 35 803 10 017 80 86 62 451 7 763 0 654 14 666 23 264); 7 763 is the plausible Flood value (with 62 451 earthquake and 14 666 storm it fits the printed 86,473) but cannot be tied to the Flood label without seeing the chart, so no row was made.",
+  "2024: the 2024 report (https://files.emdat.be/reports/2024_EMDAT_report.pdf, fetched twice) and CRED Crunch 78 (https://files.emdat.be/2025/05/CredCrunch78.pdf) give no sentence with a 2024 flood total or share; Figure 4 tokens (3,587 9,820 345 713 2,288 1 169 36 876 16 800 10 742 77 96 16 10 198 5 570 0 602 5 883 2243 2 582 10 170) cannot be attributed to labels. Needs a person to read the chart.",
+  "CRED Crunch 54 'Disasters 2018: Year in Review' (https://cred.be/sites/default/files/CredCrunch54.pdf): only event-level flood deaths (India 504, Nigeria 300, Japan 230), no total; the 2018 figure comes from the fuller Natural disasters 2018 report.",
+  "EM-DAT itself: https://www.emdat.be/ prints only record counts by hazard type; the data portal https://public.emdat.be/ requires registration, which this task forbids, so no EM-DAT query was run and the 'EM-DAT query' citation the task asks for could not be produced.",
+  "Fetch budget: about 45 fetches and searches were used because the series spans 15 separate CRED documents; no press or secondary sites were used for figures."
+ ],
+ "notes": "Status partial: CRED's public publications print a flood-only yearly death count for 9 of the 15 years (2011, 2013-2019, 2021; 2019 already in the ledger). Where the count is in a sentence (2013-2016, 2011) the row quotes it; for 2017, 2018, 2021 (and the existing 2019) the count exists only as a data label in Figure 4 (deaths by disaster type) and was read through text extraction. For each of those the label order was checked against a printed total (2017 series = 9,697; 2018 average series = 67,572 exactly, plus the printed 24% share; 2021 series = 10,492; 2019: 43.5% of 11,755) so the reviewer can trust the alignment, but should still open the PDF and look at the Flood bar. Figures are written as the label prints them ('3 331', '2 879', '4143'). Missing: 2010 and 2012 are not printed as flood-only anywhere in CRED's public reports (ADSR 2010 prints no total at all; ADSR 2012 prints hydrological 3,574, recorded as its own row, scope floods plus landslides). 2020 has a printed share (41% of 15,080) and a printed 2000-2019 average (5,233) but no count; the CRED report that probably prints it could not be opened. 2022, 2023 and 2024 counts sit only in chart labels that text extraction scrambles; candidate tokens are in 'tried' but no row was made from a guess. The estimate row (75% of the 15-year mean) was NOT produced because only 9 of 15 years are sourced; it would need all 15 and would be grade D. Instead, CRED's own printed 2000-2019 flood average (5,233) is recorded as a sourced multi-year mean, with earlier CRED-printed averages listed in its scope (6,293; 5,933; 5,709; 5 039; 4913; 5 195: they drift as EM-DAT revises and as the window moves). Definitions: EM-DAT 'Flood' deaths are all causes (drowning, collapse, electrocution, disease) for events meeting EM-DAT entry criteria (10 deaths, 100 affected, emergency declaration or appeal); wet mass movements (landslides) are a separate type in every report except where noted; from 2013 onward the ADSRs sometimes label the flood number 'hydrological' (2013) or print only the hydrological total (2012). Counts are as of each report's data date (2017: EM-DAT file 02/07/2018; 2022: 2023-02-08; 2023: 2024-03-24; 2024: 2025-04-08; others not printed) and EM-DAT revises them later, so a single EM-DAT query would give different numbers from these contemporaneous prints: never mix the two series. 2011 is a preliminary newsletter figure. The 2013 report prints 45.4% (floods, p. 1) and 46.5% (hydrological, p. 22) for the same 9,819; the 2012 report prints 39% and 42.2% for 3,574; the Crunch 31 year total appears as 9,930 and 9,330. Corrections: emdat-flood-deaths-2019 note gains the figure's location and corroboration; flood-drowning-band note records progress. who-flood-share untouched. Reviewer by eye: Figure 4 Flood bars in the 2017, 2018, 2019 and 2021 reports; and whether the 2020 share row and the 2012 hydrological row are wanted in the ledger or only in this bundle. Roughly 45 fetches/searches were used, above the brief's 25, because 15 separate documents had to be opened.",
+ "next_tasks": [
+  {
+   "title": "Read the Flood data label in Figure 4 of CRED's 2022, 2023 and 2024 Disasters in Numbers reports and in the 2020 Non-COVID Year report (needs a person with a browser and PDF viewer)",
+   "why": "Text extraction scrambles the chart labels; a person can read the four missing years in minutes (candidate tokens for 2023 and 2024 are in this bundle's tried list) and complete 2020-2024."
+  },
+  {
+   "title": "Run one EM-DAT public-table query for flood deaths by year 2010-2024 with the as-of date (needs a person with a browser and a registered EM-DAT account)",
+   "why": "Gives 2010 and 2012 flood-only counts that no CRED publication prints, one consistent as-of date for all 15 years, and the basis for the 15-year mean and its 75% estimate row."
+  },
+  {
+   "title": "Decide whether flood-drowning-band is retired by CRED's printed 2000-2019 flood average (5,233) with who-flood-share applied as a grade D estimate",
+   "why": "The band row says a sourced multi-year average retires it; CRED prints one, and 75% of it is a one-line grade D estimate a person can add."
+  },
+  {
+   "title": "Check the ledger's who-flood-share (75%) against the study WHO's fact sheet rests on",
+   "why": "Every flood-drowning estimate in this series multiplies by it, and the ledger row cites only the fact sheet."
+  }
+ ]
+}
