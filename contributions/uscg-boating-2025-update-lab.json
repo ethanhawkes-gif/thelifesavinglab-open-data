@@ -1,0 +1,98 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "uscg-boating-2025-update",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Fable 5.1 (independent subagent in the lab's own session, 2026-10-21)"
+ },
+ "status": "not-found",
+ "rows": [],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://uscgboating.org/statistics/accident_statistics.php",
+   "quote": "2025 Pending Oct 31, 2026",
+   "where": "Accident statistics table, the row for 2025, read 21 Oct 2026: the three cells under the headings Year, File Size and Download PDF; the row carries no link. The 2024 row below it reads 2024, 6 MB, Download."
+  },
+  {
+   "url": "https://uscgboating.org/statistics/accident_statistics.php",
+   "quote": "Last Modified: October 2026",
+   "where": "Page footer, read 21 Oct 2026."
+  },
+  {
+   "url": "https://uscgboating.org/statistics/accident_statistics.php",
+   "quote": "The 2019-2023 Recreational Boating Statistics were revised on February 12, 2025.",
+   "where": "Revision note under the table, followed by 'Please see the record of changes page for specific edits.' No revision note or date appears next to the 2024 row; the record of changes page is not linked."
+  },
+  {
+   "url": "https://www.uscg.mil/boating-safety/statistics/incidents",
+   "quote": "2025 Statistics will be available by August 2026.",
+   "where": "Incident Statistics page body, read 21 Oct 2026; no link to any 2025 document. This date is older than the Oct 31, 2026 date shown on uscgboating.org."
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2024.pdf",
+   "quote": "In calendar year 2024, the Coast Guard verified 3,887 incidents that involved 556",
+   "where": "Executive summary, p. 6, re-read 21 Oct 2026; the sentence continues 'deaths, 2,170 injuries and approximately $88 million of damage to property'. Unchanged from the figures held in the ledger."
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2024.pdf",
+   "quote": "1 Drowning 365 48 310 7",
+   "where": "Table 1, 2024 Executive Summary, subtable 'Personal flotation device wear by top five known causes of death', p. 7; columns: rank, cause of death, number of deaths, worn, not worn, unknown if worn. Unchanged."
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2024.pdf",
+   "quote": "Where cause of death was known, 76% of fatal boating incident victims drowned.",
+   "where": "Executive summary, p. 6; the next sentence reads 'Where Personal Flotation Device usage was known, 87% were not wearing a Personal Floatation Device.' (spelling as printed)."
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2024.pdf",
+   "quote": "24 June 2025",
+   "where": "Date line on p. 2, after the signature block of the Foreword; the cover carries no date. The fetched text of this PDF ends on p. 43 (Table 19), after all items quoted here."
+  },
+  {
+   "url": "https://www.news.uscg.mil/Press-Releases/Article/4231745/coast-guard-reports-fewest-boating-fatalities-in-more-than-50-years/",
+   "quote": "Fatalities fell 1.4% to 556 from 564 in 2023, while overall incidents increased by 1.1% from 3,844 to 3.887.",
+   "where": "Coast Guard press release dated July 1, 2025 announcing the 2024 Recreational Boating Statistics Report, second paragraph (the incident figure is rendered '3.887' in the fetched text). No 2026 release announcing a 2025 edition was found."
+  },
+  {
+   "url": "https://uscgboating.org/multimedia/repository.php",
+   "quote": "2025 Life Jacket Wear Rate Observation Study Report is now available",
+   "where": "News repository, item dated 2026-04-27; the five most recent items (2 Mar to 25 Sep 2026) include nothing about the 2025 accident statistics."
+  },
+  {
+   "url": "https://waterwaysjournal.net/2026/10/16/rec-boater-safety-remains-an-ongoing-challenge",
+   "quote": "The Coast Guard releases statistics on boating incidents, the latest set covering 2024.",
+   "where": "Trade-press article dated October 16, 2026 (secondary; corroboration only): five days before this check the 2024 edition was still the latest."
+  }
+ ],
+ "tried": [
+  "Opened https://uscgboating.org/statistics/accident_statistics.php three times on 21 Oct 2026 with different prompts: the 2025 row reads 'Pending' under File Size and 'Oct 31, 2026' under Download PDF, with no link; the page footer says 'Last Modified: October 2026'. The 2024 row still links Recreational-Boating-Statistics-2024.pdf (6 MB) with no revision wording.",
+  "Guessed the PDF address from the naming pattern of earlier editions: https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf and the mirror https://mail.uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf: both return a fetch error (no such file yet).",
+  "https://www.uscg.mil/boating-safety/statistics/incidents (Coast Guard Incident Statistics page): says '2025 Statistics will be available by August 2026' and links no document; that date has passed and is older than the Oct 31, 2026 date on uscgboating.org.",
+  "https://uscgboating.org/statistics/index.php (Statistics landing page): no mention of a 2025 edition, no 2025 PDF link.",
+  "https://uscgboating.org/multimedia/repository.php (uscgboating.org news list): most recent items 25 Sep 2026 (Fall 2026 Boating Safety Circular), 10 Jun 2026, 27 Apr 2026 (2025 Life Jacket Wear Rate Observation Study), 23 Apr 2026, 2 Mar 2026 (2026 National Recreational Boating Safety Survey); none announces 2025 accident statistics.",
+  "https://www.news.uscg.mil/Press-Releases/ listing: the fetched copy shows releases only up to 2 Sep 2025 (stale or truncated), none about statistics. The only statistics release found is Article 4231745 of 1 July 2025 for the 2024 edition.",
+  "https://www.news.uscg.mil/maritime-commons/Tag/257960/nrbss/ (Maritime Commons): one article, 14 May 2026, on the 2026 National Recreational Boating Safety Survey; nothing on annual fatality statistics.",
+  "https://www.uscgboating.org/content/boating-safety-circulars.php and the Fall 2026 Boating Safety Circular (no. 107) PDF at https://uscgboating.org/library/boating-safety-circulars/Boating-Safety-Circular-Fall-2026.pdf: no 2025 national fatality or drowning figures and no release date for the 2025 statistics.",
+  "Searches (standard and extended): '2025 Recreational Boating Statistics Coast Guard', 'Coast Guard 2025 boating fatalities report released', 'uscgboating Recreational Boating Statistics 2025 pdf', 'news.uscg.mil boating statistics 2026', 'Coast Guard reports 2025 boating deaths statistics', 'Coast Guard boating fatalities 2025 calendar year report', '2025 Recreational Boating Statistics NASBLA', 'Coast Guard annual boating statistics release October 2026': every hit is the 2024 edition (press coverage dated 1-2 July 2025), the 2026 survey, or NMMA market reports.",
+  "Search 'calendar year 2025 Coast Guard verified incidents deaths recreational boating': only state-level 2025 reports (Texas Parks and Wildlife, Virginia DWR, Georgia DNR) and the 2024 national edition; no national 2025 figures.",
+  "Trade press check: Waterways Journal article of 16 Oct 2026 still cites the 2024 edition as the latest set and gives no 2025 release date.",
+  "The 'record of changes page' for the 12 Feb 2025 revisions of the 2019-2023 editions is named on both Coast Guard pages but not linked on either, and a search for it ('uscgboating record of changes boating statistics') returned only the 2013 revised report and ordinary editions; not read."
+ ],
+ "notes": "Checked 21 Oct 2026: the U.S. Coast Guard has not published the 2025 Recreational Boating Statistics. The producing page https://uscgboating.org/statistics/accident_statistics.php (Last Modified: October 2026) lists the 2025 edition as 'Pending' with the date 'Oct 31, 2026' in the Download PDF column, i.e. a planned posting date ten days after this check; the uscg.mil Incident Statistics page still says the 2025 statistics 'will be available by August 2026', which is stale. No PDF, press release, news item or circular with national calendar-2025 figures exists on any Coast Guard host, and searches surface only the 2024 edition and state-level 2025 reports. Status not-found per the task's acceptance rule, with no rows. On the 2024 figures: the page's only revision note covers the 2019-2023 editions (revised 12 Feb 2025) and nothing is printed against the 2024 row; the 2024 PDF re-read today is unchanged on every figure the ledger holds (556 deaths, p. 6; Table 1 Drowning 365 deaths, 48 worn, 310 not worn, 7 unknown, p. 7; 76% drowned where cause known and 87% not wearing a PFD where wear known, p. 6; Foreword dated 24 June 2025, p. 2), so no correction to uscg-boating-2024 or us-location-boating-2024 is proposed. One non-figure detail for the reviewer: the ledger row cites 24 June 2025, which is the date printed in the report's Foreword; the Coast Guard press release announcing the report is dated 1 July 2025. Both dates are correct for what they describe. The fetched text of the 2024 PDF ends on p. 43 in Table 19, after everything quoted here. What a person with a browser should check: re-open the accident_statistics.php page on or after 31 Oct 2026 and, if the 2025 PDF is posted, re-run this task to record total deaths, Table 1 drownings with PFD wear, and the executive-summary life-jacket statements with page numbers; also open the (unlinked) record of changes page to confirm no 2024 edits were made.",
+ "next_tasks": [
+  {
+   "title": "Re-check for the 2025 U.S. Coast Guard Recreational Boating Statistics on or after 31 Oct 2026 and record the printed deaths, drownings and life-jacket figures",
+   "why": "uscgboating.org lists the 2025 edition as Pending with the date Oct 31, 2026; this task should simply be re-run then."
+  },
+  {
+   "title": "Record the 2025 National Life Jacket Wear Rate Observational Study report (uscgboating.org news item of 27 Apr 2026) as a context row for life-jacket wear",
+   "why": "An official Coast Guard measure of observed wear rates that sits beside the fatality report's 'not wearing a life jacket' share; not a fatality figure and must not be mixed with it."
+  },
+  {
+   "title": "Find the Coast Guard 'record of changes' page for the 12 Feb 2025 revisions of the 2019-2023 Recreational Boating Statistics",
+   "why": "Both Coast Guard pages name it without a link; needed before any earlier-year USCG boating figure is added to the ledger, since those editions were revised."
+  }
+ ]
+}

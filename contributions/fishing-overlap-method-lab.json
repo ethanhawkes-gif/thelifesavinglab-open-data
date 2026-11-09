@@ -1,0 +1,444 @@
+{
+  "schema": "lifesavinglab.bundle.v1",
+  "task_id": "fishing-overlap-method",
+  "preamble_version": "1.4",
+  "contributor": {
+    "handle": "lab",
+    "agent": "Claude Fable 5.1 (independent subagent in the lab's own session, 2026-10-21)"
+  },
+  "status": "partial",
+  "rows": [
+    {
+      "id": "alaska-niosh-fishing-deaths-2015-2019-total",
+      "figure": "57 (averaging 11 a year)",
+      "low": 57,
+      "high": 57,
+      "unit": "deaths",
+      "year": 2019,
+      "scope": "All deaths recorded in NIOSH's Commercial Fishing Incident Database for the Alaska region, calendar 2015-2019: fatal occupational traumatic injuries in the commercial fishing industry (vessel crew, tendering and at-sea processing crews included; onboard drug overdoses, suicides and one homicide are counted), identified from U.S. Coast Guard reports, law enforcement, media and death certificates. No ICD codes are printed. The source's own incident types: vessel disaster 21, onboard injury 14, fall overboard 12, onshore 7, diving 3 (each a row below).",
+      "geography": "Alaska, United States",
+      "source": "NIOSH, Commercial Fishing Fatality Summary: Alaska Region (2015-2019), DHHS (NIOSH) Publication No. 2025-112, May 2025, Overview text and Figure 2 'Commercial Fishing Fatalities by Incident Type, Alaska, 2015-2019 (57 Total)'",
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "grade": "A",
+      "do_not_add_to": "An occupational-injury surveillance count of all causes, not a drowning count: do not add to any W65-W74 vital-statistics count, to us-total-2022 / us-cdc-4500 / us-cdc-4345, to uscg-boating-2024 or us-location-boating-2024, or to WHO/IHME totals. Do not add to alaska-niosh-fishing-deaths-2000-2019-total (same database, overlapping years), to the alaska-cfoi-* rows (different source and case definition), or across NIOSH regions. Do not scale to the global fishing rows.",
+      "note": "The five incident-type rows below are the printed split of this 57. Earlier periods printed in the same document: 45 deaths in 2010-2014; 236 in 2000-2019 (about 12 a year). Figure 2's extracted values were 17 (30%), 12 (21%), 14 (25%), 7 (12%), 3 (5%) and 4 (7%) with the legend labels not extractable; the text gives vessel disasters as 21 (37%), so 17 + 4 is presumably a split within vessel disasters that a person with a browser should read off the chart."
+    },
+    {
+      "id": "alaska-niosh-fishing-deaths-2015-2019-vessel-disaster",
+      "figure": "21 (37%)",
+      "low": 21,
+      "high": 21,
+      "unit": "deaths",
+      "year": 2019,
+      "scope": "Crewmember deaths in the nine fatal vessel disasters (CFID definition: a sinking, capsizing or fire in which the crew was forced to abandon ship), Alaska, 2015-2019; four disasters caused 14 of the 21 deaths, two large disasters 11. The source does not state how many of the 21 drowned rather than died of cold-water immersion or injury, nor how many bodies were recovered. Of 59 vessel disasters in the period, 50 were nonfatal.",
+      "geography": "Alaska, United States",
+      "source": "NIOSH, Commercial Fishing Fatality Summary: Alaska Region (2015-2019), Publication No. 2025-112, May 2025, Overview, Figure 2 and the Vessel Disasters section",
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "grade": "A",
+      "do_not_add_to": "A printed part of alaska-niosh-fishing-deaths-2015-2019-total; never re-added to it or to the other incident-type rows. Not a W65-W74 count: ICD-10 block W65-W74 excludes water-transport accidents (V90, V92), so these deaths would sit outside the WHO core drowning definition (icd-definition). Do not add to CFOI, USCG or vital-statistics rows.",
+      "note": "Mapping judgment (grade D, see alaska-fishing-icd10-mapping-judgment): a drowning after a sinking or capsizing is ICD-10 V90 (accident to watercraft causing drowning and submersion; fourth character .2 fishing boat); a non-drowning death in the same disaster is V91. The source's wording is 'The risk of cold-water immersion and drowning' (Vessel Disasters section)."
+    },
+    {
+      "id": "alaska-niosh-fishing-deaths-2015-2019-onboard-injury",
+      "figure": "14 (25%)",
+      "low": 14,
+      "high": 14,
+      "unit": "deaths",
+      "year": 2019,
+      "scope": "Fatal onboard injuries, Alaska, 2015-2019, as printed: unintentional drug overdoses 7, suicides 4, struck by gear 2, homicide 1; five of the 14 (36%) occurred at sea, the rest while anchored, moored or in dry dock. None of these are drownings.",
+      "geography": "Alaska, United States",
+      "source": "NIOSH, Commercial Fishing Fatality Summary: Alaska Region (2015-2019), Publication No. 2025-112, May 2025, Onboard Injuries section and Figure 6 'Causes of Fatal Onboard Injuries, Alaska, 2015-2019 (14 Total)'",
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "grade": "A",
+      "do_not_add_to": "A printed part of alaska-niosh-fishing-deaths-2015-2019-total; never re-added. Not drownings of any ICD kind: do not add to any drowning row, W65-W74 or V90/V92. Shows why an all-cause fisher-death figure (fishing-ilo-1999, fishing-fao-32000, fishing-fsf-100000) is not a drowning figure.",
+      "note": "Mapping judgment (grade D): overdose, suicide, struck-by and homicide deaths fall outside both W65-W74 and V90/V92; they would carry poisoning, intentional self-harm, mechanical-force or assault codes on a death certificate. The CFID case definition (MMWR 2010: 'fatal occupational traumatic injury') nonetheless includes them."
+    },
+    {
+      "id": "alaska-niosh-fishing-deaths-2015-2019-fall-overboard",
+      "figure": "12 fatalities (21%)",
+      "low": 12,
+      "high": 12,
+      "unit": "deaths",
+      "year": 2019,
+      "scope": "Crewmembers who died from drowning after falling overboard from a commercial fishing vessel, Alaska, 2015-2019; no vessel casualty involved. None wore a personal flotation device; 58% of the falls were not witnessed (of those, 4 were alone on deck and 2 alone on the vessel). Printed causes of the fall: lost balance, trip/slip, jumped, unknown (counts per cause not extractable).",
+      "geography": "Alaska, United States",
+      "source": "NIOSH, Commercial Fishing Fatality Summary: Alaska Region (2015-2019), Publication No. 2025-112, May 2025, Overview, Falls Overboard section and Figure 5 'Causes of Fatal Falls Overboard, Alaska, 2015-2019 (12 Total)'",
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "grade": "A",
+      "do_not_add_to": "A printed part of alaska-niosh-fishing-deaths-2015-2019-total; never re-added. All 12 are drownings, but under ICD-10 rules a fall overboard from a watercraft is V92, which block W65-W74 explicitly excludes: do not add to W65-W74 counts or treat as inside the WHO core definition (icd-definition). Do not add to CFOI or USCG rows.",
+      "note": "Mapping judgment (grade D): ICD-10 V92 'Water-transport-related drowning and submersion without accident to watercraft' lists fall overboard, washed overboard and thrown overboard by motion of ship among its inclusions, so these 12 would be coded V92.2 (fishing boat) on a U.S. death certificate, not W65-W74. The task text's example ('falls overboard without a vessel casualty would normally be coded W65-W74') is not supported by the ICD-10 inclusion terms; both readings are given in the bundle notes."
+    },
+    {
+      "id": "alaska-niosh-fishing-deaths-2015-2019-onshore",
+      "figure": "7 (12%)",
+      "low": 7,
+      "high": 7,
+      "unit": "deaths",
+      "year": 2019,
+      "scope": "Onshore fatalities of commercial fishing crewmembers, Alaska, 2015-2019: all seven were crewmembers falling off docks and drowning, without a PFD and under the influence of alcohol. No vessel involved.",
+      "geography": "Alaska, United States",
+      "source": "NIOSH, Commercial Fishing Fatality Summary: Alaska Region (2015-2019), Publication No. 2025-112, May 2025, Onshore section and Figure 2",
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "grade": "A",
+      "do_not_add_to": "A printed part of alaska-niosh-fishing-deaths-2015-2019-total; never re-added. The only 2015-2019 category that would plausibly sit inside W65-W74, together with the two diving drownings; still an incident-database count, not a vital-statistics count, so do not add to CDC WONDER or us-total-2022.",
+      "note": "Mapping judgment (grade D): a fall from a dock into the harbour would normally be W70 'Drowning and submersion following fall into natural water' (or W69), inside W65-W74. Soft edge: ICD-10 V92 includes a fall from a gangplank, so a certifier who records a fall while boarding could code V92 instead."
+    },
+    {
+      "id": "alaska-niosh-fishing-deaths-2015-2019-diving",
+      "figure": "3 (5%)",
+      "low": 3,
+      "high": 3,
+      "unit": "deaths",
+      "year": 2019,
+      "scope": "Commercial dive-harvest fatalities, Alaska, 2015-2019: geoduck harvest 2, sea cucumber harvest 1; causes as printed were drowning (2 fatalities) and embolism (1 fatality).",
+      "geography": "Alaska, United States",
+      "source": "NIOSH, Commercial Fishing Fatality Summary: Alaska Region (2015-2019), Publication No. 2025-112, May 2025, Diving section and Figure 2",
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "grade": "A",
+      "do_not_add_to": "A printed part of alaska-niosh-fishing-deaths-2015-2019-total; never re-added. Only the 2 drownings are drowning deaths; the embolism is not. Do not add to vital-statistics or CFOI rows.",
+      "note": "Mapping judgment (grade D): ICD-10 V92 excludes 'drowning or submersion of swimmer or diver who voluntarily jumps from boat not involved in an accident' and points to W69/W73, so the two diving drownings would sit inside W65-W74; the embolism death would carry a non-drowning code."
+    },
+    {
+      "id": "alaska-niosh-fishing-deaths-2000-2019-total",
+      "figure": "236",
+      "low": 236,
+      "high": 236,
+      "unit": "deaths",
+      "year": 2019,
+      "scope": "Fishing industry workers who died in Alaska, 2000-2019, per NIOSH's Alaska Occupational Injury Surveillance System and Commercial Fishing Incident Database. Printed split by incident type: Vessel Disaster (103, 44%), Fall Overboard (68, 29%), Onboard Fatality (38, 16%), Onshore Fatality (17, 7%), Diving Fatality (10, 4%). Printed top three causes of death: Drowning (180, 76%), Blunt Force Trauma (18, 8%), Unintentional Overdose (11, 5%). No ICD codes; no per-year counts on the page.",
+      "geography": "Alaska, United States",
+      "source": "NIOSH, Commercial Fishing Safety: Alaska (web page, last reviewed 4 December 2023), Quick Stats: 'During 2000-2019, 236 Fishing Industry Workers Died in Alaska', 'Types of Incidents Causing Fatalities', 'Top Three Causes of Death'",
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "grade": "A",
+      "do_not_add_to": "Contains the 2015-2019 rows (same database); never added to them. An all-cause occupational count: do not add to W65-W74 counts, to us-total-2022, to USCG or CFOI rows, or to WHO/IHME. Do not scale to the global fishing rows.",
+      "note": "The page also says fishing fatalities due to traumatic injury in Alaska fell 70% over 1990-2023 and gives decade averages of 22 (1990-1999), 13.4 (2000-2009) and 10.2 (2010-2019) deaths a year, so NIOSH holds data to 2023 that is not tabulated on the page. Under the grade-D mapping, at most onshore 17 + diving 10 of the 236 could sit inside W65-W74 and vessel disaster 103 + fall overboard 68 in V90/V92; the page does not cross-tabulate cause by incident type."
+    },
+    {
+      "id": "alaska-niosh-fishing-deaths-2000-2019-cause-drowning",
+      "figure": "Drowning (180, 76%)",
+      "low": 180,
+      "high": 180,
+      "unit": "deaths",
+      "year": 2019,
+      "scope": "Deaths with drowning as the cause of death among the 236 fishing industry workers who died in Alaska in 2000-2019, as recorded by NIOSH (medical cause, not an ICD underlying-cause code). Spans drownings after vessel disasters, falls overboard, falls from docks and while diving, i.e. both V90/V92 and W65-W74 territory under ICD-10. The page's other printed causes: Blunt Force Trauma (18, 8%), Unintentional Overdose (11, 5%).",
+      "geography": "Alaska, United States",
+      "source": "NIOSH, Commercial Fishing Safety: Alaska (web page, last reviewed 4 December 2023), Quick Stats, 'Top Three Causes of Death'",
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "grade": "A",
+      "do_not_add_to": "A printed part of alaska-niosh-fishing-deaths-2000-2019-total; never re-added. Not a W65-W74 count and not a V90/V92 count: it mixes both. Do not add to any vital-statistics drowning row, to USCG rows, or to WHO/IHME.",
+      "note": "This is the only place found where NIOSH prints 'drowning' as a cause for Alaska fishing deaths. The four water-related incident types (103 + 68 + 17 + 10 = 198, own arithmetic within one source) exceed the 180 printed drownings, so some vessel-disaster, overboard, onshore or diving deaths were not drownings; the page does not say which."
+    },
+    {
+      "id": "alaska-cfoi-fishing-deaths-2024",
+      "figure": "10",
+      "low": 10,
+      "high": 10,
+      "unit": "deaths",
+      "year": 2024,
+      "scope": "Fatal occupational injuries to fishing and hunting workers (occupation) in Alaska, calendar 2024, Census of Fatal Occupational Injuries; the same 10 are the whole 'Fishing' industry group and the whole agriculture, forestry, fishing and hunting sector (up from 3 in 2023). Out of 24 fatal work injuries in Alaska in 2024. CFOI counts harvesting occupations only and excludes seafood processors; event classification is OIICS, not ICD.",
+      "geography": "Alaska, United States",
+      "source": "U.S. Bureau of Labor Statistics, Fatal Work Injuries in Alaska - 2024 (news release, 1 April 2026), text and Tables 2 and 3",
+      "url": "https://www.bls.gov/regions/west/news-release/2026/fatalworkinjuries_alaska_20260401.htm",
+      "grade": "A",
+      "do_not_add_to": "A second source for the same region with a narrower case definition than NIOSH CFID: never added to or averaged with the alaska-niosh-* rows, nor with the NIOSH national regions. Not a drowning count: do not add to W65-W74, V90/V92, USCG or WHO/IHME rows.",
+      "note": "Recorded as the single most recent year found for Alaska. The word 'drowning' does not appear in the release. The 2023 CFOI count (3) is far below NIOSH's average of about 11 a year for 2015-2019; a CFOI-based Alaska Department of Labor article reports zero harvesting fatalities in 2015, a year inside NIOSH's 57. The case definitions differ; record both, never reconcile by arithmetic."
+    },
+    {
+      "id": "alaska-cfoi-fishing-transportation-incidents-2024",
+      "figure": "8 of the 10",
+      "low": 8,
+      "high": 8,
+      "unit": "deaths",
+      "year": 2024,
+      "scope": "Fatalities in the agriculture, forestry, fishing and hunting sector (all 10 of which were in fishing) whose OIICS event was a transportation incident, Alaska, 2024. The release's all-industry Alaska 2024 water-vehicle rows (Table 1) are: water vehicle incidents 8; capsized or sinking water vehicle (non collision) 5; incidents onboard water vehicle in normal operation 3, of which fall, jump from water vehicle 3. These Table 1 rows are not fishing-specific and are not a drowning count.",
+      "geography": "Alaska, United States",
+      "source": "U.S. Bureau of Labor Statistics, Fatal Work Injuries in Alaska - 2024 (news release, 1 April 2026), Private industry section and Table 1 'Fatal occupational injuries by event or exposure, Alaska, 2023-24'",
+      "url": "https://www.bls.gov/regions/west/news-release/2026/fatalworkinjuries_alaska_20260401.htm",
+      "grade": "A",
+      "do_not_add_to": "A printed part of alaska-cfoi-fishing-deaths-2024; never re-added. Do not add to the NIOSH rows, to W65-W74 or V90/V92 counts, or to USCG rows. The all-industry water-vehicle split in the scope must not be attributed to fishing without the microdata.",
+      "note": "Mapping judgment (grade D): OIICS 'capsized or sinking water vehicle' corresponds to a vessel disaster (ICD-10 V90/V91) and 'fall, jump from water vehicle' to a fall overboard (V92); neither sits inside W65-W74. That all 8 all-industry water-vehicle deaths were the 8 fishing transportation incidents is likely but not printed."
+    },
+    {
+      "id": "alaska-fishing-icd10-mapping-judgment",
+      "figure": "Vessel disaster -> V90 (V91 if not drowned); fall overboard -> V92; dock-fall and diving drownings -> W65-W74; onboard overdose, suicide, struck-by, homicide -> no drowning code",
+      "low": null,
+      "high": null,
+      "unit": "mapping (ICD-10 judgment)",
+      "year": null,
+      "scope": "A reading of the ICD-10 Chapter XX text (WHO 5th edition as mirrored by NHS Digital) applied to NIOSH's Alaska incident types. Not a finding: NIOSH prints no ICD codes and the Alaska death certificates were not seen. The decisive clauses are the W65-W74 exclusion of 'water transport accident (V90.-, V92.-)', the V92 inclusions (fall overboard, washed overboard, thrown overboard by motion of ship) and the V92 exclusion of divers who voluntarily enter the water from a boat not in an accident (to W69, W73).",
+      "geography": "Alaska, United States",
+      "source": "Lab judgment from ICD-10 Chapter XX, block V90-V94 (V90 and V92 titles, inclusion and exclusion notes) and block W65-W74 (exclusion note, W69, W70, W73 titles), NHS Digital ICD-10 5th edition classification browser",
+      "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-v90-v94.htm",
+      "grade": "D",
+      "do_not_add_to": "A mapping, not a count. Never used to compute a global overlap between the fishing rows (fishing-ilo-1999, fishing-fao-32000, fishing-fsf-100000) and WHO's W65-W74 figure; applies to NIOSH's Alaska categories and to a jurisdiction that codes death certificates to ICD-10 rules. Where certification is weak, at-sea fisher drownings may be coded W74 instead.",
+      "note": "Resulting fractions, all numerators and denominators printed by NIOSH (2015-2019, 57 deaths): inside W65-W74 = onshore 7/57 plus diving drownings 2/57; V90/V92 = vessel disaster 21/57 plus fall overboard 12/57; outside drowning codes = onboard 14/57 plus diving embolism 1/57. Alternative reading used as an example in the task text (falls overboard inside W65-W74) would move 12/57 across; the ICD-10 inclusion terms argue against it. Full working in the bundle notes."
+    }
+  ],
+  "corrections": [
+    {
+      "row_id": "icd-definition",
+      "field": "note",
+      "old": "X38 flood, V90/V92 water transport, Y21 undetermined intent.",
+      "new": "X38 flood, V90/V92 water transport (V90 = accident to watercraft causing drowning; V92 = fall overboard, washed overboard or thrown overboard without accident to watercraft; block W65-W74 explicitly excludes both, so fisher drownings at sea sit outside the core), Y21 undetermined intent.",
+      "evidence": "ICD-10 Chapter XX text, NHS Digital ICD-10 5th edition browser: block W65-W74 exclusion note 'water transport accident (V90.-, V92.-)'; V92 title and inclusion terms (fall overboard, washed overboard, thrown overboard by motion of ship); V90 title. Bundle fishing-overlap-method, evidence items from classbrowser.nhs.uk."
+    },
+    {
+      "row_id": "fishing-fsf-100000",
+      "field": "note",
+      "old": "No comprehensive global data on fisher deaths exists; no agreed definition of a fisher.",
+      "new": "No comprehensive global data on fisher deaths exists; no agreed definition of a fisher. Alaska test (NIOSH CFID, 2015-2019, 57 deaths; bundle fishing-overlap-method): 21 vessel-disaster and 12 fall-overboard deaths map to ICD-10 V90/V92, outside W65-W74; only 7 dock-fall and 2 diving drownings map inside W65-W74; 14 onboard deaths (overdose, suicide, struck by gear, homicide) and 1 embolism were not drownings. Mapping is a grade-D judgment; one region only.",
+      "evidence": "NIOSH Publication No. 2025-112 (May 2025), Overview, Figure 2 and the Vessel Disasters, Falls Overboard, Onboard Injuries, Onshore and Diving sections; ICD-10 blocks V90-V94 and W65-W74 (NHS Digital browser). Rows alaska-niosh-fishing-deaths-2015-2019-* and alaska-fishing-icd10-mapping-judgment in bundle fishing-overlap-method."
+    },
+    {
+      "row_id": "fishing-ilo-1999",
+      "field": "note",
+      "old": "Still used by authorities; called \"seemingly faulty, decades-old\" by FISH Safety Foundation.",
+      "new": "Still used by authorities; called \"seemingly faulty, decades-old\" by FISH Safety Foundation. Overlap test for one region (bundle fishing-overlap-method): in Alaska 2015-2019 (NIOSH CFID, 57 deaths) 33 were vessel-disaster or fall-overboard deaths that ICD-10 codes as V90/V92 outside W65-W74, 9 were dock-fall or diving drownings that would sit inside W65-W74, and 15 were not drownings (grade-D mapping; printed categories 21, 12, 7, 2, 14, 1).",
+      "evidence": "NIOSH Publication No. 2025-112 (May 2025), Overview, Figure 2 and incident-type sections; ICD-10 blocks V90-V94 and W65-W74 (NHS Digital browser). Rows alaska-niosh-fishing-deaths-2015-2019-* and alaska-fishing-icd10-mapping-judgment in bundle fishing-overlap-method."
+    },
+    {
+      "row_id": "fishing-fao-32000",
+      "field": "note",
+      "old": "",
+      "new": "Overlap test for one region (bundle fishing-overlap-method): in Alaska 2015-2019 (NIOSH CFID, 57 deaths) only 7 dock-fall and 2 diving drownings would sit inside W65-W74; 21 vessel-disaster and 12 fall-overboard deaths code to V90/V92 under ICD-10 rules; 15 were not drownings. Grade-D mapping, one region; do not apply the fraction globally.",
+      "evidence": "NIOSH Publication No. 2025-112 (May 2025), Overview, Figure 2 and incident-type sections; ICD-10 blocks V90-V94 and W65-W74 (NHS Digital browser). Rows alaska-niosh-fishing-deaths-2015-2019-* and alaska-fishing-icd10-mapping-judgment in bundle fishing-overlap-method."
+    }
+  ],
+  "evidence": [
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "For the most recent five-year period (2015–2019), 57 commercial fishing fatalities were recorded, averaging 11 fatalities",
+      "where": "NIOSH Publication No. 2025-112, Overview (inside front cover)"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "The data presented in this report come from the NIOSH Commercial Fishing Incident Database",
+      "where": "NIOSH Publication No. 2025-112, footnote 1"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "Figure 2: Commercial Fishing Fatalities by Incident Type, Alaska, 2015–2019 (57 Total)",
+      "where": "NIOSH Publication No. 2025-112, Figure 2 title"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "Nine vessel disasters resulted in the deaths of 21 crewmembers",
+      "where": "NIOSH Publication No. 2025-112, Vessel Disasters section"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "Four of the disasters had loss of life with a total of 14 fatalities.",
+      "where": "NIOSH Publication No. 2025-112, Vessel Disasters section"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "Drowning following a fall overboard was the third leading cause of death with 12 fatalities (21%).",
+      "where": "NIOSH Publication No. 2025-112, Overview"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "None of the crewmembers were wearing personal flotation devices (PFDs) when they drowned.",
+      "where": "NIOSH Publication No. 2025-112, Falls Overboard section"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "Of these 14 fatalities, seven were due to unintentional drug overdoses and four were due to suicide.",
+      "where": "NIOSH Publication No. 2025-112, Onboard Injuries section"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "The remaining onboard fatalities involved two crewmembers being struck by gear and one homicide.",
+      "where": "NIOSH Publication No. 2025-112, Onboard Injuries section"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "All seven fatalities involved crewmembers falling off docks and drowning without PFDs while under the influence of alcohol.",
+      "where": "NIOSH Publication No. 2025-112, Onshore section"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "died from drowning (2 fatalities) or embolism (1 fatality)",
+      "where": "NIOSH Publication No. 2025-112, Diving section"
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf",
+      "quote": "The risk of cold-water immersion and drowning highlights the need to address the leading causes of vessel disasters.",
+      "where": "NIOSH Publication No. 2025-112, Vessel Disasters section"
+    },
+    {
+      "url": "https://stacks.cdc.gov/view/cdc/257831",
+      "quote": "2025/05/01",
+      "where": "CDC Stacks record for Commercial Fishing Fatality Summary - Alaska Region: 2015-2019, publication date field (NIOSH Publication No. 2025-112)"
+    },
+    {
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "quote": "During 2000-2019, 236 Fishing Industry Workers Died in Alaska.",
+      "where": "NIOSH Commercial Fishing Safety: Alaska, Quick Stats heading (page dated 4 December 2023)"
+    },
+    {
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "quote": "Vessel Disaster (103, 44%)",
+      "where": "Quick Stats, list 'Types of Incidents Causing Fatalities', 2000-2019"
+    },
+    {
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "quote": "Fall Overboard (68, 29%)",
+      "where": "Quick Stats, list 'Types of Incidents Causing Fatalities', 2000-2019"
+    },
+    {
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "quote": "Onboard Fatality (38, 16%)",
+      "where": "Quick Stats, list 'Types of Incidents Causing Fatalities', 2000-2019"
+    },
+    {
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "quote": "Onshore Fatality (17, 7%)",
+      "where": "Quick Stats, list 'Types of Incidents Causing Fatalities', 2000-2019"
+    },
+    {
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "quote": "Diving Fatality (10, 4%)",
+      "where": "Quick Stats, list 'Types of Incidents Causing Fatalities', 2000-2019"
+    },
+    {
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "quote": "Drowning (180, 76%)",
+      "where": "Quick Stats, list 'Top Three Causes of Death', 2000-2019"
+    },
+    {
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "quote": "Blunt Force Trauma (18, 8%)",
+      "where": "Quick Stats, list 'Top Three Causes of Death', 2000-2019"
+    },
+    {
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "quote": "Unintentional Overdose (11, 5%)",
+      "where": "Quick Stats, list 'Top Three Causes of Death', 2000-2019"
+    },
+    {
+      "url": "https://cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html",
+      "quote": "NIOSH Alaska Occupational Injury Surveillance System and Commercial Fishing Incident Database.",
+      "where": "Sources list at the foot of the page"
+    },
+    {
+      "url": "https://www.cdc.gov/MMWR/Preview/MMWRhtml/mm5927a2.htm",
+      "quote": "a fatality case is defined as a fatal occupational traumatic injury in the commercial fishing industry",
+      "where": "MMWR, Commercial Fishing Deaths - United States, 2000-2009 (2010), Methods, second paragraph"
+    },
+    {
+      "url": "https://www.cdc.gov/MMWR/Preview/MMWRhtml/mm5927a2.htm",
+      "quote": "reports from the U.S. Coast Guard (USCG), local law enforcement agencies, and local media; death certificates",
+      "where": "MMWR, Commercial Fishing Deaths - United States, 2000-2009 (2010), Methods, second paragraph (CFID data sources)"
+    },
+    {
+      "url": "https://www.cdc.gov/MMWR/Preview/MMWRhtml/mm5927a2.htm",
+      "quote": "Vessel disaster is a sinking, capsizing, or fire in which the crew was forced to abandon ship.",
+      "where": "MMWR, Commercial Fishing Deaths - United States, 2000-2009 (2010), footnote"
+    },
+    {
+      "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-v90-v94.htm",
+      "quote": "Water-transport-related drowning and submersion without accident to watercraft",
+      "where": "ICD-10 5th edition, Chapter XX, block V90-V94, V92 title"
+    },
+    {
+      "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-v90-v94.htm",
+      "quote": "drowning and submersion as a result of an accident, such as:",
+      "where": "ICD-10 block V90-V94, V92 inclusion note, followed by fall from gangplank, fall from ship, fall overboard"
+    },
+    {
+      "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-v90-v94.htm",
+      "quote": "washed overboard",
+      "where": "ICD-10 block V90-V94, V92 inclusion terms (with 'thrown overboard by motion of ship')"
+    },
+    {
+      "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-v90-v94.htm",
+      "quote": "drowning or submersion of swimmer or diver who voluntarily jumps from boat not involved in an accident",
+      "where": "ICD-10 block V90-V94, V92 exclusion note, pointing to W69 and W73"
+    },
+    {
+      "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-v90-v94.htm",
+      "quote": "Accident to watercraft causing drowning and submersion",
+      "where": "ICD-10 block V90-V94, V90 title; inclusions list boat overturning and boat sinking"
+    },
+    {
+      "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-w65-w74.htm",
+      "quote": "water transport accident (V90.-, V92.-)",
+      "where": "ICD-10 block W65-W74 'Accidental drowning and submersion', exclusion note (with cataclysm X34-X39 and transport accidents V01-V99)"
+    },
+    {
+      "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-w65-w74.htm",
+      "quote": "Drowning and submersion following fall into natural water.",
+      "where": "ICD-10 block W65-W74, W70 title"
+    },
+    {
+      "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-w65-w74.htm",
+      "quote": "Drowning and submersion while in natural water.",
+      "where": "ICD-10 block W65-W74, W69 title; inclusions lake, open sea, river, stream"
+    },
+    {
+      "url": "https://www.bls.gov/regions/west/news-release/2026/fatalworkinjuries_alaska_20260401.htm",
+      "quote": "The fishing industry group accounted for all 10 of the sector's fatal workplace injuries.",
+      "where": "BLS, Fatal Work Injuries in Alaska - 2024 (1 April 2026), Private industry section"
+    },
+    {
+      "url": "https://www.bls.gov/regions/west/news-release/2026/fatalworkinjuries_alaska_20260401.htm",
+      "quote": "Transportation incidents resulted in 8 of the 10 fatalities in this sector.",
+      "where": "BLS, Fatal Work Injuries in Alaska - 2024 (1 April 2026), Private industry section"
+    },
+    {
+      "url": "https://www.bls.gov/regions/west/news-release/2026/fatalworkinjuries_alaska_20260401.htm",
+      "quote": "Capsized or sinking water vehicle (non collision)",
+      "where": "BLS, Fatal Work Injuries in Alaska - 2024, Table 1 'Fatal occupational injuries by event or exposure, Alaska, 2023-24', 2024 count 5 (21%), all industries"
+    },
+    {
+      "url": "https://www.bls.gov/regions/west/news-release/2026/fatalworkinjuries_alaska_20260401.htm",
+      "quote": "Fall, jump from water vehicle",
+      "where": "BLS, Fatal Work Injuries in Alaska - 2024, Table 1, 2024 count 3 (13%), all industries"
+    },
+    {
+      "url": "https://live.laborstats.alaska.gov/sites/default/files/trends/nov23art2.pdf",
+      "quote": "The lowest was zero in 2015, the only year in that span with no harvesting fatalities.",
+      "where": "Alaska Economic Trends, November 2023, commercial fishing fatalities article, pp. 10-12 (CFOI-based)"
+    }
+  ],
+  "tried": [
+    "cdc.gov/niosh/publications/numbered/2025-112.html: landing page only (no figures); it links the PDF used for the rows.",
+    "www.cdc.gov/niosh/docs/2025-112/pdfs/2025-112.pdf fetched three times with different prompts: Figure 2 legend labels and Figure 1 per-year counts (2000-2019) are not in the extracted text, so the 17 (30%) / 4 (7%) split within the 21 vessel-disaster deaths and the single-year 2015-2019 counts could not be read; the text totals and category counts were complete.",
+    "stacks.cdc.gov/view/cdc/257831: bibliographic record only (publication date 2025/05/01, PDF mirror at stacks.cdc.gov/view/cdc/257831/cdc_257831_DS1.pdf); no fatality counts.",
+    "www.cdc.gov/niosh/fishing/data-research/index.html: WebFetch returned a fetch error; the CFID case definition was taken from the 2010 MMWR instead.",
+    "cdc.gov/niosh/fishing/data-research/regional-summaries/alaska.html gives 2000-2019 splits and a 1990-2023 trend sentence but no per-year table and nothing after 2019 by incident type.",
+    "Injury Epidemiology (2021) article 'Application of data linkage techniques to Pacific Northwest commercial fishing injury and fatality data' on link.springer.com: only the CFID vessel-disaster definition and a sources sentence (USCG reports and news articles); no ICD coding or death-certificate comparison, so not used for rows and its URL (which contains a long hyphenated DOI string) is left out of the evidence list.",
+    "live.laborstats.alaska.gov Alaska Economic Trends November 2023 article: CFOI-based decade averages (20, 11, 8 a year) and 'zero in 2015' only; no event split; chart values not extractable.",
+    "www.bls.gov Alaska fatal work injuries release for 2024: the word drowning does not appear; the water-vehicle event rows are all-industry, so no fishing-by-drowning cross-tabulation could be taken from it.",
+    "Searches run: 'NIOSH commercial fishing fatality summary Alaska'; 'ICD-10 V92 water-transport-related drowning without accident to watercraft'; 'NIOSH Commercial Fishing Incident Database CFID data sources'; 'NIOSH commercial fishing fatalities national summary 2015-2019'; 'MMWR commercial fishing deaths United States 2000-2009 NIOSH'; 'NIOSH Alaska commercial fishing fatalities 2023'; 'BLS CFOI fishing and hunting workers fatal injuries drowning event'.",
+    "Not attempted because Alaska succeeded: Norway (sdir.no), Maritime NZ, AMSA / Safe Work Australia, and the BLS national CFOI occupation-by-event tables; listed as next tasks.",
+    "No source with ICD-10 codes for these deaths was found: NIOSH prints incident types and (for 2000-2019) medical causes; BLS prints OIICS events. CDC WONDER (which could give V90.2/V92.2 and W65-W74 underlying-cause counts for Alaska) cannot be queried through WebFetch."
+  ],
+  "notes": "METHOD TEST on one region: Alaska, via NIOSH's Commercial Fishing Incident Database (CFID). NIOSH prints its own incident types, not ICD codes, so status is partial. Period 2015-2019 (NIOSH Publication No. 2025-112, May 2025), 57 deaths printed: vessel disaster 21, onboard injury 14, fall overboard 12, onshore 7, diving 3. The document says which were drownings: all 12 falls overboard, all 7 onshore deaths (falls off docks), 2 of the 3 diving deaths; the 14 onboard deaths were overdoses 7, suicides 4, struck by gear 2, homicide 1; for the 21 vessel-disaster deaths it does not separate drowning from cold-water immersion or injury.\n\nICD-10 MAPPING (GRADE D JUDGMENT, not a finding). ICD-10 text: block W65-W74 excludes 'water transport accident (V90.-, V92.-)'; V92 includes fall overboard, washed overboard and thrown overboard by motion of ship; V92 excludes divers who voluntarily enter the water from a boat not in an accident (to W69/W73). Applied to the printed categories, denominator 57 as printed:\n- Inside W65-W74: onshore dock-fall drownings 7/57 and diving drownings 2/57; together 9/57, about 16% (own arithmetic within one source).\n- Water transport V90/V92: vessel disaster 21/57 (V90 if drowned, V91 if not) and fall overboard 12/57 (V92); together 33/57, about 58%.\n- Outside all drowning codes: onboard 14/57 and the diving embolism 1/57; together 15/57, about 26%.\n- The example mapping in the task text (falls overboard inside W65-W74) would give 21/57 (37%) inside and 21/57 in V90; the ICD-10 inclusion terms argue against it, since a fall from a fishing boat is V92 (fourth character .2). The soft edge runs the other way too: V92 includes a fall from a gangplank, so some dock-fall deaths could be certified V92 rather than W70.\n\nPeriod 2000-2019 (NIOSH Alaska page, 236 deaths): vessel disaster 103, fall overboard 68, onboard 38, onshore 17, diving 10; printed causes of death drowning 180 (76%), blunt force trauma 18, unintentional overdose 11. Same mapping: W65-W74 candidates at most onshore 17/236 and diving 10/236 (together 27/236, about 11%, an upper bound since the page does not split cause by incident type); V90/V92 candidates vessel disaster 103/236 and fall overboard 68/236 (together 171/236, about 72%); onboard 38/236 outside. The four water-related types add to 198 (own arithmetic), above the 180 printed drownings, so some were not drownings.\n\nREADING FOR THE LEDGER: where death certificates are coded to ICD-10 rules, most fisher drownings are at-sea drownings coded V90/V92, outside the W65-W74 core in icd-definition; the Alaska share inside W65-W74 is about one in six (2015-2019) and at most about one in nine (2000-2019). One region with strong coding: do not apply these fractions globally to fishing-ilo-1999, fishing-fao-32000 or fishing-fsf-100000; where certification is weak, at-sea drownings may be coded W74 and would then sit inside the WHO figure. CDC's own U.S. total (us-total-2022) already includes V90 and V92, so the U.S. overlap question differs from WHO GHE's.\n\nSECOND SOURCE, same region, one recent year (BLS CFOI, Alaska 2024): 10 fatal injuries to fishing and hunting workers, 8 of them transportation incidents; all-industry water-vehicle rows: capsized or sinking 5, fall/jump from water vehicle 3 (OIICS events, not ICD, not fishing-specific). CFOI counts harvesting occupations only, CFID includes tendering and at-sea processing; a CFOI-based Alaska Department of Labor article reports zero harvesting fatalities in 2015 inside NIOSH's 57. Record both; never add them.\n\nCOINCIDENTAL SUMS the checker may flag: 21 = 14 + 7 and 10 = 7 + 3 are printed values, not sums. Corrections are additive note text; current ledger values kept verbatim as 'old'.\n\nBROWSER CHECKS: NIOSH 2025-112 Figure 2 legend (the 17 and 4 within the 21 vessel-disaster deaths), Figure 1 per-year counts 2015-2019, Figure 5 per-cause counts for the 12 falls overboard.",
+  "next_tasks": [
+    {
+      "title": "Replace the grade-D mapping with coded data: CDC WONDER underlying-cause counts for Alaska residents or occurrences, 2015-2019, ICD-10 V90.2 and V92.2 (fishing boat) versus W65-W74",
+      "why": "WONDER prints four-character ICD-10 codes and would show how Alaska's fishing-vessel drownings were actually certified; counts under 10 are suppressed, so a five-year pool is needed."
+    },
+    {
+      "title": "Read Figure 2 and Figure 1 of NIOSH Publication No. 2025-112 with a browser: the 17 (30%) / 4 (7%) split inside the 21 vessel-disaster deaths and the per-year Alaska counts for 2015-2019",
+      "why": "Text extraction lost the chart labels; a single-year count and the vessel-disaster sub-split would sharpen the Alaska fractions."
+    },
+    {
+      "title": "Repeat the overlap method for Norway using the Norwegian Maritime Authority (sdir.no) fishing-fleet accident statistics, one recent year",
+      "why": "A second complete-registration country tests whether Alaska's roughly one-in-six share inside W65-W74 is typical."
+    },
+    {
+      "title": "Repeat the overlap method for New Zealand (Maritime NZ) or Australia (AMSA, Safe Work Australia), one recent year",
+      "why": "Same reason; Southern-hemisphere fleets with different vessel mixes and coding practice."
+    },
+    {
+      "title": "BLS CFOI national cross-tabulation: fishing and hunting workers by event, including 'drowning, submersion' and water-vehicle events, latest year",
+      "why": "The Alaska release has no fishing-by-drowning table; the national CFOI occupation-by-event tables may, giving a U.S.-wide (not Alaska) comparison without ICD codes."
+    },
+    {
+      "title": "Document the CFID versus CFOI case-definition gap for Alaska fishing deaths (NIOSH about 11 a year 2015-2019 versus CFOI 3 in 2023 and zero in 2015)",
+      "why": "Two official U.S. series for the same fleet differ several-fold; the ledger should explain why before either is cited as 'the' Alaska figure."
+    }
+  ]
+}

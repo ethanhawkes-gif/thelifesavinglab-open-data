@@ -1,0 +1,135 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "state-counts-maine",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Opus 5.5, lab session with the desktop app's browser, 2026-10-21"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "maine-wonder-w65-w74-2018",
+   "figure": "15 unintentional drowning deaths (ICD-10 W65-W74), crude rate 1.1 per 100,000",
+   "low": 15,
+   "high": 15,
+   "unit": "deaths",
+   "year": 2018,
+   "scope": "Residents of Maine, deaths in 2018, underlying cause ICD-10 W65, W66, W67, W68, W69, W70, W73 or W74 (accidental drowning); excludes watercraft drowning (V90, V92), suicide (X71), homicide and undetermined intent (Y21). Population 1,338,404.",
+   "geography": "Maine",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018-2024, Single Race (dataset D158), query by State and Year run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "Unintentional W65-W74 only, by residence: not comparable with the state medical examiner's all-manner drowning counts and never added to them, to boating counts or to other years.",
+   "note": "No cell suppressed (every count is 10 or more). Watercraft drownings (V90, V92) by state and year would fall under WONDER's suppression threshold and were not queried."
+  },
+  {
+   "id": "maine-wonder-w65-w74-2019",
+   "figure": "22 unintentional drowning deaths (ICD-10 W65-W74), crude rate 1.6 per 100,000",
+   "low": 22,
+   "high": 22,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "Residents of Maine, deaths in 2019, underlying cause ICD-10 W65, W66, W67, W68, W69, W70, W73 or W74 (accidental drowning); excludes watercraft drowning (V90, V92), suicide (X71), homicide and undetermined intent (Y21). Population 1,344,212.",
+   "geography": "Maine",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018-2024, Single Race (dataset D158), query by State and Year run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "Unintentional W65-W74 only, by residence: not comparable with the state medical examiner's all-manner drowning counts and never added to them, to boating counts or to other years.",
+   "note": "No cell suppressed (every count is 10 or more). Watercraft drownings (V90, V92) by state and year would fall under WONDER's suppression threshold and were not queried."
+  },
+  {
+   "id": "maine-wonder-w65-w74-2020",
+   "figure": "19 unintentional drowning deaths (ICD-10 W65-W74), crude rate 1.4 per 100,000",
+   "low": 19,
+   "high": 19,
+   "unit": "deaths",
+   "year": 2020,
+   "scope": "Residents of Maine, deaths in 2020, underlying cause ICD-10 W65, W66, W67, W68, W69, W70, W73 or W74 (accidental drowning); excludes watercraft drowning (V90, V92), suicide (X71), homicide and undetermined intent (Y21). Population 1,350,141.",
+   "geography": "Maine",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018-2024, Single Race (dataset D158), query by State and Year run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "Unintentional W65-W74 only, by residence: not comparable with the state medical examiner's all-manner drowning counts and never added to them, to boating counts or to other years.",
+   "note": "No cell suppressed (every count is 10 or more). Watercraft drownings (V90, V92) by state and year would fall under WONDER's suppression threshold and were not queried."
+  },
+  {
+   "id": "maine-wonder-w65-w74-2021",
+   "figure": "16 unintentional drowning deaths (ICD-10 W65-W74), crude rate 1.2 per 100,000",
+   "low": 16,
+   "high": 16,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Residents of Maine, deaths in 2021, underlying cause ICD-10 W65, W66, W67, W68, W69, W70, W73 or W74 (accidental drowning); excludes watercraft drowning (V90, V92), suicide (X71), homicide and undetermined intent (Y21). Population 1,372,247.",
+   "geography": "Maine",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018-2024, Single Race (dataset D158), query by State and Year run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "Unintentional W65-W74 only, by residence: not comparable with the state medical examiner's all-manner drowning counts and never added to them, to boating counts or to other years.",
+   "note": "No cell suppressed (every count is 10 or more). Watercraft drownings (V90, V92) by state and year would fall under WONDER's suppression threshold and were not queried."
+  },
+  {
+   "id": "maine-wonder-w65-w74-2022",
+   "figure": "22 unintentional drowning deaths (ICD-10 W65-W74), crude rate 1.6 per 100,000",
+   "low": 22,
+   "high": 22,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Residents of Maine, deaths in 2022, underlying cause ICD-10 W65, W66, W67, W68, W69, W70, W73 or W74 (accidental drowning); excludes watercraft drowning (V90, V92), suicide (X71), homicide and undetermined intent (Y21). Population 1,385,340.",
+   "geography": "Maine",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018-2024, Single Race (dataset D158), query by State and Year run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "Unintentional W65-W74 only, by residence: not comparable with the state medical examiner's all-manner drowning counts and never added to them, to boating counts or to other years.",
+   "note": "No cell suppressed (every count is 10 or more). Watercraft drownings (V90, V92) by state and year would fall under WONDER's suppression threshold and were not queried."
+  },
+  {
+   "id": "maine-wonder-w65-w74-2023",
+   "figure": "15 unintentional drowning deaths (ICD-10 W65-W74), crude rate 1.1 per 100,000",
+   "low": 15,
+   "high": 15,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Residents of Maine, deaths in 2023, underlying cause ICD-10 W65, W66, W67, W68, W69, W70, W73 or W74 (accidental drowning); excludes watercraft drowning (V90, V92), suicide (X71), homicide and undetermined intent (Y21). Population 1,395,722.",
+   "geography": "Maine",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018-2024, Single Race (dataset D158), query by State and Year run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "Unintentional W65-W74 only, by residence: not comparable with the state medical examiner's all-manner drowning counts and never added to them, to boating counts or to other years.",
+   "note": "No cell suppressed (every count is 10 or more). Watercraft drownings (V90, V92) by state and year would fall under WONDER's suppression threshold and were not queried."
+  },
+  {
+   "id": "maine-wonder-w65-w74-2024",
+   "figure": "21 unintentional drowning deaths (ICD-10 W65-W74), crude rate 1.5 per 100,000",
+   "low": 21,
+   "high": 21,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Residents of Maine, deaths in 2024, underlying cause ICD-10 W65, W66, W67, W68, W69, W70, W73 or W74 (accidental drowning); excludes watercraft drowning (V90, V92), suicide (X71), homicide and undetermined intent (Y21). Population 1,405,012.",
+   "geography": "Maine",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018-2024, Single Race (dataset D158), query by State and Year run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "Unintentional W65-W74 only, by residence: not comparable with the state medical examiner's all-manner drowning counts and never added to them, to boating counts or to other years.",
+   "note": "No cell suppressed (every count is 10 or more). Watercraft drownings (V90, V92) by state and year would fall under WONDER's suppression threshold and were not queried."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "Maine (23) 2018 15 2019 22 2020 19 2021 16",
+   "where": "Results table, query by State and Year, ICD-10 W65-W74, 2018-2024; Query Date Oct 21, 2026 2:17:07 PM"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "Do not present or publish death counts of 9 or fewer or death rates based on counts of nine or fewer",
+   "where": "Data Use Restrictions, accepted before querying"
+  }
+ ],
+ "tried": [
+  "Query settings: Group By State then Year; States Maine and New Hampshire; Year all (2018-2024); ICD-10 codes W65-W70, W73, W74; totals and zero values shown; rates per 100,000. The data-use terms were accepted by the lab's owner for this session."
+ ],
+ "notes": "Official yearly counts from death certificates, 2018-2024. They differ in definition from the state medical examiner counts in the companion bundle (all manners, case-based): for 2022-2024 the OCME prints 31, 31, 26 against 22, 15, 21 here; both are kept, never reconciled by the lab. No place or activity split: W69/W70 (natural water) by state and year fall below the suppression threshold in most years.",
+ "next_tasks": []
+}
