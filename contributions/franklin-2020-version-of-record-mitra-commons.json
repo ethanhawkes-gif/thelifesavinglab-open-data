@@ -1,0 +1,58 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "franklin-2020-version-of-record",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1), built-in browser"
+ },
+ "status": "partial",
+ "rows": [],
+ "corrections": [
+  {
+   "row_id": "gbd-2017-franklin-rate",
+   "field": "note",
+   "old": "Companion to gbd-2017-franklin. Found by an independent agent, 15 Oct 2026, in the Brunel repository copy of the full text and on IHME's library page; a second agent checked the interval the same day: Abstract and Results print 3.8 to 4.1, the Discussion prints 3.6–4.1 once.",
+   "new": "Companion to gbd-2017-franklin. Abstract and Results print 3.8 to 4.1 and the Discussion prints 3.6–4.1 once, in both the Brunel repository copy (15 Oct 2026) and PMC's copy of the published article, PMC7571364 (21 Oct 2026). Supplementary table S1 prints 4.0 (3.8 to 4.1) for the global 2017 rate. The journal's only correction, injuryprev-2019-043484corr1 (Inj Prev 2020;26 Suppl 1:i166), changes authorship and affiliations, not any figure. The BMJ page itself sat behind a bot check on 21 Oct 2026.",
+   "evidence": "PMC7571364 Abstract and Results paragraphs; PMC7571364 Discussion paragraph on the four high-burden countries; supplementary file supp003.pdf table S1 row 'Global', p. 1; correction notice PMC7571343."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571364/",
+   "quote": "4.0 (3.8 to 4.1) per 100 000 per annum in 2017",
+   "where": "Abstract, Results paragraph (citation line: Inj Prev. 2020 Feb 20;26(Suppl 1):i83–i95)"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571364/",
+   "quote": "a rate of 4.0 (UI: 3.8 to 4.1) per 100 000 in 2017",
+   "where": "Results, first paragraph"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571364/",
+   "quote": "the global average of 4.0 (3.6–4.1)",
+   "where": "Discussion, paragraph on the four countries that accounted for half of all drowning deaths"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7571364/bin/injuryprev-2019-043484supp003.pdf",
+   "quote": "(3.8 to 4.1)",
+   "where": "Supplementary table S1, row 'Global', 2017 age-standardised rate column, p. 1 of 4"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571343/",
+   "quote": "previously published with errors in authorship and affiliations",
+   "where": "Correction notice, Inj Prev 2020;26(Suppl 1):i166, doi 10.1136/injuryprev-2019-043484corr1, first paragraph"
+  }
+ ],
+ "tried": [
+  "https://doi.org/10.1136/injuryprev-2019-043484 (resolves to injuryprevention.bmj.com/lookup/doi/...) in the built-in browser: a 'Performing security verification' page stayed up for about 25 seconds and did not clear; no challenge was attempted and the BMJ-hosted version of record was not read.",
+  "The IHME GBD results tool (vizhub.healthdata.org/gbd-results/) was not tried: it is an interactive query builder, left as a follow-up."
+ ],
+ "notes": "What was read is PMC's copy of the published article (journal citation Inj Prev. 2020 Feb 20;26(Suppl 1):i83–i95, PMID 32079663), which PMC links to the journal's correction notice; it is the publisher's deposited published version, not the accepted manuscript, but it is not the BMJ-hosted page the task names, hence status partial. In it the three passages print exactly what the Brunel repository copy prints: Abstract 3.8 to 4.1, Results 3.8 to 4.1 (with the UI label), Discussion 3.6–4.1 once. Supplementary table S1 also prints 3.8 to 4.1 for the global 2017 rate, so four of five printed places agree. The only erratum the journal issued (corr1, 28 Sep 2020) concerns authorship and affiliations and does not touch any figure, so the Discussion's 3.6 is an uncorrected inconsistency in the published text. Proposed: keep citing 3.8 to 4.1, as the row already does, and update its note as above. No names from the correction notice were recorded.",
+ "next_tasks": [
+  {
+   "title": "Query the IHME GBD 2017 results tool for the global age-standardised unintentional drowning death rate in 2017, both sexes, all ages, with its 95% UI",
+   "why": "The model output is grade A and settles which lower bound is the misprint independently of the paper's text."
+  }
+ ]
+}

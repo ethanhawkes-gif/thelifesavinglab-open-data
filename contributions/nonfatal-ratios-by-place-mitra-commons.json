@@ -1,0 +1,155 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "nonfatal-ratios-by-place",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "nsw-nonfatal-ambulance-ratio-2010-2021",
+   "figure": "15 nonfatal ambulance-attended drowning incidents per fatal incident (printed 1:15; 1:15.35 in Table 1; 243 fatal to 3,730 nonfatal)",
+   "low": 15,
+   "high": 15,
+   "unit": "ratio",
+   "year": 2021,
+   "scope": "New South Wales, 1 January 2010 to 31 December 2021, all ages: people attended by a NSW ambulance for drowning (unintentional, intentional and undetermined intent; scuba and diving codes excluded), linked to emergency-department and death-registry data (ICD-10 W65–W74 for deaths). Fatal = a death date within 30 days of the ambulance attendance; every other attendance is nonfatal. Leaves out anyone who reached hospital by private car or helicopter, or who never called an ambulance. 3,973 incidents in all; the Abstract prints 1:15, Table 1 prints 1:15.35.",
+   "geography": "New South Wales, Australia",
+   "source": "Mead et al., Rates and ratios of fatal and nonfatal drowning attended by ambulance in New South Wales, Australia between 2010 and 2021, Journal of Safety Research 2024;91:373–380 (doi 10.1016/j.jsr.2024.09.019); Abstract p. 373, Table 1 p. 374",
+   "url": "https://researchonline.jcu.edu.au/85178/1/85178.pdf",
+   "grade": "B",
+   "do_not_add_to": "An ambulance-attendance ratio for one Australian state. Never combined with emergency-department ratios (cdc-nonfatal-ed-2012-2021, ontario-nonfatal-ed-ratio-2014-2023) or hospital-admission ratios (australia-nonfatal-hospitalisation-ratio-2002-2015): the door is different, so the ratio is different. Not a count of all survivors. Not to be averaged with any other place.",
+   "note": "The same paper gives 1:24.32 for ages 0–4, 1:77.11 for ages 10–19, 1:2.88 for 80+, 1:12.56 for males, 1:22.16 for females, 1:19.60 for metropolitan and 1:11.52 for non-metropolitan incident locations (Table 1, p. 374). Read from the James Cook University repository copy, which carries the journal front matter 'Journal of Safety Research 91 (2024) 373–380'; the ScienceDirect page is robots-blocked. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "new-zealand-under5-nonfatal-hospitalisation-ratio-2012-2017",
+   "figure": "6.9 non-fatal drowning-related hospitalisations per fatal drowning, children 0–4 (185 hospitalisations to 27 deaths)",
+   "low": 6.9,
+   "high": 6.9,
+   "unit": "ratio",
+   "year": 2017,
+   "scope": "New Zealand, children aged 0–4, 2012–2017 only: the window for which ACC data existed, so the paper calculated its ratios for those years although its fatal and hospitalisation series run 2005–2019. Deaths are unintentional drownings from Water Safety New Zealand's DrownBase; a non-fatal drowning is an admission to hospital with a stay of any duration (Ministry of Health data, in-hospital deaths removed). Leaves out emergency-department-only and primary-care cases (see the ACC-claims row). 1:7.3 for males, 1:6.3 for females.",
+   "geography": "New Zealand",
+   "source": "Peden and Richardson, Quantifying fatal and non-fatal drowning in children under five in Aotearoa, New Zealand, Aust N Z J Public Health 2022;46(1):46–51 (doi 10.1111/1753-6405.13157); Abstract p. 46, Methods p. 47, Results and Table 2 p. 49",
+   "url": "https://doi.org/10.1111/1753-6405.13157",
+   "grade": "B",
+   "do_not_add_to": "A hospital-admission ratio for one age group (0–4), one country and a six-year window. Never combined with the ACC-claims ratio from the same paper (different denominator; claims can include the same children), nor with all-age ratios (australia-nonfatal-hospitalisation-ratio-2002-2015, cdc-nonfatal-ed-2012-2021, ontario-nonfatal-ed-ratio-2014-2023), nor averaged across places.",
+   "note": "Printed as 6.9 in the Abstract (p. 46), the Results (p. 49) and Table 2; the Discussion rounds it to 'seven'. Wiley, the DOI (which now resolves to ScienceDirect) and PubMed would not open from this session, so the text was read from a university repository copy of the published PDF and the abstract and citation were cross-checked against the Europe PMC record; page numbers come from the PDF's running headers. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "new-zealand-under5-nonfatal-acc-claims-ratio-2012-2017",
+   "figure": "74.7 ACC drowning-related claims per fatal drowning, children 0–4 (2,016 claims to 27 deaths)",
+   "low": 74.7,
+   "high": 74.7,
+   "unit": "ratio",
+   "year": 2017,
+   "scope": "New Zealand, children aged 0–4, 2012–2017, the only years for which Accident Compensation Corporation (ACC) data were available. A claim counts where its free text contained DROWN, its contact was coded drowning, or its read code was Drown or Submersion; the paper cautions that ACC data may include some cases of drowning represented in hospitalisation data and may overlap with the hospitalisation count. Deaths are unintentional drownings from DrownBase. The Discussion rounds the ratio to 75.",
+   "geography": "New Zealand",
+   "source": "Peden and Richardson, Quantifying fatal and non-fatal drowning in children under five in Aotearoa, New Zealand, Aust N Z J Public Health 2022;46(1):46–51 (doi 10.1111/1753-6405.13157); Abstract p. 46, Methods p. 47, Results and Table 2 p. 49",
+   "url": "https://doi.org/10.1111/1753-6405.13157",
+   "grade": "B",
+   "do_not_add_to": "A compensation-claims ratio for one age group in one country: the widest door in the ledger. Never combined with hospital, emergency-department or ambulance ratios, nor with the 6.9 hospitalisation ratio from the same paper (the claims may include the same children), nor averaged across places.",
+   "note": "ACC claims are an insurance denominator peculiar to New Zealand's no-fault injury cover, so this ratio has no counterpart elsewhere and shows how far a ratio depends on the door counted. Same access route and page-number caveat as the hospitalisation row. Found by an independent agent, 21 Oct 2026."
+  },
+  {
+   "id": "alberta-nonfatal-ratio-1999-2019",
+   "figure": "For every 1 fatal drowning there are 6 non-fatal drownings",
+   "low": 6,
+   "high": 6,
+   "unit": "ratio",
+   "year": 2019,
+   "scope": "Alberta, 1999–2019, all ages, from the Lifesaving Society Alberta and NWT / Injury Prevention Centre 20-year analysis of Alberta Health's Line by Line Database (October 2019 extract). The post does not define 'non-fatal drowning'; the companion infographic (July 2021) frames the same ratio as non-fatal drownings 'that resulted in an emergency department visit or hospitalization', so both doors appear to be in it. The post also states 30 fatal drownings and 24 non-fatal drowning hospital admissions for 1999–2019 (apparently annual averages), which cannot give 6 from admissions alone.",
+   "geography": "Alberta, Canada",
+   "source": "Lifesaving Society Alberta and Northwest Territories, news post '20 Year Analysis on Drowning', 28 July 2021, body text",
+   "url": "https://www.lifesaving.org/about/news/post/20-year-analysis-on-drowning",
+   "grade": "C",
+   "do_not_add_to": "A rounded ratio for one province that appears to mix the emergency-department and admission doors. Never combined with ontario-nonfatal-ed-ratio-2014-2023 (different province, ED only, different years), with alberta-nonfatal-ed-ratio-2011-2020 (different years and door) or with any other ratio, and never averaged across places.",
+   "note": "The infographic (lifesaving.org/public/download/files/190301) prints the number as a graphic that text extraction could not read; a person with a browser should confirm the '6' there, after which the row could point to the infographic and be regraded. The Injury Prevention Centre's 2022 report gives 'about five' using emergency-department visits only (see alberta-nonfatal-ed-ratio-2011-2020). Found by an independent agent, 21 Oct 2026. The digit 6 was not read from the graphic by machine; '(October 2019 extract)' is from the infographic's source line, not the news post."
+  },
+  {
+   "id": "alberta-nonfatal-ed-ratio-2011-2020",
+   "figure": "About five non-fatal drownings serious enough to require an emergency department visit per fatal drowning",
+   "low": 5,
+   "high": 5,
+   "unit": "ratio",
+   "year": 2020,
+   "scope": "Alberta, all ages. The ratio sentence carries no years; the same page gives an average of 160 emergency-department visits for non-fatal drowning a year over 2011–2020 and 30 deaths labelled 2000–2019, which is consistent with 'about five'. Hospital admissions (an average of 40 a year, 2011–2020, p. 2) are not in the ratio. Produced by the Injury Prevention Centre (University of Alberta) with Alberta Health funding and hosted on the Lifesaving Society Alberta and NWT site.",
+   "geography": "Alberta, Canada",
+   "source": "Injury Prevention Centre (University of Alberta), Alberta Non-fatal Drownings: 2022 Report, September 2022 (rev. 09-2022), p. 1; hosted by the Lifesaving Society Alberta and NWT",
+   "url": "https://www.lifesaving.org/public/download/files/219442",
+   "grade": "C",
+   "do_not_add_to": "An emergency-department ratio for one province with mismatched year windows. Never combined with alberta-nonfatal-ratio-1999-2019 (different years, admissions included), with ontario-nonfatal-ed-ratio-2014-2023 or cdc-nonfatal-ed-2012-2021 (different places), and never averaged across places.",
+   "note": "The PDF text layer renders 'five' as 've' (a dropped 'fi' ligature); the word is 'five'. Not one of the three sources the task named; added because it is the only Alberta document that names the denominator behind the province's ratio. The reviewer may prefer grade C if the report is read as an organisation's statement rather than an analysis of official data. Found by an independent agent, 21 Oct 2026. Regraded C on verification: a rounded organisational statement whose terms are not printed; the report's callouts (24 admissions, 160 ED visits, 2001-2020) contradict its text (40 admissions, 2"
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "cdc-nonfatal-ed-2012-2021",
+   "field": "note",
+   "old": "The only counted non-fatal ratio in the ledger. Survivors who never reach an emergency department are not in it.",
+   "new": "One of several place-specific counted ratios in the ledger (Ontario, Australia, New South Wales, New Zealand under-5, Alberta), each with its own door and years. Survivors who never reach an emergency department are not in it.",
+   "evidence": "The ledger already carries ontario-nonfatal-ed-ratio-2014-2023 and australia-nonfatal-hospitalisation-ratio-2002-2015 (both last_checked 2026-10-15), and this bundle adds NSW, New Zealand and Alberta rows, so 'the only counted non-fatal ratio' is out of date. Only the stale sentence changes."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://researchonline.jcu.edu.au/85178/1/85178.pdf",
+   "quote": "The overall ratio of fatal to nonfatal incidents was 1:15.",
+   "where": "Abstract (Results), p. 373; Table 1, p. 374, gives 1:15.35 with 243 fatal and 3730 nonfatal of 3973 incidents; Methods, p. 373, gives intent, the 30-day death definition and ICD codes W65–W74; the limitation on arrivals without an ambulance is on p. 376"
+  },
+  {
+   "url": "https://repository.unar.ac.id/jspui/bitstream/123456789/4531/1/46-51.pdf",
+   "quote": "there were 6.9 hospitalisations and 74.7 ACC claims",
+   "where": "Abstract, p. 46; the body sentence 'Between 2012 and 2017, for every fatal drowning in NZ ...' and Table 2 (N=27 fatal, 185 hospitalisations, 2,016 claims) are on p. 49; Methods p. 47 ('Data from ACC is available for 2012-2017', admission definition); Discussion p. 49 rounds to seven and 75"
+  },
+  {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1111/1753-6405.13157&format=json&resultType=core",
+   "quote": "557 incidents (16.0% fatal) were recorded.",
+   "where": "abstractText and bibliographic fields of the Europe PMC record for PMID 34529307: Aust N Z J Public Health 2022;46(1):46–51; Methods sentence gives 'between 2005 and 2019' and DrownBase; no PMCID listed; Unpaywall marks the DOI open access"
+  },
+  {
+   "url": "https://www.lifesaving.org/about/news/post/20-year-analysis-on-drowning",
+   "quote": "for every 1 fatal drownings there are 6 non-fatal drownings",
+   "where": "Body text, the 'Did you know' sentence; the same body also states '30 fatal drownings, and 24 non-fatal drowning hospital admissions from 1999-2019' and 'for the period of 1999-2019'; post dated Jul 28, 2021"
+  },
+  {
+   "url": "https://www.lifesaving.org/public/download/files/190301",
+   "quote": "On average, for every fatal drowning there were",
+   "where": "Text layer of the 20-year infographic (July 2021, data 1999–2019); the number is a graphic the fetch could not read; adjacent line 'non-fatal drownings that resulted in an emergency department visit or hospitalization'; source line: Alberta Health Line by Line Database, October 2019"
+  },
+  {
+   "url": "https://www.lifesaving.org/public/download/files/219442",
+   "quote": "For every fatal drowning in Alberta, there are about five non-fatal drownings",
+   "where": "p. 1, sentence continuing 'that are serious enough to require an emergency department visit' (the text layer drops the fi ligature in 'five'); p. 1 also gives an average of 160 ED visits a year 2011–2020 and 30 deaths 2000–2019; p. 2 gives an average of 40 admissions a year 2011–2020"
+  }
+ ],
+ "tried": [
+  "New Zealand paper on the publisher's sites: https://onlinelibrary.wiley.com/doi/pdf/10.1111/1753-6405.13157 and the /doi/ HTML page both returned a client error with no content. The journal has moved to Elsevier: https://doi.org/10.1111/1753-6405.13157 now redirects to linkinghub.elsevier.com and ScienceDirect PII S132602002300359X, which is robots-blocked for the fetch tool.",
+  "New Zealand paper via indexes: PubMed https://pubmed.ncbi.nlm.nih.gov/34529307/ returned only a reCAPTCHA interstitial; the Europe PMC article page https://europepmc.org/article/MED/34529307 is robots-blocked. The Europe PMC REST record (ebi.ac.uk) did open: it lists no PMCID, so despite the task wording the paper does not appear to be in PMC; its only open-access link is the DOI via Unpaywall.",
+  "New Zealand paper via archives: the Wayback Machine copy of the Wiley PDF (web.archive.org/web/2023/...) is site-blocked; the DOAJ record c34b0968823b44eaa33dee1f719ffb65 gave the abstract but no DOI or full-text link; the oalib-perpustakaan.upi.edu DOAJ mirror is robots-blocked. The full text was finally read from a university repository copy (repository.unar.ac.id) surfaced by a title search; a person with a browser should check it against ScienceDirect.",
+  "Alberta 20-year infographic PDF (https://www.lifesaving.org/public/download/files/190301): the ratio number exists only as a graphic. Two extractions gave the sentence frame 'On average, for every fatal drowning there were ... non-fatal drownings that resulted in an emergency department visit or hospitalization' with no digit, and no fatal or non-fatal counts. The Drowning Reports page (https://www.lifesaving.org/public-education/drowning-reports) lists no fuller 20-year report, only this infographic.",
+  "Alberta news post: the fetch tool would not return the whole body verbatim, so the three number-bearing sentences were extracted one by one. The sentence '30 fatal drownings, and 24 non-fatal drowning hospital admissions from 1999-2019' carries no 'per year' or 'on average' wording, so whether those are annual averages is unconfirmed; they cannot be the numerator and denominator of the '6'.",
+  "NSW paper: the ScienceDirect page (PII S0022437524001385) was not attempted after the ANZJPH ScienceDirect page proved robots-blocked; the JCU repository PDF named in the task opened fully on three passes and carries the journal front matter and DOI."
+ ],
+ "notes": "All three named sources were opened and the figures confirmed as printed. (1) NSW: 'The overall ratio of fatal to nonfatal incidents was 1:15' (Abstract, p. 373), 1:15.35 in Table 1 (243 fatal, 3,730 nonfatal, 3,973 ambulance-attended incidents), 1 Jan 2010 to 31 Dec 2021, all intents, fatal = death within 30 days of attendance. (2) New Zealand under-5: 6.9 hospitalisations and 74.7 ACC claims per fatal drowning, but for 2012–2017 only (27 deaths, 185 hospitalisations, 2,016 claims; Table 2 and Results p. 49), because ACC data existed only for those years; the Abstract's 2005–2019 is the span of the fatal and hospitalisation series, not of the ratio. The paper prints two ratios with two denominators, so it is returned as two rows rather than one; merge them if the board prefers one row per source, but low/high cannot then hold a single figure. (3) Alberta: 'for every 1 fatal drownings there are 6 non-fatal drownings' (news post, 28 July 2021, 1999–2019). The post never defines non-fatal; the companion infographic's text layer frames the ratio as non-fatal drownings 'that resulted in an emergency department visit or hospitalization', but prints the number as a graphic the fetch could not read, and the post's '30 fatal drownings, and 24 non-fatal drowning hospital admissions' (apparently annual averages) are not the terms of the 6. Because the number as read comes from a news post, that row is graded C; a person who reads the infographic can repoint and regrade it. A fifth row, beyond the three asked for, carries the Injury Prevention Centre's 2022 report ('about five non-fatal drownings that are serious enough to require an emergency department visit', with 160 ED visits a year 2011–2020 against 30 deaths 2000–2019 on the same page): it is the only Alberta document naming a denominator and shows that the province's ratio shifts with the door and the years. Drop it if the reviewer wants exactly three sources. Nothing was averaged or combined across places, denominators or years; every row's do_not_add_to names the rows it must not be joined to. Year fields follow the ledger's convention of the last data year (Ontario row 2023, Australia row 2015). Access caveats: the NZ full text was read from a university repository copy of the published PDF (publisher, DOI, PubMed and Wayback routes all blocked; see tried), with the abstract and citation cross-checked against the Europe PMC record; its page numbers are from running headers. The NZ rows cite the DOI as the durable primary address while the evidence entries cite the copies actually opened, which the machine check reports as a warning. The one correction touches cdc-nonfatal-ed-2012-2021, a row the task listed as an input but not among 'rows this task touches', so the check warns; it only retires the sentence 'The only counted non-fatal ratio in the ledger', which the Ontario and Australia rows already made untrue. The 'five' in the IPC quote is rendered 've' in the PDF text layer (dropped ligature); the word is five. No corrections are proposed for ontario-nonfatal-ed-ratio-2014-2023 or australia-nonfatal-hospitalisation-ratio-2002-2015: nothing read here contradicts them.",
+ "next_tasks": [
+  {
+   "title": "Read the ratio number off the Alberta 20-year infographic (lifesaving.org files/190301) with a browser and, if it prints 6, repoint alberta-nonfatal-ratio-1999-2019 to it and regrade",
+   "why": "The number is a graphic that text extraction cannot read, so the row currently rests on a news post (grade C); needs a person with a browser."
+  },
+  {
+   "title": "Open the New Zealand under-5 paper on ScienceDirect (PII S132602002300359X) with a browser and confirm pp. 47–49 against the repository copy used here",
+   "why": "Every publisher and index route was blocked for the fetch tool; the full text was read from a third-party repository copy and page numbers were inferred from running headers."
+  },
+  {
+   "title": "Add the NSW paper's age-group ratios (0–4: 1:24.32; 10–19: 1:77.11; 80+: 1:2.88, Table 1 p. 374) as child and older-age rows beside cdc-children-nonfatal-ed-7 and the NZ under-5 rows",
+   "why": "Child ratios run far above all-age ratios wherever counted, and the ledger has begun collecting them; the NSW paper already prints them by age band."
+  },
+  {
+   "title": "Check the 2024, 2025 and 2026 Alberta Drowning Reports (lifesaving.org drowning-reports page) for a stated non-fatal:fatal ratio with its denominator and years",
+   "why": "A later edition that prints the ratio with its definition would replace the undefined 2021 news-post figure as the Alberta source."
+  }
+ ]
+}
