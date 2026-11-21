@@ -135,7 +135,7 @@ button:focus-visible { outline: 2px solid var(--lamp); outline-offset: 2px; }
 <div class="segs" id="segs"></div>
 <div class="count" id="count"></div>
 </div>
-<p class="note">Prototype. Voice by ElevenLabs. Drill details shown are made up for illustration.</p>
+<p class="note">Prototype. Voice by ElevenLabs. Drill details shown are made up for illustration.</p><p class="note" id="mediaError" role="status" aria-live="polite" hidden>Audio could not load in this embedded player. Use the transcript or open the standalone explainer.</p>
 </div>
 <script>
 /* ---------- drawing helpers ---------- */
@@ -492,6 +492,9 @@ const AUDIO = {"p1s1": {"dur": 7.36, "src": "narration/p1s1.mp3"}, "p1s2": {"dur
 const AUDIO_LEAD = .3, AUDIO_TAIL = .6;
 const voice = new Audio();
 voice.preload = 'auto';
+const mediaError = document.getElementById('mediaError');
+voice.addEventListener('error', () => { if (mediaError) { mediaError.hidden = false; mediaError.textContent = 'Audio could not load in this embedded player. Use the transcript or open the standalone explainer.'; } });
+voice.addEventListener('canplay', () => { if (mediaError) mediaError.hidden = true; });
 let muted = false, voiceStarted = false;
 const keyOf = () => `p${part}s${idx + 1}`;
 function voicePlay() { if (muted) return; const p = voice.play(); if (p && p.catch) p.catch(() => {}); }

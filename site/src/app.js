@@ -89,10 +89,10 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-text"><div>
     <p class="eyebrow">The Life-Saving Lab · Portsmouth Harbor</p>
-    <h1 id="hero-title" class="display h1">This harbor’s past was lifesaving. <i style="color:var(--brass)">So is its future.</i></h1>
-    <p class="lede">An open lab on drowning. We keep a sourced count of what is known and publish it as a range, not a false point. Each June, students and the people who work this water write one-page changes a real adopter could run that season. We publish the ones that fail.</p>
-    <div class="row"><a class="btn btn--primary" href="#contribute">Contribute <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#toll">See the toll</a></div>
-    <div class="row mono hero-stats"><span><b>${rows}</b> sourced ledger rows</span><span><b>${DATA.tree ? Object.values(DATA.tree.nodes).filter((n) => n.type === 'leaf').length : 17}</b> branches of the tree</span><span><b>24</b> student seats</span></div>
+    <h1 id="hero-title" class="display h1">Learn good judgment. <i style="color:var(--brass)">Help the people who save lives.</i></h1>
+    <p class="lede">We are building a lab where students practice Applied Wisdom on a real problem: drowning prevention. Working with local experts and AI assistants, they will develop research and practical recommendations that nonprofit rescue services can check, adapt and use.</p>
+    <div class="row"><a class="btn btn--primary" href="#how-title">See how the Lab works <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#wisdom">Explore the learning</a></div>
+    <div class="row mono hero-stats"><span>First Lab · proposed</span><span>Two equal partners</span><span>People remain responsible</span></div>
   </div></div>
   <div class="hero-photo">
     <img src="${PHOTOS.hero}" alt="Wood Island Life-Saving Station in Kittery, Maine, seen down its boardwalk: white shingles, a red roof and lookout tower, a surfboat on its launching carriage, and Whaleback Light on the horizon">
@@ -100,17 +100,23 @@
     <div class="stamp">
       <div class="row mono" style="gap:10px;align-items:center;color:var(--muted)"><span class="pill pill-A">Range</span><span>A YEAR, WORLDWIDE</span></div>
       <p class="big">~${floor}–${ceil}</p>
-      <p style="font-size:16px;font-weight:600;line-height:1.35">people die in the water, from what is documented.</p>
-      <p class="small muted">Since you opened this page: <b data-live="since" style="color:var(--ink)">—</b>, estimated. The true number could sit above the range. Closing the gap is the lab’s work.</p>
+      <p style="font-size:16px;font-weight:600;line-height:1.35">the documented range is a starting point for better questions.</p>
+      <p class="small muted">This is a modeled range, not a live death counter. The evidence and its limits are in the toll.</p>
       <a href="#toll" style="font-size:14px;font-weight:600">How the range is built <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
+<section class="section section--tight" aria-labelledby="partners-home-title"><div class="wrap stack" style="gap:20px">
+  <div class="split"><div class="stack-sm"><p class="eyebrow">Two equal partners</p><h2 id="partners-home-title" class="h2">Curriculum and place, working together.</h2></div><p class="lede">Applied Wisdom powers the learning. Wood Island brings the host setting, local expertise and community network. Neither partner is presented as an operating rescue service.</p></div>
+  <div class="grid g2"><article class="card stack-sm partner-card"><img src="img/partners/applied-wisdom.svg" alt="Applied Wisdom for Nonprofits" class="partner-logo"><p class="eyebrow">Curriculum and applied wisdom</p><h3 class="h3">Applied Wisdom makes the learning useful.</h3></article><article class="card stack-sm partner-card"><img src="img/partners/wood-island.png" alt="Wood Island Life Saving Station Association" class="partner-logo partner-logo--wood"><p class="eyebrow">Host, local expertise and network</p><h3 class="h3">Wood Island makes the work real.</h3></article></div>
+  <a class="mono" href="/about/">Meet the people and partners behind the Lab →</a>
+</div></section>
+
 <section class="section band" aria-labelledby="explainer-title"><div class="wrap stack" style="gap:24px">
-  <div class="stack-sm"><p class="eyebrow">Watch · staging integration</p><h2 id="explainer-title" class="display h2">Wisdom Under Pressure</h2><p class="lede" style="max-width:42em">An interactive narrated explainer about the problem, the solution and the Situation Solver. This is not an MP4: the Lab is hosting a standalone HTML/SVG export with 15 narration clips. Playback, captions and mobile behavior are still under review.</p></div>
-  <div class="media-frame"><iframe src="media/wisdom-under-pressure/index.html" title="Wisdom Under Pressure — interactive narrated explainer" loading="lazy" sandbox="allow-scripts" allow="autoplay" style="width:100%;min-height:42rem;border:0;background:#fff"></iframe></div>
-  <div class="row"><a class="btn btn--primary" href="media/wisdom-under-pressure/transcript.md">Read the transcript</a><a class="btn btn--ghost" href="https://claude.ai/artifact/PAZb3HzfWRbDFevuVhr9RM" target="_blank" rel="noopener">Open original Claude artifact</a><span class="small muted">Standard video export still requires Jim/original creator to supply MP4 or WebM.</span></div>
+  <div class="stack-sm"><p class="eyebrow">Watch · staging integration</p><h2 id="explainer-title" class="display h2">Wisdom Under Pressure</h2><p class="lede" style="max-width:42em">A narrated prototype about learning judgment under pressure. It is illustrative—not a record of completed rescue training, active missions or measured outcomes. The sea adaptation and Solver work are proposed for partner review.</p></div>
+  <div class="media-frame"><iframe src="media/wisdom-under-pressure/index.html" title="Wisdom Under Pressure — interactive narrated explainer" loading="lazy" sandbox="allow-scripts allow-same-origin" allow="autoplay" style="width:100%;min-height:42rem;border:0;background:#fff"></iframe></div>
+  <p class="small notice">Context for this staging review: narration details are illustrative and require the original creator’s review before public claims. Students do not enter the water; nothing here dispatches help.</p><div class="row"><a class="btn btn--primary" href="media/wisdom-under-pressure/transcript.md">Read the transcript</a><a class="btn btn--ghost" href="https://claude.ai/artifact/PAZb3HzfWRbDFevuVhr9RM" target="_blank" rel="noopener">Open original Claude artifact</a><span class="small muted">Standard video export still requires Jim/original creator to supply MP4 or WebM.</span></div>
 </div></section>
 
 <section class="section" aria-labelledby="how-title"><div class="wrap stack" style="gap:44px">
@@ -141,9 +147,9 @@
 
 <section class="section dark" aria-labelledby="june-title"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:44px 64px">
   <div class="stack" style="flex:1.2 1 480px;min-width:0;gap:28px">
-    <p class="eyebrow">No. 4 · June 2027 · dates proposed</p>
-    <h2 id="june-title" class="display h2">24 students. Six teams. Two days on Wood Island.</h2>
-    <p class="lede">The people who work this harbor sit beside the teams. Day one, each team sizes a piece of the problem and defends a one-page change in front of them. Day two, a staged rescue with a clock running tests how the team decides under pressure. Co-hosted with Applied Wisdom for Nonprofits.</p>
+    <p class="eyebrow">No. 4 · The proposed first Lab · dates proposed</p>
+    <h2 id="june-title" class="display h2">A proposed first Lab, built around a real place.</h2>
+    <p class="lede">If the partners confirm the plan, students and local experts would test how good decisions are made under pressure. Activities, dates, places and participant numbers remain proposed—not completed operations.</p>
     <div class="row"><a class="btn btn--primary" href="#june">The June lab</a><a class="btn btn--ghost" href="#wisdom">The curriculum, with Applied Wisdom</a></div>
   </div>
   ${photo(PHOTOS.rocks, 'Wood Island Life-Saving Station across the rocky shore at low tide, with its flag mast and the harbor behind', 'Wood Island at low tide · Photo: Ethan Hawkes', 'flex:1 1 360px;min-height:320px')}
@@ -173,13 +179,13 @@
     <div><span class="n">${DATA.watch && DATA.watch.counts ? fmt(DATA.watch.counts.reported || 0) : '—'}</span><b>Reports waiting to be read</b><span class="small muted">In the watch, hourly, since 15 Oct 2026</span></div>
     <div><span class="n" style="color:var(--rust)">${rows}</span><b>Ledger rows</b><span class="small muted">Each with a source, a year and a rule for what it must not be added to</span></div>
   </div>
-  <p class="mono muted">Pilot counts start with the June 2027 lab; the board and the watch are live now. Last checked 15 Oct 2026. <a href="#pilots">What a pilot is, and how one is scored →</a></p>
+  <p class="mono muted">Pilot counts start at zero. The proposed first Lab and the public research board are separate from completed rescue operations. Last checked 15 Oct 2026. <a href="#pilots">What a pilot is, and how one is scored →</a></p>
 </div></section>
 
 <section class="section band" aria-labelledby="join-title"><div class="wrap stack" style="gap:36px">
   ${sectionHead('No. 8 · Where you fit', '<span id="join-title">Everything here can be read without an account.</span>', 'A person reads every submission. Nothing is published until a person merges it.')}
   <div class="grid g4">
-    <div class="card stack-sm" style="border-top:4px solid var(--buoy)"><h3 class="h3">Students</h3><p class="small" style="font-size:16px">24 seats. Own a branch of the tree, name an adopter, and defend a pilot.</p><a class="btn btn--primary btn--sm" style="margin-top:auto" href="${SITE}/cohort/">Join the cohort</a></div>
+    <div class="card stack-sm" style="border-top:4px solid var(--buoy)"><h3 class="h3">Students</h3><p class="small" style="font-size:16px">Proposed participants would own a branch of the tree, name an adopter and defend a pilot. Dates and places are not confirmed.</p><a class="btn btn--primary btn--sm" style="margin-top:auto" href="${SITE}/cohort/">Join the cohort</a></div>
     <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Experts and responders</h3><p class="small" style="font-size:16px">Harbormasters, crews, fishers, lifeguards: bring the sentence your service still uses, or a pilot you would adopt.</p><a class="btn btn--ghost btn--sm" style="margin-top:auto" href="#contribute-pilot">Bring expertise</a></div>
     <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Data contributors</h3><p class="small" style="font-size:16px">Add a ledger row, verify a secondary one, or run the incident register in your harbor.</p><a class="btn btn--ghost btn--sm" style="margin-top:auto" href="#contribute-row">Open the queue</a></div>
     <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Funders and partners</h3><p class="small" style="font-size:16px">Read the method and the ledger first. We report pilots written, adopted and failed. The lab holds no money: donations go directly to the <a href="${WILSSA}">Wood Island Life Saving Station Association</a>, which restored the station. <a href="#briefs-funder-one-pager">The one-page brief.</a></p><div class="row" style="margin-top:auto;gap:8px"><a class="btn btn--sm" href="${WILSSA}">Give to the station</a><a class="btn btn--ghost btn--sm" href="#contribute-offer">Write to us</a></div></div>
@@ -199,7 +205,7 @@
   <div class="grid g2"><article class="card stack-sm partner-card"><img src="img/partners/applied-wisdom.svg" alt="Applied Wisdom for Nonprofits" class="partner-logo"><p class="eyebrow">Equal partner · curriculum and applied wisdom</p><h2 class="h3">Applied Wisdom makes the learning useful.</h2><p>Applied Wisdom powers the curriculum: how teams make decisions with incomplete information, how they speak bad news early, and how they turn a debrief into a better next decision. The drowning problem is the testbed; the wisdom is meant to travel to the next nonprofit and the next hard situation.</p><a href="https://appliedwisdomfornonprofits.org" target="_blank" rel="noopener">Visit Applied Wisdom for Nonprofits →</a></article>
   <article class="card stack-sm partner-card"><img src="img/partners/wood-island.png" alt="Wood Island Life Saving Station Association" class="partner-logo partner-logo--wood"><p class="eyebrow">Equal partner · host, local expertise and network</p><h2 class="h3">Wood Island makes the work real.</h2><p>Wood Island is the host and local network hub: a restored life-saving station, the harbor’s history, and the people who know what the water asks of a crew. The station is a classroom, not an on-duty rescue service. Donations go directly to the Association, not the Lab.</p><a href="https://woodislandlifesaving.org" target="_blank" rel="noopener">Visit Wood Island Life Saving Station →</a></article></div>
 </div></section>
-<section class="section band"><div class="wrap stack" style="gap:22px"><p class="eyebrow">People behind the work</p><div class="grid g3"><div class="card stack-sm"><h2 class="h4">Ethan Hawkes</h2><p>Founder and builder of the Lab’s open ledger, site and harbor work.</p></div><div class="card stack-sm"><h2 class="h4">Jim</h2><p>Contributor to the wisdom work and the narrated explainer; source/export review remains with the original creator.</p></div><div class="card stack-sm"><h2 class="h4">Laura and Sam</h2><p>Key participants in shaping the project and its path from prototype to owner review.</p></div></div><div class="card--dark stack-sm" style="padding:24px"><p class="eyebrow">AI agent partners</p><h2 class="h3" style="color:var(--paper)">Lab Mate · Paco · Vesper</h2><p class="small" style="font-size:16px;color:var(--mist);max-width:48em">These agents help research, test interfaces, find gaps and keep the handoff honest. They do not replace a responder, a source, a human reviewer or the people who decide whether a pilot belongs on the water. Every contribution is provisional until a person reviews it.</p><a class="btn btn--primary btn--sm" href="#lend">See the agent workbench</a></div></div></section>`
+<section class="section band"><div class="wrap stack" style="gap:22px"><p class="eyebrow">People behind the work</p><div class="grid g4"><div class="card stack-sm"><h2 class="h4">Ethan Hawkes</h2><p>Project initiator, bringing the people and practical questions together.</p></div><div class="card stack-sm"><h2 class="h4">Jim McDonough</h2><p>Applied Wisdom curriculum partner and original explainer collaborator; source/export review remains with him.</p></div><div class="card stack-sm"><h2 class="h4">Laura Calhoun</h2><p>Executive Director, Wood Island Life Saving Station Association; a key participant connecting the project with the station.</p></div><div class="card stack-sm"><h2 class="h4">Sam Reid</h2><p>Board President, Wood Island Life Saving Station Association; bringing station and community knowledge.</p></div></div><div class="card--dark stack-sm" style="padding:24px"><p class="eyebrow">AI agent partners</p><h2 class="h3" style="color:var(--paper)">Lab Mate · Paco · Vesper</h2><p class="small" style="font-size:16px;color:var(--mist);max-width:48em">These agents help research, test interfaces, find gaps and keep the handoff honest. They do not replace a responder, a source, a human reviewer or the people who decide whether a pilot belongs on the water. Every contribution is provisional until a person reviews it.</p><a class="btn btn--primary btn--sm" href="#lend">See the agent workbench</a></div></div></section>`
   }
 
   /* ---------- THE TOLL ---------- */
@@ -269,7 +275,7 @@
     <p class="eyebrow" style="margin-top:10px">Canada 2018–2022, five years pooled</p>
     <div role="img" aria-label="Canada 2018 to 2022 unintentional drowning deaths by setting: lakes 36%, rivers 27%, bathtubs 15%, pools 9%, other 7%, ocean 6%." style="display:flex;height:40px;border-radius:2px;overflow:hidden">
       <div style="width:36%;background:var(--teal);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Lakes 36%</div>
-      <div style="width:27%;background:#4A8FA8;color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Rivers 27%</div>
+      <div style="width:27%;background:#2E6B78;color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Rivers 27%</div>
       <div style="width:15%;background:var(--buoy);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Baths</div>
       <div style="width:9%;background:var(--brass);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Pools</div>
       <div style="width:7%;background:#D8D1BF;color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px">Other</div>
@@ -643,6 +649,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
   function fmtDate(iso) { const d = new Date(iso + 'T00:00:00Z'); return isNaN(d) ? iso : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }); }
   function render() {
     const { route, arg } = parseHash();
+    if (route === 'about') { location.replace('/about/'); return; }
     setMenu(false);
     document.querySelectorAll('#navlinks a').forEach((a) => { const on = a.dataset.route === route; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     window.Extra.stopCounter();

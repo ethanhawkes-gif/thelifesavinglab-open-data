@@ -89,11 +89,11 @@ async function briefs() {
 /** The static pages under site/src/pages: each fragment is wrapped in the app's own chrome (safety strip, masthead, footer),
  *  with the hash links made absolute so they still reach the app from /history/ or /bridge/, and served at /<name>/. */
 async function staticPages(body) {
-  const chromeTop = body.slice(0, body.indexOf('<main')).replace(/href="#/g, 'href="/#');
-  const chromeBottom = body.slice(body.indexOf('</main>') + '</main>'.length).replace(/href="#/g, 'href="/#')
+  const chromeTop = body.slice(0, body.indexOf('<main')).replace(/href="#(?!app)/g, 'href="/#').replace(/src="img\//g, 'src="/img/');
+  const chromeBottom = body.slice(body.indexOf('</main>') + '</main>'.length).replace(/href="#(?!app)/g, 'href="/#').replace(/src="img\//g, 'src="/img/')
     .replace(/<script src="(charts|extra|register|lend|pilots|harbor|briefs|app)\.js"><\/script>\n?/g, '')
-    .replace('</footer>', '</footer>\n<script src="/charts.js"></script><script src="/extra.js"></script><script src="/static.js"></script>');
-  const abs = (s) => s.replace(/(href|src)="(site\.css|charts\.js|extra\.js|static\.js|llms\.txt)"/g, '$1="/$2"').replace(/href="(?!https?:|\/|#|mailto:)/g, 'href="/');
+    .replace('</footer>', '</footer>\n<script src="/charts.js"></script><script src="/extra.js"></script><script src="/static.js"></script>' + '<script src="/agents.js"></script>');
+  const abs = (s) => s.replace(/(href|src)="(site\.css|charts\.js|extra\.js|static\.js|llms\.txt)"/g, '$1="/$2"').replace(/src="img\//g, 'src="/img/').replace(/href="(?!https?:|\/|#|mailto:)/g, 'href="/');
   const dir = path.join(SRC, 'pages'); const names = [];
   for (const f of (await readdir(dir)).filter((n) => n.endsWith('.html')).sort()) {
     const frag = await readFile(path.join(dir, f), 'utf8'); const name = f.replace(/\.html$/, '');
@@ -124,7 +124,7 @@ async function main() {
   await mkdir(path.join(OUT, 'data'), { recursive: true });
   const body = await readFile(path.join(SRC, 'index.html'), 'utf8');
   await writeFile(path.join(OUT, 'index.html'), HEAD + local(body.replace(/^<title>.*<\/title>\n<meta name="claude:viewport-fit-sides"[^>]*>\n/, '')) + FOOT);
-  for (const f of ['site.css', 'charts.js', 'extra.js', 'register.js', 'lend.js', 'pilots.js', 'harbor.js', 'briefs.js', 'app.js', 'static.js']) await cp(path.join(SRC, f), path.join(OUT, f));
+  for (const f of ['site.css', 'charts.js', 'extra.js', 'register.js', 'lend.js', 'pilots.js', 'harbor.js', 'briefs.js', 'app.js', 'static.js', 'agents.js']) await cp(path.join(SRC, f), path.join(OUT, f));
   const pages = await staticPages(body);
   await redirects();
   await cp(path.join(SRC, 'legacy', 'drowning-estimates.json'), path.join(OUT, 'data', 'drowning-estimates.json'));
@@ -137,7 +137,7 @@ async function main() {
   await writeFile(path.join(OUT, 'robots.txt'), STAGING ? 'User-agent: *\nAllow: /\n' : `User-agent: *\nAllow: /\nSitemap: ${ORIGIN}/sitemap.txt\n`);
   if (STAGING) await writeFile(path.join(OUT, '_headers'), '/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n');
   await cp(path.join(SRC, 'llms.txt'), path.join(OUT, 'llms.txt'));
-  await writeFile(path.join(OUT, '404.html'), head('Not found · The Life-Saving Lab', DESC, '/404.html') + body.slice(0, body.indexOf('<main')).replace(/href="#/g, 'href="/#').replace(/href="(site\.css)"/g, 'href="/$1"') + '<main id="app"><section class="section"><div class="wrap stack"><p class="eyebrow">Not found</p><h1 class="display h2">There is no page at this address.</h1><p class="lede">The site moved to one page with sections. <a href="/">Start at the front</a>, or open <a href="/#ledger">the ledger</a>, <a href="/#tree">the tree</a>, <a href="/history/">the history</a> or <a href="/bridge/">the span brief</a>.</p></div></section></main>' + FOOT);
+  await writeFile(path.join(OUT, '404.html'), head('Not found · The Life-Saving Lab', DESC, '/404.html') + body.slice(0, body.indexOf('<main')).replace(/href="#(?!app)/g, 'href="/#').replace(/src="img\//g, 'src="/img/').replace(/href="(site\.css)"/g, 'href="/$1"') + '<main id="app"><section class="section"><div class="wrap stack"><p class="eyebrow">Not found</p><h1 class="display h2">There is no page at this address.</h1><p class="lede">The site moved to one page with sections. <a href="/">Start at the front</a>, or open <a href="/#ledger">the ledger</a>, <a href="/#tree">the tree</a>, <a href="/history/">the history</a> or <a href="/bridge/">the span brief</a>.</p></div></section></main>' + FOOT);
   await writeFile(path.join(OUT, 'sitemap.txt'), ['/', ...pages.map((p) => `/${p}/`)].map((p) => ORIGIN + p).join('\n') + '\n');
   console.log(`built ${OUT}: index.html, ${pages.length} pages (${pages.join(', ')}), ${REDIRECTS.length} redirects, ${DATA.length + 3} data files`);
 }
