@@ -4,6 +4,17 @@
   const fmt = (n) => Math.round(n).toLocaleString('en-US');
   const YEAR_S = 31557600;
 
+  function estimateRange(seconds, lowRate, highRate, livePrecision) {
+    const low = Math.max(0, seconds) * lowRate;
+    const high = Math.max(0, seconds) * highRate;
+    const digits = livePrecision ? (high < 1 ? 2 : high < 10 ? 1 : 0) : 0;
+    const scale = 10 ** digits;
+    const a = Math.floor(low * scale) / scale;
+    const b = Math.ceil(high * scale) / scale;
+    const show = (n) => digits ? n.toFixed(digits) : fmt(n);
+    return a === b ? show(a) : show(a) + '–' + show(b);
+  }
+
   /* ---------- the live counter: an estimate, never a report ---------- */
   let timer = null;
   function counterBlock(toll, opts) {
@@ -14,7 +25,7 @@
     return `
 <div class="counter ${dark ? 'counter--dark' : ''}" role="group" aria-label="Estimated drowning deaths while you read, from the yearly range">
   <div class="counter-row">
-    <div class="counter-cell"><span class="mono muted">SINCE YOU OPENED THIS PAGE</span><span class="counter-n" data-live="since">—</span><span class="small muted">people, estimated</span></div>
+    <div class="counter-cell"><span class="mono muted">SINCE YOU OPENED THIS PAGE</span><span class="counter-n" data-live="since">—</span><span class="small muted">estimated range</span></div>
     <div class="counter-cell"><span class="mono muted">SO FAR TODAY</span><span class="counter-n" data-live="today">—</span><span class="small muted">in your time zone</span></div>
     <div class="counter-cell"><span class="mono muted">SO FAR THIS YEAR</span><span class="counter-n" data-live="year">—</span><span class="small muted">since 1 January</span></div>
   </div>
@@ -26,14 +37,17 @@
     if (!toll || !document.querySelector('[data-live]')) return;
     const opened = Date.now();
     const rl = toll.floor / YEAR_S, rh = toll.ceiling / YEAR_S;
-    const range = (s) => { const a = Math.floor(s * rl), b = Math.ceil(s * rh); return a === b ? fmt(a) : fmt(a) + '–' + fmt(b); };
+    const range = (s, livePrecision) => estimateRange(s, rl, rh, livePrecision);
     const tick = () => {
       const now = new Date();
       const since = (now - opened) / 1000;
       const midnight = new Date(now); midnight.setHours(0, 0, 0, 0);
       const jan1 = new Date(now.getFullYear(), 0, 1);
-      const vals = { since: range(since), today: range((now - midnight) / 1000), year: range((now - jan1) / 1000) };
-      document.querySelectorAll('[data-live]').forEach((el) => { const v = vals[el.dataset.live]; if (v != null && el.textContent !== v) el.textContent = v; });
+      const vals = { since: range(since, true), today: range((now - midnight) / 1000), year: range((now - jan1) / 1000) };
+      document.querySelectorAll('[data-live]').forEach((el) => {
+        const v = el.dataset.live === 'since' && el.dataset.livePrecision === 'coarse' ? range(since) : vals[el.dataset.live];
+        if (v != null && el.textContent !== v) el.textContent = v;
+      });
     };
     tick(); timer = setInterval(tick, 1000);
   }
@@ -398,5 +412,5 @@
       <p class="small muted">Stages: ${Object.values(STAGES).join(' → ')}. The full queue and the review tool are in the open-data repository.</p>`;
   }
 
-  window.Extra = { counterBlock, startCounter, stopCounter, junePage, watchPage, glossaryPage, gapsPage, gapsPreview, frontierSection, selectionSection, coverageMatrix, mountWatch };
+  window.Extra = { counterBlock, startCounter, stopCounter, estimateRange, junePage, watchPage, glossaryPage, gapsPage, gapsPreview, frontierSection, selectionSection, coverageMatrix, mountWatch };
 })();
