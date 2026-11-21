@@ -90,7 +90,7 @@
 <section class="section" style="padding-bottom:36px"><div class="wrap stack" style="gap:22px">
   <p class="eyebrow">Lend your agent · one hour</p>
   <h1 class="display h1" style="max-width:14em">Spare ChatGPT, Claude, Gemini or Grok this month? Lend it an hour.</h1>
-  <p class="lede" style="max-width:44em">Pick one small task. Your assistant does the reading and hands back a short, sourced file. A person checks it, it goes into the open ledger, and you get a receipt that says exactly what your hour changed. Nothing to install, no account here, no money.</p>
+  <p class="lede" style="max-width:44em">Pick one small task. Your assistant does the reading and hands back a short, sourced file. A person checks it, it goes into the open ledger only if accepted, and you get a receipt that says exactly what your hour changed. Nothing to install, no account here, no money.</p>
   <div class="scoreboard" id="lend-score"><div><span class="n">—</span><span class="small muted">tasks open now</span></div><div><span class="n">—</span><span class="small muted">receipts issued</span></div><div><span class="n">—</span><span class="small muted">rows and corrections accepted</span></div></div>
 </div></section>
 
@@ -111,7 +111,7 @@
     <div class="field" style="flex:0 1 260px"><label for="lend-handle">Your handle (optional, goes on the receipt)</label><input id="lend-handle" type="text" maxlength="40" placeholder="e.g. harbor-rat" autocomplete="off"></div>
   </div>
   <div id="board" class="stack" style="gap:0"><p class="small muted">Loading the board…</p></div>
-  <p class="small muted">If a one-click link opens empty, the prompt was too long for that app’s address bar: use “Copy prompt” and paste it. The board is a copy of <span class="mono">tasks/tasks.json</span> in the repository, synced daily; a claim made there shows here after the next sync.</p>
+  <p class="small muted">If a one-click link opens empty, use “Copy prompt” and paste it. This board is a snapshot of <span class="mono">tasks/tasks.json</span>, generated 15 Oct 2026 and checked 21 Nov 2026; it is not a timeless count. Prompt preamble: <span class="mono">${S.tasks ? esc(S.tasks.preamble_version) : "loading"}</span>. A claim made in the repository shows here after the next sync.</p>
 </div></section>
 
 <section class="section--tight band" aria-labelledby="back-title"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:36px 56px">
@@ -124,7 +124,9 @@
   </div>
   <div class="stack" style="flex:1 1 320px;min-width:0;gap:16px">
     <div class="card stack-sm"><p class="eyebrow">Then send it</p><ol class="small" style="font-size:15px;padding-left:20px;display:flex;flex-direction:column;gap:6px"><li>Save or copy the checked file.</li><li>Open a pull request that adds it under <span class="mono">contributions/</span> at <a href="${REPO}">the repository</a>, or email it to <span class="mono" id="lend-mail">${MAIL}</span> <button class="btn btn--sm btn--ghost" type="button" id="lend-copy-mail" style="min-height:32px;padding:0 10px">copy</button>.</li><li>A person reads it against the source. Machine checks first, judgment last.</li><li>The receipt appears below, and in <span class="mono">receipts/lend.json</span>, with the file’s SHA-256 so anyone can match it.</li></ol></div>
+    <div class="card stack-sm"><p class="eyebrow">Current handoff contract</p><h3 class="h4">One task in, one exact JSON file out.</h3><p class="small" style="font-size:15px">The bundle schema, acceptance criteria, source inputs and capability requirement travel with the prompt. Copy or download the prompt; return only the JSON object. The current return schema is <span class="mono">lifesavinglab.bundle.v1</span>.</p><p class="small muted">A machine-checked file is <b>submitted</b>, not accepted. The review record distinguishes submitted → reviewed → accepted or declined → incorporated in a release. The public receipt is the evidence.</p></div>
     <div class="card stack-sm"><p class="eyebrow">Two assistants, one task</p><p class="small" style="font-size:15px">A “verify a figure” task is worth running twice, with two different assistants, even if someone has already done it. When two bundles agree on a value, the lab records the agreement; when they differ, a person looks. Pick a task marked <span class="pill pill-B">done</span> as readily as an open one.</p></div>
+    <div class="card stack-sm"><p class="eyebrow">No active submission API</p><p class="small" style="font-size:15px">There is no deployed bundle endpoint in this preview. Use the real GitHub contribution path or email; a button will never imply that a file was received when it was not.</p><p class="mono muted" style="font-size:13px">contributions/&lt;task-id&gt;-&lt;handle&gt;.json</p></div>
     <div class="card stack-sm card--dashed"><p class="eyebrow">What an agent must never do</p><ul class="small" style="font-size:15px;padding-left:20px;display:flex;flex-direction:column;gap:4px"><li>Invent a figure, a source, a page or a quote.</li><li>Add figures from different sources or waters together.</li><li>Record a name, a contact, or a position closer than a town.</li><li>Say “done” without a primary source it actually opened.</li></ul><p class="small muted" style="font-size:14px">“Not found, here is what I tried” is a good result. It earns a receipt too.</p></div>
   </div>
 </div></section>

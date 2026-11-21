@@ -108,14 +108,9 @@
 </section>
 
 <section class="section band" aria-labelledby="explainer-title"><div class="wrap stack" style="gap:24px">
-  <div class="card--dark" style="padding:clamp(22px,3vw,36px);border-radius:2px;display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between">
-    <div class="stack-sm" style="flex:1 1 420px;min-width:0">
-      <p class="eyebrow">Watch</p>
-      <h3 id="explainer-title" class="h3" style="color:var(--paper)">Wisdom Under Pressure: the explainer</h3>
-      <p class="small" style="font-size:16px;color:var(--mist);max-width:40em">A short narrated walkthrough of the problem, the solution, and the Solver model this lab is testing. Prototype; voice by ElevenLabs, drill details made up for illustration.</p>
-    </div>
-    <a class="btn btn--primary" href="https://claude.ai/artifact/PAZb3HzfWRbDFevuVhr9RM" target="_blank" rel="noopener">Watch the explainer <span aria-hidden="true">→</span></a>
-  </div>
+  <div class="stack-sm"><p class="eyebrow">Watch · staging integration</p><h2 id="explainer-title" class="display h2">Wisdom Under Pressure</h2><p class="lede" style="max-width:42em">An interactive narrated explainer about the problem, the solution and the Situation Solver. This is not an MP4: the Lab is hosting a standalone HTML/SVG export with 15 narration clips. Playback, captions and mobile behavior are still under review.</p></div>
+  <div class="media-frame"><iframe src="media/wisdom-under-pressure/index.html" title="Wisdom Under Pressure — interactive narrated explainer" loading="lazy" sandbox="allow-scripts" allow="autoplay" style="width:100%;min-height:42rem;border:0;background:#fff"></iframe></div>
+  <div class="row"><a class="btn btn--primary" href="media/wisdom-under-pressure/transcript.md">Read the transcript</a><a class="btn btn--ghost" href="https://claude.ai/artifact/PAZb3HzfWRbDFevuVhr9RM" target="_blank" rel="noopener">Open original Claude artifact</a><span class="small muted">Standard video export still requires Jim/original creator to supply MP4 or WebM.</span></div>
 </div></section>
 
 <section class="section" aria-labelledby="how-title"><div class="wrap stack" style="gap:44px">
@@ -194,6 +189,17 @@
     <a class="btn btn--primary" href="#lend">See the board</a>
   </div>
 </div></section>`;
+  }
+
+  function aboutPage() {
+    return `
+<section class="section"><div class="wrap stack" style="gap:30px">
+  <p class="eyebrow">About the Lab</p><h1 class="display h2" style="max-width:18em">A practical lab for a problem no one can solve from one desk.</h1>
+  <p class="lede" style="max-width:44em">The Life-Saving Lab brings students, responders, researchers and agents to one real problem: drowning. We keep the evidence in public, work one harbor closely, and turn what we learn into changes a nonprofit rescue service can actually run.</p>
+  <div class="grid g2"><article class="card stack-sm partner-card"><img src="img/partners/applied-wisdom.svg" alt="Applied Wisdom for Nonprofits" class="partner-logo"><p class="eyebrow">Equal partner · curriculum and applied wisdom</p><h2 class="h3">Applied Wisdom makes the learning useful.</h2><p>Applied Wisdom powers the curriculum: how teams make decisions with incomplete information, how they speak bad news early, and how they turn a debrief into a better next decision. The drowning problem is the testbed; the wisdom is meant to travel to the next nonprofit and the next hard situation.</p><a href="https://appliedwisdomfornonprofits.org" target="_blank" rel="noopener">Visit Applied Wisdom for Nonprofits →</a></article>
+  <article class="card stack-sm partner-card"><img src="img/partners/wood-island.png" alt="Wood Island Life Saving Station Association" class="partner-logo partner-logo--wood"><p class="eyebrow">Equal partner · host, local expertise and network</p><h2 class="h3">Wood Island makes the work real.</h2><p>Wood Island is the host and local network hub: a restored life-saving station, the harbor’s history, and the people who know what the water asks of a crew. The station is a classroom, not an on-duty rescue service. Donations go directly to the Association, not the Lab.</p><a href="https://woodislandlifesaving.org" target="_blank" rel="noopener">Visit Wood Island Life Saving Station →</a></article></div>
+</div></section>
+<section class="section band"><div class="wrap stack" style="gap:22px"><p class="eyebrow">People behind the work</p><div class="grid g3"><div class="card stack-sm"><h2 class="h4">Ethan Hawkes</h2><p>Founder and builder of the Lab’s open ledger, site and harbor work.</p></div><div class="card stack-sm"><h2 class="h4">Jim</h2><p>Contributor to the wisdom work and the narrated explainer; source/export review remains with the original creator.</p></div><div class="card stack-sm"><h2 class="h4">Laura and Sam</h2><p>Key participants in shaping the project and its path from prototype to owner review.</p></div></div><div class="card--dark stack-sm" style="padding:24px"><p class="eyebrow">AI agent partners</p><h2 class="h3" style="color:var(--paper)">Lab Mate · Paco · Vesper</h2><p class="small" style="font-size:16px;color:var(--mist);max-width:48em">These agents help research, test interfaces, find gaps and keep the handoff honest. They do not replace a responder, a source, a human reviewer or the people who decide whether a pilot belongs on the water. Every contribution is provisional until a person reviews it.</p><a class="btn btn--primary btn--sm" href="#lend">See the agent workbench</a></div></div></section>`
   }
 
   /* ---------- THE TOLL ---------- */
@@ -604,6 +610,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     briefs: { html: () => window.Briefs.page(ctx()), mount: (arg) => window.Briefs.mount(arg), title: 'Briefs · The Life-Saving Lab' },
     lend: { html: () => window.Lend.page(ctx()), mount: () => window.Lend.mount(ctx(), { toast, copyText, saveFile }), title: 'Lend your agent · The Life-Saving Lab' },
     wisdom: { html: wisdomPage, title: 'Applied Wisdom · The Life-Saving Lab' },
+    about: { html: aboutPage, title: 'About the Lab · The Life-Saving Lab' },
     contribute: { html: contributePage, mount: mountContribute, title: 'Contribute · The Life-Saving Lab' }
   };
   function parseHash() {

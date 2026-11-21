@@ -1,0 +1,64 @@
+# Wisdom Under Pressure — authoring-script transcript
+
+Source: https://claude.ai/artifact/PAZb3HzfWRbDFevuVhr9RM
+Extracted from scene narration text on 2026-11-21. Not independently transcribed from audio; factual claims and safety guidance have not been reviewed here.
+
+## p1s1 — source audio duration 7.36s
+
+Let's start with the problem. People still die at sea, every year. And nobody keeps one clean count of how many.
+
+## p1s2 — source audio duration 27.44s
+
+Here's what we do know. About 300,000 people drowned worldwide in 2021. Over 100,000 fishers may die each year. Thousands of migrants are lost crossing the sea. And in the U.S., 556 boaters died in 2024. Most of the people who drowned weren't wearing a life jacket. These numbers overlap, so you can't add them up. But the point is clear: this is a big problem.
+
+## p1s3 — source audio duration 20.64s
+
+Here's what one of those nights looks like. A fishing boat misses its check-in. The wind is picking up. On shore, the rescue crew has a rough idea where the boat might be, and no word from anyone on board. So they have to choose. Send rescuers out into rough water now, or wait for better information, and maybe be too late.
+
+## p1s4 — source audio duration 14.48s
+
+So why do these deaths happen? The honest answer is, nobody knows for sure yet. That's the students' first job: dig into the data, figure out how big the problem really is, and find which deaths could be prevented.
+
+## p1s5 — source audio duration 21.04s
+
+There are a few ideas worth testing. Maybe some deaths come down to decisions made under pressure: the facts are scattered, and nobody is sure who's doing what. Maybe it's speed. Sending out a full crew in a rescue boat takes time, and a drone or a robot might get there first. The plan is to take each problem one at a time, and solve it.
+
+## p2s1 — source audio duration 26.40s
+
+Trained Coast Guard response teams help people in life or death situations. The person calling for help is often panicking. So the first job is to calm them down. Then find out where they are. Then work out how serious it is. Are they taking on water? Did the engine die? Are the seas rough? Is someone hurt? Then build the full picture. Panic mixes up that order. The team's job is to keep it straight.
+
+## p2s2 — source audio duration 16.00s
+
+So that's the order. Calm everyone down. Find out where they are. Figure out how serious it is. Then get the full picture. Each of those steps comes straight from Applied Wisdom: trust, focus, bad news is good news, and court sense.
+
+## p2s3 — source audio duration 9.28s
+
+This program trains students to lead that way. They practice rescues again and again. First in local simulations. Then in drills at sea.
+
+## p2s4 — source audio duration 19.44s
+
+Now add a helper. We call it the Situation at Sea Solver. It sits right beside the team, and it doesn't panic. If nobody has asked for a location, it asks. If there's bad news, it puts it up front. It keeps the picture current, and it makes sure every job has someone's name on it. But people still make the calls.
+
+## p2s5 — source audio duration 9.20s
+
+After every drill, experienced rescuers go back and grade the big decisions. The team gets better each time. And over time, so does the Solver.
+
+## p2s6 — source audio duration 12.88s
+
+Then, in June, it all gets put to the test. A staged rescue off Kittery Point. Drones and sea robots, run by licensed crews. And a dummy in the water. Never a real person.
+
+## p3s1 — source audio duration 8.08s
+
+The Solver starts with a large language model, the kind of AI behind today's chat tools. It's built in two loops that form a figure eight.
+
+## p3s2 — source audio duration 15.12s
+
+The first loop is the Applied Wisdom Situation Solver. It's trained on Applied Wisdom, then on past leadership cases. Then leaders use it on real leadership problems. They correct it and grade the results, and each round trains the next version.
+
+## p3s3 — source audio duration 17.04s
+
+The second loop is the Situation at Sea Solver. It starts with everything the first Solver knows. Then it's trained on rescue work: past missions and situation reports. Then rescue teams and students use it in drills and real missions. Their feedback trains the next version.
+
+## p3s4 — source audio duration 16.64s
+
+And the two loops feed each other. The leadership loop makes the decision making smarter: how to weigh the facts and make the call. The mission loop makes the rescue smarter: which decisions come up, and in what order. The more it's used, the better it gets, and so do the people using it.

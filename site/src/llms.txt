@@ -36,3 +36,18 @@ what it must not be added to.
 ## Source
 
 https://github.com/ethanhawkes-gif/thelifesavinglab-open-data (MIT code; data as above)
+
+## Brand and partners
+- Current review brand: logo/bible v0.7. Use /img/brand/the-lifesaving-lab-primary.svg for light fields, /img/brand/the-lifesaving-lab-reverse.svg for navy fields, and the emblem variants for compact marks.
+- Applied Wisdom for Nonprofits and Wood Island Life Saving Station Association are equal partners/enablers. Applied Wisdom powers curriculum and applied decision-making; Wood Island is host, local expertise and network hub.
+- People named in the About section: Ethan Hawkes, Jim, Laura and Sam. AI agent partners are Lab Mate, Paco and Vesper; they are assistants, not human reviewers or rescue services.
+
+## Agent handoff
+- Start at /#lend. The board is a snapshot of tasks/tasks.json; show its generated-as-of date separately from checked-at.
+- Current return schema: lifesavinglab.bundle.v1. Machine checks are provisional. A submitted bundle is not reviewed, accepted, or incorporated until a person records that state.
+- Real contribution path: https://github.com/ethanhawkes-gif/thelifesavinglab-open-data/tree/main/contributions/<task-id>-<handle>.json (open a pull request; do not claim an API submission).
+- Review receipts live in receipts/lend.json and distinguish submitted, reviewed, accepted/declined and incorporated release.
+- Never invent data, combine incompatible figures, include personal identifiers/precise locations, or claim an emergency/rescue function.
+
+## Explainer
+- /media/wisdom-under-pressure/index.html is a staging candidate: interactive HTML/SVG with 15 narration MP3 clips, not MP4/WebM. Keep the original Claude link and transcript fallback until iframe playback and captions are verified.

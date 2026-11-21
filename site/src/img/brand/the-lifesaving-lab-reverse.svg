@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="760" viewBox="0 0 1800 760" role="img" aria-labelledby="title desc"><title id="title">The Lifesaving Lab logo</title><desc id="desc">A windowed lighthouse with a triangular signal beam inside a white and orange life preserver beside the words THE LIFESAVING LAB.</desc><rect width="1800" height="760" fill="#192636"/><defs><clipPath id="ringClip"><circle cx="350" cy="350" r="290"/></clipPath></defs><g transform="translate(40 40) scale(0.95)">
+<circle cx="350" cy="350" r="290" fill="none" stroke="#ffffff" stroke-width="112"/>
+<circle cx="350" cy="350" r="290" fill="none" stroke="#ff5a00" stroke-width="112" stroke-linecap="butt" stroke-dasharray="170 285" transform="rotate(45 350 350)"/>
+<circle cx="350" cy="350" r="234" fill="#192636"/>
+<!-- faithful windowed lantern and triangular signal beam -->
+<path d="M286 454 L306 248 L394 248 L414 454 Z" fill="#ffffff"/>
+<path d="M298 200 L350 146 L402 200 Z" fill="#ffffff"/>
+<rect x="312" y="190" width="76" height="58" rx="2" fill="#ffffff"/>
+<rect x="324" y="196" width="52" height="40" fill="#192636"/>
+<rect x="307" y="236" width="86" height="16" fill="#ffffff"/>
+<path d="M394 220 L510 180 L510 270 L394 240 Z" fill="#ff5a00"/>
+<path d="M305 335 L405 300 L410 345 L300 382 Z" fill="#ff5a00"/>
+<!-- consistent wave pair -->
+<path d="M178 418 C225 460 278 466 328 438 C379 408 432 409 483 446" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round"/>
+<path d="M178 475 C225 517 278 523 328 495 C379 465 432 466 483 503" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round"/>
+</g><g fill="#ffffff" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900"><text x="720" y="180" font-size="78" letter-spacing="9">THE</text><text x="720" y="352" font-size="160" letter-spacing="-5">LIFESAVING</text></g><text x="720" y="507" fill="#ff5a00" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="160">LAB</text></svg>

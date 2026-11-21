@@ -20,14 +20,16 @@ const DATA = [
   ['receipts/lend.json', 'data/receipts.json'], ['watch/feed.json', 'data/watch-feed.json'],
 ];
 
-const ORIGIN = 'https://thelifesavinglab.org';
+const ORIGIN = process.env.SITE_ORIGIN || 'https://thelifesavinglab.org';
+const STAGING = process.env.SITE_STAGE === '1';
+const canonical = (pathname) => STAGING ? '' : `<link rel="canonical" href="${ORIGIN}${pathname}">`;
 const DESC = 'The Life-Saving Lab: an open ledger of how many people drown, where the counting fails, and what has been shown to change it. A teaching and research project on Portsmouth Harbor.';
 const escAttr = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const head = (title, description, pathname) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${escAttr(title)}</title>
-<meta name="description" content="${escAttr(description)}">
+<meta name="description" content="${escAttr(description)}">${STAGING ? '<meta name="robots" content="noindex,nofollow,noarchive">' : ''}
 <meta name="theme-color" content="#10232A">
-<link rel="canonical" href="${ORIGIN}${pathname}">
+${canonical(pathname)}
 <meta property="og:type" content="website"><meta property="og:site_name" content="The Life-Saving Lab"><meta property="og:title" content="${escAttr(title)}"><meta property="og:description" content="${escAttr(description)}"><meta property="og:url" content="${ORIGIN}${pathname}"><meta property="og:image" content="${ORIGIN}/img/hero_station.jpg"><meta property="og:image:alt" content="Wood Island Life-Saving Station in Kittery, Maine, seen down its boardwalk">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='11.5' fill='none' stroke='%23fff' stroke-width='7'/%3E%3Ccircle cx='17' cy='17' r='11.5' fill='none' stroke='%23C4402B' stroke-width='7' stroke-dasharray='9.03 9.03' transform='rotate(-22 17 17)'/%3E%3C/svg%3E">
@@ -127,11 +129,13 @@ async function main() {
   await redirects();
   await cp(path.join(SRC, 'legacy', 'drowning-estimates.json'), path.join(OUT, 'data', 'drowning-estimates.json'));
   await cp(path.join(SRC, 'img'), path.join(OUT, 'img'), { recursive: true });
+  await cp(path.join(SRC, 'media'), path.join(OUT, 'media'), { recursive: true });
   for (const [from, to] of DATA) await cp(path.join(ROOT, from), path.join(OUT, to));
   await writeFile(path.join(OUT, 'data', 'changelog.json'), JSON.stringify(changelog(), null, 1));
   await writeFile(path.join(OUT, 'data', 'briefs.json'), JSON.stringify(await briefs(), null, 1));
   await writeFile(path.join(OUT, '.nojekyll'), '');
-  await writeFile(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${ORIGIN}/sitemap.txt\n`);
+  await writeFile(path.join(OUT, 'robots.txt'), STAGING ? 'User-agent: *\nAllow: /\n' : `User-agent: *\nAllow: /\nSitemap: ${ORIGIN}/sitemap.txt\n`);
+  if (STAGING) await writeFile(path.join(OUT, '_headers'), '/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n');
   await cp(path.join(SRC, 'llms.txt'), path.join(OUT, 'llms.txt'));
   await writeFile(path.join(OUT, '404.html'), head('Not found · The Life-Saving Lab', DESC, '/404.html') + body.slice(0, body.indexOf('<main')).replace(/href="#/g, 'href="/#').replace(/href="(site\.css)"/g, 'href="/$1"') + '<main id="app"><section class="section"><div class="wrap stack"><p class="eyebrow">Not found</p><h1 class="display h2">There is no page at this address.</h1><p class="lede">The site moved to one page with sections. <a href="/">Start at the front</a>, or open <a href="/#ledger">the ledger</a>, <a href="/#tree">the tree</a>, <a href="/history/">the history</a> or <a href="/bridge/">the span brief</a>.</p></div></section></main>' + FOOT);
   await writeFile(path.join(OUT, 'sitemap.txt'), ['/', ...pages.map((p) => `/${p}/`)].map((p) => ORIGIN + p).join('\n') + '\n');
