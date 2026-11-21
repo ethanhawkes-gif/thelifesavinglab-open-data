@@ -1,0 +1,647 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "transport-series-national",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Fable 5.1 (independent subagent in the lab's own session, 2026-10-21)"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "uk-maib-fishing-crew-deaths-2020",
+   "figure": "2 deaths of UK fishing vessel crew",
+   "low": 2,
+   "high": 2,
+   "unit": "deaths",
+   "year": 2020,
+   "scope": "Deaths of crew of UK-registered commercial fishing vessels (registered with the MCA Registry of Shipping and Seamen), worldwide, from accidents reported to the MAIB, counted by the year the incident was reported. Crew only: passengers, pleasure craft and non-UK vessels are not in this table (non-UK flagged vessels need not report unless in a UK port/harbour or carrying passengers to or from a UK port). MAIB does not say whether deaths from natural causes are excluded. Figures are revised in later editions ('data from previous years can and will change').",
+   "geography": "United Kingdom (UK-registered fishing vessels, worldwide)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2023 (Oct 2024), Part 3, Table 22 'Deaths and injuries to fishing vessel crew by vessel length (of which, deaths shown in brackets) — 2014 to 2023', Total column, p. 60",
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "grade": "A",
+   "do_not_add_to": "One vessel class only. MAIB prints no all-vessel death total, so do not add to uk-maib-merchant-crew-deaths-* or uk-maib-passenger-deaths-* to make one; do not add across years; do not add to uk-waid-2024 (WAID already counts these deaths where they were accidental water-related deaths in the UK); not comparable with Canada TSB or Australia AMSA rows (different vessel populations and rules).",
+   "note": "Table 22 row '2020 12 (2) 16 - 10 - 38 (2)': total 38 crew casualties, of which 2 deaths. The 2024 edition's statement that 2024 had 'the same number as in 2020' (two) is consistent with this value."
+  },
+  {
+   "id": "uk-maib-fishing-crew-deaths-2021",
+   "figure": "10 deaths of UK fishing vessel crew",
+   "low": 10,
+   "high": 10,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Deaths of crew of UK-registered commercial fishing vessels (registered with the MCA Registry of Shipping and Seamen), worldwide, from accidents reported to the MAIB, counted by the year the incident was reported. Crew only: passengers, pleasure craft and non-UK vessels are not in this table (non-UK flagged vessels need not report unless in a UK port/harbour or carrying passengers to or from a UK port). MAIB does not say whether deaths from natural causes are excluded. Figures are revised in later editions ('data from previous years can and will change').",
+   "geography": "United Kingdom (UK-registered fishing vessels, worldwide)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2023 (Oct 2024), Part 3, Table 22 'Deaths and injuries to fishing vessel crew by vessel length (of which, deaths shown in brackets) — 2014 to 2023', Total column, p. 60",
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "grade": "A",
+   "do_not_add_to": "One vessel class only. MAIB prints no all-vessel death total, so do not add to uk-maib-merchant-crew-deaths-* or uk-maib-passenger-deaths-* to make one; do not add across years; do not add to uk-waid-2024 (WAID already counts these deaths where they were accidental water-related deaths in the UK); not comparable with Canada TSB or Australia AMSA rows (different vessel populations and rules).",
+   "note": "Table 22 row '2021 12 (7) 19 (2) 5 (1) 36 (10)': 36 crew casualties, of which 10 deaths (7 on vessels under 15m). The 2024 edition's Table 22 (2015-2024) could not be reached; a reviewer should check it for revisions."
+  },
+  {
+   "id": "uk-maib-fishing-crew-deaths-2022",
+   "figure": "3 deaths of UK fishing vessel crew",
+   "low": 3,
+   "high": 3,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Deaths of crew of UK-registered commercial fishing vessels (registered with the MCA Registry of Shipping and Seamen), worldwide, from accidents reported to the MAIB, counted by the year the incident was reported. Crew only: passengers, pleasure craft and non-UK vessels are not in this table (non-UK flagged vessels need not report unless in a UK port/harbour or carrying passengers to or from a UK port). MAIB does not say whether deaths from natural causes are excluded. Figures are revised in later editions ('data from previous years can and will change').",
+   "geography": "United Kingdom (UK-registered fishing vessels, worldwide)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2023 (Oct 2024), Part 3, Table 22 'Deaths and injuries to fishing vessel crew by vessel length (of which, deaths shown in brackets) — 2014 to 2023', Total column, p. 60",
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "grade": "A",
+   "do_not_add_to": "One vessel class only. MAIB prints no all-vessel death total, so do not add to uk-maib-merchant-crew-deaths-* or uk-maib-passenger-deaths-* to make one; do not add across years; do not add to uk-waid-2024 (WAID already counts these deaths where they were accidental water-related deaths in the UK); not comparable with Canada TSB or Australia AMSA rows (different vessel populations and rules).",
+   "note": "Table 22 row '2022 5 - 16 (1) 10 (2) 31 (3)': 31 crew casualties, of which 3 deaths. The 2024 edition's Table 22 (2015-2024) could not be reached; a reviewer should check it for revisions."
+  },
+  {
+   "id": "uk-maib-fishing-crew-deaths-2023",
+   "figure": "4 deaths of UK fishing vessel crew",
+   "low": 4,
+   "high": 4,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Deaths of crew of UK-registered commercial fishing vessels (registered with the MCA Registry of Shipping and Seamen), worldwide, from accidents reported to the MAIB, counted by the year the incident was reported. Crew only: passengers, pleasure craft and non-UK vessels are not in this table (non-UK flagged vessels need not report unless in a UK port/harbour or carrying passengers to or from a UK port). MAIB does not say whether deaths from natural causes are excluded. Figures are revised in later editions ('data from previous years can and will change').",
+   "geography": "United Kingdom (UK-registered fishing vessels, worldwide)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2023 (Oct 2024), Part 3, Table 22 'Deaths and injuries to fishing vessel crew by vessel length (of which, deaths shown in brackets) — 2014 to 2023', Total column, p. 60",
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "grade": "A",
+   "do_not_add_to": "One vessel class only. MAIB prints no all-vessel death total, so do not add to uk-maib-merchant-crew-deaths-* or uk-maib-passenger-deaths-* to make one; do not add across years; do not add to uk-waid-2024 (WAID already counts these deaths where they were accidental water-related deaths in the UK); not comparable with Canada TSB or Australia AMSA rows (different vessel populations and rules).",
+   "note": "Table 22 row '2023 6 (2) 9 (1) 12 (1) 27 (4)': 27 crew casualties, of which 4 deaths. Confirmed by the section text (p. 52: '4 fatalities to crew') and the Chief Inspector's statement (p. 2: 'four lives were lost in 2023'). The 2024 edition may have revised it (its Table 22 was unreachable)."
+  },
+  {
+   "id": "uk-maib-fishing-crew-deaths-2024",
+   "figure": "2 deaths of UK fishing vessel crew",
+   "low": 2,
+   "high": 2,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Deaths of crew of UK-registered commercial fishing vessels (registered with the MCA Registry of Shipping and Seamen), worldwide, from accidents reported to the MAIB, counted by the year the incident was reported. Crew only: passengers, pleasure craft and non-UK vessels are not in this table (non-UK flagged vessels need not report unless in a UK port/harbour or carrying passengers to or from a UK port). MAIB does not say whether deaths from natural causes are excluded. Figures are revised in later editions ('data from previous years can and will change').",
+   "geography": "United Kingdom (UK-registered fishing vessels, worldwide)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK fishing vessels' introductory text, p. 71; Chief Inspector's statement, p. 2",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "One vessel class only. MAIB prints no all-vessel death total, so do not add to uk-maib-merchant-crew-deaths-* or uk-maib-passenger-deaths-* to make one; do not add across years; do not add to uk-waid-2024 (WAID already counts these deaths where they were accidental water-related deaths in the UK); not comparable with Canada TSB or Australia AMSA rows (different vessel populations and rules).",
+   "note": "From the section text (p. 71) and the Chief Inspector's statement (p. 2); the 2024 edition's Table 22 'deaths and injuries to fishing vessel crew by vessel length' (2015-2024) lies beyond the reachable text (extraction ends at p. 74). Two fishing-vessel entries appear in Table 1 (Loss of life reported to the MAIB in 2024)."
+  },
+  {
+   "id": "uk-maib-merchant-crew-deaths-2020",
+   "figure": "0 crew deaths on UK merchant vessels of 100gt or more (of 78 crew injured)",
+   "low": 0,
+   "high": 0,
+   "unit": "deaths",
+   "year": 2020,
+   "scope": "Deaths of crew on UK-registered merchant vessels of 100 gross tonnage or more ('trading and non-trading vessels of 100 gross tonnage (gt) or more (excluding fish processing and catching)'), worldwide, from accidents reported to the MAIB, by year reported. Crew only: passenger deaths are in Table 11 and merchant vessels under 100gt in Table 14. Non-UK vessels excluded. MAIB does not say whether natural-cause deaths are excluded. Previous years' figures are revised in later editions.",
+   "geography": "United Kingdom (UK-registered merchant vessels of 100gt or more, worldwide)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK merchant vessels >= 100gt', Table 5 'Deaths and injuries to crew on UK merchant vessels >= 100gt — 2015 to 2024', p. 55",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "One vessel class, crew only. Do not add to uk-maib-fishing-crew-deaths-* or uk-maib-passenger-deaths-* (MAIB prints no all-vessel total); do not add across years; do not add to uk-waid-2024 or to any drowning count (cause of death is not drowning-specific); not comparable with Canada TSB or Australia AMSA rows.",
+   "note": "Table 5 row: 2020 crew injured 78, 'of which resulted in death' 0."
+  },
+  {
+   "id": "uk-maib-merchant-crew-deaths-2021",
+   "figure": "0 crew deaths on UK merchant vessels of 100gt or more (of 79 crew injured)",
+   "low": 0,
+   "high": 0,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Deaths of crew on UK-registered merchant vessels of 100 gross tonnage or more ('trading and non-trading vessels of 100 gross tonnage (gt) or more (excluding fish processing and catching)'), worldwide, from accidents reported to the MAIB, by year reported. Crew only: passenger deaths are in Table 11 and merchant vessels under 100gt in Table 14. Non-UK vessels excluded. MAIB does not say whether natural-cause deaths are excluded. Previous years' figures are revised in later editions.",
+   "geography": "United Kingdom (UK-registered merchant vessels of 100gt or more, worldwide)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK merchant vessels >= 100gt', Table 5 'Deaths and injuries to crew on UK merchant vessels >= 100gt — 2015 to 2024', p. 55",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "One vessel class, crew only. Do not add to uk-maib-fishing-crew-deaths-* or uk-maib-passenger-deaths-* (MAIB prints no all-vessel total); do not add across years; do not add to uk-waid-2024 or to any drowning count (cause of death is not drowning-specific); not comparable with Canada TSB or Australia AMSA rows.",
+   "note": "Table 5 row: 2021 crew injured 79, 'of which resulted in death' 0. The 2023 edition printed 76 injured for 2021 (deaths 0 in both editions)."
+  },
+  {
+   "id": "uk-maib-merchant-crew-deaths-2022",
+   "figure": "0 crew deaths on UK merchant vessels of 100gt or more (of 85 crew injured)",
+   "low": 0,
+   "high": 0,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Deaths of crew on UK-registered merchant vessels of 100 gross tonnage or more ('trading and non-trading vessels of 100 gross tonnage (gt) or more (excluding fish processing and catching)'), worldwide, from accidents reported to the MAIB, by year reported. Crew only: passenger deaths are in Table 11 and merchant vessels under 100gt in Table 14. Non-UK vessels excluded. MAIB does not say whether natural-cause deaths are excluded. Previous years' figures are revised in later editions.",
+   "geography": "United Kingdom (UK-registered merchant vessels of 100gt or more, worldwide)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK merchant vessels >= 100gt', Table 5 'Deaths and injuries to crew on UK merchant vessels >= 100gt — 2015 to 2024', p. 55",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "One vessel class, crew only. Do not add to uk-maib-fishing-crew-deaths-* or uk-maib-passenger-deaths-* (MAIB prints no all-vessel total); do not add across years; do not add to uk-waid-2024 or to any drowning count (cause of death is not drowning-specific); not comparable with Canada TSB or Australia AMSA rows.",
+   "note": "Table 5 row: 2022 crew injured 85, 'of which resulted in death' 0."
+  },
+  {
+   "id": "uk-maib-merchant-crew-deaths-2023",
+   "figure": "2 crew deaths on UK merchant vessels of 100gt or more (of 133 crew injured)",
+   "low": 2,
+   "high": 2,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Deaths of crew on UK-registered merchant vessels of 100 gross tonnage or more ('trading and non-trading vessels of 100 gross tonnage (gt) or more (excluding fish processing and catching)'), worldwide, from accidents reported to the MAIB, by year reported. Crew only: passenger deaths are in Table 11 and merchant vessels under 100gt in Table 14. Non-UK vessels excluded. MAIB does not say whether natural-cause deaths are excluded. Previous years' figures are revised in later editions.",
+   "geography": "United Kingdom (UK-registered merchant vessels of 100gt or more, worldwide)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK merchant vessels >= 100gt', Table 5 'Deaths and injuries to crew on UK merchant vessels >= 100gt — 2015 to 2024', p. 55",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "One vessel class, crew only. Do not add to uk-maib-fishing-crew-deaths-* or uk-maib-passenger-deaths-* (MAIB prints no all-vessel total); do not add across years; do not add to uk-waid-2024 or to any drowning count (cause of death is not drowning-specific); not comparable with Canada TSB or Australia AMSA rows.",
+   "note": "Table 5 row: 2023 crew injured 133, 'of which resulted in death' 2. The 2023 edition (Table 5, p. 43) printed 132 injured and 1 death for 2023; the 2024 edition revised these to 133 and 2 (footnote 26: previous years' data can change). Both values recorded; the later edition is used here."
+  },
+  {
+   "id": "uk-maib-merchant-crew-deaths-2024",
+   "figure": "0 crew deaths on UK merchant vessels of 100gt or more (of 91 crew injured)",
+   "low": 0,
+   "high": 0,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Deaths of crew on UK-registered merchant vessels of 100 gross tonnage or more ('trading and non-trading vessels of 100 gross tonnage (gt) or more (excluding fish processing and catching)'), worldwide, from accidents reported to the MAIB, by year reported. Crew only: passenger deaths are in Table 11 and merchant vessels under 100gt in Table 14. Non-UK vessels excluded. MAIB does not say whether natural-cause deaths are excluded. Previous years' figures are revised in later editions.",
+   "geography": "United Kingdom (UK-registered merchant vessels of 100gt or more, worldwide)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK merchant vessels >= 100gt', Table 5 'Deaths and injuries to crew on UK merchant vessels >= 100gt — 2015 to 2024', p. 55",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "One vessel class, crew only. Do not add to uk-maib-fishing-crew-deaths-* or uk-maib-passenger-deaths-* (MAIB prints no all-vessel total); do not add across years; do not add to uk-waid-2024 or to any drowning count (cause of death is not drowning-specific); not comparable with Canada TSB or Australia AMSA rows.",
+   "note": "Table 5 row: 2024 crew injured 91, 'of which resulted in death' 0. Footnote 27: excludes one minor injury the IMO does not classify as an injury. Table 1 lists one 2024 fatal accident under 'Merchant vessels 100gt and over' (passenger loss, not crew)."
+  },
+  {
+   "id": "uk-maib-passenger-deaths-2020",
+   "figure": "0 passenger deaths (of 26 passengers injured)",
+   "low": 0,
+   "high": 0,
+   "unit": "deaths",
+   "year": 2020,
+   "scope": "Deaths of passengers from accidents reported to the MAIB, by year reported; Table 11 sits in the 'UK merchant vessels >= 100gt' section of Part 3. Footnote 28: 'From 2014 to 2019 this table excludes injuries/fatalities that were not in connection with the operation of a ship' (so from 2020 the table may include deaths not connected with ship operation). Passengers only; crew deaths are in Table 5. Whether passengers on non-UK vessels carrying passengers to or from UK ports are included is not stated in the reachable text (Annex A of the 2024 edition unreachable).",
+   "geography": "United Kingdom (passengers on UK merchant vessels, as reported to the MAIB)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK merchant vessels >= 100gt', Table 11 'Deaths and injuries to passengers — 2015 to 2024', p. 66",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "Passengers only. Do not add to uk-maib-merchant-crew-deaths-* or uk-maib-fishing-crew-deaths-* (MAIB prints no all-vessel total); do not add across years; do not add to uk-waid-2024 or to drowning counts (most passenger casualties are falls and fractures, not drownings); not comparable with Canada TSB or Australia AMSA rows.",
+   "note": "Table 11 row: 2020 injured passengers 26, 'of which resulted in death' 0."
+  },
+  {
+   "id": "uk-maib-passenger-deaths-2021",
+   "figure": "0 passenger deaths (of 23 passengers injured)",
+   "low": 0,
+   "high": 0,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Deaths of passengers from accidents reported to the MAIB, by year reported; Table 11 sits in the 'UK merchant vessels >= 100gt' section of Part 3. Footnote 28: 'From 2014 to 2019 this table excludes injuries/fatalities that were not in connection with the operation of a ship' (so from 2020 the table may include deaths not connected with ship operation). Passengers only; crew deaths are in Table 5. Whether passengers on non-UK vessels carrying passengers to or from UK ports are included is not stated in the reachable text (Annex A of the 2024 edition unreachable).",
+   "geography": "United Kingdom (passengers on UK merchant vessels, as reported to the MAIB)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK merchant vessels >= 100gt', Table 11 'Deaths and injuries to passengers — 2015 to 2024', p. 66",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "Passengers only. Do not add to uk-maib-merchant-crew-deaths-* or uk-maib-fishing-crew-deaths-* (MAIB prints no all-vessel total); do not add across years; do not add to uk-waid-2024 or to drowning counts (most passenger casualties are falls and fractures, not drownings); not comparable with Canada TSB or Australia AMSA rows.",
+   "note": "Table 11 row: 2021 injured passengers 23, 'of which resulted in death' 0."
+  },
+  {
+   "id": "uk-maib-passenger-deaths-2022",
+   "figure": "2 passenger deaths (of 73 passengers injured)",
+   "low": 2,
+   "high": 2,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Deaths of passengers from accidents reported to the MAIB, by year reported; Table 11 sits in the 'UK merchant vessels >= 100gt' section of Part 3. Footnote 28: 'From 2014 to 2019 this table excludes injuries/fatalities that were not in connection with the operation of a ship' (so from 2020 the table may include deaths not connected with ship operation). Passengers only; crew deaths are in Table 5. Whether passengers on non-UK vessels carrying passengers to or from UK ports are included is not stated in the reachable text (Annex A of the 2024 edition unreachable).",
+   "geography": "United Kingdom (passengers on UK merchant vessels, as reported to the MAIB)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK merchant vessels >= 100gt', Table 11 'Deaths and injuries to passengers — 2015 to 2024', p. 66",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "Passengers only. Do not add to uk-maib-merchant-crew-deaths-* or uk-maib-fishing-crew-deaths-* (MAIB prints no all-vessel total); do not add across years; do not add to uk-waid-2024 or to drowning counts (most passenger casualties are falls and fractures, not drownings); not comparable with Canada TSB or Australia AMSA rows.",
+   "note": "Table 11 row: 2022 injured passengers 73, 'of which resulted in death' 2."
+  },
+  {
+   "id": "uk-maib-passenger-deaths-2023",
+   "figure": "3 passenger deaths (of 179 passengers injured)",
+   "low": 3,
+   "high": 3,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Deaths of passengers from accidents reported to the MAIB, by year reported; Table 11 sits in the 'UK merchant vessels >= 100gt' section of Part 3. Footnote 28: 'From 2014 to 2019 this table excludes injuries/fatalities that were not in connection with the operation of a ship' (so from 2020 the table may include deaths not connected with ship operation). Passengers only; crew deaths are in Table 5. Whether passengers on non-UK vessels carrying passengers to or from UK ports are included is not stated in the reachable text (Annex A of the 2024 edition unreachable).",
+   "geography": "United Kingdom (passengers on UK merchant vessels, as reported to the MAIB)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK merchant vessels >= 100gt', Table 11 'Deaths and injuries to passengers — 2015 to 2024', p. 66",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "Passengers only. Do not add to uk-maib-merchant-crew-deaths-* or uk-maib-fishing-crew-deaths-* (MAIB prints no all-vessel total); do not add across years; do not add to uk-waid-2024 or to drowning counts (most passenger casualties are falls and fractures, not drownings); not comparable with Canada TSB or Australia AMSA rows.",
+   "note": "Table 11 row: 2023 injured passengers 179, 'of which resulted in death' 3. The 2023 edition (Table 11, p. 51) printed 178 injured and 2 deaths for 2023; the 2024 edition revised these to 179 and 3. Both values recorded; the later edition is used here."
+  },
+  {
+   "id": "uk-maib-passenger-deaths-2024",
+   "figure": "1 passenger death (of 151 passengers injured)",
+   "low": 1,
+   "high": 1,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Deaths of passengers from accidents reported to the MAIB, by year reported; Table 11 sits in the 'UK merchant vessels >= 100gt' section of Part 3. Footnote 28: 'From 2014 to 2019 this table excludes injuries/fatalities that were not in connection with the operation of a ship' (so from 2020 the table may include deaths not connected with ship operation). Passengers only; crew deaths are in Table 5. Whether passengers on non-UK vessels carrying passengers to or from UK ports are included is not stated in the reachable text (Annex A of the 2024 edition unreachable).",
+   "geography": "United Kingdom (passengers on UK merchant vessels, as reported to the MAIB)",
+   "source": "UK Marine Accident Investigation Branch, MAIB Annual Report 2024 (17 July 2025), Part 3 'UK merchant vessels >= 100gt', Table 11 'Deaths and injuries to passengers — 2015 to 2024', p. 66",
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "grade": "A",
+   "do_not_add_to": "Passengers only. Do not add to uk-maib-merchant-crew-deaths-* or uk-maib-fishing-crew-deaths-* (MAIB prints no all-vessel total); do not add across years; do not add to uk-waid-2024 or to drowning counts (most passenger casualties are falls and fractures, not drownings); not comparable with Canada TSB or Australia AMSA rows.",
+   "note": "Table 11 row: 2024 injured passengers 151, 'of which resulted in death' 1. Table 12 (pp. 67-68) classifies the one 2024 passenger death under 'drowning and asphyxiation'."
+  },
+  {
+   "id": "canada-tsb-marine-fatalities-2021",
+   "figure": "11 persons fatally injured in marine accidents reported to the TSB",
+   "low": 11,
+   "high": 11,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Persons fatally injured (missing persons included) in marine accidents reported to the TSB in the calendar year: 'shipping accidents' (sinking, capsize, collision, fire, grounding, damage, missing) plus 'accidents aboard ship' (boarding, on board, overboard, contact with the ship). Commercial vessels only ('registered or licensed to operate commercially'); pleasure craft occurrences 'not normally included unless they also involved a commercial vessel'. Foreign-flag vessels in Canadian waters counted. No crew/passenger split printed. Live database; figures may change.",
+   "geography": "Canada (occurrences in Canadian waters in the Pacific, Central and Atlantic regions, plus a 'Foreign waters' row)",
+   "source": "Transportation Safety Board of Canada, Statistical summary: marine transportation occurrences in 2025 (data extracted 30 March 2026), Table 1 'Marine transportation occurrences, vessels, losses, and casualties, 2015 to 2025', row 'Persons fatally injured', p. 11",
+   "url": "https://www.bst.gc.ca/sites/default/files/2026-06/ssem-ssmo-2025-ENG.pdf",
+   "grade": "A",
+   "do_not_add_to": "Commercial-vessel accidents only; recreational boating deaths are excluded unless a commercial vessel was involved, so do not treat as Canada's boating toll and do not add to canada-total-2022 or the canada-location-* rows (coroner-based drowning counts that already include boating drownings); do not add across years or to the UK or Australian rows; the figure is not drowning-specific.",
+   "note": "Table 1 sub-rows (2025 edition): persons fatally injured in shipping accidents 9, in accidents aboard ship 2. Source-printed sub-rows, not added by the lab. Identical value in the 2024 edition (Table 1, p. 11). Table 7 (2025 edition), fishing vessels: shipping accidents 6, aboard ship 2."
+  },
+  {
+   "id": "canada-tsb-marine-fatalities-2022",
+   "figure": "9 persons fatally injured in marine accidents reported to the TSB",
+   "low": 9,
+   "high": 9,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Persons fatally injured (missing persons included) in marine accidents reported to the TSB in the calendar year: 'shipping accidents' (sinking, capsize, collision, fire, grounding, damage, missing) plus 'accidents aboard ship' (boarding, on board, overboard, contact with the ship). Commercial vessels only ('registered or licensed to operate commercially'); pleasure craft occurrences 'not normally included unless they also involved a commercial vessel'. Foreign-flag vessels in Canadian waters counted. No crew/passenger split printed. Live database; figures may change.",
+   "geography": "Canada (occurrences in Canadian waters in the Pacific, Central and Atlantic regions, plus a 'Foreign waters' row)",
+   "source": "Transportation Safety Board of Canada, Statistical summary: marine transportation occurrences in 2025 (data extracted 30 March 2026), Table 1 'Marine transportation occurrences, vessels, losses, and casualties, 2015 to 2025', row 'Persons fatally injured', p. 11",
+   "url": "https://www.bst.gc.ca/sites/default/files/2026-06/ssem-ssmo-2025-ENG.pdf",
+   "grade": "A",
+   "do_not_add_to": "Commercial-vessel accidents only; recreational boating deaths are excluded unless a commercial vessel was involved, so do not treat as Canada's boating toll and do not add to canada-total-2022 or the canada-location-* rows (coroner-based drowning counts that already include boating drownings); do not add across years or to the UK or Australian rows; the figure is not drowning-specific.",
+   "note": "Table 1 sub-rows (2025 edition): persons fatally injured in shipping accidents 4, in accidents aboard ship 5. Source-printed sub-rows, not added by the lab. Identical value in the 2024 edition (Table 1, p. 11). Table 7 (2025 edition), fishing vessels: shipping accidents 3, aboard ship 2."
+  },
+  {
+   "id": "canada-tsb-marine-fatalities-2023",
+   "figure": "18 persons fatally injured in marine accidents reported to the TSB",
+   "low": 18,
+   "high": 18,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Persons fatally injured (missing persons included) in marine accidents reported to the TSB in the calendar year: 'shipping accidents' (sinking, capsize, collision, fire, grounding, damage, missing) plus 'accidents aboard ship' (boarding, on board, overboard, contact with the ship). Commercial vessels only ('registered or licensed to operate commercially'); pleasure craft occurrences 'not normally included unless they also involved a commercial vessel'. Foreign-flag vessels in Canadian waters counted. No crew/passenger split printed. Live database; figures may change.",
+   "geography": "Canada (occurrences in Canadian waters in the Pacific, Central and Atlantic regions, plus a 'Foreign waters' row)",
+   "source": "Transportation Safety Board of Canada, Statistical summary: marine transportation occurrences in 2025 (data extracted 30 March 2026), Table 1 'Marine transportation occurrences, vessels, losses, and casualties, 2015 to 2025', row 'Persons fatally injured', p. 11",
+   "url": "https://www.bst.gc.ca/sites/default/files/2026-06/ssem-ssmo-2025-ENG.pdf",
+   "grade": "A",
+   "do_not_add_to": "Commercial-vessel accidents only; recreational boating deaths are excluded unless a commercial vessel was involved, so do not treat as Canada's boating toll and do not add to canada-total-2022 or the canada-location-* rows (coroner-based drowning counts that already include boating drownings); do not add across years or to the UK or Australian rows; the figure is not drowning-specific.",
+   "note": "Table 1 sub-rows (2025 edition): persons fatally injured in shipping accidents 10, in accidents aboard ship 8. Source-printed sub-rows, not added by the lab. Identical value in the 2024 edition (Table 1, p. 11). Table 7 (2025 edition), fishing vessels: shipping accidents 5, aboard ship 3."
+  },
+  {
+   "id": "canada-tsb-marine-fatalities-2024",
+   "figure": "12 persons fatally injured in marine accidents reported to the TSB",
+   "low": 12,
+   "high": 12,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Persons fatally injured (missing persons included) in marine accidents reported to the TSB in the calendar year: 'shipping accidents' (sinking, capsize, collision, fire, grounding, damage, missing) plus 'accidents aboard ship' (boarding, on board, overboard, contact with the ship). Commercial vessels only ('registered or licensed to operate commercially'); pleasure craft occurrences 'not normally included unless they also involved a commercial vessel'. Foreign-flag vessels in Canadian waters counted. No crew/passenger split printed. Live database; figures may change.",
+   "geography": "Canada (occurrences in Canadian waters in the Pacific, Central and Atlantic regions, plus a 'Foreign waters' row)",
+   "source": "Transportation Safety Board of Canada, Statistical summary: marine transportation occurrences in 2025 (data extracted 30 March 2026), Table 1 'Marine transportation occurrences, vessels, losses, and casualties, 2015 to 2025', row 'Persons fatally injured', p. 11",
+   "url": "https://www.bst.gc.ca/sites/default/files/2026-06/ssem-ssmo-2025-ENG.pdf",
+   "grade": "A",
+   "do_not_add_to": "Commercial-vessel accidents only; recreational boating deaths are excluded unless a commercial vessel was involved, so do not treat as Canada's boating toll and do not add to canada-total-2022 or the canada-location-* rows (coroner-based drowning counts that already include boating drownings); do not add across years or to the UK or Australian rows; the figure is not drowning-specific.",
+   "note": "Table 1 sub-rows (2025 edition): persons fatally injured in shipping accidents 9, in accidents aboard ship 3. Source-printed sub-rows, not added by the lab. The 2024 edition (Table 1, p. 11; data extracted 24 March 2025) printed the same total of 12 but split it 8 shipping accidents / 4 aboard ship; the 2025 edition prints 9 / 3. Both recorded. Table 7 (2025 edition): 7 of the 9 shipping-accident deaths and 3 of the 3 aboard-ship deaths were on fishing vessels."
+  },
+  {
+   "id": "canada-tsb-marine-fatalities-2025",
+   "figure": "6 persons fatally injured in marine accidents reported to the TSB",
+   "low": 6,
+   "high": 6,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Persons fatally injured (missing persons included) in marine accidents reported to the TSB in the calendar year: 'shipping accidents' (sinking, capsize, collision, fire, grounding, damage, missing) plus 'accidents aboard ship' (boarding, on board, overboard, contact with the ship). Commercial vessels only ('registered or licensed to operate commercially'); pleasure craft occurrences 'not normally included unless they also involved a commercial vessel'. Foreign-flag vessels in Canadian waters counted. No crew/passenger split printed. Live database; figures may change.",
+   "geography": "Canada (occurrences in Canadian waters in the Pacific, Central and Atlantic regions, plus a 'Foreign waters' row)",
+   "source": "Transportation Safety Board of Canada, Statistical summary: marine transportation occurrences in 2025 (data extracted 30 March 2026), Table 1 'Marine transportation occurrences, vessels, losses, and casualties, 2015 to 2025', row 'Persons fatally injured', p. 11",
+   "url": "https://www.bst.gc.ca/sites/default/files/2026-06/ssem-ssmo-2025-ENG.pdf",
+   "grade": "A",
+   "do_not_add_to": "Commercial-vessel accidents only; recreational boating deaths are excluded unless a commercial vessel was involved, so do not treat as Canada's boating toll and do not add to canada-total-2022 or the canada-location-* rows (coroner-based drowning counts that already include boating drownings); do not add across years or to the UK or Australian rows; the figure is not drowning-specific.",
+   "note": "Table 1 sub-rows (2025 edition): persons fatally injured in shipping accidents 3, in accidents aboard ship 3. Source-printed sub-rows, not added by the lab. Text, p. 3: 'In 2025, 6 marine fatalities were reported, down from the 12 fatalities reported in 2024' and 'below the annual average of 15 between 2015 and 2024' (source-printed average). Table 7: 2 shipping-accident and 1 aboard-ship death on fishing vessels."
+  },
+  {
+   "id": "australia-amsa-dcv-fatalities-2021",
+   "figure": "3 operational-related fatalities on domestic commercial vessels (3 fatal marine incidents)",
+   "low": 3,
+   "high": 3,
+   "unit": "deaths",
+   "year": 2021,
+   "scope": "Operational-related fatalities in marine incidents involving a domestic commercial vessel (DCV) reported to AMSA in the calendar year (Table 1). Counts people: 2021-2025 'nine crew members, four passengers and one rescued person'. Excludes foreign-flagged and regulated Australian vessels (reported separately) and non-DCV recreational craft (a second 2024 Sydney to Hobart race death 'did not involve a DCV'). 'Operational-related' is not defined beyond 'loss of life (fatalities) due to the operation of the vessel'; missing persons included (2025 text). No note on revisions.",
+   "geography": "Australia (domestic commercial vessels under the National Law)",
+   "source": "Australian Maritime Safety Authority, Marine Incident Annual Report 2025 (PDF), 'Domestic Commercial Vessels' > 'Consequences to people' > 'Fatalities', Table 1 'Fatal marine incidents and operational-related fatalities involving a DCV (2021-2025)'; page numbers not visible in the text extraction",
+   "url": "https://www.amsa.gov.au/sites/default/files/2026-06/marine-incident-annual-report-2025.pdf",
+   "grade": "A",
+   "do_not_add_to": "Domestic commercial vessels only; recreational vessels are outside AMSA's incident reporting, so do not treat as Australia's boating toll and do not add to australia-2024-25, australia-location-2024-25 or australia-age-2024-25 (Royal Life Saving drowning counts, financial years, which already include commercial-vessel drownings); do not add across years, to the Canadian or UK rows, or to the foreign-flagged/RAV fatality mentioned in the note.",
+   "note": "Table 1 (2025 edition) row 'Fatal marine incidents': 3 in 2021; row 'Fatalities': 3. Identical value in the 2024 edition, Table 1 'Fatal marine incidents and operational-related fatalities involving a DCV (2020-2024)' (which also prints 4 fatalities and 4 fatal incidents for 2020)."
+  },
+  {
+   "id": "australia-amsa-dcv-fatalities-2022",
+   "figure": "0 operational-related fatalities on domestic commercial vessels (0 fatal marine incidents)",
+   "low": 0,
+   "high": 0,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Operational-related fatalities in marine incidents involving a domestic commercial vessel (DCV) reported to AMSA in the calendar year (Table 1). Counts people: 2021-2025 'nine crew members, four passengers and one rescued person'. Excludes foreign-flagged and regulated Australian vessels (reported separately) and non-DCV recreational craft (a second 2024 Sydney to Hobart race death 'did not involve a DCV'). 'Operational-related' is not defined beyond 'loss of life (fatalities) due to the operation of the vessel'; missing persons included (2025 text). No note on revisions.",
+   "geography": "Australia (domestic commercial vessels under the National Law)",
+   "source": "Australian Maritime Safety Authority, Marine Incident Annual Report 2025 (PDF), 'Domestic Commercial Vessels' > 'Consequences to people' > 'Fatalities', Table 1 'Fatal marine incidents and operational-related fatalities involving a DCV (2021-2025)'; page numbers not visible in the text extraction",
+   "url": "https://www.amsa.gov.au/sites/default/files/2026-06/marine-incident-annual-report-2025.pdf",
+   "grade": "A",
+   "do_not_add_to": "Domestic commercial vessels only; recreational vessels are outside AMSA's incident reporting, so do not treat as Australia's boating toll and do not add to australia-2024-25, australia-location-2024-25 or australia-age-2024-25 (Royal Life Saving drowning counts, financial years, which already include commercial-vessel drownings); do not add across years, to the Canadian or UK rows, or to the foreign-flagged/RAV fatality mentioned in the note.",
+   "note": "Table 1 (2025 edition) row 'Fatal marine incidents': 0 in 2022; row 'Fatalities': 0. Identical value in the 2024 edition, Table 1 'Fatal marine incidents and operational-related fatalities involving a DCV (2020-2024)' (which also prints 4 fatalities and 4 fatal incidents for 2020). The 2024-edition Table A7 (fatalities by vessel class) also shows zeros across all classes for 2022."
+  },
+  {
+   "id": "australia-amsa-dcv-fatalities-2023",
+   "figure": "3 operational-related fatalities on domestic commercial vessels (3 fatal marine incidents)",
+   "low": 3,
+   "high": 3,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Operational-related fatalities in marine incidents involving a domestic commercial vessel (DCV) reported to AMSA in the calendar year (Table 1). Counts people: 2021-2025 'nine crew members, four passengers and one rescued person'. Excludes foreign-flagged and regulated Australian vessels (reported separately) and non-DCV recreational craft (a second 2024 Sydney to Hobart race death 'did not involve a DCV'). 'Operational-related' is not defined beyond 'loss of life (fatalities) due to the operation of the vessel'; missing persons included (2025 text). No note on revisions.",
+   "geography": "Australia (domestic commercial vessels under the National Law)",
+   "source": "Australian Maritime Safety Authority, Marine Incident Annual Report 2025 (PDF), 'Domestic Commercial Vessels' > 'Consequences to people' > 'Fatalities', Table 1 'Fatal marine incidents and operational-related fatalities involving a DCV (2021-2025)'; page numbers not visible in the text extraction",
+   "url": "https://www.amsa.gov.au/sites/default/files/2026-06/marine-incident-annual-report-2025.pdf",
+   "grade": "A",
+   "do_not_add_to": "Domestic commercial vessels only; recreational vessels are outside AMSA's incident reporting, so do not treat as Australia's boating toll and do not add to australia-2024-25, australia-location-2024-25 or australia-age-2024-25 (Royal Life Saving drowning counts, financial years, which already include commercial-vessel drownings); do not add across years, to the Canadian or UK rows, or to the foreign-flagged/RAV fatality mentioned in the note.",
+   "note": "Table 1 (2025 edition) row 'Fatal marine incidents': 3 in 2023; row 'Fatalities': 3. Identical value in the 2024 edition, Table 1 'Fatal marine incidents and operational-related fatalities involving a DCV (2020-2024)' (which also prints 4 fatalities and 4 fatal incidents for 2020)."
+  },
+  {
+   "id": "australia-amsa-dcv-fatalities-2024",
+   "figure": "4 operational-related fatalities on domestic commercial vessels (3 fatal marine incidents)",
+   "low": 4,
+   "high": 4,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Operational-related fatalities in marine incidents involving a domestic commercial vessel (DCV) reported to AMSA in the calendar year (Table 1). Counts people: 2021-2025 'nine crew members, four passengers and one rescued person'. Excludes foreign-flagged and regulated Australian vessels (reported separately) and non-DCV recreational craft (a second 2024 Sydney to Hobart race death 'did not involve a DCV'). 'Operational-related' is not defined beyond 'loss of life (fatalities) due to the operation of the vessel'; missing persons included (2025 text). No note on revisions.",
+   "geography": "Australia (domestic commercial vessels under the National Law)",
+   "source": "Australian Maritime Safety Authority, Marine Incident Annual Report 2025 (PDF), 'Domestic Commercial Vessels' > 'Consequences to people' > 'Fatalities', Table 1 'Fatal marine incidents and operational-related fatalities involving a DCV (2021-2025)'; page numbers not visible in the text extraction",
+   "url": "https://www.amsa.gov.au/sites/default/files/2026-06/marine-incident-annual-report-2025.pdf",
+   "grade": "A",
+   "do_not_add_to": "Domestic commercial vessels only; recreational vessels are outside AMSA's incident reporting, so do not treat as Australia's boating toll and do not add to australia-2024-25, australia-location-2024-25 or australia-age-2024-25 (Royal Life Saving drowning counts, financial years, which already include commercial-vessel drownings); do not add across years, to the Canadian or UK rows, or to the foreign-flagged/RAV fatality mentioned in the note.",
+   "note": "Table 1 (2025 edition) row 'Fatal marine incidents': 3 in 2024; row 'Fatalities': 4. Identical value in the 2024 edition, Table 1 'Fatal marine incidents and operational-related fatalities involving a DCV (2020-2024)' (which also prints 4 fatalities and 4 fatal incidents for 2020). 2024 edition: one passenger (truck rolled off a ferry), two crew (fishing dinghy capsized, no lifejackets), one yacht crew member struck by the boom; a second race death 'did not involve a DCV'. Separately, one seafarer death on a foreign flagged vessel (see australia-amsa-all-vessels-fatalities-2024)."
+  },
+  {
+   "id": "australia-amsa-dcv-fatalities-2025",
+   "figure": "4 operational-related fatalities on domestic commercial vessels (4 fatal marine incidents)",
+   "low": 4,
+   "high": 4,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Operational-related fatalities in marine incidents involving a domestic commercial vessel (DCV) reported to AMSA in the calendar year (Table 1). Counts people: 2021-2025 'nine crew members, four passengers and one rescued person'. Excludes foreign-flagged and regulated Australian vessels (reported separately) and non-DCV recreational craft (a second 2024 Sydney to Hobart race death 'did not involve a DCV'). 'Operational-related' is not defined beyond 'loss of life (fatalities) due to the operation of the vessel'; missing persons included (2025 text). No note on revisions.",
+   "geography": "Australia (domestic commercial vessels under the National Law)",
+   "source": "Australian Maritime Safety Authority, Marine Incident Annual Report 2025 (PDF), 'Domestic Commercial Vessels' > 'Consequences to people' > 'Fatalities', Table 1 'Fatal marine incidents and operational-related fatalities involving a DCV (2021-2025)'; page numbers not visible in the text extraction",
+   "url": "https://www.amsa.gov.au/sites/default/files/2026-06/marine-incident-annual-report-2025.pdf",
+   "grade": "A",
+   "do_not_add_to": "Domestic commercial vessels only; recreational vessels are outside AMSA's incident reporting, so do not treat as Australia's boating toll and do not add to australia-2024-25, australia-location-2024-25 or australia-age-2024-25 (Royal Life Saving drowning counts, financial years, which already include commercial-vessel drownings); do not add across years, to the Canadian or UK rows, or to the foreign-flagged/RAV fatality mentioned in the note.",
+   "note": "Table 1 (2025 edition) row 'Fatal marine incidents': 4 in 2025; row 'Fatalities': 4. 2025 edition text: one person deceased after a floodwater-evacuation capsize (six occupants ejected), a crew death on a fishing charter capsize crossing a coastal bar, a crew member lost overboard from a fishing vessel (not located), and a commercial diver who failed to surface (not located). Also: 'In 2025, there were no operational-related fatalities on FFV and RAVs.'"
+  },
+  {
+   "id": "australia-amsa-all-vessels-fatalities-2024",
+   "figure": "5 fatalities reported across all vessel types",
+   "low": 5,
+   "high": 5,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "Fatalities reported to AMSA in calendar 2024 across domestic commercial vessels, regulated Australian vessels and foreign-flagged vessels, as stated on the report's web summary ('In 2024' bullets). The PDF itemises them as four operational-related DCV fatalities (Table 1) and 'one operational related seafarer fatality on a foreign flagged vessel', with 'no passenger fatalities' on foreign-flagged/RAV vessels; the PDF itself does not print the figure 5. Recreational vessels excluded.",
+   "geography": "Australia (DCVs, regulated Australian vessels and foreign-flagged vessels in Australian waters)",
+   "source": "Australian Maritime Safety Authority, Marine incident annual report 2024 web page (last updated 3 July 2025), 'In 2024' summary bullet; itemised in the PDF, sections 'Domestic Commercial Vessels' and 'Foreign-flagged and regulated Australian vessels' > 'Fatalities'",
+   "url": "https://www.amsa.gov.au/vessels-operators/incident-reporting/marine-incident-reports/marine-incident-annual-report-2024",
+   "grade": "A",
+   "do_not_add_to": "Already contains australia-amsa-dcv-fatalities-2024 (4 of the 5); do not add the two together. Commercial vessels only: do not add to australia-2024-25 or other drowning counts, across years, or to the Canadian or UK rows. The 2025 edition prints no equivalent all-vessel figure (DCV 4; 'no operational-related fatalities on FFV and RAVs' in 2025); the lab must not derive one.",
+   "note": "The only AMSA figure that spans all vessel classes for 2024. Grade A because it is AMSA's own statistical web summary of the report, not a press release; a reviewer may prefer to cite the PDF's two component statements."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "water-transport-other",
+   "field": "note",
+   "old": "The largest unmeasured piece of the toll.",
+   "new": "The largest unmeasured piece of the toll. No global series, but three national accident-investigation series exist for commercial vessels: UK MAIB annual reports (fishing crew, merchant crew and passenger deaths), Canada TSB marine statistical summaries (persons fatally injured, commercial vessels) and Australia AMSA marine incident annual reports (operational-related DCV fatalities): see the uk-maib-*, canada-tsb-* and australia-amsa-* rows. All exclude recreational craft except where a commercial vessel was involved; none is a drowning count.",
+   "evidence": "MAIB Annual Report 2024, Tables 5 and 11 (pp. 55, 66) and 2023 Table 22 (p. 60); TSB Statistical summary: marine transportation occurrences in 2025, Table 1 (p. 11) and 'Vessels covered' (p. 19); AMSA Marine Incident Annual Report 2025, Table 1 (Fatalities section)."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "examines and investigates all types of marine accidents to or on board UK vessels worldwide, and other vessels in UK territorial waters",
+   "where": "MAIB Annual Report 2024, Introduction (inside cover), scope sentence"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "Table 5: Deaths and injuries to crew on UK merchant vessels >= 100gt — 2015 to 2024",
+   "where": "Part 3, UK merchant vessels >= 100gt, Table 5 title, p. 55; columns 'Year', 'Number of crew injured', 'Of which resulted in death'"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "2020 78 0 2021 79 0 2022 85 0 2023 133 2 2024 91 0",
+   "where": "Table 5, p. 55, rows 2020 to 2024 in extraction order (year, crew injured, of which resulted in death)"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "MAIB regularly reviews its accident data. On occasion, data from previous years can and will change based on these reviews.",
+   "where": "Footnote 26 to Table 5, p. 55"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "Table 11: Deaths and injuries to passengers — 2015 to 2024",
+   "where": "Part 3, section 'UK MERCHANT VESSELS >= 100gt', Table 11 title, p. 66; columns 'Year', 'Number of injured passengers', 'Of which resulted in death'"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "2020 26 0 2021 23 0 2022 73 2 2023 179 3 2024 151 1",
+   "where": "Table 11, p. 66, rows 2020 to 2024 in extraction order (year, injured passengers, of which resulted in death)"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "From 2014 to 2019 this table excludes injuries/fatalities that were not in connection with the operation of a ship.",
+   "where": "Footnote 28 to Table 11, p. 66"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "Ten fishing vessels were reported lost (0.21% of the total fleet) and there were 2 fatalities to crew.",
+   "where": "Part 3, section 'UK FISHING VESSELS', introductory text, p. 71"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "Two fishing vessel crew died as a result of marine accidents in 2024, the same number as in 2020",
+   "where": "Chief Inspector's statement, Safety issues: commercial fishing vessels, p. 2"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "Table 1: Loss of life reported to the MAIB in 2024",
+   "where": "Part 3, 'UK VESSELS: ACCIDENTS INVOLVING LOSS OF LIFE', pp. 50-52; an event list under four headings including 'Pleasure craft (excluding commercial recreational)'; no total printed"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/687903be760bf6cedaf5be62/2025-MAIBAnnualReport2024.pdf",
+   "quote": "Deaths 0 0 0 2 0 0 0 0 0 0 2",
+   "where": "Table 14 'UK merchant vessels < 100gt by nature of casualty and vessel category in 2024', p. 70, 'Deaths' row (2 deaths, inland waterway vessel column; recreational craft column 0)"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "Deaths and injuries to fishing vessel crew by vessel length (of which, deaths shown in brackets) — 2014 to 2023",
+   "where": "MAIB Annual Report 2023, Part 3, 'UK FISHING VESSELS', Table 22 title, p. 60; columns 'Under 15m loa', '15m loa - under 24m reg', '24m reg and over', 'Total'"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "2020 12 (2) 16 - 10 - 38 (2)",
+   "where": "Table 22, p. 60, row 2020 (Total 38, of which 2 deaths)"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "2021 12 (7) 19 (2) 5 (1) 36 (10)",
+   "where": "Table 22, p. 60, row 2021 (Total 36, of which 10 deaths)"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "2022 5 - 16 (1) 10 (2) 31 (3)",
+   "where": "Table 22, p. 60, row 2022 (Total 31, of which 3 deaths)"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "2023 6 (2) 9 (1) 12 (1) 27 (4)",
+   "where": "Table 22, p. 60, row 2023 (Total 27, of which 4 deaths)"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "One fishing vessel was reported lost (0.02% of the total fleet) and there were 4 fatalities to crew.",
+   "where": "Part 3, 'UK FISHING VESSELS', introductory text, p. 52"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "Data is presented by the year in which the incident was reported to the MAIB.",
+   "where": "Annex A, Statistics coverage, p. 62"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "Non-UK flagged vessels are not required to report accidents to the MAIB unless they are within a UK port/harbour",
+   "where": "Annex A, Statistics coverage, p. 62 (sentence continues: or in UK 12-mile waters carrying passengers to or from a UK port)"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "Commercial fishing vessels registered with the UK Maritime and Coastguard Agency's Registry of Shipping and Seamen.",
+   "where": "Annex B, definition of 'UK fishing vessels', pp. 63-64"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "Trading and non-trading vessels of 100 gross tonnage (gt) or more (excluding fish processing and catching).",
+   "where": "Annex B, definition of 'Merchant vessels >=100gt', pp. 63-64"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "2023 132 1",
+   "where": "Table 5 'Deaths and injuries to merchant vessel crew — 2014-2023', p. 43, row 2023 (crew injured, deaths) as extracted; revised to 133 and 2 in the 2024 edition"
+  },
+  {
+   "url": "https://assets.publishing.service.gov.uk/media/67110acc9cd657734653d72b/MAIBAnnualReport2023.pdf",
+   "quote": "2023 178 2",
+   "where": "Table 11 'Deaths and injuries to passengers — 2014 to 2023', p. 51, row 2023 (injured passengers, deaths) as extracted; revised to 179 and 3 in the 2024 edition"
+  },
+  {
+   "url": "https://www.bst.gc.ca/sites/default/files/2026-06/ssem-ssmo-2025-ENG.pdf",
+   "quote": "Statistical summary: marine transportation occurrences in 2025",
+   "where": "Copyright page title; Cat. No. TU1-18E-PDF"
+  },
+  {
+   "url": "https://www.bst.gc.ca/sites/default/files/2026-06/ssem-ssmo-2025-ENG.pdf",
+   "quote": "In 2025, 6 marine fatalities were reported, down from the 12 fatalities reported in 2024",
+   "where": "Casualties section, p. 3"
+  },
+  {
+   "url": "https://www.bst.gc.ca/sites/default/files/2026-06/ssem-ssmo-2025-ENG.pdf",
+   "quote": "Marine transportation occurrences, vessels, losses, and casualties, 2015 to 2025",
+   "where": "Table 1 title, p. 11; row 'Persons fatally injured' reads 11, 9, 18, 12, 6 for 2021 to 2025"
+  },
+  {
+   "url": "https://www.bst.gc.ca/sites/default/files/2026-06/ssem-ssmo-2025-ENG.pdf",
+   "quote": "This report covers commercial vessels that include all vessels either registered or licensed to operate commercially.",
+   "where": "Definitions, 'Vessels covered', p. 19"
+  },
+  {
+   "url": "https://www.bst.gc.ca/sites/default/files/2026-06/ssem-ssmo-2025-ENG.pdf",
+   "quote": "Pleasure craft occurrences are not normally included unless they also involved a commercial vessel.",
+   "where": "Definitions, 'Vessels covered', p. 19"
+  },
+  {
+   "url": "https://bst-tsb.gc.ca/eng/stats/marine/2025/ssem-ssmo-2025.html",
+   "quote": "Data extracted 30 March 2026",
+   "where": "Data tables section; also 'reflect the TSB Marine Safety Information System (MARSIS) database at 30 March 2026' in the introduction"
+  },
+  {
+   "url": "https://bst-tsb.gc.ca/eng/stats/marine/2025/ssem-ssmo-2025.html",
+   "quote": "Fatalities include missing persons.",
+   "where": "Footnote 1 to the casualty data tables (Tables 6 and 7)"
+  },
+  {
+   "url": "https://bst-tsb.gc.ca/eng/stats/marine/2025/ssem-ssmo-2025.html",
+   "quote": "An accident resulting directly from the operation of a ship other than a pleasure craft",
+   "where": "Definitions, 'Marine accident', opening words"
+  },
+  {
+   "url": "https://bst-tsb.gc.ca/eng/stats/marine/2025/ssem-ssmo-2025.html",
+   "quote": "Since the occurrence data are constantly being updated in the live database, the statistics may change slightly over time.",
+   "where": "Introductory text at the top of the page"
+  },
+  {
+   "url": "https://www.bst.gc.ca/sites/default/files/2025-06/ssem-ssmo-2024-ENG.pdf",
+   "quote": "Figure 2. Marine fatalities and serious injuries, 2014 to 2024",
+   "where": "2024 edition, p. 3; Table 1 (p. 11) 'Persons fatally injured' row reads 18, 11, 9, 18, 12 for 2020 to 2024, split 8 shipping accidents / 4 aboard ship in 2024"
+  },
+  {
+   "url": "https://bst-tsb.gc.ca/eng/stats/marine/2024/ssem-ssmo-2024.html",
+   "quote": "In 2024, 12 marine fatalities were reported, down from the 18 fatalities reported in 2023,",
+   "where": "2024 edition, 'Casualties (tables 1, 6 and 7)' section"
+  },
+  {
+   "url": "https://www.amsa.gov.au/sites/default/files/2026-06/marine-incident-annual-report-2025.pdf",
+   "quote": "Table 1: Fatal marine incidents and operational-related fatalities involving a DCV (2021-2025)",
+   "where": "Section 'Domestic Commercial Vessels' > 'Consequences to people' > 'Fatalities', Table 1 caption (page numbers not visible in the text extraction)"
+  },
+  {
+   "url": "https://www.amsa.gov.au/sites/default/files/2026-06/marine-incident-annual-report-2025.pdf",
+   "quote": "DCVs 2021 2022 2023 2024 2025 Fatal marine incidents 3 0 3 3 4 Fatalities 3 0 3 4 4",
+   "where": "Table 1, column headings and both rows as printed"
+  },
+  {
+   "url": "https://www.amsa.gov.au/sites/default/files/2026-06/marine-incident-annual-report-2025.pdf",
+   "quote": "comprising nine crew members, four passengers and one rescued person.",
+   "where": "Fatalities section, sentence on the 14 operational-related DCV fatalities 2021-2025; also 'In 2025, there were no operational-related fatalities on FFV and RAVs.' in the foreign-flagged/RAV Fatalities section"
+  },
+  {
+   "url": "https://www.amsa.gov.au/sites/default/files/marine-incident-annual-report-2024_fn.pdf",
+   "quote": "DCVs 2020 2021 2022 2023 2024 Fatal marine incidents 4 3 0 3 3 Fatalities 4 3 0 3 4",
+   "where": "2024 edition, Table 1 'Fatal marine incidents and operational-related fatalities involving a DCV (2020-2024)', Fatalities section (contents list places it at p. 8)"
+  },
+  {
+   "url": "https://www.amsa.gov.au/sites/default/files/marine-incident-annual-report-2024_fn.pdf",
+   "quote": "In 2024 there was one operational related seafarer fatality on a foreign flagged vessel.",
+   "where": "2024 edition, 'Foreign-flagged and regulated Australian vessels' > 'Consequences to people' > 'Fatalities'; followed by 'There were no passenger fatalities reported in 2024.'"
+  },
+  {
+   "url": "https://www.amsa.gov.au/vessels-operators/incident-reporting/marine-incident-reports/marine-incident-annual-report-2024",
+   "quote": "5 fatalities were reported across all vessel types.",
+   "where": "Marine incident annual report 2024 web page, 'In 2024' summary bullets; 'Last updated: 3 July 2025'"
+  }
+ ],
+ "tried": [
+  "MAIB Annual Report 2024 PDF (assets.publishing.service.gov.uk, 94 pages): WebFetch text extraction ends at 107,325 characters, mid-title of Table 19 (p. 74), even with offsets; Tables 19-24 of the 2024 edition (including the 2015-2024 fishing-crew-by-length table with deaths and the non-UK vessels in UK waters table) and Annexes A and B were unreachable. The 2023 edition (99,134 characters, complete to p. 65) was used instead for the fishing-crew series 2020-2023 and for the Annex A and B definitions.",
+  "gov.uk publication page for MAIB Annual Report 2024: PDF only; no HTML version, accessible version or data tables are offered (an accessible copy must be requested by email).",
+  "gov.uk collection 'MAIB annual reports' (opened 2026-10-21) lists the 2024 report (17 July 2025) as the most recent; https://www.gov.uk/government/publications/maib-annual-report-2025 returned a fetch error, so the 2025 edition appears unpublished. UK rows therefore stop at 2024.",
+  "MAIB prints no all-vessel annual total of deaths and no multi-year table of pleasure craft deaths in the reachable text of either edition: pleasure craft deaths appear only in the 2024 and 2023 'Table 1: Loss of life reported to the MAIB' event lists, which print no total, so none was counted.",
+  "https://www.tsb.gc.ca/ home page returned a fetch error; the monthly statistics page https://tsb.gc.ca/eng/stats/marine/2024/06/index.html returned link text without URLs. The 2025 statistical summary was reached by applying the 2024 URL pattern (https://bst-tsb.gc.ca/eng/stats/marine/2025/ssem-ssmo-2025.html and the 2026-06 PDF) and confirmed by its own title and 'Data extracted 30 March 2026'.",
+  "ATSB 'Australian shipping occurrence statistics': the only editions found cover 2005 to 2012 (atsb.gov.au/node/2218 and node/2192), so not a current series; not opened. AMSA's marine incident annual reports are the current Australian source.",
+  "AMSA 2024 PDF: WebFetch reported Table A7 (fatalities by vessel class) with a Total column (4, 3, 0, 3, 4) in one pass and without a Total column in another; the 2025 PDF's Table A6 rows came back with blank cells of uncertain column alignment. Only Table 1 totals are used in the rows. Neither AMSA PDF exposes page numbers in the text extraction; the 2024 contents list places the DCV Fatalities section at p. 8 and Tables A6/A7 at p. 34.",
+  "AMSA 2024 and 2025 reports do not define 'operational-related' or state whether natural-cause deaths are excluded; the AMSA website's list of definitions referred to in the Overview was not opened.",
+  "The shared WebSearch budget was exhausted after the ATSB search, so later documents (TSB 2025 edition, AMSA 2025 edition, MAIB collection page) were reached by following links from already-opened pages or by URL pattern rather than by search."
+ ],
+ "notes": "Status done for the three named sources, with caveats. Latest five years found: UK (MAIB) 2020-2024, Canada (TSB) 2021-2025, Australia (AMSA) 2021-2025. Counting rules differ and none of the three series is a boating or drowning toll: MAIB counts deaths on UK-registered commercial vessels by vessel class and role (fishing crew; merchant >=100gt crew; passengers), by year reported, with no all-vessel total printed; TSB counts persons fatally injured (including missing) in accidents involving commercial vessels, pleasure craft excluded unless a commercial vessel was involved; AMSA counts operational-related fatalities on domestic commercial vessels (crew, passengers, one rescued person), with foreign-flagged and regulated Australian vessel fatalities reported separately (1 in 2024, 0 in 2025) and recreational craft outside its reporting. The UK rows are three parallel series (15 rows) because MAIB prints no all-vessel total; the lab must not add them. Deaths on UK merchant vessels under 100gt (Table 14: 2 in 2024; 3 in 2023 per the 2023 edition, p. 52) and on non-UK commercial vessels in UK waters (2023 edition Table 24, p. 61: 4) are printed only as single-year tables and are left in notes, not rows. Revisions: the MAIB 2024 edition revised 2023 merchant crew deaths from 1 to 2 and 2023 passenger deaths from 2 to 3 (both editions' values recorded in the row notes); the TSB 2025 edition kept the 2024 total at 12 but moved one death from 'accidents aboard ship' to 'shipping accidents' (8/4 became 9/3). The UK fishing-crew values for 2020-2023 come from the 2023 edition (Table 22, p. 60) because the 2024 edition's Table 22 lies beyond the reachable text; the 2024 value (2) is from the 2024 edition's section text (p. 71) and Chief Inspector's statement (p. 2). What a person with a browser should check: (1) MAIB Annual Report 2024 pp. 74-94, Table 22 (2015-2024) for the fishing-crew deaths series and any revision of 2020-2023, plus Annex A for the 2024 coverage wording; (2) AMSA 2025 PDF page numbers for Table 1 and Table A6; (3) whether the UK merchant >=100gt crew and passenger tables include non-UK vessels carrying passengers to or from UK ports (Annex A of the 2024 edition). The TSB PDF quotes are from the 2026-06 PDF; the HTML edition carries the same tables with 'Data extracted 30 March 2026'. The US series already in the ledger (uscg-boating-2024, uscg-bard) is the only one of the four countries that covers recreational boating; no correction to uscg-bard is proposed. One correction is proposed to the note of water-transport-other to point at these national series; its figure ('No global yearly series') remains correct.",
+ "next_tasks": [
+  {
+   "title": "Read MAIB Annual Report 2024 pp. 74-94 (Tables 19-24, Annexes A and B) with a PDF reader: 2015-2024 fishing-crew deaths by vessel length, non-UK commercial vessels in UK waters deaths, and the 2024 coverage wording",
+   "why": "The 2020-2023 fishing-crew values in this bundle come from the 2023 edition and may have been revised; the 2024 edition's table was unreachable."
+  },
+  {
+   "title": "UK recreational boating deaths by year from the National Water Safety Forum WAID activity breakdown (sailing, motorboating, rowing, kayaking etc.), 2020-2024",
+   "why": "MAIB prints no pleasure-craft death series; WAID is the only UK source that counts recreational craft deaths annually."
+  },
+  {
+   "title": "Canada boating-related drowning deaths by year from the Lifesaving Society Canada drowning report (boating as activity), to sit beside the TSB commercial series",
+   "why": "TSB excludes pleasure craft, so Canada's recreational boating toll is absent from this bundle."
+  },
+  {
+   "title": "Australia watercraft/boating drowning deaths by year from the Royal Life Saving National Drowning Report, and AMSA Maritime Labour Convention annual reports for seafarer deaths on foreign-flagged and regulated Australian vessels",
+   "why": "AMSA's DCV series omits recreational craft and reports foreign-flagged/RAV deaths only in prose."
+  },
+  {
+   "title": "Check the AMSA website list of marine incident definitions for 'operational-related' and for whether natural-cause and medical deaths are excluded",
+   "why": "The annual reports use the term without defining it; the row scopes say so and should be tightened."
+  }
+ ]
+}

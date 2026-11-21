@@ -1,0 +1,92 @@
+{
+  "schema": "lifesavinglab.bundle.v1",
+  "task_id": "rnli-rss-feed-access",
+  "preamble_version": "1.4",
+  "contributor": {
+    "handle": "lab",
+    "agent": "Claude Fable 5.1 (independent subagent in the lab's own session, 2026-10-21)"
+  },
+  "status": "not-found",
+  "rows": [],
+  "corrections": [],
+  "evidence": [
+    {
+      "url": "https://rnli.org/news-and-media",
+      "quote": "RNLI urges public to stay safe at the coast during Storm Austen",
+      "where": "News and media listing (7,315 results over 610 pages), second item, dated Wednesday 21 October 2026; the first item is also dated 21 October 2026. No RSS, Atom, feed or subscribe link anywhere on the page."
+    },
+    {
+      "url": "https://rnli.org/news-and-media",
+      "quote": "Latest lifeboat launches",
+      "where": "Only launch-related link on the page: https://rnli.org/what-we-do/lifeboats-and-stations/latest-lifeboat-launches. Footer link 'Terms and conditions' points to https://rnli.org/footer/terms-and-conditions."
+    },
+    {
+      "url": "https://rnli.org/robots.txt",
+      "quote": "Disallow: /*?feed=",
+      "where": "robots.txt, single group 'User-agent: *'; this is the only rule mentioning feeds and it needs a ?feed= query string. No rule matches the path /news-and-media/rss. Also lists /cdn-cgi/ and ?__cf_chl_tk= (Cloudflare) and 'Sitemap: https://rnli.org/sitemap.xml'."
+    },
+    {
+      "url": "https://rnli.org/what-we-do/lifeboats-and-stations/latest-lifeboat-launches",
+      "quote": "Powered by our crew pager system, the map shows recent lifeboat launches from our coastal and inland lifeboat stations in the last 48 hours.",
+      "where": "'Latest lifeboat launches' page, text above the map and the list 'Lifeboat crews have just launched'. No RSS, Atom, JSON or API address on the page; it links 'Visit RNLI Open Data' at https://data-rnli.opendata.arcgis.com/."
+    },
+    {
+      "url": "https://rnli.org/what-we-do/lifeboats-and-stations/latest-lifeboat-launches",
+      "quote": "Launch time10.30am 20 October 2026",
+      "where": "Newest list entry (Montrose Lifeboat Station, shown as 'launched 2 hours ago' at fetch time on 2026-10-21); next entries 9.42am and 8.53am on 20 October 2026. Launch type is not shown."
+    },
+    {
+      "url": "https://rnli.org/footer/terms-and-conditions",
+      "quote": "You are permitted to print and download extracts from our websites for your personal non-commercial use",
+      "where": "Terms and conditions, section 7 'Intellectual property rights (IPRs)', clause 7.2."
+    },
+    {
+      "url": "https://rnli.org/footer/terms-and-conditions",
+      "quote": "No other use of material on our websites may be made without first obtaining our written permission.",
+      "where": "Terms and conditions, clause 7.3. Nothing in the terms mentions RSS, automated access, scraping, robots or crawlers; clause 11.2 permits linking to pages but not replicating them."
+    },
+    {
+      "url": "https://data-rnli.opendata.arcgis.com/api/search/v1/collections/all/items",
+      "quote": "Contains Open Data licensed under the GIS Open Data Licence.",
+      "where": "Required attribution statement in the licence text attached to each item of the RNLI open-data catalogue (GeoJSON listing); items include 'RNLI Return of Service App' (abridged 2021-2025 call-out locations, modified 6 Sep 2026) and 'RNLI Lifeboat Station Locations'."
+    },
+    {
+      "url": "https://angarrackchristmaslights.org.uk/aggregator?page=512",
+      "quote": "Penlee Lifeboat Station RSS Feed | RNLI",
+      "where": "Feed source label in a third-party Drupal aggregator; its newest RNLI items are from 2016 ('Gwithian Beach RSS Feed | RNLI', 15/10/2016), showing the old RNLI site offered per-station and per-beach feeds a decade ago. No feed address is shown."
+    }
+  ],
+  "tried": [
+    "WebFetch https://rnli.org/news-and-media/rss and https://rnli.org/news-and-media/rss/ on 2026-10-21: both refused by the fetch tool as ROBOTS_DISALLOWED, so the feed could not be read even with a browser-like client. rnli.org/robots.txt contains no rule matching that path (read in full, first 60 lines verbatim), so the refusal must come from something else, e.g. an X-Robots-Tag header on the feed response or the tool's own policy; which one could not be determined.",
+    "Context from the repo: contributions/merged/uscg-rss-feed-address-agent-eight.json (preamble 1.2, 2026-10-15) records in 'tried' that rnli.org RSS 'opened fine' to the same fetch tool on 15 Oct 2026, the day the watch first logged HTTP 403 from GitHub's runner (watch/queue.json runs). That earlier observation, not repeated today, is consistent with the server treating clients differently.",
+    "Looked for a linked feed address: https://rnli.org/news-and-media (no RSS/Atom/feed/subscribe link in page or head; only 'Latest lifeboat launches' and footer links) and https://rnli.org/what-we-do/lifeboats-and-stations/latest-lifeboat-launches (no feed, JSON or API address; pager-driven list of launches in the last 48 hours).",
+    "Guessed a per-station feed https://rnli.org/find-my-nearest/lifeboat-stations/penlee-lifeboat-station/news-and-media-penlee-lifeboat-station/rss (the old site had 'Penlee Lifeboat Station RSS Feed | RNLI'): fetch error (CLIENT_ERROR).",
+    "Searches 'rnli.org news-and-media rss feed', 'RNLI news RSS feed feeder.co', 'RNLI RSS feed lifeboat news subscribe', '\"RSS Feed | RNLI\"': no feed directory entry, cached copy or alternative address for an RNLI news feed; https://socialbu.com/curate/search?q=RNLI lists no rnli.org feed. https://angarrackchristmaslights.org.uk/aggregator/sources (would list feed URLs): fetch error.",
+    "RNLI open data: https://data-rnli.opendata.arcgis.com/ (only page head returned); /api/search/v1 returns a Hub site entry with licenseInfo 'Internal Admin Use ONLY' and access 'public'; /api/search/v1/collections/all/items lists seven datasets under the RNLI GIS Open Data Licence, including abridged returns-of-service 2021-2025 call-out locations, but no live launch feed. Listing was cut off after about 100,000 characters (seventh item's title not read).",
+    "Custom headers: the fetch tool cannot set a User-Agent or other headers, so the watch's user agent 'lifesavinglab-watch/1.0' versus a browser user agent could not be compared from here. No request from the shell was attempted (no internet, per the brief).",
+    "The session's shared web-search budget ran out before searches for an RNLI GovDelivery topic, 'rnli.org/news-and-media/rss' as an exact string, or feedspot/rssing listings could be made."
+  ],
+  "notes": "Outcome: no working RNLI feed address could be confirmed from here, so 'not-found'; keep rnli-news enabled or disabled as the maintainers prefer, but the 403 is not explained by robots.txt. What was established: (1) https://rnli.org/news-and-media/rss is not linked from the News and media page, its head, or the Latest lifeboat launches page, and the site offers no RSS, Atom, subscribe or feed link; the address in watch/sources.json therefore rests on earlier knowledge, not on anything the site advertises today. (2) rnli.org/robots.txt (User-agent: *) has no rule matching /news-and-media/rss; its only feed rule is 'Disallow: /*?feed='. The file also lists /cdn-cgi/ and ?__cf_chl_tk= paths, which are Cloudflare's, so the site sits behind Cloudflare; a Cloudflare bot rule answering 403 to non-browser user agents or to cloud-runner addresses is the likely mechanism, but that is a judgment (grade D), untested from here. (3) The fetch tool, which presents a browser-like client, was itself refused today with ROBOTS_DISALLOWED although robots.txt allows the path; an X-Robots-Tag header on the feed response would explain it, and would also mean the RNLI is deliberately keeping crawlers off the feed. (4) The repo's own merged bundle from agent-eight says the rnli.org RSS opened fine to the same tool on 15 Oct 2026, the day the watch got 403, which points at client filtering rather than a dead address. (5) Terms: clause 7.2 permits printing and downloading extracts for personal non-commercial use; clause 7.3 requires written permission for any other use; nothing mentions RSS or automated access. The watch stores only links, dates, a derived kind and a headline hash, but a reviewer should decide whether hourly automated reading needs the RNLI's permission; asking the press office for feed access would settle both the terms and the 403 at once. (6) Lifeboat launches: the RNLI publishes a pager-driven 'Latest lifeboat launches' page (station and launch time, last 48 hours) with no feed or API address visible in the rendered page; the JSON it loads is only visible in a browser's network tab. Historical call-outs (abridged 2021-2025 returns of service) are on the RNLI open-data portal under the GIS Open Data Licence, which requires the attribution 'Contains Open Data licensed under the GIS Open Data Licence.' Precisely what could not be established: whether the feed returns items at all today; the newest item date; whether a browser User-Agent alone cures the 403 or whether the runner's address is also blocked. A person with a browser can open the feed address, confirm it renders XML and the newest date, then from a laptop run the watch's fetch with its own user agent and with a browser user agent to split the two causes. No repository file was modified.",
+  "next_tasks": [
+    {
+      "title": "Open https://rnli.org/news-and-media/rss in a browser and record whether it returns XML and the newest item date",
+      "why": "The fetch tool was refused; a person was not refused last week. Establishing that the address is alive is the first step."
+    },
+    {
+      "title": "From a laptop, fetch the RNLI feed with the watch's user agent and then with a browser user agent",
+      "why": "Splits user-agent filtering from GitHub-runner address blocking; the site is behind Cloudflare, so either could produce the 403."
+    },
+    {
+      "title": "Ask the RNLI press office whether the lab may read the news feed hourly and whether a launches feed exists",
+      "why": "Terms clause 7.3 requires written permission for uses beyond personal non-commercial; one email settles terms and access together."
+    },
+    {
+      "title": "Find the JSON request behind the RNLI 'Latest lifeboat launches' page",
+      "why": "It is a live 48-hour launch log (station and launch time) with no advertised feed; the request is visible in a browser's network tab."
+    },
+    {
+      "title": "Assess the RNLI open-data returns-of-service dataset (2021-2025) for the register",
+      "why": "Over 40,000 call-out locations under an open licence requiring attribution; a bulk historical source, if its fields fit the 24-column format without naming people."
+    }
+  ]
+}

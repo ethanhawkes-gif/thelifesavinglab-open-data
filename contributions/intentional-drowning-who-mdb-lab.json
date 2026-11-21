@@ -1,0 +1,127 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "intentional-drowning-who-mdb",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Opus 5.5, lab session with the desktop app's browser, 2026-10-21"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "who-mdb-x71-2019-reporting-countries",
+   "figure": "3,963 deaths coded X71 in 106 reporting countries, 2019 (reporting countries only, not a global estimate)",
+   "low": 3963,
+   "high": 3963,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "Deaths whose underlying cause is intentional self-harm by drowning and submersion (ICD-10 X71), all ages, both sexes (including sex unknown), national rows only, for the 106 countries whose 2019 data in the WHO Mortality Database use a detailed ICD-10 list (103 or 104) that can show the code. Countries reporting only the condensed list, or not reporting 2019, are absent. Not a global estimate.",
+   "geography": "106 reporting countries (WHO Mortality Database, 2019)",
+   "source": "WHO Mortality Database, raw ICD-10 data files morticd10_part1 to part6 (downloaded 21 Oct 2026); total computed by the lab across the reporting countries' national rows",
+   "url": "https://cdn.who.int/media/docs/default-source/world-health-data-platform/mortality-raw-data/morticd10_part6.zip?sfvrsn=ec801a61_4",
+   "grade": "A",
+   "do_not_add_to": "Reporting countries only: never treated as global, never added to WHO GHE or GBD estimates, never combined with W65-W74 (unintentional) figures. The number of reporting countries changes year to year, so years are not a trend.",
+   "note": "The lab summed the national rows of one database as the task asked; country lists differ by year."
+  },
+  {
+   "id": "who-mdb-y21-2019-reporting-countries",
+   "figure": "4,290 deaths coded Y21 in 106 reporting countries, 2019 (reporting countries only, not a global estimate)",
+   "low": 4290,
+   "high": 4290,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "Deaths whose underlying cause is drowning and submersion, undetermined intent (ICD-10 Y21), all ages, both sexes (including sex unknown), national rows only, for the 106 countries whose 2019 data in the WHO Mortality Database use a detailed ICD-10 list (103 or 104) that can show the code. Countries reporting only the condensed list, or not reporting 2019, are absent. Not a global estimate.",
+   "geography": "106 reporting countries (WHO Mortality Database, 2019)",
+   "source": "WHO Mortality Database, raw ICD-10 data files morticd10_part1 to part6 (downloaded 21 Oct 2026); total computed by the lab across the reporting countries' national rows",
+   "url": "https://cdn.who.int/media/docs/default-source/world-health-data-platform/mortality-raw-data/morticd10_part6.zip?sfvrsn=ec801a61_4",
+   "grade": "A",
+   "do_not_add_to": "Reporting countries only: never treated as global, never added to WHO GHE or GBD estimates, never combined with W65-W74 (unintentional) figures. The number of reporting countries changes year to year, so years are not a trend.",
+   "note": "The lab summed the national rows of one database as the task asked; country lists differ by year."
+  },
+  {
+   "id": "who-mdb-x71-2022-reporting-countries",
+   "figure": "3,638 deaths coded X71 in 88 reporting countries, 2022 (reporting countries only, not a global estimate)",
+   "low": 3638,
+   "high": 3638,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Deaths whose underlying cause is intentional self-harm by drowning and submersion (ICD-10 X71), all ages, both sexes (including sex unknown), national rows only, for the 88 countries whose 2022 data in the WHO Mortality Database use a detailed ICD-10 list (103 or 104) that can show the code. Countries reporting only the condensed list, or not reporting 2022, are absent. Not a global estimate.",
+   "geography": "88 reporting countries (WHO Mortality Database, 2022)",
+   "source": "WHO Mortality Database, raw ICD-10 data files morticd10_part1 to part6 (downloaded 21 Oct 2026); total computed by the lab across the reporting countries' national rows",
+   "url": "https://cdn.who.int/media/docs/default-source/world-health-data-platform/mortality-raw-data/morticd10_part6.zip?sfvrsn=ec801a61_4",
+   "grade": "A",
+   "do_not_add_to": "Reporting countries only: never treated as global, never added to WHO GHE or GBD estimates, never combined with W65-W74 (unintentional) figures. The number of reporting countries changes year to year, so years are not a trend.",
+   "note": "The lab summed the national rows of one database as the task asked; country lists differ by year."
+  },
+  {
+   "id": "who-mdb-y21-2022-reporting-countries",
+   "figure": "3,796 deaths coded Y21 in 88 reporting countries, 2022 (reporting countries only, not a global estimate)",
+   "low": 3796,
+   "high": 3796,
+   "unit": "deaths",
+   "year": 2022,
+   "scope": "Deaths whose underlying cause is drowning and submersion, undetermined intent (ICD-10 Y21), all ages, both sexes (including sex unknown), national rows only, for the 88 countries whose 2022 data in the WHO Mortality Database use a detailed ICD-10 list (103 or 104) that can show the code. Countries reporting only the condensed list, or not reporting 2022, are absent. Not a global estimate.",
+   "geography": "88 reporting countries (WHO Mortality Database, 2022)",
+   "source": "WHO Mortality Database, raw ICD-10 data files morticd10_part1 to part6 (downloaded 21 Oct 2026); total computed by the lab across the reporting countries' national rows",
+   "url": "https://cdn.who.int/media/docs/default-source/world-health-data-platform/mortality-raw-data/morticd10_part6.zip?sfvrsn=ec801a61_4",
+   "grade": "A",
+   "do_not_add_to": "Reporting countries only: never treated as global, never added to WHO GHE or GBD estimates, never combined with W65-W74 (unintentional) figures. The number of reporting countries changes year to year, so years are not a trend.",
+   "note": "The lab summed the national rows of one database as the task asked; country lists differ by year."
+  },
+  {
+   "id": "who-mdb-x71-2023-reporting-countries",
+   "figure": "3,394 deaths coded X71 in 69 reporting countries, 2023 (reporting countries only, not a global estimate)",
+   "low": 3394,
+   "high": 3394,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Deaths whose underlying cause is intentional self-harm by drowning and submersion (ICD-10 X71), all ages, both sexes (including sex unknown), national rows only, for the 69 countries whose 2023 data in the WHO Mortality Database use a detailed ICD-10 list (103 or 104) that can show the code. Countries reporting only the condensed list, or not reporting 2023, are absent. Not a global estimate.",
+   "geography": "69 reporting countries (WHO Mortality Database, 2023)",
+   "source": "WHO Mortality Database, raw ICD-10 data files morticd10_part1 to part6 (downloaded 21 Oct 2026); total computed by the lab across the reporting countries' national rows",
+   "url": "https://cdn.who.int/media/docs/default-source/world-health-data-platform/mortality-raw-data/morticd10_part6.zip?sfvrsn=ec801a61_4",
+   "grade": "A",
+   "do_not_add_to": "Reporting countries only: never treated as global, never added to WHO GHE or GBD estimates, never combined with W65-W74 (unintentional) figures. The number of reporting countries changes year to year, so years are not a trend.",
+   "note": "The lab summed the national rows of one database as the task asked; country lists differ by year. Largest 2023 contributors: X71 Republic of Korea 513, Japan 464, United States 453; Y21 Japan 1,054, Brazil 395, United States 328."
+  },
+  {
+   "id": "who-mdb-y21-2023-reporting-countries",
+   "figure": "3,407 deaths coded Y21 in 69 reporting countries, 2023 (reporting countries only, not a global estimate)",
+   "low": 3407,
+   "high": 3407,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Deaths whose underlying cause is drowning and submersion, undetermined intent (ICD-10 Y21), all ages, both sexes (including sex unknown), national rows only, for the 69 countries whose 2023 data in the WHO Mortality Database use a detailed ICD-10 list (103 or 104) that can show the code. Countries reporting only the condensed list, or not reporting 2023, are absent. Not a global estimate.",
+   "geography": "69 reporting countries (WHO Mortality Database, 2023)",
+   "source": "WHO Mortality Database, raw ICD-10 data files morticd10_part1 to part6 (downloaded 21 Oct 2026); total computed by the lab across the reporting countries' national rows",
+   "url": "https://cdn.who.int/media/docs/default-source/world-health-data-platform/mortality-raw-data/morticd10_part6.zip?sfvrsn=ec801a61_4",
+   "grade": "A",
+   "do_not_add_to": "Reporting countries only: never treated as global, never added to WHO GHE or GBD estimates, never combined with W65-W74 (unintentional) figures. The number of reporting countries changes year to year, so years are not a trend.",
+   "note": "The lab summed the national rows of one database as the task asked; country lists differ by year. Largest 2023 contributors: X71 Republic of Korea 513, Japan 464, United States 453; Y21 Japan 1,054, Brazil 395, United States 328."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/world-health-data-platform/mortality-raw-data/morticd10_part6.zip?sfvrsn=ec801a61_4",
+   "quote": "Country,Admin1,SubDiv,Year,List,Cause,Sex,Frmat,IM_Frmat,Deaths1,Deaths2,Deaths3",
+   "where": "Header row of each Morticd10 data file (Deaths1 is all ages)"
+  },
+  {
+   "url": "https://www.who.int/data/data-collection-tools/who-mortality-database",
+   "quote": "Access the WHO interactive mortality database",
+   "where": "WHO Mortality Database page, link beside the raw-data downloads (Morticd10 parts 1 to 6, country codes, documentation)"
+  }
+ ],
+ "tried": [
+  "platform.who.int/mortality is an interactive portal; WHO's own raw ICD-10 files on cdn.who.int were used instead, unzipped and filtered in the browser (nothing saved to disk). Rows with Admin1 or SubDiv set (sub-national) were excluded; sexes 1, 2 and 9 were included.",
+  "2024 is in the files but only 37 countries have reported it (X71 1,087; Y21 835), so it is noted rather than recorded; 2023 is the most recent year with broad reporting (69 countries).",
+  "Check against another source: the files give the United States 4,337 W65-W74 deaths for 2021, consistent with the MMWR's 4,677 for W65-W74 plus V90 and V92 that year."
+ ],
+ "notes": "Most recent year with broad reporting is 2023: X71 3,394 and Y21 3,407 deaths across 69 countries reporting a detailed ICD-10 list. For context, 2022 (88 countries): X71 3,638, Y21 3,796; 2019, the broadest recent year (106 countries): X71 3,963, Y21 4,290. In 2023, 11 of the 69 countries recorded no X71 or Y21 death. The same countries recorded 34,732 unintentional drowning deaths (W65-W74) in 2023, so in the reporting countries intentional and undetermined drownings together are of the order of one fifth of the unintentional count; that ratio is the reviewer's to state, not recorded as a row. Totals are the lab's sums over one database's national rows, labelled as such on every row.",
+ "next_tasks": [
+  {
+   "title": "Record X71 and Y21 by country for the ten largest reporting countries, 2019-2023",
+   "why": "Country rows avoid the changing-denominator problem of a multi-country total"
+  }
+ ]
+}
