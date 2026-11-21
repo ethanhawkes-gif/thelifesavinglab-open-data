@@ -135,7 +135,7 @@ button:focus-visible { outline: 2px solid var(--lamp); outline-offset: 2px; }
 <div class="segs" id="segs"></div>
 <div class="count" id="count"></div>
 </div>
-<p class="note">Prototype. Voice by ElevenLabs. Drill details shown are made up for illustration.</p><p class="note" id="mediaError" role="status" aria-live="polite" hidden>Audio could not load in this embedded player. Use the transcript or open the standalone explainer.</p>
+<p class="note">Prototype. Voice by ElevenLabs. Drill details shown are made up for illustration.</p><p class="note"><strong>Creator-review staging:</strong> this voice track is an owner asset. Its rescue-training, mission-use and improvement language is illustrative, not evidence of completed operations or results. Read the qualified transcript before citing it.</p><p class="note" id="mediaError" role="status" aria-live="polite" hidden>Audio could not load in this embedded player. Use the transcript or open the standalone explainer.</p>
 </div>
 <script>
 /* ---------- drawing helpers ---------- */
@@ -228,7 +228,7 @@ function hub(delay) {
     <text class="t-m" x="640" y="337" text-anchor="middle" font-size="20" style="fill:var(--ink)">LLM</text></g>`;
 }
 const LEFT = ['Trained on Applied Wisdom', 'Then past leadership cases', 'Then real leadership problems', 'Leaders correct and grade it'];
-const RIGHT = ['Starts with all of loop one', 'Trained on past missions and sitreps', 'Used in drills and real missions', 'Rescue teams grade it'];
+const RIGHT = ['Starts with all of loop one', 'Proposed: study reviewed case material', 'Proposed: use in supervised exercises', 'Partner review planned'];
 function steps(list, x, color, delays) {
   return list.map((s, i) => `<g class="rise" style="animation-delay:${delays[i]}s">
     <circle cx="${x + 8}" cy="${552 + i * 34}" r="5" fill="${color}"/>
@@ -370,7 +370,7 @@ const PARTS = {
           <path class="draw" d="M230 200 V554" stroke="var(--rule)" stroke-width="3" style="animation-delay:.4s"/>${s}`, 'flat');
       } },
 
-    { vo: 'This program trains students to lead that way. They practice rescues again and again. First in local simulations. Then in drills at sea.', speaker: NARR,
+    { vo: 'The proposed program would let students practise decision-making in local simulations and, only if qualified partners approve, supervised exercises at sea. This is illustrative, not a record of completed training.', speaker: NARR,
       draw: () => {
         const rows = [['Last position', '43°05′N 70°41′W', 'pos'], ['Persons aboard', '2', ''], ['Wind', 'SW 22 kt', 'wind'], ['Seas', '4 to 6 ft', ''], ['Tide', 'Ebb', ''], ['Updated', '0:00 ago', 'upd']];
         let r = '';
@@ -409,7 +409,7 @@ const PARTS = {
         ${bubble('Solver', 'Who owns the call to the safety boat?', 500, 10.6)}
         <text class="t-h fade" x="640" y="650" text-anchor="middle" font-size="34" style="animation-delay:17s">The Solver suggests. <tspan class="t-a">People decide.</tspan></text>`, 'flat') },
 
-    { vo: 'After every drill, experienced rescuers go back and grade the big decisions. The team gets better each time. And over time, so does the Solver.', speaker: NARR,
+    { vo: 'A proposed debrief could let qualified rescuers review the big decisions. Whether a team or Solver improves is a hypothesis to measure, not an established result.', speaker: NARR,
       draw: () => {
         const node = (x, y, t, human, d) => `<g class="rise" style="animation-delay:${d}s"><rect x="${x - 110}" y="${y - 30}" width="220" height="60" rx="30" fill="#0d1b23" stroke="${human ? 'var(--accent)' : 'var(--muted)'}" stroke-width="${human ? 3 : 2}"/>
           <text class="t-l" x="${x}" y="${y + 8}" text-anchor="middle" font-size="22" font-weight="600">${t}</text></g>`;
@@ -421,7 +421,7 @@ const PARTS = {
           <text class="t-m fade" x="640" y="390" text-anchor="middle" font-size="15" style="animation-delay:2.4s">ONE TURN</text>`, 'flat');
       } },
 
-    { vo: 'Then, in June, it all gets put to the test. A staged rescue off Kittery Point. Drones and sea robots, run by licensed crews. And a dummy in the water. Never a real person.', speaker: NARR,
+    { vo: 'If partners approve a future June exercise, it could use a staged scenario near Kittery Point, with licensed operators and a marked float—not a real rescue mission. Dates, bookings and operators are not confirmed.', speaker: NARR,
       draw: () => {
         const robot = `<g class="drive"><g class="bob"><path d="M250 454 h64 l-8 14 h-48z" fill="#e8eef0"/><rect x="268" y="440" width="22" height="14" fill="#9fb2ba"/><circle cx="279" cy="436" r="3" fill="var(--accent)" class="blink"/></g></g>`;
         const dummy = `<g class="bob"><circle cx="760" cy="462" r="20" fill="none" stroke="var(--accent)" stroke-width="9"/><circle cx="760" cy="452" r="9" fill="#e3c9a8"/></g>`;
@@ -458,7 +458,7 @@ const PARTS = {
         ${steps(LEFT, 150, 'var(--lamp)', [3.2, 6.4, 9.6, 13])}`, 'flat'),
       tick: (t, root) => orbit(root, 'lobeL', t - 2.4, 5) },
 
-    { vo: "The second loop is the Situation at Sea Solver. It starts with everything the first Solver knows. Then it's trained on rescue work: past missions and situation reports. Then rescue teams and students use it in drills and real missions. Their feedback trains the next version.", speaker: NARR,
+    { vo: "The proposed second loop is a Situation at Sea Solver concept. A future, reviewed version could study permitted case material and supervised exercises; no real-mission use, training corpus or feedback cycle is established here.", speaker: NARR,
       draw: () => svg(`<text class="t-m" x="90" y="80" font-size="15">LOOP TWO</text>
         <path d="${lemPath(Math.PI / 2, Math.PI * 1.5)}" fill="none" stroke="var(--lamp)" stroke-width="4" stroke-opacity=".45"/>
         <path class="drawL" id="lobeR" d="${lemPath(-Math.PI / 2, Math.PI / 2)}" fill="none" stroke="var(--tide)" stroke-width="5" stroke-linecap="round"/>
@@ -469,7 +469,7 @@ const PARTS = {
         ${steps(RIGHT, 730, 'var(--tide)', [3.2, 7, 10.5, 15])}`, 'flat'),
       tick: (t, root) => orbit(root, 'lobeR', t - 2.4, 5) },
 
-    { vo: "And the two loops feed each other. The leadership loop makes the decision making smarter: how to weigh the facts and make the call. The mission loop makes the rescue smarter: which decisions come up, and in what order. The more it's used, the better it gets, and so do the people using it.", speaker: NARR,
+    { vo: "The proposal is that the two loops could inform one another: a hypothesis to evaluate with partners, not an automatic improvement claim. No result is established until a person measures it.", speaker: NARR,
       draw: () => svg(`<text class="t-m" x="90" y="80" font-size="15">THE LOOPS FEED EACH OTHER</text>
         <path d="${lemPath(Math.PI / 2, Math.PI * 1.5)}" fill="none" stroke="var(--lamp)" stroke-width="5"/>
         <path d="${lemPath(-Math.PI / 2, Math.PI / 2)}" fill="none" stroke="var(--tide)" stroke-width="5"/>
@@ -481,7 +481,7 @@ const PARTS = {
           <text class="t-l t-mu" x="440" y="612" text-anchor="middle" font-size="18">weigh the facts, make the call</text></g>
         <g class="rise" style="animation-delay:9.5s"><text class="t-l" x="840" y="580" text-anchor="middle" font-size="24" style="fill:var(--tide)">What to decide, and when</text>
           <text class="t-l t-mu" x="840" y="612" text-anchor="middle" font-size="18">which decisions come up, in what order</text></g>
-        <text class="t-h fade" x="640" y="685" text-anchor="middle" font-size="26" style="animation-delay:15s">The more it's used, the better it gets.</text>`, 'flat'),
+        <text class="t-h fade" x="640" y="685" text-anchor="middle" font-size="26" style="animation-delay:15s">A hypothesis to test, not a result</text>`, 'flat'),
       tick: (t, root) => orbit(root, 'lemAll', t, 9) },
   ] }
 

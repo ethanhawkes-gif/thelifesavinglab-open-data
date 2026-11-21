@@ -100,7 +100,7 @@
   <div class="stack" style="flex:1.2 1 460px;min-width:0;gap:24px">
     <p class="eyebrow">The June lab · 2027 · dates proposed, a person sets them</p>
     <h1 class="display h2">Two days on Wood Island. One rule: nobody enters the water.</h1>
-    <p class="lede">24 students in six teams, with the people who work this harbor beside them. Each team takes one branch of the tree, sizes it from the ledger, and writes a one-page change that a harbormaster, co-op or crew could run this year. Day one tests the pilots. Day two tests the people, with a clock running. Co-hosted with Applied Wisdom for Nonprofits, whose eight insights are the way every team works.</p>
+    <p class="lede">The proposed first Lab could bring 24 students into six teams, with harbor practitioners invited to review the work. Each team would take one branch of the tree, size it from the ledger, and draft a one-page change that a harbormaster, co-op or crew could consider. Day one would test the pilots on paper; day two would test decision-making in a supervised exercise. This is a proposed learning design, not evidence of completed missions. Applied Wisdom for Nonprofits’ eight insights are the proposed way every team would work.</p>
     <div class="row"><a class="btn btn--primary" href="${SITE}/cohort/">Apply for a seat</a><a class="btn btn--ghost" href="#contribute-offer">Offer a boat, a drone or a classroom day</a></div>
   </div>
   ${photo(PHOTOS.hero, 'Wood Island Life-Saving Station down its boardwalk, with a surfboat on its carriage', 'The classroom, proposed · Photo: Ethan Hawkes', 'flex:1 1 340px;min-height:300px')}
@@ -117,15 +117,15 @@
 </div></section>
 
 <section class="section band" aria-labelledby="d2-title"><div class="wrap stack" style="gap:24px">
-  ${sectionHead('Day two · the clock', '<span id="d2-title">The same team, a clock, and news that keeps changing.</span>', 'The staged rescue is the test. The debrief is the lesson. The adopter panel is the verdict.')}
+  ${sectionHead('Day two · the clock', '<span id="d2-title">The same team, a clock, and news that keeps changing.</span>', 'A proposed supervised exercise would test decision-making. The debrief would be the lesson; the adopter panel would be a future verdict.')}
   <div class="agenda-list">${day2.map((b) => block(...b)).join('')}</div>
-  <div class="card" style="background:var(--navy);color:var(--paper);border:none"><b>Safety line:</b> students never enter the water or crew a vessel. Anything on the water is simulated or run by licensed professionals, with the harbormaster’s permission and an airspace check for any drone. A backup weekend is held for weather, and a no-go call moves the drill to the boardwalk.</div>
+  <div class="card" style="background:var(--navy);color:var(--paper);border:none"><b>Safety line:</b> students never enter the water or crew a vessel. Anything on the water is simulated or run by licensed professionals, with the harbormaster’s permission and an airspace check for any drone. A backup weekend could be proposed for weather, and a no-go call would move any exercise to the boardwalk.</div>
 </div></section>
 
 <section class="section dark" aria-labelledby="aw-title"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:36px 64px">
   <div class="stack" style="flex:1.2 1 460px;min-width:0;gap:20px">
     <p class="eyebrow">Co-hosted with Applied Wisdom</p>
-    <h2 id="aw-title" class="display h2">Their eight insights are the syllabus. The staged rescue is the exam.</h2>
+    <h2 id="aw-title" class="display h2">Their eight insights are the proposed syllabus. A supervised exercise would be a test, not an exam in real rescue work.</h2>
     <p class="lede">Every block above carries one of Jim Morgan’s eight insights, because the lab does not need new leadership content. It needs a place to practise what already exists, against something real.</p>
     <div class="grid g2">
       <div class="gap"><p class="eyebrow">What Applied Wisdom leads</p><p class="small" style="font-size:15px;color:var(--pale)">The opening frame · the Situation Solver debrief, the core of day two · the wisdom round and the wisdom ledger · the close.</p></div>
@@ -143,7 +143,7 @@
 <section class="section band" aria-labelledby="sel-title"><div class="wrap stack" style="gap:28px">${selectionSection(true)}</div></section>
 
 <section class="section" aria-labelledby="front-title"><div class="wrap stack" style="gap:28px">
-  ${sectionHead('The frontier', '<span id="front-title">What AI and robots can do for a rescue, tested in the open.</span>', 'The lab is a place to try the newest tools against the oldest problem, with a clock running and people who work the water watching. Ambition is welcome. So is a clear no.')}
+  ${sectionHead('The frontier', '<span id="front-title">What AI and robots might help people study, tested in the open.</span>', 'The lab could study new tools against an old problem, with qualified partners watching. Ambition is welcome; proposed work is not evidence of a completed rescue operation.')}
   ${frontierSection(true)}
 </div></section>
 
@@ -364,7 +364,7 @@
       ['Builds, or convenes', 'You can make something work (code, data, hardware), or you can get people who disagree into one room. Both count. Neither is enough alone.'],
       ['Finishes', 'Something you started exists in the world and someone else uses it.']
     ];
-    const head = `<div class="stack-sm"><p class="eyebrow">Who we’re looking for</p><h2 class="display h2">Twenty-four seats, from any discipline.</h2><p class="lede">We select for judgment, not résumés. Students from any discipline and any of the three schools, chosen for how they decide when the facts are incomplete and for what they have finished. No more than ten from one school. At least a third with no leadership title on their record yet.</p></div>`;
+    const head = `<div class="stack-sm"><p class="eyebrow">Who we’re looking for</p><h2 class="display h2">Proposed places, from any discipline.</h2><p class="lede">If the partners proceed, selection would value judgment over résumés. The proposed cohort could include students from different disciplines and schools; numbers, quotas and invitations are not confirmed.</p></div>`;
     if (!full) return head + `<div class="row"><a class="btn btn--primary" href="#june">How selection works</a></div>`;
     return `${head}
 <div class="grid g2" style="gap:24px">

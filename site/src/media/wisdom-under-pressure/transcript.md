@@ -1,5 +1,7 @@
 # Wisdom Under Pressure — authoring-script transcript
 
+> **Creator-review staging note:** This is an editorially qualified staging version of an illustrative prototype. It does not document completed rescue training, real-mission use, bookings, operators or measured improvement. The unchanged voice recording remains an owner asset and requires original-creator review before any public factual claim.
+
 Source: https://claude.ai/artifact/PAZb3HzfWRbDFevuVhr9RM
 Extracted from scene narration text on 2026-11-21. Not independently transcribed from audio; factual claims and safety guidance have not been reviewed here.
 
@@ -33,7 +35,7 @@ So that's the order. Calm everyone down. Find out where they are. Figure out how
 
 ## p2s3 — source audio duration 9.28s
 
-This program trains students to lead that way. They practice rescues again and again. First in local simulations. Then in drills at sea.
+The proposed program would let students practise decision-making in local simulations and, only if qualified partners approve, supervised exercises at sea. This is illustrative, not a record of completed training.
 
 ## p2s4 — source audio duration 19.44s
 
@@ -41,11 +43,11 @@ Now add a helper. We call it the Situation at Sea Solver. It sits right beside t
 
 ## p2s5 — source audio duration 9.20s
 
-After every drill, experienced rescuers go back and grade the big decisions. The team gets better each time. And over time, so does the Solver.
+A proposed debrief could let qualified rescuers review the big decisions. Whether a team or Solver improves is a hypothesis to measure, not an established result.
 
 ## p2s6 — source audio duration 12.88s
 
-Then, in June, it all gets put to the test. A staged rescue off Kittery Point. Drones and sea robots, run by licensed crews. And a dummy in the water. Never a real person.
+If partners approve a future June exercise, it could use a staged scenario near Kittery Point, with licensed operators and a marked float—not a real rescue mission. Dates, bookings and operators are not confirmed.
 
 ## p3s1 — source audio duration 8.08s
 
@@ -57,8 +59,8 @@ The first loop is the Applied Wisdom Situation Solver. It's trained on Applied W
 
 ## p3s3 — source audio duration 17.04s
 
-The second loop is the Situation at Sea Solver. It starts with everything the first Solver knows. Then it's trained on rescue work: past missions and situation reports. Then rescue teams and students use it in drills and real missions. Their feedback trains the next version.
+The proposed second loop is a Situation at Sea Solver concept. A future, reviewed version could study permitted case material and supervised exercises; no real-mission use, training corpus or feedback cycle is established here.
 
 ## p3s4 — source audio duration 16.64s
 
-And the two loops feed each other. The leadership loop makes the decision making smarter: how to weigh the facts and make the call. The mission loop makes the rescue smarter: which decisions come up, and in what order. The more it's used, the better it gets, and so do the people using it.
+The proposal is that the two loops could inform one another: a hypothesis to evaluate with partners, not an automatic improvement claim. No result is established until a person measures it.

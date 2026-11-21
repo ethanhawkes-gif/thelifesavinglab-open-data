@@ -65,7 +65,7 @@
   {
     "id": "p2s3",
     "duration": 9.28,
-    "text": "This program trains students to lead that way. They practice rescues again and again. First in local simulations. Then in drills at sea.",
+    "text": "The proposed program would let students practise decision-making in local simulations and, only if qualified partners approve, supervised exercises at sea. This is illustrative, not a record of completed training.",
     "audio_file": "narration/p2s3.mp3",
     "ffprobe_exit": 0,
     "decoded_duration": "9.280000",
@@ -83,7 +83,7 @@
   {
     "id": "p2s5",
     "duration": 9.2,
-    "text": "After every drill, experienced rescuers go back and grade the big decisions. The team gets better each time. And over time, so does the Solver.",
+    "text": "A proposed debrief could let qualified rescuers review the big decisions. Whether a team or Solver improves is a hypothesis to measure, not an established result.",
     "audio_file": "narration/p2s5.mp3",
     "ffprobe_exit": 0,
     "decoded_duration": "9.200000",
@@ -92,7 +92,7 @@
   {
     "id": "p2s6",
     "duration": 12.88,
-    "text": "Then, in June, it all gets put to the test. A staged rescue off Kittery Point. Drones and sea robots, run by licensed crews. And a dummy in the water. Never a real person.",
+    "text": "If partners approve a future June exercise, it could use a staged scenario near Kittery Point, with licensed operators and a marked float—not a real rescue mission. Dates, bookings and operators are not confirmed.",
     "audio_file": "narration/p2s6.mp3",
     "ffprobe_exit": 0,
     "decoded_duration": "12.880000",
@@ -119,7 +119,7 @@
   {
     "id": "p3s3",
     "duration": 17.04,
-    "text": "The second loop is the Situation at Sea Solver. It starts with everything the first Solver knows. Then it's trained on rescue work: past missions and situation reports. Then rescue teams and students use it in drills and real missions. Their feedback trains the next version.",
+    "text": "The proposed second loop is a Situation at Sea Solver concept. A future, reviewed version could study permitted case material and supervised exercises; no real-mission use, training corpus or feedback cycle is established here.",
     "audio_file": "narration/p3s3.mp3",
     "ffprobe_exit": 0,
     "decoded_duration": "17.040000",
@@ -128,7 +128,7 @@
   {
     "id": "p3s4",
     "duration": 16.64,
-    "text": "And the two loops feed each other. The leadership loop makes the decision making smarter: how to weigh the facts and make the call. The mission loop makes the rescue smarter: which decisions come up, and in what order. The more it's used, the better it gets, and so do the people using it.",
+    "text": "The proposal is that the two loops could inform one another: a hypothesis to evaluate with partners, not an automatic improvement claim. No result is established until a person measures it.",
     "audio_file": "narration/p3s4.mp3",
     "ffprobe_exit": 0,
     "decoded_duration": "16.640000",

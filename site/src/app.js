@@ -133,7 +133,7 @@
 <section class="section band" aria-labelledby="toll-title"><div class="wrap stack" style="gap:36px">
   ${sectionHead('No. 2 · The toll', `<span id="toll-title">Between ~${floor} and ~${ceil} a year. Nobody knows where in that range the truth sits.</span>`, 'Nobody counts every drowning; the global figures are estimates. We add up only what has a source, show the result as a lowest and a highest documented total, and draw the unknown as unknown.')}
   ${toll ? window.Charts.tollBar(toll, { compact: true }) : noData}
-  ${window.Extra.counterBlock(toll)}
+  <p class="small muted">Modeled evidence only: this page does not run a live mortality counter. Open the toll for the sourced range and its limits.</p>
   <div class="row"><a class="btn" href="#toll">Open the toll, component by component</a><a class="btn btn--ghost" href="#ledger">The ledger behind it</a></div>
 </div></section>
 
@@ -156,7 +156,7 @@
 </div></section>
 
 <section class="section" aria-labelledby="front-home"><div class="wrap stack" style="gap:28px">
-  ${sectionHead('No. 5 · The frontier', '<span id="front-home">What AI and robots can do for a rescue, tested in the open.</span>', 'Drift models fed by live currents. A drone that has to find a float in chop. A sea robot carrying flotation. Agents that read a harbor’s radio log. Every tool faces the same test, and every miss is published.')}
+  ${sectionHead('No. 5 · The frontier', '<span id="front-home">What AI and robots might help people study, tested in the open.</span>', 'Proposed tools could be studied against an old problem: drift models, a drone, a sea robot or agents reading a harbor’s radio log. Each would need qualified partners, a supervised test and an honest account of misses; none is evidence of completed rescue work.') }
   ${window.Extra.frontierSection(false)}
   <div class="row"><a class="btn" href="#june">What the first cohort will try</a></div>
 </div></section>
@@ -483,13 +483,13 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
   <div class="stack" style="flex:1.2 1 460px;min-width:0;gap:24px">
     <p class="eyebrow">Applied Wisdom · co-design partner</p>
     <h1 class="display h2">We are scaling capability faster than wisdom. The lab is a place to practise both.</h1>
-    <p class="lede">Analysis is getting cheap. Deciding well, together, with incomplete information and a clock running, is not. <a href="https://appliedwisdomfornonprofits.org">Applied Wisdom for Nonprofits</a> carries the leadership lessons Jim Morgan drew from nearly three decades leading Applied Materials. The lab is co-designed with them: their insights are how every team works, the Situation Solver is how every drill is debriefed, and the wisdom ledger is how what is learned gets shared.</p>
+    <p class="lede">The proposed learning design starts from a simple premise: analysis is getting cheap. Deciding well, together, with incomplete information and a clock running, is not. <a href="https://appliedwisdomfornonprofits.org">Applied Wisdom for Nonprofits</a> carries the leadership lessons Jim Morgan drew from nearly three decades leading Applied Materials. The lab is co-designed with them: their insights are how every team works, the Situation Solver is how every drill is debriefed, and the wisdom ledger is how what is learned gets shared.</p>
   </div>
   ${photo(PHOTOS.kayak, 'Whaleback Light at dusk, seen over the bow of a kayak on calm water', 'Whaleback Light from the water · Photo: Ethan Hawkes', 'flex:1 1 320px;min-height:360px')}
 </div></section>
 
 <section class="section dark" aria-labelledby="ins-title"><div class="wrap stack" style="gap:28px">
-  ${sectionHead('The eight insights', '<span id="ins-title">Their eight insights are the syllabus. The staged rescue is the exam.</span>', 'Each insight is practised twice: once on the real problem, sizing the toll and shipping a pilot, and once in the staged rescue. The mapping is a draft for Applied Wisdom to correct.')}
+  ${sectionHead('The eight insights', '<span id="ins-title">Their eight insights are the proposed syllabus for a supervised learning exercise.</span>', 'Each insight could be practised twice: once on the real problem, sizing the toll and drafting a pilot, and once in a proposed supervised exercise. The mapping is a draft for Applied Wisdom to correct.') }
   <div>${insights.map((x, i) => `<div class="insight"><span class="num">0${i + 1}</span><div class="stack-sm" style="gap:4px"><span class="t">${esc(x[0])}</span><span class="p"><b style="color:var(--paper)">At sea:</b> ${esc(x[1])}</span><span class="p"><b style="color:var(--paper)">In the lab:</b> ${esc(x[2])}</span></div></div>`).join('')}</div>
   <p class="small" style="color:var(--mist)">Insight names from <i>Applied Wisdom for the Nonprofit Sector</i> (Jim Morgan), used with Applied Wisdom’s agreement as a co-design partner.</p>
 </div></section>
@@ -619,6 +619,23 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     about: { html: aboutPage, title: 'About the Lab · The Life-Saving Lab' },
     contribute: { html: contributePage, mount: mountContribute, title: 'Contribute · The Life-Saving Lab' }
   };
+  /* In-page targets are not router routes. Keep the current rendered journey intact while scrolling/focusing. */
+  const routeNames = () => Object.keys(routes);
+  function isRouteHash(id) { return routeNames().some((r) => id === r || id.startsWith(r + '-')); }
+  const skipLink = document.querySelector('.skip');
+  if (skipLink) skipLink.addEventListener('click', (e) => {
+    e.preventDefault(); e.stopPropagation();
+    const main = document.getElementById('app');
+    if (main) { main.focus({ preventScroll: true }); main.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="#"]'); if (!link || link === skipLink) return;
+    const id = decodeURIComponent(link.getAttribute('href').slice(1));
+    if (!id || id === 'app' || isRouteHash(id)) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
   function parseHash() {
     const h = decodeURIComponent(location.hash.replace(/^#/, ''));
     if (!h || h === 'home') return { route: 'home', arg: '' };
