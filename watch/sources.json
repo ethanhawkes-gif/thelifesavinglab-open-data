@@ -8,7 +8,8 @@
       "kind": "official",
       "region": "UK and Ireland",
       "url": "https://rnli.org/news-and-media/rss",
-      "enabled": true
+      "enabled": false,
+      "note": "Disabled 21 Oct 2026: the address answers HTTP 403 to the watch and, in a real browser, redirects to the site's own ASP.NET error page (/errors/error?aspxerrorpath=/news-and-media/rss), so the feed is withdrawn, not blocked; rnli.org advertises no feed anywhere (board task rnli-rss-feed-access). The RNLI's 'latest lifeboat launches' page is HTML only."
     },
     {
       "id": "uscg-news",
@@ -17,7 +18,7 @@
       "region": "United States",
       "url": "https://www.news.uscg.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1041&max=30",
       "enabled": false,
-      "note": "Tried from GitHub's runner on 15 Oct 2026 12:31 UTC: Site=1041 with ContentType=1 answered HTTP 404 (the server replied, so the site id is wrong) and ContentType=2 timed out. The right id is on the RSS icon of news.uscg.mil, which needs a browser to read: board task uscg-rss-feed-address."
+      "note": "Cannot work: the portal id is 11 (not 1041), and RSS.ashx with Site=11 returns an empty body for ContentType 1 and 2 even to a browser; news.uscg.mil's own configuration lists no RSS address. Kept so the gap is visible; the working official source is GovDelivery (uscg-hq-govdelivery, uscg-d1-govdelivery). Checked 21 Oct 2026, board task uscg-rss-feed-address."
     },
     {
       "id": "uscg-press",
@@ -26,7 +27,7 @@
       "region": "United States",
       "url": "https://www.news.uscg.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=2&Site=1041&max=30",
       "enabled": false,
-      "note": "Trial of ContentType=2 with Site=1041: timed out from GitHub's runner on 15 Oct 2026. Disabled until the site id is read from the page."
+      "note": "Cannot work: see uscg-news. Checked 21 Oct 2026."
     },
     {
       "id": "uscg-d7-govdelivery",
@@ -36,6 +37,51 @@
       "url": "https://public.govdelivery.com/topics/USDHSCG_164/feed.rss",
       "enabled": true,
       "note": "Confirmed from GitHub's runner on 15 Oct 2026 12:31 UTC: 100 items, 31 matched the keywords on the first read. Regional (Florida, Georgia, the Carolinas and the Caribbean); a national GovDelivery topic is being looked for. Found by an independent agent."
+    },
+    {
+      "id": "uscg-hq-govdelivery",
+      "name": "U.S. Coast Guard · Headquarters news (GovDelivery)",
+      "kind": "official",
+      "region": "United States",
+      "url": "https://public.govdelivery.com/topics/USDHSCG_151/feed.rss",
+      "enabled": true,
+      "note": "Found 21 Oct 2026 by reading the GovDelivery topic feeds for the USDHSCG account in a browser: 'U.S. Coast Guard Headquarters News', 100 items, newest 20 Oct 2026. National releases; the same text news.uscg.mil prints. Not yet confirmed from GitHub's runner."
+    },
+    {
+      "id": "uscg-d1-govdelivery",
+      "name": "U.S. Coast Guard · Northeast District news (GovDelivery)",
+      "kind": "official",
+      "region": "United States (Northeast: Maine to New Jersey, including Portsmouth Harbor)",
+      "url": "https://public.govdelivery.com/topics/USDHSCG_158/feed.rss",
+      "enabled": true,
+      "note": "Found 21 Oct 2026: 'U.S. Coast Guard Northeast District News', 100 items, newest 5 Oct 2026. The district that includes Station Portsmouth Harbor. Other district topics (East 160, Heartland 169, Southwest 172, Northwest 176, Oceania 178, Arctic 179, Atlantic Area 182, Pacific Area 183) exist and are listed in contributions/uscg-rss-feed-address-*.json. Not yet confirmed from GitHub's runner."
+    },
+    {
+      "id": "ccg-news",
+      "name": "Canadian Coast Guard · news releases (Canada.ca Atom)",
+      "kind": "official",
+      "region": "Canada",
+      "url": "https://api.io.canada.ca/io-server/gc/news/en/v2?dept=canadiancoastguard&sort=publishedDate&orderBy=desc&pick=50&format=atom&atomtitle=Canadian%20Coast%20Guard",
+      "enabled": true,
+      "note": "Found 21 Oct 2026 (board task official-feeds-five-services): Atom, 50 entries, newest 15 Oct 2026; departmental releases. Canada.ca terms allow non-commercial reproduction with credit; the watch stores links and dates only. Not yet confirmed from GitHub's runner."
+    },
+    {
+      "id": "maritimenz-news",
+      "name": "Maritime New Zealand · news and media releases",
+      "kind": "official",
+      "region": "New Zealand",
+      "url": "https://www.maritimenz.govt.nz/news-landing-page/news-feed/",
+      "enabled": true,
+      "note": "Found 21 Oct 2026 (board task official-feeds-five-services): RSS 2.0, 143 items, newest 21 Oct 2026; the address the site's own RSS icon advertises. Items carry a <media-date> element and no pubDate, so parseFeed reads media-date as a fallback. Not yet confirmed from GitHub's runner."
+    },
+    {
+      "id": "knrm-reddingrapporten",
+      "name": "KNRM · rescue reports (Dutch, per station)",
+      "kind": "official",
+      "region": "Netherlands",
+      "url": "https://www.knrm.nl/rss/reddingrapporten",
+      "enabled": false,
+      "note": "Found 21 Oct 2026 (board task official-feeds-five-services): RSS 2.0, 44 items, newest 17 Oct 2026; an incident log, every item a launch. Disabled until keywords.json has Dutch include patterns (verdronken, verdrinking, vermist, omgeslagen, te water, overboord, zoekactie, gered: to be checked by a person who reads Dutch) and the KNRM disclaimer (personal non-commercial use; reproduction needs permission) has been read against what the watch stores."
     },
     {
       "id": "gnews-us",

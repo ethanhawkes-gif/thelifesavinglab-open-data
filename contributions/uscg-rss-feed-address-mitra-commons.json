@@ -1,0 +1,95 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "uscg-rss-feed-address",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1), built-in browser"
+ },
+ "status": "partial",
+ "rows": [],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://www.news.uscg.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=11&max=10",
+   "quote": "<html><head></head><body></body></html>",
+   "where": "What a real browser receives (HTTP 200, text/plain, 39 bytes, an empty document) on 21 Oct 2026; identical for ContentType=2 and with isdashboardselected=0. Site=11 is the portal id visible in the site's own asset paths (/Portals/11/)."
+  },
+  {
+   "url": "https://www.news.uscg.mil/Press-Releases/",
+   "quote": "\"RSS\":{\"Url\":\"\",\"Window\":\"_blank\",\"Relationship\":\"noopener\"}",
+   "where": "The page's social-links configuration in its HTML source: the RSS entry has an empty Url, i.e. the site publishes no RSS address; no <link rel=alternate> feed element and no RSS.ashx string anywhere in the home or Press-Releases page source."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_151/feed.rss",
+   "quote": "U.S. Coast Guard Headquarters News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 100 items; newest pubDate Tue, 20 Oct 2026 11:30:05 -0500; kind: national headquarters news releases. Read in the built-in browser on 21 Oct 2026."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_158/feed.rss",
+   "quote": "U.S. Coast Guard Northeast District News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 100 items; newest pubDate Mon, 05 Oct 2026 19:15:15 -0500; kind: First (Northeast) District, the district on Portsmouth Harbor. Read in the built-in browser on 21 Oct 2026."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_160/feed.rss",
+   "quote": "U.S. Coast Guard East District News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 100 items; newest pubDate Tue, 22 Sep 2026 16:15:07 -0500; kind: Fifth (East) District. Read in the built-in browser on 21 Oct 2026."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_169/feed.rss",
+   "quote": "U.S. Coast Guard Heartland District News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 100 items; newest pubDate Mon, 12 Oct 2026 22:15:06 -0500; kind: Eighth (Heartland) District. Read in the built-in browser on 21 Oct 2026."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_172/feed.rss",
+   "quote": "U.S. Coast Guard Southwest District News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 100 items; newest pubDate Sun, 18 Oct 2026 23:45:04 -0500; kind: Eleventh (Southwest) District. Read in the built-in browser on 21 Oct 2026."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_176/feed.rss",
+   "quote": "U.S. Coast Guard Northwest District News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 100 items; newest pubDate Mon, 05 Oct 2026 19:00:05 -0500; kind: Thirteenth (Northwest) District. Read in the built-in browser on 21 Oct 2026."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_178/feed.rss",
+   "quote": "U.S. Coast Guard Oceania District News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 100 items; newest pubDate Mon, 19 Oct 2026 04:45:05 -0500; kind: Fourteenth (Oceania) District. Read in the built-in browser on 21 Oct 2026."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_179/feed.rss",
+   "quote": "U.S. Coast Guard Arctic District News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 100 items; newest pubDate Tue, 20 Oct 2026 15:45:08 -0500; kind: Seventeenth (Arctic) District. Read in the built-in browser on 21 Oct 2026."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_182/feed.rss",
+   "quote": "U.S. Coast Guard Atlantic Area News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 100 items; newest pubDate Mon, 28 Sep 2026 14:30:07 -0500; kind: Atlantic Area. Read in the built-in browser on 21 Oct 2026."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_183/feed.rss",
+   "quote": "U.S. Coast Guard Pacific Area News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 100 items; newest pubDate Tue, 20 Oct 2026 16:15:10 -0500; kind: Pacific Area. Read in the built-in browser on 21 Oct 2026."
+  },
+  {
+   "url": "https://public.govdelivery.com/topics/USDHSCG_171/feed.rss",
+   "quote": "U.S. Coast Guard Great Lakes District News - Recent Updates",
+   "where": "RSS 2.0 feed <title>; 37 items; newest pubDate Mon, 27 Nov 2023 10:15:09 -0600; kind: Ninth (Great Lakes) District; stale, newest item 2023. Read in the built-in browser on 21 Oct 2026."
+  }
+ ],
+ "tried": [
+  "news.uscg.mil home page and /Press-Releases/ in the built-in browser: the HTML source contains no RSS.ashx address, no feed <link> element and an empty RSS entry in the site's social-links configuration; the DNN variables give sf_tabId 9689 and the asset paths /Portals/11/, so the portal id is 11 (not 1041).",
+  "RSS.ashx with Site=11 and ContentType=1, ContentType=2, and ContentType=1&isdashboardselected=0: each answers HTTP 200 with an empty body (39-byte empty HTML document as rendered, content-type text/plain), both from a script inside the page and by navigating a tab to the address. The AFPIMS feed handler is effectively off for this site; no other site id was guessed.",
+  "GovDelivery topic list for the USDHSCG account (public.govdelivery.com/accounts/USDHSCG/subscriber/topics) redirects to the email sign-up form, which was not filled in; the topics were found instead by requesting feed.rss for topic ids USDHSCG_1 to USDHSCG_300 from the page and reading each feed's title (240 ids answered; 3 timed out and were not retried)."
+ ],
+ "notes": "STATUS NOTE: the checker requires rows or corrections for 'done', and this task returns feed addresses, so it is filed as partial; every acceptance point (the exact feed URL confirmed to return items, the date of the newest item) is met. VERDICT: news.uscg.mil publishes no RSS address, and its ArticleCS feed handler returns an empty body for the real portal id (11) even to a browser, so the two trial entries in watch/sources.json (Site=1041) can never work and should stay disabled with this note. The working official source is GovDelivery, which carries the Coast Guard's whole news structure as one feed per topic at https://public.govdelivery.com/topics/USDHSCG_<n>/feed.rss: Headquarters News is topic 151 (100 items, newest 20 Oct 2026), and every district has its own: Northeast 158 (the district that includes Portsmouth Harbor and Station Portsmouth Harbor), East 160, Southeast 164 (already enabled in sources.json), Heartland 169, Great Lakes 171 (stale since Nov 2023), Southwest 172, Northwest 176, Oceania 178, Arctic 179, plus Atlantic Area 182 and Pacific Area 183; public-affairs detachment sub-feeds exist too (e.g. 159, 166, 167, 174, 175, 177). Items are the same press releases news.uscg.mil prints, with pubDate, so watch.mjs parses them as it already parses topic 164. Proposed outside this bundle (in the pull request): enable topics 151 and 158 in sources.json. Terms: GovDelivery's feeds carry no rights element; the releases are U.S. government work. No names recorded; release titles in these feeds sometimes name people, which the watch's title hash and PII hold already handle.",
+ "next_tasks": [
+  {
+   "title": "Enable the Coast Guard Headquarters (USDHSCG_151) and Northeast District (USDHSCG_158) GovDelivery feeds in watch/sources.json and confirm from GitHub's runner that both return items",
+   "why": "They are the national and the local official sources the watch has been missing; the runner may be blocked where a browser is not."
+  },
+  {
+   "title": "Decide whether the remaining district feeds (160, 169, 172, 176, 178, 179, 182, 183) belong in the watch, or only the national and local ones",
+   "why": "Each district adds about 100 releases of history and a steady stream; the queue is bounded at 1,500."
+  }
+ ]
+}

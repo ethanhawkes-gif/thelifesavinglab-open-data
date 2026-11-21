@@ -1,0 +1,78 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "official-feeds-five-services",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "partial",
+ "rows": [],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://api.io.canada.ca/io-server/gc/news/en/v2?dept=canadiancoastguard&sort=publishedDate&orderBy=desc&pick=50&format=atom&atomtitle=Canadian%20Coast%20Guard",
+   "quote": "Canadian Coast Guard",
+   "where": "feed (Atom, 50 entries); newest item 2026-10-15T10:54:22-04:00; kind: departmental news releases (operations, patrols, shipbuilding) linking to canada.ca/en/canadian-coast-guard/news/; dates in <updated>; no terms element in the feed"
+  },
+  {
+   "url": "https://www.canada.ca/en/transparency/terms.html",
+   "quote": "reproduce the materials in whole or in part for non-commercial purposes",
+   "where": "Section 'Ownership and usage of content provided on this site': non-commercial reproduction allowed with conditions (accuracy, credit, source URL); commercial redistribution needs the institution's permission; feeds are not mentioned"
+  },
+  {
+   "url": "https://maritimenz.govt.nz/public/news/news-feed",
+   "quote": "Maritime NZs News and Media Releases",
+   "where": "feed (RSS 2.0, 143 items); newest item Wednesday, 21 October 2026; kind: news and media releases; dates only in <media-date>, no <pubDate>; the site's RSS icon points at https://www.maritimenz.govt.nz/news-landing-page/news-feed/ (same items, well-formed), which the watch should use"
+  },
+  {
+   "url": "https://www.knrm.nl/rss/reddingrapporten",
+   "quote": "Motorjacht maakt water op Westerschelde",
+   "where": "feed (RSS 2.0, 44 items, 43 complete); newest item Sat, 17 Oct 2026 18:23:13 +0200; kind: rescue reports per lifeboat station (incident log, Dutch); XML is cut off at the end (closing channel/rss tags missing); no copyright element"
+  },
+  {
+   "url": "https://www.knrm.nl/rss/nieuws",
+   "quote": "Bijna 5.000 euro dankzij jullie stemmen",
+   "where": "feed (RSS 2.0, 30 items, 29 complete); newest item by pubDate Fri, 03 Sep 2027 09:13:40 +0200 (a future-dated event notice); newest dated item Tue, 13 Oct 2026 20:41:00 +0200; kind: organisation news and fundraising (Dutch); XML cut off at the end; no copyright element"
+  },
+  {
+   "url": "https://www.knrm.nl/rss",
+   "quote": "Reddingrapporten",
+   "where": "HTML index page listing KNRM's feeds: /rss/nieuws, /rss/reddingrapporten, /rss/agenda and per-station rescue-report feeds (reddingrapport-reddingstation-<station>), 94 addresses in all on verification"
+  },
+  {
+   "url": "https://www.surflifesaving.com.au/feed/",
+   "quote": "Surf Life Saving NSW",
+   "where": "feed (RSS 2.0, 9 items); newest item Sat, 26 Sep 2026 01:23:33 +0000; kind: state-body news (patrol season, surf sports, rock fishing safety). This is Surf Life Saving NSW, a state member of SLSA, not the national body; no copyright element"
+  }
+ ],
+ "tried": [
+  "Surf Life Saving Australia: https://sls.com.au/feed/ and the homepage https://sls.com.au/ both returned a fetch error with no page; https://sls.com.au/news/ returned an old text-only news page (2015-era items, 'Subscribe to News' as plain text, no feed href). Search for an sls.com.au feed found only state bodies. The surflifesaving.com.au feed found instead belongs to SLS NSW.",
+  "Royal Life Saving Australia: https://www.royallifesaving.com.au/rss and /news returned a fetch error; the homepage and the media releases listing https://www.royallifesaving.com.au/utility-navigation/media-centre/media-releases fetched fine but contain no RSS/Atom link or subscribe element.",
+  "Maritime NZ: https://www.maritimenz.govt.nz/rss returned a fetch error (wrong address); the working feed at /public/news/news-feed was found through search.",
+  "Irish Coast Guard: https://www.gov.ie/en/department-of-transport/press-releases/ is disallowed for this fetcher by robots.txt (ROBOTS_DISALLOWED); https://merrionstreet.ie/en/news-room/releases/ answers 302 to https://www.gov.ie/en/news/ on the same blocked site. A search for a gov.ie RSS address found none. Needs a person with a browser.",
+  "Salvamento Maritimo: https://www.salvamentomaritimo.es/sala-de-prensa is disallowed for this fetcher by robots.txt (ROBOTS_DISALLOWED); a search for an RSS address on salvamentomaritimo.es found none. Needs a person with a browser.",
+  "Guardia Costiera: https://www.guardiacostiera.gov.it/rss and the homepage https://www.guardiacostiera.gov.it/ both returned a fetch error with no page, which looks like a block on non-browser agents; a search for a feed address found none. Needs a browser user agent or a person.",
+  "DGzRS: https://www.seenotretter.de/rss returned a fetch error; https://www.seenotretter.de/aktuelles/ is TYPO3 CMS (meta generator) and its HTML carries no RSS/Atom link. presseportal.de has only third-party releases (water police, a broadcaster) that mention DGzRS at https://www.presseportal.de/blaulicht/st/DGzRS, not a DGzRS newsroom.",
+  "Redningsselskapet: https://www.rs.no/aktuelt/ shows no feed link; https://rs.no/feed/ (the site looks like WordPress: ?p= links, content/uploads paths) returns the homepage HTML, not a feed. A search for an rs.no RSS address found none."
+ ],
+ "notes": "Three of the ten named services have a confirmed feed: the Canadian Coast Guard (Canada.ca departmental Atom feed on api.io.canada.ca, 50 entries, newest 2026-10-15), Maritime New Zealand (RSS 2.0 at maritimenz.govt.nz/public/news/news-feed, 143 items, newest 21 October 2026) and KNRM (two RSS 2.0 feeds: rss/reddingrapporten, per-station rescue reports, 44 items, newest 17 October 2026; rss/nieuws, organisation news, 30 items, newest dated 13 October 2026 plus one future-dated 2027 event notice). A fourth working feed, surflifesaving.com.au/feed/, turned out to be Surf Life Saving NSW (a state member of SLSA), not Surf Life Saving Australia; it is recorded as evidence but not counted as SLSA. So the task is partial: 3 of the 5 required services (from the 10 named), plus one related state body. Of the other seven: gov.ie (Irish Coast Guard) and salvamentomaritimo.es refuse this fetcher by robots.txt; guardiacostiera.gov.it answers an error on every address (looks like a block on non-browser agents); sls.com.au, royallifesaving.com.au, seenotretter.de (TYPO3) and rs.no expose no RSS/Atom link on the pages that could be read. WebFetch cannot send custom headers, so 'needs a browser user agent' is an inference from the errors, not a tested fact; GitHub's runner may fare differently and should try each address once. The robots.txt refusals apply to this fetcher; a person should check whether those sites' robots.txt allow the watch's agent before any gov.ie or salvamentomaritimo.es address is added.\n\nWatch compatibility, read against scripts/watch.mjs parseFeed: the Canada feed is Atom with <link href> and <updated>, which the parser handles. The Maritime NZ feed has no <pubDate> or <dc:date>; dates are only in <media-date> ('Wednesday, 21 October 2026', which Node's Date.parse reads), so items would be queued with published null unless the parser falls back to media-date. Both KNRM feeds are cut off before the closing channel and rss tags; the regex parser only takes complete <item> blocks so it still gets the items, but a strict XML parser would reject them. KNRM items are in Dutch and keywords.json is English-only, so nothing from KNRM would match until Dutch include patterns exist (for example vermist, te water, omgeslagen, gekapseisd, reddingsactie, verdronken). One KNRM nieuws item title names a private donor; the watch stores only a hash of titles, so the queue is unaffected, but a reviewer following the link will see a name.\n\nTerms of use: none of the feeds carries a copyright or terms element. Canada.ca's terms page permits non-commercial reproduction with conditions (verify accuracy, credit the title and author, cite the source URL) and reserves commercial redistribution; it does not mention feeds. Site-wide terms for Maritime NZ, KNRM and SLS NSW were not checked within the fetch budget. The Maritime NZ feed's own self link names a second address, https://maritimenz.govt.nz/news-landing-page/news-feed, which was not fetched.\n\nSuggested sources.json entries, all kind official: ccg-news (Canada), mnz-news (New Zealand), knrm-reddingrapporten and knrm-nieuws (Netherlands), slsnsw-news (Australia, NSW). Newest-item dates were read on 21 October 2026 through WebFetch, which obeys robots.txt and may behave differently from GitHub's runner. About 40 fetches and searches were used. VERIFICATION 21 Oct 2026: all five feeds re-fetched and parsed (Canada 50 entries, Maritime NZ 143, KNRM rescue reports 43 complete of 44, KNRM news 29 of 30, SLS NSW 9). Terms the first pass did not check: KNRM's disclaimer allows personal non-commercial use only and needs permission for reproduction; Maritime NZ's copyright page allows personal reuse with acknowledgement; SLS NSW's terms need SLSA's written consent for copying; none mentions feeds. The watch stores only links, dates, a kind and a title hash, which is the use these terms would need to be read against. Item titles naming people occur in the Canada, Maritime NZ and KNRM news feeds (none",
+ "next_tasks": [
+  {
+   "title": "Irish Coast Guard press-release feed on gov.ie: needs a person with a browser",
+   "why": "gov.ie's robots.txt refuses the fetcher; a person can read the Department of Transport press-release listing for a feed or subscribe link and check whether the watch's agent is allowed."
+  },
+  {
+   "title": "Salvamento Maritimo sala de prensa feed: needs a person with a browser",
+   "why": "salvamentomaritimo.es refuses the fetcher by robots.txt and no RSS address turned up in search; a person can read the page's head for an alternate feed link."
+  },
+  {
+   "title": "Guardia Costiera news feed: needs a browser user agent or a person",
+   "why": "Every guardiacostiera.gov.it address answered an error with no page, which looks like a block on non-browser agents; a browser can read the site's feed link if one exists."
+  },
+  {
+   "title": "Watch adjustments before enabling the new feeds: read Maritime NZ's media-date element and add Dutch keyword patterns for KNRM",
+   "why": "The Maritime NZ feed has no pubDate, so items would carry no date; keywords.json is English-only, so the Dutch KNRM rescue reports would never match."
+  }
+ ]
+}

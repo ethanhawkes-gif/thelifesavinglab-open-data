@@ -1,0 +1,65 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "cdc-2014-children-five",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1), built-in browser"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "cdc-children-nonfatal-ed-5-2014",
+   "figure": "another five receive emergency department care (per child drowning death)",
+   "low": 5,
+   "high": 5,
+   "unit": "ratio",
+   "year": null,
+   "scope": "Children: emergency-department visits for nonfatal submersion injuries per child drowning death, United States, as stated on CDC's 'Unintentional Drowning: Get the Facts' page (page last updated 24 October 2014). The sentence says only 'child'; the sentence before it concerns children 14 and younger. Data years are not stated for the ratio: its reference (1) is WISQARS, 'cited 2012 May 3'. The page's death counts are for 2005–2009, but the ratio is not tied to those years.",
+   "geography": "United States",
+   "source": "CDC, National Center for Injury Prevention and Control, 'Unintentional Drowning: Get the Facts' (Water-Related Injuries Facts), page last updated 24 October 2014; Wayback Machine capture of 23 December 2014 (timestamp 20141223054643)",
+   "url": "https://web.archive.org/web/20141223054643/http://www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html",
+   "grade": "A",
+   "do_not_add_to": "A ratio for one age group and one door (emergency department) with unstated data years: never averaged with cdc-children-nonfatal-ed-7 (CDC's later 'another 7'), with the all-ages or adult ratios (cdc-nonfatal-ed-2012-2021, ontario-nonfatal-ed-ratio-2014-2023, australia-nonfatal-hospitalisation-ratio-2002-2015) or turned into a count; never cited as a global ratio.",
+   "note": "The sentence as printed: 'For every child who dies from drowning, another five receive emergency department care for nonfatal submersion injuries.' followed by reference 1 (WISQARS). Superseded on CDC's site by 'another 7' (row cdc-children-nonfatal-ed-7). This is the primary behind the 'five times' figure that Felton et al. 2015, Safe Kids 2016 and many state fact sheets repeat. Read in the built-in browser from the Wayback Machine capture of 23 Dec 2014."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://web.archive.org/web/20141223054643/http://www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html",
+   "quote": "another five receive emergency department care for nonfatal submersion injuries",
+   "where": "Section 'How big is the problem?', second paragraph, with reference mark 1; page footer 'Page last reviewed: May 15, 2014' and 'Page last updated: October 24, 2014'; References, item 1: WISQARS [cited 2012 May 3]. Capture timestamp 20141223054643."
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4679898/",
+   "quote": "non-fatal drowning is at least five times that of fatal drowning",
+   "where": "Felton et al., BMJ Open 2015;5:e008444, Introduction, sentence citing reference 2; reference 2: CDC, Unintentional drowning: get the facts, 24 October 2014, cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html (no accessed date)"
+  }
+ ],
+ "tried": [
+  "Note: the Wayback Machine was unreachable for the fetch tool (next item) but opened in the built-in browser on 21 Oct 2026; a request for the timestamp 20141201000000 was redirected to the nearest capture, 20141223054643.",
+  "Wayback Machine, web.archive.org: https://web.archive.org/web/20141015000000/http://www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html and https://web.archive.org/web/2015/https://www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html both refused by the fetch tool as SITE_BLOCKED (the whole web.archive.org host is blocked for this tool). The host aliases wayback.archive.org and archive.org/web/ were rejected as invalid or errored.",
+  "Internet Archive availability API (archive.org host, reachable): https://archive.org/wayback/available?url=www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html&timestamp=20141201000000 confirms the URL is in the Wayback Machine but returned only a 2023-04-18 capture as 'closest' regardless of the timestamp asked for; the 2014 captures could not be listed (the CDX API lives on the blocked host).",
+  "Archive-It (wayback.archive-it.org/all/<2014 and 2015 timestamps>/http://www.cdc.gov/...): first two attempts returned an archive.org rate-limit page; the third returned a 'bot protection system that requires JavaScript' interstitial. Not retried.",
+  "archive.today (https://archive.ph/newest/http://www.cdc.gov/...): SITE_BLOCKED. Library of Congress web archive (https://webarchive.loc.gov/all/20141201000000/http://www.cdc.gov/...): fetch error. Portuguese web archive (https://arquivo.pt/wayback/20150101000000/http://www.cdc.gov/...): ROBOTS_DISALLOWED. UNT Libraries End of Term archive (https://webarchive.library.unt.edu/eot2012/.../http://www.cdc.gov/...): ROBOTS_DISALLOWED.",
+  "Memento TimeTravel aggregator (timetravel.mementoweb.org timemap and api URLs for the CDC page): rejected by the fetch tool as invalid URLs. A reader proxy (r.jina.ai) placed in front of the web.archive.org capture, plain and percent-encoded: rejected as invalid URL.",
+  "CDC's own archive site https://archive.cdc.gov/www_cdc_gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html: fetch error (the site is a JavaScript application). Not retried.",
+  "CDC Stacks: the search pages https://stacks.cdc.gov/gsearch?terms=... errored for the fetch tool. Records found by web search and opened: https://stacks.cdc.gov/view/cdc/22426 (NCHS Data Brief 149, Unintentional Drowning Deaths in the United States 1999-2010, 15 April 2014), /view/cdc/107521 (NCHS Data Brief 413, children 0-17, 1999-2019), /view/cdc/168530 (Public Health Reports 2024, syndromic surveillance of drowning ED visits 2019-2022) and /view/cdc/35043 (MMWR 13 August 1982). None is the 'Unintentional Drowning: Get the Facts' page and none states the children's ratio.",
+  "Web searches run: the exact sentence ('another five receive emergency department care' with drowning, CDC and 2005-2009); the page title with 'another five' and 'archived'; site:stacks.cdc.gov with the title; indexed web.archive.org URLs of waterinjuries-factsheet.html. Only secondary copies came back: Children's Safety Network webinar slides (21 June 2017), Safe Kids Dangerous Waters 2016, Vermont Department of Health drowning sheet, North Dakota and North Carolina state fact sheets, Connecticut Office of the Child Advocate 2019, law-firm and local-news pages. None is the CDC page.",
+  "Men's Health Network 'Drowning in America' sheet (https://menshealthnetwork.org/wp-content/library/drown.pdf, dated 2014): a secondary compilation, not a print of the CDC page; says 'For every 5 children under the age of 14 who must receive emergency care for submersion-related injuries, 1 child dies' with no data years, and lists the CDC fact sheet and MMWR 'Drowning - United States, 2005-2009' among its references. Not used as evidence.",
+  "A Lee County (NC) Laserfiche WebLink document page that search results suggested might reproduce the CDC page (lee-lf.leecountync.gov, doc 54968, page 64) returned a 'cookies must be enabled to sign in' error page.",
+  "GitHub code search for the sentence (the only non-web route the shell allows) was refused: this session's GitHub access is repository-scoped and the search endpoint is unavailable."
+ ],
+ "notes": "DONE via a browser session on 21 Oct 2026 after a fetch-only run found every archive route closed (the tried list keeps that record so the next person does not repeat it). The Wayback Machine capture of 23 December 2014 of CDC's 'Unintentional Drowning: Get the Facts' page, whose footer says 'Page last updated: October 24, 2014', prints: 'For every child who dies from drowning, another five receive emergency department care for nonfatal submersion injuries.' with reference 1, which is WISQARS 'cited 2012 May 3'. So the acceptance point 'the data years the ratio covers, as the page states them' has a definite answer: the page states none for the ratio; the only years on the page are 2005–2009 for the death counts (reference 2, MMWR 2012;61(19):344–347), and the ratio is not tied to them. The row is graded A as CDC's own page in an archived copy. Nothing changes for cdc-children-nonfatal-ed-7 except that the five-to-seven change now has a dated earlier endpoint; the archive.cdc.gov follow-up would date the switch. The page's capture is the version Felton et al. 2015 cite (24 October 2014). No names recorded: the page's reference list names authors of cited papers, which were not transcribed.",
+ "next_tasks": [
+  {
+   "title": "Needs a person with a browser: open CDC's own archive (archive.cdc.gov) for the same URL and record the last version carrying 'another five' and the first carrying 'another 7', with their 'page last reviewed' dates",
+   "why": "It would date the change from five to seven on a CDC server (grade A) and supply a do-not-combine note for row cdc-children-nonfatal-ed-7; the site is a JavaScript application the fetch tool cannot read."
+  },
+  {
+   "title": "Run the CDC Stacks search box for 'Unintentional drowning get the facts' and 'waterinjuries-factsheet' to confirm whether Stacks holds a catalogued copy of the 2014 fact sheet",
+   "why": "The Stacks search pages errored for the fetch tool; the four Stacks records reachable by web search were other documents, so the question is still open."
+  }
+ ]
+}
