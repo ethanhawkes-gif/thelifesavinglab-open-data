@@ -13,7 +13,7 @@
     if (rule.enum && !rule.enum.includes(value)) errors.push(path + ' must be one of ' + rule.enum.join(', '));
     if (rule.type) {
       const types = Array.isArray(rule.type) ? rule.type : [rule.type];
-      const ok = types.some(t => t === 'null' ? value === null : t === 'array' ? Array.isArray(value) : t === 'integer' ? Number.isInteger(value) : t === 'number' ? typeof value === 'number' && Number.isFinite(value) : typeof value === t);
+      const ok = types.some(t => t === 'null' ? value === null : t === 'array' ? Array.isArray(value) : t === 'integer' ? Number.isInteger(value) : t === 'number' ? typeof value === 'number' && Number.isFinite(value) : t === 'object' ? value !== null && typeof value === 'object' && !Array.isArray(value) : typeof value === t);
       if (!ok) return [path + ' has the wrong type'];
     }
     if (typeof value === 'string') { if (rule.maxLength !== undefined && value.length > rule.maxLength) errors.push(path + ' is too long'); if (rule.pattern && !(new RegExp(rule.pattern)).test(value)) errors.push(path + ' has the wrong format'); }
