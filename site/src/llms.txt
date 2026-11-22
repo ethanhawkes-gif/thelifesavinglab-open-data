@@ -11,6 +11,12 @@ from different sources or waters; never record a person's name, contact details 
 carries a grade for provenance (A primary official, B peer-reviewed, C press or secondary, D a judgment) and a rule for
 what it must not be added to.
 
+## The guide
+
+- /guide/ : Drowning: what works, where, and for whom. The Lab's sourced guide (draft 0.9, not yet signed off by a named
+  editor): the full toll counted, what works and for whom, the gaps, the way forward to 2035, a Portsmouth Harbor test
+  case, and an appendix with every source.
+
 ## Data (JSON, CC BY 4.0; sources keep their own terms)
 
 - /data/ledger.json : every figure with source, scope, year, grade and do-not-add rule (schema in /data/schema.md)
