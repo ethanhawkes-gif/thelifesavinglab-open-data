@@ -101,7 +101,7 @@
     <p class="lede">A drowning can turn on minutes. The evidence that might change the outcome is scattered across reports, memories, agencies and places. When the next person needs it, they often inherit fragments—not a trustworthy next step.</p>
     <p class="hero-promise">If we do not build a better way to find, adapt and check what works, every community keeps starting over. The Lab is an open attempt to change that.</p>
     <div class="row"><a class="btn btn--primary" href="#challenge">Work on the open challenge <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#state">See what exists now</a></div>
-    <p class="small hero-boundary">We are early. We have working artifacts, not proof of universal impact. This site shows the difference.</p>
+    <p class="small hero-boundary">We are early. We have working tools, not proof that they work everywhere. This site shows the difference.</p>
   </div></div>
   <div class="hero-photo">
     <img src="${PHOTOS.hero}" alt="Wood Island Life-Saving Station in Kittery, Maine, seen down its boardwalk: white shingles, a red roof and lookout tower, a surfboat on its launching carriage, and Whaleback Light on the horizon">
@@ -111,36 +111,36 @@
 </section>
 
 <section class="section section--tight" id="state" aria-labelledby="state-title"><div class="wrap stack" style="gap:26px">
-  <div class="split"><div class="stack-sm"><p class="eyebrow">Where the work stands</p><h2 id="state-title" class="display h2">Early. Useful. Not proven at scale.</h2></div><p class="lede">The honest current state is part of the product. Some entries are evidence. Some are hypotheses. Some are unresolved. We label the difference.</p></div>
+  <div class="split"><div class="stack-sm"><p class="eyebrow">Where the work stands</p><h2 id="state-title" class="display h2">Early. Useful. Not proven at scale.</h2></div><p class="lede">Some entries point to a source. Others are ideas we haven’t tested or questions we can’t answer yet. Here’s how to tell them apart.</p></div>
   <div class="state-grid">
     <div class="state-card"><span class="state-label state-label--established">Established</span><h3 class="h3">A public record</h3><p>${rows} ledger rows, each with a source, a date, and a rule for what it must not be added to.</p><a class="mono" href="#ledger">Inspect the ledger →</a></div>
-    <div class="state-card"><span class="state-label state-label--working">Working</span><h3 class="h3">A way to reason</h3><p>${branches || '—'} tree nodes ask which water and which person before suggesting a measure.</p><a class="mono" href="#tree">Walk the decision tree →</a></div>
+    <div class="state-card"><span class="state-label state-label--working">Working</span><h3 class="h3">Questions to ask first</h3><p>${branches || '—'} tree nodes ask which water and which person before suggesting a measure.</p><a class="mono" href="#tree">Walk the decision tree →</a></div>
     <div class="state-card"><span class="state-label state-label--open">Open</span><h3 class="h3">Questions still need owners</h3><p>${openTasks} bounded tasks are open. A useful contribution is small enough to finish and clear enough to review.</p><a class="mono" href="#lend">Choose one task →</a></div>
-    <div class="state-card"><span class="state-label state-label--unknown">Not yet proven</span><h3 class="h3">Real-world effect</h3><p>No pilot is being counted as a life saved. The next proof is one complete trace: a real practitioner question, an owner, a bounded change, a reviewer, and an honest record of what happened.</p><a class="mono" href="#pilots">See the pilot rule →</a></div>
+    <div class="state-card"><span class="state-label state-label--unknown">Not yet proven</span><h3 class="h3">Real-world effect</h3><p>A pilot is not a life saved. We still need to follow one question from start to finish: who asked it, who could try a change, who checked it and what happened.</p><a class="mono" href="#pilots">See the pilot rule →</a></div>
   </div>
 </div></section>
 
 <section class="section dark" id="challenge" aria-labelledby="challenge-title"><div class="wrap stack" style="gap:30px">
   <div class="split"><div class="stack-sm"><p class="eyebrow">The open challenge · one question at a time</p><h2 id="challenge-title" class="display h2">How do we turn a scattered water-safety claim into a local action an actual service could run—and check?</h2></div><p class="lede">This is the work. Not a campaign. Not a promise that a dashboard will save anyone. A question that can be narrowed, tested, handed to someone with authority, and improved by the next person.</p></div>
   <article class="challenge-card" aria-label="Current challenge card">
-    <div class="challenge-card-top"><span class="pill pill-range">Open · testing the shape</span><span class="mono">Challenge 001 · updated ${esc(checked)}</span></div>
+    <div class="challenge-card-top"><span class="pill pill-range">Open question</span><span class="mono">Challenge 001 · updated ${esc(checked)}</span></div>
     <div class="challenge-fields">
       <div><span class="field-k">The failure</span><p>The record is fragmented. A useful local observation can remain invisible; a global estimate can look more certain than it is; a good practice can disappear when the person who knows it leaves.</p></div>
-      <div><span class="field-k">The condition for better</span><p>A person can trace a claim, see its limits, adapt it to a specific water and person, and identify who could responsibly try it.</p></div>
+      <div><span class="field-k">What would help</span><p>A person can trace a claim, see its limits, adapt it to a specific water and person, and identify who could responsibly try it.</p></div>
       <div><span class="field-k">What exists now</span><p>The ledger, decision tree, pilot format, local register, agent task board and public receipts are live. They are the first instruments, not the finished system.</p></div>
-      <div><span class="field-k">What remains unknown</span><p>Whether these instruments help a real person make a better decision under local pressure—and whether the learning travels without losing context. We have not yet completed the full trace from practitioner question to adopted change.</p></div>
+      <div><span class="field-k">What remains unknown</span><p>We don’t yet know whether these tools help people make better decisions locally or whether the same lessons hold elsewhere. We haven’t followed a practitioner’s question all the way to a change a service adopted.</p></div>
     </div>
-    <div class="challenge-next"><div><span class="field-k">Next useful move</span><p>${nextTask ? esc(nextTask.title) : 'Bring one source, local constraint, observation or pilot question.'}</p></div><a class="btn btn--primary" href="#lend">Take the next move <span aria-hidden="true">→</span></a></div>
+    <div class="challenge-next"><div><span class="field-k">Next useful move</span><p>${nextTask ? esc(nextTask.title) : 'Bring one source, local constraint, observation or pilot question.'}</p></div><a class="btn btn--primary" href="#lend">Choose a task <span aria-hidden="true">→</span></a></div>
   </article>
 </div></section>
 
 <section class="section" aria-labelledby="ratchet-title"><div class="wrap stack" style="gap:30px">
-  <div class="split"><div class="stack-sm"><p class="eyebrow">The ratchet</p><h2 id="ratchet-title" class="display h2">Find. Adapt. Share. Verify. Carry forward.</h2></div><p class="lede">The goal is not more activity. It is a public memory that gets more useful without pretending uncertainty has disappeared.</p></div>
+  <div class="split"><div class="stack-sm"><p class="eyebrow">How we test an idea</p><h2 id="ratchet-title" class="display h2">Find. Adapt. Share. Verify. Carry forward.</h2></div><p class="lede">The goal is not busywork. It is a shared public record that gets more useful over time without hiding what is still uncertain.</p></div>
   <ol class="ratchet-list">
     <li><span class="ratchet-n">01</span><div><h3 class="h3">Find</h3><p>Locate a source, observation, failure or missing piece. Keep the context attached.</p><a class="mono" href="#gaps">See the gaps →</a></div></li>
     <li><span class="ratchet-n">02</span><div><h3 class="h3">Adapt</h3><p>Make the question fit one water, one person and one real decision. Do not generalize past the evidence.</p><a class="mono" href="#tree">Choose a branch →</a></div></li>
     <li><span class="ratchet-n">03</span><div><h3 class="h3">Try</h3><p>Write one small pilot with a forecast, an adopter and a way to know it failed.</p><a class="mono" href="#pilots">Write the test →</a></div></li>
-    <li><span class="ratchet-n">04</span><div><h3 class="h3">Verify</h3><p>Publish what happened, including misses, corrections and the conditions that did not travel.</p><a class="mono" href="#lend">Follow a receipt →</a></div></li>
+    <li><span class="ratchet-n">04</span><div><h3 class="h3">Verify</h3><p>Publish what happened, including misses, corrections and the conditions that did not travel.</p><a class="mono" href="#lend">See what changed →</a></div></li>
     <li><span class="ratchet-n">05</span><div><h3 class="h3">Carry forward</h3><p>Leave the next person a clearer record, a better tool and a more honest starting point.</p><a class="mono" href="/principles/">Read the principles →</a></div></li>
   </ol>
 </div></section>
@@ -148,19 +148,19 @@
 <section class="section band" aria-labelledby="concrete-title"><div class="wrap stack" style="gap:28px">
   <div class="split"><div class="stack-sm"><p class="eyebrow">A first useful move</p><h2 id="concrete-title" class="display h2">Do something small enough to finish.</h2></div><p class="lede">You do not need to join an institution or understand the whole system. Start where your time, knowledge or access is real.</p></div>
   <div class="grid g4 action-grid">
-    <a class="action-card" href="#lend"><span class="action-time">20 minutes</span><h3 class="h3">Check one claim</h3><p>Open the source, see if the row holds, and leave a correction or a clean receipt.</p><span class="mono">Lend an agent an hour →</span></a>
+    <a class="action-card" href="#lend"><span class="action-time">20 minutes</span><h3 class="h3">Check one claim</h3><p>Compare one entry with its source. Tell us what matches or what needs correcting.</p><span class="mono">Lend an agent an hour →</span></a>
     <a class="action-card" href="#register"><span class="action-time">One event</span><h3 class="h3">Bring local knowledge</h3><p>Record what happened without names, invented precision or a story nobody can check.</p><span class="mono">Open the register →</span></a>
     <a class="action-card" href="#pilots"><span class="action-time">One session</span><h3 class="h3">Write a pilot</h3><p>Name the adopter, forecast the result, and say in advance what would make you stop.</p><span class="mono">Use the format →</span></a>
     <a class="action-card" href="#contribute"><span class="action-time">Your judgment</span><h3 class="h3">Challenge the premise</h3><p>Bring a constraint, a failure or a better question. Independent judgment is part of the work.</p><span class="mono">Contribute →</span></a>
   </div>
-  <p class="small muted">The promise is reciprocal: one useful contribution, a thoughtful response, evidence of use, and a meaningful next invitation. If we cannot show what your work changed, the handoff is incomplete.</p>
+  <p class="small muted">If you contribute, you deserve to hear what happened to your work. That includes an explanation if we didn’t use it.</p>
 </div></section>
 
 <section class="section" aria-labelledby="proof-title"><div class="wrap stack" style="gap:28px">
   <div class="split"><div class="stack-sm"><p class="eyebrow">Follow the work</p><h2 id="proof-title" class="display h2">Do not take our word for it.</h2></div><p class="lede">The strongest signal is not a logo or a claim. It is a record another person can inspect, disagree with, and use.</p></div>
   <div class="proof-grid">
     <div class="proof-card"><span class="field-k">Evidence</span><strong>~${floor}–${ceil}</strong><p>A modeled global range, not a live death counter. The disagreement stays visible.</p><a class="mono" href="#toll">Read the method →</a></div>
-    <div class="proof-card"><span class="field-k">Work in public</span><strong>${receipts}</strong><p>Public receipts showing what reviewed contributions changed. Zero is an honest result too.</p><a class="mono" href="#lend">See the receipts →</a></div>
+    <div class="proof-card"><span class="field-k">Work in public</span><strong>${receipts}</strong><p>Public receipts showing what reviewed contributions changed. Zero is an honest result too.</p><a class="mono" href="#lend">See reviewed contributions →</a></div>
     <div class="proof-card"><span class="field-k">Field notes</span><div class="field-note-list">${fieldNotes.length ? fieldNotes.map((e) => `<div class="field-note"><span class="mono">${esc(e.date)}</span><span>${esc(e.subject)}</span></div>`).join('') : '<p class="small muted">The first field note will appear when the public record changes.</p>'}</div><a class="mono" href="#ledger">Open the record →</a></div>
   </div>
 </div></section>
@@ -214,7 +214,7 @@
   <div class="card" style="padding:clamp(18px,3vw,32px)">${window.Charts.estimates(R)}
   <p class="small muted" style="margin-top:14px;padding-top:12px;border-top:1px solid var(--line)">Deaths, axis from zero. The outlined box is IHME’s published 95% uncertainty interval; WHO’s summary tables print no interval, which is not the same as no uncertainty. Rows: ${['who-ghe-2021', 'ihme-gbd-2021', 'who-ghe-2019'].map(ledgerLink).join(', ')}.</p></div>
   <div class="grid g2">
-    <div class="stack-sm"><h3 class="h4">Why estimates disagree</h3><ul class="small" style="font-size:16px;padding-left:20px;display:flex;flex-direction:column;gap:6px"><li>Most countries do not record every death with a cause. Where records are incomplete, both teams estimate the missing deaths with a model.</li><li>Different input databases, corrections and cause-of-death redistribution.</li><li>The definition both use (the medical codes for accidental drowning, ICD-10 W65–W74) leaves out deaths in boats and ships, in floods, and on purpose. ${ledgerLink('icd-definition')}</li><li>Only one of them publishes a range: IHME prints an interval, the WHO summary tables print a single number.</li></ul></div>
+    <div class="stack-sm"><h3 class="h4">Why estimates disagree</h3><ul class="small" style="font-size:16px;padding-left:20px;display:flex;flex-direction:column;gap:6px"><li>Most countries do not record every death with a cause. Where records are incomplete, both teams estimate the missing deaths with a model.</li><li>They start from different death records, adjust for missing data differently, and sort unclear causes of death in different ways.</li><li>The definition both use (the medical codes for accidental drowning, ICD-10 W65–W74) leaves out deaths in boats and ships, in floods, and on purpose. ${ledgerLink('icd-definition')}</li><li>Only one of them publishes a range: IHME prints an interval, the WHO summary tables print a single number.</li></ul></div>
     <div class="stack-sm"><h3 class="h4">The long trend, inside one model</h3><p class="small" style="font-size:16px">GBD 2017 put 1990 at ${fmt(R['gbd-1990-franklin'].low)}–${fmt(R['gbd-1990-franklin'].high)} and 2017 at ${fmt(R['gbd-2017-franklin'].low)}–${fmt(R['gbd-2017-franklin'].high)}: a 44.5% fall. WHO reports the global rate down 38% since 2000, from 6.1 to 3.8 per 100,000. Trends are only read within one model round. ${ledgerLink('gbd-2017-franklin')}, ${ledgerLink('who-rate-trend')}</p></div>
   </div>
 </div></section>
@@ -270,7 +270,7 @@
   ${sectionHead('Method', '<span id="method-title">Three rules, applied in the open.</span>', '')}
   <ol class="steps" style="grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))">
     <li><span class="n">1</span><h3 class="h3">Never add across sources</h3><p class="small" style="font-size:16px">Unless a row states the overlap assumption and names the rows it combines. The floor and ceiling do exactly that, in <span class="mono">toll.json</span>.</p></li>
-    <li><span class="n">2</span><h3 class="h3">Grades describe provenance, not truth</h3><p class="small" style="font-size:16px">${pill('A')} primary official data or model output · ${pill('B')} peer-reviewed analysis · ${pill('C')} press, secondary summary or an organisation’s own statement · ${pill('D')} lab judgment, stated as such, with the task that retires it.</p></li>
+    <li><span class="n">2</span><h3 class="h3">Grades tell you where a number comes from</h3><p class="small" style="font-size:16px">${pill('A')} primary official data or model output · ${pill('B')} peer-reviewed analysis · ${pill('C')} press, secondary summary or an organisation’s own statement · ${pill('D')} lab judgment, stated as such, with the task that retires it.</p></li>
     <li><span class="n">3</span><h3 class="h3">Unknown is drawn as unknown</h3><p class="small" style="font-size:16px">Never as zero and never as a guess. A dashed line on this page is a promise that nobody has the number yet.</p></li>
   </ol>
   <div class="row"><a class="btn" href="#ledger">Open the ledger</a><a class="btn btn--ghost" href="#contribute">Help close a gap</a></div>
