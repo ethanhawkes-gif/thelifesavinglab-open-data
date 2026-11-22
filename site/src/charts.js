@@ -30,7 +30,7 @@
     <div style="position:absolute;left:${pf}%;top:-8px;height:${H + 16}px;border-left:2px solid var(--ink)"></div>
     <div style="position:absolute;left:${pc}%;top:-8px;height:${H + 16}px;border-left:2px solid var(--ink)"></div>
     <div style="position:absolute;left:${pw}%;top:-4px;height:${H + 8}px;border-left:2px dashed var(--brass)"></div>
-    <div class="mono num" style="position:absolute;left:${pw}%;top:-26px;transform:translateX(-50%);color:#8A6A1F;white-space:nowrap;font-size:12px">WHO 2021 · ${fmt(who.high)}</div>
+    <div class="mono num" style="position:absolute;left:${pw}%;top:-26px;transform:translateX(-50%);color:#5F4A12;white-space:nowrap;font-size:12px">WHO 2021 · ${fmt(who.high)}</div>
   </div>
   <div class="axis" aria-hidden="true">${ticks}</div>
   <figcaption class="legend" style="margin-top:8px">

@@ -84,116 +84,102 @@
   /* ---------- HOME ---------- */
   function home() {
     const toll = DATA.toll, rows = DATA.ledger ? DATA.ledger.rows.length : 0;
-    const floor = toll ? fmt(roundK(toll.floor)) : '260,000', ceil = toll ? fmt(roundK(toll.ceiling)) : '416,000';
+    const floor = toll ? fmt(roundK(toll.floor)) : '—', ceil = toll ? fmt(roundK(toll.ceiling)) : '—';
+    const openTasks = DATA.tasks ? DATA.tasks.tasks.filter((t) => t.status !== 'done' && !(t.claimed_until && Date.parse(t.claimed_until) > Date.now())).length : 0;
+    const receipts = DATA.receipts && Array.isArray(DATA.receipts.receipts) ? DATA.receipts.receipts.length : 0;
+    const branches = DATA.tree && DATA.tree.nodes ? Object.keys(DATA.tree.nodes).length : 0;
+    const nextTask = DATA.tasks ? DATA.tasks.tasks.find((t) => t.status !== 'done' && !(t.claimed_until && Date.parse(t.claimed_until) > Date.now())) : null;
+    const fieldNotes = DATA.changelog && Array.isArray(DATA.changelog.entries) ? DATA.changelog.entries.slice(0, 4) : [];
+    const checked = toll?.last_checked || 'date not supplied';
     return `
-<section class="hero" aria-labelledby="hero-title">
+<section class="challenge-strip" aria-label="Current challenge status"><div class="wrap challenge-strip-inner"><span class="live-dot" aria-hidden="true"></span><span><b>Open challenge</b> · early stage · open to inspection</span><span class="challenge-strip-sep">/</span><span>Last checked ${esc(checked)}</span><a href="#challenge" class="mono">Open the question →</a></div></section>
+
+<section class="hero hero--reframed" aria-labelledby="hero-title">
   <div class="hero-text"><div>
     <p class="eyebrow">The Life-Saving Lab · Portsmouth Harbor</p>
-    <h1 id="hero-title" class="display h1">This harbor’s past was lifesaving. <i style="color:var(--brass)">So is its future.</i></h1>
-    <p class="lede">An open lab on drowning. We keep a sourced count of what is known and publish it as a range, not a false point. Each June, students and the people who work this water write one-page changes a real adopter could run that season. We publish the ones that fail.</p>
-    <div class="row"><a class="btn btn--primary" href="#contribute">Contribute <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#toll">See the toll</a></div>
-    <div class="row mono hero-stats"><span><b>${rows}</b> sourced ledger rows</span><span><b>${DATA.tree ? Object.values(DATA.tree.nodes).filter((n) => n.type === 'leaf').length : 17}</b> branches of the tree</span><span><b>24</b> student seats</span></div>
+    <h1 id="hero-title" class="display h1">When the decision matters, the knowledge is usually somewhere else.</h1>
+    <p class="lede">A drowning can turn on minutes. The evidence that might change the outcome is scattered across reports, memories, agencies and places. When the next person needs it, they often inherit fragments—not a trustworthy next step.</p>
+    <p class="hero-promise">If we do not build a better way to find, adapt and check what works, every community keeps starting over. The Lab is an open attempt to change that.</p>
+    <div class="row"><a class="btn btn--primary" href="#challenge">Work on the open challenge <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#state">See what exists now</a></div>
+    <p class="small hero-boundary">We are early. We have working artifacts, not proof of universal impact. This site shows the difference.</p>
   </div></div>
   <div class="hero-photo">
     <img src="${PHOTOS.hero}" alt="Wood Island Life-Saving Station in Kittery, Maine, seen down its boardwalk: white shingles, a red roof and lookout tower, a surfboat on its launching carriage, and Whaleback Light on the horizon">
     <p class="credit">Wood Island Life-Saving Station · Photo: Ethan Hawkes</p>
-    <div class="stamp">
-      <div class="row mono" style="gap:10px;align-items:center;color:var(--muted)"><span class="pill pill-A">Range</span><span>A YEAR, WORLDWIDE</span></div>
-      <p class="big">~${floor}–${ceil}</p>
-      <p style="font-size:16px;font-weight:600;line-height:1.35">people die in the water, from what is documented.</p>
-      <p class="small muted">Since you opened this page: <b data-live="since" style="color:var(--ink)">—</b>, estimated. The true number could sit above the range. Closing the gap is the lab’s work.</p>
-      <a href="#toll" style="font-size:14px;font-weight:600">How the range is built <span aria-hidden="true">→</span></a>
-    </div>
+    <div class="stamp stamp--northstar"><p class="eyebrow">The North Star</p><p class="northstar-line">A person facing a water risk can find a more trustworthy next step, understand why it is suggested, adapt it to local reality, and leave the next person better prepared.</p><a href="/manifesto/" class="mono">Read the founding manifesto →</a></div>
   </div>
 </section>
 
-<section class="section band" aria-labelledby="explainer-title"><div class="wrap stack" style="gap:24px">
-  <div class="card--dark" style="padding:clamp(22px,3vw,36px);border-radius:2px;display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between">
-    <div class="stack-sm" style="flex:1 1 420px;min-width:0">
-      <p class="eyebrow">Watch</p>
-      <h3 id="explainer-title" class="h3" style="color:var(--paper)">Wisdom Under Pressure: the explainer</h3>
-      <p class="small" style="font-size:16px;color:var(--mist);max-width:40em">A short narrated walkthrough of the problem, the solution, and the Solver model this lab is testing. Prototype; voice by ElevenLabs, drill details made up for illustration.</p>
-    </div>
-    <a class="btn btn--primary" href="https://claude.ai/artifact/PAZb3HzfWRbDFevuVhr9RM" target="_blank" rel="noopener">Watch the explainer <span aria-hidden="true">→</span></a>
+<section class="section section--tight" id="state" aria-labelledby="state-title"><div class="wrap stack" style="gap:26px">
+  <div class="split"><div class="stack-sm"><p class="eyebrow">Where the work stands</p><h2 id="state-title" class="display h2">Early. Useful. Not proven at scale.</h2></div><p class="lede">The honest current state is part of the product. Some entries are evidence. Some are hypotheses. Some are unresolved. We label the difference.</p></div>
+  <div class="state-grid">
+    <div class="state-card"><span class="state-label state-label--established">Established</span><h3 class="h3">A public record</h3><p>${rows} ledger rows, each with a source, a date, and a rule for what it must not be added to.</p><a class="mono" href="#ledger">Inspect the ledger →</a></div>
+    <div class="state-card"><span class="state-label state-label--working">Working</span><h3 class="h3">A way to reason</h3><p>${branches || '—'} tree nodes ask which water and which person before suggesting a measure.</p><a class="mono" href="#tree">Walk the decision tree →</a></div>
+    <div class="state-card"><span class="state-label state-label--open">Open</span><h3 class="h3">Questions still need owners</h3><p>${openTasks} bounded tasks are open. A useful contribution is small enough to finish and clear enough to review.</p><a class="mono" href="#lend">Choose one task →</a></div>
+    <div class="state-card"><span class="state-label state-label--unknown">Not yet proven</span><h3 class="h3">Real-world effect</h3><p>No pilot is being counted as a life saved. The next proof is one complete trace: a real practitioner question, an owner, a bounded change, a reviewer, and an honest record of what happened.</p><a class="mono" href="#pilots">See the pilot rule →</a></div>
   </div>
 </div></section>
 
-<section class="section" aria-labelledby="how-title"><div class="wrap stack" style="gap:44px">
-  ${sectionHead('No. 1 · How the lab works', '<span id="how-title">Count what is known. Change one thing. Publish what failed.</span>', 'One loop, run in public. Every step leaves something on the record that anyone can check, correct or reuse.')}
-  <ol class="steps">
-    <li><span class="n">01</span><h3 class="h3">Count</h3><p class="small" style="font-size:16px">Keep a sourced ledger. Put disagreeing estimates side by side; never add across sources.</p><a class="mono" href="#ledger">Result: the ledger</a></li>
-    <li><span class="n">02</span><h3 class="h3">Name the water</h3><p class="small" style="font-size:16px">The tree asks which water first, then who is at risk, and only then which measure fits that water and that person.</p><a class="mono" href="#tree">Result: the tree</a></li>
-    <li><span class="n">03</span><h3 class="h3">Write a pilot</h3><p class="small" style="font-size:16px">A pilot: one page, one change, small enough to run this season, with a written test for how it would fail.</p><a class="mono" href="#june">Result: a pilot page</a></li>
-    <li><span class="n">04</span><h3 class="h3">Hand it over</h3><p class="small" style="font-size:16px">To an adopter: the harbormaster, co-op or crew that would actually run it, without a new agency.</p><a class="mono" href="#june">Result: an adopter</a></li>
-    <li><span class="n">05</span><h3 class="h3">Publish the result</h3><p class="small" style="font-size:16px">Taken up, failed or still open. What we learn corrects the ledger and the loop starts again.</p><a class="mono" href="#wisdom">Result: the record</a></li>
+<section class="section dark" id="challenge" aria-labelledby="challenge-title"><div class="wrap stack" style="gap:30px">
+  <div class="split"><div class="stack-sm"><p class="eyebrow">The open challenge · one question at a time</p><h2 id="challenge-title" class="display h2">How do we turn a scattered water-safety claim into a local action an actual service could run—and check?</h2></div><p class="lede">This is the work. Not a campaign. Not a promise that a dashboard will save anyone. A question that can be narrowed, tested, handed to someone with authority, and improved by the next person.</p></div>
+  <article class="challenge-card" aria-label="Current challenge card">
+    <div class="challenge-card-top"><span class="pill pill-range">Open · testing the shape</span><span class="mono">Challenge 001 · updated ${esc(checked)}</span></div>
+    <div class="challenge-fields">
+      <div><span class="field-k">The failure</span><p>The record is fragmented. A useful local observation can remain invisible; a global estimate can look more certain than it is; a good practice can disappear when the person who knows it leaves.</p></div>
+      <div><span class="field-k">The condition for better</span><p>A person can trace a claim, see its limits, adapt it to a specific water and person, and identify who could responsibly try it.</p></div>
+      <div><span class="field-k">What exists now</span><p>The ledger, decision tree, pilot format, local register, agent task board and public receipts are live. They are the first instruments, not the finished system.</p></div>
+      <div><span class="field-k">What remains unknown</span><p>Whether these instruments help a real person make a better decision under local pressure—and whether the learning travels without losing context. We have not yet completed the full trace from practitioner question to adopted change.</p></div>
+    </div>
+    <div class="challenge-next"><div><span class="field-k">Next useful move</span><p>${nextTask ? esc(nextTask.title) : 'Bring one source, local constraint, observation or pilot question.'}</p></div><a class="btn btn--primary" href="#lend">Take the next move <span aria-hidden="true">→</span></a></div>
+  </article>
+</div></section>
+
+<section class="section" aria-labelledby="ratchet-title"><div class="wrap stack" style="gap:30px">
+  <div class="split"><div class="stack-sm"><p class="eyebrow">The ratchet</p><h2 id="ratchet-title" class="display h2">Find. Adapt. Share. Verify. Carry forward.</h2></div><p class="lede">The goal is not more activity. It is a public memory that gets more useful without pretending uncertainty has disappeared.</p></div>
+  <ol class="ratchet-list">
+    <li><span class="ratchet-n">01</span><div><h3 class="h3">Find</h3><p>Locate a source, observation, failure or missing piece. Keep the context attached.</p><a class="mono" href="#gaps">See the gaps →</a></div></li>
+    <li><span class="ratchet-n">02</span><div><h3 class="h3">Adapt</h3><p>Make the question fit one water, one person and one real decision. Do not generalize past the evidence.</p><a class="mono" href="#tree">Choose a branch →</a></div></li>
+    <li><span class="ratchet-n">03</span><div><h3 class="h3">Try</h3><p>Write one small pilot with a forecast, an adopter and a way to know it failed.</p><a class="mono" href="#pilots">Write the test →</a></div></li>
+    <li><span class="ratchet-n">04</span><div><h3 class="h3">Verify</h3><p>Publish what happened, including misses, corrections and the conditions that did not travel.</p><a class="mono" href="#lend">Follow a receipt →</a></div></li>
+    <li><span class="ratchet-n">05</span><div><h3 class="h3">Carry forward</h3><p>Leave the next person a clearer record, a better tool and a more honest starting point.</p><a class="mono" href="/principles/">Read the principles →</a></div></li>
   </ol>
 </div></section>
 
-<section class="section band" aria-labelledby="toll-title"><div class="wrap stack" style="gap:36px">
-  ${sectionHead('No. 2 · The toll', `<span id="toll-title">Between ~${floor} and ~${ceil} a year. Nobody knows where in that range the truth sits.</span>`, 'Nobody counts every drowning; the global figures are estimates. We add up only what has a source, show the result as a lowest and a highest documented total, and draw the unknown as unknown.')}
-  ${toll ? window.Charts.tollBar(toll, { compact: true }) : noData}
-  ${window.Extra.counterBlock(toll)}
-  <div class="row"><a class="btn" href="#toll">Open the toll, component by component</a><a class="btn btn--ghost" href="#ledger">The ledger behind it</a></div>
-</div></section>
-
-<section class="section" aria-labelledby="tree-title"><div class="wrap stack" style="gap:36px">
-  ${sectionHead('No. 3 · The tree', '<span id="tree-title">Which water? That decides the measure.</span>', 'The decision tree is a short set of questions. It asks which water first, then who is at risk, and only then suggests a measure, graded by the evidence behind it. Every answer names what to count and who could run the change.')}
-  <div class="opts">
-    ${['sea|Open sea and coast|Surf, rocks, cold water', 'harbor|Harbor, river, estuary|Currents, working boats, bridges', 'lake|Lake, pond, reservoir|Still water, ice', 'pool|Pool and spa|Home or public', 'home-under5|The home|Bath, bucket, well, tank', 'flood|Flood water|River flood, flash flood'].map((s) => { const [id, t, sub] = s.split('|'); return `<a class="opt" href="#tree-${id}"><span class="t">${t}</span><span class="s">${sub}</span></a>`; }).join('')}
+<section class="section band" aria-labelledby="concrete-title"><div class="wrap stack" style="gap:28px">
+  <div class="split"><div class="stack-sm"><p class="eyebrow">A first useful move</p><h2 id="concrete-title" class="display h2">Do something small enough to finish.</h2></div><p class="lede">You do not need to join an institution or understand the whole system. Start where your time, knowledge or access is real.</p></div>
+  <div class="grid g4 action-grid">
+    <a class="action-card" href="#lend"><span class="action-time">20 minutes</span><h3 class="h3">Check one claim</h3><p>Open the source, see if the row holds, and leave a correction or a clean receipt.</p><span class="mono">Lend an agent an hour →</span></a>
+    <a class="action-card" href="#register"><span class="action-time">One event</span><h3 class="h3">Bring local knowledge</h3><p>Record what happened without names, invented precision or a story nobody can check.</p><span class="mono">Open the register →</span></a>
+    <a class="action-card" href="#pilots"><span class="action-time">One session</span><h3 class="h3">Write a pilot</h3><p>Name the adopter, forecast the result, and say in advance what would make you stop.</p><span class="mono">Use the format →</span></a>
+    <a class="action-card" href="#contribute"><span class="action-time">Your judgment</span><h3 class="h3">Challenge the premise</h3><p>Bring a constraint, a failure or a better question. Independent judgment is part of the work.</p><span class="mono">Contribute →</span></a>
   </div>
-  <p class="small muted">Someone in the water right now? <a href="#tree-emergency">Start here.</a></p>
+  <p class="small muted">The promise is reciprocal: one useful contribution, a thoughtful response, evidence of use, and a meaningful next invitation. If we cannot show what your work changed, the handoff is incomplete.</p>
 </div></section>
 
-<section class="section dark" aria-labelledby="june-title"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:44px 64px">
-  <div class="stack" style="flex:1.2 1 480px;min-width:0;gap:28px">
-    <p class="eyebrow">No. 4 · June 2027 · dates proposed</p>
-    <h2 id="june-title" class="display h2">24 students. Six teams. Two days on Wood Island.</h2>
-    <p class="lede">The people who work this harbor sit beside the teams. Day one, each team sizes a piece of the problem and defends a one-page change in front of them. Day two, a staged rescue with a clock running tests how the team decides under pressure. Co-hosted with Applied Wisdom for Nonprofits.</p>
-    <div class="row"><a class="btn btn--primary" href="#june">The June lab</a><a class="btn btn--ghost" href="#wisdom">The curriculum, with Applied Wisdom</a></div>
+<section class="section" aria-labelledby="proof-title"><div class="wrap stack" style="gap:28px">
+  <div class="split"><div class="stack-sm"><p class="eyebrow">Follow the work</p><h2 id="proof-title" class="display h2">Do not take our word for it.</h2></div><p class="lede">The strongest signal is not a logo or a claim. It is a record another person can inspect, disagree with, and use.</p></div>
+  <div class="proof-grid">
+    <div class="proof-card"><span class="field-k">Evidence</span><strong>~${floor}–${ceil}</strong><p>A modeled global range, not a live death counter. The disagreement stays visible.</p><a class="mono" href="#toll">Read the method →</a></div>
+    <div class="proof-card"><span class="field-k">Work in public</span><strong>${receipts}</strong><p>Public receipts showing what reviewed contributions changed. Zero is an honest result too.</p><a class="mono" href="#lend">See the receipts →</a></div>
+    <div class="proof-card"><span class="field-k">Field notes</span><div class="field-note-list">${fieldNotes.length ? fieldNotes.map((e) => `<div class="field-note"><span class="mono">${esc(e.date)}</span><span>${esc(e.subject)}</span></div>`).join('') : '<p class="small muted">The first field note will appear when the public record changes.</p>'}</div><a class="mono" href="#ledger">Open the record →</a></div>
   </div>
-  ${photo(PHOTOS.rocks, 'Wood Island Life-Saving Station across the rocky shore at low tide, with its flag mast and the harbor behind', 'Wood Island at low tide · Photo: Ethan Hawkes', 'flex:1 1 360px;min-height:320px')}
 </div></section>
 
-<section class="section" aria-labelledby="front-home"><div class="wrap stack" style="gap:28px">
-  ${sectionHead('No. 5 · The frontier', '<span id="front-home">What AI and robots can do for a rescue, tested in the open.</span>', 'Drift models fed by live currents. A drone that has to find a float in chop. A sea robot carrying flotation. Agents that read a harbor’s radio log. Every tool faces the same test, and every miss is published.')}
-  ${window.Extra.frontierSection(false)}
-  <div class="row"><a class="btn" href="#june">What the first cohort will try</a></div>
-</div></section>
-
-<section class="section band" aria-labelledby="sel-home"><div class="wrap stack" style="gap:24px">${window.Extra.selectionSection(false)}</div></section>
-
-<section class="section" aria-labelledby="gaps-home"><div class="wrap stack" style="gap:24px">
-  ${sectionHead('No. 6 · The gaps', '<span id="gaps-home">Most of what a good dataset needs does not exist. That is the work list.</span>', 'A coverage matrix shows, cell by cell, what the world knows about drowning. Each empty cell has a first step one person could take this season.')}
-  ${window.Extra.gapsPreview(3)}
-  <div class="row"><a class="btn btn--primary" href="#gaps">All nine gaps, with first steps</a><a class="btn btn--ghost" href="#toll">The toll</a></div>
-</div></section>
-
-<section class="section" aria-labelledby="record-title"><div class="wrap stack" style="gap:36px">
-  ${sectionHead('No. 7 · The record', '<span id="record-title">What we report, starting at zero.</span>', 'Funders and partners get numbers anyone can check. We do not report lives saved that nobody counted.')}
-  <div class="scoreboard">
-    <div><span class="n">0</span><b>Pilots written</b><span class="small muted">One page each, with a test for failure</span></div>
-    <div><span class="n">0</span><b>Taken up by an adopter</b><span class="small muted">A real harbor, crew or co-op runs it</span></div>
-    <div><span class="n">0</span><b>Failed, and published</b><span class="small muted">Failures stay on the record</span></div>
-    <div><span class="n">${DATA.tasks ? DATA.tasks.tasks.filter((t) => t.status !== 'done' && !(t.claimed_until && Date.parse(t.claimed_until) > Date.now())).length : '—'}</span><b>Tasks open on the board</b><span class="small muted">Each sized for one lent hour</span></div>
-    <div><span class="n">${DATA.watch && DATA.watch.counts ? fmt(DATA.watch.counts.reported || 0) : '—'}</span><b>Reports waiting to be read</b><span class="small muted">In the watch, hourly, since 15 Oct 2026</span></div>
-    <div><span class="n" style="color:var(--rust)">${rows}</span><b>Ledger rows</b><span class="small muted">Each with a source, a year and a rule for what it must not be added to</span></div>
-  </div>
-  <p class="mono muted">Pilot counts start with the June 2027 lab; the board and the watch are live now. Last checked 15 Oct 2026. <a href="#pilots">What a pilot is, and how one is scored →</a></p>
-</div></section>
-
-<section class="section band" aria-labelledby="join-title"><div class="wrap stack" style="gap:36px">
-  ${sectionHead('No. 8 · Where you fit', '<span id="join-title">Everything here can be read without an account.</span>', 'A person reads every submission. Nothing is published until a person merges it.')}
-  <div class="grid g4">
-    <div class="card stack-sm" style="border-top:4px solid var(--buoy)"><h3 class="h3">Students</h3><p class="small" style="font-size:16px">24 seats. Own a branch of the tree, name an adopter, and defend a pilot.</p><a class="btn btn--primary btn--sm" style="margin-top:auto" href="${SITE}/cohort/">Join the cohort</a></div>
-    <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Experts and responders</h3><p class="small" style="font-size:16px">Harbormasters, crews, fishers, lifeguards: bring the sentence your service still uses, or a pilot you would adopt.</p><a class="btn btn--ghost btn--sm" style="margin-top:auto" href="#contribute-pilot">Bring expertise</a></div>
-    <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Data contributors</h3><p class="small" style="font-size:16px">Add a ledger row, verify a secondary one, or run the incident register in your harbor.</p><a class="btn btn--ghost btn--sm" style="margin-top:auto" href="#contribute-row">Open the queue</a></div>
-    <div class="card stack-sm" style="border-top:4px solid var(--ink)"><h3 class="h3">Funders and partners</h3><p class="small" style="font-size:16px">Read the method and the ledger first. We report pilots written, adopted and failed. The lab holds no money: donations go directly to the <a href="${WILSSA}">Wood Island Life Saving Station Association</a>, which restored the station. <a href="#briefs-funder-one-pager">The one-page brief.</a></p><div class="row" style="margin-top:auto;gap:8px"><a class="btn btn--sm" href="${WILSSA}">Give to the station</a><a class="btn btn--ghost btn--sm" href="#contribute-offer">Write to us</a></div></div>
-  </div>
-  <div class="card--dark" style="padding:clamp(22px,3vw,36px);border-radius:2px;display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between">
-    <div class="stack-sm" style="flex:1 1 420px;min-width:0"><p class="eyebrow">Spare AI usage this month?</p><h3 class="h3" style="color:var(--paper)">Lend your assistant an hour.</h3><p class="small" style="font-size:16px;color:var(--mist);max-width:40em">One click opens a small, sourced task in ChatGPT, Claude, Grok or Perplexity (paste it into Gemini). Hand back what it found; a person checks it; you get a receipt that says what changed.${DATA.receipts && DATA.receipts.receipts.length ? ` So far: ${DATA.receipts.receipts.length} receipt${DATA.receipts.receipts.length === 1 ? '' : 's'}, ${DATA.receipts.receipts.filter((r) => r.decision === 'accepted').reduce((n, r) => n + r.changed.rows + r.changed.corrections, 0)} rows and corrections accepted.` : ''}</p></div>
-    <a class="btn btn--primary" href="#lend">See the board</a>
-  </div>
+<section class="section dark" aria-labelledby="join-title"><div class="wrap stack" style="gap:28px">
+  <div class="split"><div class="stack-sm"><p class="eyebrow">The invitation</p><h2 id="join-title" class="display h2">Bring one question we can make more answerable.</h2></div><p class="lede">Bring a source, a local constraint, a failed attempt, or ten minutes to check someone else’s work. Humans, organizations and AI assistants are welcome; responsibility stays with the people who can decide and act.</p></div>
+  <div class="row"><a class="btn btn--primary" href="#challenge">Open the current challenge <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#ledger">Browse the public record</a><a class="btn btn--ghost" href="/manifesto/">Read the founding manifesto</a></div>
 </div></section>`;
+  }
+
+  function aboutPage() {
+    return `
+<section class="section"><div class="wrap stack" style="gap:30px">
+  <p class="eyebrow">About the Lab</p><h1 class="display h2" style="max-width:18em">A practical lab for a problem no one can solve from one desk.</h1>
+  <p class="lede" style="max-width:44em">The Life-Saving Lab brings students, responders, researchers and agents to one real problem: drowning. We keep the evidence in public, work one harbor closely, and turn what we learn into changes a nonprofit rescue service can actually run.</p>
+  <div class="grid g2"><article class="card stack-sm partner-card"><img src="img/partners/applied-wisdom.svg" alt="Applied Wisdom for Nonprofits" class="partner-logo"><p class="eyebrow">Equal partner · curriculum and applied wisdom</p><h2 class="h3">Applied Wisdom makes the learning useful.</h2><p>Applied Wisdom powers the curriculum: how teams make decisions with incomplete information, how they speak bad news early, and how they turn a debrief into a better next decision. The drowning problem is the testbed; the wisdom is meant to travel to the next nonprofit and the next hard situation.</p><a href="https://appliedwisdomfornonprofits.org" target="_blank" rel="noopener">Visit Applied Wisdom for Nonprofits →</a></article>
+  <article class="card stack-sm partner-card"><img src="img/partners/wood-island.png" alt="Wood Island Life Saving Station Association" class="partner-logo partner-logo--wood"><p class="eyebrow">Equal partner · host, local expertise and network</p><h2 class="h3">Wood Island makes the work real.</h2><p>Wood Island is the host and local network hub: a restored life-saving station, the harbor’s history, and the people who know what the water asks of a crew. The station is a classroom, not an on-duty rescue service. Donations go directly to the Association, not the Lab.</p><a href="https://woodislandlifesaving.org" target="_blank" rel="noopener">Visit Wood Island Life Saving Station →</a></article></div>
+</div></section>
+<section class="section band"><div class="wrap stack" style="gap:22px"><p class="eyebrow">People behind the work</p><div class="grid g4"><div class="card stack-sm"><h2 class="h4">Ethan Hawkes</h2><p>Project initiator, bringing the people and practical questions together.</p></div><div class="card stack-sm"><h2 class="h4">Jim McDonough</h2><p>Applied Wisdom curriculum partner and original explainer collaborator; source/export review remains with him.</p></div><div class="card stack-sm"><h2 class="h4">Laura Calhoun</h2><p>Executive Director, Wood Island Life Saving Station Association; a key participant connecting the project with the station.</p></div><div class="card stack-sm"><h2 class="h4">Sam Reid</h2><p>Board President, Wood Island Life Saving Station Association; bringing station and community knowledge.</p></div></div><div class="card--dark stack-sm" style="padding:24px"><p class="eyebrow">AI agent partners</p><h2 class="h3" style="color:var(--paper)">Lab Mate · Paco · Vesper</h2><p class="small" style="font-size:16px;color:var(--mist);max-width:48em">These agents help research, test interfaces, find gaps and keep the handoff honest. They do not replace a responder, a source, a human reviewer or the people who decide whether a pilot belongs on the water. Every contribution is provisional until a person reviews it.</p><a class="btn btn--primary btn--sm" href="#lend">See the agent workbench</a></div></div></section>`
   }
 
   /* ---------- THE TOLL ---------- */
@@ -263,7 +249,7 @@
     <p class="eyebrow" style="margin-top:10px">Canada 2018–2022, five years pooled</p>
     <div role="img" aria-label="Canada 2018 to 2022 unintentional drowning deaths by setting: lakes 36%, rivers 27%, bathtubs 15%, pools 9%, other 7%, ocean 6%." style="display:flex;height:40px;border-radius:2px;overflow:hidden">
       <div style="width:36%;background:var(--teal);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Lakes 36%</div>
-      <div style="width:27%;background:#4A8FA8;color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Rivers 27%</div>
+      <div style="width:27%;background:#2E6B78;color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Rivers 27%</div>
       <div style="width:15%;background:var(--buoy);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Baths</div>
       <div style="width:9%;background:var(--brass);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px">Pools</div>
       <div style="width:7%;background:#D8D1BF;color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px">Other</div>
@@ -471,13 +457,14 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
   <div class="stack" style="flex:1.2 1 460px;min-width:0;gap:24px">
     <p class="eyebrow">Applied Wisdom · co-design partner</p>
     <h1 class="display h2">We are scaling capability faster than wisdom. The lab is a place to practise both.</h1>
-    <p class="lede">Analysis is getting cheap. Deciding well, together, with incomplete information and a clock running, is not. <a href="https://appliedwisdomfornonprofits.org">Applied Wisdom for Nonprofits</a> carries the leadership lessons Jim Morgan drew from nearly three decades leading Applied Materials. The lab is co-designed with them: their insights are how every team works, the Situation Solver is how every drill is debriefed, and the wisdom ledger is how what is learned gets shared.</p>
+    <p class="lede">The proposed learning design starts from a simple premise: analysis is getting cheap. Deciding well, together, with incomplete information and a clock running, is not. <a href="https://appliedwisdomfornonprofits.org">Applied Wisdom for Nonprofits</a> carries the leadership lessons Jim Morgan drew from nearly three decades leading Applied Materials. The Lab is co-designed with them: their insights are how every team works, the Situation Solver is how every drill is debriefed, and the wisdom ledger is how what is learned gets shared.</p>
+    <div class="charter-practice"><p><strong>Central test:</strong> wisdom is applied when understanding responsibly informs a real decision. That may change, reaffirm or preserve a course. The Lab records the ladder: understanding → decision judgment → authorized action → observed outcome → independently reviewed benefit.</p></div>
   </div>
   ${photo(PHOTOS.kayak, 'Whaleback Light at dusk, seen over the bow of a kayak on calm water', 'Whaleback Light from the water · Photo: Ethan Hawkes', 'flex:1 1 320px;min-height:360px')}
 </div></section>
 
 <section class="section dark" aria-labelledby="ins-title"><div class="wrap stack" style="gap:28px">
-  ${sectionHead('The eight insights', '<span id="ins-title">Their eight insights are the syllabus. The staged rescue is the exam.</span>', 'Each insight is practised twice: once on the real problem, sizing the toll and shipping a pilot, and once in the staged rescue. The mapping is a draft for Applied Wisdom to correct.')}
+  ${sectionHead('The eight insights', '<span id="ins-title">Their eight insights are the proposed syllabus for a supervised learning exercise.</span>', 'Each insight could be practised twice: once on the real problem, sizing the toll and drafting a pilot, and once in a proposed supervised exercise. The mapping is a draft for Applied Wisdom to correct.') }
   <div>${insights.map((x, i) => `<div class="insight"><span class="num">0${i + 1}</span><div class="stack-sm" style="gap:4px"><span class="t">${esc(x[0])}</span><span class="p"><b style="color:var(--paper)">At sea:</b> ${esc(x[1])}</span><span class="p"><b style="color:var(--paper)">In the lab:</b> ${esc(x[2])}</span></div></div>`).join('')}</div>
   <p class="small" style="color:var(--mist)">Insight names from <i>Applied Wisdom for the Nonprofit Sector</i> (Jim Morgan), used with Applied Wisdom’s agreement as a co-design partner.</p>
 </div></section>
@@ -493,7 +480,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
 
 <section class="section band" aria-labelledby="wl-title"><div class="wrap stack" style="gap:28px">
   ${sectionHead('The wisdom ledger', '<span id="wl-title">Two ledgers, side by side.</span>', 'The data ledger keeps what is known. The wisdom ledger keeps what was learned: one line per pilot, who learned it, what changed, and which insight it belongs to. Both start at zero and both are public.')}
-  <div class="scoreboard"><div><span class="n">0</span><b>Lessons recorded</b><span class="small muted">One per pilot, after the forecast runs</span></div><div><span class="n">0</span><b>Shared back</b><span class="small muted">Lessons Applied Wisdom carries to its community</span></div><div><span class="n">8</span><b>Insights in use</b><span class="small muted">Every lesson is filed under one</span></div></div>
+  <div class="scoreboard"><div><span class="n">0</span><b>Decisions changed</b><span class="small muted">The first observable sign of applied wisdom</span></div><div><span class="n">0</span><b>Lessons recorded</b><span class="small muted">One per pilot, after the forecast runs</span></div><div><span class="n">0</span><b>Shared back</b><span class="small muted">Lessons Applied Wisdom carries to its community</span></div><div><span class="n">8</span><b>Insights mapped</b><span class="small muted">Proposed syllabus lenses, not evidence of use</span></div></div>
   <div class="card stack-sm card--dashed"><p class="eyebrow">A wisdom row, when there is one</p><p class="mono small">pilot · insight · what we expected · what happened · what we would do differently · who owns the next try · date</p><p class="small muted">The first rows are written in June 2027. Until then this is a promise, not a record.</p></div>
   <div class="row"><a class="btn" href="#june">The June lab</a><a class="btn btn--ghost" href="https://appliedwisdomfornonprofits.org">Applied Wisdom for Nonprofits</a></div>
 </div></section>`;
@@ -604,8 +591,26 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
     briefs: { html: () => window.Briefs.page(ctx()), mount: (arg) => window.Briefs.mount(arg), title: 'Briefs · The Life-Saving Lab' },
     lend: { html: () => window.Lend.page(ctx()), mount: () => window.Lend.mount(ctx(), { toast, copyText, saveFile }), title: 'Lend your agent · The Life-Saving Lab' },
     wisdom: { html: wisdomPage, title: 'Applied Wisdom · The Life-Saving Lab' },
+    about: { html: aboutPage, title: 'About the Lab · The Life-Saving Lab' },
     contribute: { html: contributePage, mount: mountContribute, title: 'Contribute · The Life-Saving Lab' }
   };
+  /* In-page targets are not router routes. Keep the current rendered journey intact while scrolling/focusing. */
+  const routeNames = () => Object.keys(routes);
+  function isRouteHash(id) { return routeNames().some((r) => id === r || id.startsWith(r + '-')); }
+  const skipLink = document.querySelector('.skip');
+  if (skipLink) skipLink.addEventListener('click', (e) => {
+    e.preventDefault(); e.stopPropagation();
+    const main = document.getElementById('app');
+    if (main) { main.focus({ preventScroll: true }); main.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="#"]'); if (!link || link === skipLink) return;
+    const id = decodeURIComponent(link.getAttribute('href').slice(1));
+    if (!id || id === 'app' || isRouteHash(id)) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
   function parseHash() {
     const h = decodeURIComponent(location.hash.replace(/^#/, ''));
     if (!h || h === 'home') return { route: 'home', arg: '' };
@@ -636,6 +641,7 @@ ${DATA.changelog && DATA.changelog.entries.length ? `<section class="section--ti
   function fmtDate(iso) { const d = new Date(iso + 'T00:00:00Z'); return isNaN(d) ? iso : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }); }
   function render() {
     const { route, arg } = parseHash();
+    if (route === 'about') { location.replace('/about/'); return; }
     setMenu(false);
     document.querySelectorAll('#navlinks a').forEach((a) => { const on = a.dataset.route === route; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     window.Extra.stopCounter();

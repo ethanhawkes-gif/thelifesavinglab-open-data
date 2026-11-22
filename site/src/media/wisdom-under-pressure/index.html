@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html><head><!-- frame-runtime --><!-- /frame-runtime --><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta content="noindex, nofollow" name="robots"/></head><body>
+<title>Wisdom Under Pressure Explainer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+/* Layout: a single screening room. 16:9 stage, captions under it, transport controls below.
+   Deliberately single-theme (night at sea), so every color is set explicitly. */
+:root {
+  color-scheme: dark;
+  --room: #071017;
+  --panel: #0f1e26;
+  --ink: #e8eef0;
+  --muted: #9fb2ba;
+  --rule: #23363f;
+  --accent: #ee7a52;
+  --lamp: #f5d48a;
+  --tide: #7fb8cc;
+  --display: "Literata", Georgia, serif;
+  --body: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+body { background: var(--room); color: var(--ink); font-family: var(--body); padding: 0 16px; }
+.wrap { max-width: 1100px; margin: 0 auto; padding-block: 28px 48px; display: grid; gap: 16px; }
+.top { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; }
+.top h1 { font-family: var(--display); font-weight: 600; font-size: clamp(22px, 3.4vw, 30px); margin: 0; }
+.top .sub { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.tabs button { font: 500 14px var(--body); color: var(--muted); background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.tabs button[aria-pressed="true"] { color: var(--room); background: var(--ink); border-color: var(--ink); }
+
+.screen { position: relative; border-radius: 8px; overflow: hidden; background: #0d1b23; aspect-ratio: 16 / 9; max-width: 100%; border: 1px solid var(--rule); }
+#stage, #stage svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.start { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(4,10,14,.35); border: 0; cursor: pointer; color: var(--ink); }
+.start span { display: inline-flex; align-items: center; gap: 10px; font: 600 16px var(--body); background: var(--accent); color: #1a0d07; padding: 12px 22px; border-radius: 999px; box-shadow: 0 6px 24px rgba(0,0,0,.4); }
+.start svg { width: 14px; height: 14px; }
+
+.caption { min-height: 92px; background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 18px; display: grid; gap: 6px; align-content: start; }
+.speaker { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.vo { font-size: clamp(16px, 2vw, 20px); line-height: 1.5; max-width: 70ch; }
+
+.controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.controls button.ctl { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--rule); background: var(--panel); color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+.controls button.ctl svg { width: 16px; height: 16px; fill: currentColor; }
+.segs { flex: 1; min-width: 180px; display: flex; gap: 4px; }
+.seg { flex: 1; height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; cursor: pointer; border: 0; padding: 0; }
+.seg i { display: block; height: 100%; width: 0; background: var(--accent); }
+.count { font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 92px; text-align: right; }
+.note { color: var(--muted); font-size: 13px; }
+button:focus-visible { outline: 2px solid var(--lamp); outline-offset: 2px; }
+
+/* ---------- scene styles (inside the SVG) ---------- */
+.t-h { font-family: var(--display); font-weight: 600; fill: var(--ink); }
+.t-hl { font-family: var(--display); font-weight: 400; fill: var(--ink); }
+.t-l { font-family: var(--body); fill: var(--ink); }
+.t-m { font-family: var(--mono); fill: var(--muted); letter-spacing: .06em; }
+.t-a { fill: var(--accent); }
+.t-mu { fill: var(--muted); }
+.stroke { stroke: var(--ink); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.lampwin { fill: var(--lamp); }
+.glow { animation: glow 2.6s ease-in-out infinite alternate; }
+
+.wave { animation: drift 22s linear infinite; }
+.wave.w2 { animation-duration: 15s; }
+.wave.w3 { animation-duration: 10s; }
+.beam { transform-box: view-box; animation: spin 11s linear infinite; }
+.spin { transform-box: view-box; animation: spin 5s linear infinite reverse; }
+.rain { animation: rain .7s linear infinite; }
+.cloud { animation: cloud 26s ease-in-out infinite alternate; }
+.bob { transform-box: fill-box; transform-origin: center; animation: bob 3.2s ease-in-out infinite; }
+.blink { animation: blink 1.2s steps(2, jump-none) infinite; }
+.fade { opacity: 0; animation: fade 1s ease forwards; }
+.rise { opacity: 0; transform-box: fill-box; animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+.scatter { animation: scatter 2.4s cubic-bezier(.2,.7,.2,1) .9s forwards; }
+.fadeout { animation: fadeout 1s ease .5s forwards; }
+.tick { stroke-dasharray: 40; stroke-dashoffset: 40; animation: draw .5s ease forwards; }
+.drawL { stroke-dasharray: 1600; stroke-dashoffset: 1600; animation: draw 2.4s ease forwards; }
+.draw { stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 2.4s ease forwards; }
+.bar { transform-box: fill-box; transform-origin: center; animation: bar .8s ease-in-out infinite alternate; }
+.orbit { transform-box: view-box; animation: spin 7s linear infinite reverse; }
+.fly { animation: fly 7s ease-in-out .6s forwards; }
+.drive { animation: drive 11s cubic-bezier(.3,.1,.2,1) 1.2s forwards; }
+.flash { animation: flash 1s ease; }
+
+@keyframes drift { to { transform: translateX(-1280px); } }
+@keyframes spin { to { transform: rotate(-360deg); } }
+@keyframes rain { to { transform: translate(-40px, 120px); } }
+@keyframes cloud { to { transform: translateX(-90px); } }
+@keyframes bob { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(6px) rotate(3deg); } }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes glow { from { opacity: .75; } to { opacity: 1; } }
+@keyframes fade { to { opacity: 1; } }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scatter { to { transform: translate(var(--dx), var(--dy)); } }
+@keyframes fadeout { to { opacity: 0; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes bar { from { transform: scaleY(.15); } to { transform: scaleY(1); } }
+@keyframes fly { to { transform: translateX(470px); } }
+@keyframes drive { to { transform: translateX(400px); } }
+@keyframes flash { from { fill: var(--lamp); } }
+
+#stage.paused * { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) {
+  #stage * { animation: none !important; }
+  #stage .fade, #stage .rise { opacity: 1 !important; transform: none !important; }
+}
+</style>
+<div class="wrap">
+<div class="top">
+<div>
+<h1>Wisdom Under Pressure</h1>
+<div class="sub">Explainer prototype · proposed Solver concept</div>
+</div>
+<div aria-label="Choose part" class="tabs" role="group">
+<button aria-pressed="true" id="tab1">Part 1 · The problem</button>
+<button aria-pressed="false" id="tab2">Part 2 · The solution · text/visual</button>
+<button aria-pressed="false" id="tab3">Part 3 · The Solver · text/visual</button>
+</div>
+</div>
+<div class="screen">
+<div id="stage"></div>
+<button aria-label="Play" class="start" id="start">
+<span><svg viewbox="0 0 10 12"><path d="M0 0 L10 6 L0 12Z" fill="currentColor"></path></svg><b id="startLabel">Play Part 1</b></span>
+</button>
+</div>
+<div aria-live="polite" class="caption">
+<div class="speaker" id="speaker">Narrator</div>
+<div class="vo" id="vo"></div>
+</div>
+<div class="controls">
+<button aria-label="Previous scene" class="ctl" id="prev"><svg viewbox="0 0 12 12"><path d="M2 0h2v12H2zM12 0v12L4 6z"></path></svg></button>
+<button aria-label="Play" class="ctl" id="play"><svg id="playIcon" viewbox="0 0 12 12"><path d="M1 0 L12 6 L1 12Z"></path></svg></button>
+<button aria-label="Next scene" class="ctl" id="next"><svg viewbox="0 0 12 12"><path d="M8 0h2v12H8zM0 0v12L8 6z"></path></svg></button>
+<button aria-label="Mute" class="ctl" id="mute"><svg id="muteIcon" viewbox="0 0 12 12"><path d="M0 4h3l3-3v10L3 8H0z"></path><path d="M8 3.5q2 2.5 0 5M9.5 2q3.5 4 0 8" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg></button>
+<div class="segs" id="segs"></div>
+<div class="count" id="count"></div>
+</div>
+<p class="note">Prototype. Voice by ElevenLabs. Drill details shown are made up for illustration.</p><p class="note"><strong>Creator-review staging:</strong> this voice track is an owner asset. Its rescue-training, mission-use and improvement language is illustrative, not evidence of completed operations or results. Audio for Parts 2–3 is withheld until matching narration exists; those parts are text/visual-only. Read the qualified transcript before citing it.</p><p class="note"><strong>Public provenance:</strong> this page presents an illustrative prototype and a proposed June 2027 testbed scenario—not completed Solver training, repeated student rescue practice, real-mission use, or measured continual improvement. <a href="transcript.md">Read the qualified transcript</a> and <a href="/llms.txt">source index</a>.</p><p class="note" id="mediaError" role="status" aria-live="polite" hidden>Audio could not load in this embedded player. Use the transcript or open the standalone explainer.</p>
+</div>
+<script>
+/* ---------- drawing helpers ---------- */
+const W = 1280;
+function wavePath(y, a, len) {
+  let d = `M0 ${y}`;
+  for (let x = 0; x < 2600; x += len) d += ` q${len / 4} ${-a} ${len / 2} 0 t${len / 2} 0`;
+  return d + ' V720 H0 Z';
+}
+function sea(y, tone, between = '') {
+  const c = tone === 'dusk' ? ['#24566a', '#2b6679', '#34788c'] : ['#0f2a36', '#133543', '#184152'];
+  return `<path class="wave" d="${wavePath(y, 9, 320)}" fill="${c[0]}"/>${between}
+  <path class="wave w2" d="${wavePath(y + 45, 11, 256)}" fill="${c[1]}"/>
+  <path class="wave w3" d="${wavePath(y + 105, 14, 320)}" fill="${c[2]}"/>`;
+}
+function svg(inner, sky = 'night') {
+  const skies = {
+    night: '<stop offset="0" stop-color="#050c12"/><stop offset="1" stop-color="#132a34"/>',
+    dusk: '<stop offset="0" stop-color="#2a3d4f"/><stop offset=".7" stop-color="#7a7a80"/><stop offset="1" stop-color="#b08a74"/>',
+    flat: '<stop offset="0" stop-color="#0d1b23"/><stop offset="1" stop-color="#0a161d"/>'
+  };
+  return `<svg viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">${skies[sky]}</linearGradient>
+    <linearGradient id="beamg" x1="0" x2="1"><stop offset="0" stop-color="#f5d48a" stop-opacity=".5"/><stop offset="1" stop-color="#f5d48a" stop-opacity="0"/></linearGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d48a" stop-opacity=".45"/><stop offset="1" stop-color="#f5d48a" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#sky)"/>${inner}</svg>`;
+}
+function station(x, y, s = 1, walls = '#aab5b8') {
+  return `<g transform="translate(${x} ${y}) scale(${s})">
+    <path d="M-60 66 Q80 36 240 64 L270 130 L-90 130Z" fill="#0a171d"/>
+    <rect x="0" y="0" width="170" height="64" fill="${walls}"/>
+    <polygon points="-12,4 85,-40 182,4" fill="#7e2b20"/>
+    <rect x="68" y="-72" width="34" height="42" fill="${walls}"/>
+    <polygon points="62,-70 85,-92 108,-70" fill="#7e2b20"/>
+    <rect x="76" y="-62" width="18" height="14" class="lampwin glow"/>
+    <rect x="20" y="20" width="16" height="18" class="lampwin glow"/>
+    <rect x="134" y="20" width="16" height="18" class="lampwin glow"/>
+    <rect x="74" y="28" width="22" height="36" class="lampwin"/>
+  </g>`;
+}
+function lighthouse(x, y) {
+  return `<path d="M${x - 70} ${y + 4} Q${x} ${y - 22} ${x + 80} ${y + 6} L${x + 90} ${y + 30} L${x - 80} ${y + 30}Z" fill="#0a171d"/>
+  <g class="beam" style="transform-origin:${x}px ${y - 119}px"><polygon points="${x},${y - 119} ${x + 760},${y - 210} ${x + 760},${y - 30}" fill="url(#beamg)"/></g>
+  <polygon points="${x - 15},${y} ${x + 15},${y} ${x + 10},${y - 110} ${x - 10},${y - 110}" fill="#56636a"/>
+  <rect x="${x - 13}" y="${y - 128}" width="26" height="18" fill="#f5d48a" class="glow"/>
+  <polygon points="${x - 16},${y - 128} ${x},${y - 142} ${x + 16},${y - 128}" fill="#26333a"/>`;
+}
+const RAIN = (() => {
+  let s = '';
+  for (let i = 0; i < 150; i++) {
+    const x = (i * 97) % 1420 - 60, y = (i * 53) % 860 - 130;
+    s += `<line x1="${x}" y1="${y}" x2="${x - 10}" y2="${y + 28}"/>`;
+  }
+  return `<g class="rain" stroke="#a9bcc4" stroke-opacity=".26" stroke-width="1.5">${s}</g>`;
+})();
+const CLOUDS = `<g class="cloud" fill="#12222b"><ellipse cx="260" cy="80" rx="300" ry="60"/><ellipse cx="760" cy="60" rx="340" ry="70"/><ellipse cx="1180" cy="100" rx="260" ry="56"/></g>`;
+
+const ICONS = {
+  radio: `<rect x="-28" y="-18" width="56" height="36" rx="5" class="stroke"/><line x1="16" y1="-18" x2="26" y2="-44" class="stroke"/><circle cx="-10" cy="0" r="8" class="stroke"/><line x1="6" y1="-4" x2="18" y2="-4" class="stroke"/><line x1="6" y1="6" x2="18" y2="6" class="stroke"/>`,
+  pin: `<path d="M0 28 C-24 2 -22 -28 0 -28 C22 -28 24 2 0 28Z" class="stroke"/><circle cy="-8" r="8" class="stroke"/>`,
+  cloud: `<path d="M-30 16 H28 A14 14 0 0 0 26 -12 A20 20 0 0 0 -12 -16 A14 14 0 0 0 -30 16Z" class="stroke"/><line x1="-14" y1="24" x2="-18" y2="34" class="stroke"/><line x1="4" y1="24" x2="0" y2="34" class="stroke"/>`,
+  crew: `<circle cx="-20" cy="-10" r="8" class="stroke"/><circle cx="0" cy="-14" r="8" class="stroke"/><circle cx="20" cy="-10" r="8" class="stroke"/><path d="M-34 22 Q-20 2 -6 22 M-14 18 Q0 -2 14 18 M6 22 Q20 2 34 22" class="stroke"/>`,
+  clock: `<circle r="26" class="stroke"/><line x1="0" y1="0" x2="0" y2="-14" class="stroke"/><g class="spin" style="transform-origin:0px 0px"><line x1="0" y1="0" x2="16" y2="0" class="stroke" style="stroke:var(--accent)"/></g>`
+};
+function icon(name, x, y, label) {
+  return `<g transform="translate(${x} ${y})">${ICONS[name]}<text class="t-l t-mu" y="60" text-anchor="middle" font-size="18">${label}</text></g>`;
+}
+function bubble(who, text, y, delay) {
+  const w = Math.round(text.length * 11.2 + 44), agent = who === 'Solver';
+  const x = agent ? 1080 - w : 200;
+  return `<g class="rise" style="animation-delay:${delay}s">
+    <text class="t-m" x="${agent ? 1080 : 200}" y="${y - 8}" font-size="13" text-anchor="${agent ? 'end' : 'start'}" ${agent ? 'style="fill:var(--accent)"' : ''}>${who.toUpperCase()}</text>
+    <rect x="${x}" y="${y}" width="${w}" height="48" rx="10" fill="${agent ? 'none' : '#1b3440'}" stroke="${agent ? 'var(--accent)' : 'none'}" stroke-width="2"/>
+    <text class="t-l" x="${x + 22}" y="${y + 31}" font-size="20">${text}</text>
+  </g>`;
+}
+const pad = n => String(n).padStart(2, '0');
+
+/* ---------- figure-eight helpers (Part 3) ---------- */
+function lem(t) { const a = 400, s = Math.sin(t), c = Math.cos(t), d = 1 + s * s; return [640 + a * c / d, 330 + 1.25 * a * s * c / d]; }
+function lemPath(t0, t1, n = 160) {
+  let d = '';
+  for (let i = 0; i <= n; i++) { const [x, y] = lem(t0 + (t1 - t0) * i / n); d += (i ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1); }
+  return d;
+}
+function hub(delay) {
+  return `<g class="rise" style="animation-delay:${delay}s"><circle cx="640" cy="330" r="44" fill="#0d1b23" stroke="var(--accent)" stroke-width="3"/>
+    <text class="t-m" x="640" y="337" text-anchor="middle" font-size="20" style="fill:var(--ink)">LLM</text></g>`;
+}
+const LEFT = ['Proposed: study Applied Wisdom', 'Proposed: study past leadership cases', 'Proposed: test supervised problems', 'Proposed: leaders review results'];
+const RIGHT = ['Starts with all of loop one', 'Proposed: study reviewed case material', 'Proposed: use in supervised exercises', 'Partner review planned'];
+function steps(list, x, color, delays) {
+  return list.map((s, i) => `<g class="rise" style="animation-delay:${delays[i]}s">
+    <circle cx="${x + 8}" cy="${552 + i * 34}" r="5" fill="${color}"/>
+    <text class="t-l" x="${x + 26}" y="${559 + i * 34}" font-size="21">${s}</text></g>`).join('');
+}
+function orbit(root, id, t, period) {
+  const p = root.querySelector('#' + id), d = root.querySelector('#dot');
+  if (!p || !d || !p.getTotalLength) return;
+  if (t < 0) { d.setAttribute('cx', 640); d.setAttribute('cy', 330); return; }
+  const L = p.getTotalLength(), pt = p.getPointAtLength(((t / period) % 1) * L);
+  d.setAttribute('cx', pt.x); d.setAttribute('cy', pt.y);
+}
+
+const N_START = 2.4, N_STEP = 3.3;
+/* ---------- scenes ---------- */
+const NARR = 'Narrator';
+const PARTS = {
+  1: { label: 'Part 1', scenes: [
+    { vo: "Let's start with the problem. People still die at sea, every year. And nobody keeps one clean count of how many.", speaker: NARR,
+      draw: () => svg(`${CLOUDS}${station(250, 404, 1, '#8d999d')}${lighthouse(1030, 470)}${sea(470, 'night')}
+        <text class="t-m fade" x="80" y="96" font-size="15" style="animation-delay:.3s">THE PROBLEM</text>
+        <text class="t-h fade" x="80" y="160" font-size="58" style="animation-delay:1.8s">People still die at sea.</text>
+        <text class="t-hl fade t-mu" x="80" y="216" font-size="30" style="animation-delay:4.4s">Nobody keeps one clean count.</text>`) },
+
+    { vo: "Here's what we do know. About 300,000 people drowned worldwide in 2021. Over 100,000 fishers may die each year. Thousands of migrants are lost crossing the sea. And in the U.S., 556 boaters died in 2024. Most of the people who drowned weren't wearing a life jacket. These numbers overlap, so you can't add them up. But the point is clear: this is a big problem.", speaker: NARR,
+      draw: () => {
+        const labels = [['drowning deaths', 'worldwide, 2021'], ['fishers estimated', 'to die each year'], ['migrants dead or', 'missing at sea, 2025'], ['U.S. boating', 'deaths, 2024']];
+        const src = ['WHO', 'FISH Safety Foundation', 'IOM', 'U.S. Coast Guard'];
+        let cols = '';
+        labels.forEach((l, i) => {
+          const x = i % 2 ? 690 : 110, y = i < 2 ? 190 : 380;
+          cols += `<g class="rise" style="animation-delay:${N_START + i * N_STEP}s">
+            <line x1="${x}" y1="${y}" x2="${x + 480}" y2="${y}" stroke="var(--rule)" stroke-width="2"/>
+            <text id="n${i}" class="t-h" x="${x}" y="${y + 84}" font-size="72" style="font-variant-numeric:tabular-nums">0</text>
+            <text class="t-l t-mu" x="${x}" y="${y + 124}" font-size="22">${l[0]} ${l[1]}</text>
+            <text class="t-m t-a" x="${x}" y="${y + 154}" font-size="13">${src[i].toUpperCase()}</text></g>`;
+        });
+        return svg(`<text class="t-m" x="110" y="130" font-size="15">WHAT WE DO KNOW</text>${cols}
+          <text class="t-l fade" x="110" y="626" font-size="22" style="animation-delay:15.5s">Of the U.S. boaters who drowned, 87% wore no life jacket.</text>
+          <text class="t-l fade t-mu" x="110" y="662" font-size="20" style="animation-delay:19.5s">These numbers overlap. They can't be added up.</text>`, 'flat');
+      },
+      tick: (t, root) => {
+        const v = [300000, 100000, 4200, 556], pre = ['~', '', '~', ''], suf = ['', '+', '', ''];
+        v.forEach((n, i) => {
+          const el = root.querySelector('#n' + i); if (!el) return;
+          const p = Math.min(1, Math.max(0, (t - N_START - i * N_STEP) / 1.5)), e = 1 - Math.pow(1 - p, 3);
+          el.textContent = pre[i] + Math.round(n * e).toLocaleString('en-US') + suf[i];
+        });
+      } },
+
+    { vo: "Here's what one of those nights looks like. A fishing boat misses its check-in. The wind is picking up. On shore, the rescue crew has a rough idea where the boat might be, and no word from anyone on board. So they have to choose. Send rescuers out into rough water now, or wait for better information, and maybe be too late.", speaker: NARR,
+      draw: () => {
+        const boat = `<g class="bob"><path d="M330 466 L432 466 L418 486 L344 486Z" fill="#b9c4c7"/><rect x="358" y="442" width="36" height="24" fill="#8a9aa0"/><line x1="398" y1="442" x2="398" y2="410" stroke="#8a9aa0" stroke-width="3"/><circle cx="398" cy="408" r="4" fill="var(--accent)" class="blink"/></g>`;
+        return svg(`${CLOUDS}${station(920, 396, .9, '#8d999d')}${sea(474, 'night', boat)}${RAIN}
+          <g class="fade" style="animation-delay:2.4s">
+            <rect x="70" y="70" width="380" height="128" rx="8" fill="#0b1820" fill-opacity=".85" stroke="var(--rule)"/>
+            <text class="t-m t-a" x="94" y="104" font-size="14">MISSED CHECK-IN</text>
+            <text id="od" class="t-h" x="94" y="152" font-size="40" style="font-variant-numeric:tabular-nums">03:12:00</text>
+            <text class="t-l t-mu" x="94" y="182" font-size="17">Wind picking up · no radio contact</text>
+          </g>
+          <text class="t-h fade" x="1210" y="640" text-anchor="end" font-size="34" style="animation-delay:14s">Go now, or wait?</text>`);
+      },
+      tick: (t, root) => {
+        const el = root.querySelector('#od'); if (!el) return;
+        const s = 3 * 3600 + 12 * 60 + Math.floor(t * 30);
+        el.textContent = `${pad(Math.floor(s / 3600))}:${pad(Math.floor(s / 60) % 60)}:${pad(s % 60)}`;
+      } },
+
+    { vo: "So why do these deaths happen? The honest answer is, nobody knows for sure yet. That's the students' first job: dig into the data, figure out how big the problem really is, and find which deaths could be prevented.", speaker: NARR,
+      draw: () => {
+        const qs = ['How big is it?', 'What share can be prevented?', 'How could we prevent it?', 'Can we test it?'];
+        let rows = '';
+        qs.forEach((q, i) => {
+          const y = 380 + i * 64;
+          rows += `<g class="rise" style="animation-delay:${7.6 + i * 1.4}s">
+            <circle cx="430" cy="${y - 8}" r="20" fill="none" stroke="var(--accent)" stroke-width="2"/>
+            <text class="t-m" x="430" y="${y - 2}" text-anchor="middle" font-size="16" style="fill:var(--ink)">${i + 1}</text>
+            <text class="t-l" x="470" y="${y}" font-size="26">${q}</text></g>`;
+        });
+        return svg(`<text class="t-h fade" x="640" y="170" text-anchor="middle" font-size="84" style="animation-delay:.3s">Why?</text>
+          <text class="t-hl fade t-mu" x="640" y="232" text-anchor="middle" font-size="30" style="animation-delay:3s">Nobody knows for sure yet.</text>
+          <text class="t-m fade" x="410" y="320" font-size="15" style="fill:var(--accent);animation-delay:6.4s">THE STUDENTS' FIRST JOB</text>${rows}
+          <text class="t-m fade" x="410" y="660" font-size="12" style="animation-delay:12s">QUESTIONS FROM ETHAN'S PROPOSAL</text>`, 'flat');
+      } },
+
+    { vo: "There are a few ideas worth testing. Maybe some deaths come down to decisions made under pressure: the facts are scattered, and nobody is sure who's doing what. Maybe it's speed. Sending out a full crew in a rescue boat takes time, and a drone or a robot might get there first. The plan is to take each problem one at a time, and solve it.", speaker: NARR,
+      draw: () => {
+        const items = [['Decisions under pressure', 'Facts scattered, unclear who does what', 3], ['Slow launches', 'A full crew and boat, or a drone or robot first?', 10.5], ['The next one we find', 'Sized, tested, then solved', 17.5]];
+        let rows = '';
+        items.forEach(([h, sub, d], i) => {
+          const y = 250 + i * 120;
+          rows += `<g class="rise" style="animation-delay:${d}s">
+            <rect x="250" y="${y - 30}" width="40" height="40" rx="6" fill="none" stroke="var(--muted)" stroke-width="2"/>
+            <text class="t-h" x="320" y="${y}" font-size="34">${h}</text>
+            <text class="t-l t-mu" x="320" y="${y + 36}" font-size="20">${sub}</text></g>
+            <path class="tick" d="M258 ${y - 10} L268 ${y} L284 ${y - 22}" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:${19.5 + i * .7}s"/>`;
+        });
+        return svg(`<text class="t-m" x="250" y="130" font-size="15">IDEAS TO TEST</text>
+          <text class="t-h fade" x="1030" y="130" text-anchor="end" font-size="30" style="fill:var(--accent);animation-delay:18s">One at a time.</text>${rows}`, 'flat');
+      } },
+  ] },
+
+  2: { label: 'Part 2', scenes: [
+    { vo: "Trained Coast Guard response teams help people in life or death situations. The person calling for help is often panicking. So the first job is to calm them down. Then find out where they are. Then work out how serious it is. Are they taking on water? Did the engine die? Are the seas rough? Is someone hurt? Then build the full picture. Panic mixes up that order. The team's job is to keep it straight.", speaker: NARR,
+      draw: () => {
+        let bars = '';
+        for (let i = 0; i < 28; i++) bars += `<rect class="bar" x="${420 + i * 16}" y="${250 - 30 - (i % 5) * 8}" width="8" height="${60 + (i % 5) * 16}" rx="4" fill="var(--lamp)" fill-opacity=".8" style="animation-delay:${(i % 7) * .11}s"/>`;
+        return svg(`<rect x="0" y="520" width="1280" height="200" fill="#122029"/>
+          <rect x="0" y="516" width="1280" height="6" fill="#1c2f39"/>
+          <rect x="430" y="370" width="420" height="150" rx="10" fill="#1a2a33" stroke="#2c434e" stroke-width="2"/>
+          <rect x="460" y="398" width="150" height="54" rx="4" fill="#0b161c"/>
+          <text class="t-m" x="535" y="434" text-anchor="middle" font-size="24" style="fill:var(--lamp)">CH 16</text>
+          <circle cx="700" cy="440" r="34" fill="none" stroke="#5c7179" stroke-width="4"/><line x1="700" y1="440" x2="716" y2="418" stroke="#9fb2ba" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="808" cy="398" r="7" fill="var(--accent)" class="blink"/>
+          <rect x="470" y="474" width="120" height="10" rx="5" fill="#2c434e"/>
+          ${bars}
+          <text class="t-m fade" x="70" y="100" font-size="15" style="fill:var(--accent);animation-delay:.4s">COAST GUARD RESPONSE TEAM</text>
+          <text class="t-l fade t-mu" x="70" y="130" font-size="18" style="animation-delay:.8s">Channel 16: the marine distress channel</text>
+          <text class="t-m fade" x="920" y="150" font-size="14" style="fill:var(--accent);animation-delay:13.6s">HOW SERIOUS IS IT?</text>
+          <text class="t-l rise" x="920" y="198" font-size="24" style="animation-delay:15.5s">Taking on water?</text>
+          <text class="t-l rise" x="920" y="242" font-size="24" style="animation-delay:16.75s">Engine died?</text>
+          <text class="t-l rise" x="920" y="286" font-size="24" style="animation-delay:18.0s">Rough seas?</text>
+          <text class="t-l rise" x="920" y="330" font-size="24" style="animation-delay:19.25s">Someone hurt?</text>`, 'night');
+      } },
+
+    { vo: "So that's the order. Calm everyone down. Find out where they are. Figure out how serious it is. Then get the full picture. Each of those steps comes straight from Applied Wisdom: trust, focus, bad news is good news, and court sense.", speaker: NARR,
+      draw: () => {
+        const steps = [['0', 'Calm everyone down', 'Respect and Trust · Who\'s Got the Monkey'], ['1', 'Location first', 'Prioritize and Focus'], ['2', 'How serious it is', 'Bad News is Good News'], ['3', 'The full picture', 'Develop Court Sense']];
+        let s = '';
+        steps.forEach(([n, t, ins], i) => {
+          const y = 200 + i * 118;
+          s += `<g class="rise" style="animation-delay:${1.8 + i * 1.6}s">
+            <circle cx="230" cy="${y}" r="30" fill="${i === 0 ? 'var(--accent)' : '#0d1b23'}" stroke="var(--accent)" stroke-width="3"/>
+            <text class="t-h" x="230" y="${y + 11}" text-anchor="middle" font-size="30" style="fill:${i === 0 ? '#1a0d07' : 'var(--ink)'}">${n}</text>
+            <text class="t-h" x="300" y="${y + 2}" font-size="40">${t}</text>
+            <text class="t-l t-a" x="300" y="${y + 38}" font-size="20">${ins}</text></g>`;
+        });
+        return svg(`<text class="t-m" x="160" y="110" font-size="15">THE FIRST MINUTES OF A CALL</text>
+          <path class="draw" d="M230 200 V554" stroke="var(--rule)" stroke-width="3" style="animation-delay:.4s"/>${s}`, 'flat');
+      } },
+
+    { vo: 'The proposed program would let students practise decision-making in local simulations and, only if qualified partners approve, supervised exercises at sea. This is illustrative, not a record of completed training.', speaker: NARR,
+      draw: () => {
+        const rows = [['Last position', '43°05′N 70°41′W', 'pos'], ['Persons aboard', '2', ''], ['Wind', 'SW 22 kt', 'wind'], ['Seas', '4 to 6 ft', ''], ['Tide', 'Ebb', ''], ['Updated', '0:00 ago', 'upd']];
+        let r = '';
+        rows.forEach(([k, v, id], i) => {
+          const y = 230 + i * 58;
+          r += `<g class="rise" style="animation-delay:${1 + i * .35}s"><text class="t-l t-mu" x="600" y="${y}" font-size="20">${k}</text>
+            <text ${id ? `id="${id}"` : ''} class="t-l" x="1150" y="${y}" text-anchor="end" font-size="22" style="font-variant-numeric:tabular-nums">${v}</text>
+            <line x1="600" y1="${y + 18}" x2="1150" y2="${y + 18}" stroke="var(--rule)"/></g>`;
+        });
+        let people = '';
+        for (let i = 0; i < 4; i++) people += `<circle cx="${150 + i * 70}" cy="590" r="16" fill="#5c7179"/><path d="M${126 + i * 70} 640 Q${150 + i * 70} 600 ${174 + i * 70} 640Z" fill="#5c7179"/>`;
+        return svg(`${station(110, 360, .95, '#8d999d')}
+          <rect x="100" y="640" width="320" height="10" rx="4" fill="#2c434e"/>${people}
+          <text class="t-m" x="100" y="690" font-size="13">SHORE COMMAND POST</text>
+          <rect x="560" y="120" width="630" height="490" rx="10" fill="#0c1a21" stroke="#2c434e" stroke-width="2"/>
+          <text class="t-m t-a" x="600" y="168" font-size="15">SITUATION BOARD · DRILL</text>${r}
+          <text class="t-h fade" x="600" y="580" font-size="26" style="animation-delay:5.5s">Local simulations, then drills at sea.</text>`, 'night');
+      },
+      tick: (t, root) => {
+        const u = root.querySelector('#upd'), w = root.querySelector('#wind');
+        if (u) {
+          const s = Math.floor(t * 2) % 15;
+          u.textContent = `0:${pad(s)} ago`;
+          if (s === 0 && t > 1) { u.classList.remove('flash'); void u.getBBox(); u.classList.add('flash'); }
+        }
+        if (w) w.textContent = `SW ${Math.min(28, 22 + Math.floor(t / 4) * 2)} kt`;
+      } },
+
+    { vo: "In an illustrative future scenario, add a proposed helper called the Situation at Sea Solver. It could sit beside a team during a supervised exercise, ask for a location, put bad news up front, keep the picture current, and make sure every job has someone's name on it. People would still make the calls; no operational use is established.", speaker: NARR,
+      draw: () => svg(`<text class="t-m" x="200" y="70" font-size="15">ILLUSTRATIVE FUTURE DRILL · PROPOSED SOLVER</text>
+        ${bubble('Team', 'Sea Robin, 2 aboard, taking on water.', 120, .5)}
+        ${bubble('Solver', 'Location first. Last known position?', 196, 2.6)}
+        ${bubble('Team', 'Near Whaleback Light, 2 miles SE.', 272, 4.6)}
+        ${bubble('Solver', 'Bad news first: anyone in the water?', 348, 6.6)}
+        ${bubble('Team', 'One person. Wearing a life jacket.', 424, 8.6)}
+        ${bubble('Solver', 'Who owns the call to the safety boat?', 500, 10.6)}
+        <text class="t-h fade" x="640" y="650" text-anchor="middle" font-size="34" style="animation-delay:17s">The Solver suggests. <tspan class="t-a">People decide.</tspan></text>`, 'flat') },
+
+    { vo: 'A proposed debrief could let qualified rescuers review the big decisions. Whether a team or Solver improves is a hypothesis to measure, not an established result.', speaker: NARR,
+      draw: () => {
+        const node = (x, y, t, human, d) => `<g class="rise" style="animation-delay:${d}s"><rect x="${x - 110}" y="${y - 30}" width="220" height="60" rx="30" fill="#0d1b23" stroke="${human ? 'var(--accent)' : 'var(--muted)'}" stroke-width="${human ? 3 : 2}"/>
+          <text class="t-l" x="${x}" y="${y + 8}" text-anchor="middle" font-size="22" font-weight="600">${t}</text></g>`;
+        return svg(`<circle cx="640" cy="370" r="210" fill="none" stroke="var(--rule)" stroke-width="3" stroke-dasharray="4 10"/>
+          <g class="orbit" style="transform-origin:640px 370px"><circle cx="640" cy="160" r="10" fill="var(--accent)"/></g>
+          ${node(640, 160, 'Practice', false, .3)}${node(850, 370, 'Record', false, .8)}${node(640, 580, 'Grade', true, 1.3)}${node(430, 370, 'Test, then tune', false, 1.8)}
+          <text class="t-l t-a fade" x="640" y="640" text-anchor="middle" font-size="17" style="animation-delay:2s">experienced rescuers grade each call</text>
+          <text class="t-m fade" x="640" y="364" text-anchor="middle" font-size="15" style="animation-delay:2.4s">EACH COHORT</text>
+          <text class="t-m fade" x="640" y="390" text-anchor="middle" font-size="15" style="animation-delay:2.4s">ONE TURN</text>`, 'flat');
+      } },
+
+    { vo: 'If partners approve a future June exercise, it could use a staged scenario near Kittery Point, with licensed operators and a marked float—not a real rescue mission. Dates, bookings and operators are not confirmed.', speaker: NARR,
+      draw: () => {
+        const robot = `<g class="drive"><g class="bob"><path d="M250 454 h64 l-8 14 h-48z" fill="#e8eef0"/><rect x="268" y="440" width="22" height="14" fill="#9fb2ba"/><circle cx="279" cy="436" r="3" fill="var(--accent)" class="blink"/></g></g>`;
+        const dummy = `<g class="bob"><circle cx="760" cy="462" r="20" fill="none" stroke="var(--accent)" stroke-width="9"/><circle cx="760" cy="452" r="9" fill="#e3c9a8"/></g>`;
+        const safety = `<g class="bob"><path d="M1010 444 h150 l-16 26 h-120z" fill="#e8eef0"/><rect x="1040" y="414" width="64" height="30" fill="#c9d2d4"/><rect x="1028" y="456" width="128" height="5" fill="var(--accent)"/></g>`;
+        return svg(`<path d="M0 420 Q120 380 230 410 L260 720 L0 720Z" fill="#26352f"/>
+          ${station(40, 330, .55, '#c9d2d4')}
+          ${sea(450, 'dusk', robot + dummy + safety)}
+          <g class="fly"><g transform="translate(240 170)">
+            <polygon points="0,10 -70,270 70,270" fill="url(#cone)"/>
+            <rect x="-22" y="-6" width="44" height="14" rx="5" fill="#16242c"/><line x1="-46" y1="-4" x2="46" y2="-4" stroke="#16242c" stroke-width="4"/>
+            <ellipse cx="-46" cy="-8" rx="18" ry="3" fill="#16242c"/><ellipse cx="46" cy="-8" rx="18" ry="3" fill="#16242c"/>
+            <circle cx="0" cy="10" r="4" fill="var(--lamp)"/></g></g>
+          <g class="fade" style="animation-delay:.3s"><rect x="40" y="40" width="190" height="40" rx="6" fill="#0d1b23" fill-opacity=".85"/><text class="t-m t-a" x="135" y="66" text-anchor="middle" font-size="15">STAGED DRILL</text></g>
+          <text class="t-l fade" x="710" y="140" font-size="20" style="animation-delay:5.5s">Drone: searches, spots, drops flotation</text>
+          <text class="t-l fade" x="300" y="610" font-size="20" style="animation-delay:7s">Sea robot: carries gear to the casualty</text>
+          <text class="t-l fade" x="760" y="540" text-anchor="middle" font-size="20" style="animation-delay:8.5s">Manikin, never a person</text>
+          <text class="t-l fade" x="1240" y="390" text-anchor="end" font-size="20" style="animation-delay:10s">Safety boat: licensed crew, can stop the drill</text>`, 'dusk');
+      } },
+  ] },
+  3: { label: 'Part 3', scenes: [
+    { vo: "The Solver starts with a large language model, the kind of AI behind today's chat tools. It's built in two loops that form a figure eight.", speaker: NARR,
+      draw: () => svg(`<text class="t-m" x="90" y="80" font-size="15">THE SOLVER</text>
+        <path class="fade" d="${lemPath(0, Math.PI * 2, 320)}" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="4 10" style="animation-delay:5.5s"/>
+        ${hub(.4)}
+        <text class="t-l t-mu fade" x="640" y="430" text-anchor="middle" font-size="20" style="animation-delay:1.4s">Large language model</text>
+        <text class="t-l fade" x="640" y="600" text-anchor="middle" font-size="24" style="animation-delay:2.6s">The kind of AI behind today's chat tools</text>`, 'flat') },
+
+    { vo: "The proposed first loop is an Applied Wisdom Situation Solver concept. It could study permitted Applied Wisdom and past leadership case material, then be tested by leaders on supervised, non-operational problems. Reviewers could correct and grade results; whether later rounds improve is a hypothesis, not an established result.", speaker: NARR,
+      draw: () => svg(`<text class="t-m" x="90" y="80" font-size="15">LOOP ONE</text>
+        <path class="drawL" id="lobeL" d="${lemPath(Math.PI / 2, Math.PI * 1.5)}" fill="none" stroke="var(--lamp)" stroke-width="5" stroke-linecap="round"/>
+        <path d="${lemPath(-Math.PI / 2, Math.PI / 2)}" fill="none" stroke="var(--rule)" stroke-width="2" stroke-dasharray="4 10"/>
+        ${hub(0)}<circle id="dot" cx="640" cy="330" r="10" fill="var(--lamp)"/>
+        <text class="t-h fade" x="440" y="122" text-anchor="middle" font-size="28" style="animation-delay:.6s">Proposed Applied Wisdom Solver</text>
+        ${steps(LEFT, 150, 'var(--lamp)', [3.2, 6.4, 9.6, 13])}`, 'flat'),
+      tick: (t, root) => orbit(root, 'lobeL', t - 2.4, 5) },
+
+    { vo: "The proposed second loop is a Situation at Sea Solver concept. A future, reviewed version could study permitted case material and supervised exercises; no real-mission use, training corpus or feedback cycle is established here.", speaker: NARR,
+      draw: () => svg(`<text class="t-m" x="90" y="80" font-size="15">LOOP TWO</text>
+        <path d="${lemPath(Math.PI / 2, Math.PI * 1.5)}" fill="none" stroke="var(--lamp)" stroke-width="4" stroke-opacity=".45"/>
+        <path class="drawL" id="lobeR" d="${lemPath(-Math.PI / 2, Math.PI / 2)}" fill="none" stroke="var(--tide)" stroke-width="5" stroke-linecap="round"/>
+        ${hub(0)}<circle id="dot" cx="640" cy="330" r="10" fill="var(--tide)"/>
+        <text class="t-hl" x="440" y="122" text-anchor="middle" font-size="24" style="fill:var(--muted)">Applied Wisdom Situation Solver</text>
+        <text class="t-h fade" x="840" y="122" text-anchor="middle" font-size="28" style="animation-delay:.6s">Situation at Sea Solver</text>
+        <text class="t-l fade" x="640" y="250" text-anchor="middle" font-size="17" style="fill:var(--tide);animation-delay:3s">builds on loop one</text>
+        ${steps(RIGHT, 730, 'var(--tide)', [3.2, 7, 10.5, 15])}`, 'flat'),
+      tick: (t, root) => orbit(root, 'lobeR', t - 2.4, 5) },
+
+    { vo: "The proposal is that the two loops could inform one another: a hypothesis to evaluate with partners, not an automatic improvement claim. No result is established until a person measures it.", speaker: NARR,
+      draw: () => svg(`<text class="t-m" x="90" y="80" font-size="15">THE LOOPS FEED EACH OTHER</text>
+        <path d="${lemPath(Math.PI / 2, Math.PI * 1.5)}" fill="none" stroke="var(--lamp)" stroke-width="5"/>
+        <path d="${lemPath(-Math.PI / 2, Math.PI / 2)}" fill="none" stroke="var(--tide)" stroke-width="5"/>
+        <path id="lemAll" d="${lemPath(-Math.PI / 2, Math.PI * 1.5, 320)}" fill="none" stroke="none"/>
+        ${hub(0)}<circle id="dot" cx="640" cy="330" r="11" fill="var(--accent)"/>
+        <text class="t-h" x="440" y="122" text-anchor="middle" font-size="26">Leadership loop</text>
+        <text class="t-h" x="840" y="122" text-anchor="middle" font-size="26">Proposed mission loop</text>
+        <g class="rise" style="animation-delay:4s"><text class="t-l" x="440" y="580" text-anchor="middle" font-size="24" style="fill:var(--lamp)">How to decide</text>
+          <text class="t-l t-mu" x="440" y="612" text-anchor="middle" font-size="18">weigh the facts, make the call</text></g>
+        <g class="rise" style="animation-delay:9.5s"><text class="t-l" x="840" y="580" text-anchor="middle" font-size="24" style="fill:var(--tide)">What to decide, and when</text>
+          <text class="t-l t-mu" x="840" y="612" text-anchor="middle" font-size="18">which decisions come up, in what order</text></g>
+        <text class="t-h fade" x="640" y="685" text-anchor="middle" font-size="26" style="animation-delay:15s">A hypothesis to test, not a result</text>`, 'flat'),
+      tick: (t, root) => orbit(root, 'lemAll', t, 9) },
+  ] }
+
+};
+
+/* ---------- voice track ---------- */
+const AUDIO = {"p1s1": {"dur": 7.36, "src": "narration/p1s1.mp3"}, "p1s2": {"dur": 27.44, "src": "narration/p1s2.mp3"}, "p1s3": {"dur": 20.64, "src": "narration/p1s3.mp3"}, "p1s4": {"dur": 14.48, "src": "narration/p1s4.mp3"}, "p1s5": {"dur": 21.04, "src": "narration/p1s5.mp3"}};
+const AUDIO_LEAD = .3, AUDIO_TAIL = .6;
+const voice = new Audio();
+voice.preload = 'auto';
+const mediaError = document.getElementById('mediaError');
+voice.addEventListener('error', () => { if (mediaError) { mediaError.hidden = false; mediaError.textContent = 'Audio could not load in this embedded player. Use the transcript or open the standalone explainer.'; } });
+voice.addEventListener('canplay', () => { if (mediaError) mediaError.hidden = true; });
+let muted = false, voiceStarted = false;
+const keyOf = () => `p${part}s${idx + 1}`;
+function voicePlay() { if (muted) return; const p = voice.play(); if (p && p.catch) p.catch(() => {}); }
+function voiceStop() { voice.pause(); try { voice.currentTime = 0; } catch (e) {} voiceStarted = false; }
+function loadVoice() { voiceStop(); const a = AUDIO[keyOf()]; if (a) voice.src = a.src; else voice.removeAttribute('src'); }
+
+/* ---------- player ---------- */
+const $ = id => document.getElementById(id);
+const stage = $('stage'), segs = $('segs');
+let part = 1, idx = 0, t = 0, playing = false, started = false, last = null;
+try { const h = location.hash; if (h === '#part2') part = 2; if (h === '#part3') part = 3; } catch (e) {}
+
+const scenes = () => PARTS[part].scenes;
+const durOf = s => {
+  const i = scenes().indexOf(s), a = AUDIO[`p${part}s${i + 1}`];
+  const base = s.dur || Math.max(7, s.vo.split(/\s+/).length / 2.4 + 3);
+  return a ? a.dur + AUDIO_LEAD + AUDIO_TAIL : base;
+};
+
+function buildSegs() {
+  segs.innerHTML = '';
+  scenes().forEach((s, i) => {
+    const b = document.createElement('button');
+    b.className = 'seg'; b.setAttribute('aria-label', `Go to scene ${i + 1}`);
+    b.innerHTML = '<i></i>';
+    b.onclick = () => go(i, true);
+    segs.appendChild(b);
+  });
+}
+function render() {
+  const s = scenes()[idx];
+  stage.innerHTML = s.draw();
+  t = 0;
+  loadVoice();
+  if (s.tick) s.tick(0, stage);
+  $('vo').textContent = s.vo;
+  $('speaker').textContent = s.speaker || (s.end ? 'Question for you' : '');
+  $('count').textContent = `Scene ${idx + 1} of ${scenes().length}`;
+  stage.classList.toggle('paused', started && !playing);
+  progress();
+}
+function progress() {
+  [...segs.children].forEach((b, i) => {
+    const w = i < idx ? 100 : i > idx ? 0 : Math.min(100, (t / durOf(scenes()[idx])) * 100);
+    b.firstChild.style.width = w + '%';
+  });
+}
+function setPlaying(p) {
+  playing = p;
+  if (!p) voice.pause(); else if (voiceStarted && !voice.ended) voicePlay();
+  stage.classList.toggle('paused', started && !p);
+  $('playIcon').innerHTML = p ? '<path d="M1 0h4v12H1zM7 0h4v12H7z"/>' : '<path d="M1 0 L12 6 L1 12Z"/>';
+  $('play').setAttribute('aria-label', p ? 'Pause' : 'Play');
+}
+function begin() {
+  started = true; $('start').hidden = true;
+  render(); setPlaying(true);
+  if (voice.src) { voiceStarted = true; voicePlay(); }  /* start inside the click so browsers allow sound */
+}
+function go(i, autoplay) {
+  idx = Math.max(0, Math.min(scenes().length - 1, i));
+  if (!started) { started = true; $('start').hidden = true; }
+  render(); setPlaying(autoplay ?? playing);
+}
+function setPart(p) {
+  part = p; idx = 0; started = false; playing = false; voiceStop();
+  [1, 2, 3].forEach(n => $('tab' + n).setAttribute('aria-pressed', p === n));
+  $('startLabel').textContent = `Play Part ${p}`; $('start').hidden = false;
+  buildSegs(); render(); setPlaying(false);
+}
+
+$('start').onclick = begin;
+$('play').onclick = () => {
+  if (!started) return begin();
+  const s = scenes()[idx];
+  if (!playing && s.end && t >= durOf(s)) { idx = 0; render(); }
+  setPlaying(!playing);
+};
+$('prev').onclick = () => go(idx - 1);
+$('next').onclick = () => go(idx + 1);
+$('mute').onclick = () => {
+  muted = !muted;
+  voice.muted = muted;
+  if (!muted && playing && voiceStarted && !voice.ended) voicePlay();
+  $('mute').setAttribute('aria-label', muted ? 'Unmute' : 'Mute');
+  $('muteIcon').innerHTML = muted
+    ? '<path d="M0 4h3l3-3v10L3 8H0z"/><path d="M8 4l4 4M12 4l-4 4" stroke="currentColor" stroke-width="1.2"/>'
+    : '<path d="M0 4h3l3-3v10L3 8H0z"/><path d="M8 3.5q2 2.5 0 5M9.5 2q3.5 4 0 8" fill="none" stroke="currentColor" stroke-width="1.2"/>';
+};
+$('tab1').onclick = () => setPart(1);
+$('tab2').onclick = () => setPart(2);
+$('tab3').onclick = () => setPart(3);
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'BUTTON' && e.code === 'Space') return;
+  if (e.code === 'Space') { e.preventDefault(); $('play').click(); }
+  if (e.code === 'ArrowRight') go(idx + 1);
+  if (e.code === 'ArrowLeft') go(idx - 1);
+});
+
+function loop(ts) {
+  if (last == null) last = ts;
+  const dt = Math.min(.1, (ts - last) / 1000); last = ts;
+  if (playing) {
+    t += dt;
+    const s = scenes()[idx];
+    if (!voiceStarted && t >= AUDIO_LEAD && voice.src) { voiceStarted = true; voicePlay(); }
+    if (s.tick) s.tick(t, stage);
+    if (t >= durOf(s)) {
+      if (idx < scenes().length - 1) { idx++; render(); }
+      else if (PARTS[part + 1]) { setPart(part + 1); begin(); }
+      else { t = durOf(s); setPlaying(false); }
+    }
+    progress();
+  }
+  requestAnimationFrame(loop);
+}
+
+setPart(part);
+requestAnimationFrame(loop);
+</script>
+</body></html>
