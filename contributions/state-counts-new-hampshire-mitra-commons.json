@@ -1,0 +1,116 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "state-counts-new-hampshire",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "nh-child-drowning-share-2018-22",
+   "figure": "Drowning (8.1%)",
+   "low": 8.1,
+   "high": 8.1,
+   "unit": "share (%)",
+   "year": 2022,
+   "scope": "New Hampshire, five years pooled, 2018-2022: the share of unintentional injury deaths of children (printed as 'among children between the ages of 1 to 21'; the report defines children as birth to 21 on p. 4) that the NH Child Fatality Review Committee's report attributes to drowning (chart label 'Drowning (8.1%)', Figure 4, section 'Unintentional Injury Deaths'). Death-certificate data (NH Vital Records). A percentage only: no count, series, setting or ICD codes printed. Adults not covered. Year is the end of the period.",
+   "geography": "New Hampshire",
+   "source": "NH DHHS, Child Fatality Review Committee, Annual Report 2023 (data from NH DHHS Health Statistics and Data Management, death certificates from the NH Division of Vital Records Administration), p. 11",
+   "url": "https://www.dhhs.nh.gov/sites/g/files/ehbemt476/files/documents2/child-fatality-review-report-2023.pdf",
+   "grade": "A",
+   "do_not_add_to": "A pooled five-year share for children, not a count: never multiply it by any total in this ledger (us-cdc-4345, us-cdc-4500, us-total-2022) to make a New Hampshire count, never add it to uscg-boating-2024 or us-location-boating-2024, and never combine it with the canada-location-*, australia-location-2024-25 or uk-waid-2024 shares, whose denominators are drowning deaths by setting, not injury deaths of children. Not the yearly all-ages NH count this task asked for.",
+   "note": "The only New Hampshire drowning figure found in an official document the tools could open. The Executive Summary (p. 1) ranks drowning third among the top six causes of preventable child death for 2018-2022, after motor vehicles and poisoning/overdose. Yearly all-ages counts sit behind CDC WONDER, WISQARS and NH Health WISDOM and were not read. A reviewer should check p. 11 by eye: the text's '(Figure 4)' cross-reference collides with the p. 10 homicide chart titled Figure 4, the denominator N is image-only, and the six printed shares sum to 85.3%. Found 21 Oct 2026."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "us-cdc-4345",
+   "field": "url",
+   "old": "https://www.cdc.gov/drowning/data/index.html",
+   "new": "https://www.cdc.gov/drowning/data-research/index.html",
+   "evidence": "Opened 21 Oct 2026: the /drowning/data-research/ page prints 'An average of 4,345 unintentional drowning deaths occurred each year from 2018-2021' (footnote to 'over 4,000') with meta last_reviewed January 27, 2026, matching the row's figure and date. The /drowning/data/ page the row cites prints instead 'over 4,000' per year 'including boating-related drowning' and a footnote 'An average of 4,083 unintentional drowning deaths occurred each year from 2012-2021' (data accessed 31 May 2023), with no 4,345. Possibly an older copy left online; a reviewer should open both."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://www.dhhs.nh.gov/sites/g/files/ehbemt476/files/documents2/child-fatality-review-report-2023.pdf",
+   "quote": "Drowning (8.1%)",
+   "where": "p. 11, section 'Unintentional Injury Deaths', a bullet in the body list of the section (the chart itself is an image), children 'between the ages of 1 to 21', 2018-2022; p. 1 Executive Summary ranks drowning third among the top six causes of preventable child death; Appendix D pp."
+  },
+  {
+   "url": "https://www.cdc.gov/drowning/data-research/index.html",
+   "quote": "An average of 4,345 unintentional drowning deaths occurred each year",
+   "where": "Footnote to the sentence 'over 4,000 unintentional drowning deaths', years 2018-2021; meta last_reviewed January 27, 2026, last_updated October 29, 2024; the state map of 2018-2021 age-adjusted rates is an image with no New Hampshire value in the text"
+  },
+  {
+   "url": "https://www.cdc.gov/drowning/data/index.html",
+   "quote": "An average of 4,083 unintentional drowning deaths occurred each year",
+   "where": "Footnote marked *, years 2012-2021, as fetched 21 Oct 2026; body says 'over 4,000' fatal unintentional drownings a year 'including boating-related drowning' and an age-adjusted rate of 1.31 per 100,000 for 2018-2021; 'Accessed 31 May 2023'; no state values in the text"
+  },
+  {
+   "url": "https://www.doj.nh.gov/medical-examiner/documents/biennial-report-2017-2019.pdf",
+   "quote": "almost evenly divided between fatal drug overdoses",
+   "where": "Text describing Figure 4, major causes of the 1,921 fatal accidents of the 2017-2019 biennium (the rest 'deaths resulting from blunt trauma'); no drowning line anywhere in the text; figures are images and pages carry no numbers; covers OCME cases only (RSA 611-B)"
+  },
+  {
+   "url": "https://wisqars.cdc.gov/reports/?o=MORT&y1=2019&y2=2023&d=0&i=1&m=20810&g=33&s=0&r=0&ry=2&e=0&a=ALL&g1=0&g2=199&a1=0&a2=199&r1=YEAR&r2=NONE&r3=NONE&r4=NONE&adv=true",
+   "quote": "All Data Points Suppressed",
+   "where": "Results area of the WISQARS report page when fetched without JavaScript; the NH/drowning/2019-2023 parameters were ignored and the page showed its defaults (Fatal, All Injury, 2024, United States, All Intents); no data-use agreement seen"
+  },
+  {
+   "url": "https://bard.knightpoint.systems/PublicInterface/Report1.aspx",
+   "quote": "BARD Publicinterface Report",
+   "where": "Page title of the U.S. Coast Guard BARD public query tool linked from uscgboating.org as 'Search Data'; dropdowns for State (NH listed), Year 2005-2024 and one variable incl. 'Cause of Death' and 'Body of Water'; results need a form submission; no login or agreement mentioned"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2024.pdf",
+   "quote": "ALCOHOL USE AS A CONTRIBUTING FACTOR IN INCIDENTS & CASUALTIES BY STATE 2020-2024",
+   "where": "Table 8 title as printed, p. 27 (row labelled 'NH'), the only New Hampshire row within the ~81,500 characters the text converter returns (it stops in Table 19, p. 43); the state tables 30 (p. 58), 32 'Five-year Summary' (p. 64) and 33 (pp. 65-66) were not readable."
+  },
+  {
+   "url": "https://www.nh.gov/safety/divisions/nhsp/fob/marine-patrol",
+   "quote": "Investigation of all boating accidents and drownings.",
+   "where": "Duties list on the NH State Police Marine Patrol page; the page prints no statistics and links no annual report or data page"
+  },
+  {
+   "url": "https://dhhs.nh.gov/programs-services/population-health/maternal-child-health/injury-prevention",
+   "quote": "DHHS Data Portal, Injury Prevention Dashboard",
+   "where": "Link text under 'Injury Prevention Resources' on the NH DHHS Injury Prevention page; the page itself has no drowning text; the dashboard lives on the NH Health WISDOM portal (wisdom.dhhs.nh.gov), a JavaScript app whose landing HTML lists no topics"
+  }
+ ],
+ "tried": [
+  "NH Office of the Chief Medical Examiner: the only report on doj.nh.gov is the biennial report 2017-2019 (opened; OCME cases only; accidents split in the text only into drug overdoses and blunt trauma; figures are images; no drowning count). The medical-examiner landing page lists no reports, and searches for an OCME annual report for 2020-2024 found none (results were other states' OCME reports).",
+  "NH DHHS Injury Prevention page: no data, only a link to the 'Injury Prevention Dashboard' on the NH Health WISDOM portal. The WISDOM landing page (wisdom.dhhs.nh.gov/wisdom/) returns no topics or data in its HTML (JavaScript app); searches for a WISDOM injury or mortality page with a fetchable address found nothing.",
+  "NH DHHS Violence and Injury Prevention 5-Year Plan 2020-2025 PDF (dhhs.nh.gov/sites/g/files/ehbemt476/files/documents/2021-11/nh-vip-plan-2020-2025.pdf): the fetch failed with a target error twice (both URL spellings); not read.",
+  "CDC WONDER (underlying cause of death, W65-W74, V90, V92, New Hampshire): not attempted because the query requires accepting a data-use agreement.",
+  "CDC WISQARS: the fatal-reports landing page is navigation only; /reports with parameters for New Hampshire, unintentional drowning, 2019-2023 returned the default view with 'All Data Points Suppressed' and the United States 2024 all-injury settings (JavaScript app); /explore and /comparestate were not tried for the same reason.",
+  "CDC drowning data pages (/drowning/data/ and /drowning/data-research/): national figures only; the 2018-2021 state rate map is an image; 'Learn more about drowning deaths in your state' has no link target in the text. Both were used only for the us-cdc-4345 url correction.",
+  "U.S. Coast Guard Recreational Boating Statistics 2024 PDF: the text conversion stops at about 81,500 characters (Table 19, p. 43 of roughly 80 pages), so the state tables 30 (p. 58), 32 (p. 64) and 33 (pp. 65-66) with New Hampshire's yearly boating deaths 2020-2024 could not be read; the 2019-2023 editions are the same shape and were not tried. The BARD public interface needs a form submission. The uscgboating.org statistics page lists no state tables or spreadsheets; the 2025 report is 'Pending' (31 Oct 2026).",
+  "NH State Police / Marine Patrol: nhsp.dos.nh.gov news releases are per incident (e.g. 'three-deaths-new-hampshire-waters', incidents of 7 July 2023) and print no yearly or season totals; the Marine Patrol page (nh.gov/safety) has no statistics; searches for a boating-season summary or a Department of Safety annual report with fatality or drowning counts found none.",
+  "NH Fish and Game (wildlife.nh.gov / nhfishgame.com): search returned only per-incident releases; no yearly drowning or search-and-rescue fatality count found.",
+  "NH Vital Records publications page (nhvrinweb.sos.nh.gov/nhivs_pubs.aspx): three items, the newest death report being 'Leading Causes of Death of New Hampshire Residents, 1999-2001'; nothing for 2019-2024. Searches for a NH vital statistics annual report with an ICD cause table (W65-W74) found nothing.",
+  "Searches for NH drowning counts returned KIDS COUNT (datacenter.aecf.org), America's Health Rankings and USAFacts pages, all secondary compilations of CDC data; not opened or cited. The NHPR drowning tag page (press) lists six per-incident stories and none with a yearly total; not cited.",
+  "NH Child Fatality Review Committee Annual Report 2023 (opened): prints only the 8.1% share recorded in the row; no drowning count by year, no water setting."
+ ],
+ "notes": "Result: no yearly, all-ages count of drowning deaths for New Hampshire was found in any document the tools could open, so the task's central acceptance point is not met. The three sources that hold such counts each need a person with a browser: CDC WONDER (data-use agreement), CDC WISQARS (JavaScript app, no agreement seen) and the NH Health WISDOM Injury Prevention Dashboard (JavaScript app). The NH OCME's only public report (2017-2019) has no drowning line, and no NH vital-statistics cause table was found online. What was found: one official NH drowning figure, a pooled 2018-2022 share of child unintentional-injury deaths (8.1%) from the NH DHHS Child Fatality Review report, recorded as a share with a strict do-not-add rule. The reviewer should open p. 11 of that PDF by eye: the reading tool described Figure 4 as covering ages 1 to 21 while the report defines children as birth to 21, and the tool could not reproduce the chart. The reading tool also offered its own arithmetic estimate of a child drowning count from that share; it is not in the report and is not recorded anywhere in this bundle. Correction: the ledger row us-cdc-4345 (4,345 a year, 2018-2021, 'CDC, Drowning data (27 Jan 2026)') cites /drowning/data/index.html, which as fetched today prints 'over 4,000' a year and an average of 4,083 for 2012-2021 (data accessed 31 May 2023); the 4,345 figure with the 27 Jan 2026 review date is on /drowning/data-research/index.html, so the url is proposed as the correction. One caveat: the /data/ page may be an older copy served from a cache, and only that older page says the figure includes boating-related drowning; a reviewer should open both pages. Deliberately left out: the USCG 2024 report's Table 8 New Hampshire row (alcohol-related boating incidents, deaths and injuries 2020-2024), because it is not a drowning count and is a subset by contributing factor. No press figure was used. Roughly 37 searches and fetches were spent, above the suggested 25, because the OCME, DHHS, Marine Patrol, Fish and Game, Vital Records, CDC and USCG routes each had to be checked before saying not found. Quotes are 12 words or fewer and one per document, per the brief.",
+ "next_tasks": [
+  {
+   "title": "New Hampshire: CDC WONDER query, underlying cause W65-W74 plus V90 and V92, 2019-2024, by year and by W-code setting (needs a person with a browser)",
+   "why": "WONDER needs its data-use agreement accepted; it holds final 2023 and 2024 and the bathtub, pool and natural-water split the task asked for, with suppression of counts under 10."
+  },
+  {
+   "title": "New Hampshire: WISQARS fatal injury report, unintentional drowning by year 2019-2024, all ages (needs a person with a browser)",
+   "why": "WISQARS asks for no agreement but is a JavaScript app; a browser can export the yearly table and note its small-count suppression rules."
+  },
+  {
+   "title": "New Hampshire boating deaths 2020-2024: USCG Recreational Boating Statistics 2024, Tables 30 and 32 (pp. 58, 64), or the BARD public interface with State = NH and variable = Cause of Death (needs a person with a browser or a PDF reader)",
+   "why": "The state tables sit past the point where the text converter stops; BARD can print NH boating deaths by cause (drowning versus other) per year, the V90/V92 side of the count."
+  },
+  {
+   "title": "New Hampshire: NH Health WISDOM Injury Prevention Dashboard, drowning mortality indicator by year and county (needs a person with a browser)",
+   "why": "NH DHHS's own portal is the state's primary mortality source and may print the yearly counts with the state's definition and county splits."
+  }
+ ]
+}

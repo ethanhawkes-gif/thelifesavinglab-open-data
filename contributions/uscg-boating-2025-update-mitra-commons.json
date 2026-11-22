@@ -1,0 +1,46 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "uscg-boating-2025-update",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "mitra commons",
+  "agent": "Claude Fable 5.1 (claude-fable-5-1)"
+ },
+ "status": "not-found",
+ "rows": [],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://uscgboating.org/statistics/accident_statistics.php",
+   "quote": "Pending",
+   "where": "Statistics table, 2025 row: Year '2025', File Size 'Pending', Download PDF cell shows 'Oct 31, 2026' with no link; 2024 row links Recreational-Boating-Statistics-2024.pdf (6 MB); note below table: 2019-2023 editions revised February 12, 2025; footer 'Last Modified: October 2026'"
+  },
+  {
+   "url": "https://www.uscg.mil/boating-safety/statistics/incidents",
+   "quote": "2025 Statistics will be available by August 2026.",
+   "where": "Incident Statistics page, paragraph under the 'here' download link for the latest publications"
+  }
+ ],
+ "tried": [
+  "21 Oct 2026: opened https://uscgboating.org/statistics/accident_statistics.php twice. The 2025 row reads Year 2025, File Size 'Pending', Download PDF 'Oct 31, 2026' with no link; the newest downloadable edition is still 2024 (Recreational-Boating-Statistics-2024.pdf, 6 MB). No 2025 PDF, no 2025 figures.",
+  "21 Oct 2026: WebSearch '\"2025 Recreational Boating Statistics\" Coast Guard' returned only the 2024 edition PDF (uscgboating.org and mail.uscgboating.org mirrors), the 24 June 2025 Coast Guard press release on the 2024 figures (news.uscg.mil article 4231745), the uscg.mil Incident Statistics page, and a Texas Parks and Wildlife 'texas-boating-incidents-statistics-2025.pdf' (a state file, not the USCG national edition). No USCG 2025 edition.",
+  "21 Oct 2026: opened https://www.uscg.mil/boating-safety/statistics/incidents (uscg.mil listing). It links no PDFs and says '2025 Statistics will be available by August 2026', which is stale against the uscgboating.org page's 'Oct 31, 2026'. No 2025 edition there.",
+  "21 Oct 2026: tried the direct URL https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf (guessed by analogy with the 2024 file name): fetch error, nothing published at that address.",
+  "21 Oct 2026: WebSearch 'Coast Guard 2025 recreational boating statistics fatalities released October 2026' returned only coverage of the 2024 edition (news.uscg.mil 4231745, Seapower Magazine, Boating Magazine, Sailing Scuttlebutt). No press release or report for 2025."
+ ],
+ "notes": "Checked 21 Oct 2026: the 2025 U.S. Coast Guard Recreational Boating Statistics are not published. The authoritative listing at uscgboating.org/statistics/accident_statistics.php shows the 2025 edition as 'Pending' with 'Oct 31, 2026' in the Download PDF column (no link), i.e. the Coast Guard now signals a release on or about 31 Oct 2026 (the page footer reads 'Last Modified: October 2026'). The uscg.mil Incident Statistics page still says '2025 Statistics will be available by August 2026', which has lapsed; treat uscgboating.org as the live listing. The page's only revision notice concerns the 2019-2023 editions (revised 12 Feb 2025); there is no notice of a revision to the 2024 edition and the 2024 PDF is still linked at the same URL the ledger cites, so no corrections to uscg-boating-2024 or us-location-boating-2024 are proposed. I did not re-open the 2024 PDF (out of scope: the task asks for corrections only if a 2025 edition revises the 2024 figures). No rows: nothing was read from a 2025 document. The Texas Parks and Wildlife 2025 incident PDF surfaced by search is a state-level file with its own reporting rules; it was not opened and must not be taken as a proxy for the national 2025 figures.",
+ "next_tasks": [
+  {
+   "title": "Re-check uscgboating.org accident_statistics.php after 31 Oct 2026 for the 2025 Recreational Boating Statistics and record total deaths, drownings and life-jacket figures with table and page",
+   "why": "The page's Download PDF column for 2025 now shows 'Oct 31, 2026', ten days after this check; the same task can be rerun unchanged once a link appears."
+  },
+  {
+   "title": "When the 2025 edition is out, compare its 2024 column (556 deaths; 365 drownings; PFD worn 48 / not worn 310 / unknown 7) against the ledger and read the uscgboating.org 'record of changes' page for any 2024 revision",
+   "why": "Corrections to uscg-boating-2024 and us-location-boating-2024 are only warranted if the Coast Guard revises 2024; the record-of-changes page is where such revisions are logged (the 2019-2023 revision of 12 Feb 2025 was announced there)."
+  },
+  {
+   "title": "Decide whether state-level boating fatality reports (e.g. Texas Parks and Wildlife 'Texas boating incidents statistics 2025') belong in the ledger as separate, non-additive rows",
+   "why": "A state 2025 boating-incident PDF already exists while the national edition is pending; it has its own reporting criteria and must never be combined with the USCG national totals."
+  }
+ ]
+}
