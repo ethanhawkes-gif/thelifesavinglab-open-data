@@ -113,8 +113,8 @@ button:focus-visible { outline: 2px solid var(--lamp); outline-offset: 2px; }
 </div>
 <div aria-label="Choose part" class="tabs" role="group">
 <button aria-pressed="true" id="tab1">Part 1 · The problem</button>
-<button aria-pressed="false" id="tab2">Part 2 · The solution</button>
-<button aria-pressed="false" id="tab3">Part 3 · The Solver</button>
+<button aria-pressed="false" id="tab2">Part 2 · The solution · text/visual</button>
+<button aria-pressed="false" id="tab3">Part 3 · The Solver · text/visual</button>
 </div>
 </div>
 <div class="screen">
@@ -135,7 +135,7 @@ button:focus-visible { outline: 2px solid var(--lamp); outline-offset: 2px; }
 <div class="segs" id="segs"></div>
 <div class="count" id="count"></div>
 </div>
-<p class="note">Prototype. Voice by ElevenLabs. Drill details shown are made up for illustration.</p><p class="note"><strong>Creator-review staging:</strong> this voice track is an owner asset. Its rescue-training, mission-use and improvement language is illustrative, not evidence of completed operations or results. Audio for the two unreconciled Solver scenes is withheld; read the qualified transcript before citing it.</p><p class="note"><strong>Public provenance:</strong> this page presents an illustrative prototype and a proposed June 2027 testbed scenario—not completed Solver training, repeated student rescue practice, real-mission use, or measured continual improvement. <a href="transcript.md">Read the qualified transcript</a> and <a href="/llms.txt">source index</a>.</p><p class="note" id="mediaError" role="status" aria-live="polite" hidden>Audio could not load in this embedded player. Use the transcript or open the standalone explainer.</p>
+<p class="note">Prototype. Voice by ElevenLabs. Drill details shown are made up for illustration.</p><p class="note"><strong>Creator-review staging:</strong> this voice track is an owner asset. Its rescue-training, mission-use and improvement language is illustrative, not evidence of completed operations or results. Audio for Parts 2–3 is withheld until matching narration exists; those parts are text/visual-only. Read the qualified transcript before citing it.</p><p class="note"><strong>Public provenance:</strong> this page presents an illustrative prototype and a proposed June 2027 testbed scenario—not completed Solver training, repeated student rescue practice, real-mission use, or measured continual improvement. <a href="transcript.md">Read the qualified transcript</a> and <a href="/llms.txt">source index</a>.</p><p class="note" id="mediaError" role="status" aria-live="polite" hidden>Audio could not load in this embedded player. Use the transcript or open the standalone explainer.</p>
 </div>
 <script>
 /* ---------- drawing helpers ---------- */
@@ -488,7 +488,7 @@ const PARTS = {
 };
 
 /* ---------- voice track ---------- */
-const AUDIO = {"p1s1": {"dur": 7.36, "src": "narration/p1s1.mp3"}, "p1s2": {"dur": 27.44, "src": "narration/p1s2.mp3"}, "p1s3": {"dur": 20.64, "src": "narration/p1s3.mp3"}, "p1s4": {"dur": 14.48, "src": "narration/p1s4.mp3"}, "p1s5": {"dur": 21.04, "src": "narration/p1s5.mp3"}, "p2s1": {"dur": 26.4, "src": "narration/p2s1.mp3"}, "p2s2": {"dur": 16.0, "src": "narration/p2s2.mp3"}, "p2s3": {"dur": 9.28, "src": "narration/p2s3.mp3"}, "p2s5": {"dur": 9.2, "src": "narration/p2s5.mp3"}, "p2s6": {"dur": 12.88, "src": "narration/p2s6.mp3"}, "p3s1": {"dur": 8.08, "src": "narration/p3s1.mp3"}, "p3s3": {"dur": 17.04, "src": "narration/p3s3.mp3"}, "p3s4": {"dur": 16.64, "src": "narration/p3s4.mp3"}};
+const AUDIO = {"p1s1": {"dur": 7.36, "src": "narration/p1s1.mp3"}, "p1s2": {"dur": 27.44, "src": "narration/p1s2.mp3"}, "p1s3": {"dur": 20.64, "src": "narration/p1s3.mp3"}, "p1s4": {"dur": 14.48, "src": "narration/p1s4.mp3"}, "p1s5": {"dur": 21.04, "src": "narration/p1s5.mp3"}};
 const AUDIO_LEAD = .3, AUDIO_TAIL = .6;
 const voice = new Audio();
 voice.preload = 'auto';

@@ -59,4 +59,4 @@ https://github.com/ethanhawkes-gif/thelifesavinglab-open-data (MIT code; data as
 - Never invent data, combine incompatible figures, include personal identifiers/precise locations, or claim an emergency/rescue function.
 
 ## Explainer
-- /media/wisdom-under-pressure/index.html is a staging candidate: interactive HTML/SVG with 15 narration MP3 clips, not MP4/WebM. Keep the original Claude link and transcript fallback until iframe playback and captions are verified.
+- /media/wisdom-under-pressure/index.html is a staging candidate: interactive HTML/SVG with five Part 1 narration MP3 clips, not MP4/WebM. Parts 2–3 are explicitly text/visual-only until matching narration is ready. Keep the original Claude link and qualified transcript fallback until playback and captions are verified.
