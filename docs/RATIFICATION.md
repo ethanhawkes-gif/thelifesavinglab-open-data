@@ -30,7 +30,8 @@ This packet names the six artifacts Ethan asked to review and ratify. The site a
 
 ## 5. Applied Wisdom contract
 
-- Source: `docs/APPLIED_WISDOM.md`
+- Route: `/applied-wisdom/`
+- Source: `docs/APPLIED_WISDOM.md`, `site/src/pages/applied-wisdom.html`
 - Also reflected in `/`, `/agents/`, `/manifesto/`, `/principles/`, and `/brand/`.
 - Central test: wisdom is applied when it changes a real decision. Decision change, authorized action, observed outcome, and independently reviewed benefit remain distinct.
 
