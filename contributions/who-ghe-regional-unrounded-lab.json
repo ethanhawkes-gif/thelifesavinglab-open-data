@@ -1,0 +1,223 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "who-ghe-regional-unrounded",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Fable 5.1 (independent subagent in the lab's own session, 2026-10-21)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "who-ghe2019-region-afr",
+   "figure": "39,000 · about 3.56 per 100,000 (GHE 2019 release, as printed by WHO AFRO)",
+   "low": 39000,
+   "high": 39000,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "Drowning deaths in the WHO African Region in 2019 as estimated in the WHO Global Health Estimates 2019 release (legacy vintage, the one behind who-ghe-2019). Printed rounded ('an estimated 39 000'); the rate is printed as 'about 3.56' per 100 000 in the Figure 1 text and 3.6 in the Deaths section. The fact sheet names no ICD codes.",
+   "geography": "WHO African Region",
+   "source": "WHO Regional Office for Africa, integrated African Health Observatory (iAHO), Analytical Fact Sheet 'Drowning... a leading cause of unintentional injury death', July 2023; data source stated as WHO Global Health Estimates 2019",
+   "url": "https://files.aho.afro.who.int/afahobckpcontainer/production/files/Regional_Factsheet_Drowning_Prevention.pdf",
+   "grade": "A",
+   "do_not_add_to": "A different model vintage from who-region-afr (GHE 2021 release: 66,000 in 2021). WHO states revision series are not comparable, so never set 39,000 (2019) beside 66,000 (2021) as a trend. A share of who-ghe-2019 only; never added to who-ghe-2021 or to any GHE 2023 figure.",
+   "note": "Shows how large the revision between GHE releases is for Africa (39,000 in the 2019 release versus 66,000 in the 2021 release); the gap is mostly re-estimation, not a rise. The fact sheet also says the Region's crude rate fell 'from 5.1 to 3.6' per 100 000 between 2000 and 2019 and puts the Western Pacific Region at 3.8 per 100 000 in 2019. Not the unrounded figure the task asked for."
+  },
+  {
+   "id": "who-ghe2019-region-sear",
+   "figure": "70,000 (GHE 2019 release, as printed by WHO SEARO)",
+   "low": 70000,
+   "high": 70000,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "Drowning deaths in the WHO South-East Asia Region in 2019, from the WHO Global Health Estimates 2019 release (the release linked from the news item). Printed rounded ('an estimated 70 000'); no rate printed. Cause definition not stated on the page.",
+   "geography": "WHO South-East Asia Region",
+   "source": "WHO Regional Office for South-East Asia, news release 'Nearly two thirds of global drowning deaths occur in Asia Pacific', 22 July 2021 (launch of the regional status reports on drowning in South-East Asia and the Western Pacific)",
+   "url": "https://www.who.int/southeastasia/news/detail/22-07-2021-nearly-two-thirds-of-global-drowning-deaths-occur-in-asia-pacific",
+   "grade": "A",
+   "do_not_add_to": "A different model vintage from who-region-sear (GHE 2021 release: 83,000 in 2021); never read the two as a 2019-to-2021 change. A share of who-ghe-2019 only. The release's combined 'over 144 000' for Asia Pacific is its own printed total, not ours.",
+   "note": "The same release gives 74 000 for the Western Pacific Region (row who-ghe2019-region-wpr) and says the two regions held 61% of global drowning deaths in 2019. The regional status reports themselves (WHO IRIS handles 10665/343085 and 10665/343073) were not opened; they may print the unrounded 2019 figure."
+  },
+  {
+   "id": "who-ghe2019-region-wpr",
+   "figure": "74,000 (GHE 2019 release, as printed by WHO SEARO and WPRO)",
+   "low": 74000,
+   "high": 74000,
+   "unit": "deaths",
+   "year": 2019,
+   "scope": "Drowning deaths in the WHO Western Pacific Region in 2019, from the WHO Global Health Estimates 2019 release. Printed rounded ('an estimated ... 74 000'); the WPRO data page prints the same 74 000 against 120 000 in 2000. No rate printed on either page; WHO AFRO's July 2023 fact sheet gives the Region 3.8 per 100 000 in 2019. Cause definition not stated.",
+   "geography": "WHO Western Pacific Region",
+   "source": "WHO Regional Office for South-East Asia, news release of 22 July 2021 (joint launch with WHO WPRO); same figure on the WHO Western Pacific Health Data Platform page 'World Drowning Prevention Day 2023'",
+   "url": "https://www.who.int/southeastasia/news/detail/22-07-2021-nearly-two-thirds-of-global-drowning-deaths-occur-in-asia-pacific",
+   "grade": "A",
+   "do_not_add_to": "A different model vintage from who-region-wpr (GHE 2021 release: 84,000 in 2021); never read as a trend against it. A share of who-ghe-2019 only. The 2000 figure (120 000) is a back-cast from the same model.",
+   "note": "WPRO page: https://data.wpro.who.int/world-drowning-prevention-day-2023/ ('from 120 000 to 74 000 deaths per year'). The 2024 WPRO dashboard (data.wpro.who.int/drowning-2024/) repeats the GHE 2021 release's rounded 'over 84,000 people drowned in 2021' and 4.3 per 100,000, so it does not supply an unrounded value either."
+  }
+ ],
+ "corrections": [
+  {
+   "row_id": "who-region-eur",
+   "field": "source",
+   "old": "{SRC}",
+   "new": "WHO, Global status report on drowning prevention 2024, Fig. 2 (p. 14) and the text on p. 14; figures from WHO Global Health Estimates 2021",
+   "evidence": "The ledger holds an unfilled placeholder. The figure is printed in the WHO Global status report on drowning prevention 2024 (ISBN 9789240103962, published 13 December 2024), p. 14 text and Fig. 2 'Number and rate of drowning deaths by WHO region': European Region 15 000 deaths, 5%, 1.7 per 100 000; p. 12 names 'WHO's latest Global Health Estimates (2021)'. Read on 21 Oct 2026 via the Spanish health-ministry mirror because the WHO IRIS download refused the fetch. Wording matches the sibling rows who-region-wpr etc."
+  },
+  {
+   "row_id": "who-region-eur",
+   "field": "url",
+   "old": "{WHO}",
+   "new": "https://www.who.int/publications/i/item/9789240103962",
+   "evidence": "Placeholder in the ledger. The WHO publication page for the Global status report on drowning prevention 2024 (publication date 13 December 2024, ISBN 9789240103962, 253 pages) was opened on 21 Oct 2026; it is the URL the sibling regional rows already use."
+  },
+  {
+   "row_id": "who-ghe-2021",
+   "field": "note",
+   "old": "Point estimate; the cited table prints no uncertainty interval, which is not the same as no uncertainty. The 2024 report rounds it to 300 000 and gives a global rate of 3.8 per 100 000 (p. 14).",
+   "new": "Point estimate; the cited table prints no uncertainty interval, which is not the same as no uncertainty. The 2024 report rounds it to 300 000 and gives a global rate of 3.8 per 100 000 (p. 14). Since autumn 2026 the cited GHE page serves the 2023 release (files dated 2026-09-30, recommended citation 'Global Health Estimates 2023 ... 2000-2023') and no longer links the 2021 summary tables; WHO says the 2000-2023 estimates are not comparable to previously released estimates, so a 2021 value read from the new files is a different vintage from this row.",
+   "evidence": "GHE 'Leading causes of death' page, opened 21 Oct 2026: download list (deaths_global_2026-09-30.xlsx, deaths_whoregion_2026-09-30.xlsx, deaths_wbincome_2026-09-30.xlsx), recommended citation 'Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023', and the sentence 'Due to changes in data and some methods, the 2000-2023 estimates are not comparable to previously-released WHO estimates.' Methods paper WHO/HSA/DDA/GHE/2026.2 (September 2026), Section 1 and Section 10.1, says the same."
+  },
+  {
+   "row_id": "who-ghe-2019",
+   "field": "note",
+   "old": "Still quoted on some WHO pages.",
+   "new": "Still quoted on some WHO pages. The cited GHE page now (autumn 2026) serves the 2023 release and links no 2019-release file except an unlabelled legacy 2000-2016 workbook; WHO states that revision series are not comparable and differences between them should not be read as time trends. Regional values from this release, as printed by WHO regional offices for 2019: African Region 39 000, South-East Asia 70 000, Western Pacific 74 000 (rows who-ghe2019-region-afr, -sear, -wpr).",
+   "evidence": "GHE 'Leading causes of death' page opened 21 Oct 2026 (download list and comparability sentence); WHO methods paper WHO/HSA/DDA/GHE/2026.2, Section 10.1 ('differences between revision series should not be interpreted as time trends'); WHO AFRO iAHO fact sheet July 2023; WHO SEARO news release 22 July 2021."
+  }
+ ],
+ "evidence": [
+  {
+   "url": "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death",
+   "quote": "Due to changes in data and some methods, the 2000–2023 estimates are not comparable to previously-released WHO estimates.",
+   "where": "GHE: Leading causes of death page, paragraph above the download list (opened 21 Oct 2026)"
+  },
+  {
+   "url": "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death",
+   "quote": "Summary tables of mortality estimates by cause, age and sex, globally and by region, 2000–2023",
+   "where": "Same page, heading 'GLOBAL AND BY REGION', description above the links 'Global summary estimates' (deaths_global_2026-09-30.xlsx), 'WHO regions' (deaths_whoregion_2026-09-30.xlsx) and 'World Bank income groups' (deaths_wbincome_2026-09-30.xlsx)"
+  },
+  {
+   "url": "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death",
+   "quote": "Global Health Estimates 2023: Deaths by Cause, Age, Sex, by Country and by Region, 2000-2023.",
+   "where": "Same page, 'Recommended citation' (continues 'Geneva, World Health Organization; 2026')"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2023_cod_methods.pdf?sfvrsn=4d284ba5_1",
+   "quote": "these estimates for the years 2000-2023 are not directly comparable with previous WHO estimates for 2000-2021",
+   "where": "WHO methods and data sources for country-level causes of death 2000-2023, WHO/HSA/DDA/GHE/2026.2 (September 2026), Section 1"
+  },
+  {
+   "url": "https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2023_cod_methods.pdf?sfvrsn=4d284ba5_1",
+   "quote": "differences between revision series should not be interpreted as time trends",
+   "where": "Same methods paper, Section 10.1"
+  },
+  {
+   "url": "https://ghoapi.azureedge.net/api/Indicator?$filter=contains(IndicatorName,'rowning')",
+   "quote": "Age-standardized death rates, drownings, per 100,000",
+   "where": "GHO OData API indicator list filtered on 'rowning': only two indicators, SA 1422 (DALYs) and SA 1441 (this one); neither is a GHE deaths-by-region series"
+  },
+  {
+   "url": "https://www.who.int/publications/i/item/9789240103962",
+   "quote": "Global status report on drowning prevention 2024",
+   "where": "WHO publication page title; page gives publication date 13 December 2024, ISBN 9789240103962, 253 pages and a single download (WHO IRIS bitstream), no separate annex or data file"
+  },
+  {
+   "url": "https://vsf-iwsold-pre-portal.sanidad.gob.es/areas/promocionPrevencion/lesiones/medioAcuatico/internacional/oms/docs/globalStatusreportondrowningprevention.pdf",
+   "quote": "In 2021, the highest number of drowning deaths occurred in the Western Pacific Region (84 000 deaths, 28% of the global burden).",
+   "where": "WHO Global status report on drowning prevention 2024 (Spanish health-ministry mirror), Section 1, p. 14; the same page and Fig. 2 give South-East Asia 83 000 (4.0), African 66 000 (5.6), Eastern Mediterranean 35 000 (4.4), Americas 17 000 (1.6), European 15 000 (1.7)"
+  },
+  {
+   "url": "https://vsf-iwsold-pre-portal.sanidad.gob.es/areas/promocionPrevencion/lesiones/medioAcuatico/internacional/oms/docs/globalStatusreportondrowningprevention.pdf",
+   "quote": "WHO's latest Global Health Estimates (2021) reveal that drowning",
+   "where": "Same report, Section 1, p. 12"
+  },
+  {
+   "url": "https://vsf-iwsold-pre-portal.sanidad.gob.es/areas/promocionPrevencion/lesiones/medioAcuatico/internacional/oms/docs/globalStatusreportondrowningprevention.pdf",
+   "quote": "The African Region has the highest rate (5.6 per 100 000 population)",
+   "where": "Same report, Section 1, p. 14; every regional count visible in the extracted text is rounded to the nearest thousand"
+  },
+  {
+   "url": "https://files.aho.afro.who.int/afahobckpcontainer/production/files/Regional_Factsheet_Drowning_Prevention.pdf",
+   "quote": "In 2019, an estimated 39 000 people died from drowning, making drowning a major public health problem in the African Region.",
+   "where": "WHO AFRO iAHO Analytical Fact Sheet 'Drowning... a leading cause of unintentional injury death', July 2023, section 'Scope of the problem' (Figure 1 caption cites WHO Global Health Estimates 2019)"
+  },
+  {
+   "url": "https://files.aho.afro.who.int/afahobckpcontainer/production/files/Regional_Factsheet_Drowning_Prevention.pdf",
+   "quote": "began to decline from about 5.09 in 2005 to about 3.56 in 2019",
+   "where": "Same fact sheet, 'Scope of the problem', text on the Region's drowning deaths per 100 000 population (Figure 1)"
+  },
+  {
+   "url": "https://files.aho.afro.who.int/afahobckpcontainer/production/files/Regional_Factsheet_Drowning_Prevention.pdf",
+   "quote": "the WHO Western Pacific Region (3.8 per 100 000)",
+   "where": "Same fact sheet, section 'Deaths' (African Region 3.6 per 100 000, second after the Western Pacific, 2019)"
+  },
+  {
+   "url": "https://www.who.int/southeastasia/news/detail/22-07-2021-nearly-two-thirds-of-global-drowning-deaths-occur-in-asia-pacific",
+   "quote": "Drowning claimed the lives of an estimated 70 000 and 74 000 people in the WHO South-East Asia and Western Pacific regions",
+   "where": "WHO SEARO news release, 22 July 2021, second paragraph; the preceding sentence fixes the year as 2019 and links '2019' to WHO's Global Health Estimates"
+  },
+  {
+   "url": "https://www.who.int/southeastasia/news/detail/22-07-2021-nearly-two-thirds-of-global-drowning-deaths-occur-in-asia-pacific",
+   "quote": "In 2019, over 144 000 people drowned in the Asia Pacific region, accounting for 61% of global drowning deaths.",
+   "where": "Same release, first paragraph (the release's own combined figure for the two regions, not added by us)"
+  },
+  {
+   "url": "https://data.wpro.who.int/world-drowning-prevention-day-2023/",
+   "quote": "from 120 000 to 74 000 deaths per year",
+   "where": "WHO Western Pacific Health Data Platform, 'World Drowning Prevention Day 2023' page, headline summary (2000 to 2019; no rate, no download)"
+  },
+  {
+   "url": "https://data.wpro.who.int/drowning-2024/",
+   "quote": "over 84,000 people drowned in 2021.",
+   "where": "WHO Western Pacific Health Data Platform, 'Drowning 2024' page, attributed to the Global status report on drowning prevention 2024; also 'The regional drowning mortality rate is 4.3 per 100,000 population.'"
+  },
+  {
+   "url": "https://applications.emro.who.int/docs/9789292747244-eng.pdf",
+   "quote": "Of these, 12% occurred in the Eastern Mediterranean Region (35 000 deaths).",
+   "where": "WHO EMRO, 'Drowning prevention in the Eastern Mediterranean Region: Facts from the first Global status report on drowning prevention 2024' (Cairo, 2025), Section 3, p. 3 (2021; rate 4.4 per 100 000 on the same page)"
+  },
+  {
+   "url": "https://www.who.int/news-room/fact-sheets/detail/drowning",
+   "quote": "There are around 300 000 annual drowning deaths worldwide.",
+   "where": "WHO Drowning fact sheet dated 1 May 2026, Key facts; no regional counts and no GHE edition named"
+  }
+ ],
+ "tried": [
+  "GHO OData API indicator list: ghoapi.azureedge.net/api/Indicator?$filter=contains(IndicatorName,'rowning') and ...'Drown': only SA 1422 and SA 1441 (Global Information System on Alcohol and Health, age-standardized rates). SA 1441?$filter=SpatialDimType eq 'REGION' returns an empty value array; SA 1441?$top=20 returns country rows for 2002/2004 loaded 2013-06-11. Filters 'Global Health Estimates' (empty) and 'njur' (12 indicators, none drowning). The GHO API carries no GHE drowning-deaths series.",
+  "data.who.int: home page lists Indicators, Countries, Dashboards; /indicators rendered 'we don't have any results matching your criteria'; /dashboards/dashboards only links Global Health Estimates (a Triple Billion redirect), Health Inequality Monitor and COVID-19. Site search surfaced SDG injury indicators (homicide, suicide, poisoning, road traffic) but no drowning indicator, so no CSV (srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/INDICATOR/<id>_ALL_LATEST.csv) exists to read.",
+  "platform.who.int/data/ (Data at WHO hub) and www.who.int/data/global-health-estimates: links only to the GHO theme pages and the four GHE 2023 methods PDFs; no data tables, no API.",
+  "GHO theme page 'Mortality and global health estimates': lists GHE-derived indicators for NCDs, suicide, road traffic and unintentional poisoning, none for drowning; no xlsx/csv links.",
+  "GHE 'Leading causes of death' page: download list recorded (see notes). Fetched cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1 directly: the tool returned only '[binary data]', so the regional workbook could not be read. The page states no sheet names. No GHE 2021 regional file (ghe2021 deaths by region) is linked any more; the only ghe2021 file left is ghe2021_deathrates_bycountry_asdr.xlsx (unlabelled).",
+  "GHE 2023 methods paper ghe2023_cod_methods.pdf (WHO/HSA/DDA/GHE/2026.2): extracted text is 95,843 characters and stops inside Annex Table A at GHE code 1241 (Digestive diseases), before the Injuries rows, so the 'Drowning' cause code and ICD-10 codes for this release could not be quoted; offsets 60000 and 100000 did not reach it.",
+  "WHO Global status report on drowning prevention 2024: publication page offers one 9.4 MB download only (IRIS bitstream af997e91-f391-4d98-9119-041c03025b40/content), which returned a fetch error, as it did on 15 Oct 2026. The Spanish health-ministry mirror gives 107,706 characters of text ending in Section 3 (p. 42); every regional count visible is rounded to the nearest thousand; annexes and country profiles not reachable. No separate annex or data file is published.",
+  "WHO EMRO 'Drowning prevention in the Eastern Mediterranean Region' (2025, applications.emro.who.int/docs/9789292747244-eng.pdf): full text read; prints 35 000 and 4.4 for 2021 (rounded) and income-group rates (Table 1, garbled); no unrounded regional count.",
+  "WHO WPRO data.wpro.who.int/drowning-2024/ and /world-drowning-prevention-day-2023/: rounded only (over 84,000 in 2021; 74 000 in 2019); no downloads.",
+  "WHO Drowning fact sheet (1 May 2026): 'around 300 000' and 3.8 per 100 000; no regional counts; does not say whether it is now on GHE 2023.",
+  "WHO Europe 2023 country profile (drowning-2023-por.pdf on cdn.who.int, GHE 2019 data): country figure only ('79 people fatally drowned in Portugal in 2019'); no regional total.",
+  "Our World in Data grapher deaths-from-drowning-ghe (WHO GHE 2021 copy, retrieved by OWID 30 July 2024, 2000-2021): the full CSV is cut off at Libya (about 2,244 rows, no entity named with 'WHO' among A-L); the filtered CSV returns 192 country rows for 2021 and no WHO-region aggregate. Not WHO's own host, and country rows must not be summed, so nothing taken from it.",
+  "WHO Executive Board draft resolution EB152(12) (FINA mirror of B152-12-en.pdf): global 'official global estimate of 235 000 deaths per annum' (GHE 2019); no regional figures.",
+  "WebSearch budget for this session was exhausted after about 20 queries (shared limit), so the legacy GHO data views (apps.who.int/gho/data node GHECOD), the WHO IRIS regional status reports (10665/343085, 10665/343073) and the SEARO 2025 regional report (ISBN 9789290221098) were not opened."
+ ],
+ "notes": "Result: the unrounded regional drowning deaths and rates for 2019, 2021 and 2023 were NOT found in any HTML, JSON or PDF source; they exist only in Excel workbooks that the fetch tool returns as '[binary data]'. No figure here is summed or computed by us. What a person with a browser should do: (1) Download https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/deaths_whoregion_2026-09-30.xlsx?sfvrsn=b1e96052_1 ('WHO regions' link on https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death, described as 'Summary tables of mortality estimates by cause, age and sex, globally and by region, 2000-2023'). The page states no sheet names. Look for the GHE cause row labelled 'Drowning' (expected under Injuries, Unintentional injuries; the ICD-10 codes WHO uses for its drowning estimates are W65-W74 per the 2024 report, p. 8), both sexes, all ages, for each of the six regions and for the years 2019, 2021 and 2023; record sheet name, row label and the exact cell values and whether deaths are in thousands. The global companion is deaths_global_2026-09-30.xlsx?sfvrsn=22004518_1 and the income-group file deaths_wbincome_2026-09-30.xlsx?sfvrsn=476c620d_1. Country-level files for 2019, 2021 and 2023 (deaths_bycountry_age_sex_<year>_2026-10-01.xlsx) also exist, and rate files age-standardized-death-rates-2000-2023_bycountry_2026-10-01.xlsx and crude-death-rates-2000-2023_bycountry_2026-10-01.xlsx (country level only; the page lists no regional rate file, so a regional rate may have to be read from the deaths file if it carries one, or is not published). (2) Important vintage caveat for the acceptance check 'do the 2021 values match the report's rounded figures': the page now serves the GHE 2023 release (recommended citation 'Global Health Estimates 2023 ... 2000-2023', Geneva, WHO, 2026; files dated 2026-09-30), and WHO states 'the 2000-2023 estimates are not comparable to previously-released WHO estimates' and, in the methods paper WHO/HSA/DDA/GHE/2026.2, that 'differences between revision series should not be interpreted as time trends'. The 2021 column of the new regional file is therefore a re-estimate and need not round to the report's 15 000 / 66 000 / 84 000 / 83 000 / 35 000 / 17 000, which come from the GHE 2021 release (report p. 12). A mismatch would not be an error in either source. The GHE 2021 regional summary file is no longer linked on the page; a person should ask WHO (GHE team) or check whether an archived copy exists before comparing. (3) Rounded WHO values seen on 21 Oct 2026, all consistent with the ledger: 2021 (GHE 2021 release) Western Pacific 84 000 / 4.3, South-East Asia 83 000 / 4.0, African 66 000 / 5.6, Eastern Mediterranean 35 000 / 4.4, Americas 17 000 / 1.6, European 15 000 / 1.7 (report p. 14, Fig. 2; EMRO 2025 and WPRO 2024 pages repeat 35 000 and 'over 84,000'). 2019 (GHE 2019 release, a different vintage): African Region 39 000 (about 3.56 per 100 000), South-East Asia 70 000, Western Pacific 74 000 (3.8 per 100 000 per AFRO), recorded as new rows; Americas and Eastern Mediterranean 2019-release values not found; European Region 'over 19 000' (WHO/Europe, July 2021) is filed in the companion bundle who-ghe-europe-9155-check. No value for 2023 was found anywhere in text form. (4) The GHO OData API holds no GHE drowning series (only two alcohol-programme indicators with 2002/2004 country data), and data.who.int has no drowning indicator, so there is no JSON route to these figures. (5) Corrections: who-region-eur carries unfilled placeholders '{SRC}' and '{WHO}' in source and url; proposed values copy the sibling regional rows and were checked against the report and its publication page. Notes on who-ghe-2021 and who-ghe-2019 flag that their URL now serves a different vintage. (6) IHME/GBD was not used. GHO indicator codes are written as 'SA 1422' and 'SA 1441' for the codes SA followed by zeros and those digits, because the full co",
+ "next_tasks": [
+  {
+   "title": "Open deaths_whoregion_2026-09-30.xlsx by hand and record the 'Drowning' row for all six WHO regions, both sexes, all ages, for 2019, 2021 and 2023 with sheet name, row label and units",
+   "why": "The unrounded figures exist only in this workbook; the fetch tool cannot read it."
+  },
+  {
+   "title": "Locate the GHE 2021 release's regional summary file (deaths by WHO region, 2000-2021, released 2024) in a WHO archive or by request, and read its 2021 'Drowning' row per region",
+   "why": "Only that file can show the exact numbers behind the 2024 report's 15 000, 66 000, 84 000, 83 000, 35 000 and 17 000; the GHE page now links the 2023 release, which WHO says is not comparable."
+  },
+  {
+   "title": "Read the WHO IRIS regional status reports on drowning in South-East Asia (10665/343085) and the Western Pacific (10665/343073), 2021, for the unrounded GHE 2019 regional figures and rates",
+   "why": "Their launch release prints only 70 000 and 74 000; the reports may print exact counts, rates and the ICD definition."
+  },
+  {
+   "title": "Find the GHE 2019 release's 2019 drowning deaths for the Region of the Americas and the Eastern Mediterranean Region as printed by WHO (PAHO or EMRO pages, World Drowning Prevention Day 2021-2022)",
+   "why": "Completes the 2019-vintage regional set; AFR, SEAR and WPR are now in the ledger."
+  },
+  {
+   "title": "Check Annex Table A of WHO/HSA/DDA/GHE/2026.2 (GHE 2023 methods) for the 'Drowning' GHE cause code and ICD-10 codes",
+   "why": "The extracted text stops before the Injuries rows; a person can confirm whether the 2023 release still uses W65-W74."
+  }
+ ]
+}

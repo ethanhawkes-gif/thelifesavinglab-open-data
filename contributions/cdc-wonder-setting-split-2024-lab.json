@@ -1,0 +1,255 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "cdc-wonder-setting-split-2024",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "lab",
+  "agent": "Claude Fable 5.1, lab session with the desktop app's browser, 2026-10-21"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "us-wonder-2024-w65-bathtub",
+   "figure": "717 deaths · W65 (Drowning and submersion while in bath-tub)",
+   "low": 717,
+   "high": 717,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "United States residents, deaths occurring in calendar 2024, underlying cause ICD-10 W65 as WONDER titles it. Unintentional only (W65–W74 are accidental codes); suicide (X71), homicide (X92) and undetermined intent (Y21) excluded; watercraft drownings (V90, V92) excluded and recorded in their own rows. Crude rate 0.2 per 100,000 (95% CI 0.2–0.2) on a population of 340,110,988.",
+   "geography": "United States",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018–2024, Single Race (dataset D158; data from the Multiple Cause of Death Files as compiled from the 57 vital statistics jurisdictions), query run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "One code of the W65–W74 block; the block total is WONDER's own row (us-wonder-2024-w65-w74-total), never re-added from these rows. Not added to V90/V92 rows or to the MMWR totals, which cover a different code set.",
+   "note": "Query: Group By = Cause of death; ICD-10 codes W65, W66, W67, W68, W69, W70, W73, W74; Year 2024; Show Totals on; Show Zeros on; rates per 100,000. No cell in this query was suppressed (every count is above nine)."
+  },
+  {
+   "id": "us-wonder-2024-w66-fall-into-bathtub",
+   "figure": "22 deaths · W66 (Drowning and submersion following fall into bath-tub)",
+   "low": 22,
+   "high": 22,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "United States residents, deaths occurring in calendar 2024, underlying cause ICD-10 W66 as WONDER titles it. Unintentional only; intent codes and watercraft codes excluded. Crude rate 0.0 per 100,000.",
+   "geography": "United States",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018–2024, Single Race (dataset D158), query run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "One code of the W65–W74 block; the block total is WONDER's own row. Not added to V90/V92 or to MMWR totals.",
+   "note": "Same query as the W65 row."
+  },
+  {
+   "id": "us-wonder-2024-w67-swimming-pool",
+   "figure": "823 deaths · W67 (Drowning and submersion while in swimming-pool)",
+   "low": 823,
+   "high": 823,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "United States residents, deaths occurring in calendar 2024, underlying cause ICD-10 W67 as WONDER titles it. Unintentional only; intent codes and watercraft codes excluded. Crude rate 0.2 per 100,000 (95% CI 0.2–0.3).",
+   "geography": "United States",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018–2024, Single Race (dataset D158), query run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "One code of the W65–W74 block; the block total is WONDER's own row. Pool deaths after a fall are W68, a separate row; never merged with it by the lab.",
+   "note": "Same query as the W65 row."
+  },
+  {
+   "id": "us-wonder-2024-w68-fall-into-swimming-pool",
+   "figure": "58 deaths · W68 (Drowning and submersion following fall into swimming-pool)",
+   "low": 58,
+   "high": 58,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "United States residents, deaths occurring in calendar 2024, underlying cause ICD-10 W68 as WONDER titles it. Unintentional only; intent codes and watercraft codes excluded. Crude rate 0.0 per 100,000.",
+   "geography": "United States",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018–2024, Single Race (dataset D158), query run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "One code of the W65–W74 block; the block total is WONDER's own row. Not merged with W67 by the lab.",
+   "note": "Same query as the W65 row."
+  },
+  {
+   "id": "us-wonder-2024-w69-natural-water",
+   "figure": "1,856 deaths · W69 (Drowning and submersion while in natural water)",
+   "low": 1856,
+   "high": 1856,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "United States residents, deaths occurring in calendar 2024, underlying cause ICD-10 W69 as WONDER titles it: natural water (sea, lake, river, open water) while in it, not following a fall. Unintentional only; intent codes and watercraft codes excluded. Crude rate 0.5 per 100,000 (95% CI 0.5–0.6).",
+   "geography": "United States",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018–2024, Single Race (dataset D158), query run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "One code of the W65–W74 block; the block total is WONDER's own row. Natural-water deaths after a fall are W70, a separate row; never merged with it by the lab. Boating drownings are V90/V92, outside this block.",
+   "note": "Same query as the W65 row. The largest single code: about 44% of the W65–W74 total is the reader's arithmetic, not WONDER's."
+  },
+  {
+   "id": "us-wonder-2024-w70-fall-into-natural-water",
+   "figure": "202 deaths · W70 (Drowning and submersion following fall into natural water)",
+   "low": 202,
+   "high": 202,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "United States residents, deaths occurring in calendar 2024, underlying cause ICD-10 W70 as WONDER titles it. Unintentional only; intent codes and watercraft codes excluded. Crude rate 0.1 per 100,000.",
+   "geography": "United States",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018–2024, Single Race (dataset D158), query run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "One code of the W65–W74 block; the block total is WONDER's own row. Not merged with W69 by the lab.",
+   "note": "Same query as the W65 row."
+  },
+  {
+   "id": "us-wonder-2024-w73-other-specified",
+   "figure": "153 deaths · W73 (Other specified drowning and submersion)",
+   "low": 153,
+   "high": 153,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "United States residents, deaths occurring in calendar 2024, underlying cause ICD-10 W73 as WONDER titles it (a specified setting that is not a bath-tub, pool or natural water, for example a quarry or a water-storage tank). Unintentional only; intent codes and watercraft codes excluded. Crude rate 0.0 per 100,000 (95% CI 0.0–0.1).",
+   "geography": "United States",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018–2024, Single Race (dataset D158), query run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "One code of the W65–W74 block; the block total is WONDER's own row.",
+   "note": "Same query as the W65 row."
+  },
+  {
+   "id": "us-wonder-2024-w74-unspecified",
+   "figure": "370 deaths · W74 (Unspecified drowning and submersion)",
+   "low": 370,
+   "high": 370,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "United States residents, deaths occurring in calendar 2024, underlying cause ICD-10 W74 as WONDER titles it: the certificate names no setting. Unintentional only; intent codes and watercraft codes excluded. Crude rate 0.1 per 100,000.",
+   "geography": "United States",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018–2024, Single Race (dataset D158), query run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "One code of the W65–W74 block; the block total is WONDER's own row. An unknown setting: never assigned to any water by the lab.",
+   "note": "Same query as the W65 row. About 9% of the block has no setting on the certificate, which limits any US setting split."
+  },
+  {
+   "id": "us-wonder-2024-w65-w74-total",
+   "figure": "4,201 unintentional drowning deaths · 1.2 per 100,000 crude (95% CI 1.2–1.3)",
+   "low": 4201,
+   "high": 4201,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "WONDER's own Total row for the eight selected codes W65, W66, W67, W68, W69, W70, W73, W74: United States residents, deaths occurring in calendar 2024, population 340,110,988 (Vintage 2024 postcensal single-race estimates, released 27 June 2024). Unintentional drowning only; excludes watercraft (V90, V92), suicide, homicide and undetermined intent, and flood and cataclysm codes.",
+   "geography": "United States",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018–2024, Single Race (dataset D158), Total row of the query run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "Already the total of the eight code rows above (WONDER's sum, not the lab's). Not comparable with us-total-2022 (the MMWR counts W65–W74 plus V90 and V92) without adding the separate V90/V92 total, which the lab does not do. Not added to WHO or GBD figures.",
+   "note": "Lower than the MMWR's 2019–2022 totals (4,067 / 4,589 / 4,677 / 4,509) in part because those include V90 and V92; the same query's V90+V92 total for 2024 is its own row. The crude rate is WONDER's; no age-adjusted rate was requested."
+  },
+  {
+   "id": "us-wonder-2024-v90-v92-total",
+   "figure": "339 watercraft-related drowning deaths (V90 and V92 together) · 0.1 per 100,000 crude",
+   "low": 339,
+   "high": 339,
+   "unit": "deaths",
+   "year": 2024,
+   "scope": "WONDER's own Total row for a second query selecting V90 (Accident to watercraft causing drowning and submersion) and V92 (Water-transport-related drowning and submersion without accident to watercraft), which WONDER expands into their 4-character sub-codes by craft type; United States residents, deaths occurring in calendar 2024, population 340,110,988. The total includes the sub-codes whose counts (one to nine) WONDER suppressed from display.",
+   "geography": "United States",
+   "source": "CDC WONDER, Underlying Cause of Death, 2018–2024, Single Race (dataset D158), Total row of the V90/V92 query run 21 Oct 2026",
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "grade": "A",
+   "do_not_add_to": "Not added to the W65–W74 total by the lab (the MMWR's combined series is the source for a combined figure, when it publishes 2024). Not comparable with the Coast Guard's 365 boating drownings for 2024 (different reporting system, recreational vessels only).",
+   "note": "Sub-codes displayed, each with its WONDER title: V90.5 canoe or kayak 30; V90.9 unspecified watercraft 87; V92.5 canoe or kayak 38; V92.6 inflatable craft (nonpowered) 15; V92.8 other unpowered watercraft, surf-board or windsurfer 14; V92.9 unspecified watercraft 119; V90.0, V90.1, V90.4, V90.7, V92.1 and V92.7 zero. Eight sub-codes (V90.2, V90.3, V90.6, V90.8, V92.0, V92.2, V92.3, V92.4) were suppressed as nine deaths or fewer and are not recorded, in keeping with WONDER's terms."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "W65 (Drowning and submersion while in bath-tub) 717 340,110,988 0.2 (0.2 - 0.2)",
+   "where": "Results table, first query (W65–W74 by cause of death, 2024), row 1; Query Date Oct 21, 2026 10:48:11 AM"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "W66 (Drowning and submersion following fall into bath-tub) 22 340,110,988 0.0 (0.0 - 0.0)",
+   "where": "Results table, first query, row 2"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "W67 (Drowning and submersion while in swimming-pool) 823 340,110,988 0.2 (0.2 - 0.3)",
+   "where": "Results table, first query, row 3"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "W68 (Drowning and submersion following fall into swimming-pool) 58 340,110,988 0.0 (0.0 - 0.0)",
+   "where": "Results table, first query, row 4"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "W69 (Drowning and submersion while in natural water) 1,856 340,110,988 0.5 (0.5 - 0.6)",
+   "where": "Results table, first query, row 5"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "W70 (Drowning and submersion following fall into natural water) 202 340,110,988 0.1 (0.1 - 0.1)",
+   "where": "Results table, first query, row 6"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "W73 (Other specified drowning and submersion) 153 340,110,988 0.0 (0.0 - 0.1)",
+   "where": "Results table, first query, row 7"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "W74 (Unspecified drowning and submersion) 370 340,110,988 0.1 (0.1 - 0.1)",
+   "where": "Results table, first query, row 8"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "Total 4,201 340,110,988 1.2 (1.2 - 1.3)",
+   "where": "Results table, first query, Total row"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "Total 339 340,110,988 0.1 (0.1 - 0.1)",
+   "where": "Results table, second query (V90 and V92 by cause of death, 2024), Total row; Query Date Oct 21, 2026 10:49:20 AM"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "Rows with suppressed Deaths are hidden, but the Deaths and Population values in those rows are included in the totals.",
+   "where": "Messages box above the second query's results table"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "Data are from the Multiple Cause of Death Files, 2018-2024, as compiled from data provided by the 57 vital statistics jurisdictions",
+   "where": "Suggested Citation under the results table"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "The population figures for year 2024 are single-race estimates of the July 1 resident population, from the Vintage 2024 postcensal series",
+   "where": "Notes (Caveats) under the results table"
+  },
+  {
+   "url": "https://wonder.cdc.gov/ucd-icd10-expanded.html",
+   "quote": "Do not present or publish death counts of 9 or fewer or death rates based on counts of nine or fewer",
+   "where": "Data Use Restrictions on the request page, accepted before querying"
+  }
+ ],
+ "tried": [
+  "The request page for this dataset is wonder.cdc.gov/ucd-icd10-expanded.html, which opens dataset D158 (\"Underlying Cause of Death, 2018-2024, Single Race\"); the task's \"D176\" was not the id served on 21 Oct 2026.",
+  "Selecting the eight W codes and the two V codes in one query would have given a single combined total, so two queries were run: W65–W74 (its Total row is the block total asked for) and V90 plus V92 (its Total row is the watercraft total). WONDER lists V90 and V92 only as 4-character sub-codes by craft type, which is why the second query's rows are sub-codes.",
+  "Navigating straight back to the request form between queries dropped the session (WONDER answered \"Access WONDER data by completing and submitting a request page\"), so the data-use page was accepted a second time and the second query run from the fresh form."
+ ],
+ "notes": "The first US setting split by ICD-10 code for 2024: of 4,201 unintentional drowning deaths (W65–W74, WONDER's total), natural water while in it 1,856 (W69) and after a fall 202 (W70); swimming pool 823 (W67) and after a fall 58 (W68); bath-tub 717 (W65) and after a fall 22 (W66); other specified 153 (W73); unspecified 370 (W74). Watercraft drownings (V90 and V92) are another 339 in a separate query and are not added. Suppression: no cell was suppressed in the W65–W74 query (every count is above nine); in the V90/V92 query eight sub-codes with counts of one to nine were suppressed and are not recorded, though WONDER's total includes them. Query settings for both: Group By = Cause of death; Year/Month = 2024; Show Totals = True; Show Zero Values = True; Show Suppressed = False; rates per 100,000; default populations; no age-adjusted rate requested; Query Dates Oct 21, 2026 10:48:11 AM and 10:49:20 AM (server time). Comparison with the MMWR series: the 2024 W65–W74 total sits below the 2019–2022 MMWR totals mainly because the MMWR counts W65–W74 together with V90 and V92; the MMWR's own 2024 figure, when published, is the comparable one. The data-use terms were accepted by the lab's owner in this session; nothing here is a count of nine or fewer. The data-use terms were accepted by the lab's owner for this session.",
+ "next_tasks": [
+  {
+   "title": "Run the same two WONDER queries for 2018–2023 so the US setting split has a six-year series by code",
+   "why": "One session with the data-use terms accepted can pull every year; the ledger has only 2024"
+  },
+  {
+   "title": "Run the W65–W74 query for 2024 grouped by State to give Maine and New Hampshire their official yearly counts",
+   "why": "The state-count tasks found no per-year official source; WONDER has it, subject to suppression of counts under ten"
+  },
+  {
+   "title": "Record the MMWR's 2024 combined W65–W74 plus V90/V92 total when CDC publishes it, beside us-total-2022",
+   "why": "Keeps the ledger's US series on one definition"
+  }
+ ]
+}
