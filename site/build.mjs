@@ -111,6 +111,7 @@ const REDIRECTS = [
   ['chart', "(function(){var s=new URLSearchParams(location.search).get('section')||'';var m={ledger:'/#ledger',tree:'/#tree',field:'/#june',forecast:'/#harbor',stations:'/stations/',compact:'/compact/'};location.replace(m[s]||'/#toll');})();", '/#toll'],
   ['bring', "location.replace('/#contribute');", '/#contribute'],
   ['sources', "location.replace('/#ledger');", '/#ledger'],
+  ['manifesto', "location.replace('/charter/');", '/charter/'],
 ];
 async function redirects() {
   for (const [name, js, fallback] of REDIRECTS) {

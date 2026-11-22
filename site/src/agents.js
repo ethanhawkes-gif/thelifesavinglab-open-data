@@ -58,7 +58,7 @@
   async function init() {
     try {
       [data, schema] = await Promise.all([fetch('/data/tasks.json').then(r => r.json()), fetch('/data/bundle.schema.json').then(r => r.json())]);
-      try { receipts = (await fetch('/data/receipts.json').then(r => r.json())).receipts || []; } catch {}
+      try { receipts = (await fetch('/data/receipts.json').then(r => r.json())).receipts || []; } catch { receipts = []; }
       [...new Set((data.tasks || []).map(t => t.kind).filter(Boolean))].sort().forEach(k => { const o = document.createElement('option'); o.value = k; o.textContent = k; $('agent-kind').append(o); });
       $('agent-state').textContent = 'Published task snapshot: ' + (data.generated || 'date not supplied') + ' · preamble ' + data.preamble_version + ' · return schema ' + (schema.properties?.schema?.const || 'lifesavinglab.bundle.v1') + ' · not a live reservation system.';
       $('agent-check-submit').disabled = false; render();

@@ -85,13 +85,18 @@
   function home() {
     const toll = DATA.toll, rows = DATA.ledger ? DATA.ledger.rows.length : 0;
     const floor = toll ? fmt(roundK(toll.floor)) : '260,000', ceil = toll ? fmt(roundK(toll.ceiling)) : '416,000';
+    const openTasks = DATA.tasks ? DATA.tasks.tasks.filter((t) => t.status !== 'done' && !(t.claimed_until && Date.parse(t.claimed_until) > Date.now())).length : 0;
+    const receipts = DATA.receipts && Array.isArray(DATA.receipts.receipts) ? DATA.receipts.receipts.length : 0;
+    const branches = DATA.tree && DATA.tree.nodes ? Object.keys(DATA.tree.nodes).length : 0;
+    const nextTask = DATA.tasks ? DATA.tasks.tasks.find((t) => t.status !== 'done' && !(t.claimed_until && Date.parse(t.claimed_until) > Date.now())) : null;
+    const fieldNotes = DATA.changelog && Array.isArray(DATA.changelog.entries) ? DATA.changelog.entries.slice(0, 3) : [];
     return `
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-text"><div>
     <p class="eyebrow">The Life-Saving Lab · Portsmouth Harbor</p>
-    <h1 id="hero-title" class="display h1">Learn good judgment. <i style="color:var(--brass)">Help the people who save lives.</i></h1>
-    <p class="lede">We are building a lab where students practice Applied Wisdom on a real problem: drowning prevention. Working with local experts and AI assistants, they will develop research and practical recommendations that nonprofit rescue services can check, adapt and use.</p>
-    <div class="row"><a class="btn btn--primary" href="#how-title">See how the Lab works <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#wisdom">Explore the learning</a></div>
+    <h1 id="hero-title" class="display h1">Turn good judgment into work that can be checked. <i style="color:var(--brass)">On real water, with real people.</i></h1>
+    <p class="lede">The Lab is an open commons for understanding drowning and making the next wise action easier: a sourced ledger, a decision tree, small pilots, and a way for people and AI assistants to contribute without pretending that a draft is a result.</p>
+    <div class="row"><a class="btn btn--primary" href="#commons-now">Enter the commons <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#contribute">Make a contribution</a></div>
     <div class="row mono hero-stats"><span>First Lab · proposed</span><span>Two equal partners</span><span>People remain responsible</span></div>
   </div></div>
   <div class="hero-photo">
@@ -111,6 +116,33 @@
   <div class="split"><div class="stack-sm"><p class="eyebrow">Two equal partners</p><h2 id="partners-home-title" class="h2">Curriculum and place, working together.</h2></div><p class="lede">Applied Wisdom powers the learning. Wood Island brings the host setting, local expertise and community network. Neither partner is presented as an operating rescue service.</p></div>
   <div class="grid g2"><article class="card stack-sm partner-card"><img src="img/partners/applied-wisdom.svg" alt="Applied Wisdom for Nonprofits" class="partner-logo"><p class="eyebrow">Curriculum and applied wisdom</p><h3 class="h3">Applied Wisdom makes the learning useful.</h3></article><article class="card stack-sm partner-card"><img src="img/partners/wood-island.png" alt="Wood Island Life Saving Station Association" class="partner-logo partner-logo--wood"><p class="eyebrow">Host, local expertise and network</p><h3 class="h3">Wood Island makes the work real.</h3></article></div>
   <a class="mono" href="/about/">Meet the people and partners behind the Lab →</a>
+</div></section>
+
+<section class="section band commons-pulse" id="commons-now" aria-labelledby="commons-now-title"><div class="wrap stack" style="gap:28px">
+  <div class="split"><div class="stack-sm"><p class="eyebrow">The commons · live now</p><h2 id="commons-now-title" class="display h2">Not a pitch deck. A working public record.</h2></div><p class="lede">Start with what is already here. Read one source. Follow one branch. Lend one hour. Bring back something a person can check.</p></div>
+  <div class="pulse-grid" aria-label="Current commons status">
+    <a class="pulse-card" href="#ledger"><span class="pulse-k"><span class="live-dot" aria-hidden="true"></span>Open ledger</span><strong>${rows}</strong><span>versioned rows with sources, limits and non-additive rules</span></a>
+    <a class="pulse-card" href="#tree"><span class="pulse-k"><span class="live-dot" aria-hidden="true"></span>Decision tree</span><strong>${branches || '—'}</strong><span>branches that turn a water and a person into a question</span></a>
+    <a class="pulse-card" href="#lend"><span class="pulse-k"><span class="live-dot" aria-hidden="true"></span>Open work</span><strong>${openTasks}</strong><span>small tasks sized for one contributed hour</span></a>
+    <a class="pulse-card" href="#lend"><span class="pulse-k"><span class="live-dot" aria-hidden="true"></span>Public receipts</span><strong>${receipts}</strong><span>review records showing what a contribution changed</span></a>
+  </div>
+  <div class="commons-path" aria-labelledby="path-title"><div class="stack-sm"><p class="eyebrow">A first useful move</p><h3 id="path-title" class="h3">Choose the contribution that fits your mind and your time.</h3></div><div class="grid g4">
+    <a class="path-card" href="#gaps"><span class="path-n">01</span><b>Find a gap</b><span>See what the evidence still cannot tell us.</span></a>
+    <a class="path-card" href="#lend"><span class="path-n">02</span><b>Lend an agent an hour</b><span>Return one sourced, machine-checkable file.</span></a>
+    <a class="path-card" href="#register"><span class="path-n">03</span><b>Bring a row</b><span>Record one event without names or invented precision.</span></a>
+    <a class="path-card" href="#pilots"><span class="path-n">04</span><b>Write a pilot</b><span>Name the adopter, forecast the result, publish the miss.</span></a>
+  </div></div>
+  <p class="small muted">The Lab earns increasing commitment by making participation worthwhile: one useful contribution, a thoughtful response, evidence of use, and a meaningful next invitation.</p>
+</div></section>
+
+<section class="section" aria-labelledby="build-board-title"><div class="wrap stack" style="gap:28px">
+  <div class="split"><div class="stack-sm"><p class="eyebrow">The build board · now / next / need</p><h2 id="build-board-title" class="display h2">See the work before you hear the story.</h2></div><p class="lede">A future-facing commons should make its present state legible. These are the artifacts, the next test, and the help that would move them forward.</p></div>
+  <div class="build-grid">
+    <article class="build-card build-card--now"><div class="row build-card-head"><span class="pill pill-B">Now</span><span class="mono muted">working artifacts</span></div><h3 class="h3">The commons is open.</h3><p>A sourced ledger, a water-first decision tree, a local incident register, a task board for agents, and public receipts are usable today. Read them, test them, or find the gap they expose.</p><div class="row" style="margin-top:auto"><a class="btn btn--sm btn--primary" href="#ledger">Read the ledger</a><a class="btn btn--sm btn--ghost" href="#tree">Walk the tree</a></div></article>
+    <article class="build-card"><div class="row build-card-head"><span class="pill pill-range">Next</span><span class="mono muted">proposed · testable</span></div><h3 class="h3">Close one gap, then write one pilot.</h3><p>The next loop is deliberately small: improve one source or branch, name the person who could run a change, forecast what should happen, and publish the result—including failure.</p><div class="row" style="margin-top:auto"><a class="btn btn--sm" href="#gaps">Find a gap</a><a class="btn btn--sm btn--ghost" href="#pilots">See pilot format</a></div></article>
+    <article class="build-card"><div class="row build-card-head"><span class="pill pill-A">Need</span><span class="mono muted">from the commons</span></div><h3 class="h3">Your judgment, not your applause.</h3><p>${nextTask ? `The board’s next open task is “${esc(nextTask.title)}”.` : 'Bring a primary source, a correction, a harbor row, a practical constraint, or a partner who could adopt a pilot.'} A useful first contribution should be small enough to finish and clear enough for someone else to build on.</p><div class="row" style="margin-top:auto"><a class="btn btn--sm btn--primary" href="#lend">Choose one task</a><a class="btn btn--sm btn--ghost" href="#contribute">Bring expertise</a></div></article>
+  </div>
+  <div class="field-notes" aria-labelledby="field-notes-title"><div class="split" style="align-items:baseline"><h3 id="field-notes-title" class="h3">Field notes</h3><a class="mono" href="#ledger">See the full record →</a></div>${fieldNotes.length ? `<div class="field-note-list">${fieldNotes.map((e) => `<div class="field-note"><span class="mono">${esc(e.date)}</span><span>${esc(e.subject)}</span></div>`).join('')}</div>` : '<p class="small muted">The first field note will appear when the public record changes.</p>'}</div>
 </div></section>
 
 <section class="section band" aria-labelledby="explainer-title"><div class="wrap stack" style="gap:24px">
