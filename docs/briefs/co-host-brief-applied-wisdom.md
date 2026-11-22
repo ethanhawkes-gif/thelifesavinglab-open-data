@@ -1,18 +1,18 @@
 # Co-host brief · Applied Wisdom for Nonprofits
 
-*One page for Jim McDonough and the Applied Wisdom team. Everything here is proposed unless marked otherwise. Written 15 Oct 2026.*
+*Current co-host brief for Jim McDonough and the Applied Wisdom team. Confirmed roles are marked; proposed logistics and future decisions remain explicitly proposed. Refreshed 21 Nov 2026.*
 
 ## What the lab is
 
 A two-day leadership lab on Portsmouth Harbor, at the restored Wood Island Life-Saving Station, Kittery, Maine, for 24 students in six teams, with the people who run rescues on this water beside them. Day one: size a real problem from an open ledger and write one-page pilots. Day two: a staged rescue, with a licensed crew, where the pilots are tested under pressure. The goal is literal: fewer lives lost at sea. The material is published openly as it is made: an open ledger of drowning figures with sources, a decision tree, an incident register, a watch of reported drownings, and a board where anyone can lend an AI assistant an hour.
 
-**The applied-wisdom test.** The lab does not call an insight “applied wisdom” because it was discussed or documented. Wisdom is applied when it changes a real decision. The changed decision is the first observable sign; action, outcome, and independently reviewed benefit are recorded separately. Each pilot should leave a receipt naming the prior path, decision change, authority, action, result, reviewer, and next move.
+**The applied-wisdom test.** The lab does not call an insight “applied wisdom” because it was discussed or documented. Wisdom is applied when understanding responsibly informs a real decision. That may change, reaffirm, or preserve a course. Decision judgment is the first observable sign; action, outcome, and independently reviewed benefit are recorded separately. Each pilot should leave a receipt naming the prior path, the decision judgment and reasoning, authority, action, result, reviewer, and next move.
 
-**Status.** Applied Wisdom is the only organisation that has expressed interest (Jim McDonough, email of 6 Oct 2026). Every other partner named anywhere is a proposal and has not been contacted. The site and this brief name Applied Wisdom as co-design partner; that naming can be withdrawn on request.
+**Status.** Applied Wisdom for Nonprofits is the curriculum and applied-wisdom partner. Wood Island Life Saving Station Association is the host, local-expertise and network partner. These complementary roles are the established owner account used by the public site and this brief. The site uses the Applied Wisdom insights with agreement. The proposed cohort, rehearsal, field weekend, adopter panel, and any additional material or data use below remain proposed logistics to confirm with the relevant people; no other organization is represented here as a committed partner.
 
 ## What co-hosting would mean
 
-1. **The eight insights are the syllabus.** Jim Morgan's eight insights frame both days: the opening session, the pilot clinics, the hostile read, the debrief. We need Applied Wisdom to correct how each insight is mapped to the drill, and to confirm we may use the material with attribution.
+1. **The eight insights are the proposed syllabus.** Jim Morgan's eight insights frame both days: the opening session, the pilot clinics, the hostile read, and the debrief. Applied Wisdom's established agreement covers the current attributed use on the site and in this brief; the mapping of each insight to any future drill remains proposed and can be corrected by the partner.
 2. **The Situation Solver is the Day-2 debrief method,** and, if Applied Wisdom chooses, the lab is a high-stakes testbed for its agentic, open-source version. Debriefs reach the Solver only with students' consent and with personal data removed.
 3. **A case study** for the Applied Wisdom Leadership and Human Systems Lab, in whatever format Applied Wisdom prefers. If it helps to move faster, the proposed 5 Dec tabletop rehearsal could be the first.
 4. **Two sessions and a seat.** Proposed: one of the six Wednesday evenings (Mar–Apr 2027), the opening session on day one, and a seat on the day-two adopter panel that gives each pilot a verdict on the record.

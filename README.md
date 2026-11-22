@@ -11,7 +11,7 @@ what it must not be added to.
 
 ## The measure of applied wisdom
 
-The Lab's central test is simple: **wisdom is applied when it changes a decision**. A changed decision is evidence of application, not proof of action, benefit, or a life saved. Keep the ladder visible: exposure → understanding → decision change → authorized action → observed outcome → independently reviewed benefit. See [`docs/APPLIED_WISDOM.md`](docs/APPLIED_WISDOM.md) for the receipt fields, human/AI boundary, and stop conditions.
+The Lab's central test is simple: **wisdom is applied when understanding responsibly informs a real decision**. That may change, reaffirm, or preserve a course. Decision judgment is evidence of application, not proof of action, benefit, or a life saved. Keep the ladder visible: exposure → understanding → decision judgment → authorized action → observed outcome → independently reviewed benefit. See [`docs/APPLIED_WISDOM.md`](docs/APPLIED_WISDOM.md) for the receipt fields, human/AI boundary, and stop conditions.
 
 ## What this is, and is not
 

@@ -14,22 +14,22 @@ In practice, it brings together:
 
 ## The central test
 
-**Wisdom is applied when it changes a decision.**
+**Wisdom is applied when understanding responsibly informs a real decision.**
 
-A conversation, insight, model output, citation, training session, or eloquent explanation can be valuable without being applied wisdom. The first observable test is whether it changed a real decision: what someone chose to do, not do, prioritize, preserve, escalate, defer, or stop.
+A conversation, insight, model output, citation, training session, or eloquent explanation can be valuable without being applied wisdom. The first observable test is whether it informed a real decision: what someone chose to do, not do, prioritize, preserve, escalate, defer, or stop. Often that appears as a changed decision. Sometimes the wiser result is an evidence-backed reaffirmation or preservation of the current course.
 
-A changed decision is **necessary evidence of application, not proof of benefit**. Keep these levels separate:
+A changed or carefully reaffirmed decision is **necessary evidence of application, not proof of benefit**. Keep these levels separate:
 
 1. **Exposure:** someone encountered an idea or source.
 2. **Understanding:** someone can explain the situation, options, limits, and stakes more clearly.
-3. **Decision change:** the prior default changed, or a decision was newly made, because of the understanding.
-4. **Action:** the changed decision was carried out by someone with authority and capability.
+3. **Decision judgment:** the prior path changed, was reaffirmed, preserved, escalated, deferred, or stopped because of the understanding, with the reasoning recorded.
+4. **Action:** the decision was carried out by someone with authority and capability.
 5. **Outcome:** something observable followed, including burden, exclusion, unintended effects, and failure.
 6. **Verified benefit:** an appropriate reviewer checked the outcome against a defined measure and found a defensible improvement.
 
 Never collapse a lower level into a higher one. In particular:
 
-- decision change is not action;
+- decision judgment is not action;
 - action is not adoption;
 - adoption is not benefit;
 - benefit is not a life saved; and
@@ -43,7 +43,7 @@ Every consequential Lab learning loop should preserve, at the smallest responsib
 - **Question:** what decision was actually being made?
 - **Prior path:** what would probably have happened without the intervention?
 - **Insight/evidence:** what was noticed, learned, or challenged, with sources and dissent attached?
-- **Decision change:** what changed, what stayed the same, and why?
+- **Decision judgment:** what changed, was reaffirmed, preserved, deferred, escalated, or stopped, and why?
 - **Authority:** who decided, who could act, and who bore consequences?
 - **Action:** what was done, deferred, stopped, or handed off?
 - **Expected result:** what benefit and harm were anticipated, and for whom?
@@ -97,7 +97,7 @@ No metric should become a leaderboard for moral worth. The measure must remain s
 
 ## Red lines
 
-- No changed decision may be claimed without a named decision and before/after account.
+- No applied-wisdom claim may be made without a named decision and an account of the prior path and the reasoning for changing, reaffirming, preserving, deferring, escalating, or stopping it.
 - No action may be represented as authorized merely because an agent recommended it.
 - No positive outcome may be presented as verified benefit without an appropriate review.
 - No student, practitioner, partner, or community may be turned into an unconsented test subject for model improvement.

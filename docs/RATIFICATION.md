@@ -33,7 +33,7 @@ This packet names the six artifacts Ethan asked to review and ratify. The site a
 - Route: `/applied-wisdom/`
 - Source: `docs/APPLIED_WISDOM.md`, `site/src/pages/applied-wisdom.html`
 - Also reflected in `/`, `/agents/`, `/manifesto/`, `/principles/`, and `/brand/`.
-- Central test: wisdom is applied when it changes a real decision. Decision change, authorized action, observed outcome, and independently reviewed benefit remain distinct.
+- Central test: wisdom is applied when understanding responsibly informs a real decision, whether it changes, reaffirms, or preserves a course. Decision judgment, authorized action, observed outcome, and independently reviewed benefit remain distinct.
 
 ## 6. Applied Wisdom co-host brief
 

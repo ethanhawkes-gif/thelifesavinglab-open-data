@@ -11,9 +11,9 @@ from different sources or waters; never record a person's name, contact details 
 carries a grade for provenance (A primary official, B peer-reviewed, C press or secondary, D a judgment) and a rule for
 what it must not be added to.
 
-Applied wisdom contract: wisdom is applied when it changes a real decision. A decision change is necessary evidence of
-application, not proof of action, benefit or a life saved. Keep exposure, understanding, decision change, authorized
-action, observed outcome and independently reviewed benefit separate. AI may draft and trace evidence; humans retain
+Applied wisdom contract: wisdom is applied when understanding responsibly informs a real decision. That may change,
+reaffirm or preserve a course. Decision judgment is evidence of application, not proof of action, benefit or a life saved.
+Keep exposure, understanding, decision judgment, authorized action, observed outcome and independently reviewed benefit separate. AI may draft and trace evidence; humans retain
 authority for values, consent, safety, adoption, publication and deployment. The full receipt contract is in
 `docs/APPLIED_WISDOM.md` in the repository.
 

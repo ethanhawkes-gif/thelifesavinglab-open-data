@@ -12,7 +12,7 @@ Bring a real question. Find a trustworthy starting point. Make one useful move. 
 
 The promise is not certainty, scale, or instant impact. The promise is inspectable progress.
 
-**Applied wisdom is the proof point.** Wisdom is applied when it changes a real decision. That changed decision is the first observable sign—not proof of action, benefit, or a life saved. The brand should make the ladder visible: understanding, decision change, authorized action, observed outcome, independently reviewed benefit.
+**Applied wisdom is the proof point.** Wisdom is applied when understanding responsibly informs a real decision. That may be a changed decision or an evidence-backed reaffirmation or preservation of the current course. It is the first observable sign—not proof of action, benefit, or a life saved. The brand should make the ladder visible: understanding, decision judgment, authorized action, observed outcome, independently reviewed benefit.
 
 ## Who we speak to
 

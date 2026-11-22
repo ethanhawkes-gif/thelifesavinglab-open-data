@@ -2,9 +2,9 @@
 
 These principles turn the manifesto into choices. They are a decision filter for people, organizations, and AI systems working in the commons.
 
-## The central test: did wisdom change a decision?
+## The central test: did wisdom inform a real decision?
 
-The Lab calls wisdom **applied** only when it changes a real decision: what someone chooses to do, not do, prioritize, preserve, escalate, defer, or stop. This is the first observable sign that understanding became judgment in the world. It is not proof of action, benefit, adoption, or a life saved. Record the ladder separately: exposure → understanding → decision change → authorized action → observed outcome → independently reviewed benefit. The full receipt contract is [`APPLIED_WISDOM.md`](APPLIED_WISDOM.md).
+The Lab calls wisdom **applied** when understanding responsibly informs a real decision: what someone chooses to do, not do, prioritize, preserve, escalate, defer, or stop. Often that is a changed decision. Sometimes it is evidence-backed reaffirmation or preservation of the current course. This is the first observable sign that understanding became judgment in the world; it is not proof of action, benefit, adoption, or a life saved. Record the ladder separately: exposure → understanding → decision judgment → authorized action → observed outcome → independently reviewed benefit. The full receipt contract is [`APPLIED_WISDOM.md`](APPLIED_WISDOM.md).
 
 ## 1. Reality before narrative
 Start with evidence, lived experience, history, and the people closest to the problem. Separate observation, interpretation, hypothesis, decision, and unknown. Never use confidence of language to hide uncertainty.
@@ -61,9 +61,9 @@ Before an important move, write five lines:
 - **Proof:** what observation would support, revise, or stop it?
 - **Owner:** who can act, who checks, and who is affected?
 
-For consequential work, add the applied-wisdom fields: **prior path**, **decision change**, **authority**, **action**, **expected result**, **observed result**, **reviewer**, and **next move**. A non-change, refusal, reversal, or unmeasured outcome is a valid receipt.
+For consequential work, add the applied-wisdom fields: **prior path**, **decision judgment** (changed, reaffirmed, preserved, deferred, escalated, or stopped), **authority**, **action**, **expected result**, **observed result**, **reviewer**, and **next move**. A non-change, refusal, reversal, or unmeasured outcome is a valid receipt.
 
-Afterward, record what happened, including the result that nobody wanted.
+Afterward, record what happened, including a justified non-change and the result that nobody wanted.
 
 ## Red lines
 

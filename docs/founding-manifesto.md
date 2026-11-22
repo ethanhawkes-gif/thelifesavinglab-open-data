@@ -14,13 +14,13 @@ The Life-Saving Lab is a public attempt to change that.
 
 We are building a living commons about drowning and prevention: a canonical record of events and context; lifesaving organizations and their histories; expertise, practice, success, failure, and uncertainty; and decision paths that can be challenged, adapted, and used. On top of that commons we will develop an intelligence layer that demonstrates applied wisdom—not merely fluent answers, but better understanding, better judgment, greater agency, and verified outcomes.
 
-## Applied wisdom is proven by changed decisions
+## Applied wisdom is tested in real decisions
 
 Applied wisdom is learning to use finite understanding, power, and time in faithful service of lives that matter beyond ourselves. It means discerning what is worth caring about, understanding the situation honestly, acting with care and judgment within legitimate authority, accepting responsibility for what follows, and learning openly enough to make the next decision better.
 
-The first observable test is simple: **wisdom is applied when it changes a decision**. A conversation, insight, model output, citation, or training session may be valuable without being applied wisdom. A changed decision is necessary evidence of application, not proof of action, benefit, adoption, or a life saved. We keep the levels distinct: exposure, understanding, decision change, authorized action, observed outcome, and independently reviewed benefit.
+The first observable test is simple: **wisdom is applied when understanding responsibly informs a real decision**. Often that means a changed decision. Sometimes the wiser act is to preserve or reaffirm the current course after examining the evidence, or to defer, escalate, or stop. A conversation, insight, model output, citation, or training session may be valuable without being applied wisdom. A changed or carefully reaffirmed decision is evidence of application, not proof of action, benefit, adoption, or a life saved. We keep the levels distinct: exposure, understanding, decision judgment, authorized action, observed outcome, and independently reviewed benefit.
 
-Every consequential learning loop should leave an applied-wisdom receipt: the situation and prior path, the evidence and dissent, what decision changed and why, who had authority, what action followed, what happened, who reviewed it, and what should happen next. “The decision did not change,” “the action was not authorized,” and “the outcome could not be measured” are honest results worth preserving.
+Every consequential learning loop should leave an applied-wisdom receipt: the situation and prior path, the evidence and dissent, what decision changed, was reaffirmed, preserved, deferred, escalated, or stopped and why, who had authority, what action followed, what happened, who reviewed it, and what should happen next. “The decision did not change,” “the action was not authorized,” and “the outcome could not be measured” are honest results worth preserving.
 
 The ontology, the agents, the website, and the school are means. The outcome is people becoming more able to protect life together.
 
@@ -107,4 +107,4 @@ Bring your question, experience, curiosity, capability, or refusal. Help make go
 
 **Understand reality. Choose the leverage that matters. Build the ability to act. Verify what helped. Leave the commons better.**
 
-*Proposed founding version · 21 November 2026. Ratification should be demonstrated by changed practice, not merely recorded as agreement.*
+*Proposed founding version · 21 November 2026. Ratification should be demonstrated by better practice, not merely recorded as agreement.*

@@ -32,10 +32,7 @@ counted, estimates are modeled, and the site never adds one to the other.
 receipts (`receipts/lend.json`) carry the bundle's SHA-256; accepted bundles propose follow-ups that `promote` puts
 on the board; `agree` compares two agents' bundles on one task field by field.
 
-**Applied-wisdom layer.** The Lab treats a changed decision as the first observable sign that wisdom was applied, while
-keeping action, outcome and independently reviewed benefit distinct. A consequential work item should preserve the
-situation, prior path, evidence and dissent, decision change, authority, action, expected result, observed result,
-reviewer and next move. Existing contribution/review/receipt rails are the custody path; no new truth database or single
+**Applied-wisdom layer.** The Lab treats a decision judgment—changed, reaffirmed, preserved, deferred, escalated, or stopped with reasoning—as the first observable sign that wisdom was applied, while keeping action, outcome and independently reviewed benefit distinct. A consequential work item should preserve the situation, prior path, evidence and dissent, decision judgment, authority, action, expected result, observed result, reviewer and next move. Existing contribution/review/receipt rails are the custody path; no new truth database or single
 impact score is introduced. See `docs/APPLIED_WISDOM.md`.
 
 **Why canonical data is bundled, not queried.** The release is the unit of truth: a version, two hashes, and the
