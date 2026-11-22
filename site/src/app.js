@@ -106,7 +106,7 @@
   <div class="hero-photo">
     <img src="${PHOTOS.hero}" alt="Wood Island Life-Saving Station in Kittery, Maine, seen down its boardwalk: white shingles, a red roof and lookout tower, a surfboat on its launching carriage, and Whaleback Light on the horizon">
     <p class="credit">Wood Island Life-Saving Station · Photo: Ethan Hawkes</p>
-    <div class="stamp stamp--northstar"><p class="eyebrow">The North Star</p><p class="northstar-line">A person facing a water risk can find a more trustworthy next step, understand why it is suggested, adapt it to local reality, and leave the next person better prepared.</p><a href="/charter/" class="mono">Read the founding charter →</a></div>
+    <div class="stamp stamp--northstar"><p class="eyebrow">The North Star</p><p class="northstar-line">A person facing a water risk can find a more trustworthy next step, understand why it is suggested, adapt it to local reality, and leave the next person better prepared.</p><a href="/manifesto/" class="mono">Read the founding manifesto →</a></div>
   </div>
 </section>
 
@@ -116,7 +116,7 @@
     <div class="state-card"><span class="state-label state-label--established">Established</span><h3 class="h3">A public record</h3><p>${rows} ledger rows, each with a source, a date, and a rule for what it must not be added to.</p><a class="mono" href="#ledger">Inspect the ledger →</a></div>
     <div class="state-card"><span class="state-label state-label--working">Working</span><h3 class="h3">A way to reason</h3><p>${branches || '—'} tree nodes ask which water and which person before suggesting a measure.</p><a class="mono" href="#tree">Walk the decision tree →</a></div>
     <div class="state-card"><span class="state-label state-label--open">Open</span><h3 class="h3">Questions still need owners</h3><p>${openTasks} bounded tasks are open. A useful contribution is small enough to finish and clear enough to review.</p><a class="mono" href="#lend">Choose one task →</a></div>
-    <div class="state-card"><span class="state-label state-label--unknown">Not yet proven</span><h3 class="h3">Real-world effect</h3><p>No pilot is being counted as a life saved. The next proof is adoption, measured use, and an honest record of what happened.</p><a class="mono" href="#pilots">See the pilot rule →</a></div>
+    <div class="state-card"><span class="state-label state-label--unknown">Not yet proven</span><h3 class="h3">Real-world effect</h3><p>No pilot is being counted as a life saved. The next proof is one complete trace: a real practitioner question, an owner, a bounded change, a reviewer, and an honest record of what happened.</p><a class="mono" href="#pilots">See the pilot rule →</a></div>
   </div>
 </div></section>
 
@@ -128,7 +128,7 @@
       <div><span class="field-k">The failure</span><p>The record is fragmented. A useful local observation can remain invisible; a global estimate can look more certain than it is; a good practice can disappear when the person who knows it leaves.</p></div>
       <div><span class="field-k">The condition for better</span><p>A person can trace a claim, see its limits, adapt it to a specific water and person, and identify who could responsibly try it.</p></div>
       <div><span class="field-k">What exists now</span><p>The ledger, decision tree, pilot format, local register, agent task board and public receipts are live. They are the first instruments, not the finished system.</p></div>
-      <div><span class="field-k">What remains unknown</span><p>Whether these instruments help a real person make a better decision under local pressure—and whether the learning travels without losing context.</p></div>
+      <div><span class="field-k">What remains unknown</span><p>Whether these instruments help a real person make a better decision under local pressure—and whether the learning travels without losing context. We have not yet completed the full trace from practitioner question to adopted change.</p></div>
     </div>
     <div class="challenge-next"><div><span class="field-k">Next useful move</span><p>${nextTask ? esc(nextTask.title) : 'Bring one source, local constraint, observation or pilot question.'}</p></div><a class="btn btn--primary" href="#lend">Take the next move <span aria-hidden="true">→</span></a></div>
   </article>
@@ -141,7 +141,7 @@
     <li><span class="ratchet-n">02</span><div><h3 class="h3">Adapt</h3><p>Make the question fit one water, one person and one real decision. Do not generalize past the evidence.</p><a class="mono" href="#tree">Choose a branch →</a></div></li>
     <li><span class="ratchet-n">03</span><div><h3 class="h3">Try</h3><p>Write one small pilot with a forecast, an adopter and a way to know it failed.</p><a class="mono" href="#pilots">Write the test →</a></div></li>
     <li><span class="ratchet-n">04</span><div><h3 class="h3">Verify</h3><p>Publish what happened, including misses, corrections and the conditions that did not travel.</p><a class="mono" href="#lend">Follow a receipt →</a></div></li>
-    <li><span class="ratchet-n">05</span><div><h3 class="h3">Carry forward</h3><p>Leave the next person a clearer record, a better tool and a more honest starting point.</p><a class="mono" href="/charter/">Read the compact →</a></div></li>
+    <li><span class="ratchet-n">05</span><div><h3 class="h3">Carry forward</h3><p>Leave the next person a clearer record, a better tool and a more honest starting point.</p><a class="mono" href="/principles/">Read the principles →</a></div></li>
   </ol>
 </div></section>
 
@@ -167,7 +167,7 @@
 
 <section class="section dark" aria-labelledby="join-title"><div class="wrap stack" style="gap:28px">
   <div class="split"><div class="stack-sm"><p class="eyebrow">The invitation</p><h2 id="join-title" class="display h2">Bring one question we can make more answerable.</h2></div><p class="lede">Bring a source, a local constraint, a failed attempt, or ten minutes to check someone else’s work. Humans, organizations and AI assistants are welcome; responsibility stays with the people who can decide and act.</p></div>
-  <div class="row"><a class="btn btn--primary" href="#challenge">Open the current challenge <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#ledger">Browse the public record</a><a class="btn btn--ghost" href="/charter/">Read the founding charter</a></div>
+  <div class="row"><a class="btn btn--primary" href="#challenge">Open the current challenge <span aria-hidden="true">→</span></a><a class="btn btn--ghost" href="#ledger">Browse the public record</a><a class="btn btn--ghost" href="/manifesto/">Read the founding manifesto</a></div>
 </div></section>`;
   }
 
