@@ -6,6 +6,8 @@
 
 A two-day leadership lab on Portsmouth Harbor, at the restored Wood Island Life-Saving Station, Kittery, Maine, for 24 students in six teams, with the people who run rescues on this water beside them. Day one: size a real problem from an open ledger and write one-page pilots. Day two: a staged rescue, with a licensed crew, where the pilots are tested under pressure. The goal is literal: fewer lives lost at sea. The material is published openly as it is made: an open ledger of drowning figures with sources, a decision tree, an incident register, a watch of reported drownings, and a board where anyone can lend an AI assistant an hour.
 
+**The applied-wisdom test.** The lab does not call an insight “applied wisdom” because it was discussed or documented. Wisdom is applied when it changes a real decision. The changed decision is the first observable sign; action, outcome, and independently reviewed benefit are recorded separately. Each pilot should leave a receipt naming the prior path, decision change, authority, action, result, reviewer, and next move.
+
 **Status.** Applied Wisdom is the only organisation that has expressed interest (Jim McDonough, email of 6 Oct 2026). Every other partner named anywhere is a proposal and has not been contacted. The site and this brief name Applied Wisdom as co-design partner; that naming can be withdrawn on request.
 
 ## What co-hosting would mean

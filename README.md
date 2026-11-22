@@ -9,6 +9,10 @@ what it must not be added to.
 > **Not a rescue service.** Nothing here dispatches, monitors, or advises in an emergency.
 > Distress at sea: VHF channel 16 or the coast guard. Crisis: call or text 988 (U.S.).
 
+## The measure of applied wisdom
+
+The Lab's central test is simple: **wisdom is applied when it changes a decision**. A changed decision is evidence of application, not proof of action, benefit, or a life saved. Keep the ladder visible: exposure → understanding → decision change → authorized action → observed outcome → independently reviewed benefit. See [`docs/APPLIED_WISDOM.md`](docs/APPLIED_WISDOM.md) for the receipt fields, human/AI boundary, and stop conditions.
+
 ## What this is, and is not
 
 - It **is** two ledgers kept apart: `seeds/` (named events with counted tolls; CC0; release 0.1.0: 38 observations, 34 sources, 16 non-additive pairs) and `estimates/` (yearly figures, rates, shares and definitions behind the site's range; CC BY 4.0; version 0.7.0, 79 rows). Events are counted, estimates are modelled, and the site never adds one to the other.

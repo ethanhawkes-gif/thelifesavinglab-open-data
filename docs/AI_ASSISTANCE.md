@@ -16,3 +16,9 @@ by Google Gemini (model `gemini-3.8-flash-high` via Antigravity). Gemini output 
    (it is an export column). Full text in `receipts/gemini/pass4-final.md`.
 
 A person must review this record before a release is called human-reviewed.
+
+## Applied wisdom contract
+
+The Lab's operational definition is: **wisdom is applied when it changes a decision**. AI output is not applied wisdom merely because it is fluent, novel, or agreed with by other models. An AI contribution becomes evidence of application only when a responsible human or organization can identify the decision before and after, explain the evidence and dissent, act within legitimate authority, and preserve what followed.
+
+Keep these states separate in prompts, bundles, receipts and UI: exposure, understanding, decision change, authorized action, observed outcome, and independently reviewed benefit. AI may assemble evidence, identify contradictions, draft decision records, explore alternatives, and preserve memory. Humans retain responsibility for values, consent, local judgment, safety, authority, adoption, publication, deployment and repair. See [`APPLIED_WISDOM.md`](APPLIED_WISDOM.md).
