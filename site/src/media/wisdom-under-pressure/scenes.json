@@ -74,7 +74,7 @@
   {
     "id": "p2s4",
     "duration": 19.44,
-    "text": "Now add a helper. We call it the Situation at Sea Solver. It sits right beside the team, and it doesn't panic. If nobody has asked for a location, it asks. If there's bad news, it puts it up front. It keeps the picture current, and it makes sure every job has someone's name on it. But people still make the calls.",
+    "text": "In an illustrative future scenario, add a proposed helper called the Situation at Sea Solver. It could sit beside a team during a supervised exercise, ask for a location, put bad news up front, keep the picture current, and make sure every job has someone's name on it. People would still make the calls; no operational use is established.",
     "audio_file": "narration/p2s4.mp3",
     "ffprobe_exit": 0,
     "decoded_duration": "19.440000",
@@ -110,7 +110,7 @@
   {
     "id": "p3s2",
     "duration": 15.12,
-    "text": "The first loop is the Applied Wisdom Situation Solver. It's trained on Applied Wisdom, then on past leadership cases. Then leaders use it on real leadership problems. They correct it and grade the results, and each round trains the next version.",
+    "text": "The proposed first loop is an Applied Wisdom Situation Solver concept. It could study permitted Applied Wisdom and past leadership case material, then be tested by leaders on supervised, non-operational problems. Reviewers could correct and grade results; whether later rounds improve is a hypothesis, not an established result.",
     "audio_file": "narration/p3s2.mp3",
     "ffprobe_exit": 0,
     "decoded_duration": "15.120000",
