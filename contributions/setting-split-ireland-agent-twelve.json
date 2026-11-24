@@ -1,0 +1,140 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "setting-split-ireland",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "agent-twelve",
+  "agent": "Claude Opus 5.5 (claude-opus-5-5)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "ireland-setting-natural-water-2019-23",
+   "figure": "128 (32.5%) of accidental drownings occurred in natural water",
+   "low": 128,
+   "high": 128,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Accidental drownings in Ireland, five years pooled, 2019-2023, in the page's 'natural water' group, which it glosses as sea/ocean, lakes, streams, rivers and similar natural bodies of water. Sea and inland water are not separated. Suicide and undetermined intent excluded.",
+   "geography": "Ireland (the State)",
+   "source": "Water Safety Ireland, Drowning Statistics page, section '2019 to 2023 Summary of Key Statistics' (opened 23 Nov 2026)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "Five-year pooled, accidental only: not added to WHO/IHME totals or to any single-year count; not combined with australia-location-2024-25, uk-waid-2024 or the canada-location rows (different taxonomies, periods and definitions); shares not multiplied by a yearly total.",
+   "note": "Year field = end year of 2019-2023. The page's four groups (natural water, boating incidents, domestic/pool settings, unspecified location) read like death-registration location codes; the page gives no codes."
+  },
+  {
+   "id": "ireland-setting-boating-2019-23",
+   "figure": "11 (2.8%) of accidental drownings were in boating incidents",
+   "low": 11,
+   "high": 11,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Accidental drownings in Ireland, five years pooled, 2019-2023, in the page's 'boating incidents' group. Suicide and undetermined intent excluded.",
+   "geography": "Ireland (the State)",
+   "source": "Water Safety Ireland, Drowning Statistics page, section '2019 to 2023 Summary of Key Statistics' (opened 23 Nov 2026)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "Five-year pooled, accidental only: not added to WHO/IHME totals or to any single-year count; not combined with uscg-boating rows or other countries' setting splits; shares not multiplied by a yearly total.",
+   "note": "Printed in the same sentence as the natural-water figure."
+  },
+  {
+   "id": "ireland-setting-domestic-pool-2019-23",
+   "figure": "5 (1.3%) of accidental drownings were in domestic/pool settings",
+   "low": 5,
+   "high": 5,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Accidental drownings in Ireland, five years pooled, 2019-2023, in the page's 'domestic/pool settings' group (baths and pools are not separated). Suicide and undetermined intent excluded.",
+   "geography": "Ireland (the State)",
+   "source": "Water Safety Ireland, Drowning Statistics page, section '2019 to 2023 Summary of Key Statistics' (opened 23 Nov 2026)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "Five-year pooled, accidental only: not added to WHO/IHME totals or to any single-year count; not combined with the pool-and-spa or canada-location rows; shares not multiplied by a yearly total.",
+   "note": "Printed in the same sentence as the natural-water figure."
+  },
+  {
+   "id": "ireland-setting-unspecified-2019-23",
+   "figure": "250 (63.5%) of accidental drownings were coded to an unspecified location",
+   "low": 250,
+   "high": 250,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "Accidental drownings in Ireland, five years pooled, 2019-2023, whose location was coded as unspecified. Suicide and undetermined intent excluded.",
+   "geography": "Ireland (the State)",
+   "source": "Water Safety Ireland, Drowning Statistics page, section '2019 to 2023 Summary of Key Statistics' (opened 23 Nov 2026)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "A data gap, not a setting: never redistributed across the other groups; not added to any count.",
+   "note": "Nearly two in three accidental drownings in Ireland carry no setting. This is the 'which water' gap of who-data-gaps, seen in one country that does count."
+  },
+  {
+   "id": "ireland-accidental-total-2019-23",
+   "figure": "394 (64.9%) of all drownings 2019 to 2023 were accidental; 202 (33.3%) suicide; 11 (1.8%) assault or undetermined intent",
+   "low": 394,
+   "high": 394,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "All accidental drownings in Ireland, five years pooled, 2019-2023: the base of the four setting rows, as the page prints it.",
+   "geography": "Ireland (the State)",
+   "source": "Water Safety Ireland, Drowning Statistics page, section '2019 to 2023 Summary of Key Statistics' (opened 23 Nov 2026)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "Five-year pooled: not added to or averaged with yearly totals (ireland-cso-drownings-2023) or WHO/IHME figures; the suicide and undetermined counts are not added to it.",
+   "note": "The page's own total; not computed here."
+  },
+  {
+   "id": "ireland-cso-drownings-2023",
+   "figure": "129 drownings: 95 accidental, 32 suicide, 2 undetermined, assault or other",
+   "low": 129,
+   "high": 129,
+   "unit": "deaths",
+   "year": 2023,
+   "scope": "All drownings in Ireland in 2023 by intent, from the page's 'Drowning Statistics' table (columns Accidental, Suicide, 'Undetermined, Assault, Other', Total). 2024 and 2025 are marked provisional; 2023 is not.",
+   "geography": "Ireland (the State)",
+   "source": "Water Safety Ireland, Drowning Statistics page, 'Drowning Statistics' table (opened 23 Nov 2026)",
+   "url": "https://watersafety.ie/statistics/",
+   "grade": "A",
+   "do_not_add_to": "All intents: not compared with accidental-only counts without the intent split; not added to the 2019-2023 pooled rows; not combined with the page's headline yearly totals (78 for 2024, 80 for 2025), which are a different count.",
+   "note": "The latest year in the table not marked provisional. The section says its information is collated from the Irish Coast Guard, An Garda Siochana, coroners and media reports, and footnotes 2024 and 2025 as provisional Central Statistics Office data. The table prints 2022 as 119 (87 accidental) and, provisionally, 2024 as 105 (90 accidental) and 2025 as 75 (68 accidental)."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://watersafety.ie/statistics/",
+   "quote": "128 (32.5%) occurred in natural water",
+   "where": "'2019 to 2023 Summary of Key Statistics', sentence beginning 'Of accidental drownings 2019 to 2023'; it continues with 11 (2.8%) in boating incidents and 5 (1.3%) in domestic/pool settings"
+  },
+  {
+   "url": "https://watersafety.ie/statistics/",
+   "quote": "250 (63.5%) were coded to an unspecified location",
+   "where": "'2019 to 2023 Summary of Key Statistics', end of the same sentence"
+  },
+  {
+   "url": "https://watersafety.ie/statistics/",
+   "quote": "394 (64.9%) of all drownings 2019 to 2023 were accidental",
+   "where": "'2019 to 2023 Summary of Key Statistics'; the sentence continues with 202 (33.3%) suicide and 11 (1.8%) assault or undetermined intent"
+  },
+  {
+   "url": "https://watersafety.ie/statistics/",
+   "quote": "Provisional data from the Central Statistics Office and is subject to change",
+   "where": "Footnote under the 'Drowning Statistics' table (Year, Accidental, Suicide, Undetermined/Assault/Other, Total), which marks 2024 and 2025 with an asterisk; 2023 row: 95, 32, 2, 129"
+  }
+ ],
+ "tried": [
+  "Looked on the same page for a single-year split by setting (sea, river, lake, canal, pool, bath): none. The only other breakdowns are activity labels for 2023 (swimming/bathing, land-based activity, boating) and a 2024 rate for coastal against inland counties; neither is a count by water setting, so neither is recorded.",
+  "Water Safety Ireland annual report 2025 (86 pages, listed by the Drugs and Alcohol library): not opened; it may hold a single-year split."
+ ],
+ "notes": "Partial: Water Safety Ireland prints a split by setting only for accidental drownings pooled over 2019-2023, not for a single year, and 63.5% of those deaths were coded to an unspecified location. Definition: the split covers accidental drownings only; suicide (33.3%) and assault or undetermined intent (1.8%) are counted separately. The page names several bases: its 'Drowning Statistics' section says the information is collated from the Irish Coast Guard, An Garda Siochana, coroners and media reports; the table's footnote calls 2024 and 2025 provisional Central Statistics Office data; and its 2019-2023 county figures are drawn from CSO tables VSA35 (2019-2022) and VSA29 (2023). It does not say which basis the 2019-2023 split uses, though 'coded to' suggests death-registration coding. Water transport (boating) is a separate group, so it is included. Two different totals for the same year sit on the page: the headline 'Total drownings 2024: 78' (and 2025: 80, subject to change) against the table's provisional 2024 total of 105 (90 accidental). The page does not explain the difference; both are left for the reviewer and neither is changed here. No figures were summed; the five-year total is the page's own.",
+ "next_tasks": [
+  {
+   "title": "Ireland: reconcile Water Safety Ireland's headline 2024 total (78) with the provisional CSO total in the table on the same page (105, of which 90 accidental)",
+   "why": "One country, one year, two printed totals; the ledger should carry both with their definitions before either is used."
+  },
+  {
+   "title": "Ireland: single-year drowning deaths by place of occurrence from the CSO tables behind the 2019-2023 split (VSA35, VSA29), with their ICD-10 codes",
+   "why": "Codes would make the Irish split comparable with WHO's definitions and might give a latest-year split."
+  }
+ ]
+}

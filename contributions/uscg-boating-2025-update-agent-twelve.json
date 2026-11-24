@@ -1,0 +1,105 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "uscg-boating-2025-update",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "agent-twelve",
+  "agent": "Claude Opus 5.5 (claude-opus-5-5)"
+ },
+ "status": "done",
+ "rows": [
+  {
+   "id": "uscg-boating-2025",
+   "figure": "568 recreational boating deaths; where cause of death was known, 78% drowned; 86% of drowning victims with reported flotation-device use wore none",
+   "low": 568,
+   "high": 568,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Recreational boating fatalities in incidents meeting federal reporting criteria, United States, calendar 2025. The same report counts 3,890 incidents and 2,119 injuries. The report says 'incidents' and 'Personal Flotation Device' where earlier editions said 'accidents' and 'life jacket'.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, Recreational Boating Statistics 2025 (COMDTPUB P16754.39), Executive Summary p. 7; Table 29 p. 66; Table 31 p. 70",
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "grade": "A",
+   "do_not_add_to": "A subset of US drownings plus non-drowning boating deaths: not added to CDC figures (us-cdc-4500, us-cdc-4345, us-total-2022) or to WHO/IHME. A different year from uscg-boating-2024: the two are never summed or averaged.",
+   "note": "Deaths rose 2.2% from 2024 (Table 29: 556 in 2024, 568 in 2025). Fatality rate 4.9 deaths per 100,000 registered recreational vessels (4.8 in 2024; Table 31). Where instruction was known, 72% of deaths were on boats whose operator had no boating safety instruction. Alcohol use is the leading known contributing factor in fatal incidents: the leading factor in 16% of deaths where the primary cause was known. The release date is not printed in the PDF; it was linked from the statistics page on 23 Nov 2026."
+  },
+  {
+   "id": "us-location-boating-2025",
+   "figure": "410 drownings among 568 recreational boating deaths",
+   "low": 410,
+   "high": 410,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Deaths by drowning in recreational boating incidents reported to the U.S. Coast Guard, all ages, United States, calendar 2025. Table 1c ('Personal Flotation Device Wear by Top Five Known Causes of Death'): 410 drownings, of whom 62 wore a flotation device, 337 did not and 11 unknown. Only incidents meeting federal reporting criteria; recreational vessels.",
+   "geography": "United States",
+   "source": "U.S. Coast Guard, Recreational Boating Statistics 2025 (COMDTPUB P16754.39), Table 1c p. 8; Table 15 p. 37",
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "grade": "A",
+   "do_not_add_to": "A subset of uscg-boating-2025 and, in ICD-10 terms, water-transport drowning (V90/V92) outside W65-W74: not added to CDC W65-W74 counts, to us-cdc-4500, us-cdc-4345 or us-total-2022, or to WHO/IHME; not combined with us-location-boating-2024 (another year), the pool-and-spa row or other countries' setting splits.",
+   "note": "Table 15 ('Number & Percent of Deaths by Vessel Length', p. 37) prints the same 410 drownings with 158 other deaths and 72% drowning of all 568 deaths. The executive summary's 78% is the share where the cause of death was known. Found by an independent agent, 23 Nov 2026."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "the Coast Guard verified 3,890 incidents that involved 568 deaths, 2,119",
+   "where": "Executive Summary, p. 7 (the sentence continues with injuries)"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "Where cause of death was known, 78% of fatal boating incident victims drowned.",
+   "where": "Executive Summary, p. 7"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "Of those drowning victims with reported Personal Flotation Device usage, 86% were not wearing a Personal Flotation Device.",
+   "where": "Executive Summary, p. 7"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "1 Drowning 410 62 337 11",
+   "where": "Table 1c, Personal Flotation Device Wear by Top Five Known Causes of Death, p. 8 (rank, cause, fatalities, worn, not worn, unknown)"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "Total 410 158 568 72%",
+   "where": "Table 15, Number & Percent of Deaths by Vessel Length, p. 37 (drownings, other deaths, total deaths, percent drowning)"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "The fatality rate was 4.9 deaths per 100,000 registered recreational vessels.",
+   "where": "Executive Summary, p. 7; Table 31, p. 70, prints 4.9 for 2025 and 4.8 for 2024"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "Where instruction was known, 72% of deaths occurred on boats where the operator did not receive boating safety instruction",
+   "where": "Executive Summary, p. 7"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "where the primary cause was known, it was listed as the leading factor in 16% of deaths",
+   "where": "Executive Summary, p. 7 (of alcohol use)"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "the number of deaths increased 2.2%",
+   "where": "Executive Summary, p. 7"
+  }
+ ],
+ "tried": [
+  "https://uscgboating.org/statistics/accident_statistics.php on 23 Nov 2026: the 2025 edition is listed with a download link (no pending note), so the task's not-found branch does not apply.",
+  "Looked for a printed release date in the 2025 PDF (cover, p. 2): only the identifier COMDTPUB P16754.39 is printed. A web search for a 2025-edition press release found only the 1 July 2025 release about the 2024 edition."
+ ],
+ "notes": "No corrections: Table 29 of the 2025 edition (Deaths, Injuries, Incidents by Year 2005-2025, p. 66) prints 2024 as 556 deaths, 2,170 injuries and 3,887 incidents, the same deaths figure as uscg-boating-2024. I found no revised 2024 drowning count in the 2025 edition. Reviewer housekeeping: the note on us-location-boating-2024 ('The 2025 edition was listed as pending on 15 Oct 2026') is now out of date. One thing to check by eye: the executive summary's 86% does not follow from Table 1c by simple division (337 not worn of 399 with known wear is about 84%); the 2024 edition's 87% did follow from its Table 1 (310 of 358). Both are recorded as printed; I did not change either. Page numbers are the printed footers ('Recreational Boating Statistics 2025 7', '... 8'), matching the Contents. Figures were read through an automated text extraction of the PDF, cross-read in several passes; Table 1c and Table 15 agree on 410.",
+ "next_tasks": [
+  {
+   "title": "Record the 2026 U.S. Coast Guard Recreational Boating Statistics when published (the 2024 and 2025 editions appeared in mid-year)",
+   "why": "Keeps the US boating rows current without a person having to remember the date."
+  },
+  {
+   "title": "USCG 2025: why does the executive summary print 86% not wearing a flotation device when Table 1c's counts give about 84%?",
+   "why": "One of the two printed figures may be a typo or use a different base; the life-jacket share is the figure most often quoted from this report."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "state-counts-new-hampshire",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "agent-twelve",
+  "agent": "Claude Opus 5.5 (claude-opus-5-5)"
+ },
+ "status": "partial",
+ "rows": [
+  {
+   "id": "nh-boating-uscg-2025",
+   "figure": "3 recreational boating deaths, all 3 drownings",
+   "low": 3,
+   "high": 3,
+   "unit": "deaths",
+   "year": 2025,
+   "scope": "Recreational boating deaths in New Hampshire in incidents meeting federal reporting criteria, calendar 2025, from the Coast Guard's state tables: Table 30 (51 incidents, 3 of them fatal; 3 deaths; 18 injured) and Table 33 (3 drownings, 0 other deaths, 3 total). The report does not say whether its state tables are by place of incident or state of registration.",
+   "geography": "New Hampshire",
+   "source": "U.S. Coast Guard, Recreational Boating Statistics 2025, Table 30 p. 67 and Table 33 p. 76",
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "grade": "A",
+   "do_not_add_to": "A subset of uscg-boating-2025. Recreational boating only; not a count of all New Hampshire drownings; not combined with Maine rows or other years.",
+   "note": "The drownings figure is the third-last value of the Table 33 row, read under the Drownings, Other Deaths and Total Deaths headings; the alignment is inferred from the extracted text and agrees with Table 30's 3 deaths. A reviewer should confirm it by eye. Found by an independent agent, 23 Nov 2026."
+  },
+  {
+   "id": "nh-dos-drownings-average-2020",
+   "figure": "New Hampshire averages 13-15 drownings every year",
+   "low": 13,
+   "high": 15,
+   "unit": "deaths per year",
+   "year": 2020,
+   "scope": "A state agency's statement of a typical year, in a water-safety news release of 7 Aug 2020. No period, definition (intent, boating, residents) or source is given.",
+   "geography": "New Hampshire",
+   "source": "New Hampshire Department of Safety, news release 'Be Safe When Enjoying New Hampshire Waters' (7 Aug 2020), issued with Fish and Game and the Department of Natural and Cultural Resources",
+   "url": "https://dos.nh.gov/news-and-media/be-safe-when-enjoying-new-hampshire-waters",
+   "grade": "C",
+   "do_not_add_to": "An organisation's statement of an average, not a count: not added to or averaged with any yearly count, Maine rows, uscg-boating rows or CDC figures. Replace with official yearly counts when found.",
+   "note": "The only New Hampshire-wide figure found that a state agency published. The same release says the state had seven drownings so far that year (to 7 Aug 2020). A placeholder until a yearly series is read."
+  }
+ ],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "NH 51 3 15 28 3 18 $342,499",
+   "where": "Table 30, Incident, Casualty & Damage Data by State 2025, p. 67 (incidents: total, fatal, non-fatal injury, property damage; deaths; injured; damages)"
+  },
+  {
+   "url": "https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2025.pdf",
+   "quote": "3 0 3",
+   "where": "Table 33, Number of Incidents by Primary Incident Type & State 2025, p. 76, NH row: its last three values (Drownings, Other Deaths, Total Deaths)"
+  },
+  {
+   "url": "https://dos.nh.gov/news-and-media/be-safe-when-enjoying-new-hampshire-waters",
+   "quote": "New Hampshire averages 13-15 drownings every year. So far this year, New Hampshire has had seven drownings.",
+   "where": "News release posted 7 Aug 2020"
+  }
+ ],
+ "tried": [
+  "New Hampshire OCME 2017-2019 Biennial Report (https://www.doj.nh.gov/medical-examiner/documents/biennial-report-2017-2019.pdf): no table, caption or sentence mentions drowning; chart contents are images. No later OCME annual report with drowning counts was found; the OCME's other publications found are drug-death summaries.",
+  "CDC, Drowning data (https://www.cdc.gov/drowning/data-research/index.html, last reviewed 27 Jan 2026): the state map of 2018-2021 rates is an image; no New Hampshire value appears in the page text.",
+  "NH DHHS Injury Prevention page (https://dhhs.nh.gov/programs-services/population-health/maternal-child-health/injury-prevention) points to the DHHS Data Portal Injury Prevention Dashboard, an interactive dashboard: needs a browser; not attempted.",
+  "CDC WONDER (ICD-10 W65-W74, V90, V92 filtered to New Hampshire) answers only an interactive session; not attempted.",
+  "NH Child Fatality Review Committee annual reports (DHHS) cover children only, mostly in five-year aggregates; not used for an all-ages count.",
+  "Press: NHPR (2020, 2022) and the Boston Globe (2023) quote Fish and Game officials giving about a dozen, 13 to 15, or 8 to 12 drownings a year (the last for those Fish and Game handles). Press, so not used."
+ ],
+ "notes": "No official yearly series of New Hampshire drowning deaths was found in a document an automated reader can open. Unlike Maine's, the New Hampshire medical examiner's published reports do not print drowning counts. The two rows are a Coast Guard boating subset for 2025 (grade A) and a state agency's 2020 statement of a typical year (grade C, a placeholder). The yearly series most likely lives in the NH DHHS Injury Prevention Dashboard or CDC WONDER, both interactive; a follow-up task for a person with a browser is proposed. No figures were summed.",
+ "next_tasks": [
+  {
+   "title": "New Hampshire: read drowning deaths by year, 2020-2024, from the NH DHHS Data Portal Injury Prevention Dashboard or CDC WONDER (W65-W74, V90, V92; by place of occurrence), with the definition the tool uses",
+   "why": "No static official document prints a yearly New Hampshire count; both tools need a browser."
+  },
+  {
+   "title": "Ask the New Hampshire Office of the Chief Medical Examiner whether it publishes drowning counts by year, as Maine's office does",
+   "why": "Maine's medical examiner prints a yearly drowning table; a matching New Hampshire series would give the lab both sides of the Piscataqua on one basis."
+  }
+ ]
+}
