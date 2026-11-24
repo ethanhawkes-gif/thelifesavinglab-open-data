@@ -59,7 +59,8 @@
       "kind": "press",
       "region": "World",
       "url": "https://www.bing.com/news/search?q=drowned+OR+%22missing+swimmer%22+OR+%22overdue+vessel%22+OR+capsized&format=rss",
-      "enabled": true
+      "enabled": false,
+      "note": "Answered with an RSS channel holding no items on 167 of the 168 runs kept in queue.json (15 Oct to 24 Nov 2026; the other run failed to fetch), and was recorded as ok. Opened on 23 Nov 2026: this address returned a channel with no items, and a one-word query (q=drowned) returned 2 items, the first dated 27 May 2026. Bing's news RSS no longer serves current results. Disabled until a working address is found. Found by an independent agent."
     }
   ]
 }

@@ -55,6 +55,17 @@ export function parseFeed(xml) {
   return items.filter((i) => i.link);
 }
 
+/**
+ * The items of one fetched source. A response that answers but carries no items (an empty channel, an HTML page, a
+ * search that has stopped serving results) is a failed source, not a quiet one: recorded as ok, bing-news returned
+ * nothing on 167 of 168 runs between 15 Oct and 24 Nov 2026 and the site showed it as ok the whole time.
+ */
+export function feedItems(xml) {
+  const items = parseFeed(xml);
+  if (!items.length) throw new Error('no items in the response');
+  return items;
+}
+
 /** Classify one item: a kind if it matches, or null. */
 export function classify(item, keywords) {
   const hay = `${item.title} ${item.summary}`.toLowerCase();
@@ -105,7 +116,7 @@ async function main() {
   for (const src of targets) {
     try {
       const xml = fromFile ? await readFile(fromFile, 'utf8') : await fetchText(src.url);
-      const items = parseFeed(xml);
+      const items = feedItems(xml);
       const reports = buildReports(items, src, keywords, run.at);
       let added = 0;
       for (const r of reports) {
