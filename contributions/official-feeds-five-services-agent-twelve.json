@@ -1,0 +1,64 @@
+{
+ "schema": "lifesavinglab.bundle.v1",
+ "task_id": "official-feeds-five-services",
+ "preamble_version": "1.4",
+ "contributor": {
+  "handle": "agent-twelve",
+  "agent": "Claude Opus 5.5 (claude-opus-5-5)"
+ },
+ "status": "partial",
+ "rows": [],
+ "corrections": [],
+ "evidence": [
+  {
+   "url": "https://www.knrm.nl/rss/reddingrapporten",
+   "quote": "Reddingrapporten",
+   "where": "Channel title. KNRM (Netherlands), national rescue-report feed, RSS 2.0, opened 23 Nov 2026: 50 items, newest pubDate Mon, 16 Nov 2026 21:09:01 +0100, oldest 5 Aug 2026. Content: incident log, one item per lifeboat call-out, in Dutch."
+  },
+  {
+   "url": "https://www.knrm.nl/rss/nieuws",
+   "quote": "Nieuws",
+   "where": "Channel title. KNRM national news, RSS 2.0, opened 23 Nov 2026: 35+ items, newest real item 22 Nov 2026, oldest 12 Sep 2026; the first item is dated Fri, 03 Sep 2027, after the build date. Station news, fundraising, some rescues, in Dutch."
+  },
+  {
+   "url": "https://www.knrm.nl/rss",
+   "quote": "Reddingrapporten",
+   "where": "KNRM's RSS index page, list of national feeds. It also lists per-station feeds named nieuws-reddingstation-<station> and reddingrapport-reddingstation-<station> under https://www.knrm.nl/rss/. No terms of use are printed on the page."
+  },
+  {
+   "url": "https://api.io.canada.ca/io-server/gc/news/en/v2?dept=canadiancoastguard&sort=publishedDate&orderBy=desc&pick=50&format=atom",
+   "quote": "Canada News Centre",
+   "where": "Feed subtitle. Canadian Coast Guard via the Government of Canada news API, Atom, opened 23 Nov 2026: 50 entries, newest updated 2026-11-20, oldest 2026-05-08; updated only, links to canada.ca. News releases, advisories, statements, in English."
+  },
+  {
+   "url": "https://maritimenz.govt.nz/public/news/news-feed",
+   "quote": "Maritime NZs News and Media Releases",
+   "where": "Channel description. Maritime New Zealand, RSS 2.0, opened 23 Nov 2026: 123 items with no pubDate, only a media-date element; newest 25 June 2026, oldest 10 January 2024. Media releases incl. rescues and prosecutions, in English."
+  }
+ ],
+ "tried": [
+  "German DGzRS: https://www.seenotretter.de/rss returned a client error; the home page has no alternate feed link and no link labelled RSS or Feed. Rescue reports are an HTML list at https://www.seenotretter.de/aktuelles/seenotfaelle (archive: /aktuelles/seenotfaelle/archiv-seenotfaelle).",
+  "Norwegian Redningsselskapet: https://www.redningsselskapet.no/feed/ redirects to https://rs.no/; https://rs.no/feed/ and https://rs.no/category/redningshistorier/feed/ both return the HTML home page, not a feed; the home page carries no alternate feed link.",
+  "Spanish Salvamento Maritimo: https://www.salvamentomaritimo.es/ could not be opened (the fetch tool could not read its robots.txt). Not settled either way.",
+  "Italian Guardia Costiera: https://www.guardiacostiera.gov.it/ returned a client error to the fetch tool. Searches found its news only through the ministry site (mit.gov.it), with no feed.",
+  "Surf Life Saving Australia: https://sls.com.au/feed/ returned a client error. Surf Life Saving NSW (not on the list; a WordPress site): https://www.surflifesaving.com.au/feed/ returned a server error.",
+  "Royal Life Saving Australia: https://www.royallifesaving.com.au/about/news-and-updates/news opened as headline text only, with no head markup, dates or feed links visible to the fetch tool.",
+  "Irish Coast Guard: its releases are Department of Transport press releases on gov.ie; no RSS or Atom address for gov.ie press releases was found by search. MerrionStreet.ie (the government news service) has a feed, but a relay service shows its last posts in January 2024; not opened.",
+  "Not tested from GitHub's runner with the watch's user agent: every feed above was opened with the fetch tool, a different client. The RNLI 403 shows a site can treat the two differently."
+ ],
+ "notes": "Three of the ten services have a feed that returned items on 23 Nov 2026: KNRM (two national feeds), the Canadian Coast Guard and Maritime New Zealand. That is fewer than five, so status partial. Before enabling any of them, three things matter for the watch. (1) Language: watch/keywords.json is English-only, so KNRM's Dutch items would almost never match. Reddingrapporten is an incident log, one call-out per item, so it may be better served by a per-source rule that labels every item 'rescue' than by keywords. Candidate Dutch patterns for a person to check: redding, verdronken, vermist, zoekactie, omgeslagen. (2) Dates: KNRM's news feed carries one pubDate in September 2027. The watch sorts by published, so that item would sit at the top of feed.json until then; clamping dates later than first_seen would prevent it. Maritime NZ's items have no pubDate at all, so the watch would record published as null and sort them by first_seen. (3) Freshness: Maritime NZ's newest item is from 25 June 2026; the feed may have stopped updating, and a person should compare it with the news page before relying on it. No feed above states terms of use. Kinds: KNRM Reddingrapporten = incident log; KNRM Nieuws = organisation news with some rescues; Canadian Coast Guard = press releases and advisories (national); Maritime NZ = press releases (national regulator, includes rescue coordination news).",
+ "next_tasks": [
+  {
+   "title": "Watch: let a source label every item with a fixed kind (an official incident log such as KNRM Reddingrapporten), instead of matching English keywords",
+   "why": "Official rescue services outside the English-speaking world publish in their own languages; their incident logs are rescues by construction."
+  },
+  {
+   "title": "In a browser, find any feed or JSON endpoint for DGzRS Seenotfaelle, Redningsselskapet, Salvamento Maritimo and the Guardia Costiera",
+   "why": "The fetch tool found no feed links on two of these sites and could not open the other two."
+  },
+  {
+   "title": "Check whether Maritime New Zealand's news feed is still updated (newest item 25 June 2026 on 23 Nov 2026)",
+   "why": "A feed that stopped in June would look healthy to the watch while missing every later release."
+  }
+ ]
+}

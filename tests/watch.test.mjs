@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseFeed, classify, canonical, buildReports, countStages, text } from '../scripts/watch.mjs';
+import { parseFeed, feedItems, classify, canonical, buildReports, countStages, text } from '../scripts/watch.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const xml = await readFile(path.join(here, 'fixtures', 'watch-sample.xml'), 'utf8');
@@ -44,6 +44,13 @@ test('the same headline from two links is matched, not counted twice', () => {
   assert.equal(a[0].title_sha256, a[1].title_sha256);
   const counts = countStages(reports);
   assert.equal(counts.reported, reports.length);
+});
+
+test('a source that answers with no feed items is failed, not quiet', () => {
+  assert.equal(feedItems(xml).length, 6);
+  assert.throws(() => feedItems('<?xml version="1.0"?><rss version="2.0"><channel><title>t</title></channel></rss>'), /no items/, 'an empty channel');
+  assert.throws(() => feedItems('<html><body>Please enable cookies</body></html>'), /no items/, 'a page that is not a feed');
+  assert.throws(() => feedItems('<rss><channel><item><title>no link</title></item></channel></rss>'), /no items/, 'items without links are not items');
 });
 
 test('text() decodes entities and strips tags', () => {

@@ -23,7 +23,7 @@ is marked `held` and never appears in the public feed.
 | --- | --- | --- |
 | `sources.json` | people | The feeds, with `enabled` and a note where a feed address is unconfirmed. |
 | `keywords.json` | people | Include patterns (each mapped to a kind) and exclude phrases. |
-| `queue.json` | the job | Every report seen, with its stage. Bounded; items a person has finished with fall off first. |
+| `queue.json` | the job | Every report seen, with its stage. Held to 1,500 by dropping the oldest items a person has finished with; unread reports are never dropped, so the cap holds only while people read. |
 | `feed.json` | the job | The newest unread reports, for a site to show. Never includes held items. |
 | `register.csv` | reviewers | Register rows written from reports, one event per line, in the lab's 24-column format. |
 
@@ -46,7 +46,9 @@ level or coarser. A register row never names a person.
 
 `.github/workflows/watch.yml` runs hourly and commits `queue.json` and `feed.json` to `main` when they change.
 Run it by hand from the Actions tab (workflow_dispatch). It never fails on one bad source: each run records per-source
-`ok` or `failed` in `queue.json → runs`, and a source that fails for a week is a problem to fix, not an outage.
+`ok` or `failed` in `queue.json → runs`, and a source that fails for a week is a problem to fix, not an outage. A
+source that answers with no feed items counts as failed (`no items in the response`): an empty channel or a page that
+is not a feed is how a search that has stopped serving results shows itself.
 
 ## What a report becomes
 
